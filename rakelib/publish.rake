@@ -1,6 +1,6 @@
 
 task :publish do
-  temp = Pathanme '../very-temp-output'
+  temp = Pathname '../very-temp-output'
   output = Pathname 'output'
 
   rm_rf temp
