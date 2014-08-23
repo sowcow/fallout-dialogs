@@ -17,6 +17,8 @@ end
 
 
 
+mkpath 'viz' unless Dir.exist? 'viz'
+
 task :viz do
   dialogs = YAML.load File.read nodes_file
   #dialogs = dialogs.take 5
