@@ -1,3 +1,5 @@
+task :default => [:viz, :output]
+
 require_relative 'lib/msg'
 require_relative 'lib/nodes'
 

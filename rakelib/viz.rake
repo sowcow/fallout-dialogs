@@ -43,7 +43,7 @@ task :viz do
       used << node.messages if node.messages
       if used
         label = used.join "\n---\n"
-        dot << "  #{+name} [label=#{+label}]\n"
+        dot << "  #{+name} [label=#{+label.wrap}]\n"
       #else
       #  label = node.name
       end
@@ -51,7 +51,7 @@ task :viz do
       (node.options || []).each { |hash|
         raise unless hash.size == 1
         other, text = hash.first.to_a
-        dot << "  #{+name} -> #{+other} [label=#{+text} color=#{x = fg} fontcolor=#{x}]\n"
+        dot << "  #{+name} -> #{+other} [label=#{+text.wrap} color=#{x = fg} fontcolor=#{x}]\n"
       }
 
       # styling?
@@ -74,7 +74,16 @@ end
 
 class String
   def +@
-    chars.each_slice(20).map(&:join).join(?\n).inspect
-    #inspect
+    #chars.each_slice(20).map(&:join).join(?\n).inspect
+    inspect
+  end
+
+  WRAP = 25
+  def wrap line_width=WRAP
+    text = self
+
+    text.split("\n").collect! do |line|
+      line.length > line_width ? line.gsub(/(.{1,#{line_width}})(\s+|$)/, "\\1\n").strip : line
+    end * "\n"
   end
 end
