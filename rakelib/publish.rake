@@ -9,7 +9,7 @@ task :publish do
 
   rm_rf Dir[?*]
   system 'git rm -rf .'
-  cp_r Dir[output + '*'], '.'
+  cp_r Dir[temp + '*'], '.'
 
   system 'git add -A'
   system 'git commit -m update'
