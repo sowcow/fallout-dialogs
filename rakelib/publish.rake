@@ -7,6 +7,7 @@ task :publish do
   mv output, temp
   system 'git checkout gh-pages'
 
+  rm_rf Dir[?*]
   system 'git rm -rf .'
   cp_r Dir[output + '*'], '.'
 
