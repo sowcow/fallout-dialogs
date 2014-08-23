@@ -1,0 +1,148 @@
+<!DOCTYPE html><html><head><title>ROZBED</title><meta charset="utf-8" /></head><body><svg width="644pt" height="155pt"
+ viewBox="0.00 0.00 643.70 154.95" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 150.953)">
+<title>ROZBED</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-150.953 639.697,-150.953 639.697,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="314.581" cy="-128.953" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node2" class="node"><title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="97.5807" cy="-37.4767" rx="97.6615" ry="37.4533"/>
+<text text-anchor="middle" x="97.5807" y="-48.7767" font-family="Times,serif" font-size="14.00">Razlo would not be h</text>
+<text text-anchor="middle" x="97.5807" y="-33.7767" font-family="Times,serif" font-size="14.00">appy if you used his</text>
+<text text-anchor="middle" x="97.5807" y="-18.7767" font-family="Times,serif" font-size="14.00"> bed.</text>
+</g>
+<!-- start&#45;&gt;use_p_proc -->
+<g id="edge1" class="edge"><title>start&#45;&gt;use_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M292.175,-118.715C264.087,-107.133 214.516,-86.693 172.437,-69.3424"/>
+<polygon fill="#555555" stroke="#555555" points="173.61,-66.0402 163.03,-65.4639 170.941,-72.5117 173.61,-66.0402"/>
+</g>
+<!-- description_p_proc -->
+<g id="node3" class="node"><title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="314.581" cy="-37.4767" rx="101.233" ry="26.7407"/>
+<text text-anchor="middle" x="314.581" y="-41.2767" font-family="Times,serif" font-size="14.00">The bed looks messy </text>
+<text text-anchor="middle" x="314.581" y="-26.2767" font-family="Times,serif" font-size="14.00">and unmade.</text>
+</g>
+<!-- start&#45;&gt;description_p_proc -->
+<g id="edge2" class="edge"><title>start&#45;&gt;description_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M314.581,-110.701C314.581,-100.465 314.581,-87.0953 314.581,-74.6451"/>
+<polygon fill="#555555" stroke="#555555" points="318.081,-74.4922 314.581,-64.4922 311.081,-74.4923 318.081,-74.4922"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node4" class="node"><title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="534.581" cy="-37.4767" rx="101.233" ry="26.7407"/>
+<text text-anchor="middle" x="534.581" y="-41.2767" font-family="Times,serif" font-size="14.00">The bed looks messy </text>
+<text text-anchor="middle" x="534.581" y="-26.2767" font-family="Times,serif" font-size="14.00">and unmade.</text>
+</g>
+<!-- start&#45;&gt;look_at_p_proc -->
+<g id="edge3" class="edge"><title>start&#45;&gt;look_at_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M335.795,-117.651C340.628,-115.384 345.759,-113.039 350.581,-110.953 389.178,-94.2599 432.963,-76.9493 468.135,-63.4335"/>
+<polygon fill="#555555" stroke="#555555" points="469.729,-66.571 477.815,-59.7257 467.225,-60.0341 469.729,-66.571"/>
+</g>
+<!-- chairend -->
+<g id="node5" class="node"><title>chairend</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="386.581" cy="-128.953" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"variable LVar0 := 0;\nif (script_action == 6) then begin\n  call use_p_proc;\nend\nelse begin\n  if (script_action == 3) then begin\n    call description_p_proc;\n  end\n  else begin\n    if (script_action == 21) then begin\n      call look_at_p_proc;\n    end\n  end\nend\n","use_p_proc":"script_overrides;\ndisplay_msg(message_str(118, 102));\n","chairend":"[]","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(118, 101));\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(118, 100));\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html><html><head><title>MUTANT3</title><meta charset="utf-8" /></head><body><svg width="270pt" height="176pt"
+ viewBox="0.00 0.00 269.75 176.17" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 172.167)">
+<title>MUTANT3</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-172.167 265.752,-172.167 265.752,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="94.7523" cy="-120.083" rx="94.5053" ry="48.1667"/>
+<text text-anchor="middle" x="94.7523" y="-138.883" font-family="Times,serif" font-size="14.00">It&#39;s some kind of hu</text>
+<text text-anchor="middle" x="94.7523" y="-123.883" font-family="Times,serif" font-size="14.00">ge super mutant crea</text>
+<text text-anchor="middle" x="94.7523" y="-108.883" font-family="Times,serif" font-size="14.00">ture! And it has a v</text>
+<text text-anchor="middle" x="94.7523" y="-93.8833" font-family="Times,serif" font-size="14.00">ery large gun!</text>
+</g>
+<!-- timeforwhat -->
+<g id="node2" class="node"><title>timeforwhat</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="94.7523" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;timeforwhat -->
+<g id="edge1" class="edge"><title>start&#45;&gt;timeforwhat</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M94.7523,-71.9723C94.7523,-63.1885 94.7523,-54.2838 94.7523,-46.3459"/>
+<polygon fill="#555555" stroke="#555555" points="98.2524,-46.2227 94.7523,-36.2227 91.2524,-46.2228 98.2524,-46.2227"/>
+</g>
+<!-- supercbt -->
+<g id="node3" class="node"><title>supercbt</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="234.752" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- superx -->
+<g id="node4" class="node"><title>superx</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="234.752" cy="-120.083" rx="27" ry="18"/>
+</g>
+<!-- superx&#45;&gt;supercbt -->
+<g id="edge2" class="edge"><title>superx&#45;&gt;supercbt</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M234.752,-101.65C234.752,-86.4378 234.752,-64.1045 234.752,-46.4873"/>
+<polygon fill="#555555" stroke="#555555" points="238.252,-46.2334 234.752,-36.2334 231.252,-46.2334 238.252,-46.2334"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (not(init_teams)) then begin\n  critter_add_trait(self_obj, 1, 6, 34);\n  init_teams := 1;\nend\nelse begin\n  if (script_action == 22) then begin\n    call timeforwhat;\n  end\n  else begin\n    if (script_action == 4) then begin\n      Hostile := 1;\n    end\n    else begin\n      if (script_action == 12) then begin\n        if (Hostile) then begin\n          Hostile := 0;\n          attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\n        end\n        else begin\n          if (global_var(13) == 0) then begin\n            set_obj_visibility(self_obj, 1);\n          end\n          else begin\n            if (local_var(0) != 1) then begin\n              couple_of_minutes := 150 + random(1, 60);\n              add_timer_event(self_obj, game_ticks(couple_of_minutes), 0);\n            end\n          end\n        end\n      end\n      else begin\n        if (script_action == 18) then begin\n          set_global_var(35, global_var(35) + 1);\n          if (source_obj == dude_obj) then begin\n            if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n              set_global_var(156, 1);\n              set_global_var(157, 0);\n            end\n            if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n              set_global_var(157, 1);\n              set_global_var(156, 0);\n            end\n            set_global_var(160, global_var(160) + 1);\n            if ((global_var(160) % 6) == 0) then begin\n              set_global_var(155, global_var(155) + 1);\n            end\n          end\n        end\n        else begin\n          if (script_action == 21) then begin\n            display_msg(message_str(232, 100));\n          end\n        end\n      end\n    end\n  end\nend\n","timeforwhat":"if (local_var(0) == 1) then begin\n  animate_move_obj_to_tile(self_obj, 16929, 0);\n  set_local_var(0, 0);\nend\nelse begin\n  animate_move_obj_to_tile(self_obj, 10917, 0);\n  set_local_var(0, 1);\n  add_timer_event(self_obj, game_ticks(40), 0);\nend\n","supercbt":"Hostile := 1;\n","superx":"call supercbt;\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

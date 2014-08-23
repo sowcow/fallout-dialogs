@@ -1,0 +1,146 @@
+<!DOCTYPE html><html><head><title>GHZERO</title><meta charset="utf-8" /></head><body><svg width="276pt" height="317pt"
+ viewBox="0.00 0.00 275.58 316.69" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 312.693)">
+<title>GHZERO</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-312.693 271.581,-312.693 271.581,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="97.5807" cy="-281.823" rx="97.6615" ry="26.7407"/>
+<text text-anchor="middle" x="97.5807" y="-285.623" font-family="Times,serif" font-size="14.00">You see a ghoul guar</text>
+<text text-anchor="middle" x="97.5807" y="-270.623" font-family="Times,serif" font-size="14.00">d.</text>
+</g>
+<!-- do_dialogue -->
+<g id="node2" class="node"><title>do_dialogue</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="97.5807" cy="-200.953" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;do_dialogue -->
+<g id="edge1" class="edge"><title>start&#45;&gt;do_dialogue</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M97.5807,-254.561C97.5807,-246.46 97.5807,-237.521 97.5807,-229.346"/>
+<polygon fill="#555555" stroke="#555555" points="101.081,-229.173 97.5807,-219.173 94.0808,-229.173 101.081,-229.173"/>
+</g>
+<!-- ghoul00 -->
+<g id="node3" class="node"><title>ghoul00</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="97.5807" cy="-109.477" rx="92.7622" ry="37.4533"/>
+<text text-anchor="middle" x="97.5807" y="-120.777" font-family="Times,serif" font-size="14.00">I&#39;m on duty. If you </text>
+<text text-anchor="middle" x="97.5807" y="-105.777" font-family="Times,serif" font-size="14.00">want to see Set, you</text>
+<text text-anchor="middle" x="97.5807" y="-90.7767" font-family="Times,serif" font-size="14.00"> gotta do it inside.</text>
+</g>
+<!-- do_dialogue&#45;&gt;ghoul00 -->
+<g id="edge2" class="edge"><title>do_dialogue&#45;&gt;ghoul00</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M97.5807,-182.701C97.5807,-175.396 97.5807,-166.494 97.5807,-157.469"/>
+<polygon fill="#555555" stroke="#555555" points="101.081,-157.306 97.5807,-147.306 94.0808,-157.306 101.081,-157.306"/>
+</g>
+<!-- ghoulend -->
+<g id="node4" class="node"><title>ghoulend</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="97.5807" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- ghoul00&#45;&gt;ghoulend -->
+<g id="edge3" class="edge"><title>ghoul00&#45;&gt;ghoulend</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M97.5807,-71.8249C97.5807,-63.3308 97.5807,-54.4344 97.5807,-46.4159"/>
+<polygon fill="#555555" stroke="#555555" points="101.081,-46.1461 97.5807,-36.1461 94.0808,-46.1462 101.081,-46.1461"/>
+</g>
+<!-- ghoulcbt -->
+<g id="node5" class="node"><title>ghoulcbt</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="240.581" cy="-281.823" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (not(init_teams)) then begin\n  critter_add_trait(self_obj, 1, 6, 30);\n  critter_add_trait(self_obj, 1, 5, 42);\n  init_teams := 1;\nend\nif (script_action == 11) then begin\n  call do_dialogue;\nend\nelse begin\n  if ((script_action == 21) or (script_action == 3)) then begin\n    script_overrides;\n    display_msg(message_str(75, 100));\n  end\n  else begin\n    if (script_action == 4) then begin\n      Hostile := 1;\n    end\n    else begin\n      if (script_action == 12) then begin\n        if (Hostile) then begin\n          Hostile := 0;\n          attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\n        end\n      end\n      else begin\n        if (script_action == 18) then begin\n          if (source_obj == dude_obj) then begin\n            if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n              set_global_var(156, 1);\n              set_global_var(157, 0);\n            end\n            if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n              set_global_var(157, 1);\n              set_global_var(156, 0);\n            end\n            set_global_var(160, global_var(160) + 1);\n            if ((global_var(160) % 6) == 0) then begin\n              set_global_var(155, global_var(155) + 1);\n            end\n          end\n        end\n      end\n    end\n  end\nend\n","do_dialogue":"start_gdialog(75, self_obj, 4, -1, -1);\ngsay_start;\ncall ghoul00;\ngsay_end;\nend_dialogue;\n","ghoulend":"[]","ghoulcbt":"Hostile := 1;\n","ghoul00":"gsay_message(75, 101, 50);\ncall ghoulend;\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

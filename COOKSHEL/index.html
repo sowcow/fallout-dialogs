@@ -1,0 +1,144 @@
+<!DOCTYPE html><html><head><title>COOKSHEL</title><meta charset="utf-8" /></head><body><svg width="444pt" height="258pt"
+ viewBox="0.00 0.00 444.04 257.55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 253.546)">
+<title>COOKSHEL</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-253.546 440.04,-253.546 440.04,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="205.409" cy="-212.07" rx="27" ry="18"/>
+</g>
+<!-- pickup_p_proc -->
+<g id="node2" class="node"><title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="100.409" cy="-69.2965" rx="100.318" ry="69.0935"/>
+<text text-anchor="middle" x="100.409" y="-103.096" font-family="Times,serif" font-size="14.00">The cooks are extrem</text>
+<text text-anchor="middle" x="100.409" y="-88.0965" font-family="Times,serif" font-size="14.00">ely watchful of thei</text>
+<text text-anchor="middle" x="100.409" y="-73.0965" font-family="Times,serif" font-size="14.00">r store of food</text>
+<text text-anchor="middle" x="100.409" y="-58.0965" font-family="Times,serif" font-size="14.00"> and</text>
+<text text-anchor="middle" x="100.409" y="-43.0965" font-family="Times,serif" font-size="14.00"> prevent you from ta</text>
+<text text-anchor="middle" x="100.409" y="-28.0965" font-family="Times,serif" font-size="14.00">king anything.</text>
+</g>
+<!-- start&#45;&gt;pickup_p_proc -->
+<g id="edge1" class="edge"><title>start&#45;&gt;pickup_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M193.972,-195.736C183.651,-181.898 167.699,-160.512 151.873,-139.294"/>
+<polygon fill="#555555" stroke="#555555" points="154.611,-137.11 145.826,-131.187 149,-141.295 154.611,-137.11"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node3" class="node"><title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="311.409" cy="-69.2965" rx="92.7622" ry="37.4533"/>
+<text text-anchor="middle" x="311.409" y="-80.5965" font-family="Times,serif" font-size="14.00">The shelf contains b</text>
+<text text-anchor="middle" x="311.409" y="-65.5965" font-family="Times,serif" font-size="14.00">ottles of various it</text>
+<text text-anchor="middle" x="311.409" y="-50.5965" font-family="Times,serif" font-size="14.00">ems.</text>
+</g>
+<!-- start&#45;&gt;look_at_p_proc -->
+<g id="edge2" class="edge"><title>start&#45;&gt;look_at_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M216.955,-195.736C231.704,-176.149 257.839,-141.44 278.885,-113.491"/>
+<polygon fill="#555555" stroke="#555555" points="281.733,-115.526 284.952,-105.432 276.141,-111.315 281.733,-115.526"/>
+</g>
+<!-- description_p_proc -->
+<g id="node4" class="node"><title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="343.409" cy="-212.07" rx="92.7622" ry="37.4533"/>
+<text text-anchor="middle" x="343.409" y="-223.37" font-family="Times,serif" font-size="14.00">The shelf contains b</text>
+<text text-anchor="middle" x="343.409" y="-208.37" font-family="Times,serif" font-size="14.00">ottles of various it</text>
+<text text-anchor="middle" x="343.409" y="-193.37" font-family="Times,serif" font-size="14.00">ems.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 4) then begin\n  call pickup_p_proc;\nend\nelse begin\n  if ((script_action == 3) or (script_action == 21)) then begin\n    call look_at_p_proc;\n  end\nend\n","pickup_p_proc":"script_overrides;\ndisplay_msg(message_str(125, 101));\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(125, 100));\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(125, 100));\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html><html><head><title>V13DOOR</title><meta charset="utf-8" /></head><body><svg width="482pt" height="199pt"
+ viewBox="0.00 0.00 482.33 198.79" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 194.794)">
+<title>V13DOOR</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-194.794 478.333,-194.794 478.333,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="237.167" cy="-172.794" rx="27" ry="18"/>
+</g>
+<!-- description_p_proc -->
+<g id="node2" class="node"><title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="96.1665" cy="-59.397" rx="96.3333" ry="59.2941"/>
+<text text-anchor="middle" x="96.1665" y="-86.197" font-family="Times,serif" font-size="14.00">This door is too lar</text>
+<text text-anchor="middle" x="96.1665" y="-71.197" font-family="Times,serif" font-size="14.00">ge to open manually.</text>
+<text text-anchor="middle" x="96.1665" y="-40.197" font-family="Times,serif" font-size="14.00"> Use the entry term</text>
+<text text-anchor="middle" x="96.1665" y="-25.197" font-family="Times,serif" font-size="14.00">inal.</text>
+</g>
+<!-- start&#45;&gt;description_p_proc -->
+<g id="edge1" class="edge"><title>start&#45;&gt;description_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M220.438,-158.578C205.95,-147.131 184.003,-129.792 162.563,-112.853"/>
+<polygon fill="#555555" stroke="#555555" points="164.718,-110.096 154.702,-106.643 160.379,-115.588 164.718,-110.096"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node3" class="node"><title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="237.167" cy="-59.397" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;map_enter_p_proc -->
+<g id="edge2" class="edge"><title>start&#45;&gt;map_enter_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M237.167,-154.388C237.167,-136.567 237.167,-108.609 237.167,-87.8116"/>
+<polygon fill="#555555" stroke="#555555" points="240.667,-87.6805 237.167,-77.6805 233.667,-87.6806 240.667,-87.6805"/>
+</g>
+<!-- use_p_proc -->
+<g id="node4" class="node"><title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="378.167" cy="-59.397" rx="96.3333" ry="59.2941"/>
+<text text-anchor="middle" x="378.167" y="-86.197" font-family="Times,serif" font-size="14.00">This door is too lar</text>
+<text text-anchor="middle" x="378.167" y="-71.197" font-family="Times,serif" font-size="14.00">ge to open manually.</text>
+<text text-anchor="middle" x="378.167" y="-40.197" font-family="Times,serif" font-size="14.00"> Use the entry term</text>
+<text text-anchor="middle" x="378.167" y="-25.197" font-family="Times,serif" font-size="14.00">inal.</text>
+</g>
+<!-- start&#45;&gt;use_p_proc -->
+<g id="edge3" class="edge"><title>start&#45;&gt;use_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M253.895,-158.578C268.383,-147.131 290.331,-129.792 311.77,-112.853"/>
+<polygon fill="#555555" stroke="#555555" points="313.954,-115.588 319.631,-106.643 309.615,-110.096 313.954,-115.588"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 3) then begin\n  call description_p_proc;\nend\nelse begin\n  if (script_action == 15) then begin\n    call map_enter_p_proc;\n  end\n  else begin\n    if (script_action == 6) then begin\n      call use_p_proc;\n    end\n  end\nend\n","description_p_proc":"display_msg(message_str(343, 100));\n","map_enter_p_proc":"vault_door_ptr := self_obj;\nif (obj_is_open(self_obj)) then begin\n  use_obj(self_obj);\nend\n","use_p_proc":"if (source_obj == dude_obj) then begin\n  script_overrides;\n  display_msg(message_str(343, 100));\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

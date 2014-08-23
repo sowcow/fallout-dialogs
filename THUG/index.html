@@ -1,0 +1,152 @@
+<!DOCTYPE html><html><head><title>THUG</title><meta charset="utf-8" /></head><body><svg width="316pt" height="116pt"
+ viewBox="0.00 0.00 316.15 116.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
+<title>THUG</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-112 312.146,-112 312.146,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node2" class="node"><title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;destroy_p_proc -->
+<g id="edge1" class="edge"><title>start&#45;&gt;destroy_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M80.812,-76.4854C69.6606,-67.0277 55.6617,-53.7713 44.6321,-42.3717"/>
+<polygon fill="#555555" stroke="#555555" points="46.9469,-39.7246 37.5422,-34.8458 41.8517,-44.5246 46.9469,-39.7246"/>
+</g>
+<!-- start&#45;&gt;destroy_p_proc -->
+<g id="edge5" class="edge"><title>start&#45;&gt;destroy_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M88.4229,-73.1159C78.9948,-62.792 65.1991,-49.2671 52.9811,-38.3211"/>
+<polygon fill="#555555" stroke="#555555" points="55.0753,-35.5032 45.2416,-31.5601 50.47,-40.775 55.0753,-35.5032"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node3" class="node"><title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;critter_p_proc -->
+<g id="edge2" class="edge"><title>start&#45;&gt;critter_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M99,-71.6966C99,-63.9827 99,-54.7125 99,-46.1124"/>
+<polygon fill="#555555" stroke="#555555" points="102.5,-46.1043 99,-36.1043 95.5001,-46.1044 102.5,-46.1043"/>
+</g>
+<!-- pickup_p_proc -->
+<g id="node4" class="node"><title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="171" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;pickup_p_proc -->
+<g id="edge3" class="edge"><title>start&#45;&gt;pickup_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M113.57,-74.8345C123.75,-64.9376 137.524,-51.5462 149.031,-40.3591"/>
+<polygon fill="#555555" stroke="#555555" points="151.474,-42.865 156.204,-33.3847 146.595,-37.8461 151.474,-42.865"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node5" class="node"><title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="262" cy="-18" rx="46.2923" ry="18"/>
+<text text-anchor="middle" x="262" y="-14.3" font-family="Times,serif" font-size="14.00">Buzz off!</text>
+</g>
+<!-- start&#45;&gt;talk_p_proc -->
+<g id="edge4" class="edge"><title>start&#45;&gt;talk_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M121.323,-79.4136C147.398,-68.2155 191.008,-49.4873 222.772,-35.8462"/>
+<polygon fill="#555555" stroke="#555555" points="224.41,-38.9521 232.217,-31.7901 221.648,-32.5202 224.41,-38.9521"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (not(initialized)) then begin\n  critter_add_trait(self_obj, 1, 6, 29);\n  critter_add_trait(self_obj, 1, 5, 11);\n  if (cur_map_index != 29) then begin\n    attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\n    my_script_mode := 1;\n  end\n  else begin\n    if (global_var(123) == 3) then begin\n      move_to(self_obj, 7000, 0);\n      set_obj_visibility(self_obj, 1);\n    end\n  end\n  initialized := 1;\nend\nelse begin\n  if (not(my_script_mode)) then begin\n    if (script_action == 18) then begin\n      call destroy_p_proc;\n    end\n    else begin\n      if (script_action == 12) then begin\n        call critter_p_proc;\n      end\n      else begin\n        if (script_action == 4) then begin\n          call pickup_p_proc;\n        end\n        else begin\n          if (script_action == 11) then begin\n            call talk_p_proc;\n          end\n        end\n      end\n    end\n  end\n  else begin\n    if (script_action == 18) then begin\n      call destroy_p_proc;\n    end\n  end\nend\n","critter_p_proc":"if (hostile) then begin\n  hostile := 0;\n  attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\nend\n","pickup_p_proc":"hostile := 1;\n","talk_p_proc":"float_msg(self_obj, message_str(383, 100), 0);\n","destroy_p_proc":"if (source_obj == dude_obj) then begin\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n    set_global_var(156, 1);\n    set_global_var(157, 0);\n  end\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n    set_global_var(157, 1);\n    set_global_var(156, 0);\n  end\n  set_global_var(160, global_var(160) + 1);\n  if ((global_var(160) % 6) == 0) then begin\n    set_global_var(155, global_var(155) + 1);\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

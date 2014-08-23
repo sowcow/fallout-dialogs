@@ -1,0 +1,149 @@
+<!DOCTYPE html><html><head><title>VBROKELV</title><meta charset="utf-8" /></head><body><svg width="620pt" height="197pt"
+ viewBox="0.00 0.00 619.50 197.38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 193.38)">
+<title>VBROKELV</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-193.38 615.505,-193.38 615.505,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="304.045" cy="-171.38" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node2" class="node"><title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="94.0452" cy="-58.6899" rx="94.0904" ry="37.4533"/>
+<text text-anchor="middle" x="94.0452" y="-69.9899" font-family="Times,serif" font-size="14.00">You see a sign on th</text>
+<text text-anchor="middle" x="94.0452" y="-54.9899" font-family="Times,serif" font-size="14.00">e door stating that </text>
+<text text-anchor="middle" x="94.0452" y="-39.9899" font-family="Times,serif" font-size="14.00">it is out of order.</text>
+</g>
+<!-- start&#45;&gt;look_at_p_proc -->
+<g id="edge1" class="edge"><title>start&#45;&gt;look_at_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M282.567,-160.137C260.847,-149.686 226.385,-132.85 197.045,-117.38 183.512,-110.244 169.113,-102.364 155.504,-94.7813"/>
+<polygon fill="#555555" stroke="#555555" points="157.128,-91.6796 146.692,-89.852 153.711,-97.7887 157.128,-91.6796"/>
+</g>
+<!-- description_p_proc -->
+<g id="node3" class="node"><title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="304.045" cy="-58.6899" rx="98.0761" ry="58.8803"/>
+<text text-anchor="middle" x="304.045" y="-84.9899" font-family="Times,serif" font-size="14.00">A sign says: Warning</text>
+<text text-anchor="middle" x="304.045" y="-69.9899" font-family="Times,serif" font-size="14.00">: Elevator Shaft und</text>
+<text text-anchor="middle" x="304.045" y="-54.9899" font-family="Times,serif" font-size="14.00">er construction. Ple</text>
+<text text-anchor="middle" x="304.045" y="-39.9899" font-family="Times,serif" font-size="14.00">ase use other elevat</text>
+<text text-anchor="middle" x="304.045" y="-24.9899" font-family="Times,serif" font-size="14.00">or.</text>
+</g>
+<!-- start&#45;&gt;description_p_proc -->
+<g id="edge2" class="edge"><title>start&#45;&gt;description_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M304.045,-153.084C304.045,-145.94 304.045,-137.156 304.045,-127.861"/>
+<polygon fill="#555555" stroke="#555555" points="307.545,-127.628 304.045,-117.628 300.545,-127.628 307.545,-127.628"/>
+</g>
+<!-- use_p_proc -->
+<g id="node4" class="node"><title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="516.045" cy="-58.6899" rx="95.4188" ry="48.1667"/>
+<text text-anchor="middle" x="516.045" y="-77.4899" font-family="Times,serif" font-size="14.00">You notice a sign on</text>
+<text text-anchor="middle" x="516.045" y="-62.4899" font-family="Times,serif" font-size="14.00"> the door saying tha</text>
+<text text-anchor="middle" x="516.045" y="-47.4899" font-family="Times,serif" font-size="14.00">t the elevator is ou</text>
+<text text-anchor="middle" x="516.045" y="-32.4899" font-family="Times,serif" font-size="14.00">t of order.</text>
+</g>
+<!-- start&#45;&gt;use_p_proc -->
+<g id="edge3" class="edge"><title>start&#45;&gt;use_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M325.496,-160.086C347.196,-149.596 381.643,-132.73 411.045,-117.38 421.811,-111.759 433.129,-105.701 444.186,-99.6978"/>
+<polygon fill="#555555" stroke="#555555" points="445.876,-102.763 452.982,-94.9044 442.526,-96.6162 445.876,-102.763"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 21) then begin\n  call look_at_p_proc;\nend\nelse begin\n  if (script_action == 3) then begin\n    call description_p_proc;\n  end\n  else begin\n    if (script_action == 6) then begin\n      call use_p_proc;\n    end\n  end\nend\n","use_p_proc":"script_overrides;\nreg_anim_func(2, dude_obj);\ndisplay_msg(message_str(904, 100));\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(904, 101));\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(904, 102));\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

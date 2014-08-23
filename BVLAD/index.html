@@ -1,0 +1,151 @@
+<!DOCTYPE html><html><head><title>BVLAD</title><meta charset="utf-8" /></head><body><svg width="206pt" height="623pt"
+ viewBox="0.00 0.00 206.00 623.06" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 619.058)">
+<title>BVLAD</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-619.058 202,-619.058 202,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-597.058" rx="27" ry="18"/>
+</g>
+<!-- do_stuff -->
+<g id="node2" class="node"><title>do_stuff</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-597.058" rx="27" ry="18"/>
+</g>
+<!-- ladder01 -->
+<g id="node3" class="node"><title>ladder01</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-271.529" rx="97.6615" ry="271.558"/>
+<text text-anchor="middle" x="99" y="-448.329" font-family="Times,serif" font-size="14.00">You begin climbing t</text>
+<text text-anchor="middle" x="99" y="-433.329" font-family="Times,serif" font-size="14.00">he ladder.</text>
+<text text-anchor="middle" x="99" y="-418.329" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="99" y="-403.329" font-family="Times,serif" font-size="14.00">You s</text>
+<text text-anchor="middle" x="99" y="-388.329" font-family="Times,serif" font-size="14.00">lip off the ladder a</text>
+<text text-anchor="middle" x="99" y="-373.329" font-family="Times,serif" font-size="14.00">nd plummet into the </text>
+<text text-anchor="middle" x="99" y="-358.329" font-family="Times,serif" font-size="14.00">darkness below.</text>
+<text text-anchor="middle" x="99" y="-343.329" font-family="Times,serif" font-size="14.00"> You</text>
+<text text-anchor="middle" x="99" y="-328.329" font-family="Times,serif" font-size="14.00"> land with a crash, </text>
+<text text-anchor="middle" x="99" y="-313.329" font-family="Times,serif" font-size="14.00">but take no damage.</text>
+<text text-anchor="middle" x="99" y="-282.329" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="99" y="-267.329" font-family="Times,serif" font-size="14.00">You slip off the</text>
+<text text-anchor="middle" x="99" y="-252.329" font-family="Times,serif" font-size="14.00"> ladder and plummet </text>
+<text text-anchor="middle" x="99" y="-237.329" font-family="Times,serif" font-size="14.00">into</text>
+<text text-anchor="middle" x="99" y="-222.329" font-family="Times,serif" font-size="14.00"> the darkness b</text>
+<text text-anchor="middle" x="99" y="-207.329" font-family="Times,serif" font-size="14.00">elow. You land with </text>
+<text text-anchor="middle" x="99" y="-192.329" font-family="Times,serif" font-size="14.00">a crash and take </text>
+<text text-anchor="middle" x="99" y="-177.329" font-family="Times,serif" font-size="14.00">&#45;&#45;</text>
+<text text-anchor="middle" x="99" y="-162.329" font-family="Times,serif" font-size="14.00">&#45;</text>
+<text text-anchor="middle" x="99" y="-147.329" font-family="Times,serif" font-size="14.00"> damage.</text>
+<text text-anchor="middle" x="99" y="-132.329" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="99" y="-117.329" font-family="Times,serif" font-size="14.00">You f</text>
+<text text-anchor="middle" x="99" y="-102.329" font-family="Times,serif" font-size="14.00">all off the ladder n</text>
+<text text-anchor="middle" x="99" y="-87.329" font-family="Times,serif" font-size="14.00">ear the bottom.</text>
+</g>
+<!-- do_stuff&#45;&gt;ladder01 -->
+<g id="edge1" class="edge"><title>do_stuff&#45;&gt;ladder01</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M99,-578.664C99,-571.871 99,-563.325 99,-553.448"/>
+<polygon fill="#555555" stroke="#555555" points="102.5,-553.143 99,-543.143 95.5001,-553.143 102.5,-553.143"/>
+</g>
+<!-- ladderend -->
+<g id="node4" class="node"><title>ladderend</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="171" cy="-597.058" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 6) then begin\n  load_map(\"VaultEnt.map\", 1);\nend\n","do_stuff":"testa := do_check(dude_obj, 5, 2);\nscript_overrides;\ncall ladder01;\n","ladderend":"[]","ladder01":"if (is_success(testa)) then begin\n  display_msg(message_str(291, 100));\nend\nelse begin\n  if (is_critical(testa)) then begin\n    damage := random(1, 6) + random(1, 6) + random(1, 6) - 9;\n    if (damage < 1) then begin\n      display_msg(message_str(291, 101));\n    end\n    else begin\n      display_msg(message_str(291, 102) + damage + message_str(291, 103));\n      critter_dmg(dude_obj, damage, 0);\n    end\n  end\n  else begin\n    display_msg(message_str(291, 104));\n  end\n  move_to(dude_obj, local_var(1), local_var(2));\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

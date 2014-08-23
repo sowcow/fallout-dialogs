@@ -1,0 +1,161 @@
+<!DOCTYPE html><html><head><title>FIELDA</title><meta charset="utf-8" /></head><body><svg width="153pt" height="260pt"
+ viewBox="0.00 0.00 153.00 260.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
+<title>FIELDA</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-256 149,-256 149,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="73" cy="-234" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node2" class="node"><title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="73" cy="-162" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;use_p_proc -->
+<g id="edge1" class="edge"><title>start&#45;&gt;use_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M67.1601,-216.411C66.2975,-208.507 66.0481,-198.852 66.4119,-189.935"/>
+<polygon fill="#555555" stroke="#555555" points="69.9033,-190.179 67.1206,-179.956 62.9209,-189.683 69.9033,-190.179"/>
+</g>
+<!-- start&#45;&gt;use_p_proc -->
+<g id="edge2" class="edge"><title>start&#45;&gt;use_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M78.8399,-216.411C79.7025,-208.507 79.9519,-198.852 79.5881,-189.935"/>
+<polygon fill="#555555" stroke="#555555" points="83.0791,-189.683 78.8794,-179.956 76.0967,-190.179 83.0791,-189.683"/>
+</g>
+<!-- toggle_field -->
+<g id="node3" class="node"><title>toggle_field</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="73" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc&#45;&gt;toggle_field -->
+<g id="edge3" class="edge"><title>use_p_proc&#45;&gt;toggle_field</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M73,-143.697C73,-135.983 73,-126.712 73,-118.112"/>
+<polygon fill="#555555" stroke="#555555" points="76.5001,-118.104 73,-108.104 69.5001,-118.104 76.5001,-118.104"/>
+</g>
+<!-- turn_field_off -->
+<g id="node4" class="node"><title>turn_field_off</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc&#45;&gt;turn_field_off -->
+<g id="edge4" class="edge"><title>use_p_proc&#45;&gt;turn_field_off</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M59.7877,-145.887C51.7919,-135.846 42.1708,-121.98 37,-108 29.6846,-88.2223 27.3136,-64.4215 26.7013,-46.4109"/>
+<polygon fill="#555555" stroke="#555555" points="30.1987,-46.2272 26.5193,-36.2918 23.1998,-46.3532 30.1987,-46.2272"/>
+</g>
+<!-- turn_field_on -->
+<g id="node5" class="node"><title>turn_field_on</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="118" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc&#45;&gt;turn_field_on -->
+<g id="edge5" class="edge"><title>use_p_proc&#45;&gt;turn_field_on</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M86.2652,-145.906C94.2822,-135.873 103.907,-122.008 109,-108 116.197,-88.2055 118.294,-64.4057 118.675,-46.3998"/>
+<polygon fill="#555555" stroke="#555555" points="122.176,-46.3006 118.724,-36.2838 115.176,-46.2667 122.176,-46.3006"/>
+</g>
+<!-- toggle_field&#45;&gt;turn_field_off -->
+<g id="edge7" class="edge"><title>toggle_field&#45;&gt;turn_field_off</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M62.5619,-73.1159C56.7981,-64.345 49.5161,-53.2637 43.045,-43.4162"/>
+<polygon fill="#555555" stroke="#555555" points="45.8136,-41.2562 37.3968,-34.8212 39.9637,-45.1004 45.8136,-41.2562"/>
+</g>
+<!-- toggle_field&#45;&gt;turn_field_on -->
+<g id="edge6" class="edge"><title>toggle_field&#45;&gt;turn_field_on</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M83.2112,-73.1159C88.8497,-64.345 95.9734,-53.2637 102.304,-43.4162"/>
+<polygon fill="#555555" stroke="#555555" points="105.366,-45.1257 107.829,-34.8212 99.4775,-41.3404 105.366,-45.1257"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (not(initialized)) then begin\n  if (elevation(self_obj) == 0) then begin\n    if (tile_num(self_obj) == 17106) then begin\n      set_map_var(0, self_obj);\n    end\n    else begin\n      if (tile_num(self_obj) == 17082) then begin\n        set_map_var(1, self_obj);\n      end\n      else begin\n        if (tile_num(self_obj) == 26710) then begin\n          set_map_var(2, self_obj);\n        end\n      end\n    end\n  end\n  else begin\n    if (tile_num(self_obj) == 15520) then begin\n      set_map_var(3, self_obj);\n    end\n  end\n  set_local_var(1, tile_num(self_obj));\n  call use_p_proc;\n  initialized := 1;\nend\nelse begin\n  if (script_action == 6) then begin\n    call use_p_proc;\n  end\nend\n","use_p_proc":"if (global_var(609)) then begin\n  field_change := \"off\";\nend\nif (source_obj != dude_obj) then begin\n  if (field_change == \"toggle\") then begin\n    call toggle_field;\n  end\n  else begin\n    if (field_change == \"off\") then begin\n      call turn_field_off;\n    end\n    else begin\n      if (field_change == \"on\") then begin\n        call turn_field_on;\n      end\n    end\n  end\nend\n","turn_field_on":"set_obj_visibility(self_obj, 0);\nset_local_var(0, 0);\n","turn_field_off":"set_obj_visibility(self_obj, 1);\nset_local_var(0, 1);\n","toggle_field":"if (local_var(0) == 1) then begin\n  call turn_field_on;\nend\nelse begin\n  call turn_field_off;\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

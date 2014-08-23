@@ -1,0 +1,163 @@
+<!DOCTYPE html><html><head><title>KENJI</title><meta charset="utf-8" /></head><body><svg width="780pt" height="176pt"
+ viewBox="0.00 0.00 779.99 176.17" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 172.167)">
+<title>KENJI</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-172.167 775.995,-172.167 775.995,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="385.995" cy="-150.167" rx="27" ry="18"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node2" class="node"><title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="98.9949" cy="-48.0833" rx="98.9899" ry="26.7407"/>
+<text text-anchor="middle" x="98.9949" y="-51.8833" font-family="Times,serif" font-size="14.00">Gizmo sends his rega</text>
+<text text-anchor="middle" x="98.9949" y="-36.8833" font-family="Times,serif" font-size="14.00">rds!</text>
+</g>
+<!-- start&#45;&gt;critter_p_proc -->
+<g id="edge1" class="edge"><title>start&#45;&gt;critter_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M361.071,-142.829C326.197,-133.727 261.045,-115.865 206.995,-96.1665 190.368,-90.1067 172.644,-82.7651 156.463,-75.7001"/>
+<polygon fill="#555555" stroke="#555555" points="157.696,-72.4188 147.134,-71.5841 154.871,-78.8231 157.696,-72.4188"/>
+</g>
+<!-- damage_p_proc -->
+<g id="node3" class="node"><title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="242.995" cy="-48.0833" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;damage_p_proc -->
+<g id="edge2" class="edge"><title>start&#45;&gt;damage_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M362.509,-141.131C339.552,-132.491 304.438,-117.121 278.995,-96.1665 271.179,-89.7292 264.052,-81.2837 258.24,-73.3252"/>
+<polygon fill="#555555" stroke="#555555" points="261.047,-71.2304 252.479,-64.9985 255.29,-75.2134 261.047,-71.2304"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node4" class="node"><title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="385.995" cy="-48.0833" rx="98.0761" ry="48.1667"/>
+<text text-anchor="middle" x="385.995" y="-66.8833" font-family="Times,serif" font-size="14.00">You gain 400 experie</text>
+<text text-anchor="middle" x="385.995" y="-51.8833" font-family="Times,serif" font-size="14.00">nce points for helpi</text>
+<text text-anchor="middle" x="385.995" y="-36.8833" font-family="Times,serif" font-size="14.00">ng Killian fight the</text>
+<text text-anchor="middle" x="385.995" y="-21.8833" font-family="Times,serif" font-size="14.00"> assassin.</text>
+</g>
+<!-- start&#45;&gt;destroy_p_proc -->
+<g id="edge3" class="edge"><title>start&#45;&gt;destroy_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M385.995,-131.733C385.995,-124.495 385.995,-115.644 385.995,-106.456"/>
+<polygon fill="#555555" stroke="#555555" points="389.495,-106.414 385.995,-96.4139 382.495,-106.414 389.495,-106.414"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node5" class="node"><title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="600.995" cy="-48.0833" rx="98.9899" ry="26.7407"/>
+<text text-anchor="middle" x="600.995" y="-51.8833" font-family="Times,serif" font-size="14.00">You see a shady look</text>
+<text text-anchor="middle" x="600.995" y="-36.8833" font-family="Times,serif" font-size="14.00">ing gunslinger.</text>
+</g>
+<!-- start&#45;&gt;look_at_p_proc -->
+<g id="edge4" class="edge"><title>start&#45;&gt;look_at_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M407.793,-139.019C439.288,-124.358 498.633,-96.7331 543.277,-75.9513"/>
+<polygon fill="#555555" stroke="#555555" points="544.976,-79.021 552.565,-71.6277 542.022,-72.6749 544.976,-79.021"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node6" class="node"><title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="744.995" cy="-48.0833" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;talk_p_proc -->
+<g id="edge5" class="edge"><title>start&#45;&gt;talk_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M412.898,-147.299C481.105,-142.169 658.924,-126.203 708.995,-96.1665 717.902,-90.8237 725.381,-82.3744 731.175,-74.0989"/>
+<polygon fill="#555555" stroke="#555555" points="734.126,-75.9797 736.591,-65.6754 728.238,-72.1939 734.126,-75.9797"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 12) then begin\n  call critter_p_proc;\nend\nelse begin\n  if (script_action == 14) then begin\n    call damage_p_proc;\n  end\n  else begin\n    if (script_action == 18) then begin\n      call destroy_p_proc;\n    end\n    else begin\n      if (script_action == 21) then begin\n        call look_at_p_proc;\n      end\n      else begin\n        if (script_action == 11) then begin\n          call talk_p_proc;\n        end\n      end\n    end\n  end\nend\n","critter_p_proc":"if (tile_distance(tile_num(self_obj), 26281) > 3) then begin\n  animate_move_obj_to_tile(self_obj, 26281, 0);\nend\nelse begin\n  if (obj_on_screen(self_obj)) then begin\n    float_msg(self_obj, message_str(510, 103), 2);\n    attack_complex(Killian_ptr, 0, 1, 0, 0, 30000, 0, 0);\n  end\nend\n","damage_p_proc":"if (source_obj == dude_obj) then begin\n  set_map_var(2, 1);\nend\n","destroy_p_proc":"if (source_obj == dude_obj) then begin\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n    set_global_var(156, 1);\n    set_global_var(157, 0);\n  end\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n    set_global_var(157, 1);\n    set_global_var(156, 0);\n  end\n  set_global_var(160, global_var(160) + 1);\n  if ((global_var(160) % 6) == 0) then begin\n    set_global_var(155, global_var(155) + 1);\n  end\nend\nif (map_var(2) == 1) then begin\n  set_global_var(155, global_var(155) + 2);\n  display_msg(message_str(510, 104));\n  give_exp_points(400);\nend\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(510, 102));\n","talk_p_proc":"display_msg(message_str(510, random(100, 101)));\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

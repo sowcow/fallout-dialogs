@@ -1,0 +1,133 @@
+<!DOCTYPE html><html><head><title>OBJ_DUDE</title><meta charset="utf-8" /></head><body><svg width="199pt" height="388pt"
+ viewBox="0.00 0.00 198.92 388.30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 384.299)">
+<title>OBJ_DUDE</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-384.299 194.919,-384.299 194.919,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="95.4594" cy="-362.299" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node2" class="node"><title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="95.4594" cy="-154.149" rx="95.4188" ry="154.299"/>
+<text text-anchor="middle" x="95.4594" y="-247.949" font-family="Times,serif" font-size="14.00">After destroying the</text>
+<text text-anchor="middle" x="95.4594" y="-232.949" font-family="Times,serif" font-size="14.00"> Master and his lab </text>
+<text text-anchor="middle" x="95.4594" y="-217.949" font-family="Times,serif" font-size="14.00">which he was creatin</text>
+<text text-anchor="middle" x="95.4594" y="-202.949" font-family="Times,serif" font-size="14.00">g his army of Super </text>
+<text text-anchor="middle" x="95.4594" y="-187.949" font-family="Times,serif" font-size="14.00">Mutants, you</text>
+<text text-anchor="middle" x="95.4594" y="-172.949" font-family="Times,serif" font-size="14.00"> return</text>
+<text text-anchor="middle" x="95.4594" y="-157.949" font-family="Times,serif" font-size="14.00"> home, only to disco</text>
+<text text-anchor="middle" x="95.4594" y="-142.949" font-family="Times,serif" font-size="14.00">ver that you are thr</text>
+<text text-anchor="middle" x="95.4594" y="-127.949" font-family="Times,serif" font-size="14.00">own out of your vaul</text>
+<text text-anchor="middle" x="95.4594" y="-112.949" font-family="Times,serif" font-size="14.00">t for being too dest</text>
+<text text-anchor="middle" x="95.4594" y="-97.9493" font-family="Times,serif" font-size="14.00">ructive. Thank you</text>
+<text text-anchor="middle" x="95.4594" y="-82.9493" font-family="Times,serif" font-size="14.00"> </text>
+<text text-anchor="middle" x="95.4594" y="-67.9493" font-family="Times,serif" font-size="14.00">for playing Fallout.</text>
+<text text-anchor="middle" x="95.4594" y="-52.9493" font-family="Times,serif" font-size="14.00"> </text>
+</g>
+<!-- start&#45;&gt;timed_event_p_proc -->
+<g id="edge1" class="edge"><title>start&#45;&gt;timed_event_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M95.4594,-344.077C95.4594,-337.182 95.4594,-328.548 95.4594,-318.791"/>
+<polygon fill="#555555" stroke="#555555" points="98.9595,-318.683 95.4594,-308.683 91.9595,-318.683 98.9595,-318.683"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 22) then begin\n  call timed_event_p_proc;\nend\n","timed_event_p_proc":"variable LVar0 := 0;\nvariable LVar1 := 0;\nvariable LVar2 := 0;\nif (fixed_param == 3) then begin\n  metarule(13, 0);\nend\nelse begin\n  if (fixed_param == 4) then begin\n    float_msg(self_obj, message_str(1, 500), -2);\n    add_timer_event(dude_obj, game_ticks(15), 3);\n  end\n  else begin\n    if (fixed_param == 5) then begin\n      game_ui_disable;\n      animate_move_obj_to_tile(map_var(0), 16890, 0);\n      add_timer_event(dude_obj, 5, 6);\n    end\n    else begin\n      if (fixed_param == 6) then begin\n        LVar0 := 0;\n        if (has_trait(2, dude_obj, 8)) then begin\n          LVar0 := 1;\n        end\n        else begin\n          if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n            LVar0 := 1;\n          end\n          else begin\n            if (global_var(155) < -1) then begin\n              LVar0 := 1;\n            end\n            else begin\n              if (global_var(158) > 2) then begin\n                LVar0 := 1;\n              end\n            end\n          end\n        end\n        if (LVar0 == 1) then begin\n          gun_ptr := create_object_sid(8, 0, 0, -1);\n          add_obj_to_inven(dude_obj, gun_ptr);\n          wield_obj_critter(dude_obj, gun_ptr);\n          add_timer_event(dude_obj, 25, 7);\n        end\n        else begin\n          add_timer_event(dude_obj, 25, 8);\n        end\n      end\n      else begin\n        if (fixed_param == 7) then begin\n          reg_anim_func(2, map_var(0));\n          reg_anim_func(1, 1);\n          reg_anim_animate(dude_obj, 43, -1);\n          LVar1 := sfx_build_weapon_name(1, gun_ptr, LVar2, map_var(0));\n          reg_anim_play_sfx(dude_obj, LVar1, -1);\n          reg_anim_animate(dude_obj, 45, -1);\n          LVar1 := sfx_build_char_name(map_var(0), 20, 3);\n          reg_anim_play_sfx(map_var(0), LVar1, 0);\n          reg_anim_animate(map_var(0), 20, 0);\n          reg_anim_animate(dude_obj, 44, 0);\n          reg_anim_func(3, 0);\n          add_timer_event(dude_obj, game_ticks(11), 8);\n        end\n        else begin\n          if (fixed_param == 8) then begin\n            game_ui_enable;\n            endgame_movie;\n            metarule(13, 0);\n          end\n        end\n      end\n    end\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

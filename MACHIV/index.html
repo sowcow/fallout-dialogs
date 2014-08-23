@@ -1,0 +1,141 @@
+<!DOCTYPE html><html><head><title>MACHIV</title><meta charset="utf-8" /></head><body><svg width="205pt" height="427pt"
+ viewBox="0.00 0.00 204.58 427.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 423.252)">
+<title>MACHIV</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-423.252 200.576,-423.252 200.576,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="98.2878" cy="-392.382" rx="98.0761" ry="26.7407"/>
+<text text-anchor="middle" x="98.2878" y="-396.182" font-family="Times,serif" font-size="14.00">Before you is a Mach</text>
+<text text-anchor="middle" x="98.2878" y="-381.182" font-family="Times,serif" font-size="14.00"> IV Computer.</text>
+</g>
+<!-- do_stuff -->
+<g id="node2" class="node"><title>do_stuff</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="98.2878" cy="-164.756" rx="96.7474" ry="164.512"/>
+<text text-anchor="middle" x="98.2878" y="-266.056" font-family="Times,serif" font-size="14.00">It seems as though t</text>
+<text text-anchor="middle" x="98.2878" y="-251.056" font-family="Times,serif" font-size="14.00">he system is in a re</text>
+<text text-anchor="middle" x="98.2878" y="-236.056" font-family="Times,serif" font-size="14.00">boot status.</text>
+<text text-anchor="middle" x="98.2878" y="-221.056" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="98.2878" y="-206.056" font-family="Times,serif" font-size="14.00">The</text>
+<text text-anchor="middle" x="98.2878" y="-191.056" font-family="Times,serif" font-size="14.00"> system seems to hav</text>
+<text text-anchor="middle" x="98.2878" y="-176.056" font-family="Times,serif" font-size="14.00">e locked up.</text>
+<text text-anchor="middle" x="98.2878" y="-161.056" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="98.2878" y="-146.056" font-family="Times,serif" font-size="14.00">The</text>
+<text text-anchor="middle" x="98.2878" y="-131.056" font-family="Times,serif" font-size="14.00"> monitor flickers.</text>
+<text text-anchor="middle" x="98.2878" y="-116.056" font-family="Times,serif" font-size="14.00">&#45;</text>
+<text text-anchor="middle" x="98.2878" y="-101.056" font-family="Times,serif" font-size="14.00">&#45;&#45;</text>
+<text text-anchor="middle" x="98.2878" y="-86.0559" font-family="Times,serif" font-size="14.00">The screen is sho</text>
+<text text-anchor="middle" x="98.2878" y="-71.0559" font-family="Times,serif" font-size="14.00">wing odd color patte</text>
+<text text-anchor="middle" x="98.2878" y="-56.0559" font-family="Times,serif" font-size="14.00">rns.</text>
+</g>
+<!-- start&#45;&gt;do_stuff -->
+<g id="edge1" class="edge"><title>start&#45;&gt;do_stuff</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M93.7939,-365.5C93.2707,-357.947 92.8384,-349.075 92.4972,-339.343"/>
+<polygon fill="#555555" stroke="#555555" points="95.9955,-339.228 92.1864,-329.341 88.9988,-339.445 95.9955,-339.228"/>
+</g>
+<!-- start&#45;&gt;do_stuff -->
+<g id="edge2" class="edge"><title>start&#45;&gt;do_stuff</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M102.782,-365.5C103.305,-357.947 103.737,-349.075 104.078,-339.343"/>
+<polygon fill="#555555" stroke="#555555" points="107.577,-339.445 104.389,-329.341 100.58,-339.228 107.577,-339.445"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 21) then begin\n  script_overrides;\n  display_msg(message_str(110, 100));\nend\nelse begin\n  if (script_action == 6) then begin\n    script_overrides;\n    call do_stuff;\n  end\n  else begin\n    if (script_action == 8) then begin\n      if (action_being_used == 12) then begin\n        script_overrides;\n        call do_stuff;\n      end\n    end\n  end\nend\n","do_stuff":"variable LVar0 := 0;\nLVar0 := random(1, 4);\nif (LVar0 == 1) then begin\n  display_msg(message_str(110, 101));\nend\nelse begin\n  if (LVar0 == 2) then begin\n    display_msg(message_str(110, 102));\n  end\n  else begin\n    if (LVar0 == 3) then begin\n      display_msg(message_str(110, 103));\n    end\n    else begin\n      if (LVar0 == 4) then begin\n        display_msg(message_str(110, 104));\n      end\n    end\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

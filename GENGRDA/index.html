@@ -1,0 +1,173 @@
+<!DOCTYPE html><html><head><title>GENGRDA</title><meta charset="utf-8" /></head><body><svg width="422pt" height="188pt"
+ viewBox="0.00 0.00 422.00 188.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>GENGRDA</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-184 418,-184 418,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="207" cy="-162" rx="27" ry="18"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node2" class="node"><title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;critter_p_proc -->
+<g id="edge1" class="edge"><title>start&#45;&gt;critter_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M183.306,-153.002C154.563,-143.135 104.766,-125.507 63,-108 61.1833,-107.238 59.3249,-106.436 57.4566,-105.611"/>
+<polygon fill="#555555" stroke="#555555" points="58.7311,-102.345 48.1801,-101.383 55.8281,-108.715 58.7311,-102.345"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node3" class="node"><title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;destroy_p_proc -->
+<g id="edge2" class="edge"><title>start&#45;&gt;destroy_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M188.188,-148.807C170.998,-137.665 145.382,-121.062 126.007,-108.504"/>
+<polygon fill="#555555" stroke="#555555" points="127.892,-105.555 117.597,-103.053 124.084,-111.429 127.892,-105.555"/>
+</g>
+<!-- map_update_p_proc -->
+<g id="node4" class="node"><title>map_update_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="171" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;map_update_p_proc -->
+<g id="edge3" class="edge"><title>start&#45;&gt;map_update_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M198.65,-144.765C194.288,-136.283 188.853,-125.714 183.959,-116.197"/>
+<polygon fill="#555555" stroke="#555555" points="186.99,-114.439 179.304,-107.147 180.765,-117.641 186.99,-114.439"/>
+</g>
+<!-- pickup_p_proc -->
+<g id="node5" class="node"><title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="243" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;pickup_p_proc -->
+<g id="edge4" class="edge"><title>start&#45;&gt;pickup_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M215.35,-144.765C219.712,-136.283 225.147,-125.714 230.041,-116.197"/>
+<polygon fill="#555555" stroke="#555555" points="233.235,-117.641 234.696,-107.147 227.01,-114.439 233.235,-117.641"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node6" class="node"><title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="315" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;talk_p_proc -->
+<g id="edge5" class="edge"><title>start&#45;&gt;talk_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M225.812,-148.807C243.002,-137.665 268.618,-121.062 287.993,-108.504"/>
+<polygon fill="#555555" stroke="#555555" points="289.916,-111.429 296.403,-103.053 286.108,-105.555 289.916,-111.429"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node7" class="node"><title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="387" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;timed_event_p_proc -->
+<g id="edge6" class="edge"><title>start&#45;&gt;timed_event_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M230.694,-153.002C259.437,-143.135 309.234,-125.507 351,-108 352.817,-107.238 354.675,-106.436 356.543,-105.611"/>
+<polygon fill="#555555" stroke="#555555" points="358.172,-108.715 365.82,-101.383 355.269,-102.345 358.172,-108.715"/>
+</g>
+<!-- flee_dude -->
+<g id="node8" class="node"><title>flee_dude</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- critter_p_proc&#45;&gt;flee_dude -->
+<g id="edge7" class="edge"><title>critter_p_proc&#45;&gt;flee_dude</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M27,-71.6966C27,-63.9827 27,-54.7125 27,-46.1124"/>
+<polygon fill="#555555" stroke="#555555" points="30.5001,-46.1043 27,-36.1043 23.5001,-46.1044 30.5001,-46.1043"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 12) then begin\n  call critter_p_proc;\nend\nelse begin\n  if (script_action == 18) then begin\n    call destroy_p_proc;\n  end\n  else begin\n    if (script_action == 23) then begin\n      call map_update_p_proc;\n    end\n    else begin\n      if (script_action == 4) then begin\n        call pickup_p_proc;\n      end\n      else begin\n        if (script_action == 11) then begin\n          call talk_p_proc;\n        end\n        else begin\n          if (script_action == 22) then begin\n            call timed_event_p_proc;\n          end\n        end\n      end\n    end\n  end\nend\n","critter_p_proc":"if (scared) then begin\n  if (tile_distance_objs(self_obj, dude_obj) < 8) then begin\n    call flee_dude;\n  end\nend\nelse begin\n  if (hostile) then begin\n    hostile := 0;\n    scared := 1;\n    attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\n  end\nend\n","destroy_p_proc":"if (source_obj == dude_obj) then begin\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n    set_global_var(156, 1);\n    set_global_var(157, 0);\n  end\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n    set_global_var(157, 1);\n    set_global_var(156, 0);\n  end\n  set_global_var(159, global_var(159) + 1);\n  if ((global_var(159) % 2) == 0) then begin\n    set_global_var(155, global_var(155) - 1);\n  end\nend\n","map_update_p_proc":"if (not(initialized)) then begin\n  critter_add_trait(self_obj, 1, 6, 2);\n  critter_add_trait(self_obj, 1, 5, 15 + random(0, 4));\n  add_timer_event(self_obj, game_ticks(random(1, 3)), 1);\n  hostile := global_var(334);\n  initialized := 1;\nend\n","pickup_p_proc":"if (scared == 0) then begin\n  hostile := 1;\n  set_global_var(334, 1);\nend\n","talk_p_proc":"if (scared) then begin\n  float_msg(self_obj, message_str(669, random(100, 105)), 2);\nend\nelse begin\n  float_msg(self_obj, message_str(755, random(100, 105)), 3);\nend\n","timed_event_p_proc":"animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(self_obj), random(0, 5), random(3, 5)), 0);\nadd_timer_event(self_obj, game_ticks(random(0, 3)), 1);\n","flee_dude":"variable LVar0 := 0;\nvariable LVar1 := 0;\nvariable LVar2 := 0;\nwhile(LVar1 < 5) do begin\n  if (tile_distance(tile_num(dude_obj), tile_num_in_direction(tile_num(self_obj), LVar1, 3)) > LVar2) then begin\n    LVar0 := tile_num_in_direction(tile_num(self_obj), LVar1, 3);\n    LVar2 := tile_distance(tile_num(dude_obj), LVar0);\n  end\n  LVar1 := LVar1 + 1;\nend\nanimate_move_obj_to_tile(self_obj, LVar0, 1);\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

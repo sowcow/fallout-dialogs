@@ -1,0 +1,168 @@
+<!DOCTYPE html><html><head><title>MASTER2</title><meta charset="utf-8" /></head><body><svg width="360pt" height="282pt"
+ viewBox="0.00 0.00 359.94 282.23" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 278.233)">
+<title>MASTER2</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-278.233 355.945,-278.233 355.945,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="103.945" cy="-173.116" rx="103.889" ry="101.233"/>
+<text text-anchor="middle" x="103.945" y="-229.416" font-family="Times,serif" font-size="14.00">Time left: &#160;</text>
+<text text-anchor="middle" x="103.945" y="-214.416" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="103.945" y="-199.416" font-family="Times,serif" font-size="14.00"> se</text>
+<text text-anchor="middle" x="103.945" y="-184.416" font-family="Times,serif" font-size="14.00">conds.</text>
+<text text-anchor="middle" x="103.945" y="-169.416" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="103.945" y="-154.416" font-family="Times,serif" font-size="14.00">This is w</text>
+<text text-anchor="middle" x="103.945" y="-139.416" font-family="Times,serif" font-size="14.00">here you make your m</text>
+<text text-anchor="middle" x="103.945" y="-124.416" font-family="Times,serif" font-size="14.00">ark on the world. (a</text>
+<text text-anchor="middle" x="103.945" y="-109.416" font-family="Times,serif" font-size="14.00"> small pile of ash</text>
+</g>
+<!-- Darkness -->
+<g id="node2" class="node"><title>Darkness</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="31.9447" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;Darkness -->
+<g id="edge1" class="edge"><title>start&#45;&gt;Darkness</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M55.5956,-83.4913C49.3104,-69.7591 43.5713,-56.5582 39.2374,-45.7162"/>
+<polygon fill="#555555" stroke="#555555" points="42.397,-44.1811 35.5409,-36.1037 35.8635,-46.6936 42.397,-44.1811"/>
+</g>
+<!-- start&#45;&gt;Darkness -->
+<g id="edge3" class="edge"><title>start&#45;&gt;Darkness</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M66.5892,-78.6372C60.2332,-65.6144 53.9281,-53.2793 48.4319,-43.2432"/>
+<polygon fill="#555555" stroke="#555555" points="51.3943,-41.3708 43.4349,-34.378 45.2963,-44.8081 51.3943,-41.3708"/>
+</g>
+<!-- add_party -->
+<g id="node3" class="node"><title>add_party</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="103.945" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;add_party -->
+<g id="edge2" class="edge"><title>start&#45;&gt;add_party</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M103.945,-71.6939C103.945,-62.6045 103.945,-54.0138 103.945,-46.5091"/>
+<polygon fill="#555555" stroke="#555555" points="107.445,-46.3595 103.945,-36.3595 100.445,-46.3596 107.445,-46.3595"/>
+</g>
+<!-- update_party -->
+<g id="node4" class="node"><title>update_party</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="175.945" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;update_party -->
+<g id="edge4" class="edge"><title>start&#45;&gt;update_party</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M146.867,-80.8369C153.075,-67.6358 158.997,-55.0416 163.857,-44.7052"/>
+<polygon fill="#555555" stroke="#555555" points="167.079,-46.0795 168.167,-35.5407 160.744,-43.1008 167.079,-46.0795"/>
+</g>
+<!-- remove_party -->
+<g id="node5" class="node"><title>remove_party</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="247.945" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;remove_party -->
+<g id="edge5" class="edge"><title>start&#45;&gt;remove_party</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M173.836,-97.8008C193.363,-77.0376 213.096,-56.0544 227.286,-40.9668"/>
+<polygon fill="#555555" stroke="#555555" points="229.869,-43.3292 234.17,-33.6467 224.769,-38.5335 229.869,-43.3292"/>
+</g>
+<!-- Lighting -->
+<g id="node6" class="node"><title>Lighting</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="252.945" cy="-173.116" rx="27" ry="18"/>
+</g>
+<!-- Invasion -->
+<g id="node7" class="node"><title>Invasion</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="324.945" cy="-173.116" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 15) then begin\n  Player_Elevation := elevation(dude_obj);\n  if (Player_Elevation == 0) then begin\n    if ((game_time_hour >= 700) and (game_time_hour < 1800) and (metarule(22, 0) == 0)) then begin\n      if (map_var(10) == 0) then begin\n        set_map_var(10, 1);\n        mutan_ptr := create_object_sid(16777408, 0, 0, 524);\n        critter_attempt_placement(mutan_ptr, 20532, 0);\n        critter_add_trait(mutan_ptr, 1, 6, 34);\n        stuff := create_object_sid(15, 0, 0, -1);\n        add_obj_to_inven(mutan_ptr, stuff);\n        stuff := create_object_sid(39, 0, 0, -1);\n        add_obj_to_inven(mutan_ptr, stuff);\n        stuff := create_object_sid(40, 0, 0, -1);\n        add_obj_to_inven(mutan_ptr, stuff);\n        mutan_ptr := create_object_sid(16777408, 0, 0, 524);\n        critter_attempt_placement(mutan_ptr, 19337, 0);\n        critter_add_trait(mutan_ptr, 1, 6, 34);\n        stuff := create_object_sid(28, 0, 0, -1);\n        add_obj_to_inven(mutan_ptr, stuff);\n        stuff := create_object_sid(39, 0, 0, -1);\n        add_obj_to_inven(mutan_ptr, stuff);\n        stuff := create_object_sid(40, 0, 0, -1);\n        add_obj_to_inven(mutan_ptr, stuff);\n        mutan_ptr := create_object_sid(16777408, 0, 0, 524);\n        critter_attempt_placement(mutan_ptr, 18740, 0);\n        critter_add_trait(mutan_ptr, 1, 6, 34);\n        stuff := create_object_sid(28, 0, 0, -1);\n        add_obj_to_inven(mutan_ptr, stuff);\n        stuff := create_object_sid(39, 0, 0, -1);\n        add_obj_to_inven(mutan_ptr, stuff);\n        stuff := create_object_sid(40, 0, 0, -1);\n        add_obj_to_inven(mutan_ptr, stuff);\n        mutan_ptr := create_object_sid(16777408, 0, 0, 524);\n        critter_attempt_placement(mutan_ptr, 21339, 0);\n        critter_add_trait(mutan_ptr, 1, 6, 34);\n        stuff := create_object_sid(28, 0, 0, -1);\n        add_obj_to_inven(mutan_ptr, stuff);\n        stuff := create_object_sid(39, 0, 0, -1);\n        add_obj_to_inven(mutan_ptr, stuff);\n        stuff := create_object_sid(40, 0, 0, -1);\n        add_obj_to_inven(mutan_ptr, stuff);\n      end\n    end\n  end\n  if (global_var(32) == 2) then begin\n    override_map_start(112, 84, 0, 3);\n  end\n  else begin\n    if (global_var(32) == 3) then begin\n      override_map_start(140, 78, 1, 4);\n    end\n    else begin\n      if (global_var(32) == 5) then begin\n        override_map_start(140, 78, 0, 4);\n      end\n      else begin\n        if (global_var(32) == 12) then begin\n          override_map_start(55, 68, 0, 5);\n          if (metarule(22, 0) == 0) then begin\n            create_object_sid(16777363, 13854, 0, 53);\n            mutan_ptr := create_object_sid(16777409, 0, 0, 524);\n            critter_attempt_placement(mutan_ptr, 15468, 0);\n            critter_add_trait(mutan_ptr, 1, 6, 55);\n            stuff := create_object_sid(15, 0, 0, -1);\n            add_obj_to_inven(mutan_ptr, stuff);\n            stuff := create_object_sid(39, 0, 0, -1);\n            add_obj_to_inven(mutan_ptr, stuff);\n            stuff := create_object_sid(40, 0, 0, -1);\n            add_obj_to_inven(mutan_ptr, stuff);\n            mutan_ptr := create_object_sid(16777409, 0, 0, 524);\n            critter_attempt_placement(mutan_ptr, 15450, 0);\n            critter_add_trait(mutan_ptr, 1, 6, 55);\n            stuff := create_object_sid(15, 0, 0, -1);\n            add_obj_to_inven(mutan_ptr, stuff);\n            stuff := create_object_sid(39, 0, 0, -1);\n            add_obj_to_inven(mutan_ptr, stuff);\n            stuff := create_object_sid(40, 0, 0, -1);\n            add_obj_to_inven(mutan_ptr, stuff);\n          end\n        end\n        else begin\n          override_map_start(112, 84, 0, 3);\n        end\n      end\n    end\n  end\n  call Darkness;\n  call add_party;\nend\nif (script_action == 23) then begin\n  call Darkness;\n  if (global_var(55) != 0) then begin\n    cur_count := 240 - ((game_time / 10) - global_var(55));\n    if (cur_count != prev_count) then begin\n      display_msg(message_str(447, 100) + cur_count + message_str(447, 101));\n      prev_count := cur_count;\n    end\n    if (((game_time / 10) - global_var(55)) > 240) then begin\n      display_msg(message_str(447, 106));\n      play_gmovie(4);\n      metarule(13, 0);\n    end\n  end\n  call update_party;\nend\nif (script_action == 16) then begin\n  kill_critter_type(16777408, 0);\n  call remove_party;\nend\n","Lighting":"variable LVar0 := 0;\nLVar0 := game_time_hour;\nif ((LVar0 >= 600) and (LVar0 < 700)) then begin\n  set_light_level(LVar0 - 600 + 40);\nend\nelse begin\n  if ((LVar0 >= 700) and (LVar0 < 1800)) then begin\n    set_light_level(100);\n  end\n  else begin\n    if ((LVar0 >= 1800) and (LVar0 < 1900)) then begin\n      set_light_level(100 - (LVar0 - 1800));\n    end\n    else begin\n      set_light_level(40);\n    end\n  end\nend\n","Darkness":"set_light_level(40);\n","add_party":"variable LVar0 := 0;\nvariable LVar1 := 0;\nparty_elevation := elevation(dude_obj);\nif (global_var(26) == 5) then begin\n  if (Tandi_ptr == 0) then begin\n  end\n  critter_add_trait(Tandi_ptr, 1, 6, 0);\nend\n","update_party":"variable LVar0 := 0;\nvariable LVar1 := 0;\nif (elevation(dude_obj) != party_elevation) then begin\n  party_elevation := elevation(dude_obj);\n  if (global_var(118) == 2) then begin\n    if (Ian_ptr == 0) then begin\n    end\n    else begin\n      move_to(Ian_ptr, tile_num_in_direction(tile_num(dude_obj), 1, 2), elevation(dude_obj));\n    end\n  end\n  if (global_var(5)) then begin\n    if (Dog_ptr == 0) then begin\n    end\n    else begin\n      move_to(Dog_ptr, tile_num_in_direction(tile_num(dude_obj), 2, 1), elevation(dude_obj));\n    end\n  end\n  if (global_var(121) == 2) then begin\n    if (Tycho_ptr == 0) then begin\n    end\n    else begin\n      move_to(Tycho_ptr, tile_num_in_direction(tile_num(dude_obj), 3, 2), elevation(dude_obj));\n    end\n  end\n  if (global_var(244) == 2) then begin\n    if (Katja_ptr == 0) then begin\n    end\n    else begin\n      move_to(Katja_ptr, tile_num_in_direction(tile_num(dude_obj), 4, 2), elevation(dude_obj));\n    end\n  end\n  if (global_var(26) == 5) then begin\n    if (Tandi_ptr == 0) then begin\n    end\n    else begin\n      move_to(Tandi_ptr, tile_num_in_direction(tile_num(dude_obj), 4, 4), elevation(dude_obj));\n    end\n  end\nend\n","remove_party":"if (global_var(118) == 2) then begin\n  set_global_var(118, 2);\nend\nif (global_var(5)) then begin\n  set_global_var(5, 1);\nend\nif (global_var(121) == 2) then begin\n  set_global_var(121, 2);\nend\nif (global_var(244) == 2) then begin\n  set_global_var(244, 2);\nend\nif (global_var(26) == 5) then begin\nend\n","Invasion":"if (not(global_var(18) == 2)) then begin\n  if (global_var(149) > (game_time / (10 * 60 * 60 * 24))) then begin\n    set_global_var(13, 1);\n  end\n  if (global_var(150) > (game_time / (10 * 60 * 60 * 24))) then begin\n    set_global_var(14, 1);\n  end\n  if (global_var(151) > (game_time / (10 * 60 * 60 * 24))) then begin\n    set_global_var(16, 1);\n  end\n  if (global_var(152) > (game_time / (10 * 60 * 60 * 24))) then begin\n    set_global_var(15, 1);\n  end\n  if (global_var(153) > (game_time / (10 * 60 * 60 * 24))) then begin\n    set_global_var(12, 1);\n  end\n  if (global_var(154) <= 0) then begin\n    set_global_var(11, 1);\n  end\n  if (global_var(148) > (game_time / (10 * 60 * 60 * 24))) then begin\n    set_global_var(7, 1);\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

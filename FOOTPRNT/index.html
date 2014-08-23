@@ -1,0 +1,117 @@
+<!DOCTYPE html><html><head><title>FOOTPRNT</title><meta charset="utf-8" /></head><body><svg width="202pt" height="168pt"
+ viewBox="0.00 0.00 201.75 167.81" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 163.806)">
+<title>FOOTPRNT</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-163.806 197.747,-163.806 197.747,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="96.8736" cy="-79.9031" rx="96.7474" ry="79.8063"/>
+<text text-anchor="middle" x="96.8736" y="-121.203" font-family="Times,serif" font-size="14.00">There seems to be a </text>
+<text text-anchor="middle" x="96.8736" y="-106.203" font-family="Times,serif" font-size="14.00">large amount of foot</text>
+<text text-anchor="middle" x="96.8736" y="-91.2031" font-family="Times,serif" font-size="14.00"> traffic in the area</text>
+<text text-anchor="middle" x="96.8736" y="-76.2031" font-family="Times,serif" font-size="14.00">,</text>
+<text text-anchor="middle" x="96.8736" y="-61.2031" font-family="Times,serif" font-size="14.00"> possibly leading </text>
+<text text-anchor="middle" x="96.8736" y="-46.2031" font-family="Times,serif" font-size="14.00">to the manhole cover</text>
+<text text-anchor="middle" x="96.8736" y="-31.2031" font-family="Times,serif" font-size="14.00">.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 2) then begin\n  if (source_obj == dude_obj) then begin\n    if (local_var(0) == 0) then begin\n      set_local_var(0, 1);\n      display_msg(message_str(829, 100));\n    end\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

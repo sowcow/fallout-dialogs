@@ -1,0 +1,131 @@
+<!DOCTYPE html><html><head><title>YOURROOM</title><meta charset="utf-8" /></head><body><svg width="205pt" height="346pt"
+ viewBox="0.00 0.00 204.58 345.87" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 341.872)">
+<title>YOURROOM</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-341.872 200.576,-341.872 200.576,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="98.2878" cy="-319.872" rx="27" ry="18"/>
+</g>
+<!-- spatial_p_proc -->
+<g id="node2" class="node"><title>spatial_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="98.2878" cy="-132.936" rx="98.0761" ry="132.872"/>
+<text text-anchor="middle" x="98.2878" y="-211.736" font-family="Times,serif" font-size="14.00">This door leads to y</text>
+<text text-anchor="middle" x="98.2878" y="-196.736" font-family="Times,serif" font-size="14.00">our room. You have l</text>
+<text text-anchor="middle" x="98.2878" y="-181.736" font-family="Times,serif" font-size="14.00">ived your entire lif</text>
+<text text-anchor="middle" x="98.2878" y="-166.736" font-family="Times,serif" font-size="14.00">e in this</text>
+<text text-anchor="middle" x="98.2878" y="-151.736" font-family="Times,serif" font-size="14.00"> room, unt</text>
+<text text-anchor="middle" x="98.2878" y="-136.736" font-family="Times,serif" font-size="14.00">il now. Your fellow </text>
+<text text-anchor="middle" x="98.2878" y="-121.736" font-family="Times,serif" font-size="14.00">Vault citizens have </text>
+<text text-anchor="middle" x="98.2878" y="-106.736" font-family="Times,serif" font-size="14.00">told you that they</text>
+<text text-anchor="middle" x="98.2878" y="-91.7361" font-family="Times,serif" font-size="14.00"> </text>
+<text text-anchor="middle" x="98.2878" y="-76.7361" font-family="Times,serif" font-size="14.00">will leave this room</text>
+<text text-anchor="middle" x="98.2878" y="-61.7361" font-family="Times,serif" font-size="14.00"> empty in your honor</text>
+<text text-anchor="middle" x="98.2878" y="-46.7361" font-family="Times,serif" font-size="14.00">.</text>
+</g>
+<!-- start&#45;&gt;spatial_p_proc -->
+<g id="edge1" class="edge"><title>start&#45;&gt;spatial_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M98.2878,-301.805C98.2878,-294.831 98.2878,-286.085 98.2878,-276.27"/>
+<polygon fill="#555555" stroke="#555555" points="101.788,-276.124 98.2878,-266.124 94.7879,-276.124 101.788,-276.124"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 2) then begin\n  call spatial_p_proc;\nend\n","spatial_p_proc":"if (source_obj == dude_obj) then begin\n  if (not(local_var(0))) then begin\n    display_msg(message_str(210, 100));\n    set_local_var(0, 1);\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

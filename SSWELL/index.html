@@ -1,0 +1,156 @@
+<!DOCTYPE html><html><head><title>SSWELL</title><meta charset="utf-8" /></head><body><svg width="633pt" height="347pt"
+ viewBox="0.00 0.00 632.87 347.29" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 343.286)">
+<title>SSWELL</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-343.286 628.869,-343.286 628.869,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="307.459" cy="-321.286" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node2" class="node"><title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="95.4594" cy="-133.643" rx="95.4188" ry="69.0935"/>
+<text text-anchor="middle" x="95.4594" y="-167.443" font-family="Times,serif" font-size="14.00">You see the water su</text>
+<text text-anchor="middle" x="95.4594" y="-152.443" font-family="Times,serif" font-size="14.00">pply to Shady Sands.</text>
+<text text-anchor="middle" x="95.4594" y="-137.443" font-family="Times,serif" font-size="14.00"> This is too little </text>
+<text text-anchor="middle" x="95.4594" y="-122.443" font-family="Times,serif" font-size="14.00">water</text>
+<text text-anchor="middle" x="95.4594" y="-107.443" font-family="Times,serif" font-size="14.00"> to supply you</text>
+<text text-anchor="middle" x="95.4594" y="-92.4432" font-family="Times,serif" font-size="14.00">r vault.</text>
+</g>
+<!-- start&#45;&gt;look_at_p_proc -->
+<g id="edge1" class="edge"><title>start&#45;&gt;look_at_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M283.806,-312.23C260.673,-303.576 225.26,-288.195 199.459,-267.286 177.788,-249.724 157.836,-226.851 141.328,-205.055"/>
+<polygon fill="#555555" stroke="#555555" points="143.946,-202.71 135.173,-196.768 138.326,-206.883 143.946,-202.71"/>
+</g>
+<!-- use_obj_on_p_proc -->
+<g id="node3" class="node"><title>use_obj_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="307.459" cy="-133.643" rx="98.9899" ry="133.787"/>
+<text text-anchor="middle" x="307.459" y="-212.943" font-family="Times,serif" font-size="14.00">You have no reason t</text>
+<text text-anchor="middle" x="307.459" y="-197.943" font-family="Times,serif" font-size="14.00">o climb down the wel</text>
+<text text-anchor="middle" x="307.459" y="-182.943" font-family="Times,serif" font-size="14.00">l, but perhaps the</text>
+<text text-anchor="middle" x="307.459" y="-167.943" font-family="Times,serif" font-size="14.00"> </text>
+<text text-anchor="middle" x="307.459" y="-152.943" font-family="Times,serif" font-size="14.00">rope will be useful </text>
+<text text-anchor="middle" x="307.459" y="-137.943" font-family="Times,serif" font-size="14.00">climbing down holes.</text>
+<text text-anchor="middle" x="307.459" y="-106.943" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="307.459" y="-91.9432" font-family="Times,serif" font-size="14.00">You make a wish</text>
+<text text-anchor="middle" x="307.459" y="-76.9432" font-family="Times,serif" font-size="14.00"> as you hear the bot</text>
+<text text-anchor="middle" x="307.459" y="-61.9432" font-family="Times,serif" font-size="14.00">tle cap splash into </text>
+<text text-anchor="middle" x="307.459" y="-46.9432" font-family="Times,serif" font-size="14.00">the water.</text>
+</g>
+<!-- start&#45;&gt;use_obj_on_p_proc -->
+<g id="edge2" class="edge"><title>start&#45;&gt;use_obj_on_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M307.459,-303.154C307.459,-296.153 307.459,-287.374 307.459,-277.521"/>
+<polygon fill="#555555" stroke="#555555" points="310.96,-277.337 307.459,-267.337 303.96,-277.337 310.96,-277.337"/>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node4" class="node"><title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="524.459" cy="-133.643" rx="100.318" ry="26.7407"/>
+<text text-anchor="middle" x="524.459" y="-137.443" font-family="Times,serif" font-size="14.00">You learn nothing mo</text>
+<text text-anchor="middle" x="524.459" y="-122.443" font-family="Times,serif" font-size="14.00">re from the well.</text>
+</g>
+<!-- start&#45;&gt;use_skill_on_p_proc -->
+<g id="edge3" class="edge"><title>start&#45;&gt;use_skill_on_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M331.011,-312.102C354.065,-303.351 389.421,-287.897 415.459,-267.286 450.829,-239.289 482.475,-198.036 502.437,-168.986"/>
+<polygon fill="#555555" stroke="#555555" points="505.547,-170.634 508.249,-160.39 499.748,-166.714 505.547,-170.634"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if ((script_action == 21) or (script_action == 3)) then begin\n  call look_at_p_proc;\nend\nelse begin\n  if (script_action == 7) then begin\n    call use_obj_on_p_proc;\n  end\n  else begin\n    if (script_action == 8) then begin\n      call use_skill_on_p_proc;\n    end\n  end\nend\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(14, 100));\n","use_obj_on_p_proc":"if (obj_pid(obj_being_used_with) == 127) then begin\n  script_overrides;\n  display_msg(message_str(14, 101));\nend\nelse begin\n  if (obj_pid(obj_being_used_with) == 41) then begin\n    script_overrides;\n    display_msg(message_str(14, 103));\n    item_caps_adjust(dude_obj, -1);\n  end\nend\n","use_skill_on_p_proc":"if (action_being_used == 12) then begin\n  script_overrides;\n  display_msg(message_str(14, 102));\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

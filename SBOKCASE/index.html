@@ -1,0 +1,145 @@
+<!DOCTYPE html><html><head><title>SBOKCASE</title><meta charset="utf-8" /></head><body><svg width="471pt" height="134pt"
+ viewBox="0.00 0.00 471.34 133.74" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 129.74)">
+<title>SBOKCASE</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-129.74 467.338,-129.74 467.338,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="165" cy="-107.74" rx="27" ry="18"/>
+</g>
+<!-- pickup_p_proc -->
+<g id="node2" class="node"><title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-26.8701" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;pickup_p_proc -->
+<g id="edge1" class="edge"><title>start&#45;&gt;pickup_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M143.411,-96.6452C122.42,-86.5708 89.8617,-70.252 63,-53.7401 59.5577,-51.6241 56.0133,-49.288 52.5533,-46.9111"/>
+<polygon fill="#555555" stroke="#555555" points="54.4171,-43.9422 44.2331,-41.0205 50.3723,-49.6553 54.4171,-43.9422"/>
+</g>
+<!-- description_p_proc -->
+<g id="node3" class="node"><title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="165" cy="-26.8701" rx="93.1765" ry="26.7407"/>
+<text text-anchor="middle" x="165" y="-30.6701" font-family="Times,serif" font-size="14.00">The bookcase is full</text>
+<text text-anchor="middle" x="165" y="-15.6701" font-family="Times,serif" font-size="14.00"> of tattered novels.</text>
+</g>
+<!-- start&#45;&gt;description_p_proc -->
+<g id="edge2" class="edge"><title>start&#45;&gt;description_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M165,-89.6265C165,-82.137 165,-73.0458 165,-64.168"/>
+<polygon fill="#555555" stroke="#555555" points="168.5,-63.9529 165,-53.953 161.5,-63.953 168.5,-63.9529"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node4" class="node"><title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="370" cy="-26.8701" rx="93.1765" ry="26.7407"/>
+<text text-anchor="middle" x="370" y="-30.6701" font-family="Times,serif" font-size="14.00">The bookcase is full</text>
+<text text-anchor="middle" x="370" y="-15.6701" font-family="Times,serif" font-size="14.00"> of tattered novels.</text>
+</g>
+<!-- start&#45;&gt;look_at_p_proc -->
+<g id="edge3" class="edge"><title>start&#45;&gt;look_at_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M186.177,-96.351C191.012,-94.0882 196.154,-91.7666 201,-89.7401 233.644,-76.0899 270.477,-62.4095 301.406,-51.3966"/>
+<polygon fill="#555555" stroke="#555555" points="302.97,-54.5559 311.227,-47.9182 300.633,-47.9575 302.97,-54.5559"/>
+</g>
+<!-- chairend -->
+<g id="node5" class="node"><title>chairend</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="237" cy="-107.74" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 4) then begin\n  call pickup_p_proc;\nend\nelse begin\n  if (script_action == 3) then begin\n    call description_p_proc;\n  end\n  else begin\n    if (script_action == 21) then begin\n      call look_at_p_proc;\n    end\n  end\nend\n","pickup_p_proc":"if (not(is_success(roll_vs_skill(dude_obj, 10, 0))) and (global_var(246) != 1)) then begin\n  script_overrides;\n  set_map_var(2, 1);\nend\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(122, 100));\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(122, 101));\n","chairend":"[]"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

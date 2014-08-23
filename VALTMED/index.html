@@ -1,0 +1,129 @@
+<!DOCTYPE html><html><head><title>VALTMED</title><meta charset="utf-8" /></head><body><svg width="212pt" height="326pt"
+ viewBox="0.00 0.00 211.65 326.07" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 322.073)">
+<title>VALTMED</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-322.073 207.647,-322.073 207.647,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="101.823" cy="-300.073" rx="27" ry="18"/>
+</g>
+<!-- spatial_p_proc -->
+<g id="node2" class="node"><title>spatial_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="101.823" cy="-123.037" rx="101.647" ry="123.073"/>
+<text text-anchor="middle" x="101.823" y="-194.837" font-family="Times,serif" font-size="14.00">This is the Vault Em</text>
+<text text-anchor="middle" x="101.823" y="-179.837" font-family="Times,serif" font-size="14.00">ergency Medical Lab&#45;</text>
+<text text-anchor="middle" x="101.823" y="-164.837" font-family="Times,serif" font-size="14.00">&#45;EML. It</text>
+<text text-anchor="middle" x="101.823" y="-149.837" font-family="Times,serif" font-size="14.00"> is here so</text>
+<text text-anchor="middle" x="101.823" y="-134.837" font-family="Times,serif" font-size="14.00"> that all serious in</text>
+<text text-anchor="middle" x="101.823" y="-119.837" font-family="Times,serif" font-size="14.00">juries and ailments</text>
+<text text-anchor="middle" x="101.823" y="-88.8366" font-family="Times,serif" font-size="14.00"> might be treated. T</text>
+<text text-anchor="middle" x="101.823" y="-73.8366" font-family="Times,serif" font-size="14.00">here should be a med</text>
+<text text-anchor="middle" x="101.823" y="-58.8366" font-family="Times,serif" font-size="14.00">ic on duty 24 hours </text>
+<text text-anchor="middle" x="101.823" y="-43.8366" font-family="Times,serif" font-size="14.00">a day.</text>
+</g>
+<!-- start&#45;&gt;spatial_p_proc -->
+<g id="edge1" class="edge"><title>start&#45;&gt;spatial_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M101.823,-281.971C101.823,-274.939 101.823,-266.126 101.823,-256.28"/>
+<polygon fill="#555555" stroke="#555555" points="105.323,-256.118 101.823,-246.118 98.3235,-256.118 105.323,-256.118"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 2) then begin\n  call spatial_p_proc;\nend\n","spatial_p_proc":"if (source_obj == dude_obj) then begin\n  if (not(local_var(0))) then begin\n    display_msg(message_str(219, 100));\n    set_local_var(0, 1);\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

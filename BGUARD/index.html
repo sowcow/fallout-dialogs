@@ -1,0 +1,145 @@
+<!DOCTYPE html><html><head><title>BGUARD</title><meta charset="utf-8" /></head><body><svg width="210pt" height="622pt"
+ viewBox="0.00 0.00 210.23 621.64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 617.644)">
+<title>BGUARD</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-617.644 206.233,-617.644 206.233,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="101.116" cy="-595.644" rx="73.387" ry="18"/>
+<text text-anchor="middle" x="101.116" y="-591.944" font-family="Times,serif" font-size="14.00">You see a guard.</text>
+</g>
+<!-- do_dialogue -->
+<g id="node2" class="node"><title>do_dialogue</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="101.116" cy="-270.822" rx="101.233" ry="270.644"/>
+<text text-anchor="middle" x="101.116" y="-447.122" font-family="Times,serif" font-size="14.00">I work for the Barte</text>
+<text text-anchor="middle" x="101.116" y="-432.122" font-family="Times,serif" font-size="14.00">rman.</text>
+<text text-anchor="middle" x="101.116" y="-417.122" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="101.116" y="-402.122" font-family="Times,serif" font-size="14.00">Got any do</text>
+<text text-anchor="middle" x="101.116" y="-387.122" font-family="Times,serif" font-size="14.00">nuts?</text>
+<text text-anchor="middle" x="101.116" y="-372.122" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="101.116" y="-357.122" font-family="Times,serif" font-size="14.00">If you bre</text>
+<text text-anchor="middle" x="101.116" y="-342.122" font-family="Times,serif" font-size="14.00">ak it, you buy it!</text>
+<text text-anchor="middle" x="101.116" y="-327.122" font-family="Times,serif" font-size="14.00">&#45;</text>
+<text text-anchor="middle" x="101.116" y="-312.122" font-family="Times,serif" font-size="14.00">&#45;&#45;</text>
+<text text-anchor="middle" x="101.116" y="-297.122" font-family="Times,serif" font-size="14.00">Shoplifters will </text>
+<text text-anchor="middle" x="101.116" y="-282.122" font-family="Times,serif" font-size="14.00">be killed!</text>
+<text text-anchor="middle" x="101.116" y="-267.122" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="101.116" y="-252.122" font-family="Times,serif" font-size="14.00">Are y</text>
+<text text-anchor="middle" x="101.116" y="-237.122" font-family="Times,serif" font-size="14.00">ou gonna buy somethi</text>
+<text text-anchor="middle" x="101.116" y="-222.122" font-family="Times,serif" font-size="14.00">ng? Perhaps in this </text>
+<text text-anchor="middle" x="101.116" y="-207.122" font-family="Times,serif" font-size="14.00">century?</text>
+<text text-anchor="middle" x="101.116" y="-192.122" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="101.116" y="-177.122" font-family="Times,serif" font-size="14.00">Can&#39;t f</text>
+<text text-anchor="middle" x="101.116" y="-162.122" font-family="Times,serif" font-size="14.00">ight Rad Scorpions w</text>
+<text text-anchor="middle" x="101.116" y="-147.122" font-family="Times,serif" font-size="14.00">ithout this stuff.</text>
+<text text-anchor="middle" x="101.116" y="-132.122" font-family="Times,serif" font-size="14.00">&#45;</text>
+<text text-anchor="middle" x="101.116" y="-117.122" font-family="Times,serif" font-size="14.00">&#45;&#45;</text>
+<text text-anchor="middle" x="101.116" y="-102.122" font-family="Times,serif" font-size="14.00">I work for the Ba</text>
+<text text-anchor="middle" x="101.116" y="-87.1219" font-family="Times,serif" font-size="14.00">rterman.</text>
+</g>
+<!-- start&#45;&gt;do_dialogue -->
+<g id="edge1" class="edge"><title>start&#45;&gt;do_dialogue</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M101.116,-577.287C101.116,-570.51 101.116,-561.982 101.116,-552.127"/>
+<polygon fill="#555555" stroke="#555555" points="104.616,-551.844 101.116,-541.844 97.6164,-551.844 104.616,-551.844"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 11) then begin\n  call do_dialogue;\nend\nelse begin\n  if (script_action == 12) then begin\n    if (hostile) then begin\n      hostile := 0;\n      attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\n    end\n  end\n  else begin\n    if (script_action == 4) then begin\n      hostile := 1;\n    end\n    else begin\n      if ((script_action == 21) or (script_action == 3)) then begin\n        script_overrides;\n        display_msg(message_str(4, 100));\n      end\n    end\n  end\nend\n","do_dialogue":"variable LVar0 := 0;\nrndx := random(0, 6);\nif (rndx == 0) then begin\n  LVar0 := message_str(4, 101);\nend\nif (rndx == 1) then begin\n  LVar0 := message_str(4, 102);\nend\nif (rndx == 2) then begin\n  LVar0 := message_str(4, 103);\nend\nif (rndx == 3) then begin\n  LVar0 := message_str(4, 104);\nend\nif (rndx == 4) then begin\n  LVar0 := message_str(4, 105);\nend\nif (rndx == 5) then begin\n  LVar0 := message_str(4, 106);\nend\nif (rndx == 6) then begin\n  LVar0 := message_str(4, 107);\nend\nfloat_msg(self_obj, LVar0, 0);\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

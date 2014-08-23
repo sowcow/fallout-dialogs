@@ -1,0 +1,127 @@
+<!DOCTYPE html><html><head><title>SHADDESK</title><meta charset="utf-8" /></head><body><svg width="339pt" height="151pt"
+ viewBox="0.00 0.00 338.92 151.48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 147.48)">
+<title>SHADDESK</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-147.48 334.919,-147.48 334.919,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="95.4594" cy="-116.61" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node2" class="node"><title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="95.4594" cy="-26.8701" rx="95.4188" ry="26.7407"/>
+<text text-anchor="middle" x="95.4594" y="-30.6701" font-family="Times,serif" font-size="14.00">You notice a desk cl</text>
+<text text-anchor="middle" x="95.4594" y="-15.6701" font-family="Times,serif" font-size="14.00">uttered with papers.</text>
+</g>
+<!-- start&#45;&gt;look_at_p_proc -->
+<g id="edge1" class="edge"><title>start&#45;&gt;look_at_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M95.4594,-98.2755C95.4594,-88.4643 95.4594,-75.8168 95.4594,-63.9541"/>
+<polygon fill="#555555" stroke="#555555" points="98.9595,-63.8222 95.4594,-53.8222 91.9595,-63.8222 98.9595,-63.8222"/>
+</g>
+<!-- description_p_proc -->
+<g id="node3" class="node"><title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="235.459" cy="-116.61" rx="95.4188" ry="26.7407"/>
+<text text-anchor="middle" x="235.459" y="-120.41" font-family="Times,serif" font-size="14.00">You notice a desk cl</text>
+<text text-anchor="middle" x="235.459" y="-105.41" font-family="Times,serif" font-size="14.00">uttered with papers.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if ((script_action == 3) or (script_action == 21)) then begin\n  call look_at_p_proc;\nend\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(124, 100));\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(124, 100));\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

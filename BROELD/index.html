@@ -1,0 +1,157 @@
+<!DOCTYPE html><html><head><title>BROELD</title><meta charset="utf-8" /></head><body><svg width="486pt" height="134pt"
+ viewBox="0.00 0.00 486.00 133.74" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 129.74)">
+<title>BROELD</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-129.74 482,-129.74 482,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="171" cy="-107.74" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node2" class="node"><title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-26.8701" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;talk_p_proc -->
+<g id="edge1" class="edge"><title>start&#45;&gt;talk_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M148.923,-97.2148C126.689,-87.3219 91.6685,-70.9116 63,-53.7401 59.5336,-51.6639 55.975,-49.3512 52.5076,-46.9864"/>
+<polygon fill="#555555" stroke="#555555" points="54.3687,-44.0159 44.1814,-41.1056 50.3303,-49.7336 54.3687,-44.0159"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node3" class="node"><title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-26.8701" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;critter_p_proc -->
+<g id="edge2" class="edge"><title>start&#45;&gt;critter_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M157.457,-91.9053C146.697,-80.1179 131.479,-63.4483 119.268,-50.0719"/>
+<polygon fill="#555555" stroke="#555555" points="121.809,-47.6641 112.482,-42.6384 116.639,-52.3836 121.809,-47.6641"/>
+</g>
+<!-- pickup_p_proc -->
+<g id="node4" class="node"><title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="171" cy="-26.8701" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;pickup_p_proc -->
+<g id="edge3" class="edge"><title>start&#45;&gt;pickup_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M171,-89.6265C171,-79.6013 171,-66.7063 171,-55.2947"/>
+<polygon fill="#555555" stroke="#555555" points="174.5,-54.9503 171,-44.9503 167.5,-54.9503 174.5,-54.9503"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node5" class="node"><title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="311" cy="-26.8701" rx="95.4188" ry="26.7407"/>
+<text text-anchor="middle" x="311" y="-30.6701" font-family="Times,serif" font-size="14.00">You see an Elder of </text>
+<text text-anchor="middle" x="311" y="-15.6701" font-family="Times,serif" font-size="14.00">the Brotherhood.</text>
+</g>
+<!-- start&#45;&gt;look_at_p_proc -->
+<g id="edge4" class="edge"><title>start&#45;&gt;look_at_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M191.059,-95.44C209.16,-85.2423 236.559,-69.8071 260.602,-56.2623"/>
+<polygon fill="#555555" stroke="#555555" points="262.631,-59.1363 269.626,-51.1786 259.195,-53.0375 262.631,-59.1363"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node6" class="node"><title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="451" cy="-26.8701" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;destroy_p_proc -->
+<g id="edge5" class="edge"><title>start&#45;&gt;destroy_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M197.74,-104.519C243.851,-99.9179 340.537,-86.8593 415,-53.7401 418.956,-51.9808 422.911,-49.7456 426.675,-47.3286"/>
+<polygon fill="#555555" stroke="#555555" points="428.829,-50.0936 435.022,-41.4973 424.82,-44.3553 428.829,-50.0936"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (Only_Once) then begin\n  Only_Once := 0;\n  critter_add_trait(self_obj, 1, 6, 44);\n  critter_add_trait(self_obj, 1, 5, 80);\nend\nif (script_action == 11) then begin\n  call talk_p_proc;\nend\nelse begin\n  if (script_action == 12) then begin\n    call critter_p_proc;\n  end\n  else begin\n    if (script_action == 4) then begin\n      call pickup_p_proc;\n    end\n    else begin\n      if (script_action == 21) then begin\n        call look_at_p_proc;\n      end\n      else begin\n        if (script_action == 18) then begin\n          call destroy_p_proc;\n        end\n      end\n    end\n  end\nend\n","critter_p_proc":"if (global_var(250)) then begin\n  hostile := 1;\nend\nif (tile_distance_objs(self_obj, dude_obj) > 12) then begin\n  hostile := 0;\nend\nif (hostile) then begin\n  set_global_var(250, 1);\n  hostile := 0;\n  attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\nend\n","talk_p_proc":"float_msg(self_obj, message_str(944, random(101, 105)), 2);\n","pickup_p_proc":"hostile := 1;\n","look_at_p_proc":"display_msg(message_str(944, 100));\n","destroy_p_proc":"set_global_var(250, 1);\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

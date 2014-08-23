@@ -1,0 +1,149 @@
+<!DOCTYPE html><html><head><title>DEMODOG</title><meta charset="utf-8" /></head><body><svg width="226pt" height="303pt"
+ viewBox="0.00 0.00 226.10 303.45" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 299.446)">
+<title>DEMODOG</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-299.446 222.097,-299.446 222.097,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="117.097" cy="-183.723" rx="98.9899" ry="111.946"/>
+<text text-anchor="middle" x="117.097" y="-247.523" font-family="Times,serif" font-size="14.00">You see a dog. He se</text>
+<text text-anchor="middle" x="117.097" y="-232.523" font-family="Times,serif" font-size="14.00">ems to be following </text>
+<text text-anchor="middle" x="117.097" y="-217.523" font-family="Times,serif" font-size="14.00">you.</text>
+<text text-anchor="middle" x="117.097" y="-202.523" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="117.097" y="-187.523" font-family="Times,serif" font-size="14.00">You see a d</text>
+<text text-anchor="middle" x="117.097" y="-172.523" font-family="Times,serif" font-size="14.00">og.</text>
+<text text-anchor="middle" x="117.097" y="-157.523" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="117.097" y="-142.523" font-family="Times,serif" font-size="14.00">It seems tha</text>
+<text text-anchor="middle" x="117.097" y="-127.523" font-family="Times,serif" font-size="14.00">t you have made a fr</text>
+<text text-anchor="middle" x="117.097" y="-112.523" font-family="Times,serif" font-size="14.00">iend of this dog.</text>
+</g>
+<!-- do_dialogue -->
+<g id="node2" class="node"><title>do_dialogue</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="35.0969" cy="-18" rx="35.194" ry="18"/>
+<text text-anchor="middle" x="35.0969" y="-14.3" font-family="Times,serif" font-size="14.00">Woof!</text>
+</g>
+<!-- start&#45;&gt;do_dialogue -->
+<g id="edge1" class="edge"><title>start&#45;&gt;do_dialogue</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M68.686,-86.0648C61.0468,-70.8121 53.7626,-56.2683 47.9424,-44.6476"/>
+<polygon fill="#555555" stroke="#555555" points="51.0297,-42.996 43.422,-35.6222 44.7708,-46.1308 51.0297,-42.996"/>
+</g>
+<!-- growl -->
+<g id="node3" class="node"><title>growl</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="117.097" cy="-18" rx="29.4969" ry="18"/>
+<text text-anchor="middle" x="117.097" y="-14.3" font-family="Times,serif" font-size="14.00">Grrr!</text>
+</g>
+<!-- start&#45;&gt;growl -->
+<g id="edge2" class="edge"><title>start&#45;&gt;growl</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M117.097,-71.7042C117.097,-62.5083 117.097,-53.8772 117.097,-46.3671"/>
+<polygon fill="#555555" stroke="#555555" points="120.597,-46.231 117.097,-36.231 113.597,-46.2311 120.597,-46.231"/>
+</g>
+<!-- follow_player -->
+<g id="node4" class="node"><title>follow_player</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="191.097" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;follow_player -->
+<g id="edge3" class="edge"><title>start&#45;&gt;follow_player</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M161.85,-83.7076C168.329,-69.3742 174.475,-55.7755 179.446,-44.7776"/>
+<polygon fill="#555555" stroke="#555555" points="182.727,-46.0162 183.656,-35.4622 176.348,-43.1331 182.727,-46.0162"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (not(GVar2)) then begin\n  critter_add_trait(self_obj, 1, 6, 6);\n  GVar2 := 1;\n  dog_is_angry := 1;\nend\nelse begin\n  if (script_action == 11) then begin\n    call do_dialogue;\n  end\n  else begin\n    if (script_action == 4) then begin\n      attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\n    end\n    else begin\n      if ((script_action == 21) or (script_action == 3)) then begin\n        script_overrides;\n        if (global_var(5)) then begin\n          display_msg(message_str(374, 100));\n        end\n        else begin\n          display_msg(message_str(374, 101));\n        end\n      end\n      else begin\n        if (script_action == 12) then begin\n          if (global_var(5) == 1) then begin\n            if (tile_distance_objs(self_obj, dude_obj) > 4) then begin\n              animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(dude_obj), random(0, 5), 1), 1);\n            end\n            else begin\n              animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(dude_obj), random(0, 5), 3), 0);\n            end\n          end\n          else begin\n            if (Phil_approaches) then begin\n              if (dog_is_angry) then begin\n                add_timer_event(self_obj, game_ticks(4), 1);\n              end\n              Phil_approaches := 0;\n            end\n          end\n        end\n        else begin\n          if (script_action == 18) then begin\n            dog_is_angry := 0;\n          end\n          else begin\n            if (script_action == 22) then begin\n              if (fixed_param == 1) then begin\n                call growl;\n              end\n              else begin\n                if (fixed_param == 2) then begin\n                  call follow_player;\n                end\n              end\n            end\n            else begin\n              if (script_action == 7) then begin\n                if (obj_pid(obj_being_used_with) == 103) then begin\n                  display_msg(message_str(374, 104));\n                  give_exp_points(200);\n                  set_global_var(5, 1);\n                  set_global_var(187, 2);\n                  set_global_var(186, 2);\n                  critter_add_trait(self_obj, 1, 6, 0);\n                  dog_is_angry := 0;\n                  add_timer_event(self_obj, game_ticks(1), 2);\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\nend\n","growl":"float_msg(self_obj, message_str(374, 103), 0);\ngrowling := 1;\nsmartass2 := 1;\n","do_dialogue":"float_msg(self_obj, message_str(374, 102), 0);\n","follow_player":"variable LVar0 := 0;\nLVar0 := tile_num_in_direction(tile_num(dude_obj), random(0, 5), 1);\nif (tile_distance_objs(self_obj, dude_obj) < 8) then begin\n  animate_move_obj_to_tile(self_obj, LVar0, 0 bwor 16);\nend\nelse begin\n  animate_move_obj_to_tile(self_obj, LVar0, 1 bwor 16);\nend\nadd_timer_event(self_obj, game_ticks(2), 2);\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

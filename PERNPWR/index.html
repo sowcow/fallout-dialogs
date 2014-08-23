@@ -1,0 +1,133 @@
+<!DOCTYPE html><html><head><title>PERNPWR</title><meta charset="utf-8" /></head><body><svg width="207pt" height="530pt"
+ viewBox="0.00 0.00 207.40 529.84" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 525.845)">
+<title>PERNPWR</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-525.845 203.404,-525.845 203.404,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99.7021" cy="-260.922" rx="99.9045" ry="260.845"/>
+<text text-anchor="middle" x="99.7021" y="-430.222" font-family="Times,serif" font-size="14.00">This person looks li</text>
+<text text-anchor="middle" x="99.7021" y="-415.222" font-family="Times,serif" font-size="14.00">ke he may have been </text>
+<text text-anchor="middle" x="99.7021" y="-400.222" font-family="Times,serif" font-size="14.00">from the Brotherhood</text>
+<text text-anchor="middle" x="99.7021" y="-385.222" font-family="Times,serif" font-size="14.00"> of Steel.</text>
+<text text-anchor="middle" x="99.7021" y="-370.222" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="99.7021" y="-355.222" font-family="Times,serif" font-size="14.00">You w</text>
+<text text-anchor="middle" x="99.7021" y="-340.222" font-family="Times,serif" font-size="14.00">onder why this metal</text>
+<text text-anchor="middle" x="99.7021" y="-325.222" font-family="Times,serif" font-size="14.00"> person is here.</text>
+<text text-anchor="middle" x="99.7021" y="-310.222" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="99.7021" y="-279.222" font-family="Times,serif" font-size="14.00">This person looks t</text>
+<text text-anchor="middle" x="99.7021" y="-264.222" font-family="Times,serif" font-size="14.00">o have been killed b</text>
+<text text-anchor="middle" x="99.7021" y="-249.222" font-family="Times,serif" font-size="14.00">y high amounts of ra</text>
+<text text-anchor="middle" x="99.7021" y="-234.222" font-family="Times,serif" font-size="14.00">diation.</text>
+<text text-anchor="middle" x="99.7021" y="-219.222" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="99.7021" y="-204.222" font-family="Times,serif" font-size="14.00">You can</text>
+<text text-anchor="middle" x="99.7021" y="-189.222" font-family="Times,serif" font-size="14.00">not determine what c</text>
+<text text-anchor="middle" x="99.7021" y="-174.222" font-family="Times,serif" font-size="14.00">aused this person to</text>
+<text text-anchor="middle" x="99.7021" y="-159.222" font-family="Times,serif" font-size="14.00"> die.</text>
+<text text-anchor="middle" x="99.7021" y="-144.222" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="99.7021" y="-129.222" font-family="Times,serif" font-size="14.00">This skill</text>
+<text text-anchor="middle" x="99.7021" y="-114.222" font-family="Times,serif" font-size="14.00"> gleans no further i</text>
+<text text-anchor="middle" x="99.7021" y="-99.2224" font-family="Times,serif" font-size="14.00">nformation about thi</text>
+<text text-anchor="middle" x="99.7021" y="-84.2224" font-family="Times,serif" font-size="14.00">s person.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if ((script_action == 21) or (script_action == 3)) then begin\n  script_overrides;\n  if ((global_var(74) == 2) and is_success(do_check(dude_obj, 1, 0))) then begin\n    display_msg(message_str(297, 100));\n  end\n  else begin\n    display_msg(message_str(297, 101));\n  end\nend\nelse begin\n  if (script_action == 8) then begin\n    script_overrides;\n    if (action_being_used == 7) then begin\n      if (is_success(roll_vs_skill(dude_obj, 7, 0))) then begin\n        display_msg(message_str(297, 102));\n      end\n      else begin\n        display_msg(message_str(297, 103));\n      end\n    end\n    else begin\n      display_msg(message_str(297, 104));\n    end\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

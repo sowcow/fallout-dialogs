@@ -1,0 +1,138 @@
+<!DOCTYPE html><html><head><title>GHGENDED</title><meta charset="utf-8" /></head><body><svg width="205pt" height="517pt"
+ viewBox="0.00 0.00 204.58 516.99" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 512.992)">
+<title>GHGENDED</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-512.992 200.576,-512.992 200.576,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="98.2878" cy="-490.992" rx="27" ry="18"/>
+</g>
+<!-- do_stuff -->
+<g id="node2" class="node"><title>do_stuff</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="98.2878" cy="-218.496" rx="98.0761" ry="218.492"/>
+<text text-anchor="middle" x="98.2878" y="-357.796" font-family="Times,serif" font-size="14.00">You see a lifeless c</text>
+<text text-anchor="middle" x="98.2878" y="-342.796" font-family="Times,serif" font-size="14.00">orpse laying on the </text>
+<text text-anchor="middle" x="98.2878" y="-327.796" font-family="Times,serif" font-size="14.00">ground.</text>
+<text text-anchor="middle" x="98.2878" y="-312.796" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="98.2878" y="-297.796" font-family="Times,serif" font-size="14.00">An unfor</text>
+<text text-anchor="middle" x="98.2878" y="-282.796" font-family="Times,serif" font-size="14.00">tunate soul lays her</text>
+<text text-anchor="middle" x="98.2878" y="-267.796" font-family="Times,serif" font-size="14.00">e.</text>
+<text text-anchor="middle" x="98.2878" y="-252.796" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="98.2878" y="-237.796" font-family="Times,serif" font-size="14.00">The remains o</text>
+<text text-anchor="middle" x="98.2878" y="-222.796" font-family="Times,serif" font-size="14.00">f a mutated human re</text>
+<text text-anchor="middle" x="98.2878" y="-207.796" font-family="Times,serif" font-size="14.00">st upon the floor.</text>
+<text text-anchor="middle" x="98.2878" y="-192.796" font-family="Times,serif" font-size="14.00">&#45;</text>
+<text text-anchor="middle" x="98.2878" y="-177.796" font-family="Times,serif" font-size="14.00">&#45;&#45;</text>
+<text text-anchor="middle" x="98.2878" y="-162.796" font-family="Times,serif" font-size="14.00">The feeding groun</text>
+<text text-anchor="middle" x="98.2878" y="-147.796" font-family="Times,serif" font-size="14.00">ds for carrion.</text>
+<text text-anchor="middle" x="98.2878" y="-132.796" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="98.2878" y="-101.796" font-family="Times,serif" font-size="14.00">It appears this pers</text>
+<text text-anchor="middle" x="98.2878" y="-86.796" font-family="Times,serif" font-size="14.00">on challenged Thanat</text>
+<text text-anchor="middle" x="98.2878" y="-71.796" font-family="Times,serif" font-size="14.00">os and lost.</text>
+</g>
+<!-- start&#45;&gt;do_stuff -->
+<g id="edge1" class="edge"><title>start&#45;&gt;do_stuff</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M98.2878,-472.66C98.2878,-465.838 98.2878,-457.271 98.2878,-447.445"/>
+<polygon fill="#555555" stroke="#555555" points="101.788,-447.218 98.2878,-437.218 94.7879,-447.218 101.788,-447.218"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"variable LVar0 := 0;\nif ((script_action == 21) or (script_action == 3)) then begin\n  script_overrides;\n  call do_stuff;\nend\n","do_stuff":"rndx := random(1, 5);\nif (rndx == 1) then begin\n  display_msg(message_str(71, 100));\nend\nif (rndx == 2) then begin\n  display_msg(message_str(71, 101));\nend\nif (rndx == 3) then begin\n  display_msg(message_str(71, 102));\nend\nif (rndx == 4) then begin\n  display_msg(message_str(71, 103));\nend\nif (rndx == 5) then begin\n  display_msg(message_str(71, 104));\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html><html><head><title>MVBSHELF</title><meta charset="utf-8" /></head><body><svg width="202pt" height="316pt"
+ viewBox="0.00 0.00 201.75 316.30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 312.299)">
+<title>MVBSHELF</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-312.299 197.747,-312.299 197.747,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="96.8736" cy="-154.149" rx="96.7474" ry="154.299"/>
+<text text-anchor="middle" x="96.8736" y="-247.949" font-family="Times,serif" font-size="14.00">The bookshelf is fil</text>
+<text text-anchor="middle" x="96.8736" y="-232.949" font-family="Times,serif" font-size="14.00">led with religious a</text>
+<text text-anchor="middle" x="96.8736" y="-217.949" font-family="Times,serif" font-size="14.00">nd philosophical boo</text>
+<text text-anchor="middle" x="96.8736" y="-202.949" font-family="Times,serif" font-size="14.00">ks. It is</text>
+<text text-anchor="middle" x="96.8736" y="-187.949" font-family="Times,serif" font-size="14.00"> very dust</text>
+<text text-anchor="middle" x="96.8736" y="-172.949" font-family="Times,serif" font-size="14.00">y.</text>
+<text text-anchor="middle" x="96.8736" y="-157.949" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="96.8736" y="-142.949" font-family="Times,serif" font-size="14.00">You take a bo</text>
+<text text-anchor="middle" x="96.8736" y="-127.949" font-family="Times,serif" font-size="14.00">ok down, examine it,</text>
+<text text-anchor="middle" x="96.8736" y="-112.949" font-family="Times,serif" font-size="14.00"> and quickly replace</text>
+<text text-anchor="middle" x="96.8736" y="-97.9493" font-family="Times,serif" font-size="14.00"> it on the shelf. Th</text>
+<text text-anchor="middle" x="96.8736" y="-82.9493" font-family="Times,serif" font-size="14.00">e</text>
+<text text-anchor="middle" x="96.8736" y="-67.9493" font-family="Times,serif" font-size="14.00"> shelf itself seem</text>
+<text text-anchor="middle" x="96.8736" y="-52.9493" font-family="Times,serif" font-size="14.00">s very sturdy.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if ((script_action == 21) or (script_action == 3)) then begin\n  script_overrides;\n  display_msg(message_str(428, 100));\nend\nelse begin\n  if (script_action == 8) then begin\n    script_overrides;\n    display_msg(message_str(428, 101));\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script type="text/javascript">(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>
