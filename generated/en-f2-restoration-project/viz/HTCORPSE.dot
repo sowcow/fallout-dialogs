@@ -1,8 +1,0 @@
-digraph HTCORPSE {
-  "checkPartyMembersNearDoor" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
-  "checkPartyMembersNearDoor" [label=""]
-  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
-  "spatial_p_proc" [label="You see the remains of\nseveral Broken Hills\ncitizens.\n---\nYou see the remains of\nseveral Broken Hills\ncitizens."]
-  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
-  "start" [label=""]
-}

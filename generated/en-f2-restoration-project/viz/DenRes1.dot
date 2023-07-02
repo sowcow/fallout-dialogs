@@ -1,6 +1,0 @@
-digraph DenRes1 {
-  "checkPartyMembersNearDoor" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
-  "checkPartyMembersNearDoor" [label=""]
-  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
-  "start" [label=""]
-}
