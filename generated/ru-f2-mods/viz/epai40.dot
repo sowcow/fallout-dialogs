@@ -1,0 +1,12 @@
+digraph epai40 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Вы видите служебную\nлестницу."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите лестницу."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Похоже, ниже обвал. Вам\nпридется найти другой\nпуть."]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+}

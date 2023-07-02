@@ -1,0 +1,7 @@
+digraph dead {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "dead00" [style=dotted color="#555555"]
+  "start" [label="Трупы..."]
+  "dead00" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "dead00" [label="Их недавно убило какое-то\nживотное.\n---\nОни убиты недавно.\n---\nВозможно, они спят.\n---\nОни мертвы."]
+}

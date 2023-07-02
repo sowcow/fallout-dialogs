@@ -1,0 +1,12 @@
+digraph epai42 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Здесь привязана веревка."]
+}

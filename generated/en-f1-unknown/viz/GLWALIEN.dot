@@ -1,0 +1,7 @@
+digraph GLWALIEN {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "dead00" [style=dotted color="#555555"]
+  "start" [label="A frozen corpse."]
+  "dead00" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "dead00" [label="This is definitely not of\nterrestrial origin.\n---\nThis body might be some\nkind of genetic\nexperiment.\n---\nWhat? It's a dead body.\n---\nThis frozen body looks\nodd."]
+}

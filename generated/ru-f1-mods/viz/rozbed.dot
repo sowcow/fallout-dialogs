@@ -1,0 +1,9 @@
+digraph rozbed {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Кажется, эту грязную\nпостель давно не\nперестилали."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Разло не понравится, если\nты воспользуешься его\nпостелью."]
+}

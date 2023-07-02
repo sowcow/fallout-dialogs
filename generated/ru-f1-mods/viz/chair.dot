@@ -1,0 +1,4 @@
+digraph chair {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Нечего тут рассиживаться.\nШевелись!"]
+}

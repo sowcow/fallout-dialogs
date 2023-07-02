@@ -1,0 +1,12 @@
+digraph epai16 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label=""]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="Вы израсходовали всю\nбанку спрея от сорняков."]
+}

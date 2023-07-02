@@ -1,0 +1,15 @@
+digraph setdoor1 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "see_stuff" [style=dotted color="#555555"]
+  "start" -> "do_stuff" [style=dotted color="#555555"]
+  "start" -> "do_skill" [style=dotted color="#555555"]
+  "start" [label=""]
+  "do_stuff" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_stuff" [label="Скрииип"]
+  "do_skill" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_skill" [label="Вы открыли замок.\n---\nВы не можете взломать\nзамок.\n---\nВы поломали отмычки.\n---\nВы не знаете, как\nвзломать замок."]
+  "see_stuff" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "see_stuff" [label="Дверь заперта.\n---\nДверь открыта.\n---\nДверь закрыта, но не\nзаперта."]
+  "doorend" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "doorend" [label=""]
+}

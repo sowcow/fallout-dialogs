@@ -1,0 +1,12 @@
+digraph emiter1a {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Здесь нет панели\nуправления силовым полем.\nВозможно, есть другой\nспособ отключить поле."]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="Вы ненадолго отключаете\nизлучатель.\n---\nВы включили излучатель\nсилового поля.\n---\nВам ничего не удалось\nсделать с излучателем\nсилового поля."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Вы ненадолго отключаете\nизлучатель.\n---\nВы включили излучатель\nсилового поля.\n---\nВам ничего не удалось\nсделать с излучателем\nсилового поля."]
+  "damage_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "damage_p_proc" [label="Вы выводите из строя\nизлучатель. Силовое поле\nисчезает.\n---\nВы на короткое время\nотключаете силовое поле,\nповредив излучатель."]
+}

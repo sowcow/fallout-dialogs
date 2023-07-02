@@ -1,0 +1,4 @@
+digraph CHARBODY {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="This person must have\nbeen very close to the\nblast.\n---\nThis body is so charred,\nyou cannot even guess\nwhat it once was.\n---\nThe shifting winds have\ncaused some of the ashes\nto drift away.\n---\nThe nuclear blast must\nhave done this damage.\n---\nAshes fall through your\nfingers."]
+}

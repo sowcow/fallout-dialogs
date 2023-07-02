@@ -1,0 +1,201 @@
+<!DOCTYPE html><html><head><title>secdoor</title><meta charset="utf-8" /></head><body><svg width="1056pt" height="457pt"
+ viewBox="0.00 0.00 1056.41 456.95" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 452.95)">
+<title>secdoor</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-452.95 1052.41,-452.95 1052.41,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="98.33" cy="-272.53" rx="27" ry="18"/>
+</g>
+<!-- dude_use_door -->
+<g id="node2" class="node">
+<title>dude_use_door</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="144.33" cy="-30.05" rx="144.33" ry="18"/>
+<text text-anchor="middle" x="144.33" y="-25.38" font-family="Times,serif" font-size="14.00">Режимная дверь заперта.</text>
+</g>
+<!-- Officer_use_door -->
+<g id="node3" class="node">
+<title>Officer_use_door</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="333.33" cy="-30.05" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node4" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="345.33" cy="-272.53" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node5" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="170.33" cy="-272.53" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc&#45;&gt;dude_use_door -->
+<g id="edge1" class="edge">
+<title>use_p_proc&#45;&gt;dude_use_door</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M168.46,-254.23C164.02,-213.17 152.81,-109.49 147.38,-59.23"/>
+<polygon fill="#555555" stroke="#555555" points="150.77,-59.08 146.22,-49.51 143.81,-59.83 150.77,-59.08"/>
+</g>
+<!-- use_p_proc&#45;&gt;Officer_use_door -->
+<g id="edge2" class="edge">
+<title>use_p_proc&#45;&gt;Officer_use_door</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M181.02,-255.75C208.71,-214.9 282.91,-105.43 316.45,-55.95"/>
+<polygon fill="#555555" stroke="#555555" points="319.88,-58.13 322.6,-47.89 314.09,-54.2 319.88,-58.13"/>
+</g>
+<!-- use_obj_on_p_proc -->
+<g id="node6" class="node">
+<title>use_obj_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="589.33" cy="-272.53" rx="147.08" ry="176.42"/>
+<text text-anchor="middle" x="589.33" y="-379.98" font-family="Times,serif" font-size="14.00">Режимная дверь не</text>
+<text text-anchor="middle" x="589.33" y="-362.73" font-family="Times,serif" font-size="14.00">заперта.</text>
+<text text-anchor="middle" x="589.33" y="-345.48" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="589.33" y="-328.23" font-family="Times,serif" font-size="14.00">Вам удается отпереть</text>
+<text text-anchor="middle" x="589.33" y="-310.98" font-family="Times,serif" font-size="14.00">режимную дверь.</text>
+<text text-anchor="middle" x="589.33" y="-293.73" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="589.33" y="-276.48" font-family="Times,serif" font-size="14.00">Вы умудряетесь зацепить</text>
+<text text-anchor="middle" x="589.33" y="-259.23" font-family="Times,serif" font-size="14.00">сигнализацию на двери, и</text>
+<text text-anchor="middle" x="589.33" y="-241.98" font-family="Times,serif" font-size="14.00">электронный замок</text>
+<text text-anchor="middle" x="589.33" y="-224.73" font-family="Times,serif" font-size="14.00">запирается. Отлично</text>
+<text text-anchor="middle" x="589.33" y="-207.48" font-family="Times,serif" font-size="14.00">сработано, идиот.</text>
+<text text-anchor="middle" x="589.33" y="-190.23" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="589.33" y="-172.98" font-family="Times,serif" font-size="14.00">Вам не удается отпереть</text>
+<text text-anchor="middle" x="589.33" y="-155.73" font-family="Times,serif" font-size="14.00">режимную дверь.</text>
+</g>
+<!-- give_exps -->
+<g id="node7" class="node">
+<title>give_exps</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="615.33" cy="-30.05" rx="132.76" ry="30.05"/>
+<text text-anchor="middle" x="615.33" y="-34" font-family="Times,serif" font-size="14.00">Вы получаете 25 очков</text>
+<text text-anchor="middle" x="615.33" y="-16.75" font-family="Times,serif" font-size="14.00">опыта за взлом замка.</text>
+</g>
+<!-- use_obj_on_p_proc&#45;&gt;give_exps -->
+<g id="edge3" class="edge">
+<title>use_obj_on_p_proc&#45;&gt;give_exps</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M608.19,-97.08C609.19,-87.84 610.13,-79.14 610.98,-71.28"/>
+<polygon fill="#555555" stroke="#555555" points="614.56,-71.71 612.16,-61.39 607.6,-70.96 614.56,-71.71"/>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node8" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="901.33" cy="-272.53" rx="147.08" ry="176.42"/>
+<text text-anchor="middle" x="901.33" y="-379.98" font-family="Times,serif" font-size="14.00">Режимная дверь не</text>
+<text text-anchor="middle" x="901.33" y="-362.73" font-family="Times,serif" font-size="14.00">заперта.</text>
+<text text-anchor="middle" x="901.33" y="-345.48" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="901.33" y="-328.23" font-family="Times,serif" font-size="14.00">Вам удается отпереть</text>
+<text text-anchor="middle" x="901.33" y="-310.98" font-family="Times,serif" font-size="14.00">режимную дверь.</text>
+<text text-anchor="middle" x="901.33" y="-293.73" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="901.33" y="-276.48" font-family="Times,serif" font-size="14.00">Вы умудряетесь зацепить</text>
+<text text-anchor="middle" x="901.33" y="-259.23" font-family="Times,serif" font-size="14.00">сигнализацию на двери, и</text>
+<text text-anchor="middle" x="901.33" y="-241.98" font-family="Times,serif" font-size="14.00">электронный замок</text>
+<text text-anchor="middle" x="901.33" y="-224.73" font-family="Times,serif" font-size="14.00">запирается. Отлично</text>
+<text text-anchor="middle" x="901.33" y="-207.48" font-family="Times,serif" font-size="14.00">сработано, идиот.</text>
+<text text-anchor="middle" x="901.33" y="-190.23" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="901.33" y="-172.98" font-family="Times,serif" font-size="14.00">Вам не удается отпереть</text>
+<text text-anchor="middle" x="901.33" y="-155.73" font-family="Times,serif" font-size="14.00">режимную дверь.</text>
+</g>
+<!-- use_skill_on_p_proc&#45;&gt;give_exps -->
+<g id="edge4" class="edge">
+<title>use_skill_on_p_proc&#45;&gt;give_exps</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M799.39,-144.84C782.36,-127.35 764.09,-110.48 745.33,-96.1 728.11,-82.9 707.79,-71.23 688.4,-61.55"/>
+<polygon fill="#555555" stroke="#555555" points="690.2,-58.05 679.67,-56.82 687.13,-64.34 690.2,-58.05"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","dude_use_door":"if (obj_is_locked(self_obj)) then begin\n  script_overrides;\n  display_msg(message_str(459, 100));\nend\n","Officer_use_door":"if (obj_is_open(self_obj)) then begin\n  obj_close(self_obj);\n  obj_lock(self_obj);\nend\nelse begin\n  obj_unlock(self_obj);\n  obj_open(self_obj);\nend\n","map_enter_p_proc":"SecDoor_ptr := self_obj;\n","use_p_proc":"if (source_obj == dude_obj) then begin\n  call dude_use_door;\nend\nelse begin\n  if (source_obj == Officer_ptr) then begin\n    call Officer_use_door;\n  end\nend\n","use_obj_on_p_proc":"if (obj_pid(obj_being_used_with) == 77) then begin\n  script_overrides;\n  if (not(obj_is_locked(self_obj))) then begin\n    display_msg(message_str(459, 101));\n  end\n  else begin\n    test := roll_vs_skill(source_obj, 9, 0);\n    if (is_success(test)) then begin\n      display_msg(message_str(459, 102));\n      obj_unlock(self_obj);\n      call give_exps;\n    end\n    else begin\n      if (is_critical(test)) then begin\n        jam_lock(self_obj);\n        display_msg(message_str(459, 104));\n      end\n      else begin\n        display_msg(message_str(459, 103));\n      end\n    end\n  end\n  if (tile_distance_objs(Officer_ptr, dude_obj) < 4) then begin\n    if (not(armory_access)) then begin\n      armory_access := 2;\n      set_map_var(1, armory_access);\n    end\n  end\nend\n","use_skill_on_p_proc":"if (action_being_used == 9) then begin\n  script_overrides;\n  if (not(obj_is_locked(self_obj))) then begin\n    display_msg(message_str(459, 101));\n  end\n  else begin\n    test := roll_vs_skill(source_obj, 9, -20);\n    if (is_success(test)) then begin\n      display_msg(message_str(459, 102));\n      obj_unlock(self_obj);\n      call give_exps;\n    end\n    else begin\n      if (is_critical(test)) then begin\n        jam_lock(self_obj);\n        display_msg(message_str(459, 104));\n      end\n      else begin\n        display_msg(message_str(459, 103));\n      end\n    end\n  end\n  if (tile_distance_objs(Officer_ptr, dude_obj) < 4) then begin\n    if (not(armory_access)) then begin\n      armory_access := 2;\n      set_map_var(1, armory_access);\n    end\n  end\nend\n","give_exps":"if (local_var(0) == 0) then begin\n  display_msg(message_str(459, 105));\n  give_exp_points(25);\n  set_local_var(0, 1);\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

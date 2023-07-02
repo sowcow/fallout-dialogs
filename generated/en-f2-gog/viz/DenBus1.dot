@@ -1,0 +1,10 @@
+digraph DenBus1 {
+  "checkPartyMembersNearDoor" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "checkPartyMembersNearDoor" [label=""]
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label="This town looks like one\nmean place. A good place\nto own a gun."]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label="You have gotten\npermission for Lara's\ngang to attack.\n---\nThis town looks like one\nmean place. A good place\nto own a gun.\n---\nYou have found a weakness\nin Tyler's gang.\n---\nThis town looks like one\nmean place. A good place\nto own a gun.\n---\nYou helped Lara's gang to\nwin the battle.\n---\nThis town looks like one\nmean place. A good place\nto own a gun.\n---\nYou've successfully\nambushed Lara's gang.\n---\nThis town looks like one\nmean place. A good place\nto own a gun."]
+}

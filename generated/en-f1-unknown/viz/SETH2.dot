@@ -1,0 +1,4 @@
+digraph SETH2 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Let's get back to Shady\nSands and let them know\nthe Radscorpions are\ngone.\n---\nLet's hurry and get rid\nof these Radscorpions.\n---\nYou see Seth, the guide\nback to Shady Sands."]
+}

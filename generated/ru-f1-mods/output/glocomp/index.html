@@ -1,0 +1,125 @@
+<!DOCTYPE html><html><head><title>glocomp</title><meta charset="utf-8" /></head><body><svg width="328pt" height="361pt"
+ viewBox="0.00 0.00 327.61 360.85" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 356.85)">
+<title>glocomp</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-356.85 323.61,-356.85 323.61,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="159.81" cy="-176.42" rx="159.81" ry="176.42"/>
+<text text-anchor="middle" x="159.81" y="-283.87" font-family="Times,serif" font-size="14.00">Кажется, этот терминал</text>
+<text text-anchor="middle" x="159.81" y="-266.62" font-family="Times,serif" font-size="14.00">был уничтожен взрывом.</text>
+<text text-anchor="middle" x="159.81" y="-249.37" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="159.81" y="-232.12" font-family="Times,serif" font-size="14.00">Похоже, компьютер</text>
+<text text-anchor="middle" x="159.81" y="-214.87" font-family="Times,serif" font-size="14.00">содержит мегабайты</text>
+<text text-anchor="middle" x="159.81" y="-197.62" font-family="Times,serif" font-size="14.00">информации.</text>
+<text text-anchor="middle" x="159.81" y="-180.37" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="159.81" y="-163.12" font-family="Times,serif" font-size="14.00">Интересно, какие данные</text>
+<text text-anchor="middle" x="159.81" y="-145.87" font-family="Times,serif" font-size="14.00">хранятся на этом</text>
+<text text-anchor="middle" x="159.81" y="-128.62" font-family="Times,serif" font-size="14.00">компьютере.</text>
+<text text-anchor="middle" x="159.81" y="-111.37" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="159.81" y="-94.12" font-family="Times,serif" font-size="14.00">Раньше этот компьютер был</text>
+<text text-anchor="middle" x="159.81" y="-76.87" font-family="Times,serif" font-size="14.00">подключен к центральной</text>
+<text text-anchor="middle" x="159.81" y="-59.62" font-family="Times,serif" font-size="14.00">вычислительной машине.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"variable LVar0 := 0;\nif ((script_action == 21) or (script_action == 3)) then begin\n  script_overrides;\n  LVar0 := random(1, 4);\n  if (LVar0 == 1) then begin\n    display_msg(message_str(299, 100));\n  end\n  else begin\n    if (LVar0 == 2) then begin\n      display_msg(message_str(299, 101));\n    end\n    else begin\n      if (LVar0 == 3) then begin\n        display_msg(message_str(299, 102));\n      end\n      else begin\n        if (LVar0 == 4) then begin\n          display_msg(message_str(299, 103));\n        end\n      end\n    end\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

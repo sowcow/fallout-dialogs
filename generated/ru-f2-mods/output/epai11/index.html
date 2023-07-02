@@ -1,0 +1,162 @@
+<!DOCTYPE html><html><head><title>epai11</title><meta charset="utf-8" /></head><body><svg width="606pt" height="262pt"
+ viewBox="0.00 0.00 606.44 262.08" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 258.08)">
+<title>epai11</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-258.08 602.44,-258.08 602.44,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="221.12" cy="-236.08" rx="27" ry="18"/>
+</g>
+<!-- use_obj_on_p_proc -->
+<g id="node2" class="node">
+<title>use_obj_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="293.12" cy="-236.08" rx="27" ry="18"/>
+</g>
+<!-- evil_plant_placing_p_proc -->
+<g id="node3" class="node">
+<title>evil_plant_placing_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="139.12" cy="-91.04" rx="139.12" ry="30.05"/>
+<text text-anchor="middle" x="139.12" y="-94.99" font-family="Times,serif" font-size="14.00">Это не то, на что я</text>
+<text text-anchor="middle" x="139.12" y="-77.74" font-family="Times,serif" font-size="14.00">надеялся от этих семян!</text>
+</g>
+<!-- use_obj_on_p_proc&#45;&gt;evil_plant_placing_p_proc -->
+<g id="edge1" class="edge">
+<title>use_obj_on_p_proc&#45;&gt;evil_plant_placing_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M277.79,-220.84C254.72,-199.41 210.32,-158.17 177.96,-128.11"/>
+<polygon fill="#555555" stroke="#555555" points="180.72,-125.97 171.01,-121.73 175.96,-131.1 180.72,-125.97"/>
+</g>
+<!-- corn_placing_p_proc -->
+<g id="node4" class="node">
+<title>corn_placing_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="447.12" cy="-91.04" rx="151.32" ry="91.04"/>
+<text text-anchor="middle" x="447.12" y="-138.11" font-family="Times,serif" font-size="14.00">Это поможет решить</text>
+<text text-anchor="middle" x="447.12" y="-120.86" font-family="Times,serif" font-size="14.00">проблему продовольствия.</text>
+<text text-anchor="middle" x="447.12" y="-103.61" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="447.12" y="-86.36" font-family="Times,serif" font-size="14.00">После недели ускоренного</text>
+<text text-anchor="middle" x="447.12" y="-69.11" font-family="Times,serif" font-size="14.00">роста стебли кукурузы</text>
+<text text-anchor="middle" x="447.12" y="-51.86" font-family="Times,serif" font-size="14.00">поднялись по всей</text>
+<text text-anchor="middle" x="447.12" y="-34.61" font-family="Times,serif" font-size="14.00">посевной площади.</text>
+</g>
+<!-- use_obj_on_p_proc&#45;&gt;corn_placing_p_proc -->
+<g id="edge2" class="edge">
+<title>use_obj_on_p_proc&#45;&gt;corn_placing_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M308.45,-220.84C320.56,-209.6 338.52,-192.91 357.55,-175.24"/>
+<polygon fill="#555555" stroke="#555555" points="359.51,-178.27 364.46,-168.9 354.75,-173.14 359.51,-178.27"/>
+</g>
+<!-- use_p_proc -->
+<g id="node5" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="365.12" cy="-236.08" rx="27" ry="18"/>
+</g>
+<!-- pickup_p_proc -->
+<g id="node6" class="node">
+<title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="437.12" cy="-236.08" rx="27" ry="18"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node7" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="509.12" cy="-236.08" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","use_obj_on_p_proc":"variable LVar0 := 0;\nLVar0 := obj_pid(obj_being_used_with);\nif (LVar0 == 631) then begin\n  set_local_var(4, random(1, 2));\nend\nif (local_var(4) == 1) then begin\n  call evil_plant_placing_p_proc;\nend\nelse begin\n  if (local_var(4) == 2) then begin\n    call corn_placing_p_proc;\n  end\nend\n","use_p_proc":"[]","pickup_p_proc":"[]","destroy_p_proc":"[]","evil_plant_placing_p_proc":"variable LVar0 := 0;\ngfade_out(50);\ngame_ui_disable;\nLVar0 := create_object_sid(16777232, 17684, elevation(dude_obj), 614);\ncritter_attempt_placement(LVar0, 17684, elevation(dude_obj));\ngame_time_advance(6048000);\ngame_ui_enable;\ngfade_in(10);\nfloat_msg(dude_obj, message_str(1428, 100), 8);\ndestroy_object(self_obj);\n","corn_placing_p_proc":"variable LVar0 := 0;\ngfade_out(50);\ngame_ui_disable;\nLVar0 := create_object_sid(33555395, 17684, elevation(dude_obj), 4294967295);\ncritter_attempt_placement(LVar0, 17684, elevation(dude_obj));\ngame_time_advance(6048000);\ngame_ui_enable;\ngfade_in(10);\nfloat_msg(dude_obj, message_str(1428, 101), 8);\ndisplay_msg(message_str(1428, 102));\ndestroy_object(self_obj);\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

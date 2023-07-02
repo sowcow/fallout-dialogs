@@ -1,0 +1,145 @@
+<!DOCTYPE html><html><head><title>diDiary</title><meta charset="utf-8" /></head><body><svg width="1056pt" height="434pt"
+ viewBox="0.00 0.00 1055.93 434.03" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 430.03)">
+<title>diDiary</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-430.03 1051.93,-430.03 1051.93,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-213.02" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node2" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="226" cy="-213.02" rx="153.8" ry="18"/>
+<text text-anchor="middle" x="226" y="-208.34" font-family="Times,serif" font-size="14.00">Вы видите старый дневник.</text>
+</g>
+<!-- description_p_proc -->
+<g id="node3" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="552" cy="-213.02" rx="153.8" ry="18"/>
+<text text-anchor="middle" x="552" y="-208.34" font-family="Times,serif" font-size="14.00">Вы видите старый дневник.</text>
+</g>
+<!-- use_p_proc -->
+<g id="node4" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="886" cy="-213.02" rx="161.93" ry="213.02"/>
+<text text-anchor="middle" x="886" y="-346.34" font-family="Times,serif" font-size="14.00">Вы уже пытались перенести</text>
+<text text-anchor="middle" x="886" y="-329.09" font-family="Times,serif" font-size="14.00">содержимое дневника в</text>
+<text text-anchor="middle" x="886" y="-311.84" font-family="Times,serif" font-size="14.00">Пип&#45;Бой.</text>
+<text text-anchor="middle" x="886" y="-294.59" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="886" y="-277.34" font-family="Times,serif" font-size="14.00">Этот старый дневник</text>
+<text text-anchor="middle" x="886" y="-260.09" font-family="Times,serif" font-size="14.00">слишком хрупок и скоро</text>
+<text text-anchor="middle" x="886" y="-242.84" font-family="Times,serif" font-size="14.00">развалится. Информацию не</text>
+<text text-anchor="middle" x="886" y="-225.59" font-family="Times,serif" font-size="14.00">возможно перенести в</text>
+<text text-anchor="middle" x="886" y="-208.34" font-family="Times,serif" font-size="14.00">Пип&#45;Бой.</text>
+<text text-anchor="middle" x="886" y="-191.09" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="886" y="-173.84" font-family="Times,serif" font-size="14.00">Вы видите старый дневник.</text>
+<text text-anchor="middle" x="886" y="-156.59" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="886" y="-139.34" font-family="Times,serif" font-size="14.00">Этот старый дневник</text>
+<text text-anchor="middle" x="886" y="-122.09" font-family="Times,serif" font-size="14.00">слишком хрупок и скоро</text>
+<text text-anchor="middle" x="886" y="-104.84" font-family="Times,serif" font-size="14.00">развалится. Информацию не</text>
+<text text-anchor="middle" x="886" y="-87.59" font-family="Times,serif" font-size="14.00">возможно перенести в</text>
+<text text-anchor="middle" x="886" y="-70.34" font-family="Times,serif" font-size="14.00">Пип&#45;Бой.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(66, 100));\n","description_p_proc":"if (obj_is_carrying_obj_pid(dude_obj, 543)) then begin\nend\nelse begin\n  script_overrides;\n  display_msg(message_str(66, 100));\nend\n","use_p_proc":"script_overrides;\nif (global_var(35)) then begin\n  display_msg(message_str(66, 102));\nend\nelse begin\n  set_global_var(35, 1);\n  display_msg(message_str(66, 101));\n  give_exp_points(100);\n  display_msg(message_str(14, 100) + 100 + message_str(14, 101));\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

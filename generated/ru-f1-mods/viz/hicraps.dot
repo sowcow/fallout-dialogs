@@ -1,0 +1,6 @@
+digraph hicraps {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+}

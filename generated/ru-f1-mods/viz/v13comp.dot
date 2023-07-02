@@ -1,0 +1,9 @@
+digraph v13comp {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Вы видите входной\nкомпьютер Убежища 13."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Вы используете входной\nкомпьютер.\nГромкоговоритель\nпотрескивает и\nвозвращается к жизни.\n---\nПрости, но мы не можем\nтебя сейчас снова\nвпустить. Ну, технические\nтрудности. Приходи снова\nпопозже.\n---\nВы используете входной\nкомпьютер. Компьютер не\nпризнает ваш код доступа."]
+}

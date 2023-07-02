@@ -1,0 +1,10 @@
+digraph V13COMP {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="You see the Vault-13 door\nentry computer."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="You use the door\ncomputer. A speaker\ncrackles to life.\n---\nSorry, but we can't let\nyou back in right now.\nUh,\ntechnical problems. Try\nagain later.\n---\nYou use the door\ncomputer. The computer\ndoes not recognize your\naccess code."]
+}

@@ -1,0 +1,16 @@
+digraph epai6 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Генератор голограмм. НЕ\nТРОГАЙТЕ ЕГО!"]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите генератор\nголограмм."]
+  "damage_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "damage_p_proc" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label=""]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+}

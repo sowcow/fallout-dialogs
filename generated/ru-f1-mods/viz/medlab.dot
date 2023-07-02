@@ -1,0 +1,4 @@
+digraph medlab {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Это место было\nразграблено. Тонкой\nаппаратуре причинен\nсерьезный ущерб."]
+}

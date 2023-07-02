@@ -1,0 +1,4 @@
+digraph BVENT {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="This is where the main\nentrance to the Vault\nshould be.\n---\nThe collapse looks\nnatural. You cannot find\nany\nevidence of foul play or\nexplosives."]
+}

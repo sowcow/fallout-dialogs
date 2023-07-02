@@ -1,0 +1,10 @@
+digraph v15ent {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label="На склоне холма,\nпоросшего лесом,\nрасположена группа\nгрязных палаток и лачуг.\nВы видите бедных и\nнастороженных людей."]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+  "map_exit_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_exit_p_proc" [label=""]
+}

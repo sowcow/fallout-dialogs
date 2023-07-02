@@ -1,0 +1,6 @@
+digraph epai26 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Вы нажимаете на курок, но\nничего не происходит.\n---\nВы нажимаете на курок и\nподрываете динамит."]
+}

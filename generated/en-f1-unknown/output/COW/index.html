@@ -1,0 +1,171 @@
+<!DOCTYPE html><html><head><title>COW</title><meta charset="utf-8" /></head><body><svg width="469pt" height="358pt"
+ viewBox="0.00 0.00 468.71 358.48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 354.48)">
+<title>COW</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-354.48 464.71,-354.48 464.71,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="119.36" cy="-332.48" rx="109.61" ry="18"/>
+<text text-anchor="middle" x="119.36" y="-327.8" font-family="Times,serif" font-size="14.00">It&#39;s a wild Brahmin.</text>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node2" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="37.36" cy="-175.24" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;timed_event_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;timed_event_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M104.01,-314.2C95.69,-304.23 85.64,-291.2 78.36,-278.48 64.53,-254.31 53.16,-224.55 45.94,-203.39"/>
+<polygon fill="#555555" stroke="#555555" points="49.02,-202.57 42.55,-194.18 42.38,-204.77 49.02,-202.57"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node3" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="64.36" cy="-18" rx="64.36" ry="18"/>
+<text text-anchor="middle" x="64.36" y="-13.32" font-family="Times,serif" font-size="14.00">Moo, I say.</text>
+</g>
+<!-- start&#45;&gt;talk_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;talk_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M116.33,-314.23C107.27,-262.8 80.4,-110.14 69.27,-46.91"/>
+<polygon fill="#555555" stroke="#555555" points="72.57,-46.43 67.39,-37.19 65.67,-47.65 72.57,-46.43"/>
+</g>
+<!-- use_obj_on_p_proc -->
+<g id="node4" class="node">
+<title>use_obj_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="147.36" cy="-175.24" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;use_obj_on_p_proc -->
+<g id="edge3" class="edge">
+<title>start&#45;&gt;use_obj_on_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M122.46,-314.27C127.28,-287.58 136.59,-235.94 142.36,-203.94"/>
+<polygon fill="#555555" stroke="#555555" points="145.91,-204.98 144.24,-194.52 139.02,-203.74 145.91,-204.98"/>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node5" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="326.36" cy="-175.24" rx="134.35" ry="103.24"/>
+<text text-anchor="middle" x="326.36" y="-230.94" font-family="Times,serif" font-size="14.00">There is nothing natural</text>
+<text text-anchor="middle" x="326.36" y="-213.69" font-family="Times,serif" font-size="14.00">about these cows. The</text>
+<text text-anchor="middle" x="326.36" y="-196.44" font-family="Times,serif" font-size="14.00">second head can only be</text>
+<text text-anchor="middle" x="326.36" y="-179.19" font-family="Times,serif" font-size="14.00">the result of some</text>
+<text text-anchor="middle" x="326.36" y="-161.94" font-family="Times,serif" font-size="14.00">strange mutation.</text>
+<text text-anchor="middle" x="326.36" y="-144.69" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="326.36" y="-127.44" font-family="Times,serif" font-size="14.00">Looks pretty normal to</text>
+<text text-anchor="middle" x="326.36" y="-110.19" font-family="Times,serif" font-size="14.00">you.</text>
+</g>
+<!-- start&#45;&gt;use_skill_on_p_proc -->
+<g id="edge4" class="edge">
+<title>start&#45;&gt;use_skill_on_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M141.91,-314.57C161.64,-299.77 191.8,-277.15 222.06,-254.46"/>
+<polygon fill="#555555" stroke="#555555" points="223.69,-256.86 229.59,-248.06 219.49,-251.26 223.69,-256.86"/>
+</g>
+<!-- timed_event_p_proc&#45;&gt;talk_p_proc -->
+<g id="edge5" class="edge">
+<title>timed_event_p_proc&#45;&gt;talk_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M40.35,-157.03C45,-130.34 53.98,-78.7 59.54,-46.71"/>
+<polygon fill="#555555" stroke="#555555" points="63.09,-47.74 61.35,-37.28 56.19,-46.54 63.09,-47.74"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (not(initialized)) then begin\n  critter_add_trait(self_obj, 1, 5, 3);\n  critter_add_trait(self_obj, 1, 6, 4);\n  add_timer_event(self_obj, game_ticks(random(1, 5)), 1);\n  initialized := 1;\nend\nelse begin\n  if (script_action == 22) then begin\n    call timed_event_p_proc;\n  end\n  else begin\n    if (script_action == 11) then begin\n      call talk_p_proc;\n    end\n    else begin\n      if (script_action == 7) then begin\n        call use_obj_on_p_proc;\n      end\n      else begin\n        if (script_action == 8) then begin\n          call use_skill_on_p_proc;\n        end\n        else begin\n          if (script_action == 3) then begin\n            display_msg(message_str(5, 103));\n          end\n        end\n      end\n    end\n  end\nend\n","talk_p_proc":"if (moo_counter == 1) then begin\n  float_msg(self_obj, message_str(5, 102), 0);\nend\nelse begin\n  float_msg(self_obj, message_str(5, random(100, 101)), 0);\nend\nmoo_counter := moo_counter + 1;\nif (moo_counter > 2) then begin\n  moo_counter := 0;\nend\n","use_obj_on_p_proc":"variable LVar0 := 0;\nif ((obj_pid(obj_being_used_with) == 124) or (obj_pid(obj_being_used_with) == 125)) then begin\n  script_overrides;\n  LVar0 := obj_being_used_with;\n  rm_obj_from_inven(source_obj, obj_being_used_with);\n  destroy_object(LVar0);\n  reg_anim_func(2, self_obj);\n  reg_anim_func(1, 1);\n  reg_anim_animate(self_obj, 14, -1);\n  reg_anim_animate(self_obj, 20, 5);\n  reg_anim_animate(self_obj, 48, -1);\n  reg_anim_func(3, 0);\n  critter_injure(self_obj, 2);\nend\n","use_skill_on_p_proc":"if (action_being_used == 12) then begin\n  script_overrides;\n  if (is_success(roll_vs_skill(dude_obj, action_being_used, 0))) then begin\n    display_msg(message_str(5, 104));\n  end\n  else begin\n    display_msg(message_str(5, 105));\n  end\nend\n","timed_event_p_proc":"if (((critter_state(self_obj) bwand 2) == 0) and not(combat_is_initialized)) then begin\n  critter_tile := tile_num_in_direction(tile_num(self_obj), random(0, 5), 3);\n  reg_anim_func(2, self_obj);\n  reg_anim_func(1, 1);\n  reg_anim_obj_move_to_tile(self_obj, critter_tile, -1);\n  reg_anim_func(3, 0);\nend\nif (random(0, 1)) then begin\n  call talk_p_proc;\nend\nadd_timer_event(self_obj, game_ticks(random(3, 5)), 1);\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

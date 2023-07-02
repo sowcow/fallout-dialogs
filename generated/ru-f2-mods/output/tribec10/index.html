@@ -1,0 +1,176 @@
+<!DOCTYPE html><html><head><title>tribec10</title><meta charset="utf-8" /></head><body><svg width="1704pt" height="141pt"
+ viewBox="0.00 0.00 1704.00 141.29" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 137.29)">
+<title>tribec10</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-137.29 1700,-137.29 1700,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-66.64" rx="27" ry="18"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node2" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="228" cy="-66.64" rx="155.56" ry="66.64"/>
+<text text-anchor="middle" x="228" y="-96.47" font-family="Times,serif" font-size="14.00">Вы намеренно бросили</text>
+<text text-anchor="middle" x="228" y="-79.22" font-family="Times,serif" font-size="14.00">раненого и беззащитного</text>
+<text text-anchor="middle" x="228" y="-61.97" font-family="Times,serif" font-size="14.00">человека умирать.</text>
+<text text-anchor="middle" x="228" y="-44.72" font-family="Times,serif" font-size="14.00">Зловещая улыбка</text>
+<text text-anchor="middle" x="228" y="-27.47" font-family="Times,serif" font-size="14.00">появляется на вашем лице.</text>
+</g>
+<!-- combat_p_proc -->
+<g id="node3" class="node">
+<title>combat_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="429" cy="-66.64" rx="27" ry="18"/>
+</g>
+<!-- pickup_p_proc -->
+<g id="node4" class="node">
+<title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="501" cy="-66.64" rx="27" ry="18"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node5" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="702" cy="-66.64" rx="155.56" ry="66.64"/>
+<text text-anchor="middle" x="702" y="-96.47" font-family="Times,serif" font-size="14.00">Вы намеренно бросили</text>
+<text text-anchor="middle" x="702" y="-79.22" font-family="Times,serif" font-size="14.00">раненого и беззащитного</text>
+<text text-anchor="middle" x="702" y="-61.97" font-family="Times,serif" font-size="14.00">человека умирать.</text>
+<text text-anchor="middle" x="702" y="-44.72" font-family="Times,serif" font-size="14.00">Зловещая улыбка</text>
+<text text-anchor="middle" x="702" y="-27.47" font-family="Times,serif" font-size="14.00">появляется на вашем лице.</text>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node6" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="903" cy="-66.64" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node7" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="975" cy="-66.64" rx="27" ry="18"/>
+</g>
+<!-- map_update_p_proc -->
+<g id="node8" class="node">
+<title>map_update_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1047" cy="-66.64" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node9" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1193" cy="-66.64" rx="100.66" ry="18"/>
+<text text-anchor="middle" x="1193" y="-61.97" font-family="Times,serif" font-size="14.00">Вы видите гекко.</text>
+</g>
+<!-- description_p_proc -->
+<g id="node10" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1468" cy="-66.64" rx="156.09" ry="54.45"/>
+<text text-anchor="middle" x="1468" y="-87.84" font-family="Times,serif" font-size="14.00">Вы видите гекко,</text>
+<text text-anchor="middle" x="1468" y="-70.59" font-family="Times,serif" font-size="14.00">усыпанного обломками</text>
+<text text-anchor="middle" x="1468" y="-53.34" font-family="Times,serif" font-size="14.00">камней. Он выглядит очень</text>
+<text text-anchor="middle" x="1468" y="-36.09" font-family="Times,serif" font-size="14.00">сердитым.</text>
+</g>
+<!-- damage_p_proc -->
+<g id="node11" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1669" cy="-66.64" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"GECKO_obj := self_obj;\n","critter_p_proc":"if ((WARRIOR_obj == 4294967295) and (local_var(7) == 0)) then begin\n  set_local_var(7, 1);\n  display_msg(message_str(1358, 200));\n  set_global_var(0, global_var(0) + 4294967281);\n  debug_msg(\"tribec10\" + \": \" + \"Player gains \" + 4294967281 + \" Karma Points.\" + \"\\n\");\n  set_global_var(37, 0);\n  set_global_var(38, 0);\n  set_global_var(39, 0);\n  set_global_var(40, 0);\n  set_global_var(41, 0);\n  set_global_var(42, 0);\n  set_global_var(43, 0);\n  set_global_var(44, 0);\n  set_global_var(45, 0);\n  tmp_gen_rep := global_var(0);\n  if (has_trait(0, dude_obj, 95)) then begin\n    tmp_gen_rep := global_var(0) * 2;\n  end\n  if (tmp_gen_rep >= 1000) then begin\n    set_global_var(37, 1);\n  end\n  else begin\n    if (tmp_gen_rep >= 750) then begin\n      set_global_var(38, 1);\n    end\n    else begin\n      if (tmp_gen_rep >= 500) then begin\n        set_global_var(39, 1);\n      end\n      else begin\n        if (tmp_gen_rep >= 250) then begin\n          set_global_var(40, 1);\n        end\n        else begin\n          if (tmp_gen_rep > 4294967046) then begin\n            set_global_var(41, 1);\n          end\n          else begin\n            if (tmp_gen_rep > 4294966796) then begin\n              set_global_var(42, 1);\n            end\n            else begin\n              if (tmp_gen_rep > 4294966546) then begin\n                set_global_var(43, 1);\n              end\n              else begin\n                if (tmp_gen_rep > 4294966296) then begin\n                  set_global_var(44, 1);\n                end\n                else begin\n                  set_global_var(45, 1);\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\n  set_global_var(720, 2);\n  terminate_combat;\n  attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\n  game_ui_enable;\nend\nif (obj_can_see_obj(self_obj, dude_obj)) then begin\n  attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\nend\n","combat_p_proc":"[]","pickup_p_proc":"attack_complex(source_obj, 0, 1, 0, 0, 30000, 0, 0);\n","destroy_p_proc":"variable LVar0 := 0;\nif ((WARRIOR_obj == 4294967295) and (local_var(7) == 0)) then begin\n  set_local_var(7, 1);\n  display_msg(message_str(1358, 200));\n  set_global_var(0, global_var(0) + 4294967281);\n  debug_msg(\"tribec10\" + \": \" + \"Player gains \" + 4294967281 + \" Karma Points.\" + \"\\n\");\n  set_global_var(37, 0);\n  set_global_var(38, 0);\n  set_global_var(39, 0);\n  set_global_var(40, 0);\n  set_global_var(41, 0);\n  set_global_var(42, 0);\n  set_global_var(43, 0);\n  set_global_var(44, 0);\n  set_global_var(45, 0);\n  tmp_gen_rep := global_var(0);\n  if (has_trait(0, dude_obj, 95)) then begin\n    tmp_gen_rep := global_var(0) * 2;\n  end\n  if (tmp_gen_rep >= 1000) then begin\n    set_global_var(37, 1);\n  end\n  else begin\n    if (tmp_gen_rep >= 750) then begin\n      set_global_var(38, 1);\n    end\n    else begin\n      if (tmp_gen_rep >= 500) then begin\n        set_global_var(39, 1);\n      end\n      else begin\n        if (tmp_gen_rep >= 250) then begin\n          set_global_var(40, 1);\n        end\n        else begin\n          if (tmp_gen_rep > 4294967046) then begin\n            set_global_var(41, 1);\n          end\n          else begin\n            if (tmp_gen_rep > 4294966796) then begin\n              set_global_var(42, 1);\n            end\n            else begin\n              if (tmp_gen_rep > 4294966546) then begin\n                set_global_var(43, 1);\n              end\n              else begin\n                if (tmp_gen_rep > 4294966296) then begin\n                  set_global_var(44, 1);\n                end\n                else begin\n                  set_global_var(45, 1);\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\n  set_global_var(720, 2);\nend\nif (has_trait(0, dude_obj, 73)) then begin\n  if ((obj_pid(self_obj) == 16777296) or (obj_pid(self_obj) == 16777297)) then begin\n    LVar0 := create_object_sid(276, 0, 0, 4294967295);\n  end\n  if ((obj_pid(self_obj) == 16777456) or (obj_pid(self_obj) == 16777457)) then begin\n    LVar0 := create_object_sid(533, 0, 0, 4294967295);\n  end\n  if ((obj_pid(self_obj) == 16777299) or (obj_pid(self_obj) == 16777302)) then begin\n    LVar0 := create_object_sid(277, 0, 0, 4294967295);\n  end\n  add_obj_to_inven(self_obj, LVar0);\nend\nGECKO_obj := 4294967295;\n","use_skill_on_p_proc":"[]","map_enter_p_proc":"[]","map_update_p_proc":"if ((global_var(714) == 1) and (cur_map_index == 156)) then begin\n  destroy_object(self_obj);\nend\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(1358, 100));\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(1358, 101));\n","damage_p_proc":"attack_complex(source_obj, 0, 1, 0, 0, 30000, 0, 0);\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

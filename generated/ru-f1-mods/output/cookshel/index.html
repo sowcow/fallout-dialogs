@@ -1,0 +1,146 @@
+<!DOCTYPE html><html><head><title>cookshel</title><meta charset="utf-8" /></head><body><svg width="678pt" height="213pt"
+ viewBox="0.00 0.00 677.54 213.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 209)">
+<title>cookshel</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-209 673.54,-209 673.54,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="322.22" cy="-174.95" rx="27" ry="18"/>
+</g>
+<!-- pickup_p_proc -->
+<g id="node2" class="node">
+<title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="158.22" cy="-54.45" rx="158.22" ry="54.45"/>
+<text text-anchor="middle" x="158.22" y="-75.65" font-family="Times,serif" font-size="14.00">Повара внимательно следят</text>
+<text text-anchor="middle" x="158.22" y="-58.4" font-family="Times,serif" font-size="14.00">за всем. Здесь вряд ли</text>
+<text text-anchor="middle" x="158.22" y="-41.15" font-family="Times,serif" font-size="14.00">удастся что&#45;нибудь</text>
+<text text-anchor="middle" x="158.22" y="-23.9" font-family="Times,serif" font-size="14.00">украсть.</text>
+</g>
+<!-- start&#45;&gt;pickup_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;pickup_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M304.35,-161.04C287.27,-148.7 260.32,-129.22 234.19,-110.34"/>
+<polygon fill="#555555" stroke="#555555" points="236.53,-106.99 226.38,-103.97 232.43,-112.67 236.53,-106.99"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node3" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="486.22" cy="-54.45" rx="151.32" ry="30.05"/>
+<text text-anchor="middle" x="486.22" y="-58.4" font-family="Times,serif" font-size="14.00">На полке стоит множество</text>
+<text text-anchor="middle" x="486.22" y="-41.15" font-family="Times,serif" font-size="14.00">бутылок.</text>
+</g>
+<!-- start&#45;&gt;look_at_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;look_at_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M338.51,-160.4C344.62,-155.43 351.67,-149.82 358.22,-144.89 383.2,-126.12 411.64,-106.12 435.35,-89.8"/>
+<polygon fill="#555555" stroke="#555555" points="436.92,-92.28 443.19,-83.74 432.96,-86.5 436.92,-92.28"/>
+</g>
+<!-- description_p_proc -->
+<g id="node4" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="518.22" cy="-174.95" rx="151.32" ry="30.05"/>
+<text text-anchor="middle" x="518.22" y="-178.9" font-family="Times,serif" font-size="14.00">На полке стоит множество</text>
+<text text-anchor="middle" x="518.22" y="-161.65" font-family="Times,serif" font-size="14.00">бутылок.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 4) then begin\n  call pickup_p_proc;\nend\nelse begin\n  if ((script_action == 3) or (script_action == 21)) then begin\n    call look_at_p_proc;\n  end\nend\n","pickup_p_proc":"script_overrides;\ndisplay_msg(message_str(125, 101));\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(125, 100));\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(125, 100));\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

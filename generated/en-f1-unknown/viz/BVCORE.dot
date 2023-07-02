@@ -1,0 +1,4 @@
+digraph BVCORE {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="This is the Central Core\nroom of the Vault. It is\nhere that the computing\nmachines are located."]
+}

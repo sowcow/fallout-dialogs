@@ -1,0 +1,7 @@
+digraph TERM {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "look_at_p_proc" [style=dotted color="#555555"]
+  "start" [label="You are denied access to\nthis terminal."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="You see a highly advanced\nBrotherhood computer."]
+}

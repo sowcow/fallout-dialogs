@@ -1,0 +1,4 @@
+digraph RUBCHIP {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="The large amount of\nrubble blocking this\ncorridor looks\nimpressive.\nYou don't think that it\ncan be moved, even with\nhigh yield explosives.\n---\nYou are able to determine\nthat the Command and the\nControl Center\nis definitely buried\nunder even more rock. You\nwill have to look for\nthe water chip\nelsewhere.\n---\nYou gain \n---\n experience points."]
+}

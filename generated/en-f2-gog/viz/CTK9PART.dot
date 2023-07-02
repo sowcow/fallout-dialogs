@@ -1,0 +1,8 @@
+digraph CTK9PART {
+  "checkPartyMembersNearDoor" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "checkPartyMembersNearDoor" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="You retrieved the K-9\nmotivator."]
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+}

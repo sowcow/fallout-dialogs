@@ -1,0 +1,151 @@
+<!DOCTYPE html><html><head><title>abgrave1</title><meta charset="utf-8" /></head><body><svg width="812pt" height="140pt"
+ viewBox="0.00 0.00 812.00 140.10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 136.1)">
+<title>abgrave1</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-136.1 808,-136.1 808,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-102.05" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node2" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-102.05" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node3" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="275" cy="-102.05" rx="130.64" ry="30.05"/>
+<text text-anchor="middle" x="275" y="-106" font-family="Times,serif" font-size="14.00">Вы видите надгробную</text>
+<text text-anchor="middle" x="275" y="-88.75" font-family="Times,serif" font-size="14.00">надпись.</text>
+</g>
+<!-- description_p_proc -->
+<g id="node4" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="542" cy="-102.05" rx="117.91" ry="30.05"/>
+<text text-anchor="middle" x="542" y="-106" font-family="Times,serif" font-size="14.00">Надгробная надпись</text>
+<text text-anchor="middle" x="542" y="-88.75" font-family="Times,serif" font-size="14.00">гласит:</text>
+</g>
+<!-- num_to_bit -->
+<g id="node5" class="node">
+<title>num_to_bit</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="705" cy="-102.05" rx="27" ry="18"/>
+</g>
+<!-- give_headstone_name -->
+<g id="node6" class="node">
+<title>give_headstone_name</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="777" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node7" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="777" cy="-102.05" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc&#45;&gt;give_headstone_name -->
+<g id="edge1" class="edge">
+<title>map_enter_p_proc&#45;&gt;give_headstone_name</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M777,-83.65C777,-73.1 777,-59.38 777,-47.3"/>
+<polygon fill="#555555" stroke="#555555" points="780.5,-47.38 777,-37.38 773.5,-47.38 780.5,-47.38"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","use_p_proc":"script_overrides;\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(1315, 100));\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(1315, 101) + message_str(1315, local_var(0)));\n","num_to_bit":"variable LVar1 := 1;\narg0 := arg0 % 32;\nwhile(arg0 > 1) do begin\n  LVar1 := LVar1 * 2;\n  arg0 := arg0 - 1;\nend\nreturn LVar1;\n","give_headstone_name":"variable LVar0 := 0;\nvariable LVar1 := 0;\nLVar0 := random(0, 10);\nwhile((local_var(0) == 0) and (LVar0 <= 10)) do begin\n  LVar1 := num_to_bit(LVar0);\n  if ((global_var(200 + (LVar0 / 32)) bwand LVar1) == 0) then begin\n    set_global_var(200 + (LVar0 / 32), global_var(200 + (LVar0 / 32)) bwor LVar1);\n    set_local_var(0, 102 + LVar0);\n  end\n  LVar0 := LVar0 + 1;\nend\nif (local_var(0) == 0) then begin\n  set_local_var(0, random(250, 253));\nend\n","map_enter_p_proc":"if (metarule(14, 0)) then begin\n  call give_headstone_name;\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

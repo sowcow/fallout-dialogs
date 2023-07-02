@@ -1,0 +1,4 @@
+digraph DEADBRO {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="The person looks like he\nmay have been from the\nBrotherhood of Steel.\n---\nYou wonder what could\nhave caused such damage\nto the Brotherhood\nmember.\n---\nWhoever did this does not\nseem to be around\nanymore.\n---\nWhoever did this could be\nlurking lower in the\ncomplex. Perhaps you\nshould be\ncautious while walking\nthrough here.\n---\nYou wonder what could\nhave caused this robot to\nbe killed.\n---\nYou wonder if perhaps the\nblast caused this robot\nto die.\n---\nThis looks like it could\nhave been something the\nscientists were working\non here."]
+}

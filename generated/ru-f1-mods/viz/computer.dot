@@ -1,0 +1,7 @@
+digraph computer {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "computer00" [style=dotted color="#555555"]
+  "start" [label="На старом столе стоит\nпыльный сломанный\nкомпьютер."]
+  "computer00" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "computer00" [label="Судя по всему, компьютер\nсильно поврежден и не\nподлежит ремону.\n---\nЧасть схем выгорела под\nвоздействием мощного\nэлектромагнитного\nимпульса.\n---\nНе работает.\n---\nВы порезались об острый\nкрай."]
+}

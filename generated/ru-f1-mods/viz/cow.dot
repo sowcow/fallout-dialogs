@@ -1,0 +1,17 @@
+digraph cow {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "timed_event_p_proc" [style=dotted color="#555555"]
+  "start" -> "talk_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_obj_on_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label="Это дикий брамин."]
+  "talk_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "talk_p_proc" [label="Му-у, я говорю."]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label=""]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Эти животные похожи на\nкоров. Вторая голова,\nпо-видимому, результат\nкакой-то странной\nмутации.\n---\nНа вид обычное животное."]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" -> "talk_p_proc" [style=dotted color="#555555"]
+  "timed_event_p_proc" [label=""]
+}

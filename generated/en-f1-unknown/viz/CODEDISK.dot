@@ -1,0 +1,4 @@
+digraph CODEDISK {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="This is the disk of the\nBrotherhood's Code of\nConduct.\n---\nPip Boy displays: File\nFound on System. Aborting\ndownload.\n---\nPip Boy displays:\nDownloading data from\nDisk.\n---\nYou see a encryption\ndecoder disk.\n---\nYou see a holodisk."]
+}

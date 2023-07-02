@@ -1,0 +1,11 @@
+digraph vbrokelv {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Вы замечаете на двери\nзнак, который означает,\nчто лифт неисправен."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите на двери знак,\nкоторый означает, что он\nнеисправен."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Знак: ОСТОРОЖНО! Шахта\nлифта ремонтируется.\nПожалуйста, используйте\nдругой лифт."]
+}

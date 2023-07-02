@@ -1,0 +1,13 @@
+digraph LIBCOMP {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="This computer contains a\ngreat amount of\ninformation\npreserved from before\nthe Great War."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="You fiddle with the\ncomputer a bit, but it\ntakes some scientific\nskill to actually get\nanything useful out of\nthe terminal."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="You use the Vault\ncomputer teaching system.\n---\nYou spend some time on\nthe Vault computer\nteaching\nsystem but learn nothing\nof importance.\nThe outside world is\nyour teacher now.\n---\nYou spend some time\nresearching some\nimportant information.\n---\nYou spend some time on\nthe interweb doing\nnothing of importance."]
+}

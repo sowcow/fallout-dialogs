@@ -1,0 +1,15 @@
+digraph broinvad {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "talk_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "talk_p_proc" -> "StepAside" [style=dotted color="#555555"]
+  "talk_p_proc" [label=""]
+  "critter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "critter_p_proc" [label="Пора возвращаться в\nБратство.\n---\nОтлично, все на месте.\nСожжем здесь все к\nчертовой матери!\n---\nПора возвращаться в\nБратство.\n---\nПора возвращаться в\nБратство."]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label="В этом помещении что-то\nне так.\n---\nУ меня от этого места\nмурашки по коже."]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" [label=""]
+  "StepAside" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "StepAside" [label=""]
+}

@@ -1,0 +1,10 @@
+digraph radiocom {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Компьютер: УПРАВЛЕНИЕ\nРАЦИЕЙ.\n---\nПохоже, что каналы рации\nбыли заблокированы.\n---\nУправление рацией,\nкажется, включено."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Вы включаете каналы\nрации.\n---\nВы выключаете каналы\nрации.\n---\nВы двигаете какие-то\nпереключатели, но\nселектор каналов рации не\nменяет положения."]
+}

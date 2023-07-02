@@ -1,0 +1,167 @@
+<!DOCTYPE html><html><head><title>brahmin</title><meta charset="utf-8" /></head><body><svg width="938pt" height="286pt"
+ viewBox="0.00 0.00 938.17 286.48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 282.48)">
+<title>brahmin</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-282.48 934.17,-282.48 934.17,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="141.17" cy="-175.24" rx="27" ry="18"/>
+</g>
+<!-- description_p_proc -->
+<g id="node2" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="141.17" cy="-18" rx="141.17" ry="18"/>
+<text text-anchor="middle" x="141.17" y="-13.32" font-family="Times,serif" font-size="14.00">Это домашнее животное.</text>
+</g>
+<!-- start&#45;&gt;description_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;description_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M141.17,-157.03C141.17,-130.46 141.17,-79.15 141.17,-47.13"/>
+<polygon fill="#555555" stroke="#555555" points="144.67,-47.28 141.17,-37.28 137.67,-47.28 144.67,-47.28"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node3" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="213.17" cy="-175.24" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node4" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="297.17" cy="-175.24" rx="39.11" ry="18"/>
+<text text-anchor="middle" x="297.17" y="-170.56" font-family="Times,serif" font-size="14.00">Му&#45;у.</text>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node5" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="381.17" cy="-175.24" rx="27" ry="18"/>
+</g>
+<!-- use_obj_on_p_proc -->
+<g id="node6" class="node">
+<title>use_obj_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="453.17" cy="-175.24" rx="27" ry="18"/>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node7" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="642.17" cy="-175.24" rx="143.9" ry="103.24"/>
+<text text-anchor="middle" x="642.17" y="-230.94" font-family="Times,serif" font-size="14.00">Эти животные похожи на</text>
+<text text-anchor="middle" x="642.17" y="-213.69" font-family="Times,serif" font-size="14.00">коров. Вторая голова,</text>
+<text text-anchor="middle" x="642.17" y="-196.44" font-family="Times,serif" font-size="14.00">по&#45;видимому, результат</text>
+<text text-anchor="middle" x="642.17" y="-179.19" font-family="Times,serif" font-size="14.00">какой&#45;то странной</text>
+<text text-anchor="middle" x="642.17" y="-161.94" font-family="Times,serif" font-size="14.00">мутации.</text>
+<text text-anchor="middle" x="642.17" y="-144.69" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="642.17" y="-127.44" font-family="Times,serif" font-size="14.00">На ваш взгляд, все в</text>
+<text text-anchor="middle" x="642.17" y="-110.19" font-family="Times,serif" font-size="14.00">порядке.</text>
+</g>
+<!-- damage_p_proc -->
+<g id="node8" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="831.17" cy="-175.24" rx="27" ry="18"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node9" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="903.17" cy="-175.24" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 3) then begin\n  call description_p_proc;\nend\n","critter_p_proc":"if (not(initialized)) then begin\n  add_timer_event(self_obj, game_ticks(random(1, 5)), 1);\n  initialized := 1;\nend\n","description_p_proc":"display_msg(message_str(34, 100));\n","talk_p_proc":"float_msg(self_obj, message_str(34, 103), 0);\n","timed_event_p_proc":"if (((critter_state(self_obj) bwand 2) == 0) and not(combat_is_initialized)) then begin\n  critter_tile := tile_num_in_direction(tile_num(self_obj), random(0, 5), 3);\n  reg_anim_func(2, self_obj);\n  reg_anim_func(1, 1);\n  reg_anim_obj_move_to_tile(self_obj, critter_tile, -1);\n  reg_anim_func(3, 0);\nend\nadd_timer_event(self_obj, game_ticks(random(3, 5)), 1);\n","use_obj_on_p_proc":"variable LVar0 := 0;\nif ((obj_pid(obj_being_used_with) == 124) or (obj_pid(obj_being_used_with) == 125)) then begin\n  script_overrides;\n  LVar0 := obj_being_used_with;\n  rm_obj_from_inven(source_obj, obj_being_used_with);\n  destroy_object(LVar0);\n  reg_anim_func(2, self_obj);\n  reg_anim_func(1, 1);\n  reg_anim_animate(self_obj, 14, -1);\n  reg_anim_animate(self_obj, 20, 5);\n  reg_anim_animate(self_obj, 48, -1);\n  reg_anim_func(3, 0);\n  critter_injure(self_obj, 2);\nend\n","use_skill_on_p_proc":"if (action_being_used == 12) then begin\n  script_overrides;\n  if (is_success(roll_vs_skill(dude_obj, action_being_used, 0))) then begin\n    display_msg(message_str(34, 101));\n  end\n  else begin\n    display_msg(message_str(34, 102));\n  end\nend\n","damage_p_proc":"if (source_obj == dude_obj) then begin\n  if ((cur_map_index == 10) or (cur_map_index == 12)) then begin\n    set_global_var(247, 1);\n  end\nend\n","destroy_p_proc":"if (source_obj == dude_obj) then begin\n  if ((cur_map_index == 10) or (cur_map_index == 12)) then begin\n    set_global_var(247, 1);\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

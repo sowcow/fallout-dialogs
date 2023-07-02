@@ -1,0 +1,4 @@
+digraph PERNPWR {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="This person looks like he\nmay have been from the\nBrotherhood of Steel.\n---\nYou wonder why this metal\nperson is here.\n---\nThis person looks to have\nbeen killed by high\namounts of radiation.\n---\nYou cannot determine what\ncaused this person to\ndie.\n---\nThis skill gleans no\nfurther information about\nthis person."]
+}

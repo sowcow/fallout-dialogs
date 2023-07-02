@@ -1,0 +1,135 @@
+<!DOCTYPE html><html><head><title>FORCECON</title><meta charset="utf-8" /></head><body><svg width="342pt" height="140pt"
+ viewBox="0.00 0.00 341.64 140.10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 136.1)">
+<title>FORCECON</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-136.1 337.64,-136.1 337.64,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="218.64" cy="-114.1" rx="27" ry="18"/>
+</g>
+<!-- description_p_proc -->
+<g id="node2" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="130.64" cy="-30.05" rx="130.64" ry="30.05"/>
+<text text-anchor="middle" x="130.64" y="-34" font-family="Times,serif" font-size="14.00">This looks like a control</text>
+<text text-anchor="middle" x="130.64" y="-16.75" font-family="Times,serif" font-size="14.00">panel for a force field.</text>
+</g>
+<!-- start&#45;&gt;description_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;description_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M203.31,-98.81C193.78,-89.92 181.06,-78.07 168.94,-66.76"/>
+<polygon fill="#555555" stroke="#555555" points="171.79,-64.71 162.09,-60.45 167.02,-69.83 171.79,-64.71"/>
+</g>
+<!-- use_p_proc -->
+<g id="node3" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="306.64" cy="-30.05" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;use_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;use_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M233.97,-98.81C247.72,-85.99 268.1,-66.99 283.77,-52.37"/>
+<polygon fill="#555555" stroke="#555555" points="285.56,-55.56 290.49,-46.18 280.78,-50.44 285.56,-55.56"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 3) then begin\n  call description_p_proc;\nend\nelse begin\n  if (script_action == 6) then begin\n    call use_p_proc;\n  end\nend\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(545, 100));\n","use_p_proc":"field_change := \"toggle\";\nif (cur_map_index == 31) then begin\n  if (elevation(self_obj) == 0) then begin\n    if (tile_num(self_obj) == 16308) then begin\n      use_obj(map_var(0));\n    end\n    else begin\n      if (tile_num(self_obj) == 16280) then begin\n        use_obj(map_var(1));\n      end\n      else begin\n        if (tile_num(self_obj) == 25912) then begin\n          use_obj(map_var(2));\n        end\n        else begin\n          if (tile_num(self_obj) == 25878) then begin\n            use_obj(map_var(7));\n          end\n          else begin\n            if (tile_num(self_obj) == 21664) then begin\n              use_obj(map_var(8));\n            end\n          end\n        end\n      end\n    end\n  end\n  else begin\n    if (elevation(self_obj) == 1) then begin\n      if (tile_num(self_obj) == 15502) then begin\n        use_obj(map_var(10));\n      end\n      else begin\n        if (tile_num(self_obj) == 26706) then begin\n          use_obj(map_var(11));\n        end\n      end\n    end\n  end\nend\nelse begin\n  if (cur_map_index == 32) then begin\n    if (elevation(self_obj) == 0) then begin\n      if (tile_num(self_obj) == 17120) then begin\n        use_obj(map_var(0));\n      end\n      else begin\n        if (tile_num(self_obj) == 24326) then begin\n          use_obj(map_var(1));\n        end\n      end\n    end\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

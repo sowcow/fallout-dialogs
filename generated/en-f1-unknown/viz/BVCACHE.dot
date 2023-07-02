@@ -1,0 +1,4 @@
+digraph BVCACHE {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="There is an emergency\nmedical cache on the east\nwall. It may prove\nuseful."]
+}

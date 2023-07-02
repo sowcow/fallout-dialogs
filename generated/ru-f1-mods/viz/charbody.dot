@@ -1,0 +1,9 @@
+digraph charbody {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "look_at_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Этот человек вот-вот\nвзорвется.\n---\nТело настолько\nобуглилось, что даже\nнепонятно, чей это труп.\n---\nВетер унес часть пепла.\n---\nНаверное, это был ядерный\nвзрыв."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Пепел сыпется сквозь\nпальцы."]
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html><html><head><title>LOOKOUT</title><meta charset="utf-8" /></head><body><svg width="572pt" height="285pt"
+ viewBox="0.00 0.00 572.47 285.29" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 281.29)">
+<title>LOOKOUT</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-281.29 568.47,-281.29 568.47,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="165.06" cy="-259.29" rx="136.96" ry="18"/>
+<text text-anchor="middle" x="165.06" y="-254.61" font-family="Times,serif" font-size="14.00">You see a Ghoul Lookout.</text>
+</g>
+<!-- talk_p_proc -->
+<g id="node2" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="193.06" cy="-187.29" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;talk_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;talk_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M171.98,-240.99C175.12,-233.16 178.89,-223.73 182.37,-215.02"/>
+<polygon fill="#555555" stroke="#555555" points="185.95,-216.5 186.41,-205.91 179.45,-213.9 185.95,-216.5"/>
+</g>
+<!-- guilt -->
+<g id="node3" class="node">
+<title>guilt</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="138.06" cy="-66.64" rx="138.06" ry="66.64"/>
+<text text-anchor="middle" x="138.06" y="-96.47" font-family="Times,serif" font-size="14.00">We wont be able to</text>
+<text text-anchor="middle" x="138.06" y="-79.22" font-family="Times,serif" font-size="14.00">survive without water.</text>
+<text text-anchor="middle" x="138.06" y="-61.97" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="138.06" y="-44.72" font-family="Times,serif" font-size="14.00">Please talk to our Leader</text>
+<text text-anchor="middle" x="138.06" y="-27.47" font-family="Times,serif" font-size="14.00">before you leave.</text>
+</g>
+<!-- start&#45;&gt;guilt -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;guilt</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M162.41,-241.11C160.83,-230.74 158.79,-217.26 157.06,-205.29 154.21,-185.55 151.22,-164.2 148.47,-144.34"/>
+<polygon fill="#555555" stroke="#555555" points="151.81,-143.91 146.98,-134.48 144.88,-144.87 151.81,-143.91"/>
+</g>
+<!-- talk_p_proc&#45;&gt;guilt -->
+<g id="edge3" class="edge">
+<title>talk_p_proc&#45;&gt;guilt</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M185.3,-169.54C181.72,-161.82 177.19,-152.05 172.37,-141.64"/>
+<polygon fill="#555555" stroke="#555555" points="175.25,-140.55 167.87,-132.95 168.9,-143.49 175.25,-140.55"/>
+</g>
+<!-- spies -->
+<g id="node4" class="node">
+<title>spies</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="429.06" cy="-66.64" rx="135.41" ry="30.05"/>
+<text text-anchor="middle" x="429.06" y="-70.59" font-family="Times,serif" font-size="14.00">I can&#39;t talk now. I&#39;m</text>
+<text text-anchor="middle" x="429.06" y="-53.34" font-family="Times,serif" font-size="14.00">watching out for danger.</text>
+</g>
+<!-- talk_p_proc&#45;&gt;spies -->
+<g id="edge4" class="edge">
+<title>talk_p_proc&#45;&gt;spies</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M214.01,-175.76C247.71,-158.82 315.3,-124.84 365.76,-99.47"/>
+<polygon fill="#555555" stroke="#555555" points="366.92,-102.3 374.28,-94.68 363.78,-96.05 366.92,-102.3"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (not(init_teams)) then begin\n  critter_add_trait(self_obj, 1, 6, 31);\n  critter_add_trait(self_obj, 1, 5, 41);\n  init_teams := 1;\nend\nif (script_action == 11) then begin\n  call talk_p_proc;\nend\nelse begin\n  if ((script_action == 21) or (script_action == 3)) then begin\n    script_overrides;\n    display_msg(message_str(109, 100));\n  end\n  else begin\n    if (script_action == 4) then begin\n      Hostile := 1;\n    end\n    else begin\n      if (script_action == 12) then begin\n        if (Hostile) then begin\n          Hostile := 0;\n          attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\n        end\n        else begin\n          if (local_var(0) == 0) then begin\n            if ((global_var(30) == 1) and (global_var(31) != 2)) then begin\n              if (obj_can_see_obj(self_obj, dude_obj) and (tile_distance_objs(self_obj, dude_obj) < 5)) then begin\n                set_local_var(0, 1);\n                call guilt;\n              end\n            end\n          end\n        end\n      end\n      else begin\n        if (script_action == 18) then begin\n          if (source_obj == dude_obj) then begin\n            if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n              set_global_var(156, 1);\n              set_global_var(157, 0);\n            end\n            if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n              set_global_var(157, 1);\n              set_global_var(156, 0);\n            end\n            set_global_var(159, global_var(159) + 1);\n            if ((global_var(159) % 2) == 0) then begin\n              set_global_var(155, global_var(155) - 1);\n            end\n          end\n        end\n      end\n    end\n  end\nend\n","spies":"float_msg(self_obj, message_str(109, 101), 0);\n","guilt":"if (random(0, 1)) then begin\n  float_msg(self_obj, message_str(109, 200), 0);\nend\nelse begin\n  float_msg(self_obj, message_str(109, 201), 0);\nend\n","talk_p_proc":"if ((global_var(30) == 1) and (global_var(31) != 2)) then begin\n  call guilt;\nend\nelse begin\n  call spies;\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

@@ -1,0 +1,7 @@
+digraph glwalien {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "dead00" [style=dotted color="#555555"]
+  "start" [label="Окоченевший труп."]
+  "dead00" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "dead00" [label="Труп очевидно внеземного\nпроисхождения.\n---\nВозможно, это результат\nкакого-то генетического\nэксперимента.\n---\nЭто труп.\n---\nОкоченевший труп выглядит\nочень странно."]
+}

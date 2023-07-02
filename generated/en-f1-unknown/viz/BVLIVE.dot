@@ -1,0 +1,4 @@
+digraph BVLIVE {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="You see the tip of a key\nin a crack in the chair.\n---\nSomething catches your\neye when you look at the\nchair."]
+}

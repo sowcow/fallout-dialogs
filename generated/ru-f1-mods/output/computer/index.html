@@ -1,0 +1,138 @@
+<!DOCTYPE html><html><head><title>computer</title><meta charset="utf-8" /></head><body><svg width="309pt" height="457pt"
+ viewBox="0.00 0.00 308.52 456.95" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 452.95)">
+<title>computer</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-452.95 304.52,-452.95 304.52,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="150.26" cy="-406.7" rx="128.52" ry="42.25"/>
+<text text-anchor="middle" x="150.26" y="-419.28" font-family="Times,serif" font-size="14.00">На старом столе стоит</text>
+<text text-anchor="middle" x="150.26" y="-402.03" font-family="Times,serif" font-size="14.00">пыльный сломанный</text>
+<text text-anchor="middle" x="150.26" y="-384.78" font-family="Times,serif" font-size="14.00">компьютер.</text>
+</g>
+<!-- computer00 -->
+<g id="node2" class="node">
+<title>computer00</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="150.26" cy="-164.23" rx="150.26" ry="164.23"/>
+<text text-anchor="middle" x="150.26" y="-263.05" font-family="Times,serif" font-size="14.00">Судя по всему, компьютер</text>
+<text text-anchor="middle" x="150.26" y="-245.8" font-family="Times,serif" font-size="14.00">сильно поврежден и не</text>
+<text text-anchor="middle" x="150.26" y="-228.55" font-family="Times,serif" font-size="14.00">подлежит ремону.</text>
+<text text-anchor="middle" x="150.26" y="-211.3" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="150.26" y="-194.05" font-family="Times,serif" font-size="14.00">Часть схем выгорела под</text>
+<text text-anchor="middle" x="150.26" y="-176.8" font-family="Times,serif" font-size="14.00">воздействием мощного</text>
+<text text-anchor="middle" x="150.26" y="-159.55" font-family="Times,serif" font-size="14.00">электромагнитного</text>
+<text text-anchor="middle" x="150.26" y="-142.3" font-family="Times,serif" font-size="14.00">импульса.</text>
+<text text-anchor="middle" x="150.26" y="-125.05" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="150.26" y="-107.8" font-family="Times,serif" font-size="14.00">Не работает.</text>
+<text text-anchor="middle" x="150.26" y="-90.55" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="150.26" y="-73.3" font-family="Times,serif" font-size="14.00">Вы порезались об острый</text>
+<text text-anchor="middle" x="150.26" y="-56.05" font-family="Times,serif" font-size="14.00">край.</text>
+</g>
+<!-- start&#45;&gt;computer00 -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;computer00</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M150.26,-364.09C150.26,-356.54 150.26,-348.25 150.26,-339.48"/>
+<polygon fill="#555555" stroke="#555555" points="153.76,-339.56 150.26,-329.56 146.76,-339.56 153.76,-339.56"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 4) then begin\n  script_overrides;\n  call computer00;\nend\nelse begin\n  if (script_action == 21) then begin\n    script_overrides;\n    display_msg(message_str(23, 100));\n  end\nend\n","computer00":"if (has_skill(dude_obj, 12) > has_skill(dude_obj, 13)) then begin\n  test := roll_vs_skill(dude_obj, 12, 0);\nend\nelse begin\n  test := roll_vs_skill(dude_obj, 13, 0);\nend\nif (is_success(test)) then begin\n  display_msg(message_str(23, 101));\n  if (is_critical(test)) then begin\n    display_msg(message_str(23, 102));\n  end\nend\nelse begin\n  display_msg(message_str(23, 103));\n  if (is_critical(test)) then begin\n    display_msg(message_str(23, 104));\n    critter_dmg(dude_obj, 1, 0);\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

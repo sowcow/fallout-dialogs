@@ -1,0 +1,8 @@
+digraph diRebBok {
+  "checkPartyMembersNearDoor" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "checkPartyMembersNearDoor" [label=""]
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="You feel all warm and\nfuzzy after finishing the\nbook, but gain nothing\nuseful out of it."]
+}

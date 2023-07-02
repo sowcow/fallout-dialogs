@@ -1,0 +1,145 @@
+<!DOCTYPE html><html><head><title>guard</title><meta charset="utf-8" /></head><body><svg width="289pt" height="652pt"
+ viewBox="0.00 0.00 289.43 652.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 648.4)">
+<title>guard</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-648.4 285.43,-648.4 285.43,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="140.71" cy="-626.4" rx="27" ry="18"/>
+</g>
+<!-- do_dialogue -->
+<g id="node2" class="node">
+<title>do_dialogue</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="140.71" cy="-286.2" rx="140.71" ry="286.2"/>
+<text text-anchor="middle" x="140.71" y="-471.28" font-family="Times,serif" font-size="14.00">Я на посту. Уходи.</text>
+<text text-anchor="middle" x="140.71" y="-454.03" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="140.71" y="-436.78" font-family="Times,serif" font-size="14.00">Не создавай проблем.</text>
+<text text-anchor="middle" x="140.71" y="-419.53" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="140.71" y="-402.28" font-family="Times,serif" font-size="14.00">Пончики есть?</text>
+<text text-anchor="middle" x="140.71" y="-385.03" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="140.71" y="-367.78" font-family="Times,serif" font-size="14.00">Тебе когда&#45;нибудь</text>
+<text text-anchor="middle" x="140.71" y="-350.53" font-family="Times,serif" font-size="14.00">казалось, что за тобой</text>
+<text text-anchor="middle" x="140.71" y="-333.28" font-family="Times,serif" font-size="14.00">следят? Что тобой кто&#45;то</text>
+<text text-anchor="middle" x="140.71" y="-316.03" font-family="Times,serif" font-size="14.00">управляет? Смотрит на</text>
+<text text-anchor="middle" x="140.71" y="-298.78" font-family="Times,serif" font-size="14.00">тебя откуда&#45;то сверху?</text>
+<text text-anchor="middle" x="140.71" y="-281.53" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="140.71" y="-264.28" font-family="Times,serif" font-size="14.00">Уже знаешь про Билла?</text>
+<text text-anchor="middle" x="140.71" y="-247.03" font-family="Times,serif" font-size="14.00">Беднягу искромсал</text>
+<text text-anchor="middle" x="140.71" y="-229.78" font-family="Times,serif" font-size="14.00">радскорпион.</text>
+<text text-anchor="middle" x="140.71" y="-212.53" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="140.71" y="-195.28" font-family="Times,serif" font-size="14.00">Как думаешь, ты</text>
+<text text-anchor="middle" x="140.71" y="-178.03" font-family="Times,serif" font-size="14.00">справишься с</text>
+<text text-anchor="middle" x="140.71" y="-160.78" font-family="Times,serif" font-size="14.00">радскорпионом?</text>
+<text text-anchor="middle" x="140.71" y="-143.53" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="140.71" y="-126.28" font-family="Times,serif" font-size="14.00">На вид ты ничего</text>
+<text text-anchor="middle" x="140.71" y="-109.03" font-family="Times,serif" font-size="14.00">выдающегося собой не</text>
+<text text-anchor="middle" x="140.71" y="-91.78" font-family="Times,serif" font-size="14.00">представляешь.</text>
+</g>
+<!-- start&#45;&gt;do_dialogue -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;do_dialogue</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M140.71,-608.17C140.71,-601.54 140.71,-593.23 140.71,-583.61"/>
+<polygon fill="#555555" stroke="#555555" points="144.21,-583.68 140.71,-573.68 137.21,-583.68 144.21,-583.68"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"variable LVar0 := 0;\nvariable LVar1 := 0;\nvariable LVar2 := 0;\nvariable LVar3 := 0;\nvariable LVar4 := 0;\nif (script_action == 11) then begin\n  call do_dialogue;\nend\n","do_dialogue":"start_gdialog(7, self_obj, 4, -1, -1);\nrndx := random(0, 6);\nif (rndx == 0) then begin\n  sayMessage(0, message_str(7, 102));\nend\nif (rndx == 1) then begin\n  sayMessage(0, message_str(7, 103));\nend\nif (rndx == 2) then begin\n  sayMessage(0, message_str(7, 104));\nend\nif (rndx == 3) then begin\n  sayMessage(0, message_str(7, 105));\nend\nif (rndx == 4) then begin\n  sayMessage(0, message_str(7, 106));\nend\nif (rndx == 5) then begin\n  sayMessage(0, message_str(7, 107));\nend\nif (rndx == 6) then begin\n  sayMessage(0, message_str(7, 108));\nend\nend_dialogue;\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

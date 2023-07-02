@@ -1,0 +1,149 @@
+<!DOCTYPE html><html><head><title>abjunk</title><meta charset="utf-8" /></head><body><svg width="1261pt" height="190pt"
+ viewBox="0.00 0.00 1260.56 190.08" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 186.08)">
+<title>abjunk</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-186.08 1256.56,-186.08 1256.56,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-91.04" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node2" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="196" cy="-91.04" rx="123.74" ry="30.05"/>
+<text text-anchor="middle" x="196" y="-94.99" font-family="Times,serif" font-size="14.00">Здесь нет ничего, что</text>
+<text text-anchor="middle" x="196" y="-77.74" font-family="Times,serif" font-size="14.00">можно использовать.</text>
+</g>
+<!-- pickup_p_proc -->
+<g id="node3" class="node">
+<title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="461" cy="-91.04" rx="123.74" ry="30.05"/>
+<text text-anchor="middle" x="461" y="-94.99" font-family="Times,serif" font-size="14.00">Здесь нет ничего, что</text>
+<text text-anchor="middle" x="461" y="-77.74" font-family="Times,serif" font-size="14.00">можно использовать.</text>
+</g>
+<!-- destroy_p_proc -->
+<g id="node4" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="630" cy="-91.04" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node5" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="799" cy="-91.04" rx="124.27" ry="30.05"/>
+<text text-anchor="middle" x="799" y="-94.99" font-family="Times,serif" font-size="14.00">Вы видите довоенные</text>
+<text text-anchor="middle" x="799" y="-77.74" font-family="Times,serif" font-size="14.00">устройства.</text>
+</g>
+<!-- description_p_proc -->
+<g id="node6" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1097" cy="-91.04" rx="155.56" ry="91.04"/>
+<text text-anchor="middle" x="1097" y="-138.11" font-family="Times,serif" font-size="14.00">Вы видите разложенный на</text>
+<text text-anchor="middle" x="1097" y="-120.86" font-family="Times,serif" font-size="14.00">столе, как святые мощи,</text>
+<text text-anchor="middle" x="1097" y="-103.61" font-family="Times,serif" font-size="14.00">впечатляющий набор</text>
+<text text-anchor="middle" x="1097" y="-86.36" font-family="Times,serif" font-size="14.00">довоенных устройств и</text>
+<text text-anchor="middle" x="1097" y="-69.11" font-family="Times,serif" font-size="14.00">вещиц. Жаль, что ни одна</text>
+<text text-anchor="middle" x="1097" y="-51.86" font-family="Times,serif" font-size="14.00">из них больше не</text>
+<text text-anchor="middle" x="1097" y="-34.61" font-family="Times,serif" font-size="14.00">работает.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","use_p_proc":"script_overrides;\ndisplay_msg(message_str(1525, 102));\n","pickup_p_proc":"script_overrides;\ndisplay_msg(message_str(1525, 102));\n","destroy_p_proc":"[]","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(1525, 100));\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(1525, 101));\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

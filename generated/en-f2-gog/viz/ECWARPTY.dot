@@ -1,0 +1,12 @@
+digraph ECWARPTY {
+  "checkPartyMembersNearDoor" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "checkPartyMembersNearDoor" [label=""]
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "critter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "critter_p_proc" [label=""]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" [label=""]
+  "talk_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "talk_p_proc" [label=""]
+}

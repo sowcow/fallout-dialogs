@@ -1,0 +1,10 @@
+digraph VMONOWIR {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "spatial_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="You notice and manage to\navoid a monofilament wire\nstrung across the\n corridor.\n---\nYou feel intense pain in\nyour legs. You've been\nsliced wide open by a\n monofilament wire.\n---\nIt severely damages your\nright leg.\n---\nIt severely damages your\nleft leg."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="You disarm the\nmonofilament wire trap\nand safely dispose of the\nwire\nbefore you slice your\nhands open.\n---\nYou try to disarm the\nwire, but slip and cut\nyourself with it.\n---\nYou try to disarm the\nwire, but can't get a\ngood handle on it. You\npull\n back before it cuts you."]
+}

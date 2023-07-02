@@ -1,0 +1,14 @@
+digraph LOOKOUT {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "talk_p_proc" [style=dotted color="#555555"]
+  "start" -> "guilt" [style=dotted color="#555555"]
+  "start" [label="You see a Ghoul Lookout."]
+  "spies" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spies" [label="I can't talk now. I'm\nwatching out for danger."]
+  "guilt" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "guilt" [label="We wont be able to\nsurvive without water.\n---\nPlease talk to our Leader\nbefore you leave."]
+  "talk_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "talk_p_proc" -> "guilt" [style=dotted color="#555555"]
+  "talk_p_proc" -> "spies" [style=dotted color="#555555"]
+  "talk_p_proc" [label=""]
+}

@@ -1,0 +1,10 @@
+digraph morbcool {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label="Вы не можете себя\nзаставить копаться в этой\nкуче кусков."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Холодильник заполнен\nкусками органов и частями\nтел."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Холодильник заполнен\nкусками органов и частями\nтел.\n---\nОрганы в холодильнике\nнарезаны небольшими\nкусками и охлаждены перед\nотправкой. Никто не\nсможет взять органы для\nтрансплантации из этих\nмелких кусочков.\n---\nХолодильник забит частями\nтел, нарезанными\nмаленьким кусками и\nупакованными в упаковки\nсо льдом. Странно.\n---\nХолодильник заполнен\nчастями тел."]
+}

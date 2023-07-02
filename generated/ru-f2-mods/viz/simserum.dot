@@ -1,0 +1,8 @@
+digraph simserum {
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="Вы приобрели \n---\nЭту штуку полагается\nиспользовать на\nсупер-мутанте.\n---\nВы приобрели \n---\nЭту штуку полагается\nиспользовать на\nсупер-мутанте."]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" [label=""]
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+}

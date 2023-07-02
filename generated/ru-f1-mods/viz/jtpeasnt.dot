@@ -1,0 +1,14 @@
+digraph jtpeasnt {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "do_dialogue" [style=dotted color="#555555"]
+  "start" [label="Вы видите крестьянина\nДжанктауна."]
+  "do_dialogue" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_dialogue" -> "guard00" [style=dotted color="#555555"]
+  "do_dialogue" [label=""]
+  "guard00" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "guard00" [label="Привет.\n---\nЭто наше место. Хочешь с\nнами тут неплохо провести\nвремя?\n---\nХммм, у тебя кажется,\nкое-что есть..."]
+  "first" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "first" [label=""]
+  "notfirst" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "notfirst" [label=""]
+}

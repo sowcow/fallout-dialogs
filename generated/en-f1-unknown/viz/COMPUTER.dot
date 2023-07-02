@@ -1,0 +1,7 @@
+digraph COMPUTER {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "computer00" [style=dotted color="#555555"]
+  "start" [label="This is a badly worn-out\ndesk with a dusty,\ncracked computer\nseated precariously atop\nit."]
+  "computer00" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "computer00" [label="The computer looks badly\ndamaged and unrepairable.\n---\nMany circuits are fried\nfrom an EMP burst.\n---\nIt doesn't work.\n---\nYou slice your hands on\nthe case."]
+}

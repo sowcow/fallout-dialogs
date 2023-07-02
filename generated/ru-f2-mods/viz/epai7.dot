@@ -1,0 +1,18 @@
+digraph epai7 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Вы видите усиленные двери\nотдела безопасности."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите дверь отдела\nбезопасности."]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="Дверь уже разблокирована.\n---\nАвторизация успешна.\nДверь открыта."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Попытка\nнесанкционированного\nдоступа. Дверь\nзаблокирована."]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Здесь нет замка, чтобы\nвставить отмычку."]
+}

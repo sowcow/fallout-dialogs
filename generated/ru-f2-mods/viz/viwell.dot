@@ -1,0 +1,10 @@
+digraph viwell {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Вы делаете большой глоток\nколодезной воды. Она\nнеобычно теплая.\n---\nВы делаете большой глоток\nколодезной воды. На вкус\nона гораздо лучше, чем\nраньше."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите колодец во\nвнутреннем дворе."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Вы видите колодец во\nвнутреннем дворе.\n---\nВы можете ошибаться, но\nзаглядывая в колодец, вы\nощущаете тепло,\nподнимающееся из темноты."]
+}

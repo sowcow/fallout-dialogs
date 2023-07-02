@@ -1,0 +1,1565 @@
+<!DOCTYPE html><html><head><title>fckenlee</title><meta charset="utf-8" /></head><body><svg width="4183pt" height="4626pt"
+ viewBox="0.00 0.00 4183.00 4625.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 4621.8)">
+<title>fckenlee</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-4621.8 4179,-4621.8 4179,4 -4,4"/>
+<!-- checkPartyMembersNearDoor -->
+<g id="node1" class="node">
+<title>checkPartyMembersNearDoor</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-4538.95" rx="27" ry="18"/>
+</g>
+<!-- old_pickup_p_proc -->
+<g id="node2" class="node">
+<title>old_pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-4356.47" rx="27" ry="18"/>
+</g>
+<!-- pickup_p_proc -->
+<g id="node3" class="node">
+<title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-4538.95" rx="27" ry="18"/>
+</g>
+<!-- pickup_p_proc&#45;&gt;old_pickup_p_proc -->
+<g id="edge1" class="edge">
+<title>pickup_p_proc&#45;&gt;old_pickup_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M99,-4520.65C99,-4489.38 99,-4423.23 99,-4385.46"/>
+<polygon fill="#555555" stroke="#555555" points="102.5,-4385.72 99,-4375.72 95.5,-4385.72 102.5,-4385.72"/>
+</g>
+<!-- start -->
+<g id="node4" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="171" cy="-4538.95" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node5" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="353" cy="-4538.95" rx="27" ry="18"/>
+</g>
+<!-- doGuardsMessage -->
+<g id="node6" class="node">
+<title>doGuardsMessage</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="417" cy="-4356.47" rx="129.05" ry="30.05"/>
+<text text-anchor="middle" x="417" y="-4360.42" font-family="Times,serif" font-size="14.00">Leave immediately, or I</text>
+<text text-anchor="middle" x="417" y="-4343.17" font-family="Times,serif" font-size="14.00">will call the guards.</text>
+</g>
+<!-- timed_event_p_proc&#45;&gt;doGuardsMessage -->
+<g id="edge2" class="edge">
+<title>timed_event_p_proc&#45;&gt;doGuardsMessage</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M359.02,-4520.97C369.05,-4492.7 389.42,-4435.26 403.14,-4396.56"/>
+<polygon fill="#555555" stroke="#555555" points="406.6,-4398.26 406.65,-4387.66 400.01,-4395.92 406.6,-4398.26"/>
+</g>
+<!-- doGuardsAttack -->
+<g id="node7" class="node">
+<title>doGuardsAttack</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="243" cy="-4356.47" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc&#45;&gt;doGuardsAttack -->
+<g id="edge3" class="edge">
+<title>timed_event_p_proc&#45;&gt;doGuardsAttack</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M342.34,-4522.2C327.63,-4500.27 300.48,-4459.18 279,-4423.11 271.31,-4410.2 263.22,-4395.56 256.67,-4383.38"/>
+<polygon fill="#555555" stroke="#555555" points="259.36,-4382 251.56,-4374.83 253.19,-4385.3 259.36,-4382"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node8" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3125" cy="-4538.95" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node9" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3053" cy="-4538.95" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc&#45;&gt;doGuardsMessage -->
+<g id="edge14" class="edge">
+<title>talk_p_proc&#45;&gt;doGuardsMessage</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3025.57,-4537.72C2769.96,-4535.4 808.51,-4515.31 560,-4442.11 524.57,-4431.67 488.81,-4410.51 461.92,-4391.95"/>
+<polygon fill="#555555" stroke="#555555" points="464.34,-4388.67 454.15,-4385.78 460.31,-4394.4 464.34,-4388.67"/>
+</g>
+<!-- Node026 -->
+<g id="node10" class="node">
+<title>Node026</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1065" cy="-4241.77" rx="122.15" ry="30.05"/>
+<text text-anchor="middle" x="1065" y="-4245.72" font-family="Times,serif" font-size="14.00">Guards! The enemy is</text>
+<text text-anchor="middle" x="1065" y="-4228.47" font-family="Times,serif" font-size="14.00">among us! Guards!</text>
+</g>
+<!-- talk_p_proc&#45;&gt;Node026 -->
+<g id="edge4" class="edge">
+<title>talk_p_proc&#45;&gt;Node026</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3026.21,-4535.95C2915.79,-4527.54 2485.24,-4493.09 2134,-4442.11 1776.21,-4390.18 1355.51,-4304.39 1166.24,-4264.46"/>
+<polygon fill="#555555" stroke="#555555" points="1167.26,-4260.89 1156.75,-4262.25 1165.81,-4267.74 1167.26,-4260.89"/>
+</g>
+<!-- Node036 -->
+<g id="node11" class="node">
+<title>Node036</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3352" cy="-4356.47" rx="139.12" ry="30.05"/>
+<text text-anchor="middle" x="3352" y="-4360.42" font-family="Times,serif" font-size="14.00">You are back to insult me</text>
+<text text-anchor="middle" x="3352" y="-4343.17" font-family="Times,serif" font-size="14.00">again. &#160;I think not.</text>
+</g>
+<!-- talk_p_proc&#45;&gt;Node036 -->
+<g id="edge5" class="edge">
+<title>talk_p_proc&#45;&gt;Node036</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3056.69,-4520.64C3061.32,-4503.02 3070.94,-4476.1 3089,-4460.11 3129.21,-4424.53 3153.83,-4442.24 3204,-4423.11 3231.01,-4412.81 3260.21,-4400.19 3285.47,-4388.78"/>
+<polygon fill="#555555" stroke="#555555" points="3286.65,-4391.63 3294.31,-4384.3 3283.76,-4385.26 3286.65,-4391.63"/>
+</g>
+<!-- Node037 -->
+<g id="node12" class="node">
+<title>Node037</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="343" cy="-3404.86" rx="125.87" ry="91.04"/>
+<text text-anchor="middle" x="343" y="-3451.93" font-family="Times,serif" font-size="14.00">As I have explained, I</text>
+<text text-anchor="middle" x="343" y="-3434.68" font-family="Times,serif" font-size="14.00">will need to know your</text>
+<text text-anchor="middle" x="343" y="-3417.43" font-family="Times,serif" font-size="14.00">name.</text>
+<text text-anchor="middle" x="343" y="-3400.18" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="343" y="-3382.93" font-family="Times,serif" font-size="14.00">All right, it&#39;s </text>
+<text text-anchor="middle" x="343" y="-3365.68" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="343" y="-3348.43" font-family="Times,serif" font-size="14.00">.</text>
+</g>
+<!-- talk_p_proc&#45;&gt;Node037 -->
+<g id="edge6" class="edge">
+<title>talk_p_proc&#45;&gt;Node037</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3026,-4537.46C2757.35,-4532.37 574,-4487.06 574,-4357.47 574,-4357.47 574,-4357.47 574,-3877.2 574,-3730.43 482.57,-3581.78 414.75,-3491.7"/>
+<polygon fill="#555555" stroke="#555555" points="417.11,-3490.01 408.27,-3484.17 411.53,-3494.25 417.11,-3490.01"/>
+</g>
+<!-- Node030 -->
+<g id="node13" class="node">
+<title>Node030</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3519" cy="-3878.2" rx="138.59" ry="188.62"/>
+<text text-anchor="middle" x="3519" y="-3994.28" font-family="Times,serif" font-size="14.00">With the death of AHS&#45;9,</text>
+<text text-anchor="middle" x="3519" y="-3977.03" font-family="Times,serif" font-size="14.00">the Great and Terrible,</text>
+<text text-anchor="middle" x="3519" y="-3959.78" font-family="Times,serif" font-size="14.00">the Hubologists pose no</text>
+<text text-anchor="middle" x="3519" y="-3942.53" font-family="Times,serif" font-size="14.00">real threat to us and our</text>
+<text text-anchor="middle" x="3519" y="-3925.28" font-family="Times,serif" font-size="14.00">researches. Well done.</text>
+<text text-anchor="middle" x="3519" y="-3908.03" font-family="Times,serif" font-size="14.00">You have our gratitude.</text>
+<text text-anchor="middle" x="3519" y="-3890.78" font-family="Times,serif" font-size="14.00">Would you like to speak</text>
+<text text-anchor="middle" x="3519" y="-3873.53" font-family="Times,serif" font-size="14.00">to the Emperor?</text>
+<text text-anchor="middle" x="3519" y="-3856.28" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="3519" y="-3839.03" font-family="Times,serif" font-size="14.00">You see a stocky Shi man</text>
+<text text-anchor="middle" x="3519" y="-3821.78" font-family="Times,serif" font-size="14.00">who looks like he&#39;s full</text>
+<text text-anchor="middle" x="3519" y="-3804.53" font-family="Times,serif" font-size="14.00">of knowledge.</text>
+<text text-anchor="middle" x="3519" y="-3787.28" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="3519" y="-3770.03" font-family="Times,serif" font-size="14.00">You see Ken Lee, advisor</text>
+<text text-anchor="middle" x="3519" y="-3752.78" font-family="Times,serif" font-size="14.00">to the Emperor.</text>
+</g>
+<!-- talk_p_proc&#45;&gt;Node030 -->
+<g id="edge7" class="edge">
+<title>talk_p_proc&#45;&gt;Node030</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3055.8,-4520.8C3059.77,-4502.51 3068.92,-4474.26 3089,-4460.11 3163.97,-4407.3 3436.96,-4489.71 3500,-4423.11 3587.88,-4330.27 3588.18,-4183.65 3568.92,-4066.02"/>
+<polygon fill="#555555" stroke="#555555" points="3572.25,-4065.73 3567.13,-4056.45 3565.35,-4066.9 3572.25,-4065.73"/>
+</g>
+<!-- Node038 -->
+<g id="node14" class="node">
+<title>Node038</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3962" cy="-4356.47" rx="135.94" ry="42.25"/>
+<text text-anchor="middle" x="3962" y="-4369.04" font-family="Times,serif" font-size="14.00">Remember, the Emperor</text>
+<text text-anchor="middle" x="3962" y="-4351.79" font-family="Times,serif" font-size="14.00">awaits the death of</text>
+<text text-anchor="middle" x="3962" y="-4334.54" font-family="Times,serif" font-size="14.00">AHS&#45;9.</text>
+</g>
+<!-- talk_p_proc&#45;&gt;Node038 -->
+<g id="edge8" class="edge">
+<title>talk_p_proc&#45;&gt;Node038</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3055.63,-4520.55C3059.45,-4502.04 3068.47,-4473.6 3089,-4460.11 3122.58,-4438.05 3773.27,-4452.8 3812,-4442.11 3842.81,-4433.61 3874.03,-4417.45 3899.96,-4401.51"/>
+<polygon fill="#555555" stroke="#555555" points="3901.66,-4403.95 3908.26,-4395.67 3897.93,-4398.03 3901.66,-4403.95"/>
+</g>
+<!-- Node033 -->
+<g id="node15" class="node">
+<title>Node033</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3053" cy="-4356.47" rx="141.77" ry="66.64"/>
+<text text-anchor="middle" x="3053" y="-4386.29" font-family="Times,serif" font-size="14.00">Our spies report that you</text>
+<text text-anchor="middle" x="3053" y="-4369.04" font-family="Times,serif" font-size="14.00">have given the vertibird</text>
+<text text-anchor="middle" x="3053" y="-4351.79" font-family="Times,serif" font-size="14.00">plans to the Hubologists.</text>
+<text text-anchor="middle" x="3053" y="-4334.54" font-family="Times,serif" font-size="14.00">Steal them for us and you</text>
+<text text-anchor="middle" x="3053" y="-4317.29" font-family="Times,serif" font-size="14.00">shall be rewarded.</text>
+</g>
+<!-- talk_p_proc&#45;&gt;Node033 -->
+<g id="edge9" class="edge">
+<title>talk_p_proc&#45;&gt;Node033</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3053,-4520.65C3053,-4500.59 3053,-4466.18 3053,-4434.11"/>
+<polygon fill="#555555" stroke="#555555" points="3056.5,-4434.35 3053,-4424.35 3049.5,-4434.35 3056.5,-4434.35"/>
+</g>
+<!-- Node034 -->
+<g id="node16" class="node">
+<title>Node034</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3018" cy="-4139.27" rx="126.4" ry="54.45"/>
+<text text-anchor="middle" x="3018" y="-4160.47" font-family="Times,serif" font-size="14.00">Thank you for the</text>
+<text text-anchor="middle" x="3018" y="-4143.22" font-family="Times,serif" font-size="14.00">vertibird plans,</text>
+<text text-anchor="middle" x="3018" y="-4125.97" font-family="Times,serif" font-size="14.00">traveler. What can I do</text>
+<text text-anchor="middle" x="3018" y="-4108.72" font-family="Times,serif" font-size="14.00">for you?</text>
+</g>
+<!-- talk_p_proc&#45;&gt;Node034 -->
+<g id="edge10" class="edge">
+<title>talk_p_proc&#45;&gt;Node034</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3030.49,-4528.59C2995.65,-4512.72 2929.81,-4476.95 2902,-4423.11 2858.87,-4339.61 2850.41,-4293.33 2897,-4211.72 2902.83,-4201.5 2910.76,-4192.59 2919.8,-4184.87"/>
+<polygon fill="#555555" stroke="#555555" points="2921.69,-4187.05 2927.37,-4178.11 2917.35,-4181.55 2921.69,-4187.05"/>
+</g>
+<!-- Node035 -->
+<g id="node17" class="node">
+<title>Node035</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3798" cy="-216.88" rx="143.37" ry="115.44"/>
+<text text-anchor="middle" x="3798" y="-281.21" font-family="Times,serif" font-size="14.00">Once you have obtained</text>
+<text text-anchor="middle" x="3798" y="-263.96" font-family="Times,serif" font-size="14.00">the vertibird plans, give</text>
+<text text-anchor="middle" x="3798" y="-246.71" font-family="Times,serif" font-size="14.00">them to Dr. Wong Yi Tze.</text>
+<text text-anchor="middle" x="3798" y="-229.46" font-family="Times,serif" font-size="14.00">He will put them to good</text>
+<text text-anchor="middle" x="3798" y="-212.21" font-family="Times,serif" font-size="14.00">use.</text>
+<text text-anchor="middle" x="3798" y="-194.96" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="3798" y="-177.71" font-family="Times,serif" font-size="14.00">Remember, you must take</text>
+<text text-anchor="middle" x="3798" y="-160.46" font-family="Times,serif" font-size="14.00">the plans to Dr. Wong Yi</text>
+<text text-anchor="middle" x="3798" y="-143.21" font-family="Times,serif" font-size="14.00">Tze.</text>
+</g>
+<!-- talk_p_proc&#45;&gt;Node035 -->
+<g id="edge11" class="edge">
+<title>talk_p_proc&#45;&gt;Node035</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3055.63,-4520.55C3059.44,-4502.03 3068.46,-4473.6 3089,-4460.11 3123.24,-4437.63 3785.09,-4443.99 3826,-4442.11 3888.52,-4439.23 4058.27,-4462.38 4107,-4423.11 4130.65,-4404.05 4126,-4387.84 4126,-4357.47 4126,-4357.47 4126,-4357.47 4126,-2115.34 4126,-1435.98 3919.32,-639.53 3834.08,-339.98"/>
+<polygon fill="#555555" stroke="#555555" points="3837.21,-339.19 3831.1,-330.53 3830.48,-341.11 3837.21,-339.19"/>
+</g>
+<!-- Node018 -->
+<g id="node18" class="node">
+<title>Node018</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3681" cy="-1818.67" rx="108.89" ry="30.05"/>
+<text text-anchor="middle" x="3681" y="-1822.62" font-family="Times,serif" font-size="14.00">Will you reconsider</text>
+<text text-anchor="middle" x="3681" y="-1805.37" font-family="Times,serif" font-size="14.00">taking our test?</text>
+</g>
+<!-- talk_p_proc&#45;&gt;Node018 -->
+<g id="edge12" class="edge">
+<title>talk_p_proc&#45;&gt;Node018</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3055.76,-4520.75C3059.69,-4502.4 3068.81,-4474.11 3089,-4460.11 3110.88,-4444.93 3301.46,-4444.26 3328,-4442.11 3425.38,-4434.22 3450.73,-4439.75 3547,-4423.11 3660.62,-4403.47 3798,-4472.77 3798,-4357.47 3798,-4357.47 3798,-4357.47 3798,-2352.01 3798,-2206.67 3820.46,-2165.99 3784,-2025.3 3767.82,-1962.86 3731.04,-1897.34 3706.11,-1857.49"/>
+<polygon fill="#555555" stroke="#555555" points="3708.67,-1855.99 3700.36,-1849.42 3702.75,-1859.74 3708.67,-1855.99"/>
+</g>
+<!-- Node001 -->
+<g id="node19" class="node">
+<title>Node001</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1887" cy="-3592.74" rx="124.8" ry="78.84"/>
+<text text-anchor="middle" x="1887" y="-3631.19" font-family="Times,serif" font-size="14.00">What would you like,</text>
+<text text-anchor="middle" x="1887" y="-3613.94" font-family="Times,serif" font-size="14.00">friend?</text>
+<text text-anchor="middle" x="1887" y="-3596.69" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="1887" y="-3579.44" font-family="Times,serif" font-size="14.00">What can I do for you?</text>
+<text text-anchor="middle" x="1887" y="-3562.19" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="1887" y="-3544.94" font-family="Times,serif" font-size="14.00">What do you want?</text>
+</g>
+<!-- talk_p_proc&#45;&gt;Node001 -->
+<g id="edge13" class="edge">
+<title>talk_p_proc&#45;&gt;Node001</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3028.49,-4530.9C2915.69,-4497.39 2440.24,-4344.13 2162,-4066.82 2047.71,-3952.92 1964.03,-3781.92 1920.64,-3679.72"/>
+<polygon fill="#555555" stroke="#555555" points="1923.55,-3678.6 1916.44,-3670.74 1917.1,-3681.32 1923.55,-3678.6"/>
+</g>
+<!-- Node998 -->
+<g id="node28" class="node">
+<title>Node998</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="911" cy="-2581.19" rx="27" ry="18"/>
+</g>
+<!-- Node026&#45;&gt;Node998 -->
+<g id="edge67" class="edge">
+<title>Node026&#45;&gt;Node998</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M987.13,-4218.17C857.61,-4175.26 612,-4068.88 612,-3879.2 612,-3879.2 612,-3879.2 612,-2864.31 612,-2719.17 800.7,-2626.59 878.28,-2594.66"/>
+<polygon fill="#555555" stroke="#555555" points="879.07,-2597.71 887.03,-2590.72 876.45,-2591.22 879.07,-2597.71"/>
+</g>
+<!-- Node010 -->
+<g id="node41" class="node">
+<title>Node010</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="214" cy="-641.44" rx="140.18" ry="66.64"/>
+<text text-anchor="middle" x="214" y="-671.26" font-family="Times,serif" font-size="14.00">Insults will get you</text>
+<text text-anchor="middle" x="214" y="-654.01" font-family="Times,serif" font-size="14.00">nowhere, traveler, except</text>
+<text text-anchor="middle" x="214" y="-636.76" font-family="Times,serif" font-size="14.00">removed from the Steel</text>
+<text text-anchor="middle" x="214" y="-619.51" font-family="Times,serif" font-size="14.00">Palace. Kindly control</text>
+<text text-anchor="middle" x="214" y="-602.26" font-family="Times,serif" font-size="14.00">your tongue.</text>
+</g>
+<!-- Node037&#45;&gt;Node010 -->
+<g id="edge84" class="edge">
+<title>Node037&#45;&gt;Node010</title>
+<path fill="none" stroke="#3e9900" d="M287.17,-3322.94C252.31,-3264.56 214,-3182.38 214,-3103.13 214,-3103.13 214,-3103.13 214,-1333.34 214,-1110.14 214,-846.39 214,-718.96"/>
+<polygon fill="#3e9900" stroke="#3e9900" points="217.5,-719.17 214,-709.17 210.5,-719.17 217.5,-719.17"/>
+<text text-anchor="middle" x="283.75" y="-2511.22" font-family="Times,serif" font-size="14.00" fill="#3e9900">Forget it, you idiot!</text>
+</g>
+<!-- Node031 -->
+<g id="node57" class="node">
+<title>Node031</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2873" cy="-1818.67" rx="189.5" ry="188.62"/>
+<text text-anchor="middle" x="2873" y="-1934.75" font-family="Times,serif" font-size="14.00">You have proven yourself</text>
+<text text-anchor="middle" x="2873" y="-1917.5" font-family="Times,serif" font-size="14.00">to be a friend to the</text>
+<text text-anchor="middle" x="2873" y="-1900.25" font-family="Times,serif" font-size="14.00">Shi. I believe I can</text>
+<text text-anchor="middle" x="2873" y="-1883" font-family="Times,serif" font-size="14.00">trust you with our</text>
+<text text-anchor="middle" x="2873" y="-1865.75" font-family="Times,serif" font-size="14.00">secrets. In the back</text>
+<text text-anchor="middle" x="2873" y="-1848.5" font-family="Times,serif" font-size="14.00">room, you will find the</text>
+<text text-anchor="middle" x="2873" y="-1831.25" font-family="Times,serif" font-size="14.00">forcefield to the large</text>
+<text text-anchor="middle" x="2873" y="-1814" font-family="Times,serif" font-size="14.00">computer has been turned</text>
+<text text-anchor="middle" x="2873" y="-1796.75" font-family="Times,serif" font-size="14.00">off. &#160;Enter the password</text>
+<text text-anchor="middle" x="2873" y="-1779.5" font-family="Times,serif" font-size="14.00">&quot;CSPDMSHR&#45;Shih&#45;huang&#45;ti&#45;X9372&quot;</text>
+<text text-anchor="middle" x="2873" y="-1762.25" font-family="Times,serif" font-size="14.00">and you will find</text>
+<text text-anchor="middle" x="2873" y="-1745" font-family="Times,serif" font-size="14.00">yourself connected to the</text>
+<text text-anchor="middle" x="2873" y="-1727.75" font-family="Times,serif" font-size="14.00">Emperor Computer. I hope</text>
+<text text-anchor="middle" x="2873" y="-1710.5" font-family="Times,serif" font-size="14.00">this will prove useful to</text>
+<text text-anchor="middle" x="2873" y="-1693.25" font-family="Times,serif" font-size="14.00">you.</text>
+</g>
+<!-- Node030&#45;&gt;Node031 -->
+<g id="edge73" class="edge">
+<title>Node030&#45;&gt;Node031</title>
+<path fill="none" stroke="#00997b" d="M3520.7,-3689.3C3515.19,-3439.84 3477.79,-2992.66 3296,-2664.49 3237.33,-2558.59 3160.04,-2582.76 3095,-2480.64 2981.05,-2301.73 3021.85,-2225.59 2952,-2025.3 2949.67,-2018.62 2947.27,-2011.84 2944.82,-2005.01"/>
+<polygon fill="#00997b" stroke="#00997b" points="2947.87,-2004.17 2941.18,-1995.95 2941.29,-2006.55 2947.87,-2004.17"/>
+<text text-anchor="middle" x="3457.25" y="-2860.64" font-family="Times,serif" font-size="14.00" fill="#00997b">Yes.</text>
+</g>
+<!-- Node001a -->
+<g id="node67" class="node">
+<title>Node001a</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2418" cy="-4139.27" rx="27" ry="18"/>
+</g>
+<!-- Node033&#45;&gt;Node001a -->
+<g id="edge77" class="edge">
+<title>Node033&#45;&gt;Node001a</title>
+<path fill="none" stroke="#990037" d="M2938.74,-4316.74C2791.03,-4266.69 2542.06,-4182.31 2451.89,-4151.75"/>
+<polygon fill="#990037" stroke="#990037" points="2453.29,-4148.2 2442.7,-4148.3 2451.05,-4154.83 2453.29,-4148.2"/>
+<text text-anchor="middle" x="2873.38" y="-4245.72" font-family="Times,serif" font-size="14.00" fill="#990037">You got it. I have some</text>
+<text text-anchor="middle" x="2873.38" y="-4228.47" font-family="Times,serif" font-size="14.00" fill="#990037">questions.</text>
+</g>
+<!-- Node999b -->
+<g id="node68" class="node">
+<title>Node999b</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3331" cy="-3102.13" rx="27" ry="18"/>
+</g>
+<!-- Node033&#45;&gt;Node999b -->
+<g id="edge78" class="edge">
+<title>Node033&#45;&gt;Node999b</title>
+<path fill="none" stroke="#006499" d="M3142.28,-4304.55C3219.9,-4257.13 3320,-4186.93 3320,-4140.27 3320,-4140.27 3320,-4140.27 3320,-3403.86 3320,-3303.56 3326.19,-3184.57 3329.28,-3131.33"/>
+<polygon fill="#006499" stroke="#006499" points="3332.83,-3131.6 3329.93,-3121.41 3325.84,-3131.19 3332.83,-3131.6"/>
+<text text-anchor="middle" x="3347.75" y="-3873.53" font-family="Times,serif" font-size="14.00" fill="#006499">No way.</text>
+</g>
+<!-- Node034&#45;&gt;Node001 -->
+<g id="edge79" class="edge">
+<title>Node034&#45;&gt;Node001</title>
+<path fill="none" stroke="#919900" d="M2957.04,-4091.1C2836.53,-4000.1 2556.47,-3799.62 2291,-3689.58 2203.53,-3653.32 2099.46,-3629.04 2018.85,-3613.99"/>
+<polygon fill="#919900" stroke="#919900" points="2019.61,-3610.39 2009.14,-3612.02 2018.34,-3617.27 2019.61,-3610.39"/>
+<text text-anchor="middle" x="2975.75" y="-3873.53" font-family="Times,serif" font-size="14.00" fill="#919900">I have questions.</text>
+</g>
+<!-- Node999 -->
+<g id="node29" class="node">
+<title>Node999</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2247" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- Node034&#45;&gt;Node999 -->
+<g id="edge81" class="edge">
+<title>Node034&#45;&gt;Node999</title>
+<path fill="none" stroke="#009948" d="M3067.56,-4088.95C3073.5,-4081.83 3079.16,-4074.35 3084,-4066.82 3207.21,-3875.06 3282,-3821.67 3282,-3593.74 3282,-3593.74 3282,-3593.74 3282,-2514.89 3282,-2386.22 3276.67,-2353.93 3282.25,-2225.38 3309.15,-1606.11 3342.15,-1452.82 3402,-835.86 3418.01,-670.86 3368.18,-613.45 3442,-465.01 3476.79,-395.06 3539.01,-416.24 3570,-344.52 3592.5,-292.44 3607.94,-131.42 3570,-89.25 3525.86,-40.19 2497.35,-22.63 2285.1,-19.52"/>
+<polygon fill="#009948" stroke="#009948" points="2285.28,-16.01 2275.23,-19.37 2285.17,-23.01 2285.28,-16.01"/>
+<text text-anchor="middle" x="3334.88" y="-2348.33" font-family="Times,serif" font-size="14.00" fill="#009948">Um... Nothing.</text>
+</g>
+<!-- Node020 -->
+<g id="node56" class="node">
+<title>Node020</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2609" cy="-2353.01" rx="148.67" ry="127.63"/>
+<text text-anchor="middle" x="2609" y="-2425.96" font-family="Times,serif" font-size="14.00">You must complete a</text>
+<text text-anchor="middle" x="2609" y="-2408.71" font-family="Times,serif" font-size="14.00">second test: the</text>
+<text text-anchor="middle" x="2609" y="-2391.46" font-family="Times,serif" font-size="14.00">Hubologists are our</text>
+<text text-anchor="middle" x="2609" y="-2374.21" font-family="Times,serif" font-size="14.00">enemies. Their leader,</text>
+<text text-anchor="middle" x="2609" y="-2356.96" font-family="Times,serif" font-size="14.00">AHS&#45;9, has been abducting</text>
+<text text-anchor="middle" x="2609" y="-2339.71" font-family="Times,serif" font-size="14.00">and brainwashing our</text>
+<text text-anchor="middle" x="2609" y="-2322.46" font-family="Times,serif" font-size="14.00">children. Kill him for</text>
+<text text-anchor="middle" x="2609" y="-2305.21" font-family="Times,serif" font-size="14.00">the good of the Shi and I</text>
+<text text-anchor="middle" x="2609" y="-2287.96" font-family="Times,serif" font-size="14.00">shall tell you how to</text>
+<text text-anchor="middle" x="2609" y="-2270.71" font-family="Times,serif" font-size="14.00">speak to the Emperor.</text>
+</g>
+<!-- Node034&#45;&gt;Node020 -->
+<g id="edge80" class="edge">
+<title>Node034&#45;&gt;Node020</title>
+<path fill="none" stroke="#750099" d="M3036.6,-4085.18C3038.3,-4079.04 3039.82,-4072.83 3041,-4066.82 3105.69,-3737.88 3120.64,-3647.16 3085,-3313.82 3045.83,-2947.44 2953.91,-2864.45 2760,-2551.14 2742.39,-2522.69 2721.59,-2493.38 2701.14,-2466.34"/>
+<polygon fill="#750099" stroke="#750099" points="2703.36,-2464.47 2694.51,-2458.64 2697.79,-2468.72 2703.36,-2464.47"/>
+<text text-anchor="middle" x="3133.62" y="-3106.08" font-family="Times,serif" font-size="14.00" fill="#750099">Can I see the Emperor</text>
+<text text-anchor="middle" x="3133.62" y="-3088.83" font-family="Times,serif" font-size="14.00" fill="#750099">now?</text>
+</g>
+<!-- Node035&#45;&gt;Node001 -->
+<g id="edge82" class="edge">
+<title>Node035&#45;&gt;Node001</title>
+<path fill="none" stroke="#991b00" d="M3753.83,-326.9C3659.45,-562.24 3434.32,-1136.53 3282,-1630.05 3201.5,-1890.88 3176.02,-1956.15 3131,-2225.38 3111.32,-2343.09 3088.25,-3185.79 3042,-3295.82 2996.44,-3404.19 2973.4,-3441.86 2869,-3495.9 2725.05,-3570.39 2257.28,-3587.12 2023.13,-3590.78"/>
+<polygon fill="#991b00" stroke="#991b00" points="2023.1,-3587.3 2013.15,-3590.95 2023.21,-3594.3 2023.1,-3587.3"/>
+<text text-anchor="middle" x="3195.5" y="-2356.96" font-family="Times,serif" font-size="14.00" fill="#991b00">Okay. I have other</text>
+<text text-anchor="middle" x="3195.5" y="-2339.71" font-family="Times,serif" font-size="14.00" fill="#991b00">questions.</text>
+</g>
+<!-- Node035&#45;&gt;Node999 -->
+<g id="edge83" class="edge">
+<title>Node035&#45;&gt;Node999</title>
+<path fill="none" stroke="#001199" d="M3725.48,-116.94C3701.62,-91.81 3672.92,-67.98 3641,-54 3577.25,-26.07 2502.74,-20.07 2285.22,-19.15"/>
+<polygon fill="#001199" stroke="#001199" points="2285.39,-15.64 2275.37,-19.1 2285.36,-22.64 2285.39,-15.64"/>
+<text text-anchor="middle" x="3704.12" y="-57.95" font-family="Times,serif" font-size="14.00" fill="#001199">Okay. Bye.</text>
+</g>
+<!-- Node017 -->
+<g id="node47" class="node">
+<title>Node017</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3686" cy="-1334.34" rx="143.9" ry="225.21"/>
+<text text-anchor="middle" x="3686" y="-1476.29" font-family="Times,serif" font-size="14.00">Our spies report that you</text>
+<text text-anchor="middle" x="3686" y="-1459.04" font-family="Times,serif" font-size="14.00">have given the vertibird</text>
+<text text-anchor="middle" x="3686" y="-1441.79" font-family="Times,serif" font-size="14.00">plans to the Hubologists.</text>
+<text text-anchor="middle" x="3686" y="-1424.54" font-family="Times,serif" font-size="14.00">Steal them for us and you</text>
+<text text-anchor="middle" x="3686" y="-1407.29" font-family="Times,serif" font-size="14.00">shall be rewarded.</text>
+<text text-anchor="middle" x="3686" y="-1390.04" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="3686" y="-1372.79" font-family="Times,serif" font-size="14.00">Excellent. This is what I</text>
+<text text-anchor="middle" x="3686" y="-1355.54" font-family="Times,serif" font-size="14.00">require of you: there is</text>
+<text text-anchor="middle" x="3686" y="-1338.29" font-family="Times,serif" font-size="14.00">a small military base</text>
+<text text-anchor="middle" x="3686" y="-1321.04" font-family="Times,serif" font-size="14.00">north of here, called</text>
+<text text-anchor="middle" x="3686" y="-1303.79" font-family="Times,serif" font-size="14.00">Navarro. There are</text>
+<text text-anchor="middle" x="3686" y="-1286.54" font-family="Times,serif" font-size="14.00">numerous vertibirds</text>
+<text text-anchor="middle" x="3686" y="-1269.29" font-family="Times,serif" font-size="14.00">there. We need plans and</text>
+<text text-anchor="middle" x="3686" y="-1252.04" font-family="Times,serif" font-size="14.00">blueprints to manufacture</text>
+<text text-anchor="middle" x="3686" y="-1234.79" font-family="Times,serif" font-size="14.00">some of our own. Fetch</text>
+<text text-anchor="middle" x="3686" y="-1217.54" font-family="Times,serif" font-size="14.00">those and you will be on</text>
+<text text-anchor="middle" x="3686" y="-1200.29" font-family="Times,serif" font-size="14.00">your way to seeing the</text>
+<text text-anchor="middle" x="3686" y="-1183.04" font-family="Times,serif" font-size="14.00">Emperor.</text>
+</g>
+<!-- Node018&#45;&gt;Node017 -->
+<g id="edge54" class="edge">
+<title>Node018&#45;&gt;Node017</title>
+<path fill="none" stroke="#990024" d="M3652.1,-1789.31C3611.49,-1745.91 3544.54,-1659.44 3564,-1577.55 3569.17,-1555.8 3576.62,-1533.79 3585.32,-1512.36"/>
+<polygon fill="#990024" stroke="#990024" points="3588.93,-1513.8 3589.55,-1503.22 3582.47,-1511.11 3588.93,-1513.8"/>
+<text text-anchor="middle" x="3631.5" y="-1598.75" font-family="Times,serif" font-size="14.00" fill="#990024">Oh, all right. I&#39;ll do</text>
+<text text-anchor="middle" x="3631.5" y="-1581.5" font-family="Times,serif" font-size="14.00" fill="#990024">it.</text>
+</g>
+<!-- Node021a -->
+<g id="node55" class="node">
+<title>Node021a</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3178" cy="-1334.34" rx="27" ry="18"/>
+</g>
+<!-- Node018&#45;&gt;Node021a -->
+<g id="edge53" class="edge">
+<title>Node018&#45;&gt;Node021a</title>
+<path fill="none" stroke="#009909" d="M3668.96,-1788.6C3650.77,-1747.92 3612.6,-1674.06 3559,-1630.05 3542.35,-1616.39 3532.53,-1623.03 3514,-1612.05 3383.43,-1534.72 3250.95,-1408.43 3199.9,-1357.59"/>
+<polygon fill="#009909" stroke="#009909" points="3202.69,-1355.42 3193.15,-1350.82 3197.74,-1360.37 3202.69,-1355.42"/>
+<text text-anchor="middle" x="3535" y="-1590.13" font-family="Times,serif" font-size="14.00" fill="#009909">Nope.</text>
+</g>
+<!-- Node001&#45;&gt;Node999 -->
+<g id="edge23" class="edge">
+<title>Node001&#45;&gt;Node999</title>
+<path fill="none" stroke="#7c0099" d="M2011.47,-3586.32C2094.59,-3577.1 2202.47,-3553.76 2280,-3495.9 2394.58,-3410.38 2442,-3360.95 2442,-3217.97 2442,-3217.97 2442,-3217.97 2442,-2580.19 2442,-2421.06 2438.3,-2378.22 2394,-2225.38 2391.55,-2216.92 2387.73,-2215.95 2385.75,-2207.38 2322.85,-1934.53 2382.45,-1857.32 2371,-1577.55 2350.75,-1082.66 2337.54,-959.31 2306,-465.01 2295.34,-297.95 2317.12,-252.49 2280,-89.25 2276.46,-73.7 2269.14,-57.51 2262.29,-44.6"/>
+<polygon fill="#7c0099" stroke="#7c0099" points="2264.89,-43.07 2256.98,-36.02 2258.77,-46.46 2264.89,-43.07"/>
+<text text-anchor="middle" x="2464.12" y="-2111.66" font-family="Times,serif" font-size="14.00" fill="#7c0099">Nothing. Thanks. Bye.</text>
+</g>
+<!-- Node234 -->
+<g id="node30" class="node">
+<title>Node234</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3118" cy="-641.44" rx="27" ry="18"/>
+</g>
+<!-- Node001&#45;&gt;Node234 -->
+<g id="edge16" class="edge">
+<title>Node001&#45;&gt;Node234</title>
+<path fill="none" stroke="#009983" d="M2011.41,-3585.57C2206.78,-3574.46 2575.69,-3547.3 2696,-3495.9 2874.53,-3419.62 3033,-3412.12 3033,-3217.97 3033,-3217.97 3033,-3217.97 3033,-2514.89 3033,-2288.63 3059.52,-2233.21 3072,-2007.3 3101.67,-1470.23 3114.88,-813.14 3117.5,-670.57"/>
+<polygon fill="#009983" stroke="#009983" points="3121.01,-670.84 3117.7,-660.78 3114.02,-670.71 3121.01,-670.84"/>
+<text text-anchor="middle" x="3049.5" y="-2511.22" font-family="Times,serif" font-size="14.00" fill="#009983">You?</text>
+</g>
+<!-- Node005 -->
+<g id="node31" class="node">
+<title>Node005</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="574" cy="-1334.34" rx="150.79" ry="127.63"/>
+<text text-anchor="middle" x="574" y="-1407.29" font-family="Times,serif" font-size="14.00">I am Ken Lee. I am the</text>
+<text text-anchor="middle" x="574" y="-1390.04" font-family="Times,serif" font-size="14.00">advisor to the Emperor of</text>
+<text text-anchor="middle" x="574" y="-1372.79" font-family="Times,serif" font-size="14.00">the Shi. I bring forth</text>
+<text text-anchor="middle" x="574" y="-1355.54" font-family="Times,serif" font-size="14.00">the wisdom of the</text>
+<text text-anchor="middle" x="574" y="-1338.29" font-family="Times,serif" font-size="14.00">Emperor. And who are you?</text>
+<text text-anchor="middle" x="574" y="-1321.04" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="574" y="-1303.79" font-family="Times,serif" font-size="14.00">I am</text>
+<text text-anchor="middle" x="574" y="-1286.54" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="574" y="-1269.29" font-family="Times,serif" font-size="14.00">. I&#39;d like to see the</text>
+<text text-anchor="middle" x="574" y="-1252.04" font-family="Times,serif" font-size="14.00">Emperor.</text>
+</g>
+<!-- Node001&#45;&gt;Node005 -->
+<g id="edge17" class="edge">
+<title>Node001&#45;&gt;Node005</title>
+<path fill="none" stroke="#995600" d="M1761.87,-3589.45C1477.56,-3583.11 801.47,-3561.28 723,-3495.9 617.79,-3408.23 574,-3157.75 574,-2638.87 574,-2638.87 574,-2638.87 574,-1817.67 574,-1701.57 574,-1569.73 574,-1473.27"/>
+<polygon fill="#995600" stroke="#995600" points="577.5,-1473.28 574,-1463.28 570.5,-1473.28 577.5,-1473.28"/>
+<text text-anchor="middle" x="622.38" y="-2576.52" font-family="Times,serif" font-size="14.00" fill="#995600">Who are you?</text>
+</g>
+<!-- Node006 -->
+<g id="node32" class="node">
+<title>Node006</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1595" cy="-1818.67" rx="128.52" ry="42.25"/>
+<text text-anchor="middle" x="1595" y="-1831.25" font-family="Times,serif" font-size="14.00">This is the Steel Palace</text>
+<text text-anchor="middle" x="1595" y="-1814" font-family="Times,serif" font-size="14.00">of the Emperor. This is</text>
+<text text-anchor="middle" x="1595" y="-1796.75" font-family="Times,serif" font-size="14.00">the heart of Shi&#45;town.</text>
+</g>
+<!-- Node001&#45;&gt;Node006 -->
+<g id="edge18" class="edge">
+<title>Node001&#45;&gt;Node006</title>
+<path fill="none" stroke="#290099" d="M1795.09,-3539.01C1777.74,-3526.37 1760.75,-3511.85 1747,-3495.9 1657.35,-3391.88 1612,-3355.3 1612,-3217.97 1612,-3217.97 1612,-3217.97 1609,-2636.87 1609,-2348.02 1600.15,-2001.82 1596.52,-1872.12"/>
+<polygon fill="#290099" stroke="#290099" points="1600,-1872.24 1596.22,-1862.34 1593,-1872.44 1600,-1872.24"/>
+<text text-anchor="middle" x="1679.5" y="-2633.19" font-family="Times,serif" font-size="14.00" fill="#290099">What is this place?</text>
+</g>
+<!-- Node019 -->
+<g id="node33" class="node">
+<title>Node019</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="831" cy="-3216.97" rx="152.91" ry="54.45"/>
+<text text-anchor="middle" x="831" y="-3238.17" font-family="Times,serif" font-size="14.00">Lost villagers? I have</text>
+<text text-anchor="middle" x="831" y="-3220.92" font-family="Times,serif" font-size="14.00">heard nothing of this.</text>
+<text text-anchor="middle" x="831" y="-3203.67" font-family="Times,serif" font-size="14.00">Perhaps the Emperor would</text>
+<text text-anchor="middle" x="831" y="-3186.42" font-family="Times,serif" font-size="14.00">know of them.</text>
+</g>
+<!-- Node001&#45;&gt;Node019 -->
+<g id="edge19" class="edge">
+<title>Node001&#45;&gt;Node019</title>
+<path fill="none" stroke="#039900" d="M1762.16,-3587.52C1519.95,-3578.13 1004.89,-3551.76 947.75,-3495.9 918.59,-3467.39 942.74,-3350.53 925,-3313.82 918.33,-3300 908.87,-3286.96 898.51,-3275.2"/>
+<polygon fill="#039900" stroke="#039900" points="901.56,-3273.26 892.21,-3268.27 896.41,-3278 901.56,-3273.26"/>
+<text text-anchor="middle" x="1035.12" y="-3408.81" font-family="Times,serif" font-size="14.00" fill="#039900">I&#39;m looking for some lost</text>
+<text text-anchor="middle" x="1035.12" y="-3391.56" font-family="Times,serif" font-size="14.00" fill="#039900">villagers.</text>
+</g>
+<!-- Node2539 -->
+<g id="node34" class="node">
+<title>Node2539</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2224" cy="-3216.97" rx="27" ry="18"/>
+</g>
+<!-- Node001&#45;&gt;Node2539 -->
+<g id="edge20" class="edge">
+<title>Node001&#45;&gt;Node2539</title>
+<path fill="none" stroke="#990030" d="M1948.42,-3523.62C2025.37,-3438.28 2153.19,-3296.51 2203.11,-3241.14"/>
+<polygon fill="#990030" stroke="#990030" points="2205.34,-3243.79 2209.44,-3234.01 2200.14,-3239.1 2205.34,-3243.79"/>
+<text text-anchor="middle" x="2204.25" y="-3400.18" font-family="Times,serif" font-size="14.00" fill="#990030">I am in need of fuel.</text>
+</g>
+<!-- Node203108 -->
+<g id="node35" class="node">
+<title>Node203108</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2724" cy="-2581.19" rx="27" ry="18"/>
+</g>
+<!-- Node001&#45;&gt;Node203108 -->
+<g id="edge21" class="edge">
+<title>Node001&#45;&gt;Node203108</title>
+<path fill="none" stroke="#005c99" d="M2011.01,-3582.58C2164.66,-3569.47 2416.09,-3541.75 2497,-3495.9 2597.77,-3438.79 2620.64,-3403.22 2664,-3295.82 2681.66,-3252.08 2649.31,-3120.57 2679.25,-3084.13 2698.48,-3060.72 2726.48,-3090.11 2745,-3066.13 2859.03,-2918.53 2748.89,-2833.01 2750,-2646.49 2750.05,-2638.83 2751.91,-2636.67 2750,-2629.24 2748.06,-2621.72 2744.63,-2614.1 2740.88,-2607.26"/>
+<polygon fill="#005c99" stroke="#005c99" points="2743.42,-2605.69 2735.3,-2598.88 2737.41,-2609.27 2743.42,-2605.69"/>
+<text text-anchor="middle" x="2761.88" y="-3106.08" font-family="Times,serif" font-size="14.00" fill="#005c99">I would like to speak to</text>
+<text text-anchor="middle" x="2761.88" y="-3088.83" font-family="Times,serif" font-size="14.00" fill="#005c99">the Emperor.</text>
+</g>
+<!-- Node027 -->
+<g id="node36" class="node">
+<title>Node027</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1146" cy="-3216.97" rx="143.9" ry="78.84"/>
+<text text-anchor="middle" x="1146" y="-3255.42" font-family="Times,serif" font-size="14.00">Have they really? Perhaps</text>
+<text text-anchor="middle" x="1146" y="-3238.17" font-family="Times,serif" font-size="14.00">you would like to turn</text>
+<text text-anchor="middle" x="1146" y="-3220.92" font-family="Times,serif" font-size="14.00">the tables on them? I can</text>
+<text text-anchor="middle" x="1146" y="-3203.67" font-family="Times,serif" font-size="14.00">promise you our aid if</text>
+<text text-anchor="middle" x="1146" y="-3186.42" font-family="Times,serif" font-size="14.00">you will agree to kill</text>
+<text text-anchor="middle" x="1146" y="-3169.17" font-family="Times,serif" font-size="14.00">AHS&#45;9.</text>
+</g>
+<!-- Node001&#45;&gt;Node027 -->
+<g id="edge22" class="edge">
+<title>Node001&#45;&gt;Node027</title>
+<path fill="none" stroke="#899900" d="M1762.63,-3584.45C1562.44,-3571.44 1187.01,-3541.25 1147,-3495.9 1122.98,-3468.66 1126.86,-3377.37 1134.14,-3306.77"/>
+<polygon fill="#899900" stroke="#899900" points="1137.7,-3307.38 1135.28,-3297.07 1130.74,-3306.64 1137.7,-3307.38"/>
+<text text-anchor="middle" x="1228" y="-3417.43" font-family="Times,serif" font-size="14.00" fill="#899900">The Hubologists have</text>
+<text text-anchor="middle" x="1228" y="-3400.18" font-family="Times,serif" font-size="14.00" fill="#899900">assigned me to kill the</text>
+<text text-anchor="middle" x="1228" y="-3382.93" font-family="Times,serif" font-size="14.00" fill="#899900">Emperor.</text>
+</g>
+<!-- destroy_p_proc -->
+<g id="node20" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3197" cy="-4538.95" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node21" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3381" cy="-4538.95" rx="138.59" ry="78.84"/>
+<text text-anchor="middle" x="3381" y="-4577.4" font-family="Times,serif" font-size="14.00">You see a stocky Shi man</text>
+<text text-anchor="middle" x="3381" y="-4560.15" font-family="Times,serif" font-size="14.00">who looks like he&#39;s full</text>
+<text text-anchor="middle" x="3381" y="-4542.9" font-family="Times,serif" font-size="14.00">of knowledge.</text>
+<text text-anchor="middle" x="3381" y="-4525.65" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="3381" y="-4508.4" font-family="Times,serif" font-size="14.00">You see Ken Lee, advisor</text>
+<text text-anchor="middle" x="3381" y="-4491.15" font-family="Times,serif" font-size="14.00">to the Emperor.</text>
+</g>
+<!-- description_p_proc -->
+<g id="node22" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3676" cy="-4538.95" rx="138.59" ry="42.25"/>
+<text text-anchor="middle" x="3676" y="-4551.53" font-family="Times,serif" font-size="14.00">You see a stocky Shi man</text>
+<text text-anchor="middle" x="3676" y="-4534.28" font-family="Times,serif" font-size="14.00">waring glasses and a</text>
+<text text-anchor="middle" x="3676" y="-4517.03" font-family="Times,serif" font-size="14.00">half&#45;smile.</text>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node23" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3860" cy="-4538.95" rx="27" ry="18"/>
+</g>
+<!-- damage_p_proc -->
+<g id="node24" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="243" cy="-4538.95" rx="27" ry="18"/>
+</g>
+<!-- damage_p_proc&#45;&gt;doGuardsAttack -->
+<g id="edge15" class="edge">
+<title>damage_p_proc&#45;&gt;doGuardsAttack</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M243,-4520.65C243,-4489.38 243,-4423.23 243,-4385.46"/>
+<polygon fill="#555555" stroke="#555555" points="246.5,-4385.72 243,-4375.72 239.5,-4385.72 246.5,-4385.72"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node25" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3932" cy="-4538.95" rx="27" ry="18"/>
+</g>
+<!-- map_exit_p_proc -->
+<g id="node26" class="node">
+<title>map_exit_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="4004" cy="-4538.95" rx="27" ry="18"/>
+</g>
+<!-- combat_p_proc -->
+<g id="node27" class="node">
+<title>combat_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="4076" cy="-4538.95" rx="27" ry="18"/>
+</g>
+<!-- Node002 -->
+<g id="node37" class="node">
+<title>Node002</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2809" cy="-216.88" rx="155.56" ry="127.63"/>
+<text text-anchor="middle" x="2809" y="-289.83" font-family="Times,serif" font-size="14.00">I am Ken Lee, advisor to</text>
+<text text-anchor="middle" x="2809" y="-272.58" font-family="Times,serif" font-size="14.00">the Emperor. &#160;And you, my</text>
+<text text-anchor="middle" x="2809" y="-255.33" font-family="Times,serif" font-size="14.00">friend, appear to be</text>
+<text text-anchor="middle" x="2809" y="-238.08" font-family="Times,serif" font-size="14.00">simpleminded, so remember</text>
+<text text-anchor="middle" x="2809" y="-220.83" font-family="Times,serif" font-size="14.00">this: if you seek the</text>
+<text text-anchor="middle" x="2809" y="-203.58" font-family="Times,serif" font-size="14.00">Enclave, then you must</text>
+<text text-anchor="middle" x="2809" y="-186.33" font-family="Times,serif" font-size="14.00">take the Poseidon tanker</text>
+<text text-anchor="middle" x="2809" y="-169.08" font-family="Times,serif" font-size="14.00">to it. You&#39;ll need fuel</text>
+<text text-anchor="middle" x="2809" y="-151.83" font-family="Times,serif" font-size="14.00">for the tanker. You have</text>
+<text text-anchor="middle" x="2809" y="-134.58" font-family="Times,serif" font-size="14.00">my blessing.</text>
+</g>
+<!-- Node234&#45;&gt;Node002 -->
+<g id="edge91" class="edge">
+<title>Node234&#45;&gt;Node002</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3117.15,-623.02C3114.85,-590.02 3106.45,-517.04 3076,-465.01 3055.54,-430.06 2988.58,-368.11 2926.84,-314.98"/>
+<polygon fill="#555555" stroke="#555555" points="2929.43,-311.73 2919.56,-307.88 2924.87,-317.05 2929.43,-311.73"/>
+</g>
+<!-- Node003 -->
+<g id="node38" class="node">
+<title>Node003</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3120" cy="-216.88" rx="137" ry="78.84"/>
+<text text-anchor="middle" x="3120" y="-255.33" font-family="Times,serif" font-size="14.00">I am Ken Lee. I am the</text>
+<text text-anchor="middle" x="3120" y="-238.08" font-family="Times,serif" font-size="14.00">advisor to the Emperor.</text>
+<text text-anchor="middle" x="3120" y="-220.83" font-family="Times,serif" font-size="14.00">The Emperor advises me</text>
+<text text-anchor="middle" x="3120" y="-203.58" font-family="Times,serif" font-size="14.00">not to talk to you, and</text>
+<text text-anchor="middle" x="3120" y="-186.33" font-family="Times,serif" font-size="14.00">so I will not. Good day,</text>
+<text text-anchor="middle" x="3120" y="-169.08" font-family="Times,serif" font-size="14.00">fool.</text>
+</g>
+<!-- Node234&#45;&gt;Node003 -->
+<g id="edge93" class="edge">
+<title>Node234&#45;&gt;Node003</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3118.08,-623.09C3118.33,-570.34 3119.09,-409.28 3119.58,-306.81"/>
+<polygon fill="#555555" stroke="#555555" points="3123.08,-306.86 3119.63,-296.85 3116.08,-306.83 3123.08,-306.86"/>
+</g>
+<!-- Node004 -->
+<g id="node39" class="node">
+<title>Node004</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3418" cy="-216.88" rx="143.37" ry="66.64"/>
+<text text-anchor="middle" x="3418" y="-246.71" font-family="Times,serif" font-size="14.00">Ahh, traveler, I cannot</text>
+<text text-anchor="middle" x="3418" y="-229.46" font-family="Times,serif" font-size="14.00">help you. Perhaps you can</text>
+<text text-anchor="middle" x="3418" y="-212.21" font-family="Times,serif" font-size="14.00">find the answer to your</text>
+<text text-anchor="middle" x="3418" y="-194.96" font-family="Times,serif" font-size="14.00">quest in another way.</text>
+<text text-anchor="middle" x="3418" y="-177.71" font-family="Times,serif" font-size="14.00">Good day.</text>
+</g>
+<!-- Node234&#45;&gt;Node004 -->
+<g id="edge92" class="edge">
+<title>Node234&#45;&gt;Node004</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3129.21,-624.64C3167.61,-570.56 3295.41,-390.55 3367.47,-289.06"/>
+<polygon fill="#555555" stroke="#555555" points="3370.69,-291.57 3373.62,-281.39 3364.98,-287.52 3370.69,-291.57"/>
+</g>
+<!-- Node005&#45;&gt;Node999 -->
+<g id="edge29" class="edge">
+<title>Node005&#45;&gt;Node999</title>
+<path fill="none" stroke="#009099" d="M622.42,-1213.21C635.78,-1174.82 648.62,-1131.75 656,-1091.13 675.91,-981.54 614.67,-172.2 689,-89.25 741.34,-30.85 1975.25,-20.62 2208.98,-19.2"/>
+<polygon fill="#009099" stroke="#009099" points="2208.67,-22.7 2218.65,-19.14 2208.63,-15.7 2208.67,-22.7"/>
+<text text-anchor="middle" x="716.25" y="-408.72" font-family="Times,serif" font-size="14.00" fill="#009099">No one important.</text>
+<text text-anchor="middle" x="716.25" y="-391.47" font-family="Times,serif" font-size="14.00" fill="#009099">Goodbye.</text>
+</g>
+<!-- Node007 -->
+<g id="node40" class="node">
+<title>Node007</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="507" cy="-641.44" rx="134.88" ry="176.42"/>
+<text text-anchor="middle" x="507" y="-748.89" font-family="Times,serif" font-size="14.00">If you wish to see the</text>
+<text text-anchor="middle" x="507" y="-731.64" font-family="Times,serif" font-size="14.00">Emperor then you must</text>
+<text text-anchor="middle" x="507" y="-714.39" font-family="Times,serif" font-size="14.00">give me your own name.</text>
+<text text-anchor="middle" x="507" y="-697.14" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="507" y="-679.89" font-family="Times,serif" font-size="14.00">Oh. Right. I&#39;m</text>
+<text text-anchor="middle" x="507" y="-662.64" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="507" y="-645.39" font-family="Times,serif" font-size="14.00">.</text>
+<text text-anchor="middle" x="507" y="-628.14" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="507" y="-610.89" font-family="Times,serif" font-size="14.00">Sure. My name is</text>
+<text text-anchor="middle" x="507" y="-593.64" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="507" y="-576.39" font-family="Times,serif" font-size="14.00">Leave immediately, or I</text>
+<text text-anchor="middle" x="507" y="-559.14" font-family="Times,serif" font-size="14.00">will call the guards.</text>
+<text text-anchor="middle" x="507" y="-541.89" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="507" y="-524.64" font-family="Times,serif" font-size="14.00">.</text>
+</g>
+<!-- Node005&#45;&gt;Node007 -->
+<g id="edge27" class="edge">
+<title>Node005&#45;&gt;Node007</title>
+<path fill="none" stroke="#369900" d="M550.09,-1208C543.67,-1170.53 537.32,-1129.27 533,-1091.13 523.27,-1005.24 517.09,-909.67 513.22,-828.87"/>
+<polygon fill="#369900" stroke="#369900" points="516.68,-828.91 512.71,-819.08 509.68,-829.24 516.68,-828.91"/>
+<text text-anchor="middle" x="594.5" y="-967.44" font-family="Times,serif" font-size="14.00" fill="#369900">I&#39;d like to see the</text>
+<text text-anchor="middle" x="594.5" y="-950.19" font-family="Times,serif" font-size="14.00" fill="#369900">Emperor.</text>
+</g>
+<!-- Node005&#45;&gt;Node010 -->
+<g id="edge28" class="edge">
+<title>Node005&#45;&gt;Node010</title>
+<path fill="none" stroke="#990063" d="M512.23,-1217.68C485.67,-1177.87 451.18,-1136.48 410,-1109.13 381.17,-1089.98 358.7,-1115.61 334.25,-1091.13 251.89,-1008.64 304.68,-948.32 274,-835.86 263.31,-796.65 250.04,-753.42 238.7,-717.79"/>
+<polygon fill="#990063" stroke="#990063" points="241.78,-716.93 235.4,-708.47 235.11,-719.06 241.78,-716.93"/>
+<text text-anchor="middle" x="421.38" y="-967.44" font-family="Times,serif" font-size="14.00" fill="#990063">You sound like an</text>
+<text text-anchor="middle" x="421.38" y="-950.19" font-family="Times,serif" font-size="14.00" fill="#990063">overgrown flunky to me.</text>
+</g>
+<!-- Node006&#45;&gt;Node999 -->
+<g id="edge33" class="edge">
+<title>Node006&#45;&gt;Node999</title>
+<path fill="none" stroke="#990010" d="M1659.64,-1781.85C1726.58,-1739.44 1818.06,-1663.61 1792,-1577.55 1789.21,-1568.35 1783.17,-1568.63 1780,-1559.55 1713.74,-1369.89 1767.96,-1308.34 1742,-1109.13 1725.01,-978.77 1701.99,-948.82 1690.5,-817.86 1676.8,-661.64 1669.68,-620.45 1690.5,-465.01 1713.48,-293.44 1685.49,-224.93 1793,-89.25 1844.21,-24.62 2108.9,-18.56 2208.79,-18.62"/>
+<polygon fill="#990010" stroke="#990010" points="2208.57,-22.13 2218.58,-18.66 2208.59,-15.13 2208.57,-22.13"/>
+<text text-anchor="middle" x="1740.25" y="-636.76" font-family="Times,serif" font-size="14.00" fill="#990010">I see. So long.</text>
+</g>
+<!-- Node011 -->
+<g id="node42" class="node">
+<title>Node011</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1595" cy="-1334.34" rx="138.06" ry="78.84"/>
+<text text-anchor="middle" x="1595" y="-1372.79" font-family="Times,serif" font-size="14.00">The Emperor remains</text>
+<text text-anchor="middle" x="1595" y="-1355.54" font-family="Times,serif" font-size="14.00">hidden from prying eyes.</text>
+<text text-anchor="middle" x="1595" y="-1338.29" font-family="Times,serif" font-size="14.00">As my job is to act as</text>
+<text text-anchor="middle" x="1595" y="-1321.04" font-family="Times,serif" font-size="14.00">the Emperor&#39;s screen, I</text>
+<text text-anchor="middle" x="1595" y="-1303.79" font-family="Times,serif" font-size="14.00">cannot and will not tell</text>
+<text text-anchor="middle" x="1595" y="-1286.54" font-family="Times,serif" font-size="14.00">you where he is.</text>
+</g>
+<!-- Node006&#45;&gt;Node011 -->
+<g id="edge30" class="edge">
+<title>Node006&#45;&gt;Node011</title>
+<path fill="none" stroke="#997600" d="M1595,-1776.13C1595,-1698.34 1595,-1529.1 1595,-1424.43"/>
+<polygon fill="#997600" stroke="#997600" points="1598.5,-1424.57 1595,-1414.57 1591.5,-1424.57 1598.5,-1424.57"/>
+<text text-anchor="middle" x="1692.88" y="-1590.13" font-family="Times,serif" font-size="14.00" fill="#997600">And where is the Emperor?</text>
+</g>
+<!-- Node012 -->
+<g id="node43" class="node">
+<title>Node012</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1299" cy="-1334.34" rx="140.18" ry="66.64"/>
+<text text-anchor="middle" x="1299" y="-1364.17" font-family="Times,serif" font-size="14.00">We do research that will</text>
+<text text-anchor="middle" x="1299" y="-1346.92" font-family="Times,serif" font-size="14.00">change the world. For</text>
+<text text-anchor="middle" x="1299" y="-1329.67" font-family="Times,serif" font-size="14.00">more answers to your</text>
+<text text-anchor="middle" x="1299" y="-1312.42" font-family="Times,serif" font-size="14.00">questions, you should</text>
+<text text-anchor="middle" x="1299" y="-1295.17" font-family="Times,serif" font-size="14.00">seek out Dr. Wong Yi Tze.</text>
+</g>
+<!-- Node006&#45;&gt;Node012 -->
+<g id="edge31" class="edge">
+<title>Node006&#45;&gt;Node012</title>
+<path fill="none" stroke="#490099" d="M1553.22,-1778.37C1513.4,-1739.19 1453.78,-1675.8 1414,-1612.05 1374.19,-1548.24 1342.67,-1468.26 1322.77,-1410.71"/>
+<polygon fill="#490099" stroke="#490099" points="1325.86,-1409.93 1319.31,-1401.6 1319.23,-1412.19 1325.86,-1409.93"/>
+<text text-anchor="middle" x="1502.5" y="-1598.75" font-family="Times,serif" font-size="14.00" fill="#490099">What sort of research do</text>
+<text text-anchor="middle" x="1502.5" y="-1581.5" font-family="Times,serif" font-size="14.00" fill="#490099">you do here?</text>
+</g>
+<!-- Node013 -->
+<g id="node44" class="node">
+<title>Node013</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1932" cy="-1334.34" rx="143.37" ry="91.04"/>
+<text text-anchor="middle" x="1932" y="-1381.42" font-family="Times,serif" font-size="14.00">We were the survivors</text>
+<text text-anchor="middle" x="1932" y="-1364.17" font-family="Times,serif" font-size="14.00">from the wreck of a</text>
+<text text-anchor="middle" x="1932" y="-1346.92" font-family="Times,serif" font-size="14.00">submarine. &#160;When we ran</text>
+<text text-anchor="middle" x="1932" y="-1329.67" font-family="Times,serif" font-size="14.00">aground, we stripped the</text>
+<text text-anchor="middle" x="1932" y="-1312.42" font-family="Times,serif" font-size="14.00">metal from the submarine</text>
+<text text-anchor="middle" x="1932" y="-1295.17" font-family="Times,serif" font-size="14.00">to create the Palace.</text>
+<text text-anchor="middle" x="1932" y="-1277.92" font-family="Times,serif" font-size="14.00">Some do not believe this.</text>
+</g>
+<!-- Node006&#45;&gt;Node013 -->
+<g id="edge32" class="edge">
+<title>Node006&#45;&gt;Node013</title>
+<path fill="none" stroke="#00991c" d="M1648.65,-1779.81C1698.7,-1742.15 1772.58,-1680.27 1820,-1612.05 1857.46,-1558.17 1885.26,-1489.9 1903.8,-1434.65"/>
+<polygon fill="#00991c" stroke="#00991c" points="1907.34,-1436.08 1907.15,-1425.49 1900.69,-1433.89 1907.34,-1436.08"/>
+<text text-anchor="middle" x="1929.5" y="-1598.75" font-family="Times,serif" font-size="14.00" fill="#00991c">What&#39;s the history of the</text>
+<text text-anchor="middle" x="1929.5" y="-1581.5" font-family="Times,serif" font-size="14.00" fill="#00991c">place?</text>
+</g>
+<!-- Node019&#45;&gt;Node001 -->
+<g id="edge55" class="edge">
+<title>Node019&#45;&gt;Node001</title>
+<path fill="none" stroke="#005099" d="M782.87,-3268.87C772.8,-3282.49 763.61,-3297.88 758.25,-3313.82 732.44,-3390.51 703.5,-3436.3 758.25,-3495.9 824.22,-3567.7 1465.42,-3585.77 1750.98,-3590.27"/>
+<polygon fill="#005099" stroke="#005099" points="1750.77,-3593.78 1760.82,-3590.44 1750.88,-3586.78 1750.77,-3593.78"/>
+<text text-anchor="middle" x="839.38" y="-3400.18" font-family="Times,serif" font-size="14.00" fill="#005099">I have more questions.</text>
+</g>
+<!-- Node019&#45;&gt;Node999 -->
+<g id="edge56" class="edge">
+<title>Node019&#45;&gt;Node999</title>
+<path fill="none" stroke="#7d9900" d="M833.84,-3162.13C847.55,-2902.4 906.92,-1785.14 922,-1630.05 972.57,-1109.85 982.24,-978.06 1082,-465.01 1114.88,-295.92 1048.7,-204.19 1177,-89.25 1255.22,-19.17 2026.95,-18.05 2208.77,-18.77"/>
+<polygon fill="#7d9900" stroke="#7d9900" points="2208.63,-22.28 2218.64,-18.82 2208.66,-15.28 2208.63,-22.28"/>
+<text text-anchor="middle" x="991" y="-1814" font-family="Times,serif" font-size="14.00" fill="#7d9900">Thanks. I&#39;ll do that.</text>
+</g>
+<!-- Node025 -->
+<g id="node62" class="node">
+<title>Node025</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2224" cy="-2865.31" rx="189.5" ry="200.82"/>
+<text text-anchor="middle" x="2224" y="-2990.01" font-family="Times,serif" font-size="14.00">You are certainly a</text>
+<text text-anchor="middle" x="2224" y="-2972.76" font-family="Times,serif" font-size="14.00">worthy recipient of our</text>
+<text text-anchor="middle" x="2224" y="-2955.51" font-family="Times,serif" font-size="14.00">fuel. I believe I can</text>
+<text text-anchor="middle" x="2224" y="-2938.26" font-family="Times,serif" font-size="14.00">trust you with our</text>
+<text text-anchor="middle" x="2224" y="-2921.01" font-family="Times,serif" font-size="14.00">secrets. In the back</text>
+<text text-anchor="middle" x="2224" y="-2903.76" font-family="Times,serif" font-size="14.00">room, you will find the</text>
+<text text-anchor="middle" x="2224" y="-2886.51" font-family="Times,serif" font-size="14.00">forcefield to the large</text>
+<text text-anchor="middle" x="2224" y="-2869.26" font-family="Times,serif" font-size="14.00">computer has been turned</text>
+<text text-anchor="middle" x="2224" y="-2852.01" font-family="Times,serif" font-size="14.00">off. &#160;Enter the password</text>
+<text text-anchor="middle" x="2224" y="-2834.76" font-family="Times,serif" font-size="14.00">&quot;CSPDMSHR&#45;Shih&#45;huang&#45;ti&#45;X9372&quot;</text>
+<text text-anchor="middle" x="2224" y="-2817.51" font-family="Times,serif" font-size="14.00">and you will find</text>
+<text text-anchor="middle" x="2224" y="-2800.26" font-family="Times,serif" font-size="14.00">yourself connected to the</text>
+<text text-anchor="middle" x="2224" y="-2783.01" font-family="Times,serif" font-size="14.00">Emperor Computer. &#160;The</text>
+<text text-anchor="middle" x="2224" y="-2765.76" font-family="Times,serif" font-size="14.00">Emperor will be able to</text>
+<text text-anchor="middle" x="2224" y="-2748.51" font-family="Times,serif" font-size="14.00">direct our fuel to where</text>
+<text text-anchor="middle" x="2224" y="-2731.26" font-family="Times,serif" font-size="14.00">you need it.</text>
+</g>
+<!-- Node2539&#45;&gt;Node025 -->
+<g id="edge94" class="edge">
+<title>Node2539&#45;&gt;Node025</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M2220.85,-3198.63C2218.91,-3174.51 2217.75,-3128.04 2217.38,-3077.32"/>
+<polygon fill="#555555" stroke="#555555" points="2220.87,-3077.42 2217.31,-3067.44 2213.87,-3077.46 2220.87,-3077.42"/>
+</g>
+<!-- Node2539&#45;&gt;Node025 -->
+<g id="edge95" class="edge">
+<title>Node2539&#45;&gt;Node025</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M2227.15,-3198.63C2229.09,-3174.51 2230.25,-3128.04 2230.62,-3077.32"/>
+<polygon fill="#555555" stroke="#555555" points="2234.13,-3077.46 2230.69,-3067.44 2227.13,-3077.42 2234.13,-3077.46"/>
+</g>
+<!-- Node039 -->
+<g id="node69" class="node">
+<title>Node039</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2603" cy="-2865.31" rx="133.29" ry="66.64"/>
+<text text-anchor="middle" x="2603" y="-2895.14" font-family="Times,serif" font-size="14.00">I am sorry. &#160;But I cannot</text>
+<text text-anchor="middle" x="2603" y="-2877.89" font-family="Times,serif" font-size="14.00">offer what fuel we have</text>
+<text text-anchor="middle" x="2603" y="-2860.64" font-family="Times,serif" font-size="14.00">to you. &#160;Perhaps if you</text>
+<text text-anchor="middle" x="2603" y="-2843.39" font-family="Times,serif" font-size="14.00">were to speak to the</text>
+<text text-anchor="middle" x="2603" y="-2826.14" font-family="Times,serif" font-size="14.00">Emperor?</text>
+</g>
+<!-- Node2539&#45;&gt;Node039 -->
+<g id="edge96" class="edge">
+<title>Node2539&#45;&gt;Node039</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M2242.76,-3203.65C2279.17,-3179.34 2361.28,-3122.65 2423,-3066.13 2467.2,-3025.65 2512.33,-2975.53 2546.35,-2935.61"/>
+<polygon fill="#555555" stroke="#555555" points="2549.64,-2938.14 2553.44,-2928.25 2544.3,-2933.61 2549.64,-2938.14"/>
+</g>
+<!-- Node203108&#45;&gt;Node018 -->
+<g id="edge98" class="edge">
+<title>Node203108&#45;&gt;Node018</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M2750.9,-2577.87C2805.36,-2572.69 2926.22,-2558.59 2958,-2533.14 3016.44,-2486.35 3042.44,-2278.68 3095,-2225.38 3257.25,-2060.83 3394.62,-2161.19 3567,-2007.3 3613.66,-1965.64 3647.34,-1900.3 3665.51,-1858.75"/>
+<polygon fill="#555555" stroke="#555555" points="3669.08,-1860.3 3669.79,-1849.73 3662.65,-1857.55 3669.08,-1860.3"/>
+</g>
+<!-- Node008 -->
+<g id="node46" class="node">
+<title>Node008</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3588" cy="-2353.01" rx="143.9" ry="66.64"/>
+<text text-anchor="middle" x="3588" y="-2382.83" font-family="Times,serif" font-size="14.00">Not everyone is granted a</text>
+<text text-anchor="middle" x="3588" y="-2365.58" font-family="Times,serif" font-size="14.00">chance to see the</text>
+<text text-anchor="middle" x="3588" y="-2348.33" font-family="Times,serif" font-size="14.00">Emperor. You must first</text>
+<text text-anchor="middle" x="3588" y="-2331.08" font-family="Times,serif" font-size="14.00">prove your worth. Are you</text>
+<text text-anchor="middle" x="3588" y="-2313.83" font-family="Times,serif" font-size="14.00">willing to prove yours?</text>
+</g>
+<!-- Node203108&#45;&gt;Node008 -->
+<g id="edge102" class="edge">
+<title>Node203108&#45;&gt;Node008</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M2750.85,-2577.75C2809.36,-2572.06 2946.3,-2556.58 2986,-2533.14 3003,-2523.1 2996.38,-2507.55 3014,-2498.64 3089.04,-2460.68 3311.93,-2506.34 3392,-2480.64 3434.14,-2467.11 3476,-2442.07 3510.16,-2417.81"/>
+<polygon fill="#555555" stroke="#555555" points="3511.61,-2420.35 3517.67,-2411.66 3507.51,-2414.68 3511.61,-2420.35"/>
+</g>
+<!-- Node203108&#45;&gt;Node020 -->
+<g id="edge100" class="edge">
+<title>Node203108&#45;&gt;Node020</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M2715.73,-2563.93C2706.34,-2545.45 2690.1,-2513.51 2673.08,-2480.04"/>
+<polygon fill="#555555" stroke="#555555" points="2675.91,-2478.89 2668.26,-2471.57 2669.67,-2482.07 2675.91,-2478.89"/>
+</g>
+<!-- Node203108&#45;&gt;Node031 -->
+<g id="edge101" class="edge">
+<title>Node203108&#45;&gt;Node031</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M2750.85,-2578.3C2802.6,-2574.04 2913.05,-2561.74 2936,-2533.14 2998.22,-2455.6 2958.14,-2196.59 2919.27,-2013.04"/>
+<polygon fill="#555555" stroke="#555555" points="2922.52,-2012.49 2917.01,-2003.44 2915.68,-2013.95 2922.52,-2012.49"/>
+</g>
+<!-- Node040 -->
+<g id="node70" class="node">
+<title>Node040</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1765" cy="-2353.01" rx="143.9" ry="127.63"/>
+<text text-anchor="middle" x="1765" y="-2425.96" font-family="Times,serif" font-size="14.00">I wish I were able to</text>
+<text text-anchor="middle" x="1765" y="-2408.71" font-family="Times,serif" font-size="14.00">offer you our fuel, but</text>
+<text text-anchor="middle" x="1765" y="-2391.46" font-family="Times,serif" font-size="14.00">unfortunately our stores</text>
+<text text-anchor="middle" x="1765" y="-2374.21" font-family="Times,serif" font-size="14.00">are empty. &#160;They have</text>
+<text text-anchor="middle" x="1765" y="-2356.96" font-family="Times,serif" font-size="14.00">been diverted by some</text>
+<text text-anchor="middle" x="1765" y="-2339.71" font-family="Times,serif" font-size="14.00">means to the Hubologists.</text>
+<text text-anchor="middle" x="1765" y="-2322.46" font-family="Times,serif" font-size="14.00">It is possible that you</text>
+<text text-anchor="middle" x="1765" y="-2305.21" font-family="Times,serif" font-size="14.00">would be able to find</text>
+<text text-anchor="middle" x="1765" y="-2287.96" font-family="Times,serif" font-size="14.00">someone to divert it</text>
+<text text-anchor="middle" x="1765" y="-2270.71" font-family="Times,serif" font-size="14.00">back.</text>
+</g>
+<!-- Node203108&#45;&gt;Node040 -->
+<g id="edge97" class="edge">
+<title>Node203108&#45;&gt;Node040</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M2696.77,-2578.8C2573.54,-2572.19 2067.74,-2541.78 1923,-2480.64 1905.65,-2473.31 1888.64,-2463.5 1872.59,-2452.58"/>
+<polygon fill="#555555" stroke="#555555" points="1874.97,-2449.27 1864.78,-2446.4 1870.96,-2455 1874.97,-2449.27"/>
+</g>
+<!-- Node041 -->
+<g id="node71" class="node">
+<title>Node041</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2225" cy="-2353.01" rx="138.59" ry="91.04"/>
+<text text-anchor="middle" x="2225" y="-2400.08" font-family="Times,serif" font-size="14.00">I respectfully remind you</text>
+<text text-anchor="middle" x="2225" y="-2382.83" font-family="Times,serif" font-size="14.00">that unless you have</text>
+<text text-anchor="middle" x="2225" y="-2365.58" font-family="Times,serif" font-size="14.00">given the vertibird plans</text>
+<text text-anchor="middle" x="2225" y="-2348.33" font-family="Times,serif" font-size="14.00">to Dr. Wong Yi Tze, I can</text>
+<text text-anchor="middle" x="2225" y="-2331.08" font-family="Times,serif" font-size="14.00">not grant you access to</text>
+<text text-anchor="middle" x="2225" y="-2313.83" font-family="Times,serif" font-size="14.00">the Emperor. &#160;I hope you</text>
+<text text-anchor="middle" x="2225" y="-2296.58" font-family="Times,serif" font-size="14.00">understand.</text>
+</g>
+<!-- Node203108&#45;&gt;Node041 -->
+<g id="edge99" class="edge">
+<title>Node203108&#45;&gt;Node041</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M2699.74,-2572.8C2651.44,-2557.77 2540.18,-2521.56 2451,-2480.64 2412.63,-2463.03 2372.02,-2441.32 2335.96,-2420.87"/>
+<polygon fill="#555555" stroke="#555555" points="2337.83,-2417.33 2327.41,-2415.42 2334.36,-2423.41 2337.83,-2417.33"/>
+</g>
+<!-- Node028a -->
+<g id="node63" class="node">
+<title>Node028a</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1175" cy="-2865.31" rx="27" ry="18"/>
+</g>
+<!-- Node027&#45;&gt;Node028a -->
+<g id="edge68" class="edge">
+<title>Node027&#45;&gt;Node028a</title>
+<path fill="none" stroke="#009929" d="M1082.41,-3145.92C1071.01,-3125.15 1066.61,-3102.94 1080.5,-3084.13 1096.66,-3062.25 1120.96,-3086.49 1139,-3066.13 1181.64,-3018.03 1181.8,-2937.07 1178.36,-2894.47"/>
+<polygon fill="#009929" stroke="#009929" points="1181.75,-2894.15 1177.33,-2884.53 1174.79,-2894.81 1181.75,-2894.15"/>
+<text text-anchor="middle" x="1157.25" y="-3097.46" font-family="Times,serif" font-size="14.00" fill="#009929">He&#39;s as good as dead.</text>
+</g>
+<!-- Node029 -->
+<g id="node64" class="node">
+<title>Node029</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1007" cy="-2865.31" rx="122.68" ry="42.25"/>
+<text text-anchor="middle" x="1007" y="-2877.89" font-family="Times,serif" font-size="14.00">Then in that case, you</text>
+<text text-anchor="middle" x="1007" y="-2860.64" font-family="Times,serif" font-size="14.00">can only be an enemy.</text>
+<text text-anchor="middle" x="1007" y="-2843.39" font-family="Times,serif" font-size="14.00">Good day.</text>
+</g>
+<!-- Node027&#45;&gt;Node029 -->
+<g id="edge69" class="edge">
+<title>Node027&#45;&gt;Node029</title>
+<path fill="none" stroke="#990004" d="M1064.35,-3151.63C1055.79,-3141.89 1048.1,-3131.32 1042.25,-3120.13 1009.07,-3056.63 1003.69,-2972.58 1004.26,-2918.96"/>
+<polygon fill="#990004" stroke="#990004" points="1007.77,-2919.06 1004.46,-2909 1000.78,-2918.93 1007.77,-2919.06"/>
+<text text-anchor="middle" x="1054.38" y="-3097.46" font-family="Times,serif" font-size="14.00" fill="#990004">No.</text>
+</g>
+<!-- Node002&#45;&gt;Node999 -->
+<g id="edge24" class="edge">
+<title>Node002&#45;&gt;Node999</title>
+<path fill="none" stroke="#009950" d="M2721.45,-111.45C2697.14,-88.82 2669.07,-67.61 2639,-54 2576.52,-25.72 2371,-20.27 2285.18,-19.24"/>
+<polygon fill="#009950" stroke="#009950" points="2285.41,-15.73 2275.37,-19.12 2285.33,-22.73 2285.41,-15.73"/>
+<text text-anchor="middle" x="2689.62" y="-57.95" font-family="Times,serif" font-size="14.00" fill="#009950">Tanks!</text>
+</g>
+<!-- Node003&#45;&gt;Node999 -->
+<g id="edge25" class="edge">
+<title>Node003&#45;&gt;Node999</title>
+<path fill="none" stroke="#992300" d="M3056.4,-146.55C3032.66,-124.78 3004.1,-102.89 2974,-89.25 2849,-32.62 2415.69,-21.53 2284.76,-19.46"/>
+<polygon fill="#992300" stroke="#992300" points="2285.15,-15.95 2275.1,-19.3 2285.04,-22.95 2285.15,-15.95"/>
+<text text-anchor="middle" x="2935.75" y="-57.95" font-family="Times,serif" font-size="14.00" fill="#992300">Grrr!</text>
+</g>
+<!-- Node004&#45;&gt;Node999 -->
+<g id="edge26" class="edge">
+<title>Node004&#45;&gt;Node999</title>
+<path fill="none" stroke="#000a99" d="M3361.75,-155.46C3335.18,-130.75 3301.52,-104.46 3266,-89.25 3174.42,-50.05 2458.54,-25.54 2284.86,-20.14"/>
+<polygon fill="#000a99" stroke="#000a99" points="2285.09,-16.61 2274.99,-19.8 2284.88,-23.61 2285.09,-16.61"/>
+<text text-anchor="middle" x="3196.38" y="-57.95" font-family="Times,serif" font-size="14.00" fill="#000a99">Dood day!</text>
+</g>
+<!-- Node007&#45;&gt;Node999 -->
+<g id="edge35" class="edge">
+<title>Node007&#45;&gt;Node999</title>
+<path fill="none" stroke="#699900" d="M492.26,-465.69C491.26,-349.21 507.84,-198.09 584.25,-89.25 603.53,-61.79 618.53,-62.43 651,-54 805.99,-13.78 1981.76,-17.65 2209.03,-18.79"/>
+<polygon fill="#699900" stroke="#699900" points="2208.71,-22.29 2218.72,-18.84 2208.74,-15.29 2208.71,-22.29"/>
+<text text-anchor="middle" x="617.38" y="-212.21" font-family="Times,serif" font-size="14.00" fill="#699900">Forget it.</text>
+</g>
+<!-- Node015 -->
+<g id="node45" class="node">
+<title>Node015</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="819" cy="-216.88" rx="120.56" ry="30.05"/>
+<text text-anchor="middle" x="819" y="-220.83" font-family="Times,serif" font-size="14.00">That will be quite</text>
+<text text-anchor="middle" x="819" y="-203.58" font-family="Times,serif" font-size="14.00">impossible. Good day.</text>
+</g>
+<!-- Node007&#45;&gt;Node015 -->
+<g id="edge34" class="edge">
+<title>Node007&#45;&gt;Node015</title>
+<path fill="none" stroke="#003d99" d="M552.76,-475.07C568.39,-435.77 588.66,-395.67 614.5,-362.52 652.56,-313.69 711.54,-274.44 756.4,-249.21"/>
+<polygon fill="#003d99" stroke="#003d99" points="757.68,-251.95 764.74,-244.04 754.3,-245.82 757.68,-251.95"/>
+<text text-anchor="middle" x="628.25" y="-400.09" font-family="Times,serif" font-size="14.00" fill="#003d99">Yes.</text>
+</g>
+<!-- Node010&#45;&gt;Node999 -->
+<g id="edge40" class="edge">
+<title>Node010&#45;&gt;Node999</title>
+<path fill="none" stroke="#179900" d="M215.68,-574.35C222.23,-459.52 252.35,-222.68 387,-89.25 425.27,-51.32 449.78,-62.45 503,-54 676.53,-26.43 1968.68,-20.08 2208.69,-19.14"/>
+<polygon fill="#179900" stroke="#179900" points="2208.64,-22.63 2218.63,-19.1 2208.62,-15.63 2208.64,-22.63"/>
+<text text-anchor="middle" x="405" y="-212.21" font-family="Times,serif" font-size="14.00" fill="#179900">Fine.</text>
+</g>
+<!-- NodeCallGuards -->
+<g id="node49" class="node">
+<title>NodeCallGuards</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="459" cy="-216.88" rx="27" ry="18"/>
+</g>
+<!-- Node010&#45;&gt;NodeCallGuards -->
+<g id="edge39" class="edge">
+<title>Node010&#45;&gt;NodeCallGuards</title>
+<path fill="none" stroke="#160099" d="M250.94,-576.72C305.87,-481.98 406.64,-308.19 444.29,-243.25"/>
+<polygon fill="#160099" stroke="#160099" points="447.59,-245.54 449.58,-235.13 441.53,-242.03 447.59,-245.54"/>
+<text text-anchor="middle" x="406.88" y="-400.09" font-family="Times,serif" font-size="14.00" fill="#160099">Make me.</text>
+</g>
+<!-- Node011&#45;&gt;Node001 -->
+<g id="edge41" class="edge">
+<title>Node011&#45;&gt;Node001</title>
+<path fill="none" stroke="#990043" d="M1561.65,-1411.32C1536.75,-1459.98 1498.36,-1521 1448,-1559.55 1427.58,-1575.19 1408.1,-1556.73 1393,-1577.55 1116.14,-1959.48 1459,-2165.15 1459,-2636.87 1459,-3217.97 1459,-3217.97 1459,-3217.97 1459,-3360.72 1510.38,-3404.46 1620,-3495.9 1659.29,-3528.67 1710.65,-3550.62 1757.83,-3565.14"/>
+<polygon fill="#990043" stroke="#990043" points="1756.55,-3568.72 1767.14,-3568.22 1758.56,-3562.01 1756.55,-3568.72"/>
+<text text-anchor="middle" x="1520.62" y="-2585.14" font-family="Times,serif" font-size="14.00" fill="#990043">Fine. I have more</text>
+<text text-anchor="middle" x="1520.62" y="-2567.89" font-family="Times,serif" font-size="14.00" fill="#990043">questions.</text>
+</g>
+<!-- Node011&#45;&gt;Node999 -->
+<g id="edge42" class="edge">
+<title>Node011&#45;&gt;Node999</title>
+<path fill="none" stroke="#007099" d="M1585.12,-1255.5C1554.95,-1002.02 1476.65,-207.74 1659,-54 1700.94,-18.64 2085.59,-17.97 2209.05,-18.67"/>
+<polygon fill="#007099" stroke="#007099" points="2208.81,-22.18 2218.83,-18.74 2208.85,-15.18 2208.81,-22.18"/>
+<text text-anchor="middle" x="1588" y="-400.09" font-family="Times,serif" font-size="14.00" fill="#007099">Fine. Bye.</text>
+</g>
+<!-- Node012&#45;&gt;Node001 -->
+<g id="edge43" class="edge">
+<title>Node012&#45;&gt;Node001</title>
+<path fill="none" stroke="#999500" d="M1290.74,-1401.14C1279.84,-1493.88 1262,-1668.39 1262,-1817.67 1262,-2516.89 1262,-2516.89 1262,-2516.89 1262,-2777.1 1355.95,-2828.98 1407,-3084.13 1443.28,-3265.48 1341.54,-3360.02 1467,-3495.9 1505.39,-3537.48 1645.17,-3563.39 1753.04,-3577.63"/>
+<polygon fill="#999500" stroke="#999500" points="1752.34,-3581.2 1762.71,-3579.01 1753.24,-3574.25 1752.34,-3581.2"/>
+<text text-anchor="middle" x="1346.62" y="-2585.14" font-family="Times,serif" font-size="14.00" fill="#999500">I will. And I have more</text>
+<text text-anchor="middle" x="1346.62" y="-2567.89" font-family="Times,serif" font-size="14.00" fill="#999500">questions.</text>
+</g>
+<!-- Node012&#45;&gt;Node999 -->
+<g id="edge44" class="edge">
+<title>Node012&#45;&gt;Node999</title>
+<path fill="none" stroke="#690099" d="M1290.92,-1267.6C1269.73,-1063.44 1234.37,-433.46 1552,-89.25 1580.57,-58.29 1598.88,-63.17 1640,-54 1749.18,-29.67 2093.63,-21.63 2208.95,-19.59"/>
+<polygon fill="#690099" stroke="#690099" points="2208.76,-23.08 2218.7,-19.41 2208.64,-16.08 2208.76,-23.08"/>
+<text text-anchor="middle" x="1420.88" y="-400.09" font-family="Times,serif" font-size="14.00" fill="#690099">I will. Bye.</text>
+</g>
+<!-- Node013&#45;&gt;Node999 -->
+<g id="edge46" class="edge">
+<title>Node013&#45;&gt;Node999</title>
+<path fill="none" stroke="#990f00" d="M1906.82,-1244.41C1879.36,-1142.41 1837.16,-969.65 1821,-817.86 1802.99,-648.63 1752.97,-171.59 1876,-54 1899.74,-31.31 2119.25,-22.59 2209.02,-19.96"/>
+<polygon fill="#990f00" stroke="#990f00" points="2208.9,-23.44 2218.8,-19.65 2208.7,-16.44 2208.9,-23.44"/>
+<text text-anchor="middle" x="1863.12" y="-400.09" font-family="Times,serif" font-size="14.00" fill="#990f00">I see. Thanks. Bye.</text>
+</g>
+<!-- Node023 -->
+<g id="node50" class="node">
+<title>Node023</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1977" cy="-641.44" rx="146.55" ry="115.44"/>
+<text text-anchor="middle" x="1977" y="-705.76" font-family="Times,serif" font-size="14.00">Berating someone? Any</text>
+<text text-anchor="middle" x="1977" y="-688.51" font-family="Times,serif" font-size="14.00">fool who had done their</text>
+<text text-anchor="middle" x="1977" y="-671.26" font-family="Times,serif" font-size="14.00">research can see that the</text>
+<text text-anchor="middle" x="1977" y="-654.01" font-family="Times,serif" font-size="14.00">very basis of Shi&#45;town is</text>
+<text text-anchor="middle" x="1977" y="-636.76" font-family="Times,serif" font-size="14.00">the wreckage of this</text>
+<text text-anchor="middle" x="1977" y="-619.51" font-family="Times,serif" font-size="14.00">submarine. It seems</text>
+<text text-anchor="middle" x="1977" y="-602.26" font-family="Times,serif" font-size="14.00">fruitless to argue with</text>
+<text text-anchor="middle" x="1977" y="-585.01" font-family="Times,serif" font-size="14.00">those who would say there</text>
+<text text-anchor="middle" x="1977" y="-567.76" font-family="Times,serif" font-size="14.00">is no submarine.</text>
+</g>
+<!-- Node013&#45;&gt;Node023 -->
+<g id="edge45" class="edge">
+<title>Node013&#45;&gt;Node023</title>
+<path fill="none" stroke="#00993c" d="M1915.87,-1243.65C1900.58,-1143.47 1883.27,-976.86 1907.75,-835.86 1912.01,-811.34 1919.09,-785.81 1927.14,-761.65"/>
+<polygon fill="#00993c" stroke="#00993c" points="1930.72,-762.98 1930.64,-752.39 1924.1,-760.72 1930.72,-762.98"/>
+<text text-anchor="middle" x="1993.62" y="-976.07" font-family="Times,serif" font-size="14.00" fill="#00993c">Hm. It sounds almost as</text>
+<text text-anchor="middle" x="1993.62" y="-958.82" font-family="Times,serif" font-size="14.00" fill="#00993c">if you&#39;re berating</text>
+<text text-anchor="middle" x="1993.62" y="-941.57" font-family="Times,serif" font-size="14.00" fill="#00993c">someone.</text>
+</g>
+<!-- Node015&#45;&gt;Node999 -->
+<g id="edge49" class="edge">
+<title>Node015&#45;&gt;Node999</title>
+<path fill="none" stroke="#990077" d="M834.86,-186.84C857.73,-148.33 903.96,-81.98 964.5,-54 1022.36,-27.26 2002.28,-20.36 2208.93,-19.19"/>
+<polygon fill="#990077" stroke="#990077" points="2208.83,-22.69 2218.81,-19.13 2208.79,-15.69 2208.83,-22.69"/>
+<text text-anchor="middle" x="985.75" y="-57.95" font-family="Times,serif" font-size="14.00" fill="#990077">&#45;done&#45;</text>
+</g>
+<!-- Node008&#45;&gt;Node018 -->
+<g id="edge37" class="edge">
+<title>Node008&#45;&gt;Node018</title>
+<path fill="none" stroke="#00996f" d="M3584.55,-2286.15C3582.51,-2219.62 3583.26,-2114.23 3601.75,-2025.3 3614.31,-1964.87 3642.51,-1898.94 3661.66,-1858.45"/>
+<polygon fill="#00996f" stroke="#00996f" points="3665.15,-1860.25 3666.31,-1849.72 3658.84,-1857.23 3665.15,-1860.25"/>
+<text text-anchor="middle" x="3692.12" y="-2137.54" font-family="Times,serif" font-size="14.00" fill="#00996f">No. I&#39;ve had enough tests</text>
+<text text-anchor="middle" x="3692.12" y="-2120.29" font-family="Times,serif" font-size="14.00" fill="#00996f">in the last several</text>
+<text text-anchor="middle" x="3692.12" y="-2103.04" font-family="Times,serif" font-size="14.00" fill="#00996f">months to last me a</text>
+<text text-anchor="middle" x="3692.12" y="-2085.79" font-family="Times,serif" font-size="14.00" fill="#00996f">lifetime.</text>
+</g>
+<!-- Node008&#45;&gt;Node017 -->
+<g id="edge36" class="edge">
+<title>Node008&#45;&gt;Node017</title>
+<path fill="none" stroke="#990096" d="M3571.59,-2286.59C3542.13,-2159.04 3487.53,-1868.67 3534.5,-1630.05 3542.97,-1587.03 3559.82,-1543.5 3579.32,-1503.59"/>
+<polygon fill="#990096" stroke="#990096" points="3582.87,-1505.3 3584.19,-1494.79 3576.6,-1502.18 3582.87,-1505.3"/>
+<text text-anchor="middle" x="3548.25" y="-1814" font-family="Times,serif" font-size="14.00" fill="#990096">Yes.</text>
+</g>
+<!-- Node017&#45;&gt;Node018 -->
+<g id="edge52" class="edge">
+<title>Node017&#45;&gt;Node018</title>
+<path fill="none" stroke="#360099" d="M3704.13,-1558.09C3704.26,-1576.35 3703.94,-1594.51 3703,-1612.05 3699.92,-1669.85 3691.99,-1736.4 3686.55,-1777.76"/>
+<polygon fill="#360099" stroke="#360099" points="3682.97,-1777.09 3685.12,-1787.47 3689.91,-1778.02 3682.97,-1777.09"/>
+<text text-anchor="middle" x="3737.38" y="-1590.13" font-family="Times,serif" font-size="14.00" fill="#360099">Forget it.</text>
+</g>
+<!-- NodeWhirlyBegins -->
+<g id="node54" class="node">
+<title>NodeWhirlyBegins</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3748" cy="-641.44" rx="27" ry="18"/>
+</g>
+<!-- Node017&#45;&gt;NodeWhirlyBegins -->
+<g id="edge51" class="edge">
+<title>Node017&#45;&gt;NodeWhirlyBegins</title>
+<path fill="none" stroke="#996200" d="M3705.96,-1110.93C3720.54,-948.42 3738.87,-744.12 3745.48,-670.49"/>
+<polygon fill="#996200" stroke="#996200" points="3749.03,-671.1 3746.44,-660.82 3742.06,-670.47 3749.03,-671.1"/>
+<text text-anchor="middle" x="3766.38" y="-958.82" font-family="Times,serif" font-size="14.00" fill="#996200">You got it.</text>
+</g>
+<!-- Node009 -->
+<g id="node48" class="node">
+<title>Node009</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3962" cy="-2116.34" rx="148.67" ry="91.04"/>
+<text text-anchor="middle" x="3962" y="-2163.41" font-family="Times,serif" font-size="14.00">I do not believe the</text>
+<text text-anchor="middle" x="3962" y="-2146.16" font-family="Times,serif" font-size="14.00">Emperor would like to see</text>
+<text text-anchor="middle" x="3962" y="-2128.91" font-family="Times,serif" font-size="14.00">you. I have been told to</text>
+<text text-anchor="middle" x="3962" y="-2111.66" font-family="Times,serif" font-size="14.00">forbid entrance to those</text>
+<text text-anchor="middle" x="3962" y="-2094.41" font-family="Times,serif" font-size="14.00">who offend me or who reek</text>
+<text text-anchor="middle" x="3962" y="-2077.16" font-family="Times,serif" font-size="14.00">of evil. You do both,</text>
+<text text-anchor="middle" x="3962" y="-2059.91" font-family="Times,serif" font-size="14.00">traveler. Good day.</text>
+</g>
+<!-- Node009&#45;&gt;Node999 -->
+<g id="edge38" class="edge">
+<title>Node009&#45;&gt;Node999</title>
+<path fill="none" stroke="#994300" d="M3996.76,-2027.73C4034.06,-1925.7 4088,-1751.26 4088,-1595.8 4088,-1595.8 4088,-1595.8 4088,-215.88 4088,-47.31 3912.78,-70.3 3745,-54 3449.27,-25.28 2488.57,-19.95 2285.09,-19.13"/>
+<polygon fill="#994300" stroke="#994300" points="2285.38,-15.63 2275.37,-19.09 2285.35,-22.63 2285.38,-15.63"/>
+<text text-anchor="middle" x="4109.75" y="-958.82" font-family="Times,serif" font-size="14.00" fill="#994300">&#45;done&#45;</text>
+</g>
+<!-- NodeCallGuards&#45;&gt;Node999 -->
+<g id="edge106" class="edge">
+<title>NodeCallGuards&#45;&gt;Node999</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M460.12,-198.66C463.39,-164.29 476.1,-87.6 525,-54 560.92,-29.32 1959.92,-20.56 2209.2,-19.2"/>
+<polygon fill="#555555" stroke="#555555" points="2208.89,-22.69 2218.87,-19.14 2208.85,-15.69 2208.89,-22.69"/>
+</g>
+<!-- Node024 -->
+<g id="node61" class="node">
+<title>Node024</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2059" cy="-216.88" rx="140.71" ry="42.25"/>
+<text text-anchor="middle" x="2059" y="-229.46" font-family="Times,serif" font-size="14.00">It certainly is. And I</text>
+<text text-anchor="middle" x="2059" y="-212.21" font-family="Times,serif" font-size="14.00">deal with these people on</text>
+<text text-anchor="middle" x="2059" y="-194.96" font-family="Times,serif" font-size="14.00">a daily basis. Alas!</text>
+</g>
+<!-- Node023&#45;&gt;Node024 -->
+<g id="edge63" class="edge">
+<title>Node023&#45;&gt;Node024</title>
+<path fill="none" stroke="#990057" d="M1968.86,-525.94C1968.13,-475.16 1971.26,-415.12 1984.75,-362.52 1993.31,-329.13 2010.6,-294.69 2026.34,-267.8"/>
+<polygon fill="#990057" stroke="#990057" points="2029.7,-269.99 2031.82,-259.61 2023.69,-266.4 2029.7,-269.99"/>
+<text text-anchor="middle" x="2079.62" y="-408.72" font-family="Times,serif" font-size="14.00" fill="#990057">That&#39;s very even&#45;tempered</text>
+<text text-anchor="middle" x="2079.62" y="-391.47" font-family="Times,serif" font-size="14.00" fill="#990057">of you.</text>
+</g>
+<!-- Node014 -->
+<g id="node51" class="node">
+<title>Node014</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="744" cy="-1818.67" rx="142.31" ry="103.24"/>
+<text text-anchor="middle" x="744" y="-1874.37" font-family="Times,serif" font-size="14.00">Ah, yes! I have seen some</text>
+<text text-anchor="middle" x="744" y="-1857.12" font-family="Times,serif" font-size="14.00">of your movies. Yet</text>
+<text text-anchor="middle" x="744" y="-1839.87" font-family="Times,serif" font-size="14.00">surely this is not your</text>
+<text text-anchor="middle" x="744" y="-1822.62" font-family="Times,serif" font-size="14.00">real name?</text>
+<text text-anchor="middle" x="744" y="-1805.37" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="744" y="-1788.12" font-family="Times,serif" font-size="14.00">No. My real name is</text>
+<text text-anchor="middle" x="744" y="-1770.87" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="744" y="-1753.62" font-family="Times,serif" font-size="14.00">.</text>
+</g>
+<!-- Node014&#45;&gt;Node010 -->
+<g id="edge48" class="edge">
+<title>Node014&#45;&gt;Node010</title>
+<path fill="none" stroke="#4a9900" d="M609.61,-1784.03C497.71,-1748.32 344.78,-1679.97 268.5,-1559.55 225.4,-1491.52 233.16,-916.23 228,-835.86 225.53,-797.34 222.46,-754.53 219.83,-719"/>
+<polygon fill="#4a9900" stroke="#4a9900" points="223.26,-718.93 219.03,-709.22 216.28,-719.45 223.26,-718.93"/>
+<text text-anchor="middle" x="340.75" y="-1338.29" font-family="Times,serif" font-size="14.00" fill="#4a9900">It&#39;s all the name you</text>
+<text text-anchor="middle" x="340.75" y="-1321.04" font-family="Times,serif" font-size="14.00" fill="#4a9900">need, old man.</text>
+</g>
+<!-- Node016a -->
+<g id="node52" class="node">
+<title>Node016a</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="806" cy="-1334.34" rx="27" ry="18"/>
+</g>
+<!-- Node014&#45;&gt;Node016a -->
+<g id="edge47" class="edge">
+<title>Node014&#45;&gt;Node016a</title>
+<path fill="none" stroke="#001d99" d="M757.15,-1715.38C771.56,-1603.24 793.79,-1430.32 802.41,-1363.26"/>
+<polygon fill="#001d99" stroke="#001d99" points="805.96,-1364.08 803.77,-1353.71 799.02,-1363.18 805.96,-1364.08"/>
+<text text-anchor="middle" x="807.88" y="-1590.13" font-family="Times,serif" font-size="14.00" fill="#001d99">Sure it is.</text>
+</g>
+<!-- Node016 -->
+<g id="node53" class="node">
+<title>Node016</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="843" cy="-641.44" rx="145.49" ry="115.44"/>
+<text text-anchor="middle" x="843" y="-705.76" font-family="Times,serif" font-size="14.00">Surely you must give me</text>
+<text text-anchor="middle" x="843" y="-688.51" font-family="Times,serif" font-size="14.00">more credit than that. I</text>
+<text text-anchor="middle" x="843" y="-671.26" font-family="Times,serif" font-size="14.00">know how the &quot;biz&quot; works.</text>
+<text text-anchor="middle" x="843" y="-654.01" font-family="Times,serif" font-size="14.00">I have traveled to New</text>
+<text text-anchor="middle" x="843" y="-636.76" font-family="Times,serif" font-size="14.00">Reno before.</text>
+<text text-anchor="middle" x="843" y="-619.51" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="843" y="-602.26" font-family="Times,serif" font-size="14.00">Okay, my name is</text>
+<text text-anchor="middle" x="843" y="-585.01" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="843" y="-567.76" font-family="Times,serif" font-size="14.00">.</text>
+</g>
+<!-- Node016a&#45;&gt;Node016 -->
+<g id="edge107" class="edge">
+<title>Node016a&#45;&gt;Node016</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M806.93,-1315.92C810.95,-1240.9 826.99,-941.41 836.27,-768.11"/>
+<polygon fill="#555555" stroke="#555555" points="839.82,-768.31 836.86,-758.14 832.83,-767.94 839.82,-768.31"/>
+</g>
+<!-- Node016&#45;&gt;Node015 -->
+<g id="edge50" class="edge">
+<title>Node016&#45;&gt;Node015</title>
+<path fill="none" stroke="#00998f" d="M827.05,-526.34C824.04,-500.32 821.33,-472.76 819.75,-447.01 815.68,-380.95 816.59,-303.96 817.72,-258.16"/>
+<polygon fill="#00998f" stroke="#00998f" points="821.24,-258.3 818.01,-248.22 814.24,-258.12 821.24,-258.3"/>
+<text text-anchor="middle" x="913.12" y="-417.34" font-family="Times,serif" font-size="14.00" fill="#00998f">That&#39;s my real name! Now</text>
+<text text-anchor="middle" x="913.12" y="-400.09" font-family="Times,serif" font-size="14.00" fill="#00998f">let me talk to the</text>
+<text text-anchor="middle" x="913.12" y="-382.84" font-family="Times,serif" font-size="14.00" fill="#00998f">Emperor!</text>
+</g>
+<!-- NodeWhirlyBegins&#45;&gt;Node035 -->
+<g id="edge108" class="edge">
+<title>NodeWhirlyBegins&#45;&gt;Node035</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3750.05,-623.09C3755.6,-576.19 3771.29,-443.64 3783.22,-342.8"/>
+<polygon fill="#555555" stroke="#555555" points="3786.81,-343.25 3784.51,-332.91 3779.86,-342.43 3786.81,-343.25"/>
+</g>
+<!-- Node021 -->
+<g id="node59" class="node">
+<title>Node021</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2792" cy="-641.44" rx="138.59" ry="66.64"/>
+<text text-anchor="middle" x="2792" y="-671.26" font-family="Times,serif" font-size="14.00">No? It saddens me, but I</text>
+<text text-anchor="middle" x="2792" y="-654.01" font-family="Times,serif" font-size="14.00">understand. Best of luck</text>
+<text text-anchor="middle" x="2792" y="-636.76" font-family="Times,serif" font-size="14.00">in your quest. If you</text>
+<text text-anchor="middle" x="2792" y="-619.51" font-family="Times,serif" font-size="14.00">change your mind, you</text>
+<text text-anchor="middle" x="2792" y="-602.26" font-family="Times,serif" font-size="14.00">know where to reach me.</text>
+</g>
+<!-- Node021a&#45;&gt;Node021 -->
+<g id="edge109" class="edge">
+<title>Node021a&#45;&gt;Node021</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3172.82,-1316.51C3152.31,-1251.28 3072.43,-1010.1 2961,-835.86 2955.23,-826.84 2952.07,-825.89 2945,-817.86 2914.23,-782.91 2880.16,-743.88 2851.99,-711.53"/>
+<polygon fill="#555555" stroke="#555555" points="2854.17,-709.7 2844.97,-704.45 2848.89,-714.29 2854.17,-709.7"/>
+</g>
+<!-- Node020&#45;&gt;Node999 -->
+<g id="edge59" class="edge">
+<title>Node020&#45;&gt;Node999</title>
+<path fill="none" stroke="#00995c" d="M2585.49,-2226.6C2584.3,-2220.1 2583.13,-2213.66 2582,-2207.38 2492.68,-1711.81 2443.27,-1591.63 2388,-1091.13 2372.71,-952.67 2408.54,-594.82 2358,-465.01 2354.22,-455.31 2346.85,-456.69 2343,-447.01 2278.22,-284.42 2415.11,-199.62 2318,-54 2309.74,-41.61 2295.75,-33.44 2282.36,-28.13"/>
+<polygon fill="#00995c" stroke="#00995c" points="2283.94,-24.63 2273.34,-24.61 2281.61,-31.23 2283.94,-24.63"/>
+<text text-anchor="middle" x="2458.5" y="-958.82" font-family="Times,serif" font-size="14.00" fill="#00995c">No, I don&#39;t think so.</text>
+</g>
+<!-- Node020&#45;&gt;Node031 -->
+<g id="edge57" class="edge">
+<title>Node020&#45;&gt;Node031</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M2709.4,-2258.52C2723.3,-2242.41 2736.42,-2225.11 2747,-2207.38 2782.38,-2148.1 2809.09,-2077.72 2828.6,-2013.29"/>
+<polygon fill="#555555" stroke="#555555" points="2832.16,-2014.59 2831.67,-2004.01 2825.45,-2012.59 2832.16,-2014.59"/>
+</g>
+<!-- Node22a -->
+<g id="node58" class="node">
+<title>Node22a</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2588" cy="-1818.67" rx="27" ry="18"/>
+</g>
+<!-- Node020&#45;&gt;Node22a -->
+<g id="edge58" class="edge">
+<title>Node020&#45;&gt;Node22a</title>
+<path fill="none" stroke="#880099" d="M2593.84,-2225.87C2593.33,-2219.62 2592.88,-2213.43 2592.5,-2207.38 2584.08,-2072.98 2586.07,-1911.88 2587.34,-1847.88"/>
+<polygon fill="#880099" stroke="#880099" points="2590.86,-1848.16 2587.57,-1838.09 2583.86,-1848.01 2590.86,-1848.16"/>
+<text text-anchor="middle" x="2669.25" y="-2111.66" font-family="Times,serif" font-size="14.00" fill="#880099">He&#39;s as good as dead.</text>
+</g>
+<!-- Node031&#45;&gt;Node999 -->
+<g id="edge75" class="edge">
+<title>Node031&#45;&gt;Node999</title>
+<path fill="none" stroke="#220099" d="M2945.63,-1643.98C2948.52,-1633.29 2951.02,-1622.59 2953,-1612.05 2976.51,-1486.78 2996.08,-579.47 2940,-465.01 2908.69,-401.11 2882.56,-390.17 2817,-362.52 2781.39,-347.49 2671.67,-371.5 2644,-344.52 2562.11,-264.64 2681.74,-179.15 2611,-89.25 2571.09,-38.54 2370.35,-24.17 2285.24,-20.32"/>
+<polygon fill="#220099" stroke="#220099" points="2285.4,-16.78 2275.26,-19.86 2285.1,-23.78 2285.4,-16.78"/>
+<text text-anchor="middle" x="3026.5" y="-636.76" font-family="Times,serif" font-size="14.00" fill="#220099">Got it. Thanks.</text>
+</g>
+<!-- Node032 -->
+<g id="node66" class="node">
+<title>Node032</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2811" cy="-963.49" rx="141.24" ry="127.63"/>
+<text text-anchor="middle" x="2811" y="-1036.44" font-family="Times,serif" font-size="14.00">Yes. It stores our</text>
+<text text-anchor="middle" x="2811" y="-1019.19" font-family="Times,serif" font-size="14.00">history, our research,</text>
+<text text-anchor="middle" x="2811" y="-1001.94" font-family="Times,serif" font-size="14.00">and projects</text>
+<text text-anchor="middle" x="2811" y="-984.69" font-family="Times,serif" font-size="14.00">possibilities for the</text>
+<text text-anchor="middle" x="2811" y="-967.44" font-family="Times,serif" font-size="14.00">future. It is far better</text>
+<text text-anchor="middle" x="2811" y="-950.19" font-family="Times,serif" font-size="14.00">than any fallible human&#45;</text>
+<text text-anchor="middle" x="2811" y="-932.94" font-family="Times,serif" font-size="14.00">yet we temper its</text>
+<text text-anchor="middle" x="2811" y="-915.69" font-family="Times,serif" font-size="14.00">suggestions with our own</text>
+<text text-anchor="middle" x="2811" y="-898.44" font-family="Times,serif" font-size="14.00">knowledge of human</text>
+<text text-anchor="middle" x="2811" y="-881.19" font-family="Times,serif" font-size="14.00">nature.</text>
+</g>
+<!-- Node031&#45;&gt;Node032 -->
+<g id="edge74" class="edge">
+<title>Node031&#45;&gt;Node032</title>
+<path fill="none" stroke="#994f00" d="M2832.93,-1634.09C2831.84,-1626.66 2830.86,-1619.3 2830,-1612.05 2809.31,-1437.14 2806.82,-1233.91 2808.01,-1102.46"/>
+<polygon fill="#994f00" stroke="#994f00" points="2811.52,-1102.58 2808.12,-1092.54 2804.52,-1102.51 2811.52,-1102.58"/>
+<text text-anchor="middle" x="2891.5" y="-1598.75" font-family="Times,serif" font-size="14.00" fill="#994f00">The Emperor is a</text>
+<text text-anchor="middle" x="2891.5" y="-1581.5" font-family="Times,serif" font-size="14.00" fill="#994f00">COMPUTER?</text>
+</g>
+<!-- Node022 -->
+<g id="node60" class="node">
+<title>Node022</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2473" cy="-404.77" rx="128.52" ry="42.25"/>
+<text text-anchor="middle" x="2473" y="-417.34" font-family="Times,serif" font-size="14.00">I am anxious to see the</text>
+<text text-anchor="middle" x="2473" y="-400.09" font-family="Times,serif" font-size="14.00">result of your attempt.</text>
+<text text-anchor="middle" x="2473" y="-382.84" font-family="Times,serif" font-size="14.00">Good day.</text>
+</g>
+<!-- Node22a&#45;&gt;Node022 -->
+<g id="edge110" class="edge">
+<title>Node22a&#45;&gt;Node022</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M2587.56,-1800.2C2585.02,-1703.57 2570.97,-1224.96 2533,-835.86 2519.63,-698.88 2494.82,-538.55 2481.68,-457.83"/>
+<polygon fill="#555555" stroke="#555555" points="2485.05,-457.75 2479.98,-448.45 2478.14,-458.88 2485.05,-457.75"/>
+</g>
+<!-- Node021&#45;&gt;Node001 -->
+<g id="edge60" class="edge">
+<title>Node021&#45;&gt;Node001</title>
+<path fill="none" stroke="#992f00" d="M2740.22,-703.74C2713.27,-739.73 2683.07,-787.53 2669,-835.86 2637.3,-944.79 2668.69,-977.68 2669,-1091.13 2669.28,-1192.92 2610.52,-1927.71 2674,-2007.3 2695.92,-2034.77 2727.96,-1998.75 2751,-2025.3 2831.03,-2117.5 2880.86,-3003.42 2845,-3120.13 2785.72,-3313.06 2761.53,-3389.54 2590,-3495.9 2497.84,-3553.04 2199.93,-3576.92 2022.87,-3586.25"/>
+<polygon fill="#992f00" stroke="#992f00" points="2022.71,-3582.81 2012.91,-3586.82 2023.08,-3589.8 2022.71,-3582.81"/>
+<text text-anchor="middle" x="2913.62" y="-2519.84" font-family="Times,serif" font-size="14.00" fill="#992f00">Sure do. I have more</text>
+<text text-anchor="middle" x="2913.62" y="-2502.59" font-family="Times,serif" font-size="14.00" fill="#992f00">questions.</text>
+</g>
+<!-- Node021&#45;&gt;Node999 -->
+<g id="edge61" class="edge">
+<title>Node021&#45;&gt;Node999</title>
+<path fill="none" stroke="#020099" d="M2812.46,-575.21C2827.76,-512.15 2837.98,-418.2 2785,-362.52 2748.13,-323.77 2584.34,-380.75 2545,-344.52 2448.84,-255.95 2592.31,-145.55 2499,-54 2469.41,-24.96 2347.7,-19.69 2284.89,-18.94"/>
+<polygon fill="#020099" stroke="#020099" points="2285.28,-15.44 2275.25,-18.86 2285.22,-22.44 2285.28,-15.44"/>
+<text text-anchor="middle" x="2578" y="-212.21" font-family="Times,serif" font-size="14.00" fill="#020099">Yep. Bye.</text>
+</g>
+<!-- Node022&#45;&gt;Node999 -->
+<g id="edge62" class="edge">
+<title>Node022&#45;&gt;Node999</title>
+<path fill="none" stroke="#2a9900" d="M2418.83,-366.1C2412.33,-359.57 2406.44,-352.33 2402,-344.52 2337.48,-230.82 2441.07,-153.26 2356,-54 2338.47,-33.55 2308.95,-24.94 2285.05,-21.37"/>
+<polygon fill="#2a9900" stroke="#2a9900" points="2285.54,-17.78 2275.19,-20.02 2284.68,-24.73 2285.54,-17.78"/>
+<text text-anchor="middle" x="2436.5" y="-212.21" font-family="Times,serif" font-size="14.00" fill="#2a9900">Good day.</text>
+</g>
+<!-- Node024&#45;&gt;Node001 -->
+<g id="edge64" class="edge">
+<title>Node024&#45;&gt;Node001</title>
+<path fill="none" stroke="#008499" d="M2096.54,-258C2119.48,-285.24 2146.84,-323.32 2160,-362.52 2226.98,-562.1 2174,-625.37 2178,-835.86 2180.16,-949.29 2187.35,-978.06 2178,-1091.13 2143.92,-1503.3 2110,-1604.77 2015,-2007.3 1991.86,-2105.34 1973.91,-2126.78 1953.25,-2225.38 1929.76,-2337.47 1962.37,-2375.05 1918,-2480.64 1896.33,-2532.21 1841,-2524.26 1841,-2580.19 1841,-3217.97 1841,-3217.97 1841,-3217.97 1841,-3341.85 1841.62,-3373.71 1862,-3495.9 1862.45,-3498.57 1862.93,-3501.27 1863.45,-3504"/>
+<polygon fill="#008499" stroke="#008499" points="1860.18,-3504.48 1865.6,-3513.58 1867.04,-3503.08 1860.18,-3504.48"/>
+<text text-anchor="middle" x="2014.88" y="-2356.96" font-family="Times,serif" font-size="14.00" fill="#008499">Well, I have more</text>
+<text text-anchor="middle" x="2014.88" y="-2339.71" font-family="Times,serif" font-size="14.00" fill="#008499">questions.</text>
+</g>
+<!-- Node024&#45;&gt;Node999 -->
+<g id="edge65" class="edge">
+<title>Node024&#45;&gt;Node999</title>
+<path fill="none" stroke="#998200" d="M2048.68,-174.46C2042.32,-138.27 2040.07,-86.55 2068.5,-54 2086.54,-33.34 2162.26,-24.61 2209.09,-21.12"/>
+<polygon fill="#998200" stroke="#998200" points="2209.31,-24.55 2219.04,-20.36 2208.82,-17.56 2209.31,-24.55"/>
+<text text-anchor="middle" x="2140.75" y="-57.95" font-family="Times,serif" font-size="14.00" fill="#998200">Yeah, poor you. Bye.</text>
+</g>
+<!-- Node025&#45;&gt;Node999 -->
+<g id="edge66" class="edge">
+<title>Node025&#45;&gt;Node999</title>
+<path fill="none" stroke="#550099" d="M2311.72,-2687.12C2364.08,-2558.57 2413.25,-2380.71 2373,-2225.38 2370.7,-2216.52 2365.65,-2216.14 2363,-2207.38 2286.25,-1953.29 2328.71,-1877.15 2315.5,-1612.05 2298.33,-1267.44 2314.02,-1180.62 2300,-835.86 2285.85,-488 2287.31,-400.35 2252,-54 2251.76,-51.62 2251.47,-49.15 2251.16,-46.68"/>
+<polygon fill="#550099" stroke="#550099" points="2254.53,-46.49 2249.72,-37.06 2247.6,-47.44 2254.53,-46.49"/>
+<text text-anchor="middle" x="2342.75" y="-1590.13" font-family="Times,serif" font-size="14.00" fill="#550099">Thanks.</text>
+</g>
+<!-- Node028 -->
+<g id="node65" class="node">
+<title>Node028</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1091" cy="-2581.19" rx="135.41" ry="30.05"/>
+<text text-anchor="middle" x="1091" y="-2585.14" font-family="Times,serif" font-size="14.00">Excellent. I hope to hear</text>
+<text text-anchor="middle" x="1091" y="-2567.89" font-family="Times,serif" font-size="14.00">of your success soon.</text>
+</g>
+<!-- Node028a&#45;&gt;Node028 -->
+<g id="edge111" class="edge">
+<title>Node028a&#45;&gt;Node028</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M1173.91,-2846.94C1171.26,-2811.59 1162.83,-2729.15 1139,-2664.49 1133.38,-2649.24 1124.99,-2633.56 1116.8,-2620.04"/>
+<polygon fill="#555555" stroke="#555555" points="1119.45,-2618.68 1111.19,-2612.05 1113.52,-2622.39 1119.45,-2618.68"/>
+</g>
+<!-- Node029&#45;&gt;Node998 -->
+<g id="edge72" class="edge">
+<title>Node029&#45;&gt;Node998</title>
+<path fill="none" stroke="#99008a" d="M992.94,-2822.99C973.04,-2764.51 937.2,-2659.2 920.3,-2609.53"/>
+<polygon fill="#99008a" stroke="#99008a" points="923.34,-2608.6 916.81,-2600.26 916.72,-2610.86 923.34,-2608.6"/>
+<text text-anchor="middle" x="965.5" y="-2633.19" font-family="Times,serif" font-size="14.00" fill="#99008a">Good day.</text>
+</g>
+<!-- Node028&#45;&gt;Node001 -->
+<g id="edge70" class="edge">
+<title>Node028&#45;&gt;Node001</title>
+<path fill="none" stroke="#003199" d="M1149.73,-2608.65C1172.66,-2622.05 1196.81,-2640.6 1211,-2664.49 1314.95,-2839.52 1137.69,-2955.74 1257.75,-3120.13 1269.55,-3136.28 1285.72,-3123.18 1299,-3138.13 1409.3,-3262.31 1284.05,-3384.23 1407,-3495.9 1456.78,-3541.11 1628.46,-3567.05 1752.29,-3580.27"/>
+<polygon fill="#003199" stroke="#003199" points="1751.68,-3583.83 1762,-3581.39 1752.42,-3576.86 1751.68,-3583.83"/>
+<text text-anchor="middle" x="1331.62" y="-3106.08" font-family="Times,serif" font-size="14.00" fill="#003199">You will. I have more</text>
+<text text-anchor="middle" x="1331.62" y="-3088.83" font-family="Times,serif" font-size="14.00" fill="#003199">questions.</text>
+</g>
+<!-- Node028&#45;&gt;Node999 -->
+<g id="edge71" class="edge">
+<title>Node028&#45;&gt;Node999</title>
+<path fill="none" stroke="#5d9900" d="M1091.37,-2550.97C1092.57,-2434.5 1094.73,-1992.21 1064,-1630.05 1061.32,-1598.52 1056.23,-1591.12 1054,-1559.55 1039.91,-1359.86 1022.37,-1306.8 1054,-1109.13 1129.39,-638.02 1031.38,-405.07 1389,-89.25 1451.22,-34.3 2051.65,-21.82 2209.27,-19.48"/>
+<polygon fill="#5d9900" stroke="#5d9900" points="2208.89,-22.97 2218.83,-19.33 2208.79,-15.97 2208.89,-22.97"/>
+<text text-anchor="middle" x="1102" y="-1329.67" font-family="Times,serif" font-size="14.00" fill="#5d9900">You will. Bye.</text>
+</g>
+<!-- Node032&#45;&gt;Node999 -->
+<g id="edge76" class="edge">
+<title>Node032&#45;&gt;Node999</title>
+<path fill="none" stroke="#0b9900" d="M2698.27,-886.22C2676.88,-866.48 2657.12,-843.46 2644,-817.86 2620.84,-772.65 2637.2,-400.08 2603,-362.52 2573.48,-330.09 2536.26,-376.24 2506,-344.52 2426.96,-261.65 2542.64,-178.59 2471,-89.25 2425.96,-33.08 2336.43,-20.98 2285.25,-18.87"/>
+<polygon fill="#0b9900" stroke="#0b9900" points="2285.43,-15.35 2275.33,-18.55 2285.22,-22.35 2285.43,-15.35"/>
+<text text-anchor="middle" x="2699.5" y="-417.34" font-family="Times,serif" font-size="14.00" fill="#0b9900">I ... see. Well, thanks</text>
+<text text-anchor="middle" x="2699.5" y="-400.09" font-family="Times,serif" font-size="14.00" fill="#0b9900">for your time. I have a</text>
+<text text-anchor="middle" x="2699.5" y="-382.84" font-family="Times,serif" font-size="14.00" fill="#0b9900">village to rescue.</text>
+</g>
+<!-- Node001a&#45;&gt;Node001 -->
+<g id="edge113" class="edge">
+<title>Node001a&#45;&gt;Node001</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M2413.1,-4121.18C2393.36,-4055.34 2313.34,-3815.47 2162,-3689.58 2120.81,-3655.32 2066.61,-3633 2017.21,-3618.61"/>
+<polygon fill="#555555" stroke="#555555" points="2018.33,-3615 2007.75,-3615.66 2016.43,-3621.74 2018.33,-3615"/>
+</g>
+<!-- Node999b&#45;&gt;Node999 -->
+<g id="edge112" class="edge">
+<title>Node999b&#45;&gt;Node999</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3331.74,-3084.02C3334.39,-3025.39 3344.24,-2827.21 3363,-2664.49 3372.48,-2582.32 3382.82,-2562.85 3392,-2480.64 3409.96,-2319.82 3416,-2279.16 3416,-2117.34 3416,-2117.34 3416,-2117.34 3416,-962.49 3416,-756.37 3746.86,-201.62 3603,-54 3579.36,-29.74 2502.41,-20.81 2285.01,-19.26"/>
+<polygon fill="#555555" stroke="#555555" points="2285.2,-15.75 2275.18,-19.18 2285.15,-22.75 2285.2,-15.75"/>
+</g>
+<!-- Node039&#45;&gt;Node001 -->
+<g id="edge86" class="edge">
+<title>Node039&#45;&gt;Node001</title>
+<path fill="none" stroke="#009799" d="M2575.95,-2930.83C2554.16,-2985.21 2524.32,-3065.55 2506.5,-3138.13 2468.22,-3294.09 2568.03,-3380.84 2456,-3495.9 2397.39,-3556.09 2171.34,-3578.55 2022.4,-3586.88"/>
+<polygon fill="#009799" stroke="#009799" points="2022.61,-3583.42 2012.82,-3587.46 2022.99,-3590.41 2022.61,-3583.42"/>
+<text text-anchor="middle" x="2584.75" y="-3220.92" font-family="Times,serif" font-size="14.00" fill="#009799">Can I just ask another</text>
+<text text-anchor="middle" x="2584.75" y="-3203.67" font-family="Times,serif" font-size="14.00" fill="#009799">question?</text>
+</g>
+<!-- Node039&#45;&gt;Node203108 -->
+<g id="edge85" class="edge">
+<title>Node039&#45;&gt;Node203108</title>
+<path fill="none" stroke="#99006a" d="M2592.03,-2798.56C2587.23,-2747.83 2588.99,-2678.27 2623.25,-2629.24 2638.17,-2607.89 2665.35,-2595.98 2687.72,-2589.48"/>
+<polygon fill="#99006a" stroke="#99006a" points="2688.46,-2592.65 2697.24,-2586.71 2686.68,-2585.88 2688.46,-2592.65"/>
+<text text-anchor="middle" x="2686.38" y="-2633.19" font-family="Times,serif" font-size="14.00" fill="#99006a">How do I do that?</text>
+</g>
+<!-- Node040&#45;&gt;Node001 -->
+<g id="edge87" class="edge">
+<title>Node040&#45;&gt;Node001</title>
+<path fill="none" stroke="#996e00" d="M1787.05,-2479.44C1790.03,-2535.57 1783.09,-2599.53 1748,-2646.49 1733.86,-2665.42 1711.58,-2645.17 1698,-2664.49 1595.36,-2810.54 1672.07,-2889.52 1698,-3066.13 1726.97,-3263.44 1744.69,-3314.25 1827,-3495.9 1829.12,-3500.57 1831.43,-3505.28 1833.87,-3509.99"/>
+<polygon fill="#996e00" stroke="#996e00" points="1831.22,-3511.46 1839.04,-3518.6 1837.39,-3508.14 1831.22,-3511.46"/>
+<text text-anchor="middle" x="1762.5" y="-2869.26" font-family="Times,serif" font-size="14.00" fill="#996e00">Okay. I have other</text>
+<text text-anchor="middle" x="1762.5" y="-2852.01" font-family="Times,serif" font-size="14.00" fill="#996e00">questions.</text>
+</g>
+<!-- Node040&#45;&gt;Node999 -->
+<g id="edge88" class="edge">
+<title>Node040&#45;&gt;Node999</title>
+<path fill="none" stroke="#420099" d="M1826.38,-2237.29C1903.35,-2086.71 2031.55,-1811.84 2084,-1559.55 2100.37,-1480.8 2063.56,-905.54 2103.75,-835.86 2111.38,-822.64 2125.46,-831.14 2133,-817.86 2157.98,-773.86 2172.35,-399.67 2138,-362.52 2103.35,-325.03 1943.65,-382 1909,-344.52 1831.99,-261.21 1838.89,-178.45 1909,-89.25 1945.79,-42.45 2129.02,-25.98 2209.26,-20.95"/>
+<polygon fill="#420099" stroke="#420099" points="2209.1,-24.41 2218.87,-20.31 2208.68,-17.42 2209.1,-24.41"/>
+<text text-anchor="middle" x="2140.12" y="-958.82" font-family="Times,serif" font-size="14.00" fill="#420099">Okay. Bye.</text>
+</g>
+<!-- Node041&#45;&gt;Node001 -->
+<g id="edge89" class="edge">
+<title>Node041&#45;&gt;Node001</title>
+<path fill="none" stroke="#009915" d="M2141.85,-2426.31C2048.82,-2508.14 1909.31,-2634.04 1896,-2664.49 1831.15,-2812.88 1862.67,-3300.66 1879.14,-3502.78"/>
+<polygon fill="#009915" stroke="#009915" points="1875.72,-3502.97 1880.03,-3512.65 1882.7,-3502.39 1875.72,-3502.97"/>
+<text text-anchor="middle" x="1960.5" y="-2869.26" font-family="Times,serif" font-size="14.00" fill="#009915">Okay. I have other</text>
+<text text-anchor="middle" x="1960.5" y="-2852.01" font-family="Times,serif" font-size="14.00" fill="#009915">questions.</text>
+</g>
+<!-- Node041&#45;&gt;Node999 -->
+<g id="edge90" class="edge">
+<title>Node041&#45;&gt;Node999</title>
+<path fill="none" stroke="#990018" d="M2224.24,-2261.86C2222.44,-2027.02 2218.58,-1377.06 2225.75,-835.86 2229.85,-526.49 2242.39,-151.38 2246.01,-47.08"/>
+<polygon fill="#990018" stroke="#990018" points="2249.54,-47.36 2246.39,-37.24 2242.54,-47.11 2249.54,-47.36"/>
+<text text-anchor="middle" x="2262.12" y="-958.82" font-family="Times,serif" font-size="14.00" fill="#990018">Okay. Bye.</text>
+</g>
+<!-- SpeechCheck -->
+<g id="node72" class="node">
+<title>SpeechCheck</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="4148" cy="-4538.95" rx="27" ry="18"/>
+</g>
+<!-- Node89 -->
+<g id="node73" class="node">
+<title>Node89</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3720" cy="-2581.19" rx="27" ry="18"/>
+</g>
+<!-- Node89&#45;&gt;Node008 -->
+<g id="edge103" class="edge">
+<title>Node89&#45;&gt;Node008</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3710.51,-2563.93C3693.99,-2535.62 3659,-2475.66 3630.63,-2427.05"/>
+<polygon fill="#555555" stroke="#555555" points="3633.29,-2425.67 3625.23,-2418.8 3627.25,-2429.2 3633.29,-2425.67"/>
+</g>
+<!-- Node89&#45;&gt;Node009 -->
+<g id="edge104" class="edge">
+<title>Node89&#45;&gt;Node009</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3728.61,-2563.72C3757.52,-2508.43 3852.61,-2326.55 3912.12,-2212.73"/>
+<polygon fill="#555555" stroke="#555555" points="3915.52,-2214.78 3917.06,-2204.3 3909.32,-2211.54 3915.52,-2214.78"/>
+</g>
+<!-- Node014a -->
+<g id="node74" class="node">
+<title>Node014a</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="744" cy="-2353.01" rx="27" ry="18"/>
+</g>
+<!-- Node014a&#45;&gt;Node014 -->
+<g id="edge105" class="edge">
+<title>Node014a&#45;&gt;Node014</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M744,-2334.6C744,-2273.51 744,-2065.48 744,-1933.27"/>
+<polygon fill="#555555" stroke="#555555" points="747.5,-1933.31 744,-1923.31 740.5,-1933.31 747.5,-1933.31"/>
+</g>
+<!-- Node008a -->
+<g id="node75" class="node">
+<title>Node008a</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3588" cy="-2581.19" rx="27" ry="18"/>
+</g>
+<!-- Node008a&#45;&gt;Node008 -->
+<g id="edge114" class="edge">
+<title>Node008a&#45;&gt;Node008</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M3588,-2562.82C3588,-2534.84 3588,-2478.17 3588,-2430.91"/>
+<polygon fill="#555555" stroke="#555555" points="3591.5,-2431.06 3588,-2421.06 3584.5,-2431.06 3591.5,-2431.06"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"checkPartyMembersNearDoor":"if (party_member_obj(16777278) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777278)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777376) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777376)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777377) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777377)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777305) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777305)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777313) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777313)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777323) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777323)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777352) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777352)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777378) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777378)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777368) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777368)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777379) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777379)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777380) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777380)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777295) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777295)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777381) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777381)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777407) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777407)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777411) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777411)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777412) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777412)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777413) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777413)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777481) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777481)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777558) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777558)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777600) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777600)) <= 5) then begin\n    return 1;\n  end\nend\nreturn 0;\n","old_pickup_p_proc":"if (source_obj == dude_obj) then begin\n  set_local_var(5, 2);\nend\n","pickup_p_proc":"if (source_obj == dude_obj) then begin\n  if (3 == 1) then begin\n    attack_complex(source_obj, 0, 1, 0, 0, 30000, 0, 0);\n  end\n  else begin\n    if (3 == 2) then begin\n      float_msg(self_obj, message_str(14, random(3325, 3329)), 0);\n      if (7 > -1) then begin\n        if (local_var(7) >= 1) then begin\n          attack_complex(source_obj, 0, 1, 0, 0, 30000, 0, 0);\n        end\n        set_local_var(7, local_var(7) + 1);\n      end\n    end\n    else begin\n      if (3 == 3) then begin\n        float_msg(self_obj, message_str(14, random(3050, 3064)), 0);\n        if (7 > -1) then begin\n          if (local_var(7) >= 1) then begin\n            attack_complex(source_obj, 0, 1, 0, 0, 30000, 0, 0);\n          end\n          set_local_var(7, local_var(7) + 1);\n        end\n      end\n      else begin\n        if (3 == 4) then begin\n          animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(self_obj), rotation_to_tile(tile_num(source_obj), tile_num(self_obj)), random(8, 14)), 1);\n        end\n      end\n    end\n  end\nend\nif (-1 == 1) then begin\n  call old_pickup_p_proc;\nend\n","start":"[]","timed_event_p_proc":"if (fixed_param == 1) then begin\n  if (obj_can_see_obj(self_obj, dude_obj)) then begin\n    if (local_var(9) < 3) then begin\n      call doGuardsMessage;\n    end\n    else begin\n      call doGuardsAttack;\n    end\n    set_local_var(9, local_var(9) + 1);\n    add_timer_event(self_obj, game_ticks(10), 1);\n  end\n  else begin\n    set_local_var(10, 0);\n  end\nend\n","critter_p_proc":"if ((local_var(5) != 0) and obj_can_see_obj(self_obj, dude_obj)) then begin\n  set_local_var(5, 1);\n  if (critter_is_fleeing(self_obj)) then begin\n    if (anim_busy(self_obj) == 0) then begin\n      if ((tile_distance_objs(self_obj, dude_obj) < 8) or obj_can_see_obj(self_obj, dude_obj)) then begin\n        if (anim_busy(self_obj) == 0) then begin\n          GVar10 := rotation_to_tile(tile_num(dude_obj), tile_num(self_obj));\n          animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(self_obj), GVar10, random(3, 10)), 1);\n          GVar10 := (GVar10 + 1) % 6;\n          while((anim_busy(self_obj) == 0) and (GVar10 != rotation_to_tile(tile_num(dude_obj), tile_num(self_obj)))) do begin\n            debug_msg(\"flee loop: rot == \" + GVar10);\n            animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(self_obj), GVar10, random(3, 10)), 1);\n            GVar10 := (GVar10 + 1) % 6;\n          end\n        end\n      end\n    end\n  end\n  else begin\n    attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\n  end\nend\n","talk_p_proc":"GVar20 := 0;\nGVar21 := 1;\nGVar22 := 40;\nset_global_var(37, 0);\nset_global_var(38, 0);\nset_global_var(39, 0);\nset_global_var(40, 0);\nset_global_var(41, 0);\nset_global_var(42, 0);\nset_global_var(43, 0);\nset_global_var(44, 0);\nset_global_var(45, 0);\nif (global_var(0) >= 1000) then begin\n  set_global_var(37, 1);\nend\nelse begin\n  if (global_var(0) >= 750) then begin\n    set_global_var(38, 1);\n  end\n  else begin\n    if (global_var(0) >= 500) then begin\n      set_global_var(39, 1);\n    end\n    else begin\n      if (global_var(0) >= 250) then begin\n        set_global_var(40, 1);\n      end\n      else begin\n        if (global_var(0) > -250) then begin\n          set_global_var(41, 1);\n        end\n        else begin\n          if (global_var(0) > -500) then begin\n            set_global_var(42, 1);\n          end\n          else begin\n            if (global_var(0) > -750) then begin\n              set_global_var(43, 1);\n            end\n            else begin\n              if (global_var(0) > -1000) then begin\n                set_global_var(44, 1);\n              end\n              else begin\n                set_global_var(45, 1);\n              end\n            end\n          end\n        end\n      end\n    end\n  end\nend\nif (local_var(2) == 0) then begin\n  set_local_var(2, 1);\n  set_local_var(3, (get_critter_stat(dude_obj, 3) - get_critter_stat(self_obj, 3)) * 5);\n  debug_msg(\"Base Reaction == \" + local_var(3));\nend\nGVar19 := 0;\nset_local_var(0, 0);\ndebug_msg(\"Start Reaction == \" + local_var(0));\nif (GVar24 >= 0) then begin\n  GVar24 := GVar24 / 1000;\nend\nelse begin\n  GVar24 := -1 * (-1 * GVar24 / 1000);\nend\nif (global_var(61) >= 0) then begin\n  GVar23 := global_var(61) / 2;\nend\nelse begin\n  GVar23 := -1 * (-1 * global_var(61) / 2);\nend\nif (has_trait(2, dude_obj, 13)) then begin\n  if (get_critter_stat(dude_obj, 34) == get_critter_stat(self_obj, 34)) then begin\n    GVar19 := GVar19 + -20;\n  end\n  else begin\n    GVar19 := GVar19 + 20;\n  end\n  debug_msg(\"Sex Appeal Bonus == \" + GVar19);\nend\nelse begin\n  debug_msg(\"Sex Appeal Bonus == 0\");\nend\nif (GVar20 == 1) then begin\n  GVar19 := GVar19 - GVar24;\n  debug_msg(\"Karma Reaction Bonus == \" + GVar19);\n  GVar19 := GVar19 - GVar23;\n  debug_msg(\"Town Rep Bonus == \" + GVar19);\n  set_global_var(37, 0);\n  set_global_var(38, 0);\n  set_global_var(39, 0);\n  set_global_var(40, 0);\n  set_global_var(41, 0);\n  set_global_var(42, 0);\n  set_global_var(43, 0);\n  set_global_var(44, 0);\n  set_global_var(45, 0);\n  if (global_var(0) >= 1000) then begin\n    set_global_var(37, 1);\n  end\n  else begin\n    if (global_var(0) >= 750) then begin\n      set_global_var(38, 1);\n    end\n    else begin\n      if (global_var(0) >= 500) then begin\n        set_global_var(39, 1);\n      end\n      else begin\n        if (global_var(0) >= 250) then begin\n          set_global_var(40, 1);\n        end\n        else begin\n          if (global_var(0) > -250) then begin\n            set_global_var(41, 1);\n          end\n          else begin\n            if (global_var(0) > -500) then begin\n              set_global_var(42, 1);\n            end\n            else begin\n              if (global_var(0) > -750) then begin\n                set_global_var(43, 1);\n              end\n              else begin\n                if (global_var(0) > -1000) then begin\n                  set_global_var(44, 1);\n                end\n                else begin\n                  set_global_var(45, 1);\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\n  if (global_var(37) == 1) then begin\n    GVar19 := GVar19 - 20;\n  end\n  else begin\n    if (global_var(38) == 1) then begin\n      GVar19 := GVar19 - 15;\n    end\n    else begin\n      if (global_var(39) == 1) then begin\n        GVar19 := GVar19 - 10;\n      end\n      else begin\n        if (global_var(40) == 1) then begin\n          GVar19 := GVar19 - 5;\n        end\n        else begin\n          if (global_var(41) == 1) then begin\n            GVar19 := GVar19 - 0;\n          end\n          else begin\n            if (global_var(42) == 1) then begin\n              GVar19 := GVar19 - -5;\n            end\n            else begin\n              if (global_var(43) == 1) then begin\n                GVar19 := GVar19 - -10;\n              end\n              else begin\n                if (global_var(44) == 1) then begin\n                  GVar19 := GVar19 - -15;\n                end\n                else begin\n                  GVar19 := GVar19 - -20;\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\n  debug_msg(\"Bad Person Reaction Bonus == \" + GVar19);\nend\nelse begin\n  GVar19 := GVar19 + GVar24;\n  debug_msg(\"Karma Reaction Bonus == \" + GVar19);\n  GVar19 := GVar19 + GVar23;\n  debug_msg(\"Town Rep Bonus == \" + GVar19);\n  set_global_var(37, 0);\n  set_global_var(38, 0);\n  set_global_var(39, 0);\n  set_global_var(40, 0);\n  set_global_var(41, 0);\n  set_global_var(42, 0);\n  set_global_var(43, 0);\n  set_global_var(44, 0);\n  set_global_var(45, 0);\n  if (global_var(0) >= 1000) then begin\n    set_global_var(37, 1);\n  end\n  else begin\n    if (global_var(0) >= 750) then begin\n      set_global_var(38, 1);\n    end\n    else begin\n      if (global_var(0) >= 500) then begin\n        set_global_var(39, 1);\n      end\n      else begin\n        if (global_var(0) >= 250) then begin\n          set_global_var(40, 1);\n        end\n        else begin\n          if (global_var(0) > -250) then begin\n            set_global_var(41, 1);\n          end\n          else begin\n            if (global_var(0) > -500) then begin\n              set_global_var(42, 1);\n            end\n            else begin\n              if (global_var(0) > -750) then begin\n                set_global_var(43, 1);\n              end\n              else begin\n                if (global_var(0) > -1000) then begin\n                  set_global_var(44, 1);\n                end\n                else begin\n                  set_global_var(45, 1);\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\n  if (global_var(37) == 1) then begin\n    GVar19 := GVar19 + 20;\n  end\n  else begin\n    if (global_var(38) == 1) then begin\n      GVar19 := GVar19 + 15;\n    end\n    else begin\n      if (global_var(39) == 1) then begin\n        GVar19 := GVar19 + 10;\n      end\n      else begin\n        if (global_var(40) == 1) then begin\n          GVar19 := GVar19 + 5;\n        end\n        else begin\n          if (global_var(41) == 1) then begin\n            GVar19 := GVar19 + 0;\n          end\n          else begin\n            if (global_var(42) == 1) then begin\n              GVar19 := GVar19 + -5;\n            end\n            else begin\n              if (global_var(43) == 1) then begin\n                GVar19 := GVar19 + -10;\n              end\n              else begin\n                if (global_var(44) == 1) then begin\n                  GVar19 := GVar19 + -15;\n                end\n                else begin\n                  GVar19 := GVar19 + -20;\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\n  debug_msg(\"Good Person Reaction Bonus == \" + GVar19);\nend\nif (GVar21 == 0) then begin\n  if (global_var(11) == 1) then begin\n    GVar19 := GVar19 + (2 * -25);\n  end\nend\nelse begin\n  if (GVar21 == 1) then begin\n    if (global_var(11) == 1) then begin\n      GVar19 := GVar19 + -25;\n    end\n  end\n  else begin\n    if (GVar21 == 3) then begin\n      if (global_var(11) == 1) then begin\n        GVar19 := GVar19 - -25;\n      end\n    end\n  end\nend\ndebug_msg(\"Slaver + Aligned Reaction == \" + GVar19);\nGVar19 := GVar19 + (10 * has_trait(0, dude_obj, 10));\ndebug_msg(\"Presence Reaction == \" + GVar19);\nif (global_var(1) >= 2) then begin\n  GVar19 := GVar19 + -30;\nend\ndebug_msg(\"Childkiller Reaction == \" + GVar19);\nset_local_var(0, local_var(3) + GVar19);\ndebug_msg(\"Initial Reaction == \" + local_var(0));\nif (local_var(10) == 0) then begin\n  if ((global_var(361) bwand 1) != 0) then begin\n    start_gdialog(856, self_obj, 4, -1, -1);\n    gsay_start;\n    call Node026;\n    gsay_end;\n    end_dialogue;\n  end\n  else begin\n    if (local_var(8) == 2) then begin\n      call Node036;\n    end\n    else begin\n      if (local_var(8) == 1) then begin\n        start_gdialog(856, self_obj, 4, -1, -1);\n        gsay_start;\n        call Node037;\n        gsay_end;\n        end_dialogue;\n      end\n      else begin\n        if ((global_var(361) bwand 4) != 0) then begin\n          start_gdialog(856, self_obj, 4, -1, -1);\n          gsay_start;\n          call Node030;\n          gsay_end;\n          end_dialogue;\n        end\n        else begin\n          if (global_var(426) == 1) then begin\n            call Node038;\n          end\n          else begin\n            if ((global_var(427) == 8) and (global_var(519) == 2)) then begin\n              start_gdialog(856, self_obj, 4, -1, -1);\n              gsay_start;\n              call Node033;\n              gsay_end;\n              end_dialogue;\n            end\n            else begin\n              if (global_var(519) == 8) then begin\n                start_gdialog(856, self_obj, 4, -1, -1);\n                gsay_start;\n                call Node034;\n                gsay_end;\n                end_dialogue;\n              end\n              else begin\n                if ((global_var(519) == 2) or (global_var(519) == 4)) then begin\n                  start_gdialog(856, self_obj, 4, -1, -1);\n                  gsay_start;\n                  call Node035;\n                  gsay_end;\n                  end_dialogue;\n                end\n                else begin\n                  if (global_var(519) == 1) then begin\n                    start_gdialog(856, self_obj, 4, -1, -1);\n                    gsay_start;\n                    call Node018;\n                    gsay_end;\n                    end_dialogue;\n                  end\n                  else begin\n                    start_gdialog(856, self_obj, 4, -1, -1);\n                    gsay_start;\n                    call Node001;\n                    gsay_end;\n                    end_dialogue;\n                  end\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\nend\nelse begin\n  call doGuardsMessage;\nend\nif (GVar26 == 1) then begin\n  GVar26 := 0;\n  set_local_var(10, 1);\n  add_timer_event(self_obj, 0, 1);\nend\nif (GVar28 == 1) then begin\n  GVar28 := 0;\n  set_global_var(361, global_var(361) bwor 4194304);\nend\nset_local_var(4, 1);\n","destroy_p_proc":"if (source_obj == dude_obj) then begin\n  set_global_var(5, global_var(5) + 1);\n  if (((global_var(4) + global_var(5)) >= 25) and ((global_var(4) > (3 * global_var(5))) or (global_var(2) == 1)) and (global_var(1) == 0)) then begin\n    set_global_var(2, 1);\n    set_global_var(3, 0);\n  end\n  if (metarule(51, self_obj) == 2) then begin\n    if (source_obj == dude_obj) then begin\n      set_global_var(2, 0);\n      set_global_var(1, global_var(1) + 1);\n      set_global_var(0, global_var(0) + -15);\n      debug_msg(\"Player gains \" + -15 + \" Karma Points.\");\n      set_global_var(37, 0);\n      set_global_var(38, 0);\n      set_global_var(39, 0);\n      set_global_var(40, 0);\n      set_global_var(41, 0);\n      set_global_var(42, 0);\n      set_global_var(43, 0);\n      set_global_var(44, 0);\n      set_global_var(45, 0);\n      if (global_var(0) >= 1000) then begin\n        set_global_var(37, 1);\n      end\n      else begin\n        if (global_var(0) >= 750) then begin\n          set_global_var(38, 1);\n        end\n        else begin\n          if (global_var(0) >= 500) then begin\n            set_global_var(39, 1);\n          end\n          else begin\n            if (global_var(0) >= 250) then begin\n              set_global_var(40, 1);\n            end\n            else begin\n              if (global_var(0) > -250) then begin\n                set_global_var(41, 1);\n              end\n              else begin\n                if (global_var(0) > -500) then begin\n                  set_global_var(42, 1);\n                end\n                else begin\n                  if (global_var(0) > -750) then begin\n                    set_global_var(43, 1);\n                  end\n                  else begin\n                    if (global_var(0) > -1000) then begin\n                      set_global_var(44, 1);\n                    end\n                    else begin\n                      set_global_var(45, 1);\n                    end\n                  end\n                end\n              end\n            end\n          end\n        end\n      end\n      set_global_var(61, global_var(61) + -8);\n      debug_msg(\"Added \" + -8 + \" to Town Rep\");\n    end\n  end\n  if (((global_var(4) + global_var(5)) >= 25) and ((global_var(5) > (2 * global_var(4))) or (global_var(3) == 1))) then begin\n    set_global_var(3, 1);\n    set_global_var(2, 0);\n  end\n  set_global_var(0, global_var(0) + -10);\n  debug_msg(\"Player gains \" + -10 + \" Karma Points.\");\n  set_global_var(37, 0);\n  set_global_var(38, 0);\n  set_global_var(39, 0);\n  set_global_var(40, 0);\n  set_global_var(41, 0);\n  set_global_var(42, 0);\n  set_global_var(43, 0);\n  set_global_var(44, 0);\n  set_global_var(45, 0);\n  if (global_var(0) >= 1000) then begin\n    set_global_var(37, 1);\n  end\n  else begin\n    if (global_var(0) >= 750) then begin\n      set_global_var(38, 1);\n    end\n    else begin\n      if (global_var(0) >= 500) then begin\n        set_global_var(39, 1);\n      end\n      else begin\n        if (global_var(0) >= 250) then begin\n          set_global_var(40, 1);\n        end\n        else begin\n          if (global_var(0) > -250) then begin\n            set_global_var(41, 1);\n          end\n          else begin\n            if (global_var(0) > -500) then begin\n              set_global_var(42, 1);\n            end\n            else begin\n              if (global_var(0) > -750) then begin\n                set_global_var(43, 1);\n              end\n              else begin\n                if (global_var(0) > -1000) then begin\n                  set_global_var(44, 1);\n                end\n                else begin\n                  set_global_var(45, 1);\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\n  set_global_var(61, global_var(61) + -5);\n  debug_msg(\"Added \" + -5 + \" to Town Rep\");\nend\nset_global_var(361, global_var(361) bwor 2);\n","look_at_p_proc":"script_overrides;\nif (local_var(4) == 0) then begin\n  display_msg(message_str(856, 100));\nend\nelse begin\n  display_msg(message_str(856, 101));\nend\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(856, 102));\n","use_skill_on_p_proc":"[]","damage_p_proc":"if (source_obj == dude_obj) then begin\n  set_local_var(6, 1);\n  call doGuardsAttack;\nend\n","map_enter_p_proc":"GVar25 := 0;\ncritter_add_trait(self_obj, 1, 6, 167);\ncritter_add_trait(self_obj, 1, 5, 153);\n","map_exit_p_proc":"[]","combat_p_proc":"if (not(critter_is_fleeing(self_obj))) then begin\n  critter_set_flee_state(self_obj, 1);\nend\n","Node998":"set_local_var(5, 2);\nGVar26 := 1;\n","Node999":"[]","Node001":"if (local_var(1) >= 2) then begin\n  gsay_reply(856, 103);\nend\nelse begin\n  if (local_var(1) == 0) then begin\n    gsay_reply(856, 105);\n  end\n  else begin\n    gsay_reply(856, 104);\n  end\nend\ngiq_option(-3, 856, 106, Node234, 50);\nif (local_var(13) == 0) then begin\n  giq_option(4, 856, 107, Node005, 50);\nend\ngiq_option(4, 856, 108, Node006, 50);\nif (global_var(494) == 4) then begin\n  giq_option(4, 856, 109, Node019, 50);\nend\nif (((global_var(363) bwand 1) != 0) and not(local_var(11))) then begin\n  giq_option(4, 856, 110, Node2539, 50);\nend\nif ((local_var(4) != 0) and not((global_var(361) bwand 2048) != 0)) then begin\n  giq_option(4, 856, 111, Node203108, 50);\nend\nif (global_var(426) == 8) then begin\n  giq_option(4, 856, 112, Node027, 50);\nend\ngiq_option(4, 856, 113, Node999, 50);\n","Node002":"GVar28 := 1;\nset_global_var(361, global_var(361) bwor 2048);\ngsay_reply(856, 114);\ngiq_option(1, 856, 115, Node999, 50);\n","Node003":"gsay_reply(856, 116);\ngiq_option(1, 856, 117, Node999, 50);\n","Node004":"gsay_reply(856, 118);\ngiq_option(1, 856, 119, Node999, 50);\n","Node005":"set_local_var(13, 1);\ngsay_reply(856, 120);\nif (global_var(519) < 2) then begin\n  giq_option(4, 856, 121, Node007, 50);\nend\ngiq_option(4, 856, message_str(856, 122) + \" \" + obj_name(dude_obj) + message_str(856, 211), Node89, 50);\ngiq_option(4, 856, 123, Node010, 51);\ngiq_option(4, 856, 124, Node999, 50);\n","Node006":"gsay_reply(856, 125);\ngiq_option(4, 856, 126, Node011, 50);\ngiq_option(4, 856, 127, Node012, 50);\ngiq_option(4, 856, 128, Node013, 50);\ngiq_option(4, 856, 129, Node999, 50);\n","Node007":"gsay_reply(856, 130);\ngiq_option(4, 856, message_str(856, 131) + \" \" + obj_name(dude_obj) + message_str(856, 212), Node008, 50);\nif (global_var(232) > 0) then begin\n  giq_option(4, 856, message_str(856, 132) + \" \" + message_str(353, 500 + global_var(232)) + message_str(856, 212), Node014a, 49);\nend\ngiq_option(4, 856, 133, Node015, 50);\ngiq_option(4, 856, 134, Node999, 50);\n","Node008":"gsay_reply(856, 135);\ngiq_option(4, 856, 136, Node017, 50);\ngiq_option(4, 856, 137, Node018, 50);\n","Node009":"gsay_reply(856, 138);\ngiq_option(4, 856, 139, Node999, 50);\n","Node010":"set_local_var(8, 2);\ngsay_reply(856, 140);\ngiq_option(4, 856, 141, NodeCallGuards, 50);\ngiq_option(4, 856, 142, Node999, 50);\n","Node011":"gsay_reply(856, 143);\ngiq_option(4, 856, 144, Node001, 50);\ngiq_option(4, 856, 145, Node999, 50);\n","Node012":"gsay_reply(856, 146);\ngiq_option(4, 856, 147, Node001, 50);\ngiq_option(4, 856, 148, Node999, 50);\n","Node013":"gsay_reply(856, 149);\ngiq_option(4, 856, 150, Node023, 50);\ngiq_option(4, 856, 151, Node999, 50);\n","Node014":"gsay_reply(856, 152);\ngiq_option(4, 856, 153, Node016a, 51);\ngiq_option(4, 856, message_str(856, 154) + \" \" + obj_name(dude_obj) + message_str(856, 212), Node008, 50);\ngiq_option(4, 856, 155, Node010, 51);\n","Node015":"set_local_var(8, 1);\ngsay_reply(856, 156);\ngiq_option(4, 856, 157, Node999, 50);\n","Node016":"gsay_reply(856, 158);\ngiq_option(4, 856, message_str(856, 159) + \" \" + obj_name(dude_obj) + message_str(856, 212), Node008, 50);\ngiq_option(4, 856, 160, Node015, 50);\n","Node017":"if (global_var(427) == 8) then begin\n  gsay_reply(856, 202);\nend\nelse begin\n  gsay_reply(856, 161);\nend\ngiq_option(4, 856, 162, NodeWhirlyBegins, 50);\ngiq_option(4, 856, 163, Node018, 50);\n","Node018":"gsay_reply(856, 164);\ngiq_option(4, 856, 165, Node021a, 50);\ngiq_option(4, 856, 166, Node017, 50);\n","Node019":"gsay_reply(856, 167);\ngiq_option(4, 856, 168, Node001, 50);\ngiq_option(4, 856, 169, Node999, 50);\n","Node020":"if (not((global_var(361) bwand 4) != 0)) then begin\n  gsay_reply(856, 170);\n  giq_option(4, 856, 171, Node22a, 50);\n  giq_option(4, 856, 172, Node999, 50);\nend\nelse begin\n  call Node031;\nend\n","Node021":"gsay_reply(856, 173);\ngiq_option(4, 856, 174, Node001, 50);\ngiq_option(4, 856, 175, Node999, 50);\n","Node022":"gsay_reply(856, 176);\ngiq_option(4, 856, 177, Node999, 50);\n","Node023":"gsay_reply(856, 178);\ngiq_option(4, 856, 179, Node024, 50);\n","Node024":"gsay_reply(856, 180);\ngiq_option(4, 856, 181, Node001, 50);\ngiq_option(4, 856, 182, Node999, 50);\n","Node025":"set_global_var(361, global_var(361) bwor 2048);\ngsay_reply(856, 183);\ngiq_option(4, 856, 184, Node999, 50);\n","Node026":"float_msg(self_obj, message_str(856, 185), 2);\ncall Node998;\n","Node027":"gsay_reply(856, 186);\ngiq_option(4, 856, 187, Node028a, 50);\ngiq_option(4, 856, 188, Node029, 50);\n","Node028":"gsay_reply(856, 189);\ngiq_option(4, 856, 190, Node001, 50);\ngiq_option(4, 856, 191, Node999, 50);\n","Node029":"gsay_reply(856, 192);\ngiq_option(4, 856, 193, Node998, 50);\n","Node030":"set_global_var(426, 256);\nif (global_var(555) != 2) then begin\n  set_global_var(0, global_var(0) + 25);\n  debug_msg(\"Player gains \" + 25 + \" Karma Points.\");\n  set_global_var(37, 0);\n  set_global_var(38, 0);\n  set_global_var(39, 0);\n  set_global_var(40, 0);\n  set_global_var(41, 0);\n  set_global_var(42, 0);\n  set_global_var(43, 0);\n  set_global_var(44, 0);\n  set_global_var(45, 0);\n  if (global_var(0) >= 1000) then begin\n    set_global_var(37, 1);\n  end\n  else begin\n    if (global_var(0) >= 750) then begin\n      set_global_var(38, 1);\n    end\n    else begin\n      if (global_var(0) >= 500) then begin\n        set_global_var(39, 1);\n      end\n      else begin\n        if (global_var(0) >= 250) then begin\n          set_global_var(40, 1);\n        end\n        else begin\n          if (global_var(0) > -250) then begin\n            set_global_var(41, 1);\n          end\n          else begin\n            if (global_var(0) > -500) then begin\n              set_global_var(42, 1);\n            end\n            else begin\n              if (global_var(0) > -750) then begin\n                set_global_var(43, 1);\n              end\n              else begin\n                if (global_var(0) > -1000) then begin\n                  set_global_var(44, 1);\n                end\n                else begin\n                  set_global_var(45, 1);\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\n  set_global_var(61, global_var(61) + 1);\n  give_exp_points(5000);\n  display_msg(message_str(14, 100) + 5000 + message_str(14, 101));\n  set_global_var(555, 2);\nend\ngsay_reply(856, 194);\ngiq_option(4, 856, 195, Node031, 50);\n","Node031":"GVar28 := 1;\nset_global_var(361, global_var(361) bwor 2048);\ngsay_reply(856, 197);\ngiq_option(4, 856, 198, Node032, 50);\ngiq_option(4, 856, 199, Node999, 50);\n","Node032":"gsay_reply(856, 200);\ngiq_option(4, 856, 201, Node999, 50);\n","Node033":"gsay_reply(856, 202);\ngiq_option(4, 856, 203, Node001a, 50);\ngiq_option(4, 856, 204, Node999b, 50);\n","Node034":"gsay_reply(856, 205);\ngiq_option(4, 856, 206, Node001, 50);\ngiq_option(4, 856, 223, Node020, 50);\ngiq_option(4, 856, 207, Node999, 50);\n","Node035":"if (local_var(12) == 0) then begin\n  set_local_var(12, local_var(12) + 1);\n  gsay_reply(856, 208);\nend\nelse begin\n  gsay_reply(856, 213);\nend\ngiq_option(4, 856, 209, Node001, 50);\ngiq_option(4, 856, 210, Node999, 50);\n","Node036":"float_msg(self_obj, message_str(856, 214), 2);\n","Node037":"gsay_reply(856, 215);\ngiq_option(4, 856, message_str(856, 216) + \" \" + obj_name(dude_obj) + message_str(856, 212), Node008a, 50);\ngiq_option(4, 856, 217, Node010, 50);\n","Node038":"float_msg(self_obj, message_str(856, 218), 0);\n","Node039":"gsay_reply(856, 219);\ngiq_option(4, 856, 220, Node203108, 50);\ngiq_option(4, 856, 221, Node001, 50);\n","Node040":"gsay_reply(856, 222);\ngiq_option(4, 856, 209, Node001, 50);\ngiq_option(4, 856, 210, Node999, 50);\n","Node041":"gsay_reply(856, 224);\ngiq_option(4, 856, 209, Node001, 50);\ngiq_option(4, 856, 210, Node999, 50);\n","doGuardsMessage":"float_msg(self_obj, message_str(856, 500 + local_var(9)), 2);\n","doGuardsAttack":"set_global_var(361, global_var(361) bwor 1);\n","Node234":"if (local_var(1) >= 2) then begin\n  call Node002;\nend\nelse begin\n  if (local_var(1) == 0) then begin\n    call Node004;\n  end\n  else begin\n    call Node003;\n  end\nend\n","SpeechCheck":"if (is_success(roll_vs_skill(dude_obj, 14, -70))) then begin\n  return 1;\nend\nreturn 0;\n","Node2539":"if ((global_var(361) bwand 4) != 0) then begin\n  call Node025;\nend\nelse begin\n  if (SpeechCheck) then begin\n    call Node025;\n  end\n  else begin\n    set_local_var(11, 1);\n    call Node039;\n  end\nend\n","Node203108":"if (((global_var(363) bwand 8) != 0) or ((global_var(361) bwand 32768) != 0)) then begin\n  call Node040;\nend\nelse begin\n  if (global_var(519) == 1) then begin\n    call Node018;\n  end\n  else begin\n    if ((global_var(519) == 2) or (global_var(519) == 4)) then begin\n      call Node041;\n    end\n    else begin\n      if ((global_var(519) == 8) and not((global_var(361) bwand 4) != 0)) then begin\n        call Node020;\n      end\n      else begin\n        if ((global_var(361) bwand 4) != 0) then begin\n          call Node031;\n        end\n        else begin\n          call Node008;\n        end\n      end\n    end\n  end\nend\n","Node89":"if ((local_var(1) == 0) or (local_var(1) >= 2) and (global_var(0) >= -250)) then begin\n  call Node008;\nend\nelse begin\n  call Node009;\nend\n","Node014a":"set_local_var(3, local_var(3) + 10);\nset_local_var(0, local_var(0) + 10);\nif (local_var(0) <= -75) then begin\n  set_local_var(1, -4);\nend\nelse begin\n  if (local_var(0) <= -50) then begin\n    set_local_var(1, -3);\n  end\n  else begin\n    if (local_var(0) <= -25) then begin\n      set_local_var(1, -2);\n    end\n    else begin\n      if (local_var(0) <= -10) then begin\n        set_local_var(1, -1);\n      end\n      else begin\n        if (local_var(0) <= 10) then begin\n          set_local_var(1, 0);\n        end\n        else begin\n          if (local_var(0) <= 25) then begin\n            set_local_var(1, 1);\n          end\n          else begin\n            if (local_var(0) <= 50) then begin\n              set_local_var(1, 2);\n            end\n            else begin\n              if (local_var(0) <= 75) then begin\n                set_local_var(1, 3);\n              end\n              else begin\n                set_local_var(1, 4);\n              end\n            end\n          end\n        end\n      end\n    end\n  end\nend\ncall Node014;\n","NodeCallGuards":"GVar26 := 1;\ncall Node999;\n","Node016a":"set_local_var(3, local_var(3) + -10);\nset_local_var(0, local_var(0) + -10);\nif (local_var(0) <= -75) then begin\n  set_local_var(1, -4);\nend\nelse begin\n  if (local_var(0) <= -50) then begin\n    set_local_var(1, -3);\n  end\n  else begin\n    if (local_var(0) <= -25) then begin\n      set_local_var(1, -2);\n    end\n    else begin\n      if (local_var(0) <= -10) then begin\n        set_local_var(1, -1);\n      end\n      else begin\n        if (local_var(0) <= 10) then begin\n          set_local_var(1, 0);\n        end\n        else begin\n          if (local_var(0) <= 25) then begin\n            set_local_var(1, 1);\n          end\n          else begin\n            if (local_var(0) <= 50) then begin\n              set_local_var(1, 2);\n            end\n            else begin\n              if (local_var(0) <= 75) then begin\n                set_local_var(1, 3);\n              end\n              else begin\n                set_local_var(1, 4);\n              end\n            end\n          end\n        end\n      end\n    end\n  end\nend\ncall Node016;\n","NodeWhirlyBegins":"if (global_var(427) == 8) then begin\n  set_global_var(519, 4);\n  if (global_var(558) == 0) then begin\n    set_global_var(558, 1);\n  end\nend\nelse begin\n  set_global_var(519, 2);\n  if (metarule(17, 15) == 0) then begin\n    debug_msg(\"  mark_on_map(\" + 15 + \")\");\n    mark_area_known(0, 15, 1);\n  end\n  if (global_var(560) == 0) then begin\n    set_global_var(560, 1);\n  end\nend\ncall Node035;\n","Node021a":"set_global_var(519, 1);\ncall Node021;\n","Node22a":"if (global_var(555) == 0) then begin\n  set_global_var(555, 1);\nend\nset_global_var(426, 1);\ncall Node022;\n","Node028a":"if (global_var(555) == 0) then begin\n  set_global_var(555, 1);\nend\nset_global_var(426, 4);\ncall Node028;\n","Node999b":"set_local_var(3, local_var(3) + -10);\nset_local_var(0, local_var(0) + -10);\nif (local_var(0) <= -75) then begin\n  set_local_var(1, -4);\nend\nelse begin\n  if (local_var(0) <= -50) then begin\n    set_local_var(1, -3);\n  end\n  else begin\n    if (local_var(0) <= -25) then begin\n      set_local_var(1, -2);\n    end\n    else begin\n      if (local_var(0) <= -10) then begin\n        set_local_var(1, -1);\n      end\n      else begin\n        if (local_var(0) <= 10) then begin\n          set_local_var(1, 0);\n        end\n        else begin\n          if (local_var(0) <= 25) then begin\n            set_local_var(1, 1);\n          end\n          else begin\n            if (local_var(0) <= 50) then begin\n              set_local_var(1, 2);\n            end\n            else begin\n              if (local_var(0) <= 75) then begin\n                set_local_var(1, 3);\n              end\n              else begin\n                set_local_var(1, 4);\n              end\n            end\n          end\n        end\n      end\n    end\n  end\nend\ncall Node999;\n","Node001a":"set_global_var(519, 4);\nif (global_var(558) == 0) then begin\n  set_global_var(558, 1);\nend\ncall Node001;\n","Node008a":"set_local_var(8, 0);\ncall Node008;\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

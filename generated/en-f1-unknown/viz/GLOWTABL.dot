@@ -1,0 +1,4 @@
+digraph GLOWTABL {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="With all the mess, it is\nhard to see what was\nactually\non this table at one\ntime."]
+}

@@ -1,0 +1,13 @@
+digraph chepslot {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "look_at_p_proc" [style=dotted color="#555555"]
+  "start" -> "map_enter_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Это старый, кое-как\nотремонтированный\nигральный автомат. Одна\nигра стоит десять\nдолларов."]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="У вас нет денег на игру.\n---\nВы бросаете в игральный\nавтомат $10 и дергаете за\nрукоятку.\n---\nДЗЫНЬ! ДЗЫНЬ! ДЗЫНЬ\n---\nВыпала комбинация из трех\nгранат. Отлично! Автомат\nвыбрасывает $\n---\n. Вы забираете деньги.\n---\nДзынь! Дзынь! Дзынь!\n---\nВыпала комбинация из трех\nпуль. Вы выиграли!\nАвтомат выбрасывает $15,\nвы забираете деньги.\n---\nВот незадача! Вы\nпроиграли."]
+}

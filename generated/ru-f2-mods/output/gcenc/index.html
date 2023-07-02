@@ -1,0 +1,157 @@
+<!DOCTYPE html><html><head><title>gcenc</title><meta charset="utf-8" /></head><body><svg width="888pt" height="44pt"
+ viewBox="0.00 0.00 888.00 44.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 40)">
+<title>gcenc</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-40 884,-40 884,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node2" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node3" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="260" cy="-18" rx="116.45" ry="18"/>
+<text text-anchor="middle" x="260" y="-13.32" font-family="Times,serif" font-size="14.00">Охрана не отвечает.</text>
+</g>
+<!-- critter_p_proc -->
+<g id="node4" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="421" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- pickup_p_proc -->
+<g id="node5" class="node">
+<title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="493" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node6" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="565" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- damage_p_proc -->
+<g id="node7" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="637" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node8" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="709" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- description_p_proc -->
+<g id="node9" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="781" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node10" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="853" cy="-18" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","timed_event_p_proc":"if (not(combat_is_initialized)) then begin\n  if (fixed_param == 1) then begin\n    if (not(anim_busy(self_obj)) and obj_on_screen(self_obj)) then begin\n      if (obj_can_see_obj(self_obj, dude_obj)) then begin\n        reg_anim_func(1, 1);\n        anim(self_obj, 1000, rotation_to_tile(tile_num(self_obj), tile_num(dude_obj)));\n        reg_anim_func(3, 0);\n      end\n    end\n    add_timer_event(self_obj, 10, 1);\n  end\n  if (fixed_param == 2) then begin\n    animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(self_obj), random(0, 5), random(4, 8)), 0);\n    add_timer_event(self_obj, game_ticks(random(20, 30)), 2);\n  end\nend\n","talk_p_proc":"display_msg(message_str(1379, 100));\n","critter_p_proc":"if (map_var(2) == 1) then begin\n  attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\nend\nelse begin\n  if (map_var(1) == 1) then begin\n    set_map_var(1, 2);\n    add_timer_event(self_obj, game_ticks(5), 2);\n  end\nend\n","pickup_p_proc":"attack_complex(source_obj, 0, 1, 0, 0, 30000, 0, 0);\nset_map_var(2, 1);\n","destroy_p_proc":"if (source_obj == dude_obj) then begin\n  set_global_var(4, global_var(4) + 1);\n  if (metarule(51, self_obj) == 2) then begin\n    if (source_obj == dude_obj) then begin\n      set_global_var(2, 0);\n      set_global_var(1, global_var(1) + 1);\n      set_global_var(0, global_var(0) + 4294967281);\n      debug_msg(\"gcenc\" + \": \" + \"Player gains \" + 4294967281 + \" Karma Points.\" + \"\\n\");\n      set_global_var(37, 0);\n      set_global_var(38, 0);\n      set_global_var(39, 0);\n      set_global_var(40, 0);\n      set_global_var(41, 0);\n      set_global_var(42, 0);\n      set_global_var(43, 0);\n      set_global_var(44, 0);\n      set_global_var(45, 0);\n      tmp_gen_rep := global_var(0);\n      if (has_trait(0, dude_obj, 95)) then begin\n        tmp_gen_rep := global_var(0) * 2;\n      end\n      if (tmp_gen_rep >= 1000) then begin\n        set_global_var(37, 1);\n      end\n      else begin\n        if (tmp_gen_rep >= 750) then begin\n          set_global_var(38, 1);\n        end\n        else begin\n          if (tmp_gen_rep >= 500) then begin\n            set_global_var(39, 1);\n          end\n          else begin\n            if (tmp_gen_rep >= 250) then begin\n              set_global_var(40, 1);\n            end\n            else begin\n              if (tmp_gen_rep > 4294967046) then begin\n                set_global_var(41, 1);\n              end\n              else begin\n                if (tmp_gen_rep > 4294966796) then begin\n                  set_global_var(42, 1);\n                end\n                else begin\n                  if (tmp_gen_rep > 4294966546) then begin\n                    set_global_var(43, 1);\n                  end\n                  else begin\n                    if (tmp_gen_rep > 4294966296) then begin\n                      set_global_var(44, 1);\n                    end\n                    else begin\n                      set_global_var(45, 1);\n                    end\n                  end\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\n  if (((global_var(4) + global_var(5)) >= 25) and ((global_var(5) > (2 * global_var(4))) or (global_var(3) == 1))) then begin\n    set_global_var(3, 1);\n    set_global_var(2, 0);\n  end\n  if (((global_var(4) + global_var(5)) >= 25) and ((global_var(4) > (3 * global_var(5))) or (global_var(2) == 1)) and (global_var(1) == 0)) then begin\n    set_global_var(2, 1);\n    set_global_var(3, 0);\n  end\n  set_global_var(0, global_var(0) + 5);\n  debug_msg(\"gcenc\" + \": \" + \"Player gains \" + 5 + \" Karma Points.\" + \"\\n\");\n  set_global_var(37, 0);\n  set_global_var(38, 0);\n  set_global_var(39, 0);\n  set_global_var(40, 0);\n  set_global_var(41, 0);\n  set_global_var(42, 0);\n  set_global_var(43, 0);\n  set_global_var(44, 0);\n  set_global_var(45, 0);\n  tmp_gen_rep := global_var(0);\n  if (has_trait(0, dude_obj, 95)) then begin\n    tmp_gen_rep := global_var(0) * 2;\n  end\n  if (tmp_gen_rep >= 1000) then begin\n    set_global_var(37, 1);\n  end\n  else begin\n    if (tmp_gen_rep >= 750) then begin\n      set_global_var(38, 1);\n    end\n    else begin\n      if (tmp_gen_rep >= 500) then begin\n        set_global_var(39, 1);\n      end\n      else begin\n        if (tmp_gen_rep >= 250) then begin\n          set_global_var(40, 1);\n        end\n        else begin\n          if (tmp_gen_rep > 4294967046) then begin\n            set_global_var(41, 1);\n          end\n          else begin\n            if (tmp_gen_rep > 4294966796) then begin\n              set_global_var(42, 1);\n            end\n            else begin\n              if (tmp_gen_rep > 4294966546) then begin\n                set_global_var(43, 1);\n              end\n              else begin\n                if (tmp_gen_rep > 4294966296) then begin\n                  set_global_var(44, 1);\n                end\n                else begin\n                  set_global_var(45, 1);\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\nend\n","damage_p_proc":"attack_complex(source_obj, 0, 1, 0, 0, 30000, 0, 0);\nset_map_var(2, 1);\n","map_enter_p_proc":"variable LVar0 := 0;\nOnly_Once := 0;\nif (get_pc_stat(1) <= 7) then begin\n  LVar0 := create_object_sid(94, 0, 0, 4294967295);\n  add_obj_to_inven(self_obj, LVar0);\nend\nelse begin\n  if ((get_pc_stat(1) <= 12) and (get_pc_stat(1) > 7)) then begin\n    LVar0 := create_object_sid(354, 0, 0, 4294967295);\n    add_obj_to_inven(self_obj, LVar0);\n  end\n  else begin\n    if ((get_pc_stat(1) <= 18) and (get_pc_stat(1) > 12)) then begin\n      LVar0 := create_object_sid(391, 0, 0, 4294967295);\n      add_obj_to_inven(self_obj, LVar0);\n    end\n    else begin\n      if (get_pc_stat(1) >= 18) then begin\n        LVar0 := create_object_sid(394, 0, 0, 4294967295);\n        add_obj_to_inven(self_obj, LVar0);\n      end\n    end\n  end\nend\nwield_obj_critter(self_obj, LVar0);\ncritter_add_trait(self_obj, 1, 6, 190);\ncritter_add_trait(self_obj, 1, 5, 134);\nadd_timer_event(self_obj, 10, 1);\nanim(self_obj, 1000, rotation_to_tile(tile_num(self_obj), tile_num(dude_obj)));\n","description_p_proc":"[]","look_at_p_proc":"[]"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

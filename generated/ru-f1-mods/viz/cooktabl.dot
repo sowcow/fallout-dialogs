@@ -1,0 +1,12 @@
+digraph cooktabl {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "pickup_p_proc" [style=dotted color="#555555"]
+  "start" -> "look_at_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label="Еда еще не готова. Съешь\nчто-нибудь сырым -\nотравишься."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="На столе куча разных\nпродуктов и предметов\nутвари."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="На столе куча разных\nпродуктов и предметов\nутвари."]
+}

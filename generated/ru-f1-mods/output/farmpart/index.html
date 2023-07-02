@@ -1,0 +1,133 @@
+<!DOCTYPE html><html><head><title>farmpart</title><meta charset="utf-8" /></head><body><svg width="325pt" height="360pt"
+ viewBox="0.00 0.00 325.49 359.66" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 355.66)">
+<title>farmpart</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-355.66 321.49,-355.66 321.49,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="158.75" cy="-333.66" rx="27" ry="18"/>
+</g>
+<!-- description_p_proc -->
+<g id="node2" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="158.75" cy="-139.83" rx="158.75" ry="139.83"/>
+<text text-anchor="middle" x="158.75" y="-221.41" font-family="Times,serif" font-size="14.00">Насос гидроусилителя,</text>
+<text text-anchor="middle" x="158.75" y="-204.16" font-family="Times,serif" font-size="14.00">витой электропровод,</text>
+<text text-anchor="middle" x="158.75" y="-186.91" font-family="Times,serif" font-size="14.00">магнитно&#45;вакуумная</text>
+<text text-anchor="middle" x="158.75" y="-169.66" font-family="Times,serif" font-size="14.00">перемычка, разветвитель</text>
+<text text-anchor="middle" x="158.75" y="-152.41" font-family="Times,serif" font-size="14.00">питания, адаптеры три на</text>
+<text text-anchor="middle" x="158.75" y="-135.16" font-family="Times,serif" font-size="14.00">три... неплохие детали.</text>
+<text text-anchor="middle" x="158.75" y="-117.91" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="158.75" y="-100.66" font-family="Times,serif" font-size="14.00">Наверное, эти детали</text>
+<text text-anchor="middle" x="158.75" y="-83.41" font-family="Times,serif" font-size="14.00">пригодились бы Майлсу для</text>
+<text text-anchor="middle" x="158.75" y="-66.16" font-family="Times,serif" font-size="14.00">починки</text>
+<text text-anchor="middle" x="158.75" y="-48.91" font-family="Times,serif" font-size="14.00">гидрооборудования.</text>
+</g>
+<!-- start&#45;&gt;description_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;description_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M158.75,-315.3C158.75,-308.6 158.75,-300.29 158.75,-290.95"/>
+<polygon fill="#555555" stroke="#555555" points="162.25,-291.02 158.75,-281.02 155.25,-291.02 162.25,-291.02"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 3) then begin\n  call description_p_proc;\nend\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(681, 100));\nif (global_var(138) == 1) then begin\n  if (is_success(roll_vs_skill(dude_obj, 12, 0))) then begin\n    display_msg(message_str(681, 101));\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

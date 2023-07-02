@@ -1,0 +1,155 @@
+<!DOCTYPE html><html><head><title>houschar</title><meta charset="utf-8" /></head><body><svg width="769pt" height="140pt"
+ viewBox="0.00 0.00 769.49 140.10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 136.1)">
+<title>houschar</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-136.1 765.49,-136.1 765.49,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="397.23" cy="-114.1" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node2" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="132.23" cy="-30.05" rx="132.23" ry="30.05"/>
+<text text-anchor="middle" x="132.23" y="-34" font-family="Times,serif" font-size="14.00">Кресло так и манит; но</text>
+<text text-anchor="middle" x="132.23" y="-16.75" font-family="Times,serif" font-size="14.00">надо работать.</text>
+</g>
+<!-- start&#45;&gt;use_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;use_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M373.24,-105.68C338.77,-95 273.43,-74.77 219.47,-58.06"/>
+<polygon fill="#555555" stroke="#555555" points="220.78,-54.5 210.19,-54.88 218.71,-61.18 220.78,-54.5"/>
+</g>
+<!-- description_p_proc -->
+<g id="node3" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="397.23" cy="-30.05" rx="115.26" ry="30.05"/>
+<text text-anchor="middle" x="397.23" y="-34" font-family="Times,serif" font-size="14.00">Вы видите потертое</text>
+<text text-anchor="middle" x="397.23" y="-16.75" font-family="Times,serif" font-size="14.00">кресло.</text>
+</g>
+<!-- start&#45;&gt;description_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;description_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M397.23,-95.7C397.23,-88.49 397.23,-79.8 397.23,-71.17"/>
+<polygon fill="#555555" stroke="#555555" points="400.73,-71.38 397.23,-61.38 393.73,-71.38 400.73,-71.38"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node4" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="646.23" cy="-30.05" rx="115.26" ry="30.05"/>
+<text text-anchor="middle" x="646.23" y="-34" font-family="Times,serif" font-size="14.00">Вы видите потертое</text>
+<text text-anchor="middle" x="646.23" y="-16.75" font-family="Times,serif" font-size="14.00">кресло.</text>
+</g>
+<!-- start&#45;&gt;look_at_p_proc -->
+<g id="edge3" class="edge">
+<title>start&#45;&gt;look_at_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M418.33,-102.52C423.17,-100.27 428.33,-98 433.23,-96.1 473.21,-80.65 518.5,-66.39 557,-55.18"/>
+<polygon fill="#555555" stroke="#555555" points="557.52,-58.38 566.16,-52.24 555.58,-51.66 557.52,-58.38"/>
+</g>
+<!-- chairend -->
+<g id="node5" class="node">
+<title>chairend</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="469.23" cy="-114.1" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"variable LVar0 := 0;\nif (script_action == 6) then begin\n  call use_p_proc;\nend\nelse begin\n  if (script_action == 3) then begin\n    call description_p_proc;\n  end\n  else begin\n    if (script_action == 21) then begin\n      call look_at_p_proc;\n    end\n  end\nend\n","use_p_proc":"script_overrides;\ndisplay_msg(message_str(116, 102));\n","chairend":"[]","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(116, 101));\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(116, 100));\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

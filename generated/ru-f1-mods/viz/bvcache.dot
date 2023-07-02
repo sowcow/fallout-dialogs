@@ -1,0 +1,4 @@
+digraph bvcache {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="На восточной стене есть\nаптечка. Возможно, в ней\nлежит что-то полезное."]
+}

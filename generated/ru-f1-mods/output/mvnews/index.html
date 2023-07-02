@@ -1,0 +1,139 @@
+<!DOCTYPE html><html><head><title>mvnews</title><meta charset="utf-8" /></head><body><svg width="620pt" height="164pt"
+ viewBox="0.00 0.00 620.34 164.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 160.5)">
+<title>mvnews</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-160.5 616.34,-160.5 616.34,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="301.43" cy="-138.5" rx="27" ry="18"/>
+</g>
+<!-- description_p_proc -->
+<g id="node2" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="144.43" cy="-42.25" rx="144.43" ry="42.25"/>
+<text text-anchor="middle" x="144.43" y="-54.82" font-family="Times,serif" font-size="14.00">Заголовок газеты гласит:</text>
+<text text-anchor="middle" x="144.43" y="-37.57" font-family="Times,serif" font-size="14.00">&quot;Повседневная жизнь в</text>
+<text text-anchor="middle" x="144.43" y="-20.32" font-family="Times,serif" font-size="14.00">деревне&quot;.</text>
+</g>
+<!-- start&#45;&gt;description_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;description_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M281.86,-125.75C265.17,-115.73 240.1,-100.68 215.92,-86.17"/>
+<polygon fill="#555555" stroke="#555555" points="218.1,-82.79 207.72,-80.65 214.49,-88.79 218.1,-82.79"/>
+</g>
+<!-- use_p_proc -->
+<g id="node3" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="459.43" cy="-42.25" rx="152.91" ry="42.25"/>
+<text text-anchor="middle" x="459.43" y="-54.82" font-family="Times,serif" font-size="14.00">Газетную машину заело по</text>
+<text text-anchor="middle" x="459.43" y="-37.57" font-family="Times,serif" font-size="14.00">неизвестной причине. Это</text>
+<text text-anchor="middle" x="459.43" y="-20.32" font-family="Times,serif" font-size="14.00">весьма неприятно.</text>
+</g>
+<!-- start&#45;&gt;use_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;use_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M321.12,-125.75C337.77,-115.82 362.7,-100.95 386.84,-86.55"/>
+<polygon fill="#555555" stroke="#555555" points="388.23,-89.2 395.03,-81.07 384.65,-83.19 388.23,-89.2"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 3) then begin\n  call description_p_proc;\nend\nelse begin\n  if (script_action == 6) then begin\n    call use_p_proc;\n  end\nend\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(656, 100));\n","use_p_proc":"script_overrides;\ndisplay_msg(message_str(656, 101));\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

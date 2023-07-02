@@ -1,0 +1,135 @@
+<!DOCTYPE html><html><head><title>FARMPART</title><meta charset="utf-8" /></head><body><svg width="309pt" height="408pt"
+ viewBox="0.00 0.00 308.52 408.45" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 404.45)">
+<title>FARMPART</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-404.45 304.52,-404.45 304.52,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="150.26" cy="-382.45" rx="27" ry="18"/>
+</g>
+<!-- description_p_proc -->
+<g id="node2" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="150.26" cy="-164.23" rx="150.26" ry="164.23"/>
+<text text-anchor="middle" x="150.26" y="-263.05" font-family="Times,serif" font-size="14.00">Hydropressurization pump,</text>
+<text text-anchor="middle" x="150.26" y="-245.8" font-family="Times,serif" font-size="14.00">electro&#45;fibrous coil</text>
+<text text-anchor="middle" x="150.26" y="-228.55" font-family="Times,serif" font-size="14.00">wire, magnetic vacuum</text>
+<text text-anchor="middle" x="150.26" y="-211.3" font-family="Times,serif" font-size="14.00">seal, power strip,</text>
+<text text-anchor="middle" x="150.26" y="-194.05" font-family="Times,serif" font-size="14.00">three&#45;pin to three&#45;pin</text>
+<text text-anchor="middle" x="150.26" y="-176.8" font-family="Times,serif" font-size="14.00">adapters . . . quite a</text>
+<text text-anchor="middle" x="150.26" y="-159.55" font-family="Times,serif" font-size="14.00">collection of</text>
+<text text-anchor="middle" x="150.26" y="-142.3" font-family="Times,serif" font-size="14.00"> parts.</text>
+<text text-anchor="middle" x="150.26" y="-125.05" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="150.26" y="-107.8" font-family="Times,serif" font-size="14.00">These parts could</text>
+<text text-anchor="middle" x="150.26" y="-90.55" font-family="Times,serif" font-size="14.00">probably be used by Miles</text>
+<text text-anchor="middle" x="150.26" y="-73.3" font-family="Times,serif" font-size="14.00">to fix the hydroponics</text>
+<text text-anchor="middle" x="150.26" y="-56.05" font-family="Times,serif" font-size="14.00">farms.</text>
+</g>
+<!-- start&#45;&gt;description_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;description_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M150.26,-364.12C150.26,-357.35 150.26,-348.9 150.26,-339.34"/>
+<polygon fill="#555555" stroke="#555555" points="153.76,-339.55 150.26,-329.55 146.76,-339.55 153.76,-339.55"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 3) then begin\n  call description_p_proc;\nend\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(681, 100));\nif (global_var(138) == 1) then begin\n  if (is_success(roll_vs_skill(dude_obj, 12, 0))) then begin\n    display_msg(message_str(681, 101));\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

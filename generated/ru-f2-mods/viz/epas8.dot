@@ -1,0 +1,10 @@
+digraph epas8 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="Бьюсь об заклад, я мог бы\nпротиснуться сквозь эту\nвентиляцию. Она выглядит\nболее изношено, чем\nдругие, и, наверное, ее\nбудет проще заклинить."]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+}

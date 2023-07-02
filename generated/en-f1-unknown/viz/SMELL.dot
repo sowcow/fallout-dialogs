@@ -1,0 +1,4 @@
+digraph SMELL {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="You smell something rank\nahead."]
+}

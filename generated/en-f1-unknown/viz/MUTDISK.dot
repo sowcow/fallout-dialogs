@@ -1,0 +1,4 @@
+digraph MUTDISK {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="You see a disk with some\nstrange marking on it.\n---\nPIPBoy displays:\nInformation already\nstored.\n---\nPIPBoy displays:\nDownloading data."]
+}

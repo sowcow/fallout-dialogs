@@ -1,0 +1,156 @@
+<!DOCTYPE html><html><head><title>FIELDGEN</title><meta charset="utf-8" /></head><body><svg width="546pt" height="236pt"
+ viewBox="0.00 0.00 546.22 236.21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 232.21)">
+<title>FIELDGEN</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-232.21 542.22,-232.21 542.22,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="269.11" cy="-210.21" rx="27" ry="18"/>
+</g>
+<!-- use_obj_on_p_proc -->
+<g id="node2" class="node">
+<title>use_obj_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="130.11" cy="-126.16" rx="130.11" ry="30.05"/>
+<text text-anchor="middle" x="130.11" y="-130.11" font-family="Times,serif" font-size="14.00">Your attempt to re&#45;wire</text>
+<text text-anchor="middle" x="130.11" y="-112.86" font-family="Times,serif" font-size="14.00">the field emitter fails.</text>
+</g>
+<!-- start&#45;&gt;use_obj_on_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;use_obj_on_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M249.19,-197.45C232.71,-187.72 208.45,-173.4 186.13,-160.22"/>
+<polygon fill="#555555" stroke="#555555" points="188.1,-156.73 177.71,-154.66 184.54,-162.76 188.1,-156.73"/>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node3" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="408.11" cy="-126.16" rx="130.11" ry="30.05"/>
+<text text-anchor="middle" x="408.11" y="-130.11" font-family="Times,serif" font-size="14.00">Your attempt to re&#45;wire</text>
+<text text-anchor="middle" x="408.11" y="-112.86" font-family="Times,serif" font-size="14.00">the field emitter fails.</text>
+</g>
+<!-- start&#45;&gt;use_skill_on_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;use_skill_on_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M289.02,-197.45C305.51,-187.72 329.76,-173.4 352.09,-160.22"/>
+<polygon fill="#555555" stroke="#555555" points="353.68,-162.76 360.51,-154.66 350.12,-156.73 353.68,-162.76"/>
+</g>
+<!-- turn_field_off -->
+<g id="node4" class="node">
+<title>turn_field_off</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="269.11" cy="-30.05" rx="115.79" ry="30.05"/>
+<text text-anchor="middle" x="269.11" y="-34" font-family="Times,serif" font-size="14.00">You turn off the field</text>
+<text text-anchor="middle" x="269.11" y="-16.75" font-family="Times,serif" font-size="14.00">emitter.</text>
+</g>
+<!-- use_obj_on_p_proc&#45;&gt;turn_field_off -->
+<g id="edge3" class="edge">
+<title>use_obj_on_p_proc&#45;&gt;turn_field_off</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M171.44,-97.18C186.55,-86.94 203.81,-75.26 219.58,-64.59"/>
+<polygon fill="#555555" stroke="#555555" points="221.34,-66.94 227.66,-58.44 217.41,-61.15 221.34,-66.94"/>
+</g>
+<!-- use_skill_on_p_proc&#45;&gt;turn_field_off -->
+<g id="edge4" class="edge">
+<title>use_skill_on_p_proc&#45;&gt;turn_field_off</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M366.78,-97.18C351.66,-86.94 334.4,-75.26 318.64,-64.59"/>
+<polygon fill="#555555" stroke="#555555" points="320.8,-61.15 310.56,-58.44 316.88,-66.94 320.8,-61.15"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 7) then begin\n  call use_obj_on_p_proc;\nend\nelse begin\n  if (script_action == 8) then begin\n    call use_skill_on_p_proc;\n  end\nend\n","use_obj_on_p_proc":"if (obj_pid(obj_being_used_with) == 75) then begin\n  script_overrides;\n  if (is_success(roll_vs_skill(dude_obj, 13, 0))) then begin\n    call turn_field_off;\n  end\n  else begin\n    display_msg(message_str(741, 100));\n  end\nend\n","use_skill_on_p_proc":"if (action_being_used == 13) then begin\n  script_overrides;\n  if (is_success(roll_vs_skill(dude_obj, 13, -20))) then begin\n    call turn_field_off;\n  end\n  else begin\n    display_msg(message_str(741, 100));\n  end\nend\n","turn_field_off":"field_change := \"off\";\ndisplay_msg(message_str(741, 101));\nif (cur_map_index == 31) then begin\n  if (elevation(self_obj) == 0) then begin\n    if (tile_num(self_obj) == 15581) then begin\n      use_obj(map_var(4));\n    end\n    else begin\n      if (tile_num(self_obj) == 19124) then begin\n        use_obj(map_var(5));\n      end\n      else begin\n        if (tile_num(self_obj) == 25098) then begin\n          use_obj(map_var(6));\n        end\n      end\n    end\n  end\nend\nelse begin\n  if (cur_map_index == 32) then begin\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

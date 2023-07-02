@@ -1,0 +1,159 @@
+<!DOCTYPE html><html><head><title>MUTANT2</title><meta charset="utf-8" /></head><body><svg width="499pt" height="311pt"
+ viewBox="0.00 0.00 499.00 310.58" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 306.58)">
+<title>MUTANT2</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-306.58 495,-306.58 495,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="217" cy="-248.13" rx="130.11" ry="54.45"/>
+<text text-anchor="middle" x="217" y="-269.33" font-family="Times,serif" font-size="14.00">It&#39;s some kind of huge</text>
+<text text-anchor="middle" x="217" y="-252.08" font-family="Times,serif" font-size="14.00">super mutant creature!</text>
+<text text-anchor="middle" x="217" y="-234.83" font-family="Times,serif" font-size="14.00">And it has a very large</text>
+<text text-anchor="middle" x="217" y="-217.58" font-family="Times,serif" font-size="14.00">gun!</text>
+</g>
+<!-- timeforwhat -->
+<g id="node2" class="node">
+<title>timeforwhat</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-78.84" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;timeforwhat -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;timeforwhat</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M128.35,-207.88C104.98,-194.46 81.22,-177.68 63,-157.68 49.96,-143.38 40.88,-123.53 35.1,-107.45"/>
+<polygon fill="#555555" stroke="#555555" points="38.11,-106.42 31.62,-98.04 31.48,-108.64 38.11,-106.42"/>
+</g>
+<!-- do_dialogue -->
+<g id="node3" class="node">
+<title>do_dialogue</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="217" cy="-78.84" rx="145.49" ry="78.84"/>
+<text text-anchor="middle" x="217" y="-117.29" font-family="Times,serif" font-size="14.00">Take him to Harry. He&#39;ll</text>
+<text text-anchor="middle" x="217" y="-100.04" font-family="Times,serif" font-size="14.00">know what to do with him.</text>
+<text text-anchor="middle" x="217" y="-82.79" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="217" y="-65.54" font-family="Times,serif" font-size="14.00">We should take her to</text>
+<text text-anchor="middle" x="217" y="-48.29" font-family="Times,serif" font-size="14.00">Harry. He has plans for</text>
+<text text-anchor="middle" x="217" y="-31.04" font-family="Times,serif" font-size="14.00">all the women.</text>
+</g>
+<!-- start&#45;&gt;do_dialogue -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;do_dialogue</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M210.65,-193.28C210.43,-185.44 210.3,-177.2 210.26,-168.9"/>
+<polygon fill="#555555" stroke="#555555" points="213.76,-168.96 210.26,-158.96 206.76,-168.96 213.76,-168.96"/>
+</g>
+<!-- start&#45;&gt;do_dialogue -->
+<g id="edge3" class="edge">
+<title>start&#45;&gt;do_dialogue</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M223.35,-193.28C223.57,-185.44 223.7,-177.2 223.74,-168.9"/>
+<polygon fill="#555555" stroke="#555555" points="227.24,-168.96 223.74,-158.96 220.24,-168.96 227.24,-168.96"/>
+</g>
+<!-- genericend -->
+<g id="node4" class="node">
+<title>genericend</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="392" cy="-248.13" rx="27" ry="18"/>
+</g>
+<!-- genericcbt -->
+<g id="node5" class="node">
+<title>genericcbt</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="464" cy="-248.13" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (not(init_teams)) then begin\n  critter_add_trait(self_obj, 1, 6, 34);\n  init_teams := 1;\nend\nif (script_action == 22) then begin\n  call timeforwhat;\nend\nelse begin\n  if (local_var(2) == 0) then begin\n    set_local_var(2, tile_num(self_obj));\n  end\n  if (script_action == 11) then begin\n    call do_dialogue;\n  end\n  else begin\n    if (script_action == 4) then begin\n      Hostile := 1;\n    end\n    else begin\n      if (script_action == 12) then begin\n        if (global_var(13) == 0) then begin\n          set_obj_visibility(self_obj, 1);\n        end\n        else begin\n          maxsight := get_critter_stat(self_obj, 1);\n          time := game_time_hour;\n          if ((time > 2300) or (time < 600)) then begin\n            maxsight := 4;\n          end\n          if ((tile_distance_objs(self_obj, dude_obj) <= maxsight) and obj_can_see_obj(self_obj, dude_obj)) then begin\n            if ((Hostile > 0) or (local_var(0) > 0)) then begin\n              Hostile := 0;\n              attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\n            end\n            else begin\n              call do_dialogue;\n            end\n          end\n          loopcount := loopcount + 1;\n          if (loopcount > 40) then begin\n            loopcount := 0;\n            if (noevent == 0) then begin\n              noevent := 1;\n              rndx := 5 + random(1, 10);\n              add_timer_event(self_obj, game_ticks(rndx), 0);\n            end\n          end\n        end\n      end\n      else begin\n        if (script_action == 18) then begin\n          set_global_var(35, global_var(35) + 1);\n          if (source_obj == dude_obj) then begin\n            if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n              set_global_var(156, 1);\n              set_global_var(157, 0);\n            end\n            if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n              set_global_var(157, 1);\n              set_global_var(156, 0);\n            end\n            set_global_var(160, global_var(160) + 1);\n            if ((global_var(160) % 6) == 0) then begin\n              set_global_var(155, global_var(155) + 1);\n            end\n          end\n        end\n        else begin\n          if (script_action == 21) then begin\n            display_msg(message_str(13, 100));\n          end\n        end\n      end\n    end\n  end\nend\n","do_dialogue":"start_gdialog(13, self_obj, 4, -1, -1);\ngsay_start;\nset_local_var(0, 1);\nif (get_critter_stat(dude_obj, 34) == 0) then begin\n  gsay_message(13, 101, 50);\nend\nelse begin\n  gsay_message(13, 102, 50);\nend\ngsay_end;\nend_dialogue;\n","timeforwhat":"noevent := 0;\nrndy := random(1, 6);\nif (rndy > 1) then begin\n  dist := 2;\nend\nif (rndy > 5) then begin\n  dist := 3;\nend\nrndz := random(0, 5);\nset_local_var(3, tile_num(self_obj));\nnew_tile := tile_num_in_direction(local_var(3), rndz, dist);\nif (tile_distance(local_var(2), new_tile) < maxleash) then begin\n  animate_move_obj_to_tile(self_obj, new_tile, 0);\nend\n","genericend":"[]","genericcbt":"[]"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

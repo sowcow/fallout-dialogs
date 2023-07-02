@@ -1,0 +1,14 @@
+digraph powermut {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите мутанта с\nудивительно маленьким\nчерепом."]
+  "talk_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "talk_p_proc" [label="Не входить."]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "critter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "critter_p_proc" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+}

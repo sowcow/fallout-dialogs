@@ -1,0 +1,4 @@
+digraph footprnt {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="На земле много\nчеловеческих следов.\nКажется, следы ведут к\nлюку."]
+}

@@ -1,0 +1,7 @@
+digraph VALTLOCK {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "spatial_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="There are some flares in\na compartment in the east\nwall."]
+}

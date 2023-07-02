@@ -1,0 +1,4 @@
+digraph RUBCORE {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="The rest of the vault in\nthis direction had\ndelicate equipment\nthat has probably been\nruined and destroyed.\nThere is a very\nlow chance of anything\nremaining of value."]
+}

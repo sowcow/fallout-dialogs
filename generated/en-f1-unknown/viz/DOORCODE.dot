@@ -1,0 +1,7 @@
+digraph DOORCODE {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Although this tape is\ndamaged beyond use, there\nis some writing\nscratched on the\nplastic: KODE 010597"]
+}

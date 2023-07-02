@@ -1,0 +1,4 @@
+digraph GLWBOX {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="This looks to be the\nfootlocker of some\nguards.\n---\nYou pick the lock on the\nbox.\n---\nYou failed to pick the\nlock on the lockbox.\n---\nThis item is useless on\nthe lockbox.\n---\nThe box is locked.\n---\nYou pick the lock on the\nbox.\n---\nYou failed to pick the\nlock on the box.\n---\nThis skill is useless on\nthe box."]
+}

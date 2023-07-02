@@ -1,0 +1,10 @@
+digraph TOGGLE {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label=""]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="This toggle has a small\nradio emitter and a tiny\npower cell. It probably\nlinks to a control\ncomputer somewhere, as an\non/off switch.\n---\nThe toggle switch looks\nlike an on/off\ntransmitter of some sort."]
+}

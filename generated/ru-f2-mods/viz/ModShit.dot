@@ -1,0 +1,10 @@
+digraph ModShit {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label="Здесь внизу сильно пахнет\nметаном. Одна маленькая\nискорка, и все тут\nвзлетит к небесам."]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+  "map_exit_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_exit_p_proc" [label=""]
+}

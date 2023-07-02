@@ -1,0 +1,7 @@
+digraph VATWARN {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "spatial_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="You hear a female voice\nover a loudspeaker.\n---\nWarning! You have entered\na secured area! Do not\nenter!\nLethal force authorized!\nWarning!"]
+}

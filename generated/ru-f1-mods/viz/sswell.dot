@@ -1,0 +1,10 @@
+digraph sswell {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите колодец Шэйди\nСэндс. Тут слишком мало\nводы, чтобы обеспечить\nУбежище."]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="У вас нет никакой причины\nспускаться в колодец, но\nвы понимаете, что веревка\nможет пригодиться для\nспуска вниз.\n---\nВы загадываете желание,\nкогда слышите всплеск, с\nкоторым крышка от бутылки\nпадает в воду."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Больше вам нет толка от\nколодца."]
+}

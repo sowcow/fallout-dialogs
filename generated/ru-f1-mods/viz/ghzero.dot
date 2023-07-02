@@ -1,0 +1,15 @@
+digraph ghzero {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "do_dialogue" [style=dotted color="#555555"]
+  "start" [label="Вы видите охранника-гуля."]
+  "do_dialogue" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_dialogue" -> "ghoul00" [style=dotted color="#555555"]
+  "do_dialogue" [label=""]
+  "ghoulend" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "ghoulend" [label=""]
+  "ghoulcbt" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "ghoulcbt" [label=""]
+  "ghoul00" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "ghoul00" -> "ghoulend" [style=dotted color="#555555"]
+  "ghoul00" [label="Я на посту. Если тебе\nнужен Сет, он внутри."]
+}

@@ -1,0 +1,16 @@
+digraph epai39 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" [label=""]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="Вы заклиниваете колом\nвентилятор. Вы слышите\nскрежет металла и\nвентилятор\nостанавливается. Он\nиздает глухой звук в\nпопытке провернуть свои\nзажатые лопасти."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите старый, ржавый\nвентилятор."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Металлический кол\nзаклинил вентилятор.\n---\nВы можете легко заклинить\nэтот вентилятор\nкаким-нибудь куском\nметалла."]
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html><html><head><title>zclvillrat</title><meta charset="utf-8" /></head><body><svg width="1278pt" height="166pt"
+ viewBox="0.00 0.00 1278.00 165.68" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 161.68)">
+<title>zclvillrat</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-161.68 1274,-161.68 1274,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-78.84" rx="27" ry="18"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node2" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-78.84" rx="27" ry="18"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node3" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="238" cy="-78.84" rx="94.05" ry="30.05"/>
+<text text-anchor="middle" x="238" y="-82.79" font-family="Times,serif" font-size="14.00">Вы уничтожили</text>
+<text text-anchor="middle" x="238" y="-65.54" font-family="Times,serif" font-size="14.00">кротокрысов.</text>
+</g>
+<!-- look_at_p_proc -->
+<g id="node4" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="468" cy="-78.84" rx="117.91" ry="30.05"/>
+<text text-anchor="middle" x="468" y="-82.79" font-family="Times,serif" font-size="14.00">Вы видите большого</text>
+<text text-anchor="middle" x="468" y="-65.54" font-family="Times,serif" font-size="14.00">кротокрыса.</text>
+</g>
+<!-- description_p_proc -->
+<g id="node5" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="757" cy="-78.84" rx="153.44" ry="78.84"/>
+<text text-anchor="middle" x="757" y="-117.29" font-family="Times,serif" font-size="14.00">Кротокрыс выглядит очень</text>
+<text text-anchor="middle" x="757" y="-100.04" font-family="Times,serif" font-size="14.00">сердитым.</text>
+<text text-anchor="middle" x="757" y="-82.79" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="757" y="-65.54" font-family="Times,serif" font-size="14.00">Кротокрыс кажется не</text>
+<text text-anchor="middle" x="757" y="-48.29" font-family="Times,serif" font-size="14.00">обеспокоен вашим</text>
+<text text-anchor="middle" x="757" y="-31.04" font-family="Times,serif" font-size="14.00">присутствием.</text>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node6" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="955" cy="-78.84" rx="27" ry="18"/>
+</g>
+<!-- damage_p_proc -->
+<g id="node7" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1027" cy="-78.84" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node8" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1099" cy="-78.84" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node9" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1171" cy="-78.84" rx="27" ry="18"/>
+</g>
+<!-- use_obj_on_p_proc -->
+<g id="node10" class="node">
+<title>use_obj_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1243" cy="-78.84" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","critter_p_proc":"if (obj_can_see_obj(self_obj, dude_obj) and ((local_var(5) == 1) or (global_var(146) == 2))) then begin\n  attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\nend\n","destroy_p_proc":"set_global_var(144, global_var(144) - 1);\nif (global_var(144) == 0) then begin\n  display_msg(message_str(1342, 200));\nend\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(1342, 100));\n","description_p_proc":"script_overrides;\nif (local_var(2) == 1) then begin\n  display_msg(message_str(1342, 102));\nend\nelse begin\n  display_msg(message_str(1342, 101));\nend\n","use_skill_on_p_proc":"if (action_being_used == 10) then begin\n  script_overrides;\nend\n","damage_p_proc":"if (source_obj == dude_obj) then begin\n  set_local_var(5, 2);\n  set_global_var(146, 2);\nend\n","map_enter_p_proc":"if (((game_time - global_var(145)) >= 25920000) and ((global_var(143) < 4) and (global_var(143) > 0) or (global_var(142) > 0) and (global_var(140) != 4) and (global_var(143) < 4))) then begin\n  kill_critter(self_obj, random(62, 63));\nend\nelse begin\n  critter_add_trait(self_obj, 1, 6, 30);\n  critter_add_trait(self_obj, 1, 5, 7);\n  add_timer_event(self_obj, game_ticks(random(1, 5)), 0);\nend\n","timed_event_p_proc":"if (not(combat_is_initialized) and ((critter_state(self_obj) bwand 1) == 0)) then begin\n  reg_anim_func(2, self_obj);\n  reg_anim_func(1, 1);\n  animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(self_obj), random(0, 5), random(1, 3)), 0);\n  reg_anim_func(3, 0);\nend\nadd_timer_event(self_obj, game_ticks(random(3, 5)), 0);\n","use_obj_on_p_proc":"[]"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

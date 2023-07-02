@@ -1,0 +1,8 @@
+digraph LOWCRAPS {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "point_run" [style=dotted color="#555555"]
+  "start" -> "point_run" [style=dotted color="#555555"]
+  "start" [label="You see before you the\nlow stakes Craps table.\nIt costs $20 to play."]
+  "point_run" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "point_run" [label="You rolled a 7. You win!!\n---\nYou roll snake eyes. You\nlose.\n---\nYou rolled \n---\n! You win!!\n---\nYou rolled \n---\n. You lose.\n---\nYou rolled \n---\nbefore rolling your\npoint. You lose.\n---\nYou rolled your point.\nYou win.\n---\nYou rolled \n---\n. This is your point.\nRolling again."]
+}

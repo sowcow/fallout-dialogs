@@ -1,0 +1,14 @@
+digraph CSXDOOR {
+  "checkPartyMembersNearDoor" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "checkPartyMembersNearDoor" [label=""]
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="This door requires a\npasskey to unlock."]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="This door requires a\npasskey to unlock.\n---\nUsing the pass key, you\nunlock the door."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="This door requires a\npasskey to unlock."]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+}

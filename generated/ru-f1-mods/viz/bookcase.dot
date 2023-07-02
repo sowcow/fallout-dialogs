@@ -1,0 +1,18 @@
+digraph bookcase {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" -> "pickup_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Книжные полки забиты\nрелигиозными и\nфилософскими трактатами."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Стена рядом с книжной\nполкой бесшумно отъезжает\nв сторону.\n---\nВы берете книгу, смотрите\nна обложку и быстро\nставите ее обратно. Полка\nвыглядит весьма прочной."]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label=""]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Вы нашли потайной рычаг.\n---\nВы еще некоторое время\nвозитесь со шкафом, но у\nвас ничего не получается.\n---\nВы нашли потайной рычаг.\n---\nВы еще некоторое время\nвозитесь со шкафом, но у\nвас ничего не получается.\n---\nЭто ничего не даст.\n---\nЭто ничего не даст."]
+  "secret" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "secret" [label="Вы нашли потайной рычаг."]
+}

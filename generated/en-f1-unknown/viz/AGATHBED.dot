@@ -1,0 +1,16 @@
+digraph AGATHBED {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" -> "look_at_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "do_stuff" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_stuff" [label="Agatha would not be happy\nif you messed up her bed."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="You see a tattered bed."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="The bed looks neatly made\ndespite its tattered\nnature."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" -> "do_stuff" [style=dotted color="#555555"]
+  "use_p_proc" [label=""]
+}

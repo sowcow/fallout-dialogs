@@ -1,0 +1,172 @@
+<!DOCTYPE html><html><head><title>genpalad</title><meta charset="utf-8" /></head><body><svg width="536pt" height="116pt"
+ viewBox="0.00 0.00 535.60 116.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
+<title>genpalad</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-112 531.6,-112 531.6,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="356.6" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node2" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="119.6" cy="-18" rx="119.6" ry="18"/>
+<text text-anchor="middle" x="119.6" y="-13.32" font-family="Times,serif" font-size="14.00">Вы видите паладина.</text>
+</g>
+<!-- start&#45;&gt;look_at_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;look_at_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M332.13,-81.77C297.2,-71.46 231.86,-52.16 182.81,-37.67"/>
+<polygon fill="#555555" stroke="#555555" points="183.87,-34.04 173.29,-34.56 181.89,-40.75 183.87,-34.04"/>
+</g>
+<!-- pickup_p_proc -->
+<g id="node3" class="node">
+<title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="284.6" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;pickup_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;pickup_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M341.68,-74.5C331.74,-64.83 318.48,-51.94 307.25,-41.02"/>
+<polygon fill="#555555" stroke="#555555" points="310.11,-38.95 300.5,-34.49 305.23,-43.97 310.11,-38.95"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node4" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="356.6" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;talk_p_proc -->
+<g id="edge3" class="edge">
+<title>start&#45;&gt;talk_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M356.6,-71.7C356.6,-64.24 356.6,-55.32 356.6,-46.97"/>
+<polygon fill="#555555" stroke="#555555" points="360.1,-47.1 356.6,-37.1 353.1,-47.1 360.1,-47.1"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node5" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="428.6" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;critter_p_proc -->
+<g id="edge4" class="edge">
+<title>start&#45;&gt;critter_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M371.52,-74.5C381.46,-64.83 394.72,-51.94 405.96,-41.02"/>
+<polygon fill="#555555" stroke="#555555" points="407.97,-43.97 412.7,-34.49 403.09,-38.95 407.97,-43.97"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node6" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="500.6" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;destroy_p_proc -->
+<g id="edge5" class="edge">
+<title>start&#45;&gt;destroy_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M378.16,-78.52C402.48,-66.7 442.22,-47.38 469.81,-33.97"/>
+<polygon fill="#555555" stroke="#555555" points="470.9,-36.84 478.37,-29.32 467.84,-30.55 470.9,-36.84"/>
+</g>
+<!-- combat -->
+<g id="node7" class="node">
+<title>combat</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="428.6" cy="-90" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (only_once) then begin\n  only_once := 0;\n  critter_add_trait(self_obj, 1, 6, 44);\n  critter_add_trait(self_obj, 1, 5, 65);\nend\nif (script_action == 21) then begin\n  call look_at_p_proc;\nend\nelse begin\n  if (script_action == 4) then begin\n    call pickup_p_proc;\n  end\n  else begin\n    if (script_action == 11) then begin\n      call talk_p_proc;\n    end\n    else begin\n      if (script_action == 12) then begin\n        call critter_p_proc;\n      end\n      else begin\n        if (script_action == 18) then begin\n          call destroy_p_proc;\n        end\n      end\n    end\n  end\nend\n","combat":"hostile := 1;\n","critter_p_proc":"if (global_var(250)) then begin\n  hostile := 1;\nend\nif (tile_distance_objs(self_obj, dude_obj) > 12) then begin\n  hostile := 0;\nend\nif (hostile) then begin\n  set_global_var(250, 1);\n  hostile := 0;\n  attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\nend\n","pickup_p_proc":"if (source_obj == dude_obj) then begin\n  hostile := 1;\nend\n","talk_p_proc":"float_msg(self_obj, message_str(719, random(102, 109)), 2);\n","destroy_p_proc":"set_global_var(250, 1);\nrm_timer_event(self_obj);\nif (source_obj == dude_obj) then begin\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n    set_global_var(156, 1);\n    set_global_var(157, 0);\n  end\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n    set_global_var(157, 1);\n    set_global_var(156, 0);\n  end\n  set_global_var(159, global_var(159) + 1);\n  if ((global_var(159) % 2) == 0) then begin\n    set_global_var(155, global_var(155) - 1);\n  end\nend\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(719, 100));\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

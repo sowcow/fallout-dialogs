@@ -1,0 +1,10 @@
+digraph vcompop {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "look_at_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Этот компьютер очищает\nводу для Убежища.\n---\nКомпьютер, кажется,\nфункционирует хорошо с\nновым чипом."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Компьютер, кажется,\nфункционирует хорошо с\nновым чипом.\n---\nКомпьютер водоочистки\nбесполезен без\nконтрольного чипа,\nкоторый безнадежно\nиспорчен. Вам придется\nнайти чип на замену.\n---\nВы некоторое время\nвозитесь в компьютером,\nно больше ничего\nтолкового из него\nвытянуть не можете.\n---\nНа этой штуке много ярких\nогоньков."]
+}

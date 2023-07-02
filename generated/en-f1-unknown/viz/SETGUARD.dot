@@ -1,0 +1,4 @@
+digraph SETGUARD {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="The guard does not\nrespond to you."]
+}

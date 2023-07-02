@@ -1,0 +1,8 @@
+digraph epai20 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Неверный пароль.\nБлокировка системы.\n---\nЦВЕТОЧНЫЙ ГОРШОК\n---\nПароль принят."]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+}

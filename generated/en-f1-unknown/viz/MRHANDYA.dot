@@ -1,0 +1,16 @@
+digraph MRHANDYA {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "critter_p_proc" [style=dotted color="#555555"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "critter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "critter_p_proc" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="You see a broken robot.\n---\nYou see a functional\nrobot."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" -> "Repair_Attempt" [style=dotted color="#555555"]
+  "use_skill_on_p_proc" [label=""]
+  "Repair_Attempt" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "Repair_Attempt" [label="You fix the broken robot.\nIt immediately powers up\n and comes to life.\n---\nThe repairs are beyond\nyour skills."]
+}

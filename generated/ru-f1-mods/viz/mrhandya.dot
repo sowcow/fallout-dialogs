@@ -1,0 +1,16 @@
+digraph mrhandya {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "critter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "critter_p_proc" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Вы видите сломанного\nробота.\n---\nВы видите работающего\nробота."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" -> "Repair_Attempt" [style=dotted color="#555555"]
+  "use_skill_on_p_proc" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+  "Repair_Attempt" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "Repair_Attempt" [label="Вы чините сломанного\nробота. Он немедленно\nвключается и оживает.\n---\nВаших навыков\nнедостаточно для ремонта."]
+}

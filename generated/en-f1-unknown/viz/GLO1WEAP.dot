@@ -1,0 +1,4 @@
+digraph GLO1WEAP {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="These doors have been\nblasted by the nuclear\nwarhead.\n---\nThe door is welded too\ntight for you to open it."]
+}

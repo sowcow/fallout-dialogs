@@ -1,0 +1,132 @@
+<!DOCTYPE html><html><head><title>epas8</title><meta charset="utf-8" /></head><body><svg width="532pt" height="166pt"
+ viewBox="0.00 0.00 532.00 165.68" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 161.68)">
+<title>epas8</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-161.68 528,-161.68 528,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-78.84" rx="27" ry="18"/>
+</g>
+<!-- spatial_p_proc -->
+<g id="node2" class="node">
+<title>spatial_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="226" cy="-78.84" rx="153.97" ry="78.84"/>
+<text text-anchor="middle" x="226" y="-117.29" font-family="Times,serif" font-size="14.00">Бьюсь об заклад, я мог бы</text>
+<text text-anchor="middle" x="226" y="-100.04" font-family="Times,serif" font-size="14.00">протиснуться сквозь эту</text>
+<text text-anchor="middle" x="226" y="-82.79" font-family="Times,serif" font-size="14.00">вентиляцию. Она выглядит</text>
+<text text-anchor="middle" x="226" y="-65.54" font-family="Times,serif" font-size="14.00">более изношено, чем</text>
+<text text-anchor="middle" x="226" y="-48.29" font-family="Times,serif" font-size="14.00">другие, и, наверное, ее</text>
+<text text-anchor="middle" x="226" y="-31.04" font-family="Times,serif" font-size="14.00">будет проще заклинить.</text>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node3" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="425" cy="-78.84" rx="27" ry="18"/>
+</g>
+<!-- map_update_p_proc -->
+<g id="node4" class="node">
+<title>map_update_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="497" cy="-78.84" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","spatial_p_proc":"if (source_obj == dude_obj) then begin\n  if ((local_var(7) == 0) and ((get_critter_stat(dude_obj, 1) > 6) and (get_critter_stat(dude_obj, 4) > 5))) then begin\n    float_msg(dude_obj, message_str(1453, 100), 8);\n    set_local_var(7, 1);\n  end\nend\n","map_enter_p_proc":"[]","map_update_p_proc":"[]"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

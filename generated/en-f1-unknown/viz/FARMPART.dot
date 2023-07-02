@@ -1,0 +1,7 @@
+digraph FARMPART {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Hydropressurization pump,\nelectro-fibrous coil\nwire, magnetic vacuum\nseal, power strip,\nthree-pin to three-pin\nadapters . . . quite a\ncollection of\n parts.\n---\nThese parts could\nprobably be used by Miles\nto fix the hydroponics\nfarms."]
+}

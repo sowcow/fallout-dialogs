@@ -1,0 +1,13 @@
+digraph CORECOMP {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="This computer monitors\nthe machines maintaining\nthe Vault."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="This computer monitors\nthe machines maintaining\nthe Vault."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Most of your computer\naccess has been removed\nby order\n of the Vault AI system.\n---\nThis is the Vault 13\nCentral Computer Core.\nIt controls most of the\nworkstations you\n find in the Vault.\n---\nYou fiddle with the\ncomputer but don't really\nfind out anything else\n about it."]
+}

@@ -1,0 +1,754 @@
+<!DOCTYPE html><html><head><title>FOLGUARD</title><meta charset="utf-8" /></head><body><svg width="4166pt" height="1960pt"
+ viewBox="0.00 0.00 4166.08 1960.16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1956.16)">
+<title>FOLGUARD</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-1956.16 4162.08,-1956.16 4162.08,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="748.58" cy="-1861.12" rx="27" ry="18"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node2" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="604.58" cy="-1715.08" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;critter_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;critter_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M733.98,-1845.51C708.64,-1820.17 656.4,-1767.91 626.62,-1738.13"/>
+<polygon fill="#555555" stroke="#555555" points="629.76,-1736.32 620.22,-1731.72 624.81,-1741.27 629.76,-1736.32"/>
+</g>
+<!-- damage_p_proc -->
+<g id="node3" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="676.58" cy="-1715.08" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;damage_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;damage_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M740.32,-1843.59C727.89,-1818.74 704.29,-1771.51 689.55,-1742.03"/>
+<polygon fill="#555555" stroke="#555555" points="692.34,-1740.79 684.74,-1733.41 686.08,-1743.92 692.34,-1740.79"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node4" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="748.58" cy="-1715.08" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;destroy_p_proc -->
+<g id="edge3" class="edge">
+<title>start&#45;&gt;destroy_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M748.58,-1842.74C748.58,-1818.3 748.58,-1773.49 748.58,-1744.25"/>
+<polygon fill="#555555" stroke="#555555" points="752.08,-1744.51 748.58,-1734.51 745.08,-1744.51 752.08,-1744.51"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node5" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="820.58" cy="-1715.08" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;look_at_p_proc -->
+<g id="edge4" class="edge">
+<title>start&#45;&gt;look_at_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M754.2,-1843.06C760.57,-1824.59 771.73,-1794.51 784.58,-1770.08 789.87,-1760.01 796.59,-1749.49 802.78,-1740.43"/>
+<polygon fill="#555555" stroke="#555555" points="806.09,-1742.81 808.96,-1732.61 800.36,-1738.79 806.09,-1742.81"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node6" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="892.58" cy="-1715.08" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;talk_p_proc -->
+<g id="edge5" class="edge">
+<title>start&#45;&gt;talk_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M751.63,-1842.89C755.91,-1823.16 765.43,-1790.89 784.58,-1770.08 787.47,-1766.93 830.63,-1745.82 861.5,-1730.95"/>
+<polygon fill="#555555" stroke="#555555" points="862.53,-1733.85 870.03,-1726.37 859.5,-1727.55 862.53,-1733.85"/>
+</g>
+<!-- guard16 -->
+<g id="node7" class="node">
+<title>guard16</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="586.58" cy="-1121.3" rx="133.82" ry="78.84"/>
+<text text-anchor="middle" x="586.58" y="-1159.75" font-family="Times,serif" font-size="14.00">I&#39;ve heard that the</text>
+<text text-anchor="middle" x="586.58" y="-1142.5" font-family="Times,serif" font-size="14.00">Children have been able</text>
+<text text-anchor="middle" x="586.58" y="-1125.25" font-family="Times,serif" font-size="14.00">to get some of our</text>
+<text text-anchor="middle" x="586.58" y="-1108" font-family="Times,serif" font-size="14.00">secrets.</text>
+<text text-anchor="middle" x="586.58" y="-1090.75" font-family="Times,serif" font-size="14.00">I wonder how that is</text>
+<text text-anchor="middle" x="586.58" y="-1073.5" font-family="Times,serif" font-size="14.00">happening?</text>
+</g>
+<!-- talk_p_proc&#45;&gt;guard16 -->
+<g id="edge6" class="edge">
+<title>talk_p_proc&#45;&gt;guard16</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M871.41,-1703.66C866.58,-1701.39 861.43,-1699.08 856.58,-1697.08 811.23,-1678.36 786.52,-1695.5 752.58,-1660.08 633.74,-1536.09 599.83,-1328.85 590.25,-1211.13"/>
+<polygon fill="#555555" stroke="#555555" points="593.68,-1211.07 589.43,-1201.37 586.7,-1211.61 593.68,-1211.07"/>
+</g>
+<!-- guard22 -->
+<g id="node8" class="node">
+<title>guard22</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2487.58" cy="-729.49" rx="146.55" ry="54.45"/>
+<text text-anchor="middle" x="2487.58" y="-750.69" font-family="Times,serif" font-size="14.00">Great job on wasting that</text>
+<text text-anchor="middle" x="2487.58" y="-733.44" font-family="Times,serif" font-size="14.00">agent. Now we might have</text>
+<text text-anchor="middle" x="2487.58" y="-716.19" font-family="Times,serif" font-size="14.00">a chance against</text>
+<text text-anchor="middle" x="2487.58" y="-698.94" font-family="Times,serif" font-size="14.00"> those Children.</text>
+</g>
+<!-- talk_p_proc&#45;&gt;guard22 -->
+<g id="edge7" class="edge">
+<title>talk_p_proc&#45;&gt;guard22</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M919.53,-1712.38C1058.98,-1702.32 1707.47,-1640.15 2105.58,-1334.31 2296.46,-1187.67 2417.45,-916.41 2464.83,-793.7"/>
+<polygon fill="#555555" stroke="#555555" points="2468.34,-795.3 2468.65,-784.71 2461.81,-792.8 2468.34,-795.3"/>
+</g>
+<!-- guard0 -->
+<g id="node9" class="node">
+<title>guard0</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="892.58" cy="-1532.44" rx="131.17" ry="127.63"/>
+<text text-anchor="middle" x="892.58" y="-1605.39" font-family="Times,serif" font-size="14.00">Who travels the halls of</text>
+<text text-anchor="middle" x="892.58" y="-1588.14" font-family="Times,serif" font-size="14.00">the Followers?</text>
+<text text-anchor="middle" x="892.58" y="-1570.89" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="892.58" y="-1553.64" font-family="Times,serif" font-size="14.00">I am </text>
+<text text-anchor="middle" x="892.58" y="-1536.39" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="892.58" y="-1519.14" font-family="Times,serif" font-size="14.00">. I come in peace.</text>
+<text text-anchor="middle" x="892.58" y="-1501.89" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="892.58" y="-1484.64" font-family="Times,serif" font-size="14.00">I am </text>
+<text text-anchor="middle" x="892.58" y="-1467.39" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="892.58" y="-1450.14" font-family="Times,serif" font-size="14.00">. Your destroyer.</text>
+</g>
+<!-- talk_p_proc&#45;&gt;guard0 -->
+<g id="edge8" class="edge">
+<title>talk_p_proc&#45;&gt;guard0</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M892.58,-1696.76C892.58,-1689.75 892.58,-1681 892.58,-1671.21"/>
+<polygon fill="#555555" stroke="#555555" points="896.08,-1671.21 892.58,-1661.21 889.08,-1671.21 896.08,-1671.21"/>
+</g>
+<!-- guard17 -->
+<g id="node27" class="node">
+<title>guard17</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="855.58" cy="-729.49" rx="138.06" ry="66.64"/>
+<text text-anchor="middle" x="855.58" y="-759.31" font-family="Times,serif" font-size="14.00">Truly? I thought as much</text>
+<text text-anchor="middle" x="855.58" y="-742.06" font-family="Times,serif" font-size="14.00">myself, but feared that I</text>
+<text text-anchor="middle" x="855.58" y="-724.81" font-family="Times,serif" font-size="14.00">would never have</text>
+<text text-anchor="middle" x="855.58" y="-707.56" font-family="Times,serif" font-size="14.00">been able to get much</text>
+<text text-anchor="middle" x="855.58" y="-690.31" font-family="Times,serif" font-size="14.00">support on the theory.</text>
+</g>
+<!-- guard16&#45;&gt;guard17 -->
+<g id="edge34" class="edge">
+<title>guard16&#45;&gt;guard17</title>
+<path fill="none" stroke="#994000" d="M624.45,-1045.21C649.59,-1001.06 685.95,-946.58 729.58,-908.28 743.02,-896.48 752.62,-902.61 765.58,-890.28 790.54,-866.51 810.49,-834.27 825.2,-804.97"/>
+<polygon fill="#994000" stroke="#994000" points="828.74,-806.69 829.98,-796.17 822.45,-803.62 828.74,-806.69"/>
+<text text-anchor="middle" x="888.83" y="-876.98" font-family="Times,serif" font-size="14.00" fill="#994000">I believe that there is a</text>
+<text text-anchor="middle" x="888.83" y="-859.73" font-family="Times,serif" font-size="14.00" fill="#994000">spy somewhere around</text>
+<text text-anchor="middle" x="888.83" y="-842.48" font-family="Times,serif" font-size="14.00" fill="#994000">here.</text>
+</g>
+<!-- guard19 -->
+<g id="node28" class="node">
+<title>guard19</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="547.58" cy="-541.61" rx="124.8" ry="42.25"/>
+<text text-anchor="middle" x="547.58" y="-554.18" font-family="Times,serif" font-size="14.00">Nicole will be pleased,</text>
+<text text-anchor="middle" x="547.58" y="-536.93" font-family="Times,serif" font-size="14.00">then, to know that I</text>
+<text text-anchor="middle" x="547.58" y="-519.68" font-family="Times,serif" font-size="14.00">killed the agent.</text>
+</g>
+<!-- guard16&#45;&gt;guard19 -->
+<g id="edge35" class="edge">
+<title>guard16&#45;&gt;guard19</title>
+<path fill="none" stroke="#140099" d="M581.3,-1042.09C573.21,-922.35 557.99,-696.81 551.11,-594.92"/>
+<polygon fill="#140099" stroke="#140099" points="554.54,-594.73 550.37,-584.99 547.55,-595.2 554.54,-594.73"/>
+<text text-anchor="middle" x="656.95" y="-868.35" font-family="Times,serif" font-size="14.00" fill="#140099">I know. I am selling your</text>
+<text text-anchor="middle" x="656.95" y="-851.1" font-family="Times,serif" font-size="14.00" fill="#140099">secrets to them.</text>
+</g>
+<!-- guard16a -->
+<g id="node29" class="node">
+<title>guard16a</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="372.58" cy="-729.49" rx="27" ry="18"/>
+</g>
+<!-- guard16&#45;&gt;guard16a -->
+<g id="edge36" class="edge">
+<title>guard16&#45;&gt;guard16a</title>
+<path fill="none" stroke="#199900" d="M504.62,-1058.67C456.45,-1017.09 399.93,-957.64 373.33,-890.28 356.1,-846.66 361.3,-790.96 366.82,-758.16"/>
+<polygon fill="#199900" stroke="#199900" points="370.4,-759.04 368.75,-748.57 363.51,-757.79 370.4,-759.04"/>
+<text text-anchor="middle" x="469.2" y="-876.98" font-family="Times,serif" font-size="14.00" fill="#199900">I am sure you are just</text>
+<text text-anchor="middle" x="469.2" y="-859.73" font-family="Times,serif" font-size="14.00" fill="#199900">imagining things. How can</text>
+<text text-anchor="middle" x="469.2" y="-842.48" font-family="Times,serif" font-size="14.00" fill="#199900">they know anything?</text>
+</g>
+<!-- guardend -->
+<g id="node22" class="node">
+<title>guardend</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2134.58" cy="-54.45" rx="27" ry="18"/>
+</g>
+<!-- guard22&#45;&gt;guardend -->
+<g id="edge45" class="edge">
+<title>guard22&#45;&gt;guardend</title>
+<path fill="none" stroke="#00993a" d="M2589.31,-690.07C2619.27,-673.45 2648.56,-650.69 2665.58,-620.45 2690.3,-576.52 2660.25,-250.63 2648.58,-213.89 2634.87,-170.74 2633.23,-152.04 2595.58,-126.89 2526.17,-80.55 2269.75,-62.52 2172.4,-57.25"/>
+<polygon fill="#00993a" stroke="#00993a" points="2172.77,-53.71 2162.6,-56.68 2172.41,-60.7 2172.77,-53.71"/>
+<text text-anchor="middle" x="2733.45" y="-324.65" font-family="Times,serif" font-size="14.00" fill="#00993a">Good luck to you.</text>
+</g>
+<!-- guard23 -->
+<g id="node33" class="node">
+<title>guard23</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2495.58" cy="-329.33" rx="144.43" ry="30.05"/>
+<text text-anchor="middle" x="2495.58" y="-333.28" font-family="Times,serif" font-size="14.00">Would you? That would be</text>
+<text text-anchor="middle" x="2495.58" y="-316.03" font-family="Times,serif" font-size="14.00">wonderful.</text>
+</g>
+<!-- guard22&#45;&gt;guard23 -->
+<g id="edge46" class="edge">
+<title>guard22&#45;&gt;guard23</title>
+<path fill="none" stroke="#990d00" d="M2487.01,-674.78C2486.62,-621.1 2486.5,-536.2 2488.58,-462.76 2489.45,-431.75 2491.35,-396.69 2492.94,-370.44"/>
+<polygon fill="#990d00" stroke="#990d00" points="2496.48,-370.97 2493.61,-360.77 2489.49,-370.53 2496.48,-370.97"/>
+<text text-anchor="middle" x="2577.08" y="-554.18" font-family="Times,serif" font-size="14.00" fill="#990d00">I can help train you to</text>
+<text text-anchor="middle" x="2577.08" y="-536.93" font-family="Times,serif" font-size="14.00" fill="#990d00">become more efficient in</text>
+<text text-anchor="middle" x="2577.08" y="-519.68" font-family="Times,serif" font-size="14.00" fill="#990d00">your fighting.</text>
+</g>
+<!-- guard1 -->
+<g id="node10" class="node">
+<title>guard1</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="861.58" cy="-1121.3" rx="122.68" ry="213.02"/>
+<text text-anchor="middle" x="861.58" y="-1254.62" font-family="Times,serif" font-size="14.00">OK. I can see that you</text>
+<text text-anchor="middle" x="861.58" y="-1237.37" font-family="Times,serif" font-size="14.00">are a little slow. Who</text>
+<text text-anchor="middle" x="861.58" y="-1220.12" font-family="Times,serif" font-size="14.00">you?</text>
+<text text-anchor="middle" x="861.58" y="-1202.87" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="861.58" y="-1185.62" font-family="Times,serif" font-size="14.00">Me </text>
+<text text-anchor="middle" x="861.58" y="-1168.37" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="861.58" y="-1151.12" font-family="Times,serif" font-size="14.00">. You dead.</text>
+<text text-anchor="middle" x="861.58" y="-1133.87" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="861.58" y="-1116.62" font-family="Times,serif" font-size="14.00">Me </text>
+<text text-anchor="middle" x="861.58" y="-1099.37" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="861.58" y="-1082.12" font-family="Times,serif" font-size="14.00">. Me hep.</text>
+<text text-anchor="middle" x="861.58" y="-1064.87" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="861.58" y="-1047.62" font-family="Times,serif" font-size="14.00">Me kill!</text>
+<text text-anchor="middle" x="861.58" y="-1030.37" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="861.58" y="-1013.12" font-family="Times,serif" font-size="14.00">Me </text>
+<text text-anchor="middle" x="861.58" y="-995.87" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="861.58" y="-978.62" font-family="Times,serif" font-size="14.00">. Me go.</text>
+</g>
+<!-- guard0&#45;&gt;guard1 -->
+<g id="edge9" class="edge">
+<title>guard0&#45;&gt;guard1</title>
+<path fill="none" stroke="#002b99" d="M865.59,-1407.03C864.62,-1400.21 863.77,-1393.44 863.08,-1386.81 861.68,-1373.34 860.58,-1359.47 859.74,-1345.46"/>
+<polygon fill="#002b99" stroke="#002b99" points="863.19,-1345.52 859.14,-1335.73 856.2,-1345.91 863.19,-1345.52"/>
+<text text-anchor="middle" x="881.33" y="-1364.89" font-family="Times,serif" font-size="14.00" fill="#002b99">Huh?</text>
+</g>
+<!-- guard11 -->
+<g id="node11" class="node">
+<title>guard11</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1966.58" cy="-1121.3" rx="130.11" ry="54.45"/>
+<text text-anchor="middle" x="1966.58" y="-1142.5" font-family="Times,serif" font-size="14.00">We are the Followers of</text>
+<text text-anchor="middle" x="1966.58" y="-1125.25" font-family="Times,serif" font-size="14.00">the Apocalypse. We are</text>
+<text text-anchor="middle" x="1966.58" y="-1108" font-family="Times,serif" font-size="14.00">trying to bring peace</text>
+<text text-anchor="middle" x="1966.58" y="-1090.75" font-family="Times,serif" font-size="14.00"> to the wastelands.</text>
+</g>
+<!-- guard0&#45;&gt;guard11 -->
+<g id="edge10" class="edge">
+<title>guard0&#45;&gt;guard11</title>
+<path fill="none" stroke="#589900" d="M1014.73,-1484.91C1227.11,-1404 1660.83,-1238.77 1861.01,-1162.51"/>
+<polygon fill="#589900" stroke="#589900" points="1862.14,-1165.45 1870.24,-1158.62 1859.65,-1158.9 1862.14,-1165.45"/>
+<text text-anchor="middle" x="1416.58" y="-1364.89" font-family="Times,serif" font-size="14.00" fill="#589900">Who are the Followers?</text>
+</g>
+<!-- guard11&#45;&gt;guardend -->
+<g id="edge25" class="edge">
+<title>guard11&#45;&gt;guardend</title>
+<path fill="none" stroke="#009299" d="M2030.3,-1073.54C2083.16,-1031.4 2156.28,-964.75 2198.58,-890.28 2298.57,-714.24 2277.59,-646.59 2293.58,-444.76 2301.68,-342.48 2332.93,-308.66 2293.58,-213.89 2267.13,-150.19 2201.24,-98.83 2163.1,-73.2"/>
+<polygon fill="#009299" stroke="#009299" points="2165.32,-69.82 2155.04,-67.25 2161.48,-75.67 2165.32,-69.82"/>
+<text text-anchor="middle" x="2378.2" y="-545.56" font-family="Times,serif" font-size="14.00" fill="#009299">Sounds like a good idea.</text>
+<text text-anchor="middle" x="2378.2" y="-528.31" font-family="Times,serif" font-size="14.00" fill="#009299">Good luck with it.</text>
+</g>
+<!-- guard12 -->
+<g id="node23" class="node">
+<title>guard12</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1799.58" cy="-729.49" rx="134.35" ry="91.04"/>
+<text text-anchor="middle" x="1799.58" y="-776.56" font-family="Times,serif" font-size="14.00">We are working to bring</text>
+<text text-anchor="middle" x="1799.58" y="-759.31" font-family="Times,serif" font-size="14.00">about tolerance to those</text>
+<text text-anchor="middle" x="1799.58" y="-742.06" font-family="Times,serif" font-size="14.00">in the wastelands</text>
+<text text-anchor="middle" x="1799.58" y="-724.81" font-family="Times,serif" font-size="14.00">for those few</text>
+<text text-anchor="middle" x="1799.58" y="-707.56" font-family="Times,serif" font-size="14.00">unfortunates who have</text>
+<text text-anchor="middle" x="1799.58" y="-690.31" font-family="Times,serif" font-size="14.00">been mutated by man&#39;s</text>
+<text text-anchor="middle" x="1799.58" y="-673.06" font-family="Times,serif" font-size="14.00">destructive nature.</text>
+</g>
+<!-- guard11&#45;&gt;guard12 -->
+<g id="edge26" class="edge">
+<title>guard11&#45;&gt;guard12</title>
+<path fill="none" stroke="#997400" d="M1943.88,-1067.32C1917.55,-1005.86 1873.6,-903.28 1841.11,-827.44"/>
+<polygon fill="#997400" stroke="#997400" points="1843.96,-826.2 1836.81,-818.39 1837.53,-828.96 1843.96,-826.2"/>
+<text text-anchor="middle" x="1955.2" y="-868.35" font-family="Times,serif" font-size="14.00" fill="#997400">How do you plan on doing</text>
+<text text-anchor="middle" x="1955.2" y="-851.1" font-family="Times,serif" font-size="14.00" fill="#997400">that?</text>
+</g>
+<!-- guard15 -->
+<g id="node24" class="node">
+<title>guard15</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2118.58" cy="-541.61" rx="138.06" ry="78.84"/>
+<text text-anchor="middle" x="2118.58" y="-580.06" font-family="Times,serif" font-size="14.00">A cynic in our midsts. I</text>
+<text text-anchor="middle" x="2118.58" y="-562.81" font-family="Times,serif" font-size="14.00">am sure you have your</text>
+<text text-anchor="middle" x="2118.58" y="-545.56" font-family="Times,serif" font-size="14.00">reasons. Regardless,</text>
+<text text-anchor="middle" x="2118.58" y="-528.31" font-family="Times,serif" font-size="14.00">I am certain we can</text>
+<text text-anchor="middle" x="2118.58" y="-511.06" font-family="Times,serif" font-size="14.00">bring about some type of</text>
+<text text-anchor="middle" x="2118.58" y="-493.81" font-family="Times,serif" font-size="14.00">understanding.</text>
+</g>
+<!-- guard11&#45;&gt;guard15 -->
+<g id="edge27" class="edge">
+<title>guard11&#45;&gt;guard15</title>
+<path fill="none" stroke="#470099" d="M1989.02,-1067.2C2007.83,-1021.1 2034.3,-952.2 2051.58,-890.28 2075.82,-803.41 2094.28,-701.92 2105.63,-631.09"/>
+<polygon fill="#470099" stroke="#470099" points="2109.21,-631.86 2107.32,-621.44 2102.29,-630.76 2109.21,-631.86"/>
+<text text-anchor="middle" x="2128.83" y="-868.35" font-family="Times,serif" font-size="14.00" fill="#470099">That seems highly</text>
+<text text-anchor="middle" x="2128.83" y="-851.1" font-family="Times,serif" font-size="14.00" fill="#470099">unlikely.</text>
+</g>
+<!-- guard2 -->
+<g id="node12" class="node">
+<title>guard2</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="930.58" cy="-1861.12" rx="137" ry="91.04"/>
+<text text-anchor="middle" x="930.58" y="-1908.19" font-family="Times,serif" font-size="14.00">You want to help? I think</text>
+<text text-anchor="middle" x="930.58" y="-1890.94" font-family="Times,serif" font-size="14.00">you will need to talk to</text>
+<text text-anchor="middle" x="930.58" y="-1873.69" font-family="Times,serif" font-size="14.00">Nicole or Jake</text>
+<text text-anchor="middle" x="930.58" y="-1856.44" font-family="Times,serif" font-size="14.00">if you want to help us.</text>
+<text text-anchor="middle" x="930.58" y="-1839.19" font-family="Times,serif" font-size="14.00">They have more time for</text>
+<text text-anchor="middle" x="930.58" y="-1821.94" font-family="Times,serif" font-size="14.00">dealing with slower</text>
+<text text-anchor="middle" x="930.58" y="-1804.69" font-family="Times,serif" font-size="14.00">people.</text>
+</g>
+<!-- guard3 -->
+<g id="node13" class="node">
+<title>guard3</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1201.58" cy="-1861.12" rx="115.79" ry="30.05"/>
+<text text-anchor="middle" x="1201.58" y="-1865.07" font-family="Times,serif" font-size="14.00">OK. Just stay out of</text>
+<text text-anchor="middle" x="1201.58" y="-1847.82" font-family="Times,serif" font-size="14.00">trouble around here.</text>
+</g>
+<!-- guard4 -->
+<g id="node14" class="node">
+<title>guard4</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3006.58" cy="-1532.44" rx="121.09" ry="30.05"/>
+<text text-anchor="middle" x="3006.58" y="-1536.39" font-family="Times,serif" font-size="14.00">Do you see to end the</text>
+<text text-anchor="middle" x="3006.58" y="-1519.14" font-family="Times,serif" font-size="14.00">evil of the Children?</text>
+</g>
+<!-- guard5 -->
+<g id="node15" class="node">
+<title>guard5</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3240.58" cy="-54.45" rx="122.15" ry="54.45"/>
+<text text-anchor="middle" x="3240.58" y="-75.65" font-family="Times,serif" font-size="14.00">Excellent! Go talk to</text>
+<text text-anchor="middle" x="3240.58" y="-58.4" font-family="Times,serif" font-size="14.00">Nicole and she will be</text>
+<text text-anchor="middle" x="3240.58" y="-41.15" font-family="Times,serif" font-size="14.00">able to tell you how</text>
+<text text-anchor="middle" x="3240.58" y="-23.9" font-family="Times,serif" font-size="14.00"> you can help us.</text>
+</g>
+<!-- guard4&#45;&gt;guard5 -->
+<g id="edge11" class="edge">
+<title>guard4&#45;&gt;guard5</title>
+<path fill="none" stroke="#990085" d="M2990.38,-1502.18C2955.53,-1436.41 2876.58,-1270.99 2876.58,-1122.3 2876.58,-1122.3 2876.58,-1122.3 2876.58,-328.33 2876.58,-276.77 2864.28,-254.86 2895.58,-213.89 2949.86,-142.84 3043.49,-102.6 3119.53,-80.47"/>
+<polygon fill="#990085" stroke="#990085" points="3119.99,-83.69 3128.66,-77.59 3118.08,-76.96 3119.99,-83.69"/>
+<text text-anchor="middle" x="2957.95" y="-733.44" font-family="Times,serif" font-size="14.00" fill="#990085">Yes. I want to wipe out</text>
+<text text-anchor="middle" x="2957.95" y="-716.19" font-family="Times,serif" font-size="14.00" fill="#990085">those scum.</text>
+</g>
+<!-- combat -->
+<g id="node16" class="node">
+<title>combat</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="670.58" cy="-54.45" rx="27" ry="18"/>
+</g>
+<!-- guard4&#45;&gt;combat -->
+<g id="edge12" class="edge">
+<title>guard4&#45;&gt;combat</title>
+<path fill="none" stroke="#009981" d="M2892.28,-1522.39C2633.05,-1500.26 2008.94,-1437.57 1827.58,-1334.31 1386.99,-1083.45 1543.27,-693.02 1091.58,-462.76 1042.94,-437.97 886.08,-482.44 846.58,-444.76 809.18,-409.1 840.4,-260.74 818.58,-213.89 790.7,-154.07 731.59,-101.87 697.1,-74.91"/>
+<polygon fill="#009981" stroke="#009981" points="699.55,-71.61 689.48,-68.3 695.29,-77.16 699.55,-71.61"/>
+<text text-anchor="middle" x="1506.08" y="-733.44" font-family="Times,serif" font-size="14.00" fill="#009981">No. I&#39;d rather kill you</text>
+<text text-anchor="middle" x="1506.08" y="-716.19" font-family="Times,serif" font-size="14.00" fill="#009981">wimps.</text>
+</g>
+<!-- guard6 -->
+<g id="node17" class="node">
+<title>guard6</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3271.58" cy="-729.49" rx="149.2" ry="91.04"/>
+<text text-anchor="middle" x="3271.58" y="-776.56" font-family="Times,serif" font-size="14.00">The Children are an</text>
+<text text-anchor="middle" x="3271.58" y="-759.31" font-family="Times,serif" font-size="14.00">occult group who worship</text>
+<text text-anchor="middle" x="3271.58" y="-742.06" font-family="Times,serif" font-size="14.00">some dark god.</text>
+<text text-anchor="middle" x="3271.58" y="-724.81" font-family="Times,serif" font-size="14.00">Personally,</text>
+<text text-anchor="middle" x="3271.58" y="-707.56" font-family="Times,serif" font-size="14.00">I think there is</text>
+<text text-anchor="middle" x="3271.58" y="-690.31" font-family="Times,serif" font-size="14.00">something about them that</text>
+<text text-anchor="middle" x="3271.58" y="-673.06" font-family="Times,serif" font-size="14.00">reeks of evil.</text>
+</g>
+<!-- guard4&#45;&gt;guard6 -->
+<g id="edge13" class="edge">
+<title>guard4&#45;&gt;guard6</title>
+<path fill="none" stroke="#995400" d="M3016.17,-1502.46C3051.89,-1394.48 3178.32,-1012.35 3238.84,-829.45"/>
+<polygon fill="#995400" stroke="#995400" points="3242.47,-830.62 3242.28,-820.03 3235.82,-828.42 3242.47,-830.62"/>
+<text text-anchor="middle" x="3298.7" y="-1116.62" font-family="Times,serif" font-size="14.00" fill="#995400">Who are these Children?</text>
+</g>
+<!-- guard10 -->
+<g id="node18" class="node">
+<title>guard10</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3706.58" cy="-1121.3" rx="142.31" ry="78.84"/>
+<text text-anchor="middle" x="3706.58" y="-1159.75" font-family="Times,serif" font-size="14.00">Not children. We wouldn&#39;t</text>
+<text text-anchor="middle" x="3706.58" y="-1142.5" font-family="Times,serif" font-size="14.00">think of harming them.</text>
+<text text-anchor="middle" x="3706.58" y="-1125.25" font-family="Times,serif" font-size="14.00">No. These are the</text>
+<text text-anchor="middle" x="3706.58" y="-1108" font-family="Times,serif" font-size="14.00">Children of the</text>
+<text text-anchor="middle" x="3706.58" y="-1090.75" font-family="Times,serif" font-size="14.00">Cathedral. A nasty group</text>
+<text text-anchor="middle" x="3706.58" y="-1073.5" font-family="Times,serif" font-size="14.00">of people.</text>
+</g>
+<!-- guard4&#45;&gt;guard10 -->
+<g id="edge14" class="edge">
+<title>guard4&#45;&gt;guard10</title>
+<path fill="none" stroke="#270099" d="M3053.05,-1504.28C3163.67,-1439.62 3444.95,-1275.22 3599.99,-1184.59"/>
+<polygon fill="#270099" stroke="#270099" points="3601.24,-1187.34 3608.11,-1179.27 3597.71,-1181.29 3601.24,-1187.34"/>
+<text text-anchor="middle" x="3380.2" y="-1373.51" font-family="Times,serif" font-size="14.00" fill="#270099">Why would I want to kill</text>
+<text text-anchor="middle" x="3380.2" y="-1356.26" font-family="Times,serif" font-size="14.00" fill="#270099">children?</text>
+</g>
+<!-- guard6&#45;&gt;guard5 -->
+<g id="edge15" class="edge">
+<title>guard6&#45;&gt;guard5</title>
+<path fill="none" stroke="#059900" d="M3245.3,-639.65C3230.28,-584.18 3212.95,-510.97 3205.33,-444.76 3193.58,-342.83 3194.12,-315.89 3205.33,-213.89 3208.8,-182.33 3216.04,-147.87 3223.06,-119.16"/>
+<polygon fill="#059900" stroke="#059900" points="3226.61,-120.41 3225.63,-109.86 3219.81,-118.72 3226.61,-120.41"/>
+<text text-anchor="middle" x="3258.2" y="-324.65" font-family="Times,serif" font-size="14.00" fill="#059900">I will kill them.</text>
+</g>
+<!-- guard7 -->
+<g id="node19" class="node">
+<title>guard7</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3459.58" cy="-329.33" rx="137.53" ry="78.84"/>
+<text text-anchor="middle" x="3459.58" y="-367.78" font-family="Times,serif" font-size="14.00">They are a strong lot,</text>
+<text text-anchor="middle" x="3459.58" y="-350.53" font-family="Times,serif" font-size="14.00">but I think with someone</text>
+<text text-anchor="middle" x="3459.58" y="-333.28" font-family="Times,serif" font-size="14.00">of your skills,</text>
+<text text-anchor="middle" x="3459.58" y="-316.03" font-family="Times,serif" font-size="14.00">you will be able to get</text>
+<text text-anchor="middle" x="3459.58" y="-298.78" font-family="Times,serif" font-size="14.00">in and help us destroy</text>
+<text text-anchor="middle" x="3459.58" y="-281.53" font-family="Times,serif" font-size="14.00">them.</text>
+</g>
+<!-- guard6&#45;&gt;guard7 -->
+<g id="edge16" class="edge">
+<title>guard6&#45;&gt;guard7</title>
+<path fill="none" stroke="#990032" d="M3312.6,-641.6C3344.27,-574.54 3387.84,-482.26 3419.31,-415.6"/>
+<polygon fill="#990032" stroke="#990032" points="3422.76,-417.5 3423.87,-406.96 3416.43,-414.51 3422.76,-417.5"/>
+<text text-anchor="middle" x="3481.08" y="-545.56" font-family="Times,serif" font-size="14.00" fill="#990032">I don&#39;t know. They sound</text>
+<text text-anchor="middle" x="3481.08" y="-528.31" font-family="Times,serif" font-size="14.00" fill="#990032">too strong for me.</text>
+</g>
+<!-- guard9 -->
+<g id="node20" class="node">
+<title>guard9</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3032.58" cy="-329.33" rx="127.99" ry="54.45"/>
+<text text-anchor="middle" x="3032.58" y="-350.53" font-family="Times,serif" font-size="14.00">If you talk to Nicole,</text>
+<text text-anchor="middle" x="3032.58" y="-333.28" font-family="Times,serif" font-size="14.00">she will be able to tell</text>
+<text text-anchor="middle" x="3032.58" y="-316.03" font-family="Times,serif" font-size="14.00">you more of what can</text>
+<text text-anchor="middle" x="3032.58" y="-298.78" font-family="Times,serif" font-size="14.00"> be done to stop them. </text>
+</g>
+<!-- guard6&#45;&gt;guard9 -->
+<g id="edge17" class="edge">
+<title>guard6&#45;&gt;guard9</title>
+<path fill="none" stroke="#005f99" d="M3145.29,-680.69C3087.8,-657.66 3030.72,-632.48 3022.83,-620.45 2978.73,-553.23 2993.38,-457.13 3010.68,-394.25"/>
+<polygon fill="#005f99" stroke="#005f99" points="3014.32,-395.25 3013.7,-384.68 3007.59,-393.33 3014.32,-395.25"/>
+<text text-anchor="middle" x="3102.45" y="-536.93" font-family="Times,serif" font-size="14.00" fill="#005f99">What can I do to help?</text>
+</g>
+<!-- guard8 -->
+<g id="node21" class="node">
+<title>guard8</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3655.58" cy="-54.45" rx="141.24" ry="54.45"/>
+<text text-anchor="middle" x="3655.58" y="-75.65" font-family="Times,serif" font-size="14.00">Suit yourself. If they</text>
+<text text-anchor="middle" x="3655.58" y="-58.4" font-family="Times,serif" font-size="14.00">take over the wastelands,</text>
+<text text-anchor="middle" x="3655.58" y="-41.15" font-family="Times,serif" font-size="14.00">don&#39;t say we didn&#39;t</text>
+<text text-anchor="middle" x="3655.58" y="-23.9" font-family="Times,serif" font-size="14.00"> warn you.</text>
+</g>
+<!-- guard6&#45;&gt;guard8 -->
+<g id="edge18" class="edge">
+<title>guard6&#45;&gt;guard8</title>
+<path fill="none" stroke="#8b9900" d="M3416.98,-708.2C3473.58,-693.06 3534.18,-666.62 3573.58,-620.45 3695.9,-477.11 3681.76,-235.06 3666.38,-119.97"/>
+<polygon fill="#8b9900" stroke="#8b9900" points="3669.74,-119.66 3664.9,-110.23 3662.8,-120.62 3669.74,-119.66"/>
+<text text-anchor="middle" x="3751.7" y="-333.28" font-family="Times,serif" font-size="14.00" fill="#8b9900">Forget it! There is no</text>
+<text text-anchor="middle" x="3751.7" y="-316.03" font-family="Times,serif" font-size="14.00" fill="#8b9900">way I will help you.</text>
+</g>
+<!-- guard10&#45;&gt;guard5 -->
+<g id="edge22" class="edge">
+<title>guard10&#45;&gt;guard5</title>
+<path fill="none" stroke="#000c99" d="M3720.54,-1042.49C3756.93,-835 3848.59,-279.77 3799.58,-213.89 3782.96,-191.56 3765.21,-206.77 3739.58,-195.89 3681.88,-171.41 3675.75,-147.56 3616.58,-126.89 3569.39,-110.42 3554.75,-117.84 3505.58,-108.89 3458.34,-100.3 3406.54,-90.04 3361.36,-80.82"/>
+<polygon fill="#000c99" stroke="#000c99" points="3362.13,-77.2 3351.63,-78.62 3360.73,-84.06 3362.13,-77.2"/>
+<text text-anchor="middle" x="3881.58" y="-545.56" font-family="Times,serif" font-size="14.00" fill="#000c99">In that case, sure &#45; I&#39;ll</text>
+<text text-anchor="middle" x="3881.58" y="-528.31" font-family="Times,serif" font-size="14.00" fill="#000c99">waste them.</text>
+</g>
+<!-- guard10&#45;&gt;guard6 -->
+<g id="edge24" class="edge">
+<title>guard10&#45;&gt;guard6</title>
+<path fill="none" stroke="#990065" d="M3632.29,-1053.73C3557.81,-986.98 3442.98,-884.08 3362.96,-812.38"/>
+<polygon fill="#990065" stroke="#990065" points="3365.62,-810.17 3355.84,-806.1 3360.95,-815.38 3365.62,-810.17"/>
+<text text-anchor="middle" x="3515.33" y="-868.35" font-family="Times,serif" font-size="14.00" fill="#990065">What can you tell me</text>
+<text text-anchor="middle" x="3515.33" y="-851.1" font-family="Times,serif" font-size="14.00" fill="#990065">about these Children?</text>
+</g>
+<!-- guard10&#45;&gt;guard8 -->
+<g id="edge23" class="edge">
+<title>guard10&#45;&gt;guard8</title>
+<path fill="none" stroke="#399900" d="M3767.85,-1049.76C3863.03,-931.43 4029.65,-684.13 3970.58,-462.76 3937.69,-339.51 3907.19,-313.57 3827.58,-213.89 3797.56,-176.31 3758.49,-139.59 3725.18,-110.97"/>
+<polygon fill="#399900" stroke="#399900" points="3727.73,-107.69 3717.84,-103.87 3723.19,-113.02 3727.73,-107.69"/>
+<text text-anchor="middle" x="4070.33" y="-562.81" font-family="Times,serif" font-size="14.00" fill="#399900">Oh. I thought you were</text>
+<text text-anchor="middle" x="4070.33" y="-545.56" font-family="Times,serif" font-size="14.00" fill="#399900">talking about kids.</text>
+<text text-anchor="middle" x="4070.33" y="-528.31" font-family="Times,serif" font-size="14.00" fill="#399900">Nevermind. I don&#39;t think</text>
+<text text-anchor="middle" x="4070.33" y="-511.06" font-family="Times,serif" font-size="14.00" fill="#399900"> I&#39;ll help.</text>
+</g>
+<!-- guard7&#45;&gt;guard5 -->
+<g id="edge19" class="edge">
+<title>guard7&#45;&gt;guard5</title>
+<path fill="none" stroke="#7a0099" d="M3402.61,-257.35C3367.04,-213.02 3321.78,-156.62 3288.14,-114.71"/>
+<polygon fill="#7a0099" stroke="#7a0099" points="3290.35,-112.87 3281.36,-107.26 3284.89,-117.25 3290.35,-112.87"/>
+<text text-anchor="middle" x="3397.58" y="-156.72" font-family="Times,serif" font-size="14.00" fill="#7a0099">I&#39;ll do it then.</text>
+</g>
+<!-- guard7&#45;&gt;guard8 -->
+<g id="edge20" class="edge">
+<title>guard7&#45;&gt;guard8</title>
+<path fill="none" stroke="#00994d" d="M3452.06,-250.15C3452.22,-209.64 3459.2,-161.55 3485.58,-126.89 3497.11,-111.74 3512.46,-99.77 3529.24,-90.33"/>
+<polygon fill="#00994d" stroke="#00994d" points="3530.48,-93.1 3537.69,-85.33 3527.21,-86.91 3530.48,-93.1"/>
+<text text-anchor="middle" x="3563.58" y="-165.34" font-family="Times,serif" font-size="14.00" fill="#00994d">No. I don&#39;t think I will</text>
+<text text-anchor="middle" x="3563.58" y="-148.09" font-family="Times,serif" font-size="14.00" fill="#00994d">help.</text>
+</g>
+<!-- guard9&#45;&gt;guardend -->
+<g id="edge21" class="edge">
+<title>guard9&#45;&gt;guardend</title>
+<path fill="none" stroke="#992100" d="M2970.82,-281.43C2905.09,-234.13 2796.18,-163.07 2690.58,-126.89 2504.06,-63 2264.56,-55.49 2172.73,-55.14"/>
+<polygon fill="#992100" stroke="#992100" points="2172.78,-51.63 2162.78,-55.13 2172.77,-58.63 2172.78,-51.63"/>
+<text text-anchor="middle" x="2912.2" y="-156.72" font-family="Times,serif" font-size="14.00" fill="#992100">Thank you. Goodbye.</text>
+</g>
+<!-- guard12&#45;&gt;guardend -->
+<g id="edge28" class="edge">
+<title>guard12&#45;&gt;guardend</title>
+<path fill="none" stroke="#00991a" d="M1899.77,-668.33C1915.49,-654.54 1929.76,-638.53 1939.58,-620.45 2026.11,-461.14 1895.83,-378.02 1972.83,-213.89 2002.38,-150.9 2068.39,-99.27 2106.32,-73.41"/>
+<polygon fill="#00991a" stroke="#00991a" points="2107.94,-75.86 2114.31,-67.39 2104.06,-70.04 2107.94,-75.86"/>
+<text text-anchor="middle" x="2044.95" y="-333.28" font-family="Times,serif" font-size="14.00" fill="#00991a">Good luck with that,</text>
+<text text-anchor="middle" x="2044.95" y="-316.03" font-family="Times,serif" font-size="14.00" fill="#00991a">then.</text>
+</g>
+<!-- guard13 -->
+<g id="node25" class="node">
+<title>guard13</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1508.58" cy="-329.33" rx="140.18" ry="66.64"/>
+<text text-anchor="middle" x="1508.58" y="-359.15" font-family="Times,serif" font-size="14.00">You are right in saying</text>
+<text text-anchor="middle" x="1508.58" y="-341.9" font-family="Times,serif" font-size="14.00">that we, as humans, have</text>
+<text text-anchor="middle" x="1508.58" y="-324.65" font-family="Times,serif" font-size="14.00">been close&#45;minded.</text>
+<text text-anchor="middle" x="1508.58" y="-307.4" font-family="Times,serif" font-size="14.00">However, there is always</text>
+<text text-anchor="middle" x="1508.58" y="-290.15" font-family="Times,serif" font-size="14.00">hope.</text>
+</g>
+<!-- guard12&#45;&gt;guard13 -->
+<g id="edge29" class="edge">
+<title>guard12&#45;&gt;guard13</title>
+<path fill="none" stroke="#990012" d="M1680.89,-686.24C1648.94,-669.95 1616.95,-648.35 1594.08,-620.45 1544.12,-559.51 1523.35,-470.32 1514.72,-406.94"/>
+<polygon fill="#990012" stroke="#990012" points="1518.09,-406.68 1513.34,-397.21 1511.14,-407.58 1518.09,-406.68"/>
+<text text-anchor="middle" x="1685.83" y="-571.43" font-family="Times,serif" font-size="14.00" fill="#990012">In all of history, we</text>
+<text text-anchor="middle" x="1685.83" y="-554.18" font-family="Times,serif" font-size="14.00" fill="#990012">have never been able to</text>
+<text text-anchor="middle" x="1685.83" y="-536.93" font-family="Times,serif" font-size="14.00" fill="#990012">get tolerance.</text>
+<text text-anchor="middle" x="1685.83" y="-519.68" font-family="Times,serif" font-size="14.00" fill="#990012">Why do you think the War</text>
+<text text-anchor="middle" x="1685.83" y="-502.43" font-family="Times,serif" font-size="14.00" fill="#990012">happened?</text>
+</g>
+<!-- guard14 -->
+<g id="node26" class="node">
+<title>guard14</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1792.58" cy="-329.33" rx="125.33" ry="42.25"/>
+<text text-anchor="middle" x="1792.58" y="-341.9" font-family="Times,serif" font-size="14.00">Be that as it may, your</text>
+<text text-anchor="middle" x="1792.58" y="-324.65" font-family="Times,serif" font-size="14.00">opinion was not</text>
+<text text-anchor="middle" x="1792.58" y="-307.4" font-family="Times,serif" font-size="14.00">requested. Goodbye.</text>
+</g>
+<!-- guard12&#45;&gt;guard14 -->
+<g id="edge30" class="edge">
+<title>guard12&#45;&gt;guard14</title>
+<path fill="none" stroke="#003f99" d="M1787.24,-638.38C1786.68,-632.32 1786.2,-626.3 1785.83,-620.45 1780.56,-537.31 1784.91,-440.54 1788.66,-382.43"/>
+<polygon fill="#003f99" stroke="#003f99" points="1792.2,-382.9 1789.37,-372.69 1785.21,-382.44 1792.2,-382.9"/>
+<text text-anchor="middle" x="1862.45" y="-545.56" font-family="Times,serif" font-size="14.00" fill="#003f99">That&#39;s just a bunch of</text>
+<text text-anchor="middle" x="1862.45" y="-528.31" font-family="Times,serif" font-size="14.00" fill="#003f99">bull.</text>
+</g>
+<!-- guard15&#45;&gt;guardend -->
+<g id="edge33" class="edge">
+<title>guard15&#45;&gt;guardend</title>
+<path fill="none" stroke="#00996d" d="M2121.16,-462.39C2124.79,-352.2 2131.24,-156.59 2133.64,-83.79"/>
+<polygon fill="#00996d" stroke="#00996d" points="2137.17,-83.91 2134,-73.8 2130.18,-83.68 2137.17,-83.91"/>
+<text text-anchor="middle" x="2208.83" y="-333.28" font-family="Times,serif" font-size="14.00" fill="#00996d">Good luck to you then.</text>
+<text text-anchor="middle" x="2208.83" y="-316.03" font-family="Times,serif" font-size="14.00" fill="#00996d">Goodbye.</text>
+</g>
+<!-- guard13&#45;&gt;combat -->
+<g id="edge32" class="edge">
+<title>guard13&#45;&gt;combat</title>
+<path fill="none" stroke="#990098" d="M1447.88,-269.13C1422.58,-248.01 1391.64,-226.38 1359.58,-213.89 1274.56,-180.78 1244.76,-212.68 1155.08,-195.89 982.01,-163.51 781.96,-95.37 704.05,-67.61"/>
+<polygon fill="#990098" stroke="#990098" points="705.47,-64.04 694.88,-63.97 703.11,-70.63 705.47,-64.04"/>
+<text text-anchor="middle" x="1239.33" y="-182.59" font-family="Times,serif" font-size="14.00" fill="#990098">I think you are right.</text>
+<text text-anchor="middle" x="1239.33" y="-165.34" font-family="Times,serif" font-size="14.00" fill="#990098">Here, let me make you</text>
+<text text-anchor="middle" x="1239.33" y="-148.09" font-family="Times,serif" font-size="14.00" fill="#990098">more open&#45;minded with</text>
+<text text-anchor="middle" x="1239.33" y="-130.84" font-family="Times,serif" font-size="14.00" fill="#990098">this.</text>
+</g>
+<!-- guard13&#45;&gt;guardend -->
+<g id="edge31" class="edge">
+<title>guard13&#45;&gt;guardend</title>
+<path fill="none" stroke="#6c9900" d="M1569.63,-268.98C1620.39,-223.07 1696.68,-161.65 1774.58,-126.89 1884.87,-77.68 2029.18,-62.18 2096.68,-57.44"/>
+<polygon fill="#6c9900" stroke="#6c9900" points="2096.85,-60.87 2106.6,-56.72 2096.4,-53.89 2096.85,-60.87"/>
+<text text-anchor="middle" x="1857.08" y="-156.72" font-family="Times,serif" font-size="14.00" fill="#6c9900">Good luck to you, then.</text>
+</g>
+<!-- guard17&#45;&gt;combat -->
+<g id="edge41" class="edge">
+<title>guard17&#45;&gt;combat</title>
+<path fill="none" stroke="#999300" d="M805.95,-666.97C765.06,-612.26 709.9,-528.21 685.08,-444.76 646.23,-314.2 659.53,-148.1 666.97,-83.2"/>
+<polygon fill="#999300" stroke="#999300" points="670.53,-83.98 668.24,-73.63 663.58,-83.14 670.53,-83.98"/>
+<text text-anchor="middle" x="751.33" y="-333.28" font-family="Times,serif" font-size="14.00" fill="#999300">You are the double</text>
+<text text-anchor="middle" x="751.33" y="-316.03" font-family="Times,serif" font-size="14.00" fill="#999300">agent!!!</text>
+</g>
+<!-- guard17&#45;&gt;guardend -->
+<g id="edge40" class="edge">
+<title>guard17&#45;&gt;guardend</title>
+<path fill="none" stroke="#007299" d="M849.22,-662.67C837.25,-522.25 818.73,-200.11 892.58,-126.89 936.42,-83.43 1892.96,-60.61 2096.65,-56.23"/>
+<polygon fill="#007299" stroke="#007299" points="2096.46,-59.71 2106.38,-56 2096.31,-52.71 2096.46,-59.71"/>
+<text text-anchor="middle" x="931.95" y="-333.28" font-family="Times,serif" font-size="14.00" fill="#007299">I&#39;m glad to know that.</text>
+<text text-anchor="middle" x="931.95" y="-316.03" font-family="Times,serif" font-size="14.00" fill="#007299">Thanks for your time.</text>
+</g>
+<!-- guard18 -->
+<g id="node32" class="node">
+<title>guard18</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1201.58" cy="-329.33" rx="148.67" ry="115.44"/>
+<text text-anchor="middle" x="1201.58" y="-393.65" font-family="Times,serif" font-size="14.00">Not really. The only</text>
+<text text-anchor="middle" x="1201.58" y="-376.4" font-family="Times,serif" font-size="14.00">thing I can think of is</text>
+<text text-anchor="middle" x="1201.58" y="-359.15" font-family="Times,serif" font-size="14.00">that the person would</text>
+<text text-anchor="middle" x="1201.58" y="-341.9" font-family="Times,serif" font-size="14.00">have to have access to</text>
+<text text-anchor="middle" x="1201.58" y="-324.65" font-family="Times,serif" font-size="14.00">some information and have</text>
+<text text-anchor="middle" x="1201.58" y="-307.4" font-family="Times,serif" font-size="14.00">access to the outside.</text>
+<text text-anchor="middle" x="1201.58" y="-290.15" font-family="Times,serif" font-size="14.00">You might want to look</text>
+<text text-anchor="middle" x="1201.58" y="-272.9" font-family="Times,serif" font-size="14.00">to the initiates or</text>
+<text text-anchor="middle" x="1201.58" y="-255.65" font-family="Times,serif" font-size="14.00">scouts.</text>
+</g>
+<!-- guard17&#45;&gt;guard18 -->
+<g id="edge39" class="edge">
+<title>guard17&#45;&gt;guard18</title>
+<path fill="none" stroke="#990046" d="M908.5,-667.58C962.48,-605.47 1047.22,-507.96 1111.73,-433.73"/>
+<polygon fill="#990046" stroke="#990046" points="1114.78,-436.55 1118.69,-426.71 1109.49,-431.96 1114.78,-436.55"/>
+<text text-anchor="middle" x="1169.2" y="-545.56" font-family="Times,serif" font-size="14.00" fill="#990046">Do you have any clues as</text>
+<text text-anchor="middle" x="1169.2" y="-528.31" font-family="Times,serif" font-size="14.00" fill="#990046">to who it could be?</text>
+</g>
+<!-- guard19&#45;&gt;combat -->
+<g id="edge43" class="edge">
+<title>guard19&#45;&gt;combat</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M558.06,-499.24C582.59,-402.51 643.16,-163.6 663.66,-82.72"/>
+<polygon fill="#555555" stroke="#555555" points="667.22,-83.94 666.28,-73.39 660.43,-82.22 667.22,-83.94"/>
+</g>
+<!-- guard20 -->
+<g id="node30" class="node">
+<title>guard20</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="415.58" cy="-329.33" rx="138.59" ry="42.25"/>
+<text text-anchor="middle" x="415.58" y="-341.9" font-family="Times,serif" font-size="14.00">You must be right. Thank</text>
+<text text-anchor="middle" x="415.58" y="-324.65" font-family="Times,serif" font-size="14.00">you for setting me</text>
+<text text-anchor="middle" x="415.58" y="-307.4" font-family="Times,serif" font-size="14.00">straight.</text>
+</g>
+<!-- guard16a&#45;&gt;guard20 -->
+<g id="edge37" class="edge">
+<title>guard16a&#45;&gt;guard20</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M374.45,-711.13C380.57,-654.44 400.14,-473.28 409.91,-382.79"/>
+<polygon fill="#555555" stroke="#555555" points="413.49,-383.28 411.08,-372.96 406.53,-382.53 413.49,-383.28"/>
+</g>
+<!-- guard21 -->
+<g id="node31" class="node">
+<title>guard21</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="129.58" cy="-329.33" rx="129.58" ry="54.45"/>
+<text text-anchor="middle" x="129.58" y="-350.53" font-family="Times,serif" font-size="14.00">I think you are the</text>
+<text text-anchor="middle" x="129.58" y="-333.28" font-family="Times,serif" font-size="14.00">double agent. Trying to</text>
+<text text-anchor="middle" x="129.58" y="-316.03" font-family="Times,serif" font-size="14.00">trick me, I see. Well</text>
+<text text-anchor="middle" x="129.58" y="-298.78" font-family="Times,serif" font-size="14.00"> now you DIE!</text>
+</g>
+<!-- guard16a&#45;&gt;guard21 -->
+<g id="edge38" class="edge">
+<title>guard16a&#45;&gt;guard21</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M362.75,-712.39C330.13,-658.94 224.27,-485.48 167.07,-391.76"/>
+<polygon fill="#555555" stroke="#555555" points="169.55,-390.11 161.35,-383.39 163.58,-393.75 169.55,-390.11"/>
+</g>
+<!-- guard21&#45;&gt;combat -->
+<g id="edge44" class="edge">
+<title>guard21&#45;&gt;combat</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M181,-278.99C205.78,-257.04 236.76,-232.1 267.58,-213.89 394.42,-138.99 563.18,-85.92 635.39,-65.15"/>
+<polygon fill="#555555" stroke="#555555" points="636.06,-68.31 644.72,-62.21 634.15,-61.58 636.06,-68.31"/>
+</g>
+<!-- guard18&#45;&gt;guardend -->
+<g id="edge42" class="edge">
+<title>guard18&#45;&gt;guardend</title>
+<path fill="none" stroke="#670099" d="M1305.3,-246.43C1367.72,-202.2 1450.95,-151.69 1533.83,-126.89 1739.54,-65.34 1999.82,-56.54 2096.32,-55.48"/>
+<polygon fill="#670099" stroke="#670099" points="2096.29,-58.98 2106.26,-55.39 2096.23,-51.98 2096.29,-58.98"/>
+<text text-anchor="middle" x="1596.95" y="-156.72" font-family="Times,serif" font-size="14.00" fill="#670099">Thanks. Goodbye.</text>
+</g>
+<!-- guard23&#45;&gt;guardend -->
+<g id="edge47" class="edge">
+<title>guard23&#45;&gt;guardend</title>
+<path fill="none" stroke="#001f99" d="M2479.88,-299.02C2455.15,-255.51 2403.14,-173.9 2337.58,-126.89 2286.32,-90.14 2214.4,-70.79 2171.35,-61.88"/>
+<polygon fill="#001f99" stroke="#001f99" points="2172.28,-58.3 2161.79,-59.78 2170.92,-65.16 2172.28,-58.3"/>
+<text text-anchor="middle" x="2499.45" y="-173.97" font-family="Times,serif" font-size="14.00" fill="#001f99">There you go. Maybe that</text>
+<text text-anchor="middle" x="2499.45" y="-156.72" font-family="Times,serif" font-size="14.00" fill="#001f99">will help you on your</text>
+<text text-anchor="middle" x="2499.45" y="-139.47" font-family="Times,serif" font-size="14.00" fill="#001f99">fighting.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (not(initialized)) then begin\n  critter_add_trait(self_obj, 1, 6, 46);\n  if (local_var(0) == 0) then begin\n    if (get_critter_stat(self_obj, 34) == 1) then begin\n      set_local_var(0, random(100, 104));\n    end\n    else begin\n      set_local_var(0, random(105, 109));\n    end\n  end\n  if (global_var(129) == 2) then begin\n    if (random(0, 1)) then begin\n      kill_critter(self_obj, 59);\n    end\n    else begin\n      kill_critter(self_obj, 57);\n    end\n  end\n  initialized := 1;\nend\nelse begin\n  if (script_action == 12) then begin\n    call critter_p_proc;\n  end\n  else begin\n    if (script_action == 14) then begin\n      call damage_p_proc;\n    end\n    else begin\n      if (script_action == 18) then begin\n        call destroy_p_proc;\n      end\n      else begin\n        if (script_action == 21) then begin\n          call look_at_p_proc;\n        end\n        else begin\n          if (script_action == 11) then begin\n            call talk_p_proc;\n          end\n        end\n      end\n    end\n  end\nend\n","critter_p_proc":"if (map_var(1) == 1) then begin\n  animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(dude_obj), random(0, 6), random(3, 7)), 0);\nend\nelse begin\n  if ((map_var(1) == 2) and obj_can_see_obj(self_obj, dude_obj)) then begin\n    hostile := 1;\n  end\nend\nif (global_var(129) == 2) then begin\n  removal_ptr := self_obj;\nend\nif (hostile) then begin\n  hostile := 0;\n  attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\nend\nelse begin\n  if (tile_distance_objs(self_obj, dude_obj) < 8) then begin\n    if (local_var(1) or global_var(256)) then begin\n      hostile := 1;\n    end\n  end\nend\n","damage_p_proc":"if (source_obj == dude_obj) then begin\n  set_local_var(1, 1);\nend\n","destroy_p_proc":"if (source_obj == dude_obj) then begin\n  set_global_var(256, 1);\nend\nif (source_obj == dude_obj) then begin\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n    set_global_var(156, 1);\n    set_global_var(157, 0);\n  end\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n    set_global_var(157, 1);\n    set_global_var(156, 0);\n  end\n  set_global_var(159, global_var(159) + 1);\n  if ((global_var(159) % 2) == 0) then begin\n    set_global_var(155, global_var(155) - 1);\n  end\nend\n","look_at_p_proc":"display_msg(message_str(264, local_var(0)));\n","talk_p_proc":"script_overrides;\nif (local_var(1) or global_var(256)) then begin\n  float_msg(self_obj, message_str(669, random(100, 105)), 0);\nend\nelse begin\n  start_gdialog(264, self_obj, 4, -1, -1);\n  gsay_start;\n  if (global_var(133) == 1) then begin\n    call guard16;\n  end\n  else begin\n    if (global_var(133) == 2) then begin\n      call guard22;\n    end\n    else begin\n      call guard0;\n    end\n  end\n  gsay_end;\n  end_dialogue;\nend\n","guard0":"gsay_reply(264, 110);\ngiq_option(-3, 264, 111, guard1, 50);\ngiq_option(4, 264, message_str(264, 112) + proto_data(obj_pid(dude_obj), 1) + message_str(264, 113), guard4, 50);\ngiq_option(4, 264, message_str(264, 114) + proto_data(obj_pid(dude_obj), 1) + message_str(264, 115), combat, 50);\ngiq_option(6, 264, 116, guard11, 50);\n","guard1":"gsay_reply(264, 117);\ngiq_option(-3, 264, message_str(264, 118) + proto_data(obj_pid(dude_obj), 1) + message_str(264, 119), combat, 50);\ngiq_option(-3, 264, message_str(264, 120) + proto_data(obj_pid(dude_obj), 1) + message_str(264, 121), guard2, 50);\ngiq_option(-3, 264, message_str(264, 122), guard3, 50);\ngiq_option(-3, 264, message_str(264, 123) + proto_data(obj_pid(dude_obj), 1) + message_str(264, 124), guard3, 50);\n","guard2":"gsay_message(264, 125, 50);\n","guard3":"gsay_message(264, 126, 50);\n","guard4":"gsay_reply(264, 127);\ngiq_option(4, 264, 128, guard5, 50);\ngiq_option(4, 264, 129, combat, 50);\ngiq_option(4, 264, 130, guard6, 50);\ngiq_option(4, 264, 131, guard10, 50);\n","guard5":"gsay_message(264, 132, 50);\n","guard6":"gsay_reply(264, 133);\ngiq_option(4, 264, 134, guard5, 50);\ngiq_option(4, 264, 135, guard7, 50);\ngiq_option(4, 264, 136, guard9, 50);\ngiq_option(4, 264, 137, guard8, 50);\n","guard7":"gsay_reply(264, 138);\ngiq_option(4, 264, 139, guard5, 50);\ngiq_option(4, 264, 140, guard8, 50);\n","guard8":"gsay_message(264, 141, 50);\n","guard9":"gsay_reply(264, 142);\ngiq_option(4, 264, 143, guardend, 50);\n","guard10":"gsay_reply(264, 144);\ngiq_option(4, 264, 145, guard5, 50);\ngiq_option(4, 264, 146, guard8, 50);\ngiq_option(4, 264, 147, guard6, 50);\n","guard11":"gsay_reply(264, 148);\ngiq_option(6, 264, 149, guardend, 50);\ngiq_option(6, 264, 150, guard12, 50);\ngiq_option(6, 264, 151, guard15, 50);\n","guard12":"gsay_reply(264, 152);\ngiq_option(6, 264, 153, guardend, 50);\ngiq_option(6, 264, 154, guard13, 50);\ngiq_option(6, 264, 155, guard14, 50);\n","guard13":"gsay_reply(264, 156);\ngiq_option(6, 264, 157, guardend, 50);\ngiq_option(6, 264, 158, combat, 50);\n","guard14":"gsay_message(264, 159, 50);\n","guard15":"gsay_reply(264, 160);\ngiq_option(6, 264, 161, guardend, 50);\n","guard16":"gsay_reply(264, 162);\ngiq_option(4, 264, 163, guard17, 50);\ngiq_option(4, 264, 164, guard19, 50);\ngiq_option(6, 264, 165, guard16a, 50);\n","guard16a":"if (is_success(roll_vs_skill(dude_obj, 14, -10))) then begin\n  call guard20;\nend\nelse begin\n  call guard21;\nend\n","guard17":"gsay_reply(264, 166);\ngiq_option(4, 264, 167, guard18, 50);\ngiq_option(4, 264, 168, guardend, 50);\ngiq_option(4, 264, 169, combat, 50);\n","guard18":"gsay_reply(264, 170);\ngiq_option(4, 264, 171, guardend, 50);\n","guard19":"gsay_message(264, 172, 50);\ncall combat;\n","guard20":"gsay_message(264, 173, 50);\n","guard21":"gsay_message(264, 174, 50);\ncall combat;\n","guard22":"gsay_reply(264, 175);\ngiq_option(4, 264, 176, guardend, 50);\nif (global_var(132) == 0) then begin\n  giq_option(4, 264, 177, guard23, 50);\nend\n","guard23":"variable LVar0 := 0;\nLVar0 := 4 * 3600;\nset_global_var(132, 1);\ngsay_reply(264, 178);\ngame_time_advance(game_ticks(LVar0));\ngfade_out(400);\ngfade_in(400);\ngiq_option(4, 264, 179, guardend, 50);\n","combat":"hostile := 1;\n","guardend":"[]"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

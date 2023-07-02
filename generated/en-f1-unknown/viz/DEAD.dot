@@ -1,0 +1,7 @@
+digraph DEAD {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "dead00" [style=dotted color="#555555"]
+  "start" [label="Dead bodies . . ."]
+  "dead00" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "dead00" [label="They were recently killed\nby some sort of animal.\n---\nThey were recently\nkilled.\n---\nThey might be sleeping.\n---\nThey're dead."]
+}

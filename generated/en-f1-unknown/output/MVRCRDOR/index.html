@@ -1,0 +1,149 @@
+<!DOCTYPE html><html><head><title>MVRCRDOR</title><meta charset="utf-8" /></head><body><svg width="518pt" height="408pt"
+ viewBox="0.00 0.00 518.43 408.16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 404.16)">
+<title>MVRCRDOR</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-404.16 514.43,-404.16 514.43,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="235.06" cy="-321.32" rx="124.27" ry="78.84"/>
+<text text-anchor="middle" x="235.06" y="-359.77" font-family="Times,serif" font-size="14.00">You see a steel door. A</text>
+<text text-anchor="middle" x="235.06" y="-342.52" font-family="Times,serif" font-size="14.00">sign on it reads:</text>
+<text text-anchor="middle" x="235.06" y="-325.27" font-family="Times,serif" font-size="14.00">&quot;Reactor Core Control</text>
+<text text-anchor="middle" x="235.06" y="-308.02" font-family="Times,serif" font-size="14.00">Room.</text>
+<text text-anchor="middle" x="235.06" y="-290.77" font-family="Times,serif" font-size="14.00">Authorized Personnel</text>
+<text text-anchor="middle" x="235.06" y="-273.52" font-family="Times,serif" font-size="14.00">Only.&quot;</text>
+</g>
+<!-- use_stuff -->
+<g id="node2" class="node">
+<title>use_stuff</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="103.06" cy="-103.24" rx="103.06" ry="30.05"/>
+<text text-anchor="middle" x="103.06" y="-107.19" font-family="Times,serif" font-size="14.00">The door is locked</text>
+<text text-anchor="middle" x="103.06" y="-89.94" font-family="Times,serif" font-size="14.00">electronically.</text>
+</g>
+<!-- start&#45;&gt;use_stuff -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;use_stuff</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M190.56,-247.46C169.1,-212.35 144.25,-171.67 126.53,-142.66"/>
+<polygon fill="#555555" stroke="#555555" points="129.01,-141 120.81,-134.29 123.03,-144.65 129.01,-141"/>
+</g>
+<!-- pick_lock -->
+<g id="node3" class="node">
+<title>pick_lock</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="367.06" cy="-103.24" rx="143.37" ry="103.24"/>
+<text text-anchor="middle" x="367.06" y="-158.94" font-family="Times,serif" font-size="14.00">The door is not locked.</text>
+<text text-anchor="middle" x="367.06" y="-141.69" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="367.06" y="-124.44" font-family="Times,serif" font-size="14.00">You manage to bypass the</text>
+<text text-anchor="middle" x="367.06" y="-107.19" font-family="Times,serif" font-size="14.00">electronic lock.</text>
+<text text-anchor="middle" x="367.06" y="-89.94" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="367.06" y="-72.69" font-family="Times,serif" font-size="14.00">Your attempt to</text>
+<text text-anchor="middle" x="367.06" y="-55.44" font-family="Times,serif" font-size="14.00">circumvent the electronic</text>
+<text text-anchor="middle" x="367.06" y="-38.19" font-family="Times,serif" font-size="14.00">lock fails.</text>
+</g>
+<!-- start&#45;&gt;pick_lock -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;pick_lock</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M279.57,-247.46C287.41,-234.62 295.71,-221.04 303.95,-207.55"/>
+<polygon fill="#555555" stroke="#555555" points="307.41,-209.6 309.64,-199.24 301.44,-205.95 307.41,-209.6"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if ((script_action == 21) or (script_action == 3)) then begin\n  script_overrides;\n  display_msg(message_str(431, 100));\nend\nelse begin\n  if (script_action == 6) then begin\n    call use_stuff;\n  end\n  else begin\n    if (script_action == 7) then begin\n      if (obj_pid(obj_being_used_with) == 77) then begin\n        call pick_lock;\n      end\n    end\n  end\nend\n","use_stuff":"if (not(unlocked)) then begin\n  script_overrides;\n  display_msg(message_str(431, 101));\nend\n","pick_lock":"script_overrides;\nif (unlocked) then begin\n  display_msg(message_str(431, 102));\nend\nelse begin\n  if (is_success(roll_vs_skill(dude_obj, 9, -20))) then begin\n    display_msg(message_str(431, 103));\n    unlocked := 1;\n  end\n  else begin\n    display_msg(message_str(431, 104));\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

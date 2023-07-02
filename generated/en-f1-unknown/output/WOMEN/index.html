@@ -1,0 +1,171 @@
+<!DOCTYPE html><html><head><title>WOMEN</title><meta charset="utf-8" /></head><body><svg width="924pt" height="286pt"
+ viewBox="0.00 0.00 923.62 286.48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 282.48)">
+<title>WOMEN</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-282.48 919.62,-282.48 919.62,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="548.62" cy="-260.48" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node2" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="121.62" cy="-103.24" rx="121.62" ry="30.05"/>
+<text text-anchor="middle" x="121.62" y="-107.19" font-family="Times,serif" font-size="14.00">You see a bruised and</text>
+<text text-anchor="middle" x="121.62" y="-89.94" font-family="Times,serif" font-size="14.00">battered woman.</text>
+</g>
+<!-- start&#45;&gt;look_at_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;look_at_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M521.22,-258.92C467.4,-256.91 345.1,-247.77 252.62,-206.48 216.88,-190.52 182.24,-162.76 157.56,-140.19"/>
+<polygon fill="#555555" stroke="#555555" points="160.29,-138.02 150.58,-133.76 155.51,-143.14 160.29,-138.02"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node3" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="398.62" cy="-103.24" rx="137.49" ry="18"/>
+<text text-anchor="middle" x="398.62" y="-98.56" font-family="Times,serif" font-size="14.00">Thank you for saving me.</text>
+</g>
+<!-- start&#45;&gt;talk_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;talk_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M534.51,-244.87C508.83,-218.29 454.19,-161.74 422.58,-129.03"/>
+<polygon fill="#555555" stroke="#555555" points="425.53,-127.02 416.07,-122.26 420.5,-131.88 425.53,-127.02"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node4" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="698.62" cy="-103.24" rx="144.96" ry="103.24"/>
+<text text-anchor="middle" x="698.62" y="-158.94" font-family="Times,serif" font-size="14.00">You see a bruised and</text>
+<text text-anchor="middle" x="698.62" y="-141.69" font-family="Times,serif" font-size="14.00">battered woman.</text>
+<text text-anchor="middle" x="698.62" y="-124.44" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="698.62" y="-107.19" font-family="Times,serif" font-size="14.00">[whispers]Please help me!</text>
+<text text-anchor="middle" x="698.62" y="-89.94" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="698.62" y="-72.69" font-family="Times,serif" font-size="14.00">No please don&#39;t!</text>
+<text text-anchor="middle" x="698.62" y="-55.44" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="698.62" y="-38.19" font-family="Times,serif" font-size="14.00">[sobs uncontrollably]</text>
+</g>
+<!-- start&#45;&gt;critter_p_proc -->
+<g id="edge3" class="edge">
+<title>start&#45;&gt;critter_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M562.73,-244.87C574.08,-233.13 591.08,-215.54 609.24,-196.74"/>
+<polygon fill="#555555" stroke="#555555" points="611.37,-199.54 615.8,-189.91 606.34,-194.67 611.37,-199.54"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node5" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="888.62" cy="-103.24" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;destroy_p_proc -->
+<g id="edge4" class="edge">
+<title>start&#45;&gt;destroy_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M569.13,-248.46C574.09,-246.18 579.45,-244 584.62,-242.48 699.88,-208.41 759.39,-282.31 852.62,-206.48 874.83,-188.41 883.35,-155.72 886.62,-132.16"/>
+<polygon fill="#555555" stroke="#555555" points="890.19,-132.76 887.84,-122.43 883.23,-131.97 890.19,-132.76"/>
+</g>
+<!-- combat -->
+<g id="node6" class="node">
+<title>combat</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="620.62" cy="-260.48" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (Only_Once) then begin\n  critter_add_trait(self_obj, 1, 6, 44);\n  critter_add_trait(self_obj, 1, 5, 5);\nend\nif (script_action == 21) then begin\n  call look_at_p_proc;\nend\nelse begin\n  if (script_action == 11) then begin\n    call talk_p_proc;\n  end\n  else begin\n    if (script_action == 12) then begin\n      call critter_p_proc;\n    end\n    else begin\n      if (script_action == 18) then begin\n        call destroy_p_proc;\n      end\n    end\n  end\nend\n","combat":"hostile := 1;\n","critter_p_proc":"if ((global_var(114) == 1) and (global_var(115) <= 12) or (global_var(115) <= 6)) then begin\n  if (local_var(0) == 0) then begin\n    set_local_var(0, 1);\n    temp := 200;\n    display_msg(message_str(238, 100) + temp + message_str(238, 103));\n    set_global_var(155, global_var(155) + 1);\n    give_exp_points(temp);\n  end\nend\nelse begin\n  if (signal_women == 2) then begin\n    signal_women := signal_women - 1;\n    float_msg(self_obj, message_str(738, 101), 2);\n  end\n  else begin\n    if (signal_women == 1) then begin\n      signal_women := signal_women - 1;\n      float_msg(self_obj, message_str(738, 102), 2);\n    end\n  end\nend\n","talk_p_proc":"if (local_var(0) == 1) then begin\n  float_msg(self_obj, message_str(738, 104), 2);\nend\nelse begin\n  float_msg(self_obj, message_str(738, random(102, 103)), 2);\nend\n","destroy_p_proc":"women_killed := women_killed + 1;\nif (women_killed > 1) then begin\n  set_global_var(155, global_var(155) - 1);\nend\nif (source_obj == dude_obj) then begin\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n    set_global_var(156, 1);\n    set_global_var(157, 0);\n  end\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n    set_global_var(157, 1);\n    set_global_var(156, 0);\n  end\n  set_global_var(159, global_var(159) + 1);\n  if ((global_var(159) % 2) == 0) then begin\n    set_global_var(155, global_var(155) - 1);\n  end\nend\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(738, 100));\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

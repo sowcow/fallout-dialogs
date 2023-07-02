@@ -1,0 +1,13 @@
+digraph CHEPSLOT {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "look_at_p_proc" [style=dotted color="#555555"]
+  "start" -> "map_enter_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="This is a poorly repaired\nslot machine. It costs\n$10 to play."]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="You don't have enough\nmoney to play.\n---\nYou drop $10 in the slot\nmachine and pull the\nhandle.\n---\nDING! DING! DING!\n---\nYou get three grenades.\nExcellent! $\n---\ndrops into the tray and\nyou snatch it up.\n---\nDing! Ding! Ding!\n---\nYou get three bullets.\nWinner! $15 drops into\nthe tray and you snatch\nit up.\n---\nAhh shucks! You lose."]
+}

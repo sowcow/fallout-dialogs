@@ -1,0 +1,4 @@
+digraph SHACK {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="This is an old shack. It\nis barely standing,\nand seems to have been\nlooted long ago."]
+}

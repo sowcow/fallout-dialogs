@@ -1,0 +1,166 @@
+<!DOCTYPE html><html><head><title>folinvad</title><meta charset="utf-8" /></head><body><svg width="518pt" height="360pt"
+ viewBox="0.00 0.00 518.00 359.66" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 355.66)">
+<title>folinvad</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-355.66 514,-355.66 514,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="195" cy="-333.66" rx="27" ry="18"/>
+</g>
+<!-- Initialize_p_proc -->
+<g id="node2" class="node">
+<title>Initialize_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-139.83" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;Initialize_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;Initialize_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M168.37,-329.17C138.4,-323.83 90.32,-310.72 63,-279.66 35.73,-248.66 28.69,-199.57 27.1,-168.84"/>
+<polygon fill="#555555" stroke="#555555" points="30.57,-168.9 26.73,-159.03 23.58,-169.14 30.57,-168.9"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node3" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-139.83" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;talk_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;talk_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M176.04,-320.5C162.66,-310.95 145.32,-296.48 135,-279.66 113.73,-245 104.95,-198.06 101.37,-168.62"/>
+<polygon fill="#555555" stroke="#555555" points="104.77,-168.45 100.21,-158.88 97.81,-169.2 104.77,-168.45"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node4" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="291" cy="-139.83" rx="146.55" ry="139.83"/>
+<text text-anchor="middle" x="291" y="-221.41" font-family="Times,serif" font-size="14.00">Приятно встретиться.</text>
+<text text-anchor="middle" x="291" y="-204.16" font-family="Times,serif" font-size="14.00">Заходи.</text>
+<text text-anchor="middle" x="291" y="-186.91" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="291" y="-169.66" font-family="Times,serif" font-size="14.00">Здесь стены как будто</text>
+<text text-anchor="middle" x="291" y="-152.41" font-family="Times,serif" font-size="14.00">дерьмом измазаны.</text>
+<text text-anchor="middle" x="291" y="-135.16" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="291" y="-117.91" font-family="Times,serif" font-size="14.00">Меня здесь мутит.</text>
+<text text-anchor="middle" x="291" y="-100.66" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="291" y="-83.41" font-family="Times,serif" font-size="14.00">Николь сказала нам</text>
+<text text-anchor="middle" x="291" y="-66.16" font-family="Times,serif" font-size="14.00">возвращаться, как только</text>
+<text text-anchor="middle" x="291" y="-48.91" font-family="Times,serif" font-size="14.00">ты покинешь Собор.</text>
+</g>
+<!-- start&#45;&gt;critter_p_proc -->
+<g id="edge3" class="edge">
+<title>start&#45;&gt;critter_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M203.18,-316.31C208.3,-306.08 215.43,-291.84 223.43,-275.85"/>
+<polygon fill="#555555" stroke="#555555" points="226.89,-277.75 228.24,-267.24 220.63,-274.62 226.89,-277.75"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node5" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="483" cy="-139.83" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;map_enter_p_proc -->
+<g id="edge4" class="edge">
+<title>start&#45;&gt;map_enter_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M221.69,-330.56C279.72,-325.44 414.74,-310.45 447,-279.66 477.16,-250.87 483.27,-200.35 483.88,-168.84"/>
+<polygon fill="#555555" stroke="#555555" points="487.38,-169.18 483.9,-159.17 480.38,-169.17 487.38,-169.18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (Only_Once) then begin\n  call Initialize_p_proc;\nend\nelse begin\n  if (script_action == 11) then begin\n    call talk_p_proc;\n  end\n  else begin\n    if (script_action == 12) then begin\n      call critter_p_proc;\n    end\n    else begin\n      if (script_action == map_enter_p_proc) then begin\n        call map_enter_p_proc;\n      end\n    end\n  end\nend\n","talk_p_proc":"if (local_var(3) == 0) then begin\n  float_msg(self_obj, message_str(820, random(100, 107)), 9);\nend\n","Initialize_p_proc":"critter_add_trait(self_obj, 1, 6, 0);\ncritter_add_trait(self_obj, 1, 5, 33);\nOnly_Once := 0;\n","critter_p_proc":"variable LVar0 := 0;\nif (global_var(63) == 1) then begin\n  if (local_var(4) == 0) then begin\n    if (Hex_Number == 0) then begin\n      set_obj_visibility(self_obj, 0);\n      LVar0 := random(1, 10);\n      if (LVar0 == 1) then begin\n        Hex_Number := 19905;\n      end\n      else begin\n        if (LVar0 == 2) then begin\n          Hex_Number := 20308;\n        end\n        else begin\n          if (LVar0 == 3) then begin\n            Hex_Number := 20506;\n          end\n          else begin\n            if (LVar0 == 4) then begin\n              Hex_Number := 20906;\n            end\n            else begin\n              if (LVar0 == 5) then begin\n                Hex_Number := 20110;\n              end\n              else begin\n                if (LVar0 == 6) then begin\n                  Hex_Number := 19503;\n                end\n                else begin\n                  if (LVar0 == 7) then begin\n                    Hex_Number := 19103;\n                  end\n                  else begin\n                    if (LVar0 == 8) then begin\n                      Hex_Number := 20904;\n                    end\n                    else begin\n                      if (LVar0 == 9) then begin\n                        Hex_Number := 21113;\n                      end\n                      else begin\n                        Hex_Number := 19910;\n                      end\n                    end\n                  end\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n    if (tile_num(self_obj) != Hex_Number) then begin\n      animate_move_obj_to_tile(self_obj, Hex_Number, 0);\n    end\n    else begin\n      if (tile_num(self_obj) == Hex_Number) then begin\n        set_local_var(4, 1);\n      end\n    end\n  end\n  else begin\n    if ((tile_distance_objs(dude_obj, self_obj) > 10) and (tile_distance_objs(dude_obj, self_obj) < 15)) then begin\n      animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(dude_obj), random(0, 5), random(3, 6)), 0);\n    end\n    else begin\n      if (tile_distance_objs(dude_obj, self_obj) >= 15) then begin\n        animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(dude_obj), random(0, 5), random(3, 6)), 1);\n      end\n      else begin\n        if (random(1, 100) == 1) then begin\n          animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(self_obj), random(0, 5), random(3, 6)), 0);\n        end\n      end\n    end\n  end\n  if (local_var(4) == 1) then begin\n    if ((cur_map_index == 17) or (cur_map_index == 18)) then begin\n      if (local_var(0) == 0) then begin\n        set_local_var(0, 1);\n        party_add(self_obj);\n        float_msg(self_obj, message_str(820, 112), 9);\n      end\n    end\n    else begin\n      if (cur_map_index == 33) then begin\n        if (local_var(1) == 0) then begin\n          if (elevation(self_obj) == 1) then begin\n            set_local_var(1, 1);\n            float_msg(self_obj, message_str(820, 109), 9);\n          end\n        end\n      end\n      else begin\n        if (cur_map_index == 34) then begin\n          if (local_var(2) == 0) then begin\n            set_local_var(2, 1);\n            float_msg(self_obj, message_str(820, 110), 9);\n          end\n        end\n        else begin\n          if (local_var(3) == 0) then begin\n            set_local_var(3, 1);\n            float_msg(self_obj, message_str(820, 111), 9);\n            party_remove(self_obj);\n            animate_move_obj_to_tile(self_obj, 26000, 0);\n            set_global_var(63, 5);\n          end\n        end\n      end\n    end\n  end\nend\nelse begin\n  set_obj_visibility(self_obj, 1);\nend\n","map_enter_p_proc":"if (global_var(63) != 1) then begin\n  set_obj_visibility(self_obj, 1);\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

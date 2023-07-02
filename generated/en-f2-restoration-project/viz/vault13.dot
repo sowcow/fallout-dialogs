@@ -1,0 +1,12 @@
+digraph vault13 {
+  "checkPartyMembersNearDoor" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "checkPartyMembersNearDoor" [label=""]
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label="You gain \n---\nxp for finding Vault 13.\n---\nThe air smells rank, with\nthe oder of metal and\nblood."]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+  "Initial_Inven" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "Initial_Inven" [label=""]
+}

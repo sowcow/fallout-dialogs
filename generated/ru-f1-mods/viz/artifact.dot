@@ -1,0 +1,6 @@
+digraph artifact {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Выглядит странно. Может\nбыть, Братство послало\nвас именно за этим.\n---\nВы видите странный диск."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Pip-Boy: файл найден в\nсистеме. Загрузка\nотменена.\n---\nPip-Boy: загрузка данных\nс диска.\n---\nВы видите диск, который\nвам дала София.\n---\nВы видите диск, который\nвам дал Максон."]
+}

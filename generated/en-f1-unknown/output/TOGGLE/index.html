@@ -1,0 +1,143 @@
+<!DOCTYPE html><html><head><title>TOGGLE</title><meta charset="utf-8" /></head><body><svg width="386pt" height="335pt"
+ viewBox="0.00 0.00 386.44 335.27" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 331.27)">
+<title>TOGGLE</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-331.27 382.44,-331.27 382.44,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="126" cy="-309.27" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node2" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-127.63" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;use_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;use_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M106.5,-296.43C92.46,-286.95 74.1,-272.43 63,-255.27 43.34,-224.87 34.23,-183.62 30.14,-156.57"/>
+<polygon fill="#555555" stroke="#555555" points="33.5,-156.36 28.67,-146.93 26.57,-157.31 33.5,-156.36"/>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node3" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="225" cy="-127.63" rx="153.44" ry="127.63"/>
+<text text-anchor="middle" x="225" y="-200.58" font-family="Times,serif" font-size="14.00">This toggle has a small</text>
+<text text-anchor="middle" x="225" y="-183.33" font-family="Times,serif" font-size="14.00">radio emitter and a tiny</text>
+<text text-anchor="middle" x="225" y="-166.08" font-family="Times,serif" font-size="14.00">power cell. It probably</text>
+<text text-anchor="middle" x="225" y="-148.83" font-family="Times,serif" font-size="14.00">links to a control</text>
+<text text-anchor="middle" x="225" y="-131.58" font-family="Times,serif" font-size="14.00">computer somewhere, as an</text>
+<text text-anchor="middle" x="225" y="-114.33" font-family="Times,serif" font-size="14.00">on/off switch.</text>
+<text text-anchor="middle" x="225" y="-97.08" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="225" y="-79.83" font-family="Times,serif" font-size="14.00">The toggle switch looks</text>
+<text text-anchor="middle" x="225" y="-62.58" font-family="Times,serif" font-size="14.00">like an on/off</text>
+<text text-anchor="middle" x="225" y="-45.33" font-family="Times,serif" font-size="14.00">transmitter of some sort.</text>
+</g>
+<!-- start&#45;&gt;use_skill_on_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;use_skill_on_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M134.96,-292.01C140.36,-282.21 147.79,-268.73 156.08,-253.69"/>
+<polygon fill="#555555" stroke="#555555" points="159.58,-255.58 161.34,-245.13 153.45,-252.2 159.58,-255.58"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 6) then begin\n  call use_p_proc;\nend\nelse begin\n  if (script_action == 8) then begin\n    call use_skill_on_p_proc;\n  end\nend\n","use_p_proc":"if (cur_map_index == 31) then begin\n  field_change := \"toggle\";\n  use_obj(map_var(0));\n  use_obj(map_var(1));\n  use_obj(map_var(2));\n  use_obj(map_var(3));\n  use_obj(map_var(4));\n  use_obj(map_var(5));\n  use_obj(map_var(6));\n  use_obj(map_var(7));\nend\nelse begin\n  if (cur_map_index == 32) then begin\n    field_change := \"toggle\";\n    use_obj(map_var(5));\n  end\nend\n","use_skill_on_p_proc":"if (action_being_used == 13) then begin\n  script_overrides;\n  display_msg(message_str(864, 100));\nend\nelse begin\n  if (action_being_used == 12) then begin\n    script_overrides;\n    display_msg(message_str(864, 101));\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

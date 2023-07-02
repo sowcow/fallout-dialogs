@@ -1,0 +1,165 @@
+<!DOCTYPE html><html><head><title>setdoor1</title><meta charset="utf-8" /></head><body><svg width="674pt" height="311pt"
+ viewBox="0.00 0.00 673.62 310.87" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 306.87)">
+<title>setdoor1</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-306.87 669.62,-306.87 669.62,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="319.68" cy="-284.87" rx="27" ry="18"/>
+</g>
+<!-- see_stuff -->
+<g id="node2" class="node">
+<title>see_stuff</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="122.68" cy="-115.44" rx="122.68" ry="78.84"/>
+<text text-anchor="middle" x="122.68" y="-153.89" font-family="Times,serif" font-size="14.00">Дверь заперта.</text>
+<text text-anchor="middle" x="122.68" y="-136.64" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="122.68" y="-119.39" font-family="Times,serif" font-size="14.00">Дверь открыта.</text>
+<text text-anchor="middle" x="122.68" y="-102.14" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="122.68" y="-84.89" font-family="Times,serif" font-size="14.00">Дверь закрыта, но не</text>
+<text text-anchor="middle" x="122.68" y="-67.64" font-family="Times,serif" font-size="14.00">заперта.</text>
+</g>
+<!-- start&#45;&gt;see_stuff -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;see_stuff</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M303.01,-270.5C289.81,-259.87 270.95,-244.55 254.68,-230.87 237.83,-216.7 219.91,-201.36 202.89,-186.65"/>
+<polygon fill="#555555" stroke="#555555" points="205.47,-183.39 195.62,-179.49 200.89,-188.68 205.47,-183.39"/>
+</g>
+<!-- do_stuff -->
+<g id="node3" class="node">
+<title>do_stuff</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="319.68" cy="-115.44" rx="56.47" ry="18"/>
+<text text-anchor="middle" x="319.68" y="-110.76" font-family="Times,serif" font-size="14.00">Скрииип</text>
+</g>
+<!-- start&#45;&gt;do_stuff -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;do_stuff</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M319.68,-266.58C319.68,-237.76 319.68,-179.6 319.68,-144.74"/>
+<polygon fill="#555555" stroke="#555555" points="323.18,-144.88 319.68,-134.88 316.18,-144.88 323.18,-144.88"/>
+</g>
+<!-- do_skill -->
+<g id="node4" class="node">
+<title>do_skill</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="529.68" cy="-115.44" rx="135.94" ry="115.44"/>
+<text text-anchor="middle" x="529.68" y="-179.76" font-family="Times,serif" font-size="14.00">Вы открыли замок.</text>
+<text text-anchor="middle" x="529.68" y="-162.51" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="529.68" y="-145.26" font-family="Times,serif" font-size="14.00">Вы не можете взломать</text>
+<text text-anchor="middle" x="529.68" y="-128.01" font-family="Times,serif" font-size="14.00">замок.</text>
+<text text-anchor="middle" x="529.68" y="-110.76" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="529.68" y="-93.51" font-family="Times,serif" font-size="14.00">Вы поломали отмычки.</text>
+<text text-anchor="middle" x="529.68" y="-76.26" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="529.68" y="-59.01" font-family="Times,serif" font-size="14.00">Вы не знаете, как</text>
+<text text-anchor="middle" x="529.68" y="-41.76" font-family="Times,serif" font-size="14.00">взломать замок.</text>
+</g>
+<!-- start&#45;&gt;do_skill -->
+<g id="edge3" class="edge">
+<title>start&#45;&gt;do_skill</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M336.51,-270.45C355.76,-255.11 388.95,-228.64 422.45,-201.93"/>
+<polygon fill="#555555" stroke="#555555" points="424.33,-204.12 429.96,-195.15 419.96,-198.64 424.33,-204.12"/>
+</g>
+<!-- doorend -->
+<g id="node5" class="node">
+<title>doorend</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="391.68" cy="-284.87" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"variable LVar0 := 0;\nif (script_action == 21) then begin\n  script_overrides;\n  call see_stuff;\nend\nif (script_action == 6) then begin\n  script_overrides;\n  call do_stuff;\nend\nif (script_action == 7) then begin\n  lockpicks := obj_being_used_with;\n  script_overrides;\n  call do_skill;\nend\n","do_stuff":"display_msg(message_str(94, 107));\n","do_skill":"if (has_skill(dude_obj, 9)) then begin\n  testa := roll_vs_skill(dude_obj, 9, -10);\n  if (is_success(testa)) then begin\n    display_msg(message_str(94, 100));\n    set_local_var(0, 1);\n  end\n  else begin\n    display_msg(message_str(94, 101));\n    if (is_critical(testa)) then begin\n      display_msg(message_str(94, 102));\n      rm_obj_from_inven(dude_obj, lockpicks);\n    end\n  end\nend\nelse begin\n  display_msg(message_str(94, 103));\nend\n","see_stuff":"if (local_var(0) == 0) then begin\n  display_msg(message_str(94, 104));\nend\nelse begin\n  if (local_var(2) == 1) then begin\n    display_msg(message_str(94, 105));\n  end\n  else begin\n    display_msg(message_str(94, 106));\n  end\nend\n","doorend":"[]"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

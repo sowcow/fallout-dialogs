@@ -1,0 +1,133 @@
+<!DOCTYPE html><html><head><title>obj_dude</title><meta charset="utf-8" /></head><body><svg width="478pt" height="312pt"
+ viewBox="0.00 0.00 478.00 312.06" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 308.06)">
+<title>obj_dude</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-308.06 474,-308.06 474,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-152.03" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node2" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="235" cy="-152.03" rx="162.99" ry="152.03"/>
+<text text-anchor="middle" x="235" y="-242.23" font-family="Times,serif" font-size="14.00">После уничтожения</text>
+<text text-anchor="middle" x="235" y="-224.98" font-family="Times,serif" font-size="14.00">Создателя и его</text>
+<text text-anchor="middle" x="235" y="-207.73" font-family="Times,serif" font-size="14.00">Лаборатории, где он</text>
+<text text-anchor="middle" x="235" y="-190.48" font-family="Times,serif" font-size="14.00">создавал армию</text>
+<text text-anchor="middle" x="235" y="-173.23" font-family="Times,serif" font-size="14.00">супермутантов, вы</text>
+<text text-anchor="middle" x="235" y="-155.98" font-family="Times,serif" font-size="14.00">возвращаетесь домой и</text>
+<text text-anchor="middle" x="235" y="-138.73" font-family="Times,serif" font-size="14.00">узнаете, что вас</text>
+<text text-anchor="middle" x="235" y="-121.48" font-family="Times,serif" font-size="14.00">вышвырнули из Убежища за</text>
+<text text-anchor="middle" x="235" y="-104.23" font-family="Times,serif" font-size="14.00">то, что вы причинили</text>
+<text text-anchor="middle" x="235" y="-86.98" font-family="Times,serif" font-size="14.00">слишком много разрушений.</text>
+<text text-anchor="middle" x="235" y="-69.73" font-family="Times,serif" font-size="14.00">Спасибо, что играли в</text>
+<text text-anchor="middle" x="235" y="-52.48" font-family="Times,serif" font-size="14.00">Fallout.</text>
+</g>
+<!-- map_update_p_proc -->
+<g id="node3" class="node">
+<title>map_update_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="443" cy="-152.03" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","timed_event_p_proc":"variable LVar0 := 0;\nvariable LVar1 := 0;\nvariable LVar2 := 0;\nif (fixed_param == 3) then begin\n  metarule(13, 0);\nend\nelse begin\n  if (fixed_param == 4) then begin\n    float_msg(self_obj, message_str(1, 500), -2);\n    add_timer_event(dude_obj, game_ticks(15), 3);\n  end\n  else begin\n    if (fixed_param == 5) then begin\n      game_ui_disable;\n      animate_move_obj_to_tile(map_var(0), 16890, 0);\n      add_timer_event(dude_obj, 5, 6);\n    end\n    else begin\n      if (fixed_param == 6) then begin\n        LVar0 := 0;\n        if (has_trait(2, dude_obj, 8)) then begin\n          LVar0 := 1;\n        end\n        else begin\n          if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n            LVar0 := 1;\n          end\n          else begin\n            if (global_var(155) < -1) then begin\n              LVar0 := 1;\n            end\n            else begin\n              if (global_var(158) > 2) then begin\n                LVar0 := 1;\n              end\n            end\n          end\n        end\n        if (LVar0 == 1) then begin\n          gun_ptr := create_object_sid(8, 0, 0, -1);\n          add_obj_to_inven(dude_obj, gun_ptr);\n          wield_obj_critter(dude_obj, gun_ptr);\n          add_timer_event(dude_obj, 25, 7);\n        end\n        else begin\n          add_timer_event(dude_obj, 25, 8);\n        end\n      end\n      else begin\n        if (fixed_param == 7) then begin\n          reg_anim_func(2, map_var(0));\n          reg_anim_func(1, 1);\n          reg_anim_animate(dude_obj, 43, -1);\n          LVar1 := sfx_build_weapon_name(1, gun_ptr, LVar2, map_var(0));\n          reg_anim_play_sfx(dude_obj, LVar1, -1);\n          reg_anim_animate(dude_obj, 45, -1);\n          LVar1 := sfx_build_char_name(map_var(0), 20, 3);\n          reg_anim_play_sfx(map_var(0), LVar1, 0);\n          reg_anim_animate(map_var(0), 20, 0);\n          reg_anim_animate(dude_obj, 44, 0);\n          reg_anim_func(3, 0);\n          add_timer_event(dude_obj, game_ticks(11), 8);\n        end\n        else begin\n          if (fixed_param == 8) then begin\n            game_ui_enable;\n            endgame_movie;\n            metarule(13, 0);\n          end\n        end\n      end\n    end\n  end\nend\n","map_update_p_proc":"if (global_var(14) == 0) then begin\n  if ((global_var(511) == 100) and (global_var(203) >= 1)) then begin\n    set_global_var(606, 1);\n  end\n  else begin\n    set_global_var(606, 0);\n  end\nend\nelse begin\n  set_global_var(606, 0);\nend\nif (global_var(7) == 0) then begin\n  if ((global_var(133) >= 2) and (global_var(492) == 99) and (global_var(24) >= 12)) then begin\n    set_global_var(132, 2);\n  end\n  else begin\n    set_global_var(132, 0);\n  end\nend\nelse begin\n  set_global_var(132, 0);\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

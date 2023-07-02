@@ -1,0 +1,185 @@
+<!DOCTYPE html><html><head><title>fsfobdor</title><meta charset="utf-8" /></head><body><svg width="1100pt" height="189pt"
+ viewBox="0.00 0.00 1100.00 188.89" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184.89)">
+<title>fsfobdor</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-184.89 1096,-184.89 1096,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-126.45" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node2" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="171" cy="-18" rx="111.71" ry="18"/>
+<text text-anchor="middle" x="171" y="-13.32" font-family="Times,serif" font-size="14.00">Никакого эффекта.</text>
+</g>
+<!-- look_at_p_proc -->
+<g id="node3" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="388" cy="-126.45" rx="100.14" ry="18"/>
+<text text-anchor="middle" x="388" y="-121.77" font-family="Times,serif" font-size="14.00">Вы видите дверь.</text>
+</g>
+<!-- description_p_proc -->
+<g id="node4" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="655" cy="-126.45" rx="149.2" ry="54.45"/>
+<text text-anchor="middle" x="655" y="-147.65" font-family="Times,serif" font-size="14.00">Вы видите дверь. Но на</text>
+<text text-anchor="middle" x="655" y="-130.4" font-family="Times,serif" font-size="14.00">ней нигде не видно замка,</text>
+<text text-anchor="middle" x="655" y="-113.15" font-family="Times,serif" font-size="14.00">в отличие от любой</text>
+<text text-anchor="middle" x="655" y="-95.9" font-family="Times,serif" font-size="14.00">нормальной двери.</text>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node5" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-126.45" rx="27" ry="18"/>
+</g>
+<!-- use_skill_on_p_proc&#45;&gt;use_p_proc -->
+<g id="edge1" class="edge">
+<title>use_skill_on_p_proc&#45;&gt;use_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M109.7,-109.53C116.85,-98.9 126.48,-84.6 135,-72 140.95,-63.2 147.47,-53.6 153.3,-45.01"/>
+<polygon fill="#555555" stroke="#555555" points="156.58,-47.41 159.31,-37.17 150.79,-43.48 156.58,-47.41"/>
+</g>
+<!-- use_obj_on_p_proc -->
+<g id="node6" class="node">
+<title>use_obj_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="171" cy="-126.45" rx="27" ry="18"/>
+</g>
+<!-- use_obj_on_p_proc&#45;&gt;use_p_proc -->
+<g id="edge2" class="edge">
+<title>use_obj_on_p_proc&#45;&gt;use_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M171,-108.34C171,-91.91 171,-66.79 171,-47.36"/>
+<polygon fill="#555555" stroke="#555555" points="174.5,-47.41 171,-37.41 167.5,-47.41 174.5,-47.41"/>
+</g>
+<!-- damage_p_proc -->
+<g id="node7" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="243" cy="-126.45" rx="27" ry="18"/>
+</g>
+<!-- damage_p_proc&#45;&gt;use_p_proc -->
+<g id="edge3" class="edge">
+<title>damage_p_proc&#45;&gt;use_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M232.3,-109.53C225.15,-98.9 215.52,-84.6 207,-72 201.05,-63.2 194.53,-53.6 188.7,-45.01"/>
+<polygon fill="#555555" stroke="#555555" points="191.21,-43.48 182.69,-37.17 185.42,-47.41 191.21,-43.48"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node8" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="849" cy="-126.45" rx="27" ry="18"/>
+</g>
+<!-- map_update_p_proc -->
+<g id="node9" class="node">
+<title>map_update_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="921" cy="-126.45" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node10" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="993" cy="-126.45" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node11" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1065" cy="-126.45" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","use_p_proc":"script_overrides;\ndisplay_msg(message_str(1126, 103));\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(1126, 100));\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(1126, 102));\n","use_skill_on_p_proc":"call use_p_proc;\n","use_obj_on_p_proc":"call use_p_proc;\n","damage_p_proc":"call use_p_proc;\n","map_enter_p_proc":"if (not(metarule(22, 0))) then begin\n  add_timer_event(self_obj, 2, 1);\nend\n","map_update_p_proc":"[]","talk_p_proc":"[]","timed_event_p_proc":"if (fixed_param == 1) then begin\n  if (map_var(0) == 0) then begin\n    if (obj_is_open(self_obj)) then begin\n      reg_anim_func(1, 1);\n      obj_close(self_obj);\n      reg_anim_func(3, 0);\n    end\n    if (not(obj_is_locked(self_obj))) then begin\n      obj_lock(self_obj);\n    end\n  end\n  else begin\n    if (map_var(0) == 1) then begin\n      if (obj_is_locked(self_obj)) then begin\n        obj_unlock(self_obj);\n      end\n      if (not(obj_is_open(self_obj))) then begin\n        reg_anim_func(2, self_obj);\n        reg_anim_func(1, 1);\n        obj_open(self_obj);\n        reg_anim_func(3, 0);\n      end\n    end\n  end\nend\nadd_timer_event(self_obj, 2, 1);\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

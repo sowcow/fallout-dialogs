@@ -1,0 +1,4 @@
+digraph glo3supl {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="В эти двери ударила\nядерная боеголовка.\n---\nДверь приварило. Вы не\nможете ее открыть."]
+}

@@ -1,0 +1,4 @@
+digraph BLAST {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="The explosion closes off\nthe tunnel with a mighty\nblast!\n---\nYou earn experience\npoints for using\nexplosives successfully.\n---\nYou drop the explosives\nand they go off!\n---\nThe explosion just makes\nthe hole larger. It would\nnot be possible to close\nit now."]
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html><html><head><title>kcgnratr</title><meta charset="utf-8" /></head><body><svg width="1294pt" height="311pt"
+ viewBox="0.00 0.00 1294.00 310.58" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 306.58)">
+<title>kcgnratr</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-306.58 1290,-306.58 1290,4 -4,4"/>
+<!-- checkPartyMembersNearDoor -->
+<g id="node1" class="node">
+<title>checkPartyMembersNearDoor</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-235.93" rx="27" ry="18"/>
+</g>
+<!-- start -->
+<g id="node2" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-235.93" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node3" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="279" cy="-235.93" rx="135.41" ry="66.64"/>
+<text text-anchor="middle" x="279" y="-265.76" font-family="Times,serif" font-size="14.00">The generator needs</text>
+<text text-anchor="middle" x="279" y="-248.51" font-family="Times,serif" font-size="14.00">repairs first.</text>
+<text text-anchor="middle" x="279" y="-231.26" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="279" y="-214.01" font-family="Times,serif" font-size="14.00">The generator is already</text>
+<text text-anchor="middle" x="279" y="-196.76" font-family="Times,serif" font-size="14.00">running.</text>
+</g>
+<!-- use_obj_on_p_proc -->
+<g id="node4" class="node">
+<title>use_obj_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="459" cy="-235.93" rx="27" ry="18"/>
+</g>
+<!-- repair_it -->
+<g id="node5" class="node">
+<title>repair_it</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="544" cy="-66.64" rx="135.94" ry="66.64"/>
+<text text-anchor="middle" x="544" y="-96.47" font-family="Times,serif" font-size="14.00">You repair the generator</text>
+<text text-anchor="middle" x="544" y="-79.22" font-family="Times,serif" font-size="14.00">and start it up.</text>
+<text text-anchor="middle" x="544" y="-61.97" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="544" y="-44.72" font-family="Times,serif" font-size="14.00">You failed to repair the</text>
+<text text-anchor="middle" x="544" y="-27.47" font-family="Times,serif" font-size="14.00">generator.</text>
+</g>
+<!-- use_obj_on_p_proc&#45;&gt;repair_it -->
+<g id="edge1" class="edge">
+<title>use_obj_on_p_proc&#45;&gt;repair_it</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M467.3,-218.59C476.5,-200.49 491.96,-170.06 506.61,-141.24"/>
+<polygon fill="#555555" stroke="#555555" points="510.12,-143.05 511.53,-132.55 503.88,-139.88 510.12,-143.05"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node6" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="851" cy="-235.93" rx="78.67" ry="30.05"/>
+<text text-anchor="middle" x="851" y="-239.88" font-family="Times,serif" font-size="14.00">It looks like a</text>
+<text text-anchor="middle" x="851" y="-222.63" font-family="Times,serif" font-size="14.00">generator.</text>
+</g>
+<!-- description_p_proc -->
+<g id="node7" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1081" cy="-235.93" rx="133.29" ry="30.05"/>
+<text text-anchor="middle" x="1081" y="-239.88" font-family="Times,serif" font-size="14.00">This generator probably</text>
+<text text-anchor="middle" x="1081" y="-222.63" font-family="Times,serif" font-size="14.00">powers the elevator.</text>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node8" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="629" cy="-235.93" rx="125.33" ry="30.05"/>
+<text text-anchor="middle" x="629" y="-239.88" font-family="Times,serif" font-size="14.00">That skill is useless on</text>
+<text text-anchor="middle" x="629" y="-222.63" font-family="Times,serif" font-size="14.00">a generator.</text>
+</g>
+<!-- use_skill_on_p_proc&#45;&gt;repair_it -->
+<g id="edge2" class="edge">
+<title>use_skill_on_p_proc&#45;&gt;repair_it</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M614.19,-205.79C605.12,-187.94 593.07,-164.21 581.51,-141.47"/>
+<polygon fill="#555555" stroke="#555555" points="584.25,-140.13 576.6,-132.8 578.01,-143.3 584.25,-140.13"/>
+</g>
+<!-- Node999 -->
+<g id="node9" class="node">
+<title>Node999</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1259" cy="-235.93" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"checkPartyMembersNearDoor":"if (party_member_obj(16777278) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777278)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777376) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777376)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777377) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777377)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777305) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777305)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777313) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777313)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777323) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777323)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777352) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777352)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777378) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777378)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777368) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777368)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777379) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777379)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777380) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777380)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777295) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777295)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777381) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777381)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777407) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777407)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777411) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777411)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777412) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777412)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777413) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777413)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777481) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777481)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777558) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777558)) <= 5) then begin\n    return 1;\n  end\nend\nif (party_member_obj(16777600) != 0) then begin\n  if (tile_distance_objs(self_obj, party_member_obj(16777600)) <= 5) then begin\n    return 1;\n  end\nend\nreturn 0;\n","start":"[]","use_p_proc":"if (global_var(601) == 0) then begin\n  display_msg(message_str(1201, 200));\nend\nelse begin\n  display_msg(message_str(1201, 201));\nend\n","use_obj_on_p_proc":"script_overrides;\nTool := obj_pid(obj_being_used_with);\nif (Tool == 75) then begin\n  call repair_it;\nend\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(1201, 100));\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(1201, 101));\n","use_skill_on_p_proc":"script_overrides;\nskill_used := action_being_used;\nif (skill_used == 13) then begin\n  call repair_it;\nend\nelse begin\n  display_msg(message_str(1201, 300));\nend\n","repair_it":"repair_check := roll_vs_skill(dude_obj, 13, -40);\nif (is_success(repair_check)) then begin\n  set_global_var(601, 1);\n  display_msg(message_str(1201, 400));\nend\nelse begin\n  display_msg(message_str(1201, 401));\nend\n","Node999":"[]"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

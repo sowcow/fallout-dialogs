@@ -1,0 +1,4 @@
+digraph GLOWCAGE {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="It appears as though this\ncage contained lab\nanimals for\nfor testing. Somehow,\nthe bars have been torn\noff."]
+}

@@ -1,0 +1,10 @@
+digraph VCOMPOP {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "look_at_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="This computer purifies\nthe water for the Vault.\n---\nWith the replacement\nchip, the computer seems\nto be functioning well."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="With the replacement\nchip, the computer seems\nto be functioning well.\n---\nThe water computer is\nuseless without the water\npurification control\nchip which is\nunrepairable. You will\nneed a replacement.\n---\nYou fiddle with the\ncomputer, but don't\nreally\nfind out anything else\nabout it.\n---\nThere are lots of\nblinking lights on this\nthing."]
+}

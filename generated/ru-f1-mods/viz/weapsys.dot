@@ -1,0 +1,4 @@
+digraph weapsys {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Похоже,\nавтоматизированная\nсистема безопасности\nвключена."]
+}

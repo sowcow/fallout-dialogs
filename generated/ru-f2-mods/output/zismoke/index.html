@@ -1,0 +1,160 @@
+<!DOCTYPE html><html><head><title>zismoke</title><meta charset="utf-8" /></head><body><svg width="476pt" height="604pt"
+ viewBox="0.00 0.00 476.00 603.61" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 599.61)">
+<title>zismoke</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-599.61 472,-599.61 472,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-333.81" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node2" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="234" cy="-333.81" rx="162.46" ry="261.81"/>
+<text text-anchor="middle" x="234" y="-501.63" font-family="Times,serif" font-size="14.00">Вы курите сигарету.</text>
+<text text-anchor="middle" x="234" y="-484.38" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="234" y="-467.13" font-family="Times,serif" font-size="14.00">Вы курите еще одну</text>
+<text text-anchor="middle" x="234" y="-449.88" font-family="Times,serif" font-size="14.00">сигарету.</text>
+<text text-anchor="middle" x="234" y="-432.63" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="234" y="-415.38" font-family="Times,serif" font-size="14.00">Внутри шлема есть</text>
+<text text-anchor="middle" x="234" y="-398.13" font-family="Times,serif" font-size="14.00">предупреждение: &quot;ОПАСНО!</text>
+<text text-anchor="middle" x="234" y="-380.88" font-family="Times,serif" font-size="14.00">&#45; Не курить!&quot;. Вы</text>
+<text text-anchor="middle" x="234" y="-363.63" font-family="Times,serif" font-size="14.00">думаете, что лучше</text>
+<text text-anchor="middle" x="234" y="-346.38" font-family="Times,serif" font-size="14.00">следовать написанному.</text>
+<text text-anchor="middle" x="234" y="-329.13" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="234" y="-311.88" font-family="Times,serif" font-size="14.00">Вы курите сигарету.</text>
+<text text-anchor="middle" x="234" y="-294.63" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="234" y="-277.38" font-family="Times,serif" font-size="14.00">Вы курите еще одну</text>
+<text text-anchor="middle" x="234" y="-260.13" font-family="Times,serif" font-size="14.00">сигарету.</text>
+<text text-anchor="middle" x="234" y="-242.88" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="234" y="-225.63" font-family="Times,serif" font-size="14.00">Сначала вам нужна</text>
+<text text-anchor="middle" x="234" y="-208.38" font-family="Times,serif" font-size="14.00">зажигалка.</text>
+<text text-anchor="middle" x="234" y="-191.13" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="234" y="-173.88" font-family="Times,serif" font-size="14.00">Курение &#45; отвратительная</text>
+<text text-anchor="middle" x="234" y="-156.63" font-family="Times,serif" font-size="14.00">привычка для женщины.</text>
+</g>
+<!-- remove -->
+<g id="node3" class="node">
+<title>remove</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="234" cy="-18" rx="119.08" ry="18"/>
+<text text-anchor="middle" x="234" y="-13.32" font-family="Times,serif" font-size="14.00">Вы их все выкурили.</text>
+</g>
+<!-- use_p_proc&#45;&gt;remove -->
+<g id="edge1" class="edge">
+<title>use_p_proc&#45;&gt;remove</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M228.8,-71.88C229.12,-62.72 229.5,-54.43 229.93,-47.26"/>
+<polygon fill="#555555" stroke="#555555" points="233.49,-47.54 230.7,-37.32 226.5,-47.05 233.49,-47.54"/>
+</g>
+<!-- use_p_proc&#45;&gt;remove -->
+<g id="edge2" class="edge">
+<title>use_p_proc&#45;&gt;remove</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M239.2,-71.88C238.88,-62.72 238.5,-54.43 238.07,-47.26"/>
+<polygon fill="#555555" stroke="#555555" points="241.5,-47.05 237.3,-37.32 234.51,-47.54 241.5,-47.05"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node4" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="441" cy="-333.81" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","use_p_proc":"if (not(combat_is_initialized)) then begin\n  if (get_critter_stat(dude_obj, 34) == 0) then begin\n    if ((obj_pid(critter_inven_obj(dude_obj, 0)) == 3) or (obj_pid(critter_inven_obj(dude_obj, 0)) == 232) and (obj_is_carrying_obj_pid(dude_obj, 101) >= 1)) then begin\n      script_overrides;\n      if (local_var(0) == 0) then begin\n        display_msg(message_str(1502, 100));\n      end\n      else begin\n        display_msg(message_str(1502, 101));\n      end\n      add_timer_event(self_obj, 1, 1);\n      set_local_var(0, local_var(0) + 1);\n      if (local_var(0) == 10) then begin\n        script_overrides;\n        call remove;\n      end\n    end\n    else begin\n      if ((obj_pid(critter_inven_obj(dude_obj, 0)) == 348) or (obj_pid(critter_inven_obj(dude_obj, 0)) == 349)) then begin\n        script_overrides;\n        display_msg(message_str(1502, 102));\n      end\n      else begin\n        if ((get_critter_stat(dude_obj, 34) == 0) and (source_obj == dude_obj) and (obj_is_carrying_obj_pid(dude_obj, 101) >= 1)) then begin\n          script_overrides;\n          if (local_var(0) == 0) then begin\n            display_msg(message_str(1502, 100));\n          end\n          else begin\n            display_msg(message_str(1502, 101));\n          end\n          add_timer_event(self_obj, 1, 0);\n          set_local_var(0, local_var(0) + 1);\n          if (local_var(0) == 10) then begin\n            script_overrides;\n            call remove;\n          end\n        end\n      end\n    end\n    if (obj_is_carrying_obj_pid(dude_obj, 101) == 0) then begin\n      script_overrides;\n      display_msg(message_str(1502, 104));\n    end\n  end\nend\nelse begin\n  display_msg(message_str(1502, 250));\nend\n","remove":"variable LVar0 := 0;\nscript_overrides;\ndisplay_msg(message_str(1502, 103));\nset_global_var(773, 1);\nLVar0 := obj_carrying_pid_obj(dude_obj, 548);\nrm_obj_from_inven(dude_obj, LVar0);\n","timed_event_p_proc":"if (fixed_param == 1) then begin\n  reg_anim_func(2, dude_obj);\n  reg_anim_func(1, 1);\n  reg_anim_animate(dude_obj, 5, 4294967295);\n  reg_anim_play_sfx(dude_obj, \"powr\", 6);\n  reg_anim_animate(dude_obj, 2, 4294967295);\n  reg_anim_play_sfx(dude_obj, \"zippo\", 9);\n  reg_anim_animate_reverse(dude_obj, 5, 4294967295);\n  reg_anim_play_sfx(dude_obj, \"powrb\", 8);\n  reg_anim_func(3, 0);\nend\nelse begin\n  reg_anim_func(2, dude_obj);\n  reg_anim_func(1, 1);\n  reg_anim_animate(dude_obj, 2, 4294967295);\n  reg_anim_play_sfx(dude_obj, \"zippo\", 10);\n  reg_anim_func(3, 0);\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

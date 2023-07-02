@@ -1,0 +1,4 @@
+digraph WEAPSYS {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="It looks as though the\nautomated security system\nis armed."]
+}

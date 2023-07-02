@@ -1,0 +1,6 @@
+digraph valtmeet {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="Это актовый зал Убежища.\nЛучшее место для сбора\nего обитателей. Странно,\nоно больше не привлекает\nваше внимание, как\nраньше."]
+}

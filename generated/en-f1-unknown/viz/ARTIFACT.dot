@@ -1,0 +1,4 @@
+digraph ARTIFACT {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="This seems strange. You\nthink it may be what the\nBrotherhood\n sent you to retrieve.\n---\nYou see a strange\nholodisk.\n---\nPip Boy displays: File\nFound on System. Aborting\ndownload.\n---\nPip Boy displays:\nDownloading data from\nDisk.\n---\nYou see a disk Sophia\ngave you.\n---\nYou see a disk Maxson\ngave you."]
+}

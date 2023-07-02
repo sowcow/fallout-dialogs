@@ -1,0 +1,6 @@
+digraph library {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="Это библиотека убежища.\nОбучающие машины\nсоединены с центральным\nядром. Они дают жителям\nзнания и обучают навыкам."]
+}

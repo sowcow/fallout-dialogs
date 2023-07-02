@@ -1,0 +1,13 @@
+digraph WORKROOM {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "initialize" [style=dotted color="#555555"]
+  "start" -> "explode" [style=dotted color="#555555"]
+  "start" -> "explode" [style=dotted color="#555555"]
+  "start" [label=""]
+  "initialize" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "initialize" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label=""]
+  "explode" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "explode" [label=""]
+}

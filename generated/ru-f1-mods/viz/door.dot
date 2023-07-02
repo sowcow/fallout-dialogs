@@ -1,0 +1,17 @@
+digraph door {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "look_at_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Дверь заперта."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Вы открываете дверь.\n---\nВам не удается вскрыть\nзамок.\n---\nДверь заперта.\n---\nВашего умения\nнедостаточно, чтобы\nвскрыть этот замок.\n---\nВам не удается вскрыть\nзамок.\n---\nДверь не заперта."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Дверь заперта."]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="Вы открываете дверь.\n---\nВам не удается вскрыть\nзамок.\n---\nДверь заперта.\n---\nВы сломали отмычку!\n---\nВам не удается вскрыть\nзамок."]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+  "damage_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "damage_p_proc" [label=""]
+}

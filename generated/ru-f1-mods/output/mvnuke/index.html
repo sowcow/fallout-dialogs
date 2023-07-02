@@ -1,0 +1,152 @@
+<!DOCTYPE html><html><head><title>mvnuke</title><meta charset="utf-8" /></head><body><svg width="586pt" height="652pt"
+ viewBox="0.00 0.00 586.26 652.11" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 648.11)">
+<title>mvnuke</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-648.11 582.26,-648.11 582.26,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="153.97" cy="-614.06" rx="140.12" ry="18"/>
+<text text-anchor="middle" x="153.97" y="-609.38" font-family="Times,serif" font-size="14.00">Это ядерная боеголовка.</text>
+</g>
+<!-- skills -->
+<g id="node2" class="node">
+<title>skills</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="153.97" cy="-274" rx="153.97" ry="274"/>
+<text text-anchor="middle" x="153.97" y="-450.45" font-family="Times,serif" font-size="14.00">Это ядерная боеголовка.</text>
+<text text-anchor="middle" x="153.97" y="-433.2" font-family="Times,serif" font-size="14.00">Ее контролирует</text>
+<text text-anchor="middle" x="153.97" y="-415.95" font-family="Times,serif" font-size="14.00">компьютер, соединенный с</text>
+<text text-anchor="middle" x="153.97" y="-398.7" font-family="Times,serif" font-size="14.00">ней при помощи кабелей.</text>
+<text text-anchor="middle" x="153.97" y="-381.45" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="153.97" y="-364.2" font-family="Times,serif" font-size="14.00">На этой ядерной</text>
+<text text-anchor="middle" x="153.97" y="-346.95" font-family="Times,serif" font-size="14.00">боеголовке нет ничего,</text>
+<text text-anchor="middle" x="153.97" y="-329.7" font-family="Times,serif" font-size="14.00">что нуждалось бы в</text>
+<text text-anchor="middle" x="153.97" y="-312.45" font-family="Times,serif" font-size="14.00">ремонте.</text>
+<text text-anchor="middle" x="153.97" y="-295.2" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="153.97" y="-277.95" font-family="Times,serif" font-size="14.00">На этой ядерной</text>
+<text text-anchor="middle" x="153.97" y="-260.7" font-family="Times,serif" font-size="14.00">боеголовке нет ничего,</text>
+<text text-anchor="middle" x="153.97" y="-243.45" font-family="Times,serif" font-size="14.00">что можно было бы</text>
+<text text-anchor="middle" x="153.97" y="-226.2" font-family="Times,serif" font-size="14.00">взломать.</text>
+<text text-anchor="middle" x="153.97" y="-208.95" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="153.97" y="-191.7" font-family="Times,serif" font-size="14.00">Это очень серьезная</text>
+<text text-anchor="middle" x="153.97" y="-174.45" font-family="Times,serif" font-size="14.00">ловушка которая не может</text>
+<text text-anchor="middle" x="153.97" y="-157.2" font-family="Times,serif" font-size="14.00">быть обезврежена, или</text>
+<text text-anchor="middle" x="153.97" y="-139.95" font-family="Times,serif" font-size="14.00">установлена отсюда.</text>
+<text text-anchor="middle" x="153.97" y="-122.7" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="153.97" y="-105.45" font-family="Times,serif" font-size="14.00">Не похоже на то, что это</text>
+<text text-anchor="middle" x="153.97" y="-88.2" font-family="Times,serif" font-size="14.00">работает.</text>
+</g>
+<!-- start&#45;&gt;skills -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;skills</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M153.97,-595.83C153.97,-586.54 153.97,-573.92 153.97,-559.03"/>
+<polygon fill="#555555" stroke="#555555" points="157.47,-559.38 153.97,-549.38 150.47,-559.38 157.47,-559.38"/>
+</g>
+<!-- reset -->
+<g id="node3" class="node">
+<title>reset</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="444.97" cy="-614.06" rx="133.29" ry="30.05"/>
+<text text-anchor="middle" x="444.97" y="-618.01" font-family="Times,serif" font-size="14.00">Вы разрядили ядерную</text>
+<text text-anchor="middle" x="444.97" y="-600.76" font-family="Times,serif" font-size="14.00">боеголовку.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 21) then begin\n  script_overrides;\n  display_msg(message_str(449, 100));\nend\nelse begin\n  if (script_action == 8) then begin\n    set_map_var(5, 1);\n    GVar0 := action_being_used;\n    script_overrides;\n    call skills;\n  end\nend\n","skills":"if (GVar0 == 12) then begin\n  display_msg(message_str(449, 108));\nend\nelse begin\n  if (GVar0 == 13) then begin\n    display_msg(message_str(449, 109));\n  end\n  else begin\n    if (GVar0 == 9) then begin\n      display_msg(message_str(449, 110));\n    end\n    else begin\n      if (GVar0 == 11) then begin\n        display_msg(message_str(449, 111));\n      end\n      else begin\n        display_msg(message_str(449, 105));\n      end\n    end\n  end\nend\n","reset":"display_msg(message_str(449, 103));\nset_global_var(55, 0);\nset_global_var(18, 0);\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

@@ -1,0 +1,10 @@
+digraph ncrngsh3 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_exit_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_exit_p_proc" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label="Вы оказались в горном\nрайоне. Стоянка\nРейнджеров находится\nнеподалеку."]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+}

@@ -1,0 +1,13 @@
+digraph vplasma {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" -> "spatial_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Вы замечаете маленькую\nпластину у своих ног.\n---\nВаше знание ловушек\nподсказывает вам, что это\nнекий спусковой механизм.\n---\nВы замечаете маленькую\nпластину у своих ног."]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="Плазма взрывается около\nсеверной стены!"]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Вы аккуратно разводите\nпружины на пластине.\n---\nВы не совсем уверены, как\nне дать пластине\nсработать."]
+}

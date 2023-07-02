@@ -1,0 +1,121 @@
+<!DOCTYPE html><html><head><title>GUARD2</title><meta charset="utf-8" /></head><body><svg width="305pt" height="263pt"
+ viewBox="0.00 0.00 305.34 263.27" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 259.27)">
+<title>GUARD2</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-259.27 301.34,-259.27 301.34,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="148.67" cy="-127.63" rx="148.67" ry="127.63"/>
+<text text-anchor="middle" x="148.67" y="-200.58" font-family="Times,serif" font-size="14.00">Good job!</text>
+<text text-anchor="middle" x="148.67" y="-183.33" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="148.67" y="-166.08" font-family="Times,serif" font-size="14.00">Fix the water pump now or</text>
+<text text-anchor="middle" x="148.67" y="-148.83" font-family="Times,serif" font-size="14.00">die.</text>
+<text text-anchor="middle" x="148.67" y="-131.58" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="148.67" y="-114.33" font-family="Times,serif" font-size="14.00">Get back here and fix</text>
+<text text-anchor="middle" x="148.67" y="-97.08" font-family="Times,serif" font-size="14.00">this water pump!</text>
+<text text-anchor="middle" x="148.67" y="-79.83" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="148.67" y="-62.58" font-family="Times,serif" font-size="14.00">You see Garret. He is</text>
+<text text-anchor="middle" x="148.67" y="-45.33" font-family="Times,serif" font-size="14.00">watching you closely.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (Only_once) then begin\n  Only_once := 0;\n  critter_add_trait(self_obj, 1, 6, 30);\n  critter_add_trait(self_obj, 1, 5, 78);\n  if (global_var(227) == 1) then begin\n    active := 1;\n    set_obj_visibility(self_obj, 0);\n  end\n  else begin\n    set_obj_visibility(self_obj, 1);\n  end\nend\nif (active) then begin\n  if (script_action == 11) then begin\n    if (global_var(31) == 2) then begin\n      float_msg(self_obj, message_str(535, 102), 8);\n    end\n    else begin\n      float_msg(self_obj, message_str(535, 101), 8);\n    end\n  end\n  else begin\n    if (script_action == 14) then begin\n      Hostile := 1;\n    end\n    else begin\n      if (script_action == 12) then begin\n        if (global_var(249) and obj_can_see_obj(self_obj, dude_obj)) then begin\n          Hostile := 1;\n        end\n        if (Hostile) then begin\n          Hostile := 0;\n          set_global_var(227, 0);\n          set_global_var(249, 1);\n          attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\n        end\n        else begin\n          if (global_var(31) != 2) then begin\n            if (tile_distance_objs(self_obj, dude_obj) > 7) then begin\n              Hostile := 1;\n            end\n            else begin\n              if ((tile_distance_objs(self_obj, dude_obj) > 4) and oktoyell) then begin\n                oktoyell := 0;\n                float_msg(self_obj, message_str(535, 103), 8);\n              end\n              else begin\n                if (tile_distance_objs(self_obj, dude_obj) < 5) then begin\n                  oktoyell := 1;\n                end\n              end\n            end\n          end\n        end\n      end\n      else begin\n        if (script_action == 4) then begin\n          Hostile := 1;\n        end\n        else begin\n          if (script_action == 21) then begin\n            script_overrides;\n            display_msg(message_str(535, 100));\n          end\n          else begin\n            if (script_action == 18) then begin\n              set_global_var(607, 3);\n              set_global_var(227, 0);\n              set_global_var(249, 1);\n              if (source_obj == dude_obj) then begin\n                if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n                  set_global_var(156, 1);\n                  set_global_var(157, 0);\n                end\n                if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n                  set_global_var(157, 1);\n                  set_global_var(156, 0);\n                end\n                set_global_var(160, global_var(160) + 1);\n                if ((global_var(160) % 6) == 0) then begin\n                  set_global_var(155, global_var(155) + 1);\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

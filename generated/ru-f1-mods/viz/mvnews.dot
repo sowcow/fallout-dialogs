@@ -1,0 +1,10 @@
+digraph mvnews {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Заголовок газеты гласит:\n\"Повседневная жизнь в\nдеревне\"."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Газетную машину заело по\nнеизвестной причине. Это\nвесьма неприятно."]
+}

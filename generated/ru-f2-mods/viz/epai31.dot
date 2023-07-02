@@ -1,0 +1,18 @@
+digraph epai31 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Вы вычистили слизь из\nвентилятора и лопасти\nначали вращаться. Воздух\nвокруг вас становится\nнемного лучше.\n---\nВы вычистили слизь из\nвентилятора и лопасти\nначали вращаться.\nНаходиться здесь стало\nбезопасно - по крайней\nмере, в этом конце\nкомнаты.\n---\nВы вычистили слизь из\nвентилятора и лопасти\nначали вращаться. Воздух\nвокруг вас становится\nнемного лучше.\n---\nВы вычистили слизь из\nвентилятора и лопасти\nначали вращаться.\nНаходиться здесь стало\nбезопасно - по крайней\nмере, в этом конце\nкомнаты."]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "drop_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "drop_p_proc" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" [label=""]
+}

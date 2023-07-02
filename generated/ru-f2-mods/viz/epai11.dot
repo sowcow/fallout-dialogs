@@ -1,0 +1,18 @@
+digraph epai11 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" -> "evil_plant_placing_p_proc" [style=dotted color="#555555"]
+  "use_obj_on_p_proc" -> "corn_placing_p_proc" [style=dotted color="#555555"]
+  "use_obj_on_p_proc" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label=""]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "evil_plant_placing_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "evil_plant_placing_p_proc" [label="Это не то, на что я\nнадеялся от этих семян!"]
+  "corn_placing_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "corn_placing_p_proc" [label="Это поможет решить\nпроблему продовольствия.\n---\nПосле недели ускоренного\nроста стебли кукурузы\nподнялись по всей\nпосевной площади."]
+}

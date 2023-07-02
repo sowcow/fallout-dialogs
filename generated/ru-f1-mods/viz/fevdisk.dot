@@ -1,0 +1,6 @@
+digraph fevdisk {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Странная штука. Кажется,\nэто можно использовать в\nвашем PIPboy."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Pip-Boy: файл найден в\nсистеме. Загрузка\nотменена.\n---\nPip-Boy: загрузка данных\nс диска."]
+}

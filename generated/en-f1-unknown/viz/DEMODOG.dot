@@ -1,0 +1,13 @@
+digraph DEMODOG {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "do_dialogue" [style=dotted color="#555555"]
+  "start" -> "growl" [style=dotted color="#555555"]
+  "start" -> "follow_player" [style=dotted color="#555555"]
+  "start" [label="You see a dog. He seems\nto be following you.\n---\nYou see a dog.\n---\nIt seems that you have\nmade a friend of this\ndog."]
+  "growl" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "growl" [label="Grrr!"]
+  "do_dialogue" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_dialogue" [label="Woof!"]
+  "follow_player" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "follow_player" [label=""]
+}

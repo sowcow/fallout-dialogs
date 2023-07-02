@@ -1,0 +1,4 @@
+digraph BVLIB {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="This is the library.\nYou've seen all this\nequipment\nbefore in your vault\nlibrary.\n---\nThere looks to be little\nof value left in this\nroom."]
+}

@@ -1,0 +1,8 @@
+digraph valtcomp {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Вы могли бы получить\nбольше информации из\nэтого терминала,\nиспользуя более научный\nподход."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Терминалы на этом уровне\nконтролируют атмосферу и\nтемпературный баланс, а\nтакже резервное\nобслуживание для\nмедлаборатории.\n---\nЭтот терминал\nконтролирует запасы и\nобыденные функции\nУбежища, а также\nвыполняет обычную\nадминистративную работу."]
+}

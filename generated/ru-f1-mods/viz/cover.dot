@@ -1,0 +1,18 @@
+digraph cover {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "do_stuff" [style=dotted color="#555555"]
+  "start" [label=""]
+  "do_stuff" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_stuff" -> "cover00" [style=dotted color="#555555"]
+  "do_stuff" -> "cover01" [style=dotted color="#555555"]
+  "do_stuff" [label=""]
+  "coverend" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "coverend" [label=""]
+  "cover00" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "cover00" [label="Вы закрываете люк."]
+  "cover01" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "cover01" -> "cover01a" [style=dotted color="#555555"]
+  "cover01" [label=""]
+  "cover01a" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "cover01a" [label="Вы отодвигаете крышку\nлюка и смотрите вниз. Вы\nвидите лестницу, которая\nведет в канализацию.\n---\nВы напрягаете мускулы, но\nне можете сдвинуть с\nместа тяжелый железный\nдиск. Вы слышите, как у\nвас что-то хрустнуло в\nспине.\n---\nКрышка люка слишком\nтяжелая и громоздкая."]
+}

@@ -1,0 +1,18 @@
+digraph FARLI {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "farli4" [style=dotted color="#555555"]
+  "start" -> "farli3" [style=dotted color="#555555"]
+  "start" -> "farli0" [style=dotted color="#555555"]
+  "start" [label="You see Paladin Farli."]
+  "farli0" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "farli0" [label="Greetings."]
+  "farli0" -> "farli1" [label="Chad'ra chu ka?" color="#991B00" fontcolor="#991B00"]
+  "farli1" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "farli1" [label="Katja chu nee ka Chak'ra\nFarli.\n---\nFarli, nee ko \n---\n mat'chak o Drake."]
+  "farli2" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "farli2" [label="Ah, Drake ko mat'chak."]
+  "farli3" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "farli3" [label="Say hello to our mutual\nfriend if you see him\nagain."]
+  "farli4" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "farli4" [label="The Brotherhood reminds\nme of home."]
+}

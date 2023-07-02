@@ -1,0 +1,4 @@
+digraph LIVINGQ {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="This is the Vault living\nquarters. It is a\nstandard design\nfrom the time before the\nWar."]
+}

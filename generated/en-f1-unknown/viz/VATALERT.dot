@@ -1,0 +1,13 @@
+digraph VATALERT {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" -> "spatial_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="There is something odd\nabout that part of the\nfloor.\n---\nYou notice nothing\nspecial."]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="An alarm sounds in the\ndistance.\n---\nThere is some sort of\nsensor at your feet."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="You disarm the sensor.\n---\nYou fail to disarm the\nsensor."]
+}

@@ -1,0 +1,4 @@
+digraph airlock {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Похоже, это убежище было\nразграблено подчистую. Вы\nрешаете, что ничего\nценного здесь не\nосталось."]
+}

@@ -1,0 +1,15 @@
+digraph HOUSCHAR {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" -> "look_at_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="The chair seems inviting;\nhowever, you must\ncontinue on your mission."]
+  "chairend" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "chairend" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="You see a worn chair."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="You see a worn chair."]
+}

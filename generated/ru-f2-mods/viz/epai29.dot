@@ -1,0 +1,8 @@
+digraph epai29 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Если я привяжу сюда\nверевку, то смогу\nспуститься туда.\n---\nВеревка, несомненно,\nпригодится здесь.\n---\nВы вошли в одну из систем\nвентиляции АЗОС. Здесь\nслышно, как снуют\nтуда-сюда различные\nнасекомые."]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="Это должно помочь.\n---\nВы привязали конец\nверевки к одной из стоек\nвентиляции и сбросили\nостатки вниз. Было\nслышно, как она упала на\nдно.\n---\nЯ уже привязал веревку."]
+}

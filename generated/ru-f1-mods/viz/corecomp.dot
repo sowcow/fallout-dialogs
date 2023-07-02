@@ -1,0 +1,11 @@
+digraph corecomp {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Этот компьютер следит за\nсостоянием\nжизнеобеспечивающего\nоборудования в убежище."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Этот компьютер следит за\nсостоянием\nжизнеобеспечивающего\nоборудования в убежище."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Практически весь доступ к\nпрограммам был\nзаблокирован местным\nискусственным\nинтеллектом.\n---\nЭто центральный компьютер\nУбежища 13. Он\nконтролирует большую\nчасть рабочих станций в\nубежище.\n---\nВы пытаетесь разобраться\nс компьютером, но ничего\nне получается."]
+}

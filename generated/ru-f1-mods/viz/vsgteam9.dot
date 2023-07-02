@@ -1,0 +1,12 @@
+digraph vsgteam9 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "critter_p_proc" [style=dotted color="#555555"]
+  "start" -> "destroy_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "critter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "critter_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label=""]
+}

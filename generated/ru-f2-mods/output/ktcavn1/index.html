@@ -1,0 +1,167 @@
+<!DOCTYPE html><html><head><title>ktcavn1</title><meta charset="utf-8" /></head><body><svg width="518pt" height="116pt"
+ viewBox="0.00 0.00 517.77 116.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
+<title>ktcavn1</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-112 513.77,-112 513.77,4 -4,4"/>
+<!-- damage_p_proc -->
+<g id="node1" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="82.77" cy="-90" rx="82.77" ry="18"/>
+<text text-anchor="middle" x="82.77" y="-85.33" font-family="Times,serif" font-size="14.00">Первый текст</text>
+</g>
+<!-- destroy_support -->
+<g id="node2" class="node">
+<title>destroy_support</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="210.77" cy="-18" rx="82.77" ry="18"/>
+<text text-anchor="middle" x="210.77" y="-13.32" font-family="Times,serif" font-size="14.00">Первый текст</text>
+</g>
+<!-- force_destroy_support -->
+<g id="node3" class="node">
+<title>force_destroy_support</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="338.77" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- start -->
+<g id="node4" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="410.77" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node5" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="338.77" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc&#45;&gt;force_destroy_support -->
+<g id="edge1" class="edge">
+<title>map_enter_p_proc&#45;&gt;force_destroy_support</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M338.77,-71.7C338.77,-64.24 338.77,-55.32 338.77,-46.97"/>
+<polygon fill="#555555" stroke="#555555" points="342.27,-47.1 338.77,-37.1 335.27,-47.1 342.27,-47.1"/>
+</g>
+<!-- map_update_p_proc -->
+<g id="node6" class="node">
+<title>map_update_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="482.77" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node7" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="210.77" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc&#45;&gt;destroy_support -->
+<g id="edge2" class="edge">
+<title>timed_event_p_proc&#45;&gt;destroy_support</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M199.33,-73.46C197.46,-65.56 196.87,-55.72 197.55,-46.58"/>
+<polygon fill="#555555" stroke="#555555" points="201.11,-47.35 199.01,-36.96 194.18,-46.39 201.11,-47.35"/>
+</g>
+<!-- timed_event_p_proc&#45;&gt;destroy_support -->
+<g id="edge3" class="edge">
+<title>timed_event_p_proc&#45;&gt;destroy_support</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M210.77,-71.7C210.77,-64.24 210.77,-55.32 210.77,-46.97"/>
+<polygon fill="#555555" stroke="#555555" points="214.27,-47.1 210.77,-37.1 207.27,-47.1 214.27,-47.1"/>
+</g>
+<!-- timed_event_p_proc&#45;&gt;destroy_support -->
+<g id="edge4" class="edge">
+<title>timed_event_p_proc&#45;&gt;destroy_support</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M222.21,-73.46C224.09,-65.56 224.68,-55.72 224,-46.58"/>
+<polygon fill="#555555" stroke="#555555" points="227.37,-46.39 222.53,-36.96 220.44,-47.35 227.37,-46.39"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"damage_p_proc":"if (metarule(49, target_obj) == 6) then begin\n  if (local_var(0) == 0) then begin\n    set_local_var(0, 1);\n    rubble := create_object_sid(33554839, 22700, elevation(self_obj), 4294967295);\n    rubble := create_object_sid(33554839, 22300, elevation(self_obj), 4294967295);\n    rubble := create_object_sid(33554839, 22904, elevation(self_obj), 4294967295);\n    rubble := create_object_sid(33554839, 22702, elevation(self_obj), 4294967295);\n    blocker := create_object_sid(33554499, 21298, elevation(self_obj), 4294967295);\n    blocker := create_object_sid(33554499, 21499, elevation(self_obj), 4294967295);\n    blocker := create_object_sid(33554499, 21500, elevation(self_obj), 4294967295);\n    blocker := create_object_sid(33554499, 21701, elevation(self_obj), 4294967295);\n    blocker := create_object_sid(33554499, 21702, elevation(self_obj), 4294967295);\n    blocker := create_object_sid(33554499, 21903, elevation(self_obj), 4294967295);\n    blocker := create_object_sid(33554499, 22894, elevation(self_obj), 4294967295);\n    blocker := create_object_sid(33554499, 23094, elevation(self_obj), 4294967295);\n    blocker := create_object_sid(33554499, 23294, elevation(self_obj), 4294967295);\n    blocker := create_object_sid(33554499, 23107, elevation(self_obj), 4294967295);\n    blocker := create_object_sid(33554499, 23307, elevation(self_obj), 4294967295);\n    blocker := create_object_sid(33554499, 23703, elevation(self_obj), 4294967295);\n    blocker := create_object_sid(33554499, 23702, elevation(self_obj), 4294967295);\n    blocker := create_object_sid(33554499, 23701, elevation(self_obj), 4294967295);\n    set_map_var(0, 1);\n    display_msg(message_str(1486, 101));\n    float_msg(dude_obj, message_str(1486, 104), 8);\n    if ((map_var(0) == 1) and (map_var(2) == 1) and (map_var(3) == 1) or ((map_var(0) == 1) and (map_var(1) == 1) and (map_var(2) == 1) and (map_var(3) == 1))) then begin\n      if (global_var(390) != 2) then begin\n        set_global_var(390, 2);\n        display_msg(message_str(1486, 103));\n        give_exp_points(600);\n        display_msg(message_str(14, 100) + 600 + message_str(14, 101));\n        set_global_var(48, global_var(48) + 5);\n        set_global_var(0, global_var(0) + 50);\n        debug_msg(\"ktcavn1\" + \": \" + \"Player gains \" + 50 + \" Karma Points.\" + \"\\n\");\n        set_global_var(37, 0);\n        set_global_var(38, 0);\n        set_global_var(39, 0);\n        set_global_var(40, 0);\n        set_global_var(41, 0);\n        set_global_var(42, 0);\n        set_global_var(43, 0);\n        set_global_var(44, 0);\n        set_global_var(45, 0);\n        tmp_gen_rep := global_var(0);\n        if (has_trait(0, dude_obj, 95)) then begin\n          tmp_gen_rep := global_var(0) * 2;\n        end\n        if (tmp_gen_rep >= 1000) then begin\n          set_global_var(37, 1);\n        end\n        else begin\n          if (tmp_gen_rep >= 750) then begin\n            set_global_var(38, 1);\n          end\n          else begin\n            if (tmp_gen_rep >= 500) then begin\n              set_global_var(39, 1);\n            end\n            else begin\n              if (tmp_gen_rep >= 250) then begin\n                set_global_var(40, 1);\n              end\n              else begin\n                if (tmp_gen_rep > 4294967046) then begin\n                  set_global_var(41, 1);\n                end\n                else begin\n                  if (tmp_gen_rep > 4294966796) then begin\n                    set_global_var(42, 1);\n                  end\n                  else begin\n                    if (tmp_gen_rep > 4294966546) then begin\n                      set_global_var(43, 1);\n                    end\n                    else begin\n                      if (tmp_gen_rep > 4294966296) then begin\n                        set_global_var(44, 1);\n                      end\n                      else begin\n                        set_global_var(45, 1);\n                      end\n                    end\n                  end\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n    while(count < 18) do begin\n      if (check == 0) then begin\n        obj := party_member_obj(16777278);\n        check := check + 1;\n      end\n      else begin\n        if (check == 1) then begin\n          obj := party_member_obj(16777376);\n          check := check + 1;\n        end\n        else begin\n          if (check == 2) then begin\n            obj := party_member_obj(16777377);\n            check := check + 1;\n          end\n          else begin\n            if (check == 3) then begin\n              obj := party_member_obj(16777305);\n              check := check + 1;\n            end\n            else begin\n              if (check == 4) then begin\n                obj := party_member_obj(16777313);\n                check := check + 1;\n              end\n              else begin\n                if (check == 5) then begin\n                  obj := party_member_obj(16777323);\n                  check := check + 1;\n                end\n                else begin\n                  if (check == 6) then begin\n                    obj := party_member_obj(16777352);\n                    check := check + 1;\n                  end\n                  else begin\n                    if (check == 7) then begin\n                      obj := party_member_obj(16777368);\n                      check := check + 1;\n                    end\n                    else begin\n                      if (check == 8) then begin\n                        obj := party_member_obj(16777379);\n                        check := check + 1;\n                      end\n                      else begin\n                        if (check == 9) then begin\n                          obj := party_member_obj(16777380);\n                          check := check + 1;\n                        end\n                        else begin\n                          if (check == 10) then begin\n                            obj := party_member_obj(16777295);\n                            check := check + 1;\n                          end\n                          else begin\n                            if (check == 11) then begin\n                              obj := party_member_obj(16777558);\n                              check := check + 1;\n                            end\n                            else begin\n                              if (check == 12) then begin\n                                obj := party_member_obj(16777600);\n                                check := check + 1;\n                              end\n                              else begin\n                                if (check == 13) then begin\n                                  obj := party_member_obj(16777687);\n                                  check := check + 1;\n                                end\n                                else begin\n                                  if (check == 14) then begin\n                                    obj := party_member_obj(16777597);\n                                    check := check + 1;\n                                  end\n                                  else begin\n                                    if (check == 15) then begin\n                                      obj := party_member_obj(16777596);\n                                      check := check + 1;\n                                    end\n                                    else begin\n                                      if (check == 16) then begin\n                                        obj := party_member_obj(16777595);\n                                        check := check + 1;\n                                      end\n                                      else begin\n                                        if (check == 17) then begin\n                                          obj := dude_obj;\n                                          check := check + 1;\n                                        end\n                                      end\n                                    end\n                                  end\n                                end\n                              end\n                            end\n                          end\n                        end\n                      end\n                    end\n                  end\n                end\n              end\n            end\n          end\n        end\n      end\n      if (tile_in_tile_rect(21703, 21296, 23504, 23496, tile_num(obj))) then begin\n        critter_dmg(obj, 9999999, 0);\n      end\n      count := count + 1;\n    end\n    add_timer_event(support_beam_3, game_ticks(3), 1);\n  end\nend\n","destroy_support":"if (local_var(0) == 0) then begin\n  set_local_var(0, 1);\n  rubble := create_object_sid(33554839, 22700, elevation(self_obj), 4294967295);\n  rubble := create_object_sid(33554839, 22300, elevation(self_obj), 4294967295);\n  rubble := create_object_sid(33554839, 22904, elevation(self_obj), 4294967295);\n  rubble := create_object_sid(33554839, 22702, elevation(self_obj), 4294967295);\n  blocker := create_object_sid(33554499, 21298, elevation(self_obj), 4294967295);\n  blocker := create_object_sid(33554499, 21499, elevation(self_obj), 4294967295);\n  blocker := create_object_sid(33554499, 21500, elevation(self_obj), 4294967295);\n  blocker := create_object_sid(33554499, 21701, elevation(self_obj), 4294967295);\n  blocker := create_object_sid(33554499, 21702, elevation(self_obj), 4294967295);\n  blocker := create_object_sid(33554499, 21903, elevation(self_obj), 4294967295);\n  blocker := create_object_sid(33554499, 22894, elevation(self_obj), 4294967295);\n  blocker := create_object_sid(33554499, 23094, elevation(self_obj), 4294967295);\n  blocker := create_object_sid(33554499, 23294, elevation(self_obj), 4294967295);\n  blocker := create_object_sid(33554499, 23107, elevation(self_obj), 4294967295);\n  blocker := create_object_sid(33554499, 23307, elevation(self_obj), 4294967295);\n  blocker := create_object_sid(33554499, 23703, elevation(self_obj), 4294967295);\n  blocker := create_object_sid(33554499, 23702, elevation(self_obj), 4294967295);\n  blocker := create_object_sid(33554499, 23701, elevation(self_obj), 4294967295);\n  set_map_var(0, 1);\n  if ((map_var(0) == 1) and (map_var(2) == 1) and (map_var(3) == 1) or ((map_var(0) == 1) and (map_var(1) == 1) and (map_var(2) == 1) and (map_var(3) == 1))) then begin\n    if (global_var(390) != 2) then begin\n      set_global_var(390, 2);\n      display_msg(message_str(1486, 103));\n      give_exp_points(600);\n      display_msg(message_str(14, 100) + 600 + message_str(14, 101));\n      set_global_var(48, global_var(48) + 5);\n      set_global_var(0, global_var(0) + 50);\n      debug_msg(\"ktcavn1\" + \": \" + \"Player gains \" + 50 + \" Karma Points.\" + \"\\n\");\n      set_global_var(37, 0);\n      set_global_var(38, 0);\n      set_global_var(39, 0);\n      set_global_var(40, 0);\n      set_global_var(41, 0);\n      set_global_var(42, 0);\n      set_global_var(43, 0);\n      set_global_var(44, 0);\n      set_global_var(45, 0);\n      tmp_gen_rep := global_var(0);\n      if (has_trait(0, dude_obj, 95)) then begin\n        tmp_gen_rep := global_var(0) * 2;\n      end\n      if (tmp_gen_rep >= 1000) then begin\n        set_global_var(37, 1);\n      end\n      else begin\n        if (tmp_gen_rep >= 750) then begin\n          set_global_var(38, 1);\n        end\n        else begin\n          if (tmp_gen_rep >= 500) then begin\n            set_global_var(39, 1);\n          end\n          else begin\n            if (tmp_gen_rep >= 250) then begin\n              set_global_var(40, 1);\n            end\n            else begin\n              if (tmp_gen_rep > 4294967046) then begin\n                set_global_var(41, 1);\n              end\n              else begin\n                if (tmp_gen_rep > 4294966796) then begin\n                  set_global_var(42, 1);\n                end\n                else begin\n                  if (tmp_gen_rep > 4294966546) then begin\n                    set_global_var(43, 1);\n                  end\n                  else begin\n                    if (tmp_gen_rep > 4294966296) then begin\n                      set_global_var(44, 1);\n                    end\n                    else begin\n                      set_global_var(45, 1);\n                    end\n                  end\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\n  while(count < 18) do begin\n    if (check == 0) then begin\n      obj := party_member_obj(16777278);\n      check := check + 1;\n    end\n    else begin\n      if (check == 1) then begin\n        obj := party_member_obj(16777376);\n        check := check + 1;\n      end\n      else begin\n        if (check == 2) then begin\n          obj := party_member_obj(16777377);\n          check := check + 1;\n        end\n        else begin\n          if (check == 3) then begin\n            obj := party_member_obj(16777305);\n            check := check + 1;\n          end\n          else begin\n            if (check == 4) then begin\n              obj := party_member_obj(16777313);\n              check := check + 1;\n            end\n            else begin\n              if (check == 5) then begin\n                obj := party_member_obj(16777323);\n                check := check + 1;\n              end\n              else begin\n                if (check == 6) then begin\n                  obj := party_member_obj(16777352);\n                  check := check + 1;\n                end\n                else begin\n                  if (check == 7) then begin\n                    obj := party_member_obj(16777368);\n                    check := check + 1;\n                  end\n                  else begin\n                    if (check == 8) then begin\n                      obj := party_member_obj(16777379);\n                      check := check + 1;\n                    end\n                    else begin\n                      if (check == 9) then begin\n                        obj := party_member_obj(16777380);\n                        check := check + 1;\n                      end\n                      else begin\n                        if (check == 10) then begin\n                          obj := party_member_obj(16777295);\n                          check := check + 1;\n                        end\n                        else begin\n                          if (check == 11) then begin\n                            obj := party_member_obj(16777558);\n                            check := check + 1;\n                          end\n                          else begin\n                            if (check == 12) then begin\n                              obj := party_member_obj(16777600);\n                              check := check + 1;\n                            end\n                            else begin\n                              if (check == 13) then begin\n                                obj := party_member_obj(16777687);\n                                check := check + 1;\n                              end\n                              else begin\n                                if (check == 14) then begin\n                                  obj := party_member_obj(16777597);\n                                  check := check + 1;\n                                end\n                                else begin\n                                  if (check == 15) then begin\n                                    obj := party_member_obj(16777596);\n                                    check := check + 1;\n                                  end\n                                  else begin\n                                    if (check == 16) then begin\n                                      obj := party_member_obj(16777595);\n                                      check := check + 1;\n                                    end\n                                    else begin\n                                      if (check == 17) then begin\n                                        obj := dude_obj;\n                                        check := check + 1;\n                                      end\n                                    end\n                                  end\n                                end\n                              end\n                            end\n                          end\n                        end\n                      end\n                    end\n                  end\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n    if (tile_in_tile_rect(21703, 21296, 23504, 23496, tile_num(obj))) then begin\n      critter_dmg(obj, 9999999, 0);\n    end\n    count := count + 1;\n  end\n  if ((support_beam_2 == 0) and (support_beam_4 == 0)) then begin\n    add_timer_event(support_beam_3, game_ticks(3), 4);\n  end\n  else begin\n    if (support_beam_4 == 0) then begin\n      add_timer_event(support_beam_3, game_ticks(3), 2);\n    end\n    else begin\n      if (support_beam_3 == 0) then begin\n        add_timer_event(support_beam_4, game_ticks(3), 3);\n      end\n    end\n  end\nend\n","force_destroy_support":"set_local_var(0, 1);\nrubble := create_object_sid(33554839, 22700, elevation(self_obj), 4294967295);\nrubble := create_object_sid(33554839, 22300, elevation(self_obj), 4294967295);\nrubble := create_object_sid(33554839, 22904, elevation(self_obj), 4294967295);\nrubble := create_object_sid(33554839, 22702, elevation(self_obj), 4294967295);\nblocker := create_object_sid(33554499, 21298, elevation(self_obj), 4294967295);\nblocker := create_object_sid(33554499, 21499, elevation(self_obj), 4294967295);\nblocker := create_object_sid(33554499, 21500, elevation(self_obj), 4294967295);\nblocker := create_object_sid(33554499, 21701, elevation(self_obj), 4294967295);\nblocker := create_object_sid(33554499, 21702, elevation(self_obj), 4294967295);\nblocker := create_object_sid(33554499, 21903, elevation(self_obj), 4294967295);\nblocker := create_object_sid(33554499, 22894, elevation(self_obj), 4294967295);\nblocker := create_object_sid(33554499, 23094, elevation(self_obj), 4294967295);\nblocker := create_object_sid(33554499, 23294, elevation(self_obj), 4294967295);\nblocker := create_object_sid(33554499, 23107, elevation(self_obj), 4294967295);\nblocker := create_object_sid(33554499, 23307, elevation(self_obj), 4294967295);\nblocker := create_object_sid(33554499, 23703, elevation(self_obj), 4294967295);\nblocker := create_object_sid(33554499, 23702, elevation(self_obj), 4294967295);\nblocker := create_object_sid(33554499, 23701, elevation(self_obj), 4294967295);\nset_map_var(0, 1);\ndestroy_object(self_obj);\n","start":"support_beam_1 := self_obj;\n","map_enter_p_proc":"if (map_var(0) or map_var(1) or map_var(2) or map_var(3)) then begin\n  call force_destroy_support;\nend\n","map_update_p_proc":"support_beam_1 := self_obj;\n","timed_event_p_proc":"if (fixed_param == 1) then begin\nend\nelse begin\n  if (fixed_param == 2) then begin\n    display_msg(message_str(1486, 105));\n    destroy_object(support_beam_4);\n    support_beam_4 := 0;\n    call destroy_support;\n  end\n  else begin\n    if (fixed_param == 3) then begin\n      display_msg(message_str(1486, 105));\n      destroy_object(support_beam_3);\n      support_beam_3 := 0;\n      call destroy_support;\n    end\n    else begin\n      if (fixed_param == 4) then begin\n        display_msg(message_str(1486, 105));\n        destroy_object(support_beam_4);\n        support_beam_4 := 0;\n        call destroy_support;\n      end\n    end\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

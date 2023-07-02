@@ -1,0 +1,10 @@
+digraph vmonowir {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "spatial_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="Вы замечаете нить\nмоноволокна, натянутую\nчерез коридор, и\nумудряетесь ее обойти.\n---\nВы чувствуете сильную\nболь в ногах. Вы получили\nглубокие раны,\nспоткнувшись о нить\nмоноволокна.\n---\nВы сильно порезали правую\nногу.\n---\nВы сильно порезали левую\nногу."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Вы снимаете ловушку с\nнитью моноволокна, и\nспокойно избавляетесь от\nнее прежде, чем порежете\nсебе руки.\n---\nВы пробуете снять нить,\nно промахиваетесь, и нить\nглубоко разрезает вам\nруку.\n---\nВы пробуете снять нить,\nно не можете толком за\nнее ухватиться. Вы\nотдергиваете руку, чтобы\nне порезаться."]
+}

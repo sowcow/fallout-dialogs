@@ -1,0 +1,7 @@
+digraph GHKICK {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "do_dialogue" [style=dotted color="#555555"]
+  "start" [label="You see a ghoul gang\nmember."]
+  "do_dialogue" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_dialogue" [label="You not supposed to be\nhere! Man, I'm gonna have\nto kick your ass."]
+}

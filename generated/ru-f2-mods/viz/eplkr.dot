@@ -1,0 +1,12 @@
+digraph eplkr {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Этот шкафчик заперт\nэлектронным замком.\nРазблокировать его здесь\nневозможно.\n---\nЭтот шкафчик заперт\nэлектронным замком.\nРазблокировать его здесь\nневозможно.\n---\nЭтот шкафчик заперт\nэлектронным замком.\nРазблокировать его здесь\nневозможно."]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "drop_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "drop_p_proc" [label=""]
+}

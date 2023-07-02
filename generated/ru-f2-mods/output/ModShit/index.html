@@ -1,0 +1,130 @@
+<!DOCTYPE html><html><head><title>ModShit</title><meta charset="utf-8" /></head><body><svg width="524pt" height="117pt"
+ viewBox="0.00 0.00 524.00 116.89" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112.89)">
+<title>ModShit</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-112.89 520,-112.89 520,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-54.45" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node2" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="222" cy="-54.45" rx="150.26" ry="54.45"/>
+<text text-anchor="middle" x="222" y="-75.65" font-family="Times,serif" font-size="14.00">Здесь внизу сильно пахнет</text>
+<text text-anchor="middle" x="222" y="-58.4" font-family="Times,serif" font-size="14.00">метаном. Одна маленькая</text>
+<text text-anchor="middle" x="222" y="-41.15" font-family="Times,serif" font-size="14.00">искорка, и все тут</text>
+<text text-anchor="middle" x="222" y="-23.9" font-family="Times,serif" font-size="14.00">взлетит к небесам.</text>
+</g>
+<!-- map_update_p_proc -->
+<g id="node3" class="node">
+<title>map_update_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="417" cy="-54.45" rx="27" ry="18"/>
+</g>
+<!-- map_exit_p_proc -->
+<g id="node4" class="node">
+<title>map_exit_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="489" cy="-54.45" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","map_enter_p_proc":"if (metarule(22, 0) == 0) then begin\n  if (global_var(112) == 1) then begin\n    set_global_var(112, 2);\n  end\n  if (metarule(14, 0)) then begin\n    display_msg(message_str(196, 100));\n  end\nend\noverride_map_start(20899 % 200, 104, 0, 5);\nset_global_var(46, 0);\nset_global_var(67, 0);\nset_global_var(402, global_var(402) bwor 128);\nset_light_level(40);\n","map_update_p_proc":"set_light_level(40);\n","map_exit_p_proc":"if ((((global_var(402) bwand 4) != 0) or (global_var(388) == 4)) == 0) then begin\n  if (((global_var(402) bwand 1024) != 0) and (global_var(310) <= 0) or ((global_var(112) == 2) or (((global_var(403) - (game_time / 864000)) <= 0) or ((global_var(403) - (game_time / 864000)) > 31) and (global_var(403) > 0)))) then begin\n    set_global_var(402, global_var(402) bwor 4);\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

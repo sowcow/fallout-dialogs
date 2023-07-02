@@ -1,0 +1,4 @@
+digraph FOOTPRNT {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="There seems to be a large\namount of foot traffic in\nthe area,\npossibly leading to the\nmanhole cover."]
+}

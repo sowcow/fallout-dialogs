@@ -1,0 +1,14 @@
+digraph epai41 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label=""]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="Сожалею, мои не двуногие\nдрузья. Вам придется\nподождать меня здесь.\n---\nСожалею, мой не двуногий\nдруг. Тебе придется ждать\nменя здесь."]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите шахту\nнеработающего лифта."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Этот лифт не работает. С\nнекоторыми стараниями вы,\nвероятно, сможете\nпробраться вниз."]
+}

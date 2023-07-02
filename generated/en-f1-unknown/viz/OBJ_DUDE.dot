@@ -1,0 +1,7 @@
+digraph OBJ_DUDE {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "timed_event_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" [label="After destroying the\nMaster and his lab which\nhe was creating his army\nof Super Mutants, you\nreturn home, only to\ndiscover that you are\nthrown out of your vault\nfor being too\ndestructive. Thank you\n for playing Fallout. "]
+}

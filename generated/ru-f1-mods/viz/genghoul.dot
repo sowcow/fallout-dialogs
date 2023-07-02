@@ -1,0 +1,18 @@
+digraph genghoul {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "timetomove" [style=dotted color="#555555"]
+  "start" -> "do_dialogue" [style=dotted color="#555555"]
+  "start" -> "Critter_Action" [style=dotted color="#555555"]
+  "start" [label=""]
+  "do_dialogue" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_dialogue" [label="Ар-р!"]
+  "genericend" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "genericend" [label=""]
+  "genericcbt" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "genericcbt" [label=""]
+  "Critter_Action" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "Critter_Action" [label=""]
+  "timetomove" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timetomove" -> "Critter_Action" [style=dotted color="#555555"]
+  "timetomove" [label="Ар-р!"]
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html><html><head><title>REGULATR</title><meta charset="utf-8" /></head><body><svg width="1078pt" height="68pt"
+ viewBox="0.00 0.00 1078.00 68.10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 64.1)">
+<title>REGULATR</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-64.1 1074,-64.1 1074,4 -4,4"/>
+<!-- Start -->
+<g id="node1" class="node">
+<title>Start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-30.05" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node2" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="209" cy="-30.05" rx="137" ry="30.05"/>
+<text text-anchor="middle" x="209" y="-34" font-family="Times,serif" font-size="14.00">You see a Regulator, one</text>
+<text text-anchor="middle" x="209" y="-16.75" font-family="Times,serif" font-size="14.00">of the guards of Adytum.</text>
+</g>
+<!-- description_p_proc -->
+<g id="node3" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="501" cy="-30.05" rx="137" ry="30.05"/>
+<text text-anchor="middle" x="501" y="-34" font-family="Times,serif" font-size="14.00">You see a Regulator, one</text>
+<text text-anchor="middle" x="501" y="-16.75" font-family="Times,serif" font-size="14.00">of the guards of Adytum.</text>
+</g>
+<!-- talk_p_proc -->
+<g id="node4" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="683" cy="-30.05" rx="27" ry="18"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node5" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="755" cy="-30.05" rx="27" ry="18"/>
+</g>
+<!-- damage_p_proc -->
+<g id="node6" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="827" cy="-30.05" rx="27" ry="18"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node7" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="899" cy="-30.05" rx="27" ry="18"/>
+</g>
+<!-- pickup_p_proc -->
+<g id="node8" class="node">
+<title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="971" cy="-30.05" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node9" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1043" cy="-30.05" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"Start":"if (Initialize) then begin\n  if (obj_is_carrying_obj_pid(self_obj, 41) == 0) then begin\n    item_caps_adjust(self_obj, random(1, 10));\n  end\n  critter_add_trait(self_obj, 1, 6, 89);\n  critter_add_trait(self_obj, 1, 5, 29);\n  add_timer_event(self_obj, game_ticks(random(1, 3)), 1);\n  if (local_var(4) == 0) then begin\n    set_map_var(1, map_var(1) + 1);\n    set_local_var(4, 1);\n  end\n  Initialize := 0;\nend\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(252, 100));\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(252, 100));\n","talk_p_proc":"if ((global_var(251) == 1) or (global_var(616) == 1)) then begin\n  float_msg(self_obj, message_str(669, random(100, 105)), 2);\nend\nelse begin\n  float_msg(self_obj, message_str(252, random(134, 138)), 0);\nend\n","critter_p_proc":"variable LVar0 := 0;\nif (obj_can_see_obj(self_obj, dude_obj)) then begin\n  if ((global_var(251) == 1) or (global_var(616) == 1)) then begin\n    attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\n  end\nend\nLVar0 := global_var(341);\nif ((((game_time / 10) - LVar0) >= 5) and (tile_distance_objs(self_obj, dude_obj) <= 4) and (global_var(251) == 0) and (global_var(616) == 0)) then begin\n  float_msg(self_obj, message_str(252, random(134, 138)), 0);\n  LVar0 := game_time / 10;\n  set_global_var(341, LVar0);\nend\n","damage_p_proc":"if (source_obj == dude_obj) then begin\n  set_global_var(616, 1);\nend\n","destroy_p_proc":"set_map_var(1, map_var(1) - 1);\nif (source_obj == dude_obj) then begin\n  set_global_var(616, 1);\n  if (source_obj == dude_obj) then begin\n    if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n      set_global_var(156, 1);\n      set_global_var(157, 0);\n    end\n    if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n      set_global_var(157, 1);\n      set_global_var(156, 0);\n    end\n    set_global_var(160, global_var(160) + 1);\n    if ((global_var(160) % 6) == 0) then begin\n      set_global_var(155, global_var(155) + 1);\n    end\n  end\nend\nif (map_var(1) == 0) then begin\n  terminate_combat;\nend\n","pickup_p_proc":"set_global_var(616, 1);\n","timed_event_p_proc":"animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(self_obj), random(0, 5), random(1, 5)), 0);\nadd_timer_event(self_obj, game_ticks(random(1, 3)), 1);\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

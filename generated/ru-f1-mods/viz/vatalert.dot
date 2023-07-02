@@ -1,0 +1,13 @@
+digraph vatalert {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" -> "spatial_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Есть что-что странное в\nэтой части пола.\n---\nВы не замечаете ничего\nособенного."]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="В отдалении звучит сигнал\nтревоги.\n---\nУ ваших ног какой-то\nдатчик."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Вы отключаете датчик.\n---\nВы не можете отключить\nдатчик."]
+}

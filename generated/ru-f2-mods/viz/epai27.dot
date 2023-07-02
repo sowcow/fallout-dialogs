@@ -1,0 +1,10 @@
+digraph epai27 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Вы не нашли ничего\nценного в мусоре.\nВозможно, если бы вы\nзнали, что искать...\n---\nНичего ценного здесь нет.\n---\nВы нашли разорванный лист\nбумаги с каким-то паролем\nна нем."]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+}

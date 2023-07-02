@@ -1,0 +1,182 @@
+<!DOCTYPE html><html><head><title>JUNKPEAS</title><meta charset="utf-8" /></head><body><svg width="350pt" height="188pt"
+ viewBox="0.00 0.00 350.00 188.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>JUNKPEAS</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-184 346,-184 346,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="171" cy="-162" rx="27" ry="18"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node2" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;critter_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;critter_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M149.44,-150.52C125.12,-138.7 85.38,-119.38 57.8,-105.97"/>
+<polygon fill="#555555" stroke="#555555" points="59.76,-102.55 49.24,-101.32 56.7,-108.84 59.76,-102.55"/>
+</g>
+<!-- damage_p_proc -->
+<g id="node3" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;damage_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;damage_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M156.08,-146.5C146.14,-136.83 132.88,-123.94 121.65,-113.02"/>
+<polygon fill="#555555" stroke="#555555" points="124.51,-110.95 114.9,-106.49 119.63,-115.97 124.51,-110.95"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node4" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="171" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;destroy_p_proc -->
+<g id="edge3" class="edge">
+<title>start&#45;&gt;destroy_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M171,-143.7C171,-136.24 171,-127.32 171,-118.97"/>
+<polygon fill="#555555" stroke="#555555" points="174.5,-119.1 171,-109.1 167.5,-119.1 174.5,-119.1"/>
+</g>
+<!-- pickup_p_proc -->
+<g id="node5" class="node">
+<title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="243" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;pickup_p_proc -->
+<g id="edge4" class="edge">
+<title>start&#45;&gt;pickup_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M185.92,-146.5C195.86,-136.83 209.12,-123.94 220.35,-113.02"/>
+<polygon fill="#555555" stroke="#555555" points="222.37,-115.97 227.1,-106.49 217.49,-110.95 222.37,-115.97"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node6" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="315" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;talk_p_proc -->
+<g id="edge5" class="edge">
+<title>start&#45;&gt;talk_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M192.56,-150.52C216.88,-138.7 256.62,-119.38 284.2,-105.97"/>
+<polygon fill="#555555" stroke="#555555" points="285.3,-108.84 292.76,-101.32 282.24,-102.55 285.3,-108.84"/>
+</g>
+<!-- flee_dude -->
+<g id="node7" class="node">
+<title>flee_dude</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- critter_p_proc&#45;&gt;flee_dude -->
+<g id="edge6" class="edge">
+<title>critter_p_proc&#45;&gt;flee_dude</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M27,-71.7C27,-64.24 27,-55.32 27,-46.97"/>
+<polygon fill="#555555" stroke="#555555" points="30.5,-47.1 27,-37.1 23.5,-47.1 30.5,-47.1"/>
+</g>
+<!-- sleeping -->
+<g id="node8" class="node">
+<title>sleeping</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="243" cy="-162" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"variable LVar0 := 0;\nif (not(initialized)) then begin\n  critter_add_trait(self_obj, 1, 6, 24);\n  critter_add_trait(self_obj, 1, 5, 6);\n  if (obj_is_carrying_obj_pid(self_obj, 41) == 0) then begin\n    LVar0 := create_object_sid(41, 0, 0, -1);\n    add_mult_objs_to_inven(self_obj, LVar0, random(0, 20));\n  end\n  if (local_var(3) == 0) then begin\n    set_local_var(3, tile_num(self_obj));\n  end\n  sleep_tile := 7000;\n  wake_time := random(610, 650);\n  sleep_time := random(1710, 1750);\n  initialized := 1;\nend\nelse begin\n  if (script_action == 12) then begin\n    call critter_p_proc;\n  end\n  else begin\n    if (script_action == 14) then begin\n      call damage_p_proc;\n    end\n    else begin\n      if (script_action == 18) then begin\n        call destroy_p_proc;\n      end\n      else begin\n        if (script_action == 4) then begin\n          call pickup_p_proc;\n        end\n        else begin\n          if (script_action == 11) then begin\n            call talk_p_proc;\n          end\n        end\n      end\n    end\n  end\nend\n","critter_p_proc":"if (local_var(1) and tile_distance_objs(self_obj, dude_obj)) then begin\n  call flee_dude;\nend\n","damage_p_proc":"if (source_obj == dude_obj) then begin\n  set_global_var(247, 1);\n  set_local_var(1, 1);\nend\n","destroy_p_proc":"if (source_obj == dude_obj) then begin\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n    set_global_var(156, 1);\n    set_global_var(157, 0);\n  end\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n    set_global_var(157, 1);\n    set_global_var(156, 0);\n  end\n  set_global_var(159, global_var(159) + 1);\n  if ((global_var(159) % 2) == 0) then begin\n    set_global_var(155, global_var(155) - 1);\n  end\nend\nif (source_obj == dude_obj) then begin\n  if (global_var(247) == 0) then begin\n    set_global_var(247, 1);\n    set_global_var(155, global_var(155) - 5);\n  end\nend\n","pickup_p_proc":"set_local_var(1, 1);\nset_global_var(247, 1);\n","talk_p_proc":"if ((local_var(1) == 1) or (global_var(247) == 1)) then begin\n  float_msg(self_obj, message_str(669, random(100, 105)), 2);\nend\nelse begin\n  if (local_var(0) == 0) then begin\n    set_local_var(0, random(101, 104));\n  end\n  float_msg(self_obj, message_str(715, local_var(0)), 0);\nend\n","flee_dude":"variable LVar0 := 0;\nvariable LVar1 := 0;\nvariable LVar2 := 0;\nwhile(LVar1 < 5) do begin\n  if (tile_distance(tile_num(dude_obj), tile_num_in_direction(tile_num(self_obj), LVar1, 3)) > LVar2) then begin\n    LVar0 := tile_num_in_direction(tile_num(self_obj), LVar1, 3);\n    LVar2 := tile_distance(tile_num(dude_obj), LVar0);\n  end\n  LVar1 := LVar1 + 1;\nend\nanimate_move_obj_to_tile(self_obj, LVar0, 1);\n","sleeping":"if (local_var(2) == 1) then begin\n  if (not(night_person) and (game_time_hour >= wake_time) and (game_time_hour < sleep_time) or (night_person and ((game_time_hour >= wake_time) or (game_time_hour < sleep_time)))) then begin\n    if (((game_time_hour - wake_time) < 10) and ((game_time_hour - wake_time) > 0)) then begin\n      if (tile_num(self_obj) != home_tile) then begin\n        animate_move_obj_to_tile(self_obj, home_tile, 0);\n      end\n      else begin\n        set_local_var(2, 0);\n      end\n    end\n    else begin\n      move_to(self_obj, home_tile, elevation(self_obj));\n      if (tile_num(self_obj) == home_tile) then begin\n        set_local_var(2, 0);\n      end\n    end\n  end\nend\nelse begin\n  if (night_person and (game_time_hour >= sleep_time) and (game_time_hour < wake_time) or (not(night_person) and ((game_time_hour >= sleep_time) or (game_time_hour < wake_time)))) then begin\n    if (((game_time_hour - sleep_time) < 10) and ((game_time_hour - sleep_time) > 0)) then begin\n      if (tile_num(self_obj) != sleep_tile) then begin\n        animate_move_obj_to_tile(self_obj, self_obj, 0);\n      end\n      else begin\n        set_local_var(2, 1);\n      end\n    end\n    else begin\n      if (tile_num(self_obj) != sleep_tile) then begin\n        move_to(self_obj, sleep_tile, elevation(self_obj));\n      end\n      else begin\n        set_local_var(2, 1);\n      end\n    end\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

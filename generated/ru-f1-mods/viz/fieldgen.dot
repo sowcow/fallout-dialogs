@@ -1,0 +1,14 @@
+digraph fieldgen {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "use_obj_on_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" -> "turn_field_off" [style=dotted color="#555555"]
+  "use_obj_on_p_proc" [label="Попытка замкнуть контакты\nизлучателя не удалась."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" -> "turn_field_off" [style=dotted color="#555555"]
+  "use_skill_on_p_proc" [label="Попытка замкнуть контакты\nизлучателя не удалась."]
+  "turn_field_off" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "turn_field_off" [label="Вы отключаете силовое\nполе."]
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html><html><head><title>fcbtech</title><meta charset="utf-8" /></head><body><svg width="1375pt" height="140pt"
+ viewBox="0.00 0.00 1375.00 140.10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 136.1)">
+<title>fcbtech</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-136.1 1371,-136.1 1371,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-102.05" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node2" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-102.05" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node3" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="295" cy="-102.05" rx="151.32" ry="30.05"/>
+<text text-anchor="middle" x="295" y="-106" font-family="Times,serif" font-size="14.00">Вы видите взволнованного</text>
+<text text-anchor="middle" x="295" y="-88.75" font-family="Times,serif" font-size="14.00">охранника Ши.</text>
+</g>
+<!-- description_p_proc -->
+<g id="node4" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="592" cy="-102.05" rx="127.46" ry="30.05"/>
+<text text-anchor="middle" x="592" y="-106" font-family="Times,serif" font-size="14.00">Он хмурится и нервно</text>
+<text text-anchor="middle" x="592" y="-88.75" font-family="Times,serif" font-size="14.00">разглядывает вас.</text>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node5" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="764" cy="-102.05" rx="27" ry="18"/>
+</g>
+<!-- use_obj_on_p_proc -->
+<g id="node6" class="node">
+<title>use_obj_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="836" cy="-102.05" rx="27" ry="18"/>
+</g>
+<!-- damage_p_proc -->
+<g id="node7" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="908" cy="-102.05" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node8" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="980" cy="-102.05" rx="27" ry="18"/>
+</g>
+<!-- map_update_p_proc -->
+<g id="node9" class="node">
+<title>map_update_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1052" cy="-102.05" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node10" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1124" cy="-102.05" rx="27" ry="18"/>
+</g>
+<!-- Node001 -->
+<g id="node11" class="node">
+<title>Node001</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1124" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc&#45;&gt;Node001 -->
+<g id="edge1" class="edge">
+<title>talk_p_proc&#45;&gt;Node001</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M1124,-83.65C1124,-73.1 1124,-59.38 1124,-47.3"/>
+<polygon fill="#555555" stroke="#555555" points="1127.5,-47.38 1124,-37.38 1120.5,-47.38 1127.5,-47.38"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node12" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1196" cy="-102.05" rx="27" ry="18"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node13" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1268" cy="-102.05" rx="27" ry="18"/>
+</g>
+<!-- pickup_p_proc -->
+<g id="node14" class="node">
+<title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1340" cy="-102.05" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","use_p_proc":"[]","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(1524, 100));\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(1524, 101));\n","use_skill_on_p_proc":"[]","use_obj_on_p_proc":"[]","damage_p_proc":"if (party_member_obj(obj_pid(source_obj)) != 0) then begin\n  set_local_var(6, 1);\n  set_global_var(361, global_var(361) bwor 1);\nend\n","map_enter_p_proc":"[]","map_update_p_proc":"[]","talk_p_proc":"call Node001;\n","Node001":"float_msg(self_obj, message_str(1524, random(200, 205)), 8);\n","timed_event_p_proc":"[]","critter_p_proc":"if ((local_var(5) == 2) or ((global_var(361) bwand 1) != 0) and obj_can_see_obj(self_obj, dude_obj)) then begin\n  set_local_var(5, 1);\n  attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\nend\n","pickup_p_proc":"if (source_obj == dude_obj) then begin\n  set_local_var(5, 2);\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

@@ -1,0 +1,9 @@
+digraph forccomp {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Надпись на экране:\nуправление силовым полем."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Вы возитесь с\nкомпьютером. Через\nмгновение он начинает\nискрить, затем затихает."]
+}

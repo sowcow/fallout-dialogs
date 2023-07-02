@@ -1,0 +1,12 @@
+digraph shadyrug {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "look_at_p_proc" [style=dotted color="#555555"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "chairend" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "chairend" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите изодранный\nковрик."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Вам интересно, из какого\nматериала мог быть сделан\nэтот коврик."]
+}

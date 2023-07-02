@@ -1,0 +1,12 @@
+digraph miGstPrp {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Кажется, эти трупы\nненастоящие. Это всего\nлишь муляжи, покрытые\nвнутренностями браминов.\n---\nЧто-то здесь не так."]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+  "map_exit_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_exit_p_proc" [label=""]
+}

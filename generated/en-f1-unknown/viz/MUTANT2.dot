@@ -1,0 +1,15 @@
+digraph MUTANT2 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "timeforwhat" [style=dotted color="#555555"]
+  "start" -> "do_dialogue" [style=dotted color="#555555"]
+  "start" -> "do_dialogue" [style=dotted color="#555555"]
+  "start" [label="It's some kind of huge\nsuper mutant creature!\nAnd it has a very large\ngun!"]
+  "do_dialogue" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_dialogue" [label="Take him to Harry. He'll\nknow what to do with him.\n---\nWe should take her to\nHarry. He has plans for\nall the women."]
+  "timeforwhat" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timeforwhat" [label=""]
+  "genericend" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "genericend" [label=""]
+  "genericcbt" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "genericcbt" [label=""]
+}

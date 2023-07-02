@@ -1,0 +1,6 @@
+digraph sirngmap {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Оказывается, к северу от\nНКР есть несколько\nстоянок Рейнджеров. Вы\nотмечаете их расположение\nв своем Пип-Бое.\n---\nМестоположение стоянок\nРейнджеров уже были\nзанесены в ваш Пип-Бой."]
+}

@@ -1,0 +1,4 @@
+digraph MEETING {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="You know this to be the\nmeeting room for the\nVault.\nWhere the emergency\nsupply cabinet would be\nis\nburied under tons of\nrock."]
+}

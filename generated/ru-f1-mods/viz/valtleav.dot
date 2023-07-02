@@ -1,0 +1,6 @@
+digraph valtleav {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="На западе вы видите\nзвезды в чистом небе.\nВпервые в жизни вы\nсмотрите на внешний мир.\n---\nНа западе вы видите\nестественный свет.\nВпервые в жизни вы\nсмотрите на внешний мир."]
+}

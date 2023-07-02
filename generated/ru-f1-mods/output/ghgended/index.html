@@ -1,0 +1,135 @@
+<!DOCTYPE html><html><head><title>ghgended</title><meta charset="utf-8" /></head><body><svg width="316pt" height="408pt"
+ viewBox="0.00 0.00 315.95 408.45" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 404.45)">
+<title>ghgended</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-404.45 311.95,-404.45 311.95,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="153.97" cy="-382.45" rx="27" ry="18"/>
+</g>
+<!-- do_stuff -->
+<g id="node2" class="node">
+<title>do_stuff</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="153.97" cy="-164.23" rx="153.97" ry="164.23"/>
+<text text-anchor="middle" x="153.97" y="-263.05" font-family="Times,serif" font-size="14.00">На земле лежит</text>
+<text text-anchor="middle" x="153.97" y="-245.8" font-family="Times,serif" font-size="14.00">бездыханное тело.</text>
+<text text-anchor="middle" x="153.97" y="-228.55" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="153.97" y="-211.3" font-family="Times,serif" font-size="14.00">Здесь покоится кто&#45;то,</text>
+<text text-anchor="middle" x="153.97" y="-194.05" font-family="Times,serif" font-size="14.00">кому не повезло.</text>
+<text text-anchor="middle" x="153.97" y="-176.8" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="153.97" y="-159.55" font-family="Times,serif" font-size="14.00">На полу лежат останки</text>
+<text text-anchor="middle" x="153.97" y="-142.3" font-family="Times,serif" font-size="14.00">мутировавшего человека.</text>
+<text text-anchor="middle" x="153.97" y="-125.05" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="153.97" y="-107.8" font-family="Times,serif" font-size="14.00">Пахнет мертвечиной.</text>
+<text text-anchor="middle" x="153.97" y="-90.55" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="153.97" y="-73.3" font-family="Times,serif" font-size="14.00">Этого человека подвел</text>
+<text text-anchor="middle" x="153.97" y="-56.05" font-family="Times,serif" font-size="14.00">инстинкт саморазрушения.</text>
+</g>
+<!-- start&#45;&gt;do_stuff -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;do_stuff</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M153.97,-364.12C153.97,-357.35 153.97,-348.9 153.97,-339.34"/>
+<polygon fill="#555555" stroke="#555555" points="157.47,-339.55 153.97,-329.55 150.47,-339.55 157.47,-339.55"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"variable LVar0 := 0;\nif ((script_action == 21) or (script_action == 3)) then begin\n  script_overrides;\n  call do_stuff;\nend\n","do_stuff":"rndx := random(1, 5);\nif (rndx == 1) then begin\n  display_msg(message_str(71, 100));\nend\nif (rndx == 2) then begin\n  display_msg(message_str(71, 101));\nend\nif (rndx == 3) then begin\n  display_msg(message_str(71, 102));\nend\nif (rndx == 4) then begin\n  display_msg(message_str(71, 103));\nend\nif (rndx == 5) then begin\n  display_msg(message_str(71, 104));\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

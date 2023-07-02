@@ -1,0 +1,4 @@
+digraph smell {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Вы чувствуете, что\nвпереди что-то воняет."]
+}

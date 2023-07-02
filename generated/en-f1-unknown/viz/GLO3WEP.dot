@@ -1,0 +1,4 @@
+digraph GLO3WEP {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="This looks to be the door\nleading to a weapons\nlocker.\n---\nYou pick the lock on the\ndoor.\n---\nYou failed to pick the\nlock on the door.\n---\nThis item is useless on\nthe door.\n---\nThe door is locked.\n---\nYou pick the lock on the\ndoor.\n---\nYou failed to pick the\nlock on the door.\n---\nThis skill is useless on\nthe door."]
+}

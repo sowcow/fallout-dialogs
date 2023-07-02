@@ -1,0 +1,4 @@
+digraph GLOBLELV {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="You see an elevator door\nwith blue markings on it.\n---\nYou are shocked by the\nsecurity system, but\nsustain no damage.\nPerhaps you should try\nusing something to bypass\nthe security system.\n---\nYou are shocked by the\nsecurity system, and\nsustain a point of\ndamage.\nPerhaps you should try\nusing something to bypass\nthe security system.\n---\nYou are shocked by the\nsecurity system, and\nsustain\n---\npoints of damage.\nPerhaps you should try\nusing something\nto bypass the security\nsystem.\n---\nYou disarm the security\nsystem on the door.\n---\nThat item has no effect\non the door."]
+}

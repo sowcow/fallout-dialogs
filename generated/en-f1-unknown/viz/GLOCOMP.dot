@@ -1,0 +1,4 @@
+digraph GLOCOMP {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="This terminal seems to\nhave been destroyed by\nthe blast.\n---\nThis computer looks like\nit could have stored\nmegabytes of data.\n---\nYou wonder what data\ncould have been on this\ncomputer.\n---\nIt looks like this\ncomputer was once\nconnected to a mainframe."]
+}

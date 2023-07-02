@@ -1,0 +1,18 @@
+digraph COVER {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "do_stuff" [style=dotted color="#555555"]
+  "start" [label=""]
+  "do_stuff" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_stuff" -> "cover00" [style=dotted color="#555555"]
+  "do_stuff" -> "cover01" [style=dotted color="#555555"]
+  "do_stuff" [label=""]
+  "coverend" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "coverend" [label=""]
+  "cover00" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "cover00" [label="You close the manhole\ncover."]
+  "cover01" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "cover01" -> "cover01a" [style=dotted color="#555555"]
+  "cover01" [label=""]
+  "cover01a" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "cover01a" [label="You open the manhole\ncover and peer down\ninto the darkness. You\nsee a ladder that\n leads into the sewers.\n---\nYou strain your muscles,\nbut the heavy iron\ndisc is too much for\nyour weak physique. You\ncan feel something pop\nin your back.\n---\nThe manhole cover is\nheavy and awkward to\nlift."]
+}

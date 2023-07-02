@@ -1,0 +1,10 @@
+digraph MVRCRDOR {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "use_stuff" [style=dotted color="#555555"]
+  "start" -> "pick_lock" [style=dotted color="#555555"]
+  "start" [label="You see a steel door. A\nsign on it reads:\n\"Reactor Core Control\nRoom.\nAuthorized Personnel\nOnly.\""]
+  "use_stuff" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_stuff" [label="The door is locked\nelectronically."]
+  "pick_lock" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pick_lock" [label="The door is not locked.\n---\nYou manage to bypass the\nelectronic lock.\n---\nYour attempt to\ncircumvent the electronic\nlock fails."]
+}

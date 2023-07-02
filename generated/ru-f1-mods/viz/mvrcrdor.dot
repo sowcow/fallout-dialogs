@@ -1,0 +1,10 @@
+digraph mvrcrdor {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "use_stuff" [style=dotted color="#555555"]
+  "start" -> "pick_lock" [style=dotted color="#555555"]
+  "start" [label="Вы видите стальную дверь.\nНадпись на ней гласит:\n\"Диспетчерская ядерного\nреактора. Только для\nперсонала.\""]
+  "use_stuff" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_stuff" [label="Дверь закрыта электронным\nзамком."]
+  "pick_lock" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pick_lock" [label="Дверь не заперта.\n---\nУ вас получается обойти\nэлектронный замок.\n---\nВаша попытка обойти\nэлектронный замок не\nудалась."]
+}

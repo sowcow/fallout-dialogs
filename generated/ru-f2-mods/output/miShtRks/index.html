@@ -1,0 +1,160 @@
+<!DOCTYPE html><html><head><title>miShtRks</title><meta charset="utf-8" /></head><body><svg width="1341pt" height="141pt"
+ viewBox="0.00 0.00 1341.00 141.29" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 137.29)">
+<title>miShtRks</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-137.29 1337,-137.29 1337,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-66.64" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node2" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-66.64" rx="27" ry="18"/>
+</g>
+<!-- description_p_proc -->
+<g id="node3" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="288" cy="-66.64" rx="144.43" ry="30.05"/>
+<text text-anchor="middle" x="288" y="-70.59" font-family="Times,serif" font-size="14.00">Один взрыв мог бы легко</text>
+<text text-anchor="middle" x="288" y="-53.34" font-family="Times,serif" font-size="14.00">расчистить этот проход.</text>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node4" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="477" cy="-66.64" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node5" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="549" cy="-66.64" rx="27" ry="18"/>
+</g>
+<!-- damage_p_proc -->
+<g id="node6" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="738" cy="-66.64" rx="144.43" ry="66.64"/>
+<text text-anchor="middle" x="738" y="-96.47" font-family="Times,serif" font-size="14.00">Вы взрывом расчистили</text>
+<text text-anchor="middle" x="738" y="-79.22" font-family="Times,serif" font-size="14.00">проход.</text>
+<text text-anchor="middle" x="738" y="-61.97" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="738" y="-44.72" font-family="Times,serif" font-size="14.00">Один взрыв мог бы легко</text>
+<text text-anchor="middle" x="738" y="-27.47" font-family="Times,serif" font-size="14.00">расчистить этот проход.</text>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node7" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1045" cy="-66.64" rx="144.43" ry="30.05"/>
+<text text-anchor="middle" x="1045" y="-70.59" font-family="Times,serif" font-size="14.00">Один взрыв мог бы легко</text>
+<text text-anchor="middle" x="1045" y="-53.34" font-family="Times,serif" font-size="14.00">расчистить этот проход.</text>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node8" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1234" cy="-66.64" rx="27" ry="18"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node9" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1306" cy="-66.64" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","look_at_p_proc":"[]","description_p_proc":"script_overrides;\ndisplay_msg(message_str(208, 100));\n","use_skill_on_p_proc":"[]","use_p_proc":"[]","damage_p_proc":"variable LVar0 := 0;\nif (((global_var(297) bwand 1) != 0) == 0) then begin\n  if (source_obj != 0) then begin\n    debug_msg(\"mishtrks\" + \": \" + \" obj_pid(source_obj) == \" + obj_pid(source_obj) + \"\\n\");\n    if (metarule(49, source_obj) == 6) then begin\n      LVar0 := 1;\n    end\n  end\n  if (target_obj != 0) then begin\n    debug_msg(\"mishtrks\" + \": \" + \" obj_pid(target_obj) == \" + obj_pid(target_obj) + \"\\n\");\n    if (metarule(49, target_obj) == 6) then begin\n      LVar0 := 1;\n    end\n  end\n  if (LVar0) then begin\n    set_global_var(297, global_var(297) bwor 1);\n    debug_msg(\"mishtrks\" + \": \" + \"setting set_shitter_blown\" + \"\\n\");\n    if ((global_var(297) bwand 16777216) != 0) then begin\n      debug_msg(\"mishtrks\" + \": \" + \"doing leaving_shitter\" + \"\\n\");\n      set_global_var(297, global_var(297) bwor 33554432);\n      gfade_out(5);\n      gfade_out(1);\n      if (has_trait(1, self_obj, 666) == 1) then begin\n        set_obj_visibility(self_obj, 1);\n      end\n      if (local_var(0) == 0) then begin\n        set_local_var(0, 1);\n        display_msg(message_str(208, 200));\n        give_exp_points(500);\n        display_msg(message_str(14, 100) + 500 + message_str(14, 101));\n      end\n      gfade_in(1);\n    end\n    else begin\n      set_global_var(491, 1);\n      debug_msg(\"mishtrks\" + \": \" + \"variable being set!\" + \"\\n\");\n      debug_msg(\"mishtrks\" + \": \" + \"doing death_explostion\" + \"\\n\");\n      add_timer_event(self_obj, 0, 0);\n      add_timer_event(self_obj, 6, 1);\n      add_timer_event(self_obj, 12, 2);\n      add_timer_event(self_obj, 18, 3);\n      add_timer_event(self_obj, 24, 4);\n      add_timer_event(self_obj, 30, 5);\n      add_timer_event(self_obj, 36, 6);\n      add_timer_event(self_obj, 42, 7);\n    end\n  end\nend\n","map_enter_p_proc":"if (metarule(22, 0) == 0) then begin\n  if ((global_var(297) bwand 1) != 0) then begin\n    if (local_var(0) == 0) then begin\n      set_local_var(0, 1);\n      give_exp_points(500);\n      display_msg(message_str(14, 100) + 500 + message_str(14, 101));\n    end\n    destroy_object(self_obj);\n  end\nend\n","timed_event_p_proc":"if (fixed_param == 0) then begin\nend\nelse begin\n  if (fixed_param == 1) then begin\n    if (combat_is_initialized == 0) then begin\n      terminate_combat;\n    end\n    explosion(20698, elevation(dude_obj), 10000);\n  end\n  else begin\n    if (fixed_param == 2) then begin\n      if (combat_is_initialized == 0) then begin\n        terminate_combat;\n      end\n      explosion(20102, elevation(dude_obj), 10000);\n    end\n    else begin\n      if (fixed_param == 3) then begin\n        if (combat_is_initialized == 0) then begin\n          terminate_combat;\n        end\n        explosion(21495, elevation(dude_obj), 10000);\n      end\n      else begin\n        if (fixed_param == 4) then begin\n          if (combat_is_initialized == 0) then begin\n            terminate_combat;\n          end\n          explosion(21298, elevation(dude_obj), 10000);\n        end\n        else begin\n          if (fixed_param == 5) then begin\n            if (combat_is_initialized == 0) then begin\n              terminate_combat;\n            end\n            explosion(20303, elevation(dude_obj), 10000);\n          end\n          else begin\n            if (fixed_param == 6) then begin\n              if (combat_is_initialized == 0) then begin\n                terminate_combat;\n              end\n              explosion(21102, elevation(dude_obj), 10000);\n            end\n            else begin\n              if (fixed_param == 7) then begin\n                if (combat_is_initialized == 0) then begin\n                  terminate_combat;\n                end\n                explosion(tile_num(dude_obj), elevation(dude_obj), 10000);\n              end\n            end\n          end\n        end\n      end\n    end\n  end\nend\n","destroy_p_proc":"[]"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

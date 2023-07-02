@@ -1,0 +1,14 @@
+digraph WIHOWITZ {
+  "checkPartyMembersNearDoor" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "checkPartyMembersNearDoor" [label=""]
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="You fire the howitzer.\n---\nYou fire the howitzer at\nthe door, blowing it\nopen.\n---\nThe howitzer has nothing\nto fire."]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="The howizter is already\nloaded.\n---\nYou load the shell into\nthe howizter."]
+  "look_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_p_proc" [label="You see an SIAD-BG-type\nhowitzer."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Although it looks a bit\ndilapidated, you think it\nmight still fire. If only\nyou could find a shell.\n---\nThe firing mechanism is\nfused. You're now looking\nat a 2-ton paperweight."]
+}

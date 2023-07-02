@@ -1,0 +1,156 @@
+<!DOCTYPE html><html><head><title>fieldgen</title><meta charset="utf-8" /></head><body><svg width="672pt" height="236pt"
+ viewBox="0.00 0.00 671.79 236.21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 232.21)">
+<title>fieldgen</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-232.21 667.79,-232.21 667.79,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="331.4" cy="-210.21" rx="27" ry="18"/>
+</g>
+<!-- use_obj_on_p_proc -->
+<g id="node2" class="node">
+<title>use_obj_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="161.4" cy="-126.16" rx="161.4" ry="30.05"/>
+<text text-anchor="middle" x="161.4" y="-130.11" font-family="Times,serif" font-size="14.00">Попытка замкнуть контакты</text>
+<text text-anchor="middle" x="161.4" y="-112.86" font-family="Times,serif" font-size="14.00">излучателя не удалась.</text>
+</g>
+<!-- start&#45;&gt;use_obj_on_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;use_obj_on_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M309.87,-198.82C289.32,-188.9 257.27,-173.43 228.2,-159.4"/>
+<polygon fill="#555555" stroke="#555555" points="230,-155.9 219.48,-154.71 226.96,-162.21 230,-155.9"/>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node3" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="502.4" cy="-126.16" rx="161.4" ry="30.05"/>
+<text text-anchor="middle" x="502.4" y="-130.11" font-family="Times,serif" font-size="14.00">Попытка замкнуть контакты</text>
+<text text-anchor="middle" x="502.4" y="-112.86" font-family="Times,serif" font-size="14.00">излучателя не удалась.</text>
+</g>
+<!-- start&#45;&gt;use_skill_on_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;use_skill_on_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M353.05,-198.82C373.72,-188.9 405.96,-173.43 435.2,-159.4"/>
+<polygon fill="#555555" stroke="#555555" points="436.48,-162.19 443.98,-154.71 433.45,-155.88 436.48,-162.19"/>
+</g>
+<!-- turn_field_off -->
+<g id="node4" class="node">
+<title>turn_field_off</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="331.4" cy="-30.05" rx="135.94" ry="30.05"/>
+<text text-anchor="middle" x="331.4" y="-34" font-family="Times,serif" font-size="14.00">Вы отключаете силовое</text>
+<text text-anchor="middle" x="331.4" y="-16.75" font-family="Times,serif" font-size="14.00">поле.</text>
+</g>
+<!-- use_obj_on_p_proc&#45;&gt;turn_field_off -->
+<g id="edge3" class="edge">
+<title>use_obj_on_p_proc&#45;&gt;turn_field_off</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M211.94,-97.18C230.95,-86.65 252.73,-74.6 272.44,-63.69"/>
+<polygon fill="#555555" stroke="#555555" points="273.87,-66.34 280.92,-58.44 270.48,-60.22 273.87,-66.34"/>
+</g>
+<!-- use_skill_on_p_proc&#45;&gt;turn_field_off -->
+<g id="edge4" class="edge">
+<title>use_skill_on_p_proc&#45;&gt;turn_field_off</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M451.55,-97.18C432.43,-86.65 410.53,-74.6 390.7,-63.69"/>
+<polygon fill="#555555" stroke="#555555" points="392.61,-60.19 382.16,-58.44 389.23,-66.33 392.61,-60.19"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 7) then begin\n  call use_obj_on_p_proc;\nend\nelse begin\n  if (script_action == 8) then begin\n    call use_skill_on_p_proc;\n  end\nend\n","use_obj_on_p_proc":"if (obj_pid(obj_being_used_with) == 75) then begin\n  script_overrides;\n  if (is_success(roll_vs_skill(dude_obj, 13, 0))) then begin\n    call turn_field_off;\n  end\n  else begin\n    display_msg(message_str(741, 100));\n  end\nend\n","use_skill_on_p_proc":"if (action_being_used == 13) then begin\n  script_overrides;\n  if (is_success(roll_vs_skill(dude_obj, 13, -20))) then begin\n    call turn_field_off;\n  end\n  else begin\n    display_msg(message_str(741, 100));\n  end\nend\n","turn_field_off":"field_change := \"off\";\ndisplay_msg(message_str(741, 101));\nif (cur_map_index == 31) then begin\n  if (elevation(self_obj) == 0) then begin\n    if (tile_num(self_obj) == 15581) then begin\n      use_obj(map_var(4));\n    end\n    else begin\n      if (tile_num(self_obj) == 19124) then begin\n        use_obj(map_var(5));\n      end\n      else begin\n        if (tile_num(self_obj) == 25098) then begin\n          use_obj(map_var(6));\n        end\n      end\n    end\n  end\nend\nelse begin\n  if (cur_map_index == 32) then begin\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

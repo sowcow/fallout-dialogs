@@ -1,0 +1,138 @@
+<!DOCTYPE html><html><head><title>mutejar</title><meta charset="utf-8" /></head><body><svg width="780pt" height="164pt"
+ viewBox="0.00 0.00 780.44 164.21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 160.21)">
+<title>mutejar</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-160.21 776.44,-160.21 776.44,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="150.79" cy="-126.16" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node2" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="150.79" cy="-30.05" rx="150.79" ry="30.05"/>
+<text text-anchor="middle" x="150.79" y="-34" font-family="Times,serif" font-size="14.00">Вы берете фрукт странной</text>
+<text text-anchor="middle" x="150.79" y="-16.75" font-family="Times,serif" font-size="14.00">формы.</text>
+</g>
+<!-- start&#45;&gt;use_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;use_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M150.79,-107.9C150.79,-97.64 150.79,-84.17 150.79,-71.37"/>
+<polygon fill="#555555" stroke="#555555" points="154.29,-71.4 150.79,-61.4 147.29,-71.4 154.29,-71.4"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node3" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="335.79" cy="-126.16" rx="139.65" ry="30.05"/>
+<text text-anchor="middle" x="335.79" y="-130.11" font-family="Times,serif" font-size="14.00">Вы замечаете в кружке</text>
+<text text-anchor="middle" x="335.79" y="-112.86" font-family="Times,serif" font-size="14.00">фрукт странной формы .</text>
+</g>
+<!-- description_p_proc -->
+<g id="node4" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="632.79" cy="-126.16" rx="139.65" ry="30.05"/>
+<text text-anchor="middle" x="632.79" y="-130.11" font-family="Times,serif" font-size="14.00">Вы замечаете в кружке</text>
+<text text-anchor="middle" x="632.79" y="-112.86" font-family="Times,serif" font-size="14.00">фрукт странной формы .</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 6) then begin\n  call use_p_proc;\nend\nelse begin\n  if ((script_action == 3) or (script_action == 21)) then begin\n  end\nend\n","use_p_proc":"add_obj_to_inven(dude_obj, create_object_sid(21, 0, 0, -1));\ndisplay_msg(message_str(123, 101));\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(123, 100));\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(123, 100));\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

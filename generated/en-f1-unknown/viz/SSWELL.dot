@@ -1,0 +1,13 @@
+digraph SSWELL {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "look_at_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_obj_on_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="You see the water supply\nto Shady Sands. This is\ntoo little water\n to supply your vault."]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="You have no reason to\nclimb down the well, but\nperhaps the\nrope will be useful\nclimbing down holes.\n---\nYou make a wish as you\nhear the bottle cap\nsplash into the water."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="You learn nothing more\nfrom the well."]
+}

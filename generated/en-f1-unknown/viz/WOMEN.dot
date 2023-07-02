@@ -1,0 +1,18 @@
+digraph WOMEN {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "look_at_p_proc" [style=dotted color="#555555"]
+  "start" -> "talk_p_proc" [style=dotted color="#555555"]
+  "start" -> "critter_p_proc" [style=dotted color="#555555"]
+  "start" -> "destroy_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "combat" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "combat" [label=""]
+  "critter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "critter_p_proc" [label="You see a bruised and\nbattered woman.\n---\n[whispers]Please help me!\n---\nNo please don't!\n---\n[sobs uncontrollably]"]
+  "talk_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "talk_p_proc" [label="Thank you for saving me."]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="You see a bruised and\nbattered woman."]
+}
