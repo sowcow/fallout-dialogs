@@ -1,0 +1,10 @@
+digraph MORPCOMP {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label="Before you is a Mach IV\nComputer."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="The computer screen is\ndisplaying small green\nbombs falling\nendlessly towards the\nground.\n---\nYou access some\nelectronic notes. The\nmost interesting is\na request from the\nLieutenant for \"...more\nhuman subjects to dip.\nSend them immediately to\nthe Military Base.\""]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="You access some\nelectronic notes. The\nmost interesting is\na request from the\nLieutenant for \"...more\nhuman subjects to dip.\nSend them immediately to\nthe Military Base.\"\n---\nYou cannot hack the\nscreen password."]
+}

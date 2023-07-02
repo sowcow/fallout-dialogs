@@ -1,0 +1,4 @@
+digraph BONEBODY {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Whatever attacked this\nperson cleaned them down\nto the bones.\n---\nThe wind has bleached\nthese bones clean.\n---\nThese corpses appear to\nhave been here for quite\nsome time."]
+}

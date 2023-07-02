@@ -1,0 +1,4 @@
+digraph GLOCABN {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="You see a cabinet.\n---\nThere seems to be an\nelectronic lock on this\ncabinet.\n---\nYou easily unlock the\ncabinet.\n---\nThis lock seems more\ntroublesome than you\nfirst believed.\n---\nYou easily bypass the\nlock on the cabinet.\n---\nThis lock seems more\ntroublesome than you\nfirst believed.\n---\nThat skill does not\neffect the cabinet."]
+}

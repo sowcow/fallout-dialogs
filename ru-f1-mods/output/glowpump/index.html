@@ -1,0 +1,120 @@
+<!DOCTYPE html><html><head><title>glowpump</title><meta charset="utf-8" /></head><body><svg width="317pt" height="239pt"
+ viewBox="0.00 0.00 317.01 238.87" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 234.87)">
+<title>glowpump</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-234.87 313.01,-234.87 313.01,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="154.5" cy="-115.44" rx="154.5" ry="115.44"/>
+<text text-anchor="middle" x="154.5" y="-179.76" font-family="Times,serif" font-size="14.00">Вы видите водяной насос.</text>
+<text text-anchor="middle" x="154.5" y="-162.51" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="154.5" y="-145.26" font-family="Times,serif" font-size="14.00">Этот водяной насос</text>
+<text text-anchor="middle" x="154.5" y="-128.01" font-family="Times,serif" font-size="14.00">устроен совершенно не</text>
+<text text-anchor="middle" x="154.5" y="-110.76" font-family="Times,serif" font-size="14.00">так, как в вашем убежище.</text>
+<text text-anchor="middle" x="154.5" y="-93.51" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="154.5" y="-76.26" font-family="Times,serif" font-size="14.00">Вы понимаете, что детали</text>
+<text text-anchor="middle" x="154.5" y="-59.01" font-family="Times,serif" font-size="14.00">этого насоса не подходят</text>
+<text text-anchor="middle" x="154.5" y="-41.76" font-family="Times,serif" font-size="14.00">для вашего убежища.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 21) then begin\n  script_overrides;\n  display_msg(message_str(302, 100));\nend\nelse begin\n  if (script_action == 3) then begin\n    script_overrides;\n    display_msg(message_str(302, 101));\n  end\n  else begin\n    if (script_action == 8) then begin\n      if (action_being_used == 13) then begin\n        script_overrides;\n        display_msg(message_str(302, 102));\n      end\n    end\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

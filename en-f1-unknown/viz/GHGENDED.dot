@@ -1,0 +1,7 @@
+digraph GHGENDED {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "do_stuff" [style=dotted color="#555555"]
+  "start" [label=""]
+  "do_stuff" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_stuff" [label="You see a lifeless corpse\nlaying on the ground.\n---\nAn unfortunate soul lays\nhere.\n---\nThe remains of a mutated\nhuman rest upon the\nfloor.\n---\nThe feeding grounds for\ncarrion.\n---\nIt appears this person\nchallenged Thanatos and\nlost."]
+}

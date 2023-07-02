@@ -1,0 +1,162 @@
+<!DOCTYPE html><html><head><title>kildoor1</title><meta charset="utf-8" /></head><body><svg width="1082pt" height="263pt"
+ viewBox="0.00 0.00 1081.84 263.27" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 259.27)">
+<title>kildoor1</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-259.27 1077.84,-259.27 1077.84,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-127.63" rx="27" ry="18"/>
+</g>
+<!-- damage_p_proc -->
+<g id="node2" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-127.63" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node3" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="171" cy="-127.63" rx="27" ry="18"/>
+</g>
+<!-- map_update_p_proc -->
+<g id="node4" class="node">
+<title>map_update_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="243" cy="-127.63" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node5" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="377" cy="-127.63" rx="89.09" ry="18"/>
+<text text-anchor="middle" x="377" y="-122.96" font-family="Times,serif" font-size="14.00">Дверь заперта.</text>
+</g>
+<!-- use_obj_on_p_proc -->
+<g id="node6" class="node">
+<title>use_obj_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="627" cy="-127.63" rx="142.84" ry="127.63"/>
+<text text-anchor="middle" x="627" y="-200.58" font-family="Times,serif" font-size="14.00">Дверь не заперта.</text>
+<text text-anchor="middle" x="627" y="-183.33" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="627" y="-166.08" font-family="Times,serif" font-size="14.00">Вы открыли замок.</text>
+<text text-anchor="middle" x="627" y="-148.83" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="627" y="-131.58" font-family="Times,serif" font-size="14.00">Пытаясь открыть замок,</text>
+<text text-anchor="middle" x="627" y="-114.33" font-family="Times,serif" font-size="14.00">вам удалось провернуть</text>
+<text text-anchor="middle" x="627" y="-97.08" font-family="Times,serif" font-size="14.00">штифты и заклинить его.</text>
+<text text-anchor="middle" x="627" y="-79.83" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="627" y="-62.58" font-family="Times,serif" font-size="14.00">Вы попытались открыть</text>
+<text text-anchor="middle" x="627" y="-45.33" font-family="Times,serif" font-size="14.00">замок, но не смогли.</text>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node7" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="931" cy="-127.63" rx="142.84" ry="127.63"/>
+<text text-anchor="middle" x="931" y="-200.58" font-family="Times,serif" font-size="14.00">Дверь не заперта.</text>
+<text text-anchor="middle" x="931" y="-183.33" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="931" y="-166.08" font-family="Times,serif" font-size="14.00">Вы открыли замок.</text>
+<text text-anchor="middle" x="931" y="-148.83" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="931" y="-131.58" font-family="Times,serif" font-size="14.00">Пытаясь открыть замок,</text>
+<text text-anchor="middle" x="931" y="-114.33" font-family="Times,serif" font-size="14.00">вам удалось провернуть</text>
+<text text-anchor="middle" x="931" y="-97.08" font-family="Times,serif" font-size="14.00">штифты и заклинить его.</text>
+<text text-anchor="middle" x="931" y="-79.83" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="931" y="-62.58" font-family="Times,serif" font-size="14.00">Вы попытались открыть</text>
+<text text-anchor="middle" x="931" y="-45.33" font-family="Times,serif" font-size="14.00">замок, но не смогли.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","damage_p_proc":"destroy_object(self_obj);\n","map_enter_p_proc":"if ((game_time_hour >= 1900) or (game_time_hour < 700)) then begin\n  obj_close(self_obj);\n  obj_lock(self_obj);\nend\nelse begin\n  obj_unlock(self_obj);\nend\nobj_close(self_obj);\nset_local_var(0, 0);\n","map_update_p_proc":"if ((game_time_hour >= 1900) or (game_time_hour < 700) and (local_var(0) == 0)) then begin\n  obj_close(self_obj);\n  obj_lock(self_obj);\nend\nelse begin\n  obj_unlock(self_obj);\nend\n","use_p_proc":"if (obj_is_locked(self_obj)) then begin\n  script_overrides;\n  display_msg(message_str(873, 100));\nend\nelse begin\n  if ((game_time_hour >= 1900) or (game_time_hour < 700)) then begin\n    set_map_var(8, 1);\n  end\nend\n","use_obj_on_p_proc":"if (obj_pid(obj_being_used_with) == 84) then begin\n  script_overrides;\n  set_map_var(8, 1);\n  if (not(obj_is_locked(self_obj))) then begin\n    display_msg(message_str(873, 104));\n  end\n  else begin\n    GVar0 := roll_vs_skill(source_obj, 9, 0);\n    if (is_success(GVar0)) then begin\n      display_msg(message_str(873, 101));\n      obj_unlock(self_obj);\n      set_local_var(0, 1);\n    end\n    else begin\n      if (is_critical(GVar0)) then begin\n        display_msg(message_str(873, 103));\n        jam_lock(self_obj);\n      end\n      else begin\n        display_msg(message_str(873, 102));\n      end\n    end\n  end\nend\n","use_skill_on_p_proc":"if (action_being_used == 9) then begin\n  script_overrides;\n  set_map_var(8, 1);\n  if (not(obj_is_locked(self_obj))) then begin\n    display_msg(message_str(873, 104));\n  end\n  else begin\n    GVar0 := roll_vs_skill(source_obj, 9, -20);\n    if (is_success(GVar0)) then begin\n      display_msg(message_str(873, 101));\n      obj_unlock(self_obj);\n      set_local_var(0, 1);\n    end\n    else begin\n      if (is_critical(GVar0)) then begin\n        display_msg(message_str(873, 103));\n        jam_lock(self_obj);\n      end\n      else begin\n        display_msg(message_str(873, 102));\n      end\n    end\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

@@ -1,0 +1,7 @@
+digraph GLOWONE {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "do_dialogue" [style=dotted color="#555555"]
+  "start" [label="You see a glowing\ncreature."]
+  "do_dialogue" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_dialogue" [label="Mmmm . . .\n---\nAhhh . . .\n---\nThe glowing one mumbles\nsomething and is then\nsilent. He is\n drooling uncontrollably\n---\nThere is no response."]
+}

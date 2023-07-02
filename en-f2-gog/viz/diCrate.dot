@@ -1,0 +1,8 @@
+digraph diCrate {
+  "checkPartyMembersNearDoor" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "checkPartyMembersNearDoor" [label=""]
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="You see crates filled\nwith various chemicals\nthat are of no use to\nyou.\n---\nYou see crates filled\nwith various chemicals\nthat are of no use to\nyou."]
+}

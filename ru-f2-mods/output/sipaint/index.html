@@ -1,0 +1,169 @@
+<!DOCTYPE html><html><head><title>sipaint</title><meta charset="utf-8" /></head><body><svg width="968pt" height="336pt"
+ viewBox="0.00 0.00 968.00 336.45" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 332.45)">
+<title>sipaint</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-332.45 964,-332.45 964,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-164.23" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node2" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-164.23" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node3" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="171" cy="-164.23" rx="27" ry="18"/>
+</g>
+<!-- description_p_proc -->
+<g id="node4" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="372" cy="-164.23" rx="156.09" ry="164.23"/>
+<text text-anchor="middle" x="372" y="-263.05" font-family="Times,serif" font-size="14.00">На обратной стороне</text>
+<text text-anchor="middle" x="372" y="-245.8" font-family="Times,serif" font-size="14.00">картины вы обнаруживаете</text>
+<text text-anchor="middle" x="372" y="-228.55" font-family="Times,serif" font-size="14.00">нарисованную от руки</text>
+<text text-anchor="middle" x="372" y="-211.3" font-family="Times,serif" font-size="14.00">карту, где указано</text>
+<text text-anchor="middle" x="372" y="-194.05" font-family="Times,serif" font-size="14.00">местоположение Убежища</text>
+<text text-anchor="middle" x="372" y="-176.8" font-family="Times,serif" font-size="14.00">13.</text>
+<text text-anchor="middle" x="372" y="-159.55" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="372" y="-142.3" font-family="Times,serif" font-size="14.00">На обратной стороне</text>
+<text text-anchor="middle" x="372" y="-125.05" font-family="Times,serif" font-size="14.00">картины вы обнаруживаете</text>
+<text text-anchor="middle" x="372" y="-107.8" font-family="Times,serif" font-size="14.00">нарисованную от руки</text>
+<text text-anchor="middle" x="372" y="-90.55" font-family="Times,serif" font-size="14.00">карту, где указано</text>
+<text text-anchor="middle" x="372" y="-73.3" font-family="Times,serif" font-size="14.00">местоположение Убежища</text>
+<text text-anchor="middle" x="372" y="-56.05" font-family="Times,serif" font-size="14.00">13.</text>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node5" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="573" cy="-164.23" rx="27" ry="18"/>
+</g>
+<!-- use_obj_on_p_proc -->
+<g id="node6" class="node">
+<title>use_obj_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="645" cy="-164.23" rx="27" ry="18"/>
+</g>
+<!-- damage_p_proc -->
+<g id="node7" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="717" cy="-164.23" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node8" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="789" cy="-164.23" rx="27" ry="18"/>
+</g>
+<!-- map_update_p_proc -->
+<g id="node9" class="node">
+<title>map_update_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="861" cy="-164.23" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node10" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="933" cy="-164.23" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","use_p_proc":"[]","look_at_p_proc":"[]","description_p_proc":"script_overrides;\nif (not(metarule(17, 11) != 0)) then begin\n  if (metarule(17, 11) == 0) then begin\n    debug_msg(\"sipaint\" + \": \" + \"  mark_on_map(\" + 11 + \")\" + \"\\n\");\n    mark_area_known(0, 11, 1);\n  end\n  if (global_var(494) < 1) then begin\n    set_global_var(494, 1);\n  end\n  display_msg(message_str(954, 100));\nend\nelse begin\n  display_msg(message_str(954, 100));\nend\n","use_skill_on_p_proc":"[]","use_obj_on_p_proc":"[]","damage_p_proc":"[]","map_enter_p_proc":"[]","map_update_p_proc":"[]","timed_event_p_proc":"[]"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

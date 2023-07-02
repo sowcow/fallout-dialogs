@@ -1,0 +1,10 @@
+digraph SEMICOMP {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "search" [style=dotted color="#555555"]
+  "start" -> "skills" [style=dotted color="#555555"]
+  "start" [label=""]
+  "search" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "search" [label="You see a dim glowing\ncomputer.\n---\nYou notice nothing\nunusual.\n---\nThis computer is making a\nweird humming noise.\n---\nA monitor connected to\nthis computer is printing\nthe word\n'System failure.' over\nand over.\n---\nThis computer appears to\nhave been attacked by a\nghoul.\n---\nLights are flashing on\nthis computer but it\nseems random to you.\n---\nThis computer gives you a\nharmless shock when you\ntouch it.\n---\nUpon inspection you\nnotice that this computer\nhas been used\n as a home by rats.\n---\nRandom numbers are\nprinting across a screen\nconnected to this system.\n---\nHalf of this computer is\nblack and charred from an\nold fire."]
+  "skills" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "skills" [label="There is a trickle of\npower coming in. Most of\nthe power seems\nto have been routed to\nmaintain the few systems\nwhich are still\n semi-functioning.\n---\nYou notice nothing\nunusual."]
+}

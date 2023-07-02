@@ -1,0 +1,7 @@
+digraph ghrndgrd {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "do_dialogue" [style=dotted color="#555555"]
+  "start" [label="Вы видите гуля-бандита."]
+  "do_dialogue" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_dialogue" [label="Уходи.\n---\nТы мне не нравишься.\n---\nУходи!"]
+}

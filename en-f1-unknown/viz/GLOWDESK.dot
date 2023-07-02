@@ -1,0 +1,4 @@
+digraph GLOWDESK {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="The drawer to the desk is\nstuck.\n---\nYou pry the drawer open.\n---\nThe drawer is still\njammed tight.\n---\nThe desk is unaffected by\nthe skill."]
+}

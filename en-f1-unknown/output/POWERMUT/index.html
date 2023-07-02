@@ -1,0 +1,137 @@
+<!DOCTYPE html><html><head><title>POWERMUT</title><meta charset="utf-8" /></head><body><svg width="504pt" height="164pt"
+ viewBox="0.00 0.00 504.21 164.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 160.5)">
+<title>POWERMUT</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-160.5 500.21,-160.5 500.21,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="260.76" cy="-138.5" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node2" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="132.76" cy="-42.25" rx="132.76" ry="42.25"/>
+<text text-anchor="middle" x="132.76" y="-54.82" font-family="Times,serif" font-size="14.00">You see a mutant with a</text>
+<text text-anchor="middle" x="132.76" y="-37.57" font-family="Times,serif" font-size="14.00">phenominally small</text>
+<text text-anchor="middle" x="132.76" y="-20.32" font-family="Times,serif" font-size="14.00">cranium.</text>
+</g>
+<!-- start&#45;&gt;look_at_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;look_at_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M243.23,-124.59C230.11,-114.93 211.33,-101.1 192.97,-87.59"/>
+<polygon fill="#555555" stroke="#555555" points="195.72,-84.52 185.59,-81.41 191.56,-90.16 195.72,-84.52"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node3" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="389.76" cy="-42.25" rx="106.45" ry="18"/>
+<text text-anchor="middle" x="389.76" y="-37.57" font-family="Times,serif" font-size="14.00">No one go in room.</text>
+</g>
+<!-- start&#45;&gt;talk_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;talk_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M278.43,-124.59C298.83,-109.68 332.8,-84.87 357.86,-66.56"/>
+<polygon fill="#555555" stroke="#555555" points="359.64,-68.86 365.65,-60.14 355.51,-63.21 359.64,-68.86"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (not(initialized)) then begin\n  initialized := 1;\n  critter_add_trait(self_obj, 1, 6, 34);\n  critter_add_trait(self_obj, 1, 5, 48);\nend\nif (script_action == 21) then begin\n  call look_at_p_proc;\nend\nelse begin\n  if (script_action == 11) then begin\n    call talk_p_proc;\n  end\nend\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(838, 101));\n","talk_p_proc":"float_msg(self_obj, message_str(838, 100), 2);\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

@@ -1,0 +1,12 @@
+digraph epa3 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_exit_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_exit_p_proc" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label="Пока лифт со скрежетом\nостанавливается, вы\nслышите вокруг\nпощелкивание и царапанье.\nВпереди потрескивает\nсиловое поле, блокирующее\nвам путь."]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" [label=""]
+}

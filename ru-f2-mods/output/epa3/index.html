@@ -1,0 +1,138 @@
+<!DOCTYPE html><html><head><title>epa3</title><meta charset="utf-8" /></head><body><svg width="614pt" height="190pt"
+ viewBox="0.00 0.00 614.00 190.08" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 186.08)">
+<title>epa3</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-186.08 610,-186.08 610,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-91.04" rx="27" ry="18"/>
+</g>
+<!-- map_exit_p_proc -->
+<g id="node2" class="node">
+<title>map_exit_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-91.04" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node3" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="303" cy="-91.04" rx="158.75" ry="91.04"/>
+<text text-anchor="middle" x="303" y="-138.11" font-family="Times,serif" font-size="14.00">Пока лифт со скрежетом</text>
+<text text-anchor="middle" x="303" y="-120.86" font-family="Times,serif" font-size="14.00">останавливается, вы</text>
+<text text-anchor="middle" x="303" y="-103.61" font-family="Times,serif" font-size="14.00">слышите вокруг</text>
+<text text-anchor="middle" x="303" y="-86.36" font-family="Times,serif" font-size="14.00">пощелкивание и царапанье.</text>
+<text text-anchor="middle" x="303" y="-69.11" font-family="Times,serif" font-size="14.00">Впереди потрескивает</text>
+<text text-anchor="middle" x="303" y="-51.86" font-family="Times,serif" font-size="14.00">силовое поле, блокирующее</text>
+<text text-anchor="middle" x="303" y="-34.61" font-family="Times,serif" font-size="14.00">вам путь.</text>
+</g>
+<!-- map_update_p_proc -->
+<g id="node4" class="node">
+<title>map_update_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="507" cy="-91.04" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node5" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="579" cy="-91.04" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","map_exit_p_proc":"[]","map_enter_p_proc":"script_overrides;\nif (metarule(14, 0)) then begin\n  display_msg(message_str(1396, 100));\nend\noverride_map_start(33102 % 200, 165, 0, 3);\nset_light_level(40);\nset_global_var(27, 0);\n","map_update_p_proc":"set_light_level(40);\n","timed_event_p_proc":"[]"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

@@ -1,0 +1,6 @@
+digraph vatwarn {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="Вы слышите женский голос\nиз громкоговорителя.\n---\nВнимание! Вы вошли в\nзакрытую зону! Не\nвходите! Нарушители будут\nуничтожены! Внимание!"]
+}

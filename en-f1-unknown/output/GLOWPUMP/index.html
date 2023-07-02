@@ -1,0 +1,123 @@
+<!DOCTYPE html><html><head><title>GLOWPUMP</title><meta charset="utf-8" /></head><body><svg width="282pt" height="312pt"
+ viewBox="0.00 0.00 282.00 312.06" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 308.06)">
+<title>GLOWPUMP</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-308.06 278,-308.06 278,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="137" cy="-152.03" rx="137" ry="152.03"/>
+<text text-anchor="middle" x="137" y="-242.23" font-family="Times,serif" font-size="14.00">You see a water pump.</text>
+<text text-anchor="middle" x="137" y="-224.98" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="137" y="-207.73" font-family="Times,serif" font-size="14.00">The design of this pump</text>
+<text text-anchor="middle" x="137" y="-190.48" font-family="Times,serif" font-size="14.00">looks very different from</text>
+<text text-anchor="middle" x="137" y="-173.23" font-family="Times,serif" font-size="14.00">the one</text>
+<text text-anchor="middle" x="137" y="-155.98" font-family="Times,serif" font-size="14.00"> in your Vault.</text>
+<text text-anchor="middle" x="137" y="-138.73" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="137" y="-121.48" font-family="Times,serif" font-size="14.00">You realize that the</text>
+<text text-anchor="middle" x="137" y="-104.23" font-family="Times,serif" font-size="14.00">pump&#39;s parts will be</text>
+<text text-anchor="middle" x="137" y="-86.98" font-family="Times,serif" font-size="14.00">incompatible</text>
+<text text-anchor="middle" x="137" y="-69.73" font-family="Times,serif" font-size="14.00">with those of your</text>
+<text text-anchor="middle" x="137" y="-52.48" font-family="Times,serif" font-size="14.00">Vault.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 21) then begin\n  script_overrides;\n  display_msg(message_str(302, 100));\nend\nelse begin\n  if (script_action == 3) then begin\n    script_overrides;\n    display_msg(message_str(302, 101));\n  end\n  else begin\n    if (script_action == 8) then begin\n      if (action_being_used == 13) then begin\n        script_overrides;\n        display_msg(message_str(302, 102));\n      end\n    end\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

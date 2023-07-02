@@ -1,0 +1,786 @@
+<!DOCTYPE html><html><head><title>ecbridge</title><meta charset="utf-8" /></head><body><svg width="5896pt" height="1692pt"
+ viewBox="0.00 0.00 5895.75 1691.67" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1687.67)">
+<title>ecbridge</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-1687.67 5891.75,-1687.67 5891.75,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="48" cy="-1556.03" rx="27" ry="18"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node2" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="120" cy="-1556.03" rx="27" ry="18"/>
+</g>
+<!-- combat_p_proc -->
+<g id="node3" class="node">
+<title>combat_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="192" cy="-1556.03" rx="27" ry="18"/>
+</g>
+<!-- Do_cow -->
+<g id="node4" class="node">
+<title>Do_cow</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="192" cy="-1312.56" rx="27" ry="18"/>
+</g>
+<!-- combat_p_proc&#45;&gt;Do_cow -->
+<g id="edge1" class="edge">
+<title>combat_p_proc&#45;&gt;Do_cow</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M192,-1537.67C192,-1496.33 192,-1391.81 192,-1341.49"/>
+<polygon fill="#555555" stroke="#555555" points="195.5,-1341.77 192,-1331.77 188.5,-1341.77 195.5,-1341.77"/>
+</g>
+<!-- pickup_p_proc -->
+<g id="node5" class="node">
+<title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="470" cy="-1556.03" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node6" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="940" cy="-1556.03" rx="27" ry="18"/>
+</g>
+<!-- Node001 -->
+<g id="node7" class="node">
+<title>Node001</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="391" cy="-1312.56" rx="153.97" ry="78.84"/>
+<text text-anchor="middle" x="391" y="-1351.01" font-family="Times,serif" font-size="14.00">Стой! Тот, кто хочет</text>
+<text text-anchor="middle" x="391" y="-1333.76" font-family="Times,serif" font-size="14.00">пересечь Мост Смерти,</text>
+<text text-anchor="middle" x="391" y="-1316.51" font-family="Times,serif" font-size="14.00">должен ответить мне на</text>
+<text text-anchor="middle" x="391" y="-1299.26" font-family="Times,serif" font-size="14.00">три вопроса, и если</text>
+<text text-anchor="middle" x="391" y="-1282.01" font-family="Times,serif" font-size="14.00">ответит неправильно, Мост</text>
+<text text-anchor="middle" x="391" y="-1264.76" font-family="Times,serif" font-size="14.00">оправдает свое название.</text>
+</g>
+<!-- talk_p_proc&#45;&gt;Node001 -->
+<g id="edge2" class="edge">
+<title>talk_p_proc&#45;&gt;Node001</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M917.22,-1545.79C857.35,-1521.41 690.71,-1452.98 554,-1391.4 540.29,-1385.23 526,-1378.63 511.83,-1372"/>
+<polygon fill="#555555" stroke="#555555" points="513.59,-1368.49 503.05,-1367.4 510.61,-1374.82 513.59,-1368.49"/>
+</g>
+<!-- killPlayer -->
+<g id="node8" class="node">
+<title>killPlayer</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="747" cy="-1312.56" rx="184.2" ry="42.25"/>
+<text text-anchor="middle" x="747" y="-1325.13" font-family="Times,serif" font-size="14.00">Хе&#45;хе.</text>
+<text text-anchor="middle" x="747" y="-1307.88" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="747" y="-1290.63" font-family="Times,serif" font-size="14.00">ААААААААААААААХХХХХХхххх!</text>
+</g>
+<!-- talk_p_proc&#45;&gt;killPlayer -->
+<g id="edge3" class="edge">
+<title>talk_p_proc&#45;&gt;killPlayer</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M927.63,-1539.56C899.68,-1504.58 830.61,-1418.17 786.44,-1362.9"/>
+<polygon fill="#555555" stroke="#555555" points="788.55,-1360.94 779.57,-1355.31 783.08,-1365.31 788.55,-1360.94"/>
+</g>
+<!-- killSelf -->
+<g id="node9" class="node">
+<title>killSelf</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1132" cy="-1312.56" rx="182.74" ry="18"/>
+<text text-anchor="middle" x="1132" y="-1307.88" font-family="Times,serif" font-size="14.00">ААААААААААААААХХХХХХхххх!</text>
+</g>
+<!-- talk_p_proc&#45;&gt;killSelf -->
+<g id="edge4" class="edge">
+<title>talk_p_proc&#45;&gt;killSelf</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M952.3,-1539.56C984.55,-1499.01 1071.77,-1389.3 1111.63,-1339.18"/>
+<polygon fill="#555555" stroke="#555555" points="1114.79,-1341.82 1118.28,-1331.82 1109.31,-1337.47 1114.79,-1341.82"/>
+</g>
+<!-- selfLeave -->
+<g id="node10" class="node">
+<title>selfLeave</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1447" cy="-1312.56" rx="114.2" ry="30.05"/>
+<text text-anchor="middle" x="1447" y="-1316.51" font-family="Times,serif" font-size="14.00">Я не умею задавать</text>
+<text text-anchor="middle" x="1447" y="-1299.26" font-family="Times,serif" font-size="14.00">хорошие вопросы.</text>
+</g>
+<!-- talk_p_proc&#45;&gt;selfLeave -->
+<g id="edge5" class="edge">
+<title>talk_p_proc&#45;&gt;selfLeave</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M963.54,-1546.53C1024.54,-1524.16 1192.15,-1460.63 1324,-1391.4 1349.27,-1378.13 1376.18,-1361.42 1398.37,-1346.89"/>
+<polygon fill="#555555" stroke="#555555" points="1399.84,-1349.45 1406.26,-1341.02 1395.98,-1343.61 1399.84,-1349.45"/>
+</g>
+<!-- Node999 -->
+<g id="node20" class="node">
+<title>Node999</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="4247" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- Node001&#45;&gt;Node999 -->
+<g id="edge9" class="edge">
+<title>Node001&#45;&gt;Node999</title>
+<path fill="none" stroke="#990026" d="M283.92,-1255.51C265.6,-1247.35 246.5,-1239.7 228,-1233.72 185.45,-1219.96 166.65,-1239.84 129,-1215.72 44.85,-1161.8 0,-1131.47 0,-1031.53 0,-1031.53 0,-1031.53 0,-233.13 0,-135.02 41.87,-99.1 129,-54 176.9,-29.21 3796.95,-20.05 4208.95,-19.09"/>
+<polygon fill="#990026" stroke="#990026" points="4208.68,-22.58 4218.67,-19.06 4208.67,-15.58 4208.68,-22.58"/>
+<text text-anchor="middle" x="53.25" y="-732.67" font-family="Times,serif" font-size="14.00" fill="#990026">Хиляй отсюда.</text>
+</g>
+<!-- Node001&#45;&gt;Node999 -->
+<g id="edge12" class="edge">
+<title>Node001&#45;&gt;Node999</title>
+<path fill="none" stroke="#860099" d="M291.2,-1252.13C222.29,-1202.76 143,-1125.53 143,-1031.53 143,-1031.53 143,-1031.53 143,-233.13 143,136.95 598.23,-147.84 966,-106.5 1291.89,-69.87 1374.35,-67.93 1702,-54 2220.73,-31.95 3931.59,-20.89 4208.88,-19.22"/>
+<polygon fill="#860099" stroke="#860099" points="4208.6,-22.72 4218.58,-19.16 4208.56,-15.72 4208.6,-22.72"/>
+<text text-anchor="middle" x="236.38" y="-732.67" font-family="Times,serif" font-size="14.00" fill="#860099">Может, я зайду попозже.</text>
+</g>
+<!-- Node002 -->
+<g id="node21" class="node">
+<title>Node002</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="650" cy="-1030.53" rx="93.51" ry="115.44"/>
+<text text-anchor="middle" x="650" y="-1094.86" font-family="Times,serif" font-size="14.00">Как твое имя?</text>
+<text text-anchor="middle" x="650" y="-1077.61" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="650" y="-1060.36" font-family="Times,serif" font-size="14.00">?</text>
+<text text-anchor="middle" x="650" y="-1043.11" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="650" y="-1025.86" font-family="Times,serif" font-size="14.00">Моя </text>
+<text text-anchor="middle" x="650" y="-1008.61" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="650" y="-991.36" font-family="Times,serif" font-size="14.00">Как тебя звать?</text>
+<text text-anchor="middle" x="650" y="-974.11" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="650" y="-956.86" font-family="Times,serif" font-size="14.00">из Арройо.</text>
+</g>
+<!-- Node001&#45;&gt;Node002 -->
+<g id="edge8" class="edge">
+<title>Node001&#45;&gt;Node002</title>
+<path fill="none" stroke="#009907" d="M376.37,-1233.7C375.69,-1209.84 379.14,-1184.49 391.75,-1163.97 425.77,-1108.6 491.06,-1075.41 547.48,-1056.1"/>
+<polygon fill="#009907" stroke="#009907" points="548.5,-1059.11 556.9,-1052.65 546.31,-1052.47 548.5,-1059.11"/>
+<text text-anchor="middle" x="468.12" y="-1193.79" font-family="Times,serif" font-size="14.00" fill="#009907">Вэее... Гэее... Дэее...</text>
+<text text-anchor="middle" x="468.12" y="-1176.54" font-family="Times,serif" font-size="14.00" fill="#009907">Еее... Жэее</text>
+</g>
+<!-- Node001&#45;&gt;Node002 -->
+<g id="edge10" class="edge">
+<title>Node001&#45;&gt;Node002</title>
+<path fill="none" stroke="#005399" d="M498.64,-1255.66C515.18,-1243.97 531.03,-1230.6 544,-1215.72 560.56,-1196.7 555.38,-1186.21 567.25,-1163.97 573.14,-1152.94 579.58,-1141.59 586.2,-1130.4"/>
+<polygon fill="#005399" stroke="#005399" points="589.67,-1132.42 591.79,-1122.04 583.66,-1128.83 589.67,-1132.42"/>
+<text text-anchor="middle" x="598.38" y="-1185.17" font-family="Times,serif" font-size="14.00" fill="#005399">Хорошо.</text>
+</g>
+<!-- Node001&#45;&gt;Node002 -->
+<g id="edge11" class="edge">
+<title>Node001&#45;&gt;Node002</title>
+<path fill="none" stroke="#7f9900" d="M499.28,-1256.04C517.29,-1247.91 535.98,-1240.13 554,-1233.72 585.89,-1222.36 605.54,-1241.04 628,-1215.72 642.69,-1199.15 651.08,-1178.2 655.49,-1156.41"/>
+<polygon fill="#7f9900" stroke="#7f9900" points="659.09,-1157.12 657.34,-1146.67 652.19,-1155.93 659.09,-1157.12"/>
+<text text-anchor="middle" x="736.62" y="-1202.42" font-family="Times,serif" font-size="14.00" fill="#7f9900">Задавай свои вопросы,</text>
+<text text-anchor="middle" x="736.62" y="-1185.17" font-family="Times,serif" font-size="14.00" fill="#7f9900">хранитель моста. Я не</text>
+<text text-anchor="middle" x="736.62" y="-1167.92" font-family="Times,serif" font-size="14.00" fill="#7f9900">боюсь.</text>
+</g>
+<!-- destroy_p_proc -->
+<g id="node11" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1719" cy="-1556.03" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node12" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1895" cy="-1556.03" rx="130.64" ry="30.05"/>
+<text text-anchor="middle" x="1895" y="-1559.98" font-family="Times,serif" font-size="14.00">Перед вами Хранитель</text>
+<text text-anchor="middle" x="1895" y="-1542.73" font-family="Times,serif" font-size="14.00">Моста Смерти.</text>
+</g>
+<!-- description_p_proc -->
+<g id="node13" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2196" cy="-1556.03" rx="152.38" ry="127.63"/>
+<text text-anchor="middle" x="2196" y="-1628.98" font-family="Times,serif" font-size="14.00">Вы видите человека с</text>
+<text text-anchor="middle" x="2196" y="-1611.73" font-family="Times,serif" font-size="14.00">безумным взглядом,</text>
+<text text-anchor="middle" x="2196" y="-1594.48" font-family="Times,serif" font-size="14.00">всклокоченной бородой и</text>
+<text text-anchor="middle" x="2196" y="-1577.23" font-family="Times,serif" font-size="14.00">хриплым голосом. Его</text>
+<text text-anchor="middle" x="2196" y="-1559.98" font-family="Times,serif" font-size="14.00">правый глаз выглядит так,</text>
+<text text-anchor="middle" x="2196" y="-1542.73" font-family="Times,serif" font-size="14.00">словно вот&#45;вот выскочит</text>
+<text text-anchor="middle" x="2196" y="-1525.48" font-family="Times,serif" font-size="14.00">из глазницы.</text>
+<text text-anchor="middle" x="2196" y="-1508.23" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="2196" y="-1490.98" font-family="Times,serif" font-size="14.00">Перед вами Хранитель</text>
+<text text-anchor="middle" x="2196" y="-1473.73" font-family="Times,serif" font-size="14.00">Моста Смерти.</text>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node14" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2393" cy="-1556.03" rx="27" ry="18"/>
+</g>
+<!-- damage_p_proc -->
+<g id="node15" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2465" cy="-1556.03" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node16" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2537" cy="-1556.03" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node17" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1647" cy="-1556.03" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc&#45;&gt;selfLeave -->
+<g id="edge7" class="edge">
+<title>timed_event_p_proc&#45;&gt;selfLeave</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M1634.49,-1539.93C1603.48,-1502.49 1522.36,-1404.54 1477.65,-1350.57"/>
+<polygon fill="#555555" stroke="#555555" points="1479.88,-1348.77 1470.81,-1343.3 1474.49,-1353.23 1479.88,-1348.77"/>
+</g>
+<!-- Node011 -->
+<g id="node18" class="node">
+<title>Node011</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1722" cy="-1312.56" rx="142.84" ry="42.25"/>
+<text text-anchor="middle" x="1722" y="-1325.13" font-family="Times,serif" font-size="14.00">Почему&#45;то мне кажется,</text>
+<text text-anchor="middle" x="1722" y="-1307.88" font-family="Times,serif" font-size="14.00">что стоит сохранить игру</text>
+<text text-anchor="middle" x="1722" y="-1290.63" font-family="Times,serif" font-size="14.00">в новой ячейке.</text>
+</g>
+<!-- timed_event_p_proc&#45;&gt;Node011 -->
+<g id="edge6" class="edge">
+<title>timed_event_p_proc&#45;&gt;Node011</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M1651.51,-1538.16C1658.08,-1513.81 1670.82,-1467.46 1683,-1428.4 1689.48,-1407.61 1697.09,-1384.88 1703.86,-1365.16"/>
+<polygon fill="#555555" stroke="#555555" points="1707.46,-1366.45 1707.41,-1355.86 1700.84,-1364.17 1707.46,-1366.45"/>
+</g>
+<!-- map_exit_p_proc -->
+<g id="node19" class="node">
+<title>map_exit_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2609" cy="-1556.03" rx="27" ry="18"/>
+</g>
+<!-- Node002&#45;&gt;Node999 -->
+<g id="edge14" class="edge">
+<title>Node002&#45;&gt;Node999</title>
+<path fill="none" stroke="#992d00" d="M743.91,-1028.54C1424.24,-1021.07 5571,-970.42 5571,-844.85 5571,-844.85 5571,-844.85 5571,-233.13 5571,-63.52 5376.29,-144.56 5211,-106.5 4858.09,-25.24 4416.24,-18.78 4285.26,-18.78"/>
+<polygon fill="#992d00" stroke="#992d00" points="4285.25,-15.28 4275.26,-18.79 4285.26,-22.28 4285.25,-15.28"/>
+<text text-anchor="middle" x="5624.25" y="-688.05" font-family="Times,serif" font-size="14.00" fill="#992d00">Хиляй отсюда.</text>
+</g>
+<!-- Node002&#45;&gt;Node999 -->
+<g id="edge21" class="edge">
+<title>Node002&#45;&gt;Node999</title>
+<path fill="none" stroke="#009926" d="M743.9,-1028.63C1434.5,-1021.73 5701,-973.88 5701,-844.85 5701,-844.85 5701,-844.85 5701,-233.13 5701,-156.81 5653.33,-140.5 5585,-106.5 5465.79,-47.19 4490.89,-24 4285.07,-19.74"/>
+<polygon fill="#009926" stroke="#009926" points="4285.3,-16.23 4275.23,-19.52 4285.16,-23.23 4285.3,-16.23"/>
+<text text-anchor="middle" x="5794.38" y="-688.05" font-family="Times,serif" font-size="14.00" fill="#009926">Может, я зайду попозже.</text>
+</g>
+<!-- Node009 -->
+<g id="node22" class="node">
+<title>Node009</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1596" cy="-234.13" rx="27" ry="18"/>
+</g>
+<!-- Node002&#45;&gt;Node009 -->
+<g id="edge13" class="edge">
+<title>Node002&#45;&gt;Node009</title>
+<path fill="none" stroke="#00995a" d="M650,-914.76C650,-891.61 650,-867.45 650,-844.85 650,-844.85 650,-844.85 650,-574.06 650,-458.14 722.99,-436.64 824,-379.77 953.44,-306.88 1421.73,-253.3 1558.35,-238.95"/>
+<polygon fill="#00995a" stroke="#00995a" points="1558.48,-242.35 1568.07,-237.84 1557.76,-235.39 1558.48,-242.35"/>
+<text text-anchor="middle" x="725.75" y="-741.3" font-family="Times,serif" font-size="14.00" fill="#00995a">Зэее.... Иии... Кэее...</text>
+<text text-anchor="middle" x="725.75" y="-724.05" font-family="Times,serif" font-size="14.00" fill="#00995a">Лэее... Мэее...</text>
+</g>
+<!-- Node002&#45;&gt;Node009 -->
+<g id="edge15" class="edge">
+<title>Node002&#45;&gt;Node009</title>
+<path fill="none" stroke="#000099" d="M557.79,-1010.13C474.87,-986.65 366,-938.07 366,-844.85 366,-844.85 366,-844.85 366,-574.06 366,-482.86 361.29,-437.36 432,-379.77 609.96,-234.83 1377.01,-233 1557.75,-234.63"/>
+<polygon fill="#000099" stroke="#000099" points="1557.52,-238.13 1567.56,-234.73 1557.59,-231.13 1557.52,-238.13"/>
+<text text-anchor="middle" x="388.12" y="-732.67" font-family="Times,serif" font-size="14.00" fill="#000099">Гарри</text>
+</g>
+<!-- Node002&#45;&gt;Node009 -->
+<g id="edge16" class="edge">
+<title>Node002&#45;&gt;Node009</title>
+<path fill="none" stroke="#2c9900" d="M561.71,-991.01C506.58,-960.34 446,-911.49 446,-844.85 446,-844.85 446,-844.85 446,-574.06 446,-479.98 455.04,-436.61 530,-379.77 696.57,-253.46 1386.94,-237.45 1557.68,-235.43"/>
+<polygon fill="#2c9900" stroke="#2c9900" points="1557.65,-238.92 1567.61,-235.31 1557.58,-231.92 1557.65,-238.92"/>
+<text text-anchor="middle" x="477.12" y="-732.67" font-family="Times,serif" font-size="14.00" fill="#2c9900">Хакунин</text>
+</g>
+<!-- Node002&#45;&gt;Node009 -->
+<g id="edge17" class="edge">
+<title>Node002&#45;&gt;Node009</title>
+<path fill="none" stroke="#990059" d="M581.67,-951.28C561.16,-920.26 544,-882.92 544,-844.85 544,-844.85 544,-844.85 544,-574.06 544,-467.36 594.05,-435.55 685,-379.77 835.98,-287.15 1406.27,-246.6 1558.47,-237.29"/>
+<polygon fill="#990059" stroke="#990059" points="1558.33,-240.74 1568.1,-236.65 1557.91,-233.76 1558.33,-240.74"/>
+<text text-anchor="middle" x="578.88" y="-732.67" font-family="Times,serif" font-size="14.00" fill="#990059">Геракакл</text>
+</g>
+<!-- Node002&#45;&gt;Node009 -->
+<g id="edge18" class="edge">
+<title>Node002&#45;&gt;Node009</title>
+<path fill="none" stroke="#008699" d="M736.57,-985.98C785.91,-954.42 838,-906.5 838,-844.85 838,-844.85 838,-844.85 838,-574.06 838,-483.55 831.89,-440.5 899,-379.77 998.16,-290.02 1427.88,-248.64 1558.32,-238"/>
+<polygon fill="#008699" stroke="#008699" points="1558.26,-241.43 1567.94,-237.14 1557.7,-234.46 1558.26,-241.43"/>
+<text text-anchor="middle" x="884.5" y="-732.67" font-family="Times,serif" font-size="14.00" fill="#008699">Ричард Грей</text>
+</g>
+<!-- Node002&#45;&gt;Node009 -->
+<g id="edge19" class="edge">
+<title>Node002&#45;&gt;Node009</title>
+<path fill="none" stroke="#998000" d="M734.87,-982.05C771.05,-959.29 812.16,-929.85 844,-897.1 896.18,-843.41 913.66,-827.1 935,-755.35 937.15,-748.12 936.33,-491.52 937,-484.02 941.19,-437.18 922.61,-413.85 955,-379.77 1039.4,-290.95 1433.43,-249.35 1558.09,-238.26"/>
+<polygon fill="#998000" stroke="#998000" points="1558.3,-241.67 1567.95,-237.32 1557.69,-234.7 1558.3,-241.67"/>
+<text text-anchor="middle" x="989.12" y="-732.67" font-family="Times,serif" font-size="14.00" fill="#998000">Сеймур Гейне</text>
+</g>
+<!-- Node003 -->
+<g id="node23" class="node">
+<title>Node003</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1432" cy="-843.85" rx="111.18" ry="18"/>
+<text text-anchor="middle" x="1432" y="-839.17" font-family="Times,serif" font-size="14.00">В чем твоя задача?</text>
+</g>
+<!-- Node002&#45;&gt;Node003 -->
+<g id="edge20" class="edge">
+<title>Node002&#45;&gt;Node003</title>
+<path fill="none" stroke="#530099" d="M742,-1007.8C899.66,-970.57 1218.17,-895.35 1360.48,-861.74"/>
+<polygon fill="#530099" stroke="#530099" points="1360.91,-865 1369.83,-859.29 1359.3,-858.18 1360.91,-865"/>
+<text text-anchor="middle" x="1327.62" y="-883.8" font-family="Times,serif" font-size="14.00" fill="#530099">Избранный!</text>
+</g>
+<!-- Node009&#45;&gt;Node999 -->
+<g id="edge62" class="edge">
+<title>Node009&#45;&gt;Node999</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M1622.67,-230.98C1879.23,-210.25 3907.1,-46.46 4209.37,-22.04"/>
+<polygon fill="#555555" stroke="#555555" points="4209.48,-25.46 4219.17,-21.17 4208.92,-18.48 4209.48,-25.46"/>
+</g>
+<!-- Node003&#45;&gt;Node999 -->
+<g id="edge24" class="edge">
+<title>Node003&#45;&gt;Node999</title>
+<path fill="none" stroke="#609900" d="M1325.08,-838.62C1278.98,-834.14 1225.16,-825.25 1179,-807.85 1112.22,-782.66 1105.17,-757.72 1045,-719.35 1006.94,-695.07 980.86,-705.31 958.5,-666.1 895.46,-555.54 885.97,-486.69 955,-379.77 1115.03,-131.89 1272.62,-173.3 1560,-106.5 1829.3,-43.9 3902,-22.22 4209.04,-19.34"/>
+<polygon fill="#609900" stroke="#609900" points="4208.64,-22.84 4218.61,-19.24 4208.57,-15.84 4208.64,-22.84"/>
+<text text-anchor="middle" x="1015.25" y="-570.38" font-family="Times,serif" font-size="14.00" fill="#609900">(Хиляй отсюда)</text>
+</g>
+<!-- Node003&#45;&gt;Node999 -->
+<g id="edge30" class="edge">
+<title>Node003&#45;&gt;Node999</title>
+<path fill="none" stroke="#990039" d="M1540.86,-839.88C1711.92,-834.94 2054.09,-823.96 2344,-807.85 2664.8,-790.02 2744.7,-780.64 3065,-755.35 3531.01,-718.54 3648.63,-719.77 4113,-666.1 4668.63,-601.87 4803.62,-556.39 5358.25,-484.02 5393.02,-479.48 5491.66,-492.18 5515,-466.02 5607.41,-362.39 5350.33,-209.58 4672,-54 4531.98,-21.88 4360.05,-18.35 4285.03,-18.51"/>
+<polygon fill="#990039" stroke="#990039" points="4285.24,-15.02 4275.26,-18.57 4285.28,-22.02 4285.24,-15.02"/>
+<text text-anchor="middle" x="5457.38" y="-587.63" font-family="Times,serif" font-size="14.00" fill="#990039">Я зайду попозже, когда вы</text>
+<text text-anchor="middle" x="5457.38" y="-570.38" font-family="Times,serif" font-size="14.00" fill="#990039">будете чувствовать себя</text>
+<text text-anchor="middle" x="5457.38" y="-553.13" font-family="Times,serif" font-size="14.00" fill="#990039">лучше.</text>
+</g>
+<!-- Node003&#45;&gt;Node009 -->
+<g id="edge22" class="edge">
+<title>Node003&#45;&gt;Node009</title>
+<path fill="none" stroke="#990006" d="M1344.89,-832.3C1266.24,-817.65 1154.91,-782.95 1101.5,-701.35 1048.21,-619.93 1141.7,-554.87 1075,-484.02 1044.64,-451.77 1005.34,-500.04 977,-466.02 952.46,-436.56 953.18,-409.8 977,-379.77 1050.58,-287.02 1435.61,-248.14 1558.36,-237.99"/>
+<polygon fill="#990006" stroke="#990006" points="1558.39,-241.41 1568.07,-237.12 1557.82,-234.44 1558.39,-241.41"/>
+<text text-anchor="middle" x="1188.25" y="-688.05" font-family="Times,serif" font-size="14.00" fill="#990006">Мммм... ннн... оу... пии</text>
+</g>
+<!-- Node003&#45;&gt;Node009 -->
+<g id="edge29" class="edge">
+<title>Node003&#45;&gt;Node009</title>
+<path fill="none" stroke="#0d9900" d="M1363.57,-829.32C1350.29,-824.27 1337.32,-817.34 1327,-807.85 1282.98,-767.33 1305.65,-734.87 1274,-684.1 1211.97,-584.58 1203.8,-542.22 1102,-484.02 1062.8,-461.6 1030.97,-500.66 1002,-466.02 977.41,-436.61 978.32,-409.91 1002,-379.77 1072.04,-290.63 1438.76,-249.55 1558.29,-238.38"/>
+<polygon fill="#0d9900" stroke="#0d9900" points="1558.43,-241.79 1568.07,-237.4 1557.79,-234.82 1558.43,-241.79"/>
+<text text-anchor="middle" x="1349.75" y="-688.05" font-family="Times,serif" font-size="14.00" fill="#0d9900">Э... какая задача?</text>
+</g>
+<!-- Node004 -->
+<g id="node24" class="node">
+<title>Node004</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="3966" cy="-575.06" rx="137.53" ry="91.04"/>
+<text text-anchor="middle" x="3966" y="-622.13" font-family="Times,serif" font-size="14.00">Какой NPC из Fallout 1</text>
+<text text-anchor="middle" x="3966" y="-604.88" font-family="Times,serif" font-size="14.00">дожил до сиквела, хотя,</text>
+<text text-anchor="middle" x="3966" y="-587.63" font-family="Times,serif" font-size="14.00">возможно, сильно</text>
+<text text-anchor="middle" x="3966" y="-570.38" font-family="Times,serif" font-size="14.00">состарился?</text>
+<text text-anchor="middle" x="3966" y="-553.13" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="3966" y="-535.88" font-family="Times,serif" font-size="14.00">Какой NPC из Fallout 1</text>
+<text text-anchor="middle" x="3966" y="-518.63" font-family="Times,serif" font-size="14.00">дожил до сиквела?</text>
+</g>
+<!-- Node003&#45;&gt;Node004 -->
+<g id="edge23" class="edge">
+<title>Node003&#45;&gt;Node004</title>
+<path fill="none" stroke="#003399" d="M1541.62,-840.37C1685.25,-836.49 1944.88,-827.32 2166,-807.85 2784.05,-753.41 3516.29,-645.57 3821.38,-598.7"/>
+<polygon fill="#003399" stroke="#003399" points="3821.7,-602.04 3831.05,-597.06 3820.63,-595.12 3821.7,-602.04"/>
+<text text-anchor="middle" x="3011.75" y="-732.67" font-family="Times,serif" font-size="14.00" fill="#003399">ГЭК. Арро&#45;йо</text>
+</g>
+<!-- NodeRand -->
+<g id="node25" class="node">
+<title>NodeRand</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1765" cy="-737.35" rx="27" ry="18"/>
+</g>
+<!-- Node003&#45;&gt;NodeRand -->
+<g id="edge25" class="edge">
+<title>Node003&#45;&gt;NodeRand</title>
+<path fill="none" stroke="#99008c" d="M1471.55,-826.71C1481.48,-821.57 1491.66,-815.25 1500,-807.85 1513.82,-795.56 1507.59,-783.18 1523.25,-773.35 1556.48,-752.47 1668.01,-743.49 1727.26,-740.11"/>
+<polygon fill="#99008c" stroke="#99008c" points="1727.24,-743.56 1737.03,-739.53 1726.86,-736.57 1727.24,-743.56"/>
+<text text-anchor="middle" x="1627.88" y="-785.92" font-family="Times,serif" font-size="14.00" fill="#99008c">Отыскать священный ГЭКК.</text>
+</g>
+<!-- Node003&#45;&gt;NodeRand -->
+<g id="edge26" class="edge">
+<title>Node003&#45;&gt;NodeRand</title>
+<path fill="none" stroke="#009979" d="M1542.15,-840.82C1614.52,-837.47 1701.14,-828.99 1731,-807.85 1738.58,-802.48 1747.89,-782.63 1754.85,-765.51"/>
+<polygon fill="#009979" stroke="#009979" points="1758.44,-766.94 1758.85,-756.35 1751.93,-764.38 1758.44,-766.94"/>
+<text text-anchor="middle" x="1844.12" y="-794.55" font-family="Times,serif" font-size="14.00" fill="#009979">Найти способ спасти мою</text>
+<text text-anchor="middle" x="1844.12" y="-777.3" font-family="Times,serif" font-size="14.00" fill="#009979">деревню.</text>
+</g>
+<!-- Node003&#45;&gt;NodeRand -->
+<g id="edge27" class="edge">
+<title>Node003&#45;&gt;NodeRand</title>
+<path fill="none" stroke="#994d00" d="M1543.39,-843.08C1685.27,-842.2 1915.41,-836.33 1942,-807.85 1952.46,-796.64 1951.73,-785.19 1942,-773.35 1924.78,-752.38 1849.83,-743.76 1803.15,-740.38"/>
+<polygon fill="#994d00" stroke="#994d00" points="1803.44,-736.83 1793.23,-739.65 1802.98,-743.81 1803.44,-736.83"/>
+<text text-anchor="middle" x="2055.5" y="-785.92" font-family="Times,serif" font-size="14.00" fill="#994d00">Найти похищенных родичей.</text>
+</g>
+<!-- Node003&#45;&gt;NodeRand -->
+<g id="edge28" class="edge">
+<title>Node003&#45;&gt;NodeRand</title>
+<path fill="none" stroke="#200099" d="M1364.18,-829.25C1353.78,-824.21 1344.33,-817.3 1337.75,-807.85 1329,-795.26 1327.36,-784.62 1337.75,-773.35 1363.85,-745.02 1627.14,-739.62 1726.93,-738.59"/>
+<polygon fill="#200099" stroke="#200099" points="1726.75,-742.08 1736.72,-738.49 1726.69,-735.08 1726.75,-742.08"/>
+<text text-anchor="middle" x="1417.12" y="-794.55" font-family="Times,serif" font-size="14.00" fill="#200099">Починить сломанный</text>
+<text text-anchor="middle" x="1417.12" y="-777.3" font-family="Times,serif" font-size="14.00" fill="#200099">танкер.</text>
+</g>
+<!-- Node004&#45;&gt;Node999 -->
+<g id="edge33" class="edge">
+<title>Node004&#45;&gt;Node999</title>
+<path fill="none" stroke="#730099" d="M3948.31,-484.37C3927.03,-365.47 3899.23,-163.96 3942.5,-106.5 3974.92,-63.45 4136.1,-35.04 4209.94,-24.08"/>
+<polygon fill="#730099" stroke="#730099" points="4210.2,-27.43 4219.59,-22.53 4209.19,-20.51 4210.2,-27.43"/>
+<text text-anchor="middle" x="3998.25" y="-229.46" font-family="Times,serif" font-size="14.00" fill="#730099">(Хиляй отсюда)</text>
+</g>
+<!-- Node004&#45;&gt;Node009 -->
+<g id="edge32" class="edge">
+<title>Node004&#45;&gt;Node009</title>
+<path fill="none" stroke="#939900" d="M3828.45,-571.18C3642.1,-564.43 3322.89,-541.8 3238,-466.02 3208.4,-439.6 3245.35,-405.31 3215,-379.77 3090.07,-274.61 1867.49,-241.37 1634.31,-235.97"/>
+<polygon fill="#939900" stroke="#939900" points="1634.44,-232.45 1624.36,-235.72 1634.28,-239.44 1634.44,-232.45"/>
+<text text-anchor="middle" x="3271" y="-418.22" font-family="Times,serif" font-size="14.00" fill="#939900">Си&#45;квел?</text>
+</g>
+<!-- Node004&#45;&gt;Node009 -->
+<g id="edge34" class="edge">
+<title>Node004&#45;&gt;Node009</title>
+<path fill="none" stroke="#009946" d="M3828.66,-567.85C3663.34,-557.55 3398.94,-531.15 3327.25,-466.02 3297.87,-439.32 3334.47,-405.22 3304,-379.77 3171.43,-269.01 1874.2,-240.18 1634.11,-235.78"/>
+<polygon fill="#009946" stroke="#009946" points="1634.24,-232.26 1624.18,-235.58 1634.11,-239.26 1634.24,-232.26"/>
+<text text-anchor="middle" x="3420.38" y="-418.22" font-family="Times,serif" font-size="14.00" fill="#009946">Че &#45;&#45;?! Понятия не имею!</text>
+</g>
+<!-- Node004&#45;&gt;Node009 -->
+<g id="edge38" class="edge">
+<title>Node004&#45;&gt;Node009</title>
+<path fill="none" stroke="#99006d" d="M3828.11,-574.37C3617.57,-571.94 3229.66,-555.09 3128.5,-466.02 3098.77,-439.84 3136.16,-405.45 3106,-379.77 2990.42,-281.31 1857.69,-242.87 1634.19,-236.21"/>
+<polygon fill="#99006d" stroke="#99006d" points="1634.46,-232.69 1624.36,-235.89 1634.26,-239.69 1634.46,-232.69"/>
+<text text-anchor="middle" x="3169.25" y="-418.22" font-family="Times,serif" font-size="14.00" fill="#99006d">Э&#45;э... Тихо?</text>
+</g>
+<!-- Node008 -->
+<g id="node26" class="node">
+<title>Node008</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="4216" cy="-234.13" rx="152.38" ry="127.63"/>
+<text text-anchor="middle" x="4216" y="-307.08" font-family="Times,serif" font-size="14.00">Перед вами Хранитель</text>
+<text text-anchor="middle" x="4216" y="-289.83" font-family="Times,serif" font-size="14.00">Моста Смерти.</text>
+<text text-anchor="middle" x="4216" y="-272.58" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="4216" y="-255.33" font-family="Times,serif" font-size="14.00">Вы видите человека с</text>
+<text text-anchor="middle" x="4216" y="-238.08" font-family="Times,serif" font-size="14.00">безумным взглядом,</text>
+<text text-anchor="middle" x="4216" y="-220.83" font-family="Times,serif" font-size="14.00">всклокоченной бородой и</text>
+<text text-anchor="middle" x="4216" y="-203.58" font-family="Times,serif" font-size="14.00">хриплым голосом. Его</text>
+<text text-anchor="middle" x="4216" y="-186.33" font-family="Times,serif" font-size="14.00">правый глаз выглядит так,</text>
+<text text-anchor="middle" x="4216" y="-169.08" font-family="Times,serif" font-size="14.00">словно вот&#45;вот выскочит</text>
+<text text-anchor="middle" x="4216" y="-151.83" font-family="Times,serif" font-size="14.00">из глазницы.</text>
+</g>
+<!-- Node004&#45;&gt;Node008 -->
+<g id="edge31" class="edge">
+<title>Node004&#45;&gt;Node008</title>
+<path fill="none" stroke="#006699" d="M3955.93,-484.01C3953.2,-441.18 3953.96,-395.85 3967,-379.77 3990.77,-350.44 4015.73,-377.59 4050,-361.77 4067.35,-353.75 4084.6,-343.67 4101.05,-332.7"/>
+<polygon fill="#006699" stroke="#006699" points="4102.81,-335.05 4109.1,-326.53 4098.87,-329.27 4102.81,-335.05"/>
+<text text-anchor="middle" x="4007.5" y="-418.22" font-family="Times,serif" font-size="14.00" fill="#006699">Са старил?</text>
+</g>
+<!-- Node004&#45;&gt;Node008 -->
+<g id="edge40" class="edge">
+<title>Node004&#45;&gt;Node008</title>
+<path fill="none" stroke="#996c00" d="M4031.63,-494.58C4037.69,-485.27 4043.31,-475.65 4048,-466.02 4065.37,-430.38 4050.96,-414.12 4070.75,-379.77 4079.89,-363.9 4091.23,-348.56 4103.51,-334.19"/>
+<polygon fill="#996c00" stroke="#996c00" points="4106.46,-337.13 4110.42,-327.3 4101.2,-332.52 4106.46,-337.13"/>
+<text text-anchor="middle" x="4168.62" y="-444.09" font-family="Times,serif" font-size="14.00" fill="#996c00">А можно уточнить вопрос?</text>
+<text text-anchor="middle" x="4168.62" y="-426.84" font-family="Times,serif" font-size="14.00" fill="#996c00">Специальные встречи</text>
+<text text-anchor="middle" x="4168.62" y="-409.59" font-family="Times,serif" font-size="14.00" fill="#996c00">считаются частью сиквела</text>
+<text text-anchor="middle" x="4168.62" y="-392.34" font-family="Times,serif" font-size="14.00" fill="#996c00">или особыми событиями?</text>
+</g>
+<!-- Node004&#45;&gt;Node008 -->
+<g id="edge41" class="edge">
+<title>Node004&#45;&gt;Node008</title>
+<path fill="none" stroke="#3f0099" d="M4103.05,-567.05C4338.1,-553.63 4797.65,-520.67 4846,-466.02 4871.4,-437.31 4872.29,-407.66 4846,-379.77 4822.87,-355.22 4575.95,-368.94 4543,-361.77 4480.85,-348.23 4414.97,-324.65 4358.75,-301.48"/>
+<polygon fill="#3f0099" stroke="#3f0099" points="4360.3,-297.93 4349.73,-297.32 4357.62,-304.39 4360.3,-297.93"/>
+<text text-anchor="middle" x="4963.62" y="-444.09" font-family="Times,serif" font-size="14.00" fill="#3f0099">А можно уточнить вопрос?</text>
+<text text-anchor="middle" x="4963.62" y="-426.84" font-family="Times,serif" font-size="14.00" fill="#3f0099">Вы имеете в виду</text>
+<text text-anchor="middle" x="4963.62" y="-409.59" font-family="Times,serif" font-size="14.00" fill="#3f0099">NPC&#45;друзей или</text>
+<text text-anchor="middle" x="4963.62" y="-392.34" font-family="Times,serif" font-size="14.00" fill="#3f0099">NPC&#45;врагов?</text>
+</g>
+<!-- Node007 -->
+<g id="node27" class="node">
+<title>Node007</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="4652" cy="-234.13" rx="100.14" ry="18"/>
+<text text-anchor="middle" x="4652" y="-229.46" font-family="Times,serif" font-size="14.00">Верно. Ступайте.</text>
+</g>
+<!-- Node004&#45;&gt;Node007 -->
+<g id="edge35" class="edge">
+<title>Node004&#45;&gt;Node007</title>
+<path fill="none" stroke="#991900" d="M4103.7,-570.66C4384.56,-562.3 5002.48,-536.08 5066,-466.02 5091.75,-437.62 5088.19,-411.02 5066,-379.77 4997.18,-282.83 4858.29,-250.33 4760.41,-239.74"/>
+<polygon fill="#991900" stroke="#991900" points="4760.89,-236.16 4750.58,-238.63 4760.18,-243.13 4760.89,-236.16"/>
+<text text-anchor="middle" x="5118.12" y="-418.22" font-family="Times,serif" font-size="14.00" fill="#991900">Э&#45;э... Ян?</text>
+</g>
+<!-- Node004&#45;&gt;Node007 -->
+<g id="edge36" class="edge">
+<title>Node004&#45;&gt;Node007</title>
+<path fill="none" stroke="#001399" d="M4103.83,-571.76C4402.08,-565.36 5086.2,-542.44 5156,-466.02 5181.85,-437.71 5179.07,-410.38 5156,-379.77 5105.98,-313.38 4870.86,-268.11 4740.17,-247.61"/>
+<polygon fill="#001399" stroke="#001399" points="4740.82,-244.01 4730.4,-245.94 4739.75,-250.93 4740.82,-244.01"/>
+<text text-anchor="middle" x="5220.88" y="-418.22" font-family="Times,serif" font-size="14.00" fill="#001399">Э&#45;э... Псина?</text>
+</g>
+<!-- Node004&#45;&gt;Node007 -->
+<g id="edge37" class="edge">
+<title>Node004&#45;&gt;Node007</title>
+<path fill="none" stroke="#409900" d="M4103.94,-572.96C4423.65,-569 5194.06,-550.67 5272,-466.02 5297.96,-437.81 5295.83,-409.79 5272,-379.77 5208.19,-299.36 4910.62,-259.5 4752.07,-243.67"/>
+<polygon fill="#409900" stroke="#409900" points="4752.66,-240.11 4742.37,-242.62 4751.97,-247.08 4752.66,-240.11"/>
+<text text-anchor="middle" x="5335.75" y="-418.22" font-family="Times,serif" font-size="14.00" fill="#409900">Э&#45;э... Танди?</text>
+</g>
+<!-- Node004&#45;&gt;Node007 -->
+<g id="edge39" class="edge">
+<title>Node004&#45;&gt;Node007</title>
+<path fill="none" stroke="#009999" d="M4103.27,-566.07C4455.31,-545.26 5364.33,-489.4 5386,-466.02 5412.06,-437.9 5410.34,-409.38 5386,-379.77 5307.85,-284.72 4943.3,-251.14 4759.1,-240.1"/>
+<polygon fill="#009999" stroke="#009999" points="4759.5,-236.56 4749.32,-239.47 4759.09,-243.55 4759.5,-236.56"/>
+<text text-anchor="middle" x="5457.62" y="-418.22" font-family="Times,serif" font-size="14.00" fill="#009999">Э&#45;э... Гарольд?</text>
+</g>
+<!-- NodeRand&#45;&gt;Node004 -->
+<g id="edge63" class="edge">
+<title>NodeRand&#45;&gt;Node004</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M1791.86,-734.86C1916.18,-727.95 2448.16,-697.91 2884,-666.1 3218.46,-641.68 3610.61,-607.72 3818.74,-589.26"/>
+<polygon fill="#555555" stroke="#555555" points="3818.78,-592.69 3828.43,-588.32 3818.16,-585.71 3818.78,-592.69"/>
+</g>
+<!-- Node005 -->
+<g id="node28" class="node">
+<title>Node005</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1765" cy="-575.06" rx="149.73" ry="66.64"/>
+<text text-anchor="middle" x="1765" y="-604.88" font-family="Times,serif" font-size="14.00">Какой вес может нести</text>
+<text text-anchor="middle" x="1765" y="-587.63" font-family="Times,serif" font-size="14.00">персонаж с силой шесть,</text>
+<text text-anchor="middle" x="1765" y="-570.38" font-family="Times,serif" font-size="14.00">при условии, что у него</text>
+<text text-anchor="middle" x="1765" y="-553.13" font-family="Times,serif" font-size="14.00">есть способность &#39;Крепкий</text>
+<text text-anchor="middle" x="1765" y="-535.88" font-family="Times,serif" font-size="14.00">хребет&#39;?</text>
+</g>
+<!-- NodeRand&#45;&gt;Node005 -->
+<g id="edge64" class="edge">
+<title>NodeRand&#45;&gt;Node005</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M1765,-718.89C1765,-702.77 1765,-677.67 1765,-652.97"/>
+<polygon fill="#555555" stroke="#555555" points="1768.5,-653.06 1765,-643.06 1761.5,-653.06 1768.5,-653.06"/>
+</g>
+<!-- Node006 -->
+<g id="node29" class="node">
+<title>Node006</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="2748" cy="-575.06" rx="127.46" ry="54.45"/>
+<text text-anchor="middle" x="2748" y="-596.26" font-family="Times,serif" font-size="14.00">Каковы минимальные</text>
+<text text-anchor="middle" x="2748" y="-579.01" font-family="Times,serif" font-size="14.00">требования для</text>
+<text text-anchor="middle" x="2748" y="-561.76" font-family="Times,serif" font-size="14.00">способности &#39;Быстрый</text>
+<text text-anchor="middle" x="2748" y="-544.51" font-family="Times,serif" font-size="14.00">доступ&#39;?</text>
+</g>
+<!-- NodeRand&#45;&gt;Node006 -->
+<g id="edge65" class="edge">
+<title>NodeRand&#45;&gt;Node006</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M1791.29,-732.06C1908.27,-712.98 2385.85,-635.11 2618.88,-597.11"/>
+<polygon fill="#555555" stroke="#555555" points="2619.14,-600.45 2628.45,-595.39 2618.02,-593.54 2619.14,-600.45"/>
+</g>
+<!-- Node008&#45;&gt;Node999 -->
+<g id="edge61" class="edge">
+<title>Node008&#45;&gt;Node999</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M4234.26,-107.02C4237.54,-84.37 4240.64,-62.9 4242.97,-46.83"/>
+<polygon fill="#555555" stroke="#555555" points="4246.55,-47.55 4244.52,-37.15 4239.62,-46.54 4246.55,-47.55"/>
+</g>
+<!-- Node007&#45;&gt;Node999 -->
+<g id="edge58" class="edge">
+<title>Node007&#45;&gt;Node999</title>
+<path fill="none" stroke="#539900" d="M4650.64,-215.87C4646.76,-179.26 4632.16,-93.95 4579,-54 4533.46,-19.78 4362.09,-17.48 4284.99,-18.25"/>
+<polygon fill="#539900" stroke="#539900" points="4285.28,-14.76 4275.33,-18.38 4285.37,-21.76 4285.28,-14.76"/>
+<text text-anchor="middle" x="4638.88" y="-66.58" font-family="Times,serif" font-size="14.00" fill="#539900">Спа сип</text>
+</g>
+<!-- Node007&#45;&gt;Node999 -->
+<g id="edge59" class="edge">
+<title>Node007&#45;&gt;Node999</title>
+<path fill="none" stroke="#990080" d="M4622,-216.53C4572.41,-189.74 4469.64,-136.91 4377,-106.5 4339.28,-94.12 4321.99,-111.32 4289.5,-88.5 4274.55,-78 4263.87,-60.4 4256.95,-45.53"/>
+<polygon fill="#990080" stroke="#990080" points="4259.93,-44.6 4252.76,-36.81 4253.5,-47.37 4259.93,-44.6"/>
+<text text-anchor="middle" x="4342.25" y="-66.58" font-family="Times,serif" font-size="14.00" fill="#990080">Дядя хороший</text>
+</g>
+<!-- Node007&#45;&gt;Node999 -->
+<g id="edge60" class="edge">
+<title>Node007&#45;&gt;Node999</title>
+<path fill="none" stroke="#009985" d="M4615.76,-217.02C4566.7,-193.89 4478.36,-147.5 4418.25,-88.5 4405.23,-75.72 4410.91,-64.52 4396,-54 4363.17,-30.84 4317.16,-22.83 4284.98,-20.15"/>
+<polygon fill="#009985" stroke="#009985" points="4285.43,-16.61 4275.21,-19.41 4284.95,-23.59 4285.43,-16.61"/>
+<text text-anchor="middle" x="4496.38" y="-75.2" font-family="Times,serif" font-size="14.00" fill="#009985">Ой, спасибо. Спасибо</text>
+<text text-anchor="middle" x="4496.38" y="-57.95" font-family="Times,serif" font-size="14.00" fill="#009985">огромное.</text>
+</g>
+<!-- Node005&#45;&gt;Node009 -->
+<g id="edge42" class="edge">
+<title>Node005&#45;&gt;Node009</title>
+<path fill="none" stroke="#009913" d="M1627.99,-547.81C1520.38,-527.96 1366.58,-501.27 1231,-484.02 1207.93,-481.08 1038.22,-483.15 1022.5,-466.02 996.59,-437.77 998.94,-410 1022.5,-379.77 1089.68,-293.54 1441.8,-250.7 1558.44,-238.72"/>
+<polygon fill="#009913" stroke="#009913" points="1558.69,-242.11 1568.28,-237.62 1557.98,-235.14 1558.69,-242.11"/>
+<text text-anchor="middle" x="1115.25" y="-418.22" font-family="Times,serif" font-size="14.00" fill="#009913">Представления не имею.</text>
+</g>
+<!-- Node005&#45;&gt;Node009 -->
+<g id="edge43" class="edge">
+<title>Node005&#45;&gt;Node009</title>
+<path fill="none" stroke="#99001a" d="M1616.7,-564.67C1475.74,-552.29 1278.31,-524.75 1230.25,-466.02 1129.11,-342.4 1448.51,-264.82 1559.46,-242.11"/>
+<polygon fill="#99001a" stroke="#99001a" points="1560.02,-245.36 1569.13,-239.96 1558.64,-238.5 1560.02,-245.36"/>
+<text text-anchor="middle" x="1307.88" y="-418.22" font-family="Times,serif" font-size="14.00" fill="#99001a">Э&#45;э... двести фунтов?</text>
+</g>
+<!-- Node005&#45;&gt;Node009 -->
+<g id="edge45" class="edge">
+<title>Node005&#45;&gt;Node009</title>
+<path fill="none" stroke="#739900" d="M1626.26,-549.79C1537.35,-531.1 1433.72,-502.32 1406.75,-466.02 1344.44,-382.15 1497.61,-287.2 1565.54,-250.62"/>
+<polygon fill="#739900" stroke="#739900" points="1566.71,-253.44 1573.91,-245.66 1563.43,-247.25 1566.71,-253.44"/>
+<text text-anchor="middle" x="1490.62" y="-426.84" font-family="Times,serif" font-size="14.00" fill="#739900">Э&#45;э... двести пятьдесят</text>
+<text text-anchor="middle" x="1490.62" y="-409.59" font-family="Times,serif" font-size="14.00" fill="#739900">фунтов?</text>
+</g>
+<!-- Node005&#45;&gt;Node009 -->
+<g id="edge46" class="edge">
+<title>Node005&#45;&gt;Node009</title>
+<path fill="none" stroke="#920099" d="M1658.54,-527.82C1634.13,-511.92 1611.25,-491.52 1597.25,-466.02 1561.33,-400.58 1577.01,-308.17 1588.22,-262.66"/>
+<polygon fill="#920099" stroke="#920099" points="1591.83,-263.7 1590.94,-253.14 1585.05,-261.95 1591.83,-263.7"/>
+<text text-anchor="middle" x="1682.38" y="-426.84" font-family="Times,serif" font-size="14.00" fill="#920099">Э&#45;э... двести семьдесят</text>
+<text text-anchor="middle" x="1682.38" y="-409.59" font-family="Times,serif" font-size="14.00" fill="#920099">пять фунтов?</text>
+</g>
+<!-- Node005&#45;&gt;Node009 -->
+<g id="edge47" class="edge">
+<title>Node005&#45;&gt;Node009</title>
+<path fill="none" stroke="#009966" d="M1778.8,-508.57C1783.85,-469.43 1784.47,-419.72 1766,-379.77 1737.45,-317.99 1668.07,-272.91 1627.31,-250.69"/>
+<polygon fill="#009966" stroke="#009966" points="1629.08,-247.13 1618.61,-245.53 1625.8,-253.31 1629.08,-247.13"/>
+<text text-anchor="middle" x="1857.88" y="-418.22" font-family="Times,serif" font-size="14.00" fill="#009966">Э&#45;э... триста фунтов?</text>
+</g>
+<!-- Node005&#45;&gt;Node009 -->
+<g id="edge48" class="edge">
+<title>Node005&#45;&gt;Node009</title>
+<path fill="none" stroke="#993900" d="M1874.53,-529.19C1900.19,-513.21 1924.31,-492.43 1939,-466.02 1957.63,-432.51 1960.2,-411.71 1939,-379.77 1869.32,-274.77 1706.8,-245.81 1633.29,-237.97"/>
+<polygon fill="#993900" stroke="#993900" points="1633.99,-234.42 1623.69,-236.92 1633.3,-241.39 1633.99,-234.42"/>
+<text text-anchor="middle" x="2032.5" y="-426.84" font-family="Times,serif" font-size="14.00" fill="#993900">Э&#45;э... триста двадцать</text>
+<text text-anchor="middle" x="2032.5" y="-409.59" font-family="Times,serif" font-size="14.00" fill="#993900">пять фунтов?</text>
+</g>
+<!-- Node005&#45;&gt;Node008 -->
+<g id="edge49" class="edge">
+<title>Node005&#45;&gt;Node008</title>
+<path fill="none" stroke="#0c0099" d="M1908.18,-555.04C2076.34,-533.58 2363.87,-499.65 2612,-484.02 2637.01,-482.44 3494.62,-481.91 3514,-466.02 3544.35,-441.12 3502.84,-404.88 3533,-379.77 3577.17,-342.98 3995.87,-381.11 4050,-361.77 4068.75,-355.07 4087.09,-345.41 4104.34,-334.38"/>
+<polygon fill="#0c0099" stroke="#0c0099" points="4105.84,-336.92 4112.26,-328.49 4101.99,-331.08 4105.84,-336.92"/>
+<text text-anchor="middle" x="3614" y="-435.47" font-family="Times,serif" font-size="14.00" fill="#0c0099">А какой уровень</text>
+<text text-anchor="middle" x="3614" y="-418.22" font-family="Times,serif" font-size="14.00" fill="#0c0099">способности &#39;Крепкий</text>
+<text text-anchor="middle" x="3614" y="-400.97" font-family="Times,serif" font-size="14.00" fill="#0c0099">хребет&#39; у персонажа?</text>
+</g>
+<!-- Node005&#45;&gt;Node007 -->
+<g id="edge44" class="edge">
+<title>Node005&#45;&gt;Node007</title>
+<path fill="none" stroke="#004699" d="M1907.78,-554.69C2075.87,-532.86 2363.62,-498.53 2612,-484.02 2634.96,-482.67 4250.15,-480.52 4268,-466.02 4298.46,-441.26 4258.98,-407.25 4287,-379.77 4316.12,-351.2 4338.21,-374.38 4377,-361.77 4464.34,-333.36 4560.57,-284.73 4612.87,-256.72"/>
+<polygon fill="#004699" stroke="#004699" points="4614.27,-259.4 4621.41,-251.58 4610.95,-253.24 4614.27,-259.4"/>
+<text text-anchor="middle" x="4366.5" y="-426.84" font-family="Times,serif" font-size="14.00" fill="#004699">Э&#45;э... двести двадцать</text>
+<text text-anchor="middle" x="4366.5" y="-409.59" font-family="Times,serif" font-size="14.00" fill="#004699">пять фунтов?</text>
+</g>
+<!-- Node006&#45;&gt;Node009 -->
+<g id="edge50" class="edge">
+<title>Node006&#45;&gt;Node009</title>
+<path fill="none" stroke="#209900" d="M2621.98,-565.81C2467.86,-553.31 2218.8,-524.55 2148.5,-466.02 2117.02,-439.8 2146.23,-407.41 2116,-379.77 1974.95,-250.75 1728.51,-235.51 1634.2,-234.64"/>
+<polygon fill="#209900" stroke="#209900" points="1634.23,-231.14 1624.21,-234.6 1634.2,-238.14 1634.23,-231.14"/>
+<text text-anchor="middle" x="2240.25" y="-418.22" font-family="Times,serif" font-size="14.00" fill="#209900">Представления не имею.</text>
+</g>
+<!-- Node006&#45;&gt;Node009 -->
+<g id="edge51" class="edge">
+<title>Node006&#45;&gt;Node009</title>
+<path fill="none" stroke="#99004d" d="M2629.33,-554.58C2528.72,-535.75 2394.83,-504.47 2356.5,-466.02 2328.45,-437.88 2362.09,-406.83 2333,-379.77 2229.11,-283.12 1769.22,-246.27 1633.7,-237.39"/>
+<polygon fill="#99004d" stroke="#99004d" points="1634.26,-233.86 1624.06,-236.71 1633.81,-240.84 1634.26,-233.86"/>
+<text text-anchor="middle" x="2434.75" y="-426.84" font-family="Times,serif" font-size="14.00" fill="#99004d">Э&#45;э... сила не меньше</text>
+<text text-anchor="middle" x="2434.75" y="-409.59" font-family="Times,serif" font-size="14.00" fill="#99004d">пяти?</text>
+</g>
+<!-- Node006&#45;&gt;Node009 -->
+<g id="edge53" class="edge">
+<title>Node006&#45;&gt;Node009</title>
+<path fill="none" stroke="#998c00" d="M2645.97,-542.16C2606.83,-525.24 2564.92,-500.6 2537,-466.02 2512.08,-435.14 2543.48,-406.32 2514,-379.77 2381.11,-260.07 1789.9,-239.22 1633.86,-235.78"/>
+<polygon fill="#998c00" stroke="#998c00" points="1634.05,-232.26 1623.98,-235.55 1633.9,-239.26 1634.05,-232.26"/>
+<text text-anchor="middle" x="2631.5" y="-426.84" font-family="Times,serif" font-size="14.00" fill="#998c00">Э&#45;э... ловкость не меньше</text>
+<text text-anchor="middle" x="2631.5" y="-409.59" font-family="Times,serif" font-size="14.00" fill="#998c00">шести?</text>
+</g>
+<!-- Node006&#45;&gt;Node009 -->
+<g id="edge55" class="edge">
+<title>Node006&#45;&gt;Node009</title>
+<path fill="none" stroke="#009932" d="M2749.08,-520.27C2748.87,-469.72 2745,-399.05 2726,-379.77 2647.34,-299.95 1822.36,-248.1 1634.1,-237.26"/>
+<polygon fill="#009932" stroke="#009932" points="1634.31,-233.7 1624.13,-236.63 1633.91,-240.69 1634.31,-233.7"/>
+<text text-anchor="middle" x="2828.12" y="-418.22" font-family="Times,serif" font-size="14.00" fill="#009932">Э&#45;э... шестой уровень?</text>
+</g>
+<!-- Node006&#45;&gt;Node009 -->
+<g id="edge56" class="edge">
+<title>Node006&#45;&gt;Node009</title>
+<path fill="none" stroke="#990600" d="M2838.57,-536.4C2867.69,-519.44 2896.64,-496.29 2913,-466.02 2931.23,-432.29 2938.58,-408.31 2913,-379.77 2825.14,-281.73 1841.29,-243.37 1634.14,-236.35"/>
+<polygon fill="#990600" stroke="#990600" points="1634.34,-232.83 1624.23,-235.99 1634.11,-239.82 1634.34,-232.83"/>
+<text text-anchor="middle" x="3015.25" y="-418.22" font-family="Times,serif" font-size="14.00" fill="#990600">Э&#45;э... девятый уровень?</text>
+</g>
+<!-- Node006&#45;&gt;Node008 -->
+<g id="edge57" class="edge">
+<title>Node006&#45;&gt;Node008</title>
+<path fill="none" stroke="#002799" d="M2875.74,-573.07C3102.7,-569.14 3565.01,-550.64 3699,-466.02 3737.19,-441.9 3713.94,-402.87 3752.75,-379.77 3809.61,-345.91 3987.97,-384.83 4050,-361.77 4068.52,-354.88 4086.67,-345.19 4103.78,-334.19"/>
+<polygon fill="#002799" stroke="#002799" points="4105.22,-336.77 4111.63,-328.33 4101.36,-330.94 4105.22,-336.77"/>
+<text text-anchor="middle" x="3850.62" y="-452.72" font-family="Times,serif" font-size="14.00" fill="#002799">А можно уточнить вопрос?</text>
+<text text-anchor="middle" x="3850.62" y="-435.47" font-family="Times,serif" font-size="14.00" fill="#002799">Имеются в виду</text>
+<text text-anchor="middle" x="3850.62" y="-418.22" font-family="Times,serif" font-size="14.00" fill="#002799">минимальные</text>
+<text text-anchor="middle" x="3850.62" y="-400.97" font-family="Times,serif" font-size="14.00" fill="#002799">характеристики или</text>
+<text text-anchor="middle" x="3850.62" y="-383.72" font-family="Times,serif" font-size="14.00" fill="#002799">минимальный уровень?</text>
+</g>
+<!-- Node006&#45;&gt;Node007 -->
+<g id="edge52" class="edge">
+<title>Node006&#45;&gt;Node007</title>
+<path fill="none" stroke="#007a99" d="M2871.52,-561.17C3070.67,-540.97 3475.22,-502.25 3819,-484.02 3841.61,-482.82 4617.55,-481.58 4634,-466.02 4648.48,-452.32 4651.33,-321.33 4651.88,-262.96"/>
+<polygon fill="#007a99" stroke="#007a99" points="4655.38,-263.34 4651.96,-253.31 4648.38,-263.29 4655.38,-263.34"/>
+<text text-anchor="middle" x="4742.5" y="-426.84" font-family="Times,serif" font-size="14.00" fill="#007a99">Э&#45;э... ловкость не меньше</text>
+<text text-anchor="middle" x="4742.5" y="-409.59" font-family="Times,serif" font-size="14.00" fill="#007a99">пяти?</text>
+</g>
+<!-- Node006&#45;&gt;Node007 -->
+<g id="edge54" class="edge">
+<title>Node006&#45;&gt;Node007</title>
+<path fill="none" stroke="#5f0099" d="M2871.94,-561.39C3071.26,-541.53 3475.51,-503.34 3819,-484.02 3854.01,-482.05 4423.01,-488.41 4450,-466.02 4480.19,-440.97 4447.97,-413.04 4468.75,-379.77 4503.51,-324.12 4567.59,-281.01 4610.01,-256.84"/>
+<polygon fill="#5f0099" stroke="#5f0099" points="4611.48,-259.47 4618.5,-251.54 4608.06,-253.36 4611.48,-259.47"/>
+<text text-anchor="middle" x="4548.62" y="-418.22" font-family="Times,serif" font-size="14.00" fill="#5f0099">Э&#45;э... третий уровень?</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"debug_msg(\"ecbridge\" + \": \" + \"in the start\" + \"\\n\");\n","critter_p_proc":"[]","combat_p_proc":"script_overrides;\nif (critter_state(local_var(7)) == 1) then begin\n  call Do_cow;\n  terminate_combat;\nend\n","pickup_p_proc":"if (source_obj == dude_obj) then begin\n  set_local_var(5, 2);\nend\n","talk_p_proc":"Evil_Critter := 0;\nSlavery_Tolerant := 2;\nKarma_Perception := 10;\nif (not(local_var(8))) then begin\n  start_gdialog(729, self_obj, 4, 4294967295, 4294967295);\n  gsay_start;\n  call Node001;\n  gsay_end;\n  end_dialogue;\n  set_local_var(4, 0);\n  if (doWhat == 1) then begin\n    call killPlayer;\n  end\n  else begin\n    if (doWhat == 2) then begin\n      call killSelf;\n    end\n    else begin\n      if (doWhat == 3) then begin\n        set_local_var(8, 20105);\n        call selfLeave;\n      end\n    end\n  end\n  talkCount := 50;\n  doWhat := 0;\nend\n","destroy_p_proc":"if (source_obj == dude_obj) then begin\n  set_global_var(5, global_var(5) + 1);\n  if (metarule(51, self_obj) == 2) then begin\n    if (source_obj == dude_obj) then begin\n      set_global_var(2, 0);\n      set_global_var(1, global_var(1) + 1);\n      set_global_var(0, global_var(0) + 4294967281);\n      debug_msg(\"ecbridge\" + \": \" + \"Player gains \" + 4294967281 + \" Karma Points.\" + \"\\n\");\n      set_global_var(37, 0);\n      set_global_var(38, 0);\n      set_global_var(39, 0);\n      set_global_var(40, 0);\n      set_global_var(41, 0);\n      set_global_var(42, 0);\n      set_global_var(43, 0);\n      set_global_var(44, 0);\n      set_global_var(45, 0);\n      tmp_gen_rep := global_var(0);\n      if (has_trait(0, dude_obj, 95)) then begin\n        tmp_gen_rep := global_var(0) * 2;\n      end\n      if (tmp_gen_rep >= 1000) then begin\n        set_global_var(37, 1);\n      end\n      else begin\n        if (tmp_gen_rep >= 750) then begin\n          set_global_var(38, 1);\n        end\n        else begin\n          if (tmp_gen_rep >= 500) then begin\n            set_global_var(39, 1);\n          end\n          else begin\n            if (tmp_gen_rep >= 250) then begin\n              set_global_var(40, 1);\n            end\n            else begin\n              if (tmp_gen_rep > 4294967046) then begin\n                set_global_var(41, 1);\n              end\n              else begin\n                if (tmp_gen_rep > 4294966796) then begin\n                  set_global_var(42, 1);\n                end\n                else begin\n                  if (tmp_gen_rep > 4294966546) then begin\n                    set_global_var(43, 1);\n                  end\n                  else begin\n                    if (tmp_gen_rep > 4294966296) then begin\n                      set_global_var(44, 1);\n                    end\n                    else begin\n                      set_global_var(45, 1);\n                    end\n                  end\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\n  if (((global_var(4) + global_var(5)) >= 25) and ((global_var(4) > (3 * global_var(5))) or (global_var(2) == 1)) and (global_var(1) == 0)) then begin\n    set_global_var(2, 1);\n    set_global_var(3, 0);\n  end\n  if (((global_var(4) + global_var(5)) >= 25) and ((global_var(5) > (2 * global_var(4))) or (global_var(3) == 1))) then begin\n    set_global_var(3, 1);\n    set_global_var(2, 0);\n  end\n  set_global_var(0, global_var(0) + 4294967286);\n  debug_msg(\"ecbridge\" + \": \" + \"Player gains \" + 4294967286 + \" Karma Points.\" + \"\\n\");\n  set_global_var(37, 0);\n  set_global_var(38, 0);\n  set_global_var(39, 0);\n  set_global_var(40, 0);\n  set_global_var(41, 0);\n  set_global_var(42, 0);\n  set_global_var(43, 0);\n  set_global_var(44, 0);\n  set_global_var(45, 0);\n  tmp_gen_rep := global_var(0);\n  if (has_trait(0, dude_obj, 95)) then begin\n    tmp_gen_rep := global_var(0) * 2;\n  end\n  if (tmp_gen_rep >= 1000) then begin\n    set_global_var(37, 1);\n  end\n  else begin\n    if (tmp_gen_rep >= 750) then begin\n      set_global_var(38, 1);\n    end\n    else begin\n      if (tmp_gen_rep >= 500) then begin\n        set_global_var(39, 1);\n      end\n      else begin\n        if (tmp_gen_rep >= 250) then begin\n          set_global_var(40, 1);\n        end\n        else begin\n          if (tmp_gen_rep > 4294967046) then begin\n            set_global_var(41, 1);\n          end\n          else begin\n            if (tmp_gen_rep > 4294966796) then begin\n              set_global_var(42, 1);\n            end\n            else begin\n              if (tmp_gen_rep > 4294966546) then begin\n                set_global_var(43, 1);\n              end\n              else begin\n                if (tmp_gen_rep > 4294966296) then begin\n                  set_global_var(44, 1);\n                end\n                else begin\n                  set_global_var(45, 1);\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\nend\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(729, 100));\n","description_p_proc":"script_overrides;\nif (local_var(4) == 0) then begin\n  display_msg(message_str(729, 101));\nend\nelse begin\n  display_msg(message_str(729, 102));\nend\n","use_skill_on_p_proc":"[]","damage_p_proc":"if (source_obj == dude_obj) then begin\n  set_local_var(6, 1);\nend\n","map_enter_p_proc":"Only_Once := 0;\ncritter_add_trait(self_obj, 1, 6, 159);\ncritter_add_trait(self_obj, 1, 5, 14);\nadd_timer_event(self_obj, 0, 1);\ndebug_msg(\"ecbridge\" + \": \" + \"in the map enter\" + \"\\n\");\n","timed_event_p_proc":"if (fixed_param == 1) then begin\n  call Node011;\nend\nelse begin\n  if (fixed_param == 2) then begin\n    call selfLeave;\n  end\nend\n","map_exit_p_proc":"if (doWhat == 3) then begin\n  destroy_object(self_obj);\nend\n","Node999":"[]","Node001":"gsay_reply(729, 104);\ngiq_option(4294967293, 729, 105, Node002, 50);\ngiq_option(4294967293, 729, 106, Node999, 50);\ngiq_option(4, 729, 107, Node002, 50);\ngiq_option(4, 729, 108, Node002, 50);\ngiq_option(4, 729, 109, Node999, 50);\n","Node002":"gsay_reply(729, 110);\ngiq_option(4294967293, 729, 111, Node009, 50);\ngiq_option(4294967293, 729, obj_name(dude_obj) + message_str(729, 112), Node004, 50);\ngiq_option(4294967293, 729, message_str(729, 113) + \" \" + obj_name(dude_obj) + \" \" + message_str(729, 172), Node008, 50);\ngiq_option(4294967293, 729, 114, Node999, 50);\ngiq_option(4, 729, obj_name(dude_obj) + \" \" + message_str(729, 115), Node003, 50);\ngiq_option(4, 729, 116, Node009, 50);\ngiq_option(4, 729, 117, Node009, 50);\ngiq_option(4, 729, 118, Node009, 50);\ngiq_option(4, 729, 119, Node009, 50);\ngiq_option(4, 729, 120, Node009, 50);\ngiq_option(4, 729, 121, Node003, 50);\ngiq_option(4, 729, 122, Node999, 50);\n","Node003":"gsay_reply(729, 123);\ngiq_option(4294967293, 729, 124, Node009, 50);\ngiq_option(4294967293, 729, 125, Node004, 50);\ngiq_option(4294967293, 729, 126, Node999, 50);\nif (not(global_var(233))) then begin\n  giq_option(4, 729, 127, NodeRand, 50);\nend\nif (not(global_var(494) == 4)) then begin\n  giq_option(4, 729, 128, NodeRand, 50);\nend\nif (global_var(494) == 4) then begin\n  giq_option(4, 729, 129, NodeRand, 50);\nend\nif ((global_var(494) == 5) or (global_var(494) == 6)) then begin\n  giq_option(4, 729, 130, NodeRand, 50);\nend\ngiq_option(4, 729, 131, Node009, 50);\ngiq_option(4, 729, 132, Node999, 50);\n","Node004":"if (get_critter_stat(dude_obj, 4) < 4) then begin\n  gsay_reply(729, 133);\nend\nelse begin\n  gsay_reply(729, 134);\nend\ngiq_option(4294967293, 729, 135, Node008, 50);\ngiq_option(4294967293, 729, 136, Node009, 50);\ngiq_option(4294967293, 729, 137, Node999, 50);\ngiq_option(4, 729, 138, Node009, 50);\ngiq_option(4, 729, 139, Node007, 50);\ngiq_option(4, 729, 140, Node007, 50);\ngiq_option(4, 729, 141, Node007, 50);\ngiq_option(4, 729, 142, Node009, 50);\ngiq_option(4, 729, 143, Node007, 50);\nif (get_critter_stat(dude_obj, 6) == 10) then begin\n  giq_option(7, 729, 144, Node008, 50);\nend\nelse begin\n  giq_option(7, 729, 145, Node008, 50);\nend\n","Node005":"gsay_reply(729, 146);\ngiq_option(4, 729, 147, Node009, 50);\ngiq_option(4, 729, 148, Node009, 50);\ngiq_option(4, 729, 149, Node007, 50);\ngiq_option(4, 729, 150, Node009, 50);\ngiq_option(4, 729, 151, Node009, 50);\ngiq_option(4, 729, 152, Node009, 50);\ngiq_option(4, 729, 153, Node009, 50);\ngiq_option(7, 729, 154, Node008, 50);\n","Node006":"gsay_reply(729, 155);\ngiq_option(4, 729, 156, Node009, 50);\ngiq_option(4, 729, 157, Node009, 50);\ngiq_option(4, 729, 158, Node007, 50);\ngiq_option(4, 729, 159, Node009, 50);\ngiq_option(4, 729, 160, Node007, 50);\ngiq_option(4, 729, 161, Node009, 50);\ngiq_option(4, 729, 162, Node009, 50);\ngiq_option(4, 729, 163, Node008, 50);\n","Node007":"doWhat := 3;\ngsay_reply(729, 164);\ngiq_option(4294967293, 729, 165, Node999, 50);\ngiq_option(4294967293, 729, 166, Node999, 50);\ngiq_option(4, 729, 167, Node999, 50);\n","Node008":"give_exp_points(500);\ndisplay_msg(message_str(14, 100) + 500 + message_str(14, 101));\ndoWhat := 2;\ncall Node999;\n","Node009":"doWhat := 1;\ncall Node999;\n","Node011":"float_msg(dude_obj, message_str(729, 171 + (1000 * (get_critter_stat(dude_obj, 4) <= 3))), 0);\n","killPlayer":"float_msg(self_obj, message_str(729, 170), 0);\nfloat_msg(dude_obj, message_str(729, 200), 2);\ncritter_dmg(dude_obj, 10000, 0);\n","killSelf":"float_msg(self_obj, message_str(729, 200), 2);\ncritter_dmg(self_obj, 10000, 0);\n","selfLeave":"debug_msg(\"ecbridge\" + \": \" + \"should be leaving going to tile: \" + local_var(8) + \"\\n\");\nif ((local_var(8) == 20105) and (tile_num(self_obj) == 20105)) then begin\n  set_local_var(8, 15693);\nend\nif (tile_num(self_obj) != local_var(8)) then begin\n  if (not(anim_busy(self_obj))) then begin\n    reg_anim_func(1, 1);\n    animate_move_obj_to_tile(self_obj, local_var(8), 0);\n    reg_anim_func(3, 0);\n  end\n  else begin\n    if (game_time > talkCount) then begin\n      float_msg(self_obj, message_str(729, 173 + leaveCount), 0);\n      leaveCount := leaveCount + 1;\n      if (leaveCount > 5) then begin\n        leaveCount := 1;\n      end\n      talkCount := game_time + 30;\n    end\n  end\nend\nelse begin\n  destroy_object(self_obj);\nend\nadd_timer_event(self_obj, game_ticks(2), 2);\n","Do_cow":"variable LVar0 := 0;\nvariable LVar1 := 0;\nLVar1 := tile_num_in_direction(tile_num(self_obj), 2, 1);\nLVar0 := create_object_sid(16777226, LVar1, 0, 733);\ncritter_attempt_placement(LVar0, LVar1, 0);\nset_local_var(7, LVar0);\n","NodeRand":"variable LVar0 := 0;\nLVar0 := random(1, 3);\nif (LVar0 == 1) then begin\n  call Node004;\nend\nelse begin\n  if (LVar0 == 2) then begin\n    call Node005;\n  end\n  else begin\n    if (LVar0 == 3) then begin\n      call Node006;\n    end\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

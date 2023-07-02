@@ -1,0 +1,10 @@
+digraph vill {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label="Вы вошли в небольшую\nдеревню. Здесь невыносимо\nвоняет грызунами. Вы\nвидите несколько\nкротокрысов, шибуршаших\nвокруг. Странно, но они,\nпо каким-то причинам, не\nнападают ни на вас, ни на\nработающих рядом\nкрестьян.\n---\nДеревня выглядит пустой.\nВоздух наполняет смрад от\nгниения трупов\nкротокрысов.\n---\nЭй! Куда все ушли?\n---\nДеревня сильно изменилась\nсо времени вашего\nпоследнего визита.\n---\nДеревня изменилась еще\nбольше с тех пор, как вы\nбыли здесь в последний\nраз. Кажется, что защита\nиз кротокрысов была\nзаменена стеной."]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+  "map_exit_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_exit_p_proc" [label=""]
+}

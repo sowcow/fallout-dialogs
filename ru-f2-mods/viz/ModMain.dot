@@ -1,0 +1,13 @@
+digraph ModMain {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label="Небольшой старомодный\nфермерский городок,\nокруженный бескрайними\nполями мертвых или почти\nмертвых посевов."]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+  "map_exit_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_exit_p_proc" -> "clear_items_on_map" [style=dotted color="#555555"]
+  "map_exit_p_proc" [label=""]
+  "clear_items_on_map" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "clear_items_on_map" [label=""]
+}

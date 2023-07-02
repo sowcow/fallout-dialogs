@@ -1,0 +1,4 @@
+digraph mutant5 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Это какой-то огромный\nсупермутант! И у него\nочень большая пушка!"]
+}

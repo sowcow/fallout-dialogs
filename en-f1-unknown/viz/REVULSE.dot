@@ -1,0 +1,11 @@
+digraph REVULSE {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "blast_party" [style=dotted color="#555555"]
+  "start" -> "blast_party" [style=dotted color="#555555"]
+  "start" -> "blast_party" [style=dotted color="#555555"]
+  "start" -> "blast_party" [style=dotted color="#555555"]
+  "start" -> "blast_party" [style=dotted color="#555555"]
+  "start" [label="The pain in your head\ndoes not feel as bad as\nit did. The effects of\nthis strange corridor do\nnot feel as strong.\n---\nThe hairs on the back of\nyour neck rise. You feel\nsomething from the\ncorridor ahead. The bile\nrises as your recognize\nthe mass of flesh ahead -\nhuman parts in the wall\nitself. The worst part is\nthat it is moving,\n calling to you.\n---\nYour nose starts to\nbleed. You hear voices in\nyour head. They are\ncalling your name.\nDarkness washes over your\neyes for a moment, but\nyou\n recover.\n---\nA voice calls to you. You\nturn you head and see the\nimage of a\nforgotten friend,\nobviously dead. The worms\nfall from her rotted jaw\nas\n your headache grows.\n---\nIt is getting harder to\nmove forward. Your foot\nseems bonded to the\nfloor. You look down,\nand the flesh of the\nfloor is crawling up your\nleg.\nTeeth gnaw at your\nknees. Still, your\nheadache gets worse.\n---\nSomething catches your\nattention, a flash of\nmovement from the\nceiling, and then a\nsliver of bone pierces\nyour eye! With it comes\nthe\nthoughts of the dead and\ntortured!\n---\nThe pain in your head is\nmaddening. You feel the\nsins of others\nwash over your soul. And\nit gets worse, as your\nsins answer them. Like\nmadmen, they fight\nthrough your psyche, and\nin the process tear your\n personality apart.\n---\nYour head is pulsing with\nthe intrusive thoughts of\nothers. The\npain grows and grows.\nSuddenly, as if it never\nexisted, the pain\nvanishes.\nYou fall to the ground\nand weep. But something\ndoes not feel right."]
+  "blast_party" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "blast_party" [label=""]
+}

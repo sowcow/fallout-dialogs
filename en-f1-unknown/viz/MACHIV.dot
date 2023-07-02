@@ -1,0 +1,8 @@
+digraph MACHIV {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "do_stuff" [style=dotted color="#555555"]
+  "start" -> "do_stuff" [style=dotted color="#555555"]
+  "start" [label="Before you is a Mach IV\nComputer."]
+  "do_stuff" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_stuff" [label="It seems as though the\nsystem is in a reboot\nstatus.\n---\nThe system seems to have\nlocked up.\n---\nThe monitor flickers.\n---\nThe screen is showing odd\ncolor patterns."]
+}

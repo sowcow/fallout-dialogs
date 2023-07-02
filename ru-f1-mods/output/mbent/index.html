@@ -1,0 +1,175 @@
+<!DOCTYPE html><html><head><title>mbent</title><meta charset="utf-8" /></head><body><svg width="276pt" height="236pt"
+ viewBox="0.00 0.00 276.00 236.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 232.5)">
+<title>mbent</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-232.5 272,-232.5 272,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="134" cy="-210.5" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node2" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-114.25" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;map_enter_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;map_enter_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M115.37,-197.21C100.54,-187.06 79.59,-171.87 63,-156.5 57.06,-150.99 51.08,-144.58 45.75,-138.47"/>
+<polygon fill="#555555" stroke="#555555" points="48.08,-136.82 38.95,-131.45 42.75,-141.34 48.08,-136.82"/>
+</g>
+<!-- map_update_p_proc -->
+<g id="node3" class="node">
+<title>map_update_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="134" cy="-114.25" rx="61.7" ry="42.25"/>
+<text text-anchor="middle" x="134" y="-126.82" font-family="Times,serif" font-size="14.00">Осталось </text>
+<text text-anchor="middle" x="134" y="-109.57" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="134" y="-92.32" font-family="Times,serif" font-size="14.00"> сек.</text>
+</g>
+<!-- start&#45;&gt;map_update_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;map_update_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M134,-192.21C134,-185.11 134,-176.47 134,-167.58"/>
+<polygon fill="#555555" stroke="#555555" points="137.5,-167.7 134,-157.7 130.5,-167.7 137.5,-167.7"/>
+</g>
+<!-- map_exit_p_proc -->
+<g id="node4" class="node">
+<title>map_exit_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="241" cy="-114.25" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;map_exit_p_proc -->
+<g id="edge3" class="edge">
+<title>start&#45;&gt;map_exit_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M152.63,-197.21C167.46,-187.06 188.41,-171.87 205,-156.5 210.94,-150.99 216.92,-144.58 222.25,-138.47"/>
+<polygon fill="#555555" stroke="#555555" points="225.25,-141.34 229.05,-131.45 219.92,-136.82 225.25,-141.34"/>
+</g>
+<!-- add_party -->
+<g id="node5" class="node">
+<title>add_party</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc&#45;&gt;add_party -->
+<g id="edge4" class="edge">
+<title>map_enter_p_proc&#45;&gt;add_party</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M27,-95.96C27,-82.36 27,-63.13 27,-47.3"/>
+<polygon fill="#555555" stroke="#555555" points="30.5,-47.5 27,-37.5 23.5,-47.5 30.5,-47.5"/>
+</g>
+<!-- Lighting -->
+<g id="node6" class="node">
+<title>Lighting</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="116" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc&#45;&gt;Lighting -->
+<g id="edge5" class="edge">
+<title>map_enter_p_proc&#45;&gt;Lighting</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M39.76,-98.14C46.54,-90.24 55.08,-80.47 63,-72 72.86,-61.45 84.12,-50.09 93.73,-40.61"/>
+<polygon fill="#555555" stroke="#555555" points="95.65,-43.64 100.34,-34.14 90.75,-38.64 95.65,-43.64"/>
+</g>
+<!-- map_update_p_proc&#45;&gt;Lighting -->
+<g id="edge6" class="edge">
+<title>map_update_p_proc&#45;&gt;Lighting</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M126.1,-71.91C124.48,-63.4 122.81,-54.64 121.3,-46.75"/>
+<polygon fill="#555555" stroke="#555555" points="124.55,-46.12 119.24,-36.96 117.68,-47.44 124.55,-46.12"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 15) then begin\n  call map_enter_p_proc;\nend\nelse begin\n  if (script_action == 23) then begin\n    call map_update_p_proc;\n  end\n  else begin\n    if (script_action == 16) then begin\n      call map_exit_p_proc;\n    end\n  end\nend\n","map_enter_p_proc":"set_global_var(78, 2);\nif (metarule(14, 0)) then begin\n  display_msg(message_str(194, 109));\nend\nradio_trick := map_var(0);\nknow_door_code := map_var(1);\nif (global_var(32) == 0) then begin\n  override_map_start(133, 111, 0, 5);\nend\nelse begin\n  if (global_var(32) == 1) then begin\n    override_map_start(73, 107, 0, 2);\n  end\n  else begin\n    override_map_start(133, 111, 0, 5);\n  end\nend\ncall add_party;\ncall Lighting;\n","map_update_p_proc":"call Lighting;\nif (global_var(147) != 0) then begin\n  display_msg(message_str(443, 103) + (300 - ((game_time / 10) - global_var(147))) + message_str(443, 104));\n  if (((game_time / 10) - global_var(147)) >= 300) then begin\n    play_gmovie(3);\n    metarule(13, 0);\n  end\nend\nif (removal_ptr != 0) then begin\n  destroy_object(removal_ptr);\n  removal_ptr := 0;\nend\n","map_exit_p_proc":"set_map_var(0, radio_trick);\n","Lighting":"variable LVar0 := 0;\nLVar0 := game_time_hour;\nif ((LVar0 >= 600) and (LVar0 < 700)) then begin\n  set_light_level(LVar0 - 600 + 40);\nend\nelse begin\n  if ((LVar0 >= 700) and (LVar0 < 1800)) then begin\n    set_light_level(100);\n  end\n  else begin\n    if ((LVar0 >= 1800) and (LVar0 < 1900)) then begin\n      set_light_level(100 - (LVar0 - 1800));\n    end\n    else begin\n      set_light_level(40);\n    end\n  end\nend\n","add_party":"if (global_var(26) == 5) then begin\n  if (Tandi_ptr == 0) then begin\n  end\n  critter_add_trait(Tandi_ptr, 1, 6, 0);\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

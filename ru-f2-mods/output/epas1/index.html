@@ -1,0 +1,186 @@
+<!DOCTYPE html><html><head><title>epas1</title><meta charset="utf-8" /></head><body><svg width="446pt" height="230pt"
+ viewBox="0.00 0.00 445.75 230.35" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 226.35)">
+<title>epas1</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-226.35 441.75,-226.35 441.75,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="87" cy="-204.35" rx="27" ry="18"/>
+</g>
+<!-- spatial_p_proc -->
+<g id="node2" class="node">
+<title>spatial_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="159" cy="-204.35" rx="27" ry="18"/>
+</g>
+<!-- Node001 -->
+<g id="node3" class="node">
+<title>Node001</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="195" cy="-119.3" rx="157.68" ry="30.05"/>
+<text text-anchor="middle" x="195" y="-123.25" font-family="Times,serif" font-size="14.00">К какому уровню вы хотели</text>
+<text text-anchor="middle" x="195" y="-106" font-family="Times,serif" font-size="14.00">бы получить доступ?</text>
+</g>
+<!-- spatial_p_proc&#45;&gt;Node001 -->
+<g id="edge1" class="edge">
+<title>spatial_p_proc&#45;&gt;Node001</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M166.29,-186.55C169.7,-178.67 173.93,-168.92 178.07,-159.35"/>
+<polygon fill="#555555" stroke="#555555" points="181.57,-161.09 182.33,-150.52 175.14,-158.31 181.57,-161.09"/>
+</g>
+<!-- Node002 -->
+<g id="node6" class="node">
+<title>Node002</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- Node001&#45;&gt;Node002 -->
+<g id="edge2" class="edge">
+<title>Node001&#45;&gt;Node002</title>
+<path fill="none" stroke="#00996d" d="M86.85,-97.2C71.94,-90.73 57.81,-82.28 46.25,-71.25 39.39,-64.7 34.96,-55.5 32.11,-46.64"/>
+<polygon fill="#00996d" stroke="#00996d" points="35.29,-45.97 29.35,-37.2 28.52,-47.76 35.29,-45.97"/>
+<text text-anchor="middle" x="119.38" y="-57.95" font-family="Times,serif" font-size="14.00" fill="#00996d">К Голубому уровню</text>
+</g>
+<!-- Node003 -->
+<g id="node7" class="node">
+<title>Node003</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="195" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- Node001&#45;&gt;Node003 -->
+<g id="edge3" class="edge">
+<title>Node001&#45;&gt;Node003</title>
+<path fill="none" stroke="#994000" d="M195,-88.78C195,-75.6 195,-60.15 195,-47.14"/>
+<polygon fill="#994000" stroke="#994000" points="198.5,-47.45 195,-37.45 191.5,-47.45 198.5,-47.45"/>
+<text text-anchor="middle" x="280.88" y="-57.95" font-family="Times,serif" font-size="14.00" fill="#994000">К Фиолетовому уровню</text>
+</g>
+<!-- Node999 -->
+<g id="node8" class="node">
+<title>Node999</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="390" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- Node001&#45;&gt;Node999 -->
+<g id="edge4" class="edge">
+<title>Node001&#45;&gt;Node999</title>
+<path fill="none" stroke="#130099" d="M317.45,-100.09C335.84,-93.27 353.48,-83.96 368,-71.25 375.27,-64.89 380.19,-55.73 383.51,-46.85"/>
+<polygon fill="#130099" stroke="#130099" points="387.14,-47.96 386.8,-37.37 380.47,-45.86 387.14,-47.96"/>
+<text text-anchor="middle" x="408.88" y="-57.95" font-family="Times,serif" font-size="14.00" fill="#130099">[Выйти]</text>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node4" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="303" cy="-204.35" rx="27" ry="18"/>
+</g>
+<!-- map_update_p_proc -->
+<g id="node5" class="node">
+<title>map_update_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="375" cy="-204.35" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node9" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="231" cy="-204.35" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc&#45;&gt;Node001 -->
+<g id="edge5" class="edge">
+<title>timed_event_p_proc&#45;&gt;Node001</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M223.71,-186.55C220.3,-178.67 216.07,-168.92 211.93,-159.35"/>
+<polygon fill="#555555" stroke="#555555" points="214.86,-158.31 207.67,-150.52 208.43,-161.09 214.86,-158.31"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","spatial_p_proc":"if (source_obj == dude_obj) then begin\n  if (combat_is_initialized) then begin\n    terminate_combat;\n    add_timer_event(self_obj, 5, 1);\n  end\n  else begin\n    start_gdialog(1446, self_obj, 4, 4294967295, 4294967295);\n    gsay_start;\n    call Node001;\n    gsay_end;\n    end_dialogue;\n  end\nend\n","map_enter_p_proc":"[]","map_update_p_proc":"[]","Node001":"gsay_reply(1446, 100);\nif (cur_map_index == 170) then begin\n  giq_option(1, 1446, 101, Node002, 50);\nend\nif (cur_map_index == 159) then begin\n  giq_option(1, 1446, 102, Node003, 50);\nend\ngiq_option(1, 1446, 103, Node999, 50);\n","Node002":"load_map(159, 12);\n","Node003":"load_map(170, 12);\n","Node999":"[]","timed_event_p_proc":"if (fixed_param == 1) then begin\n  if (combat_is_initialized) then begin\n    terminate_combat;\n    add_timer_event(self_obj, 5, 1);\n  end\n  else begin\n    start_gdialog(1446, self_obj, 4, 4294967295, 4294967295);\n    gsay_start;\n    call Node001;\n    gsay_end;\n    end_dialogue;\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

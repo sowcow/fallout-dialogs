@@ -1,0 +1,7 @@
+digraph glowone {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "do_dialogue" [style=dotted color="#555555"]
+  "start" [label="Вы видите светящееся\nсущество."]
+  "do_dialogue" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_dialogue" [label="М-м-м...\n---\nА-а-а...\n---\nСветящийся что-то\nпробормотал и затих. У\nнего потекла слюна.\n---\nНе реагирует."]
+}

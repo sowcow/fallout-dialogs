@@ -1,0 +1,4 @@
+digraph TRAPFLOR {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="senses that there is a\ntrap near.\n---\nYou sense that there is a\ntrap near."]
+}

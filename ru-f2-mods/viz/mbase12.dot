@@ -1,0 +1,8 @@
+digraph mbase12 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label="Стены этой пещеры - смесь\nестественных скал и\nвозведенных людьми\nконструкций. Похоже,\nсильный взрыв разрушил\nэти проходы давным-давно."]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+}

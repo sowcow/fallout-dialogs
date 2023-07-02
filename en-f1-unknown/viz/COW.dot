@@ -1,0 +1,17 @@
+digraph COW {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "timed_event_p_proc" [style=dotted color="#555555"]
+  "start" -> "talk_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_obj_on_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label="It's a wild Brahmin."]
+  "talk_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "talk_p_proc" [label="Moo, I say."]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label=""]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="There is nothing natural\nabout these cows. The\nsecond head can only be\nthe result of some\nstrange mutation.\n---\nLooks pretty normal to\nyou."]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" -> "talk_p_proc" [style=dotted color="#555555"]
+  "timed_event_p_proc" [label=""]
+}

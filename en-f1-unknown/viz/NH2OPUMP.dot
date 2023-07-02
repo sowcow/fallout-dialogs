@@ -1,0 +1,10 @@
+digraph NH2OPUMP {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "search" [style=dotted color="#555555"]
+  "start" -> "skills" [style=dotted color="#555555"]
+  "start" [label="The water pump isn't\nworking.\n---\nThe massive pump\nstruggles to life after\nyou successfully\ninstall the missing\nparts.\n---\nYou gain 1000 experience\npoints for fixing the\npump.\n---\nYou somehow manage to\ndestroy the parts while\ncutting\nyour hand for 1 point of\ndamage.\n---\nYou are having\ndifficulties making these\nparts work.\n---\nThis item cannot be used\non the pump."]
+  "search" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "search" [label="The water pump is fixed\nand working fine.\n---\nThe water pump isn't\nworking due to a broken\nvacuum pump.\n---\nThe water pump isn't\nworking.\n---\nA piece of machinery."]
+  "skills" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "skills" [label="You fail to repair the\nwater pump. It might need\na new fuse.\n---\nYou cannot repair the\nwater pump without a\nreplacement vacuum\n pump.\n---\nYou fail to repair the\nwater pump.\n---\nThis water pump may need\na new fuse.\n---\nThis water pump isn't\nworking due to a broken\nvacuum pump.\n---\nThe water pump isn't\nworking.\n---\nYou notice nothing\nunusual."]
+}

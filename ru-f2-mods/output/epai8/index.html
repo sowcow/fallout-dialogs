@@ -1,0 +1,151 @@
+<!DOCTYPE html><html><head><title>epai8</title><meta charset="utf-8" /></head><body><svg width="1130pt" height="190pt"
+ viewBox="0.00 0.00 1130.00 190.08" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 186.08)">
+<title>epai8</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-186.08 1126,-186.08 1126,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-91.04" rx="27" ry="18"/>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node2" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="222" cy="-91.04" rx="150.26" ry="91.04"/>
+<text text-anchor="middle" x="222" y="-138.11" font-family="Times,serif" font-size="14.00">При ближайшем</text>
+<text text-anchor="middle" x="222" y="-120.86" font-family="Times,serif" font-size="14.00">рассмотрении</text>
+<text text-anchor="middle" x="222" y="-103.61" font-family="Times,serif" font-size="14.00">обнаруживается, что</text>
+<text text-anchor="middle" x="222" y="-86.36" font-family="Times,serif" font-size="14.00">кабина лифта отсутствует,</text>
+<text text-anchor="middle" x="222" y="-69.11" font-family="Times,serif" font-size="14.00">а двери заклинило.</text>
+<text text-anchor="middle" x="222" y="-51.86" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="222" y="-34.61" font-family="Times,serif" font-size="14.00">Вам не починить это.</text>
+</g>
+<!-- look_at_p_proc -->
+<g id="node3" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="536" cy="-91.04" rx="146.02" ry="30.05"/>
+<text text-anchor="middle" x="536" y="-94.99" font-family="Times,serif" font-size="14.00">Вы видите поврежденные</text>
+<text text-anchor="middle" x="536" y="-77.74" font-family="Times,serif" font-size="14.00">двери лифта.</text>
+</g>
+<!-- use_p_proc -->
+<g id="node4" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="839" cy="-91.04" rx="139.12" ry="78.84"/>
+<text text-anchor="middle" x="839" y="-129.49" font-family="Times,serif" font-size="14.00">Кажется, с этим лифтом</text>
+<text text-anchor="middle" x="839" y="-112.24" font-family="Times,serif" font-size="14.00">что&#45;то не так.</text>
+<text text-anchor="middle" x="839" y="-94.99" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="839" y="-77.74" font-family="Times,serif" font-size="14.00">Это лифт, очевидно, не</text>
+<text text-anchor="middle" x="839" y="-60.49" font-family="Times,serif" font-size="14.00">работает. Вам придется</text>
+<text text-anchor="middle" x="839" y="-43.24" font-family="Times,serif" font-size="14.00">найти другой способ.</text>
+</g>
+<!-- pickup_p_proc -->
+<g id="node5" class="node">
+<title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1023" cy="-91.04" rx="27" ry="18"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node6" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1095" cy="-91.04" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","use_skill_on_p_proc":"script_overrides;\nif (action_being_used == 12) then begin\n  display_msg(message_str(1425, 103));\nend\nif (action_being_used == 13) then begin\n  display_msg(message_str(1425, 104));\nend\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(1425, 102));\n","use_p_proc":"if (local_var(4) == 0) then begin\n  script_overrides;\n  display_msg(message_str(1425, 100));\n  set_local_var(4, 1);\nend\nelse begin\n  if (local_var(4) == 1) then begin\n    script_overrides;\n    display_msg(message_str(1425, 101));\n  end\nend\n","pickup_p_proc":"[]","destroy_p_proc":"[]"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

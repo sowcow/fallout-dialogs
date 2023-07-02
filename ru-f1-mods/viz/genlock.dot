@@ -1,0 +1,16 @@
+digraph genlock {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label="Закрыто."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Закрыто."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Вы бесшумно вскрываете\nзамок.\n---\nВам не удается взломать\nзамок.\n---\nШкафчик не заперт.\n---\nВаших навыков\nнедостаточно, чтобы\nвскрыть замок.\n---\nВам не удается взломать\nзамок.\n---\nШкафчик не заперт.\n---\nЗакрыто."]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="Вы бесшумно вскрываете\nзамок.\n---\nВам не удается взломать\nзамок.\n---\nШкафчик не заперт.\n---\nВаших навыков\nнедостаточно, чтобы\nвскрыть замок.\n---\nВы сломали отмычку.\n---\nВам не удается взломать\nзамок.\n---\nШкафчик не заперт."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Закрыто."]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+}

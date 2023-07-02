@@ -1,0 +1,4 @@
+digraph STOREROM {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="This room looks\nparticularly ransacked."]
+}

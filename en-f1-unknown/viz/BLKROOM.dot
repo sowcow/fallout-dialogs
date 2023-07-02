@@ -1,0 +1,4 @@
+digraph BLKROOM {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="The rubble has piled up\nhigh in the entrance way.\nIt is too\nheavy to move. You\nwonder if the water chip\nmight have once\nbeen there. If it was,\nit is no longer\navailable.\n---\nBig, heavy rocks are\nblocking the way to the\nroom. You\nstrain to move a rock,\nbut it fails to budge."]
+}

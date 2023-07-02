@@ -1,0 +1,7 @@
+digraph GUARD {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "do_dialogue" [style=dotted color="#555555"]
+  "start" [label=""]
+  "do_dialogue" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_dialogue" [label="I'm on duty. Go away.\n---\nBe good in this town or\nyou'll answer to me.\n---\nGot any donuts?\n---\nEver get the feeling\nyou're being watched?\nLike you're being\ncontrolled\nby some distant being? I\ndo.\n---\nDid you hear what the Rad\nScorpion did to Bill? \nThey're still trying to\n locate his legs.\n---\nSo you think you can\nhandle a Rad Scorpion,\nhuh?\n---\nYou don't look very tough\nto me."]
+}

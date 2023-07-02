@@ -1,0 +1,13 @@
+digraph coke {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" -> "Coke00" [style=dotted color="#555555"]
+  "use_p_proc" -> "Coke01" [style=dotted color="#555555"]
+  "use_p_proc" [label=""]
+  "Coke00" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "Coke00" [label="Он неисправен."]
+  "Coke01" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "Coke01" [label="Вы нашли несколько старых\nбутылочных пробок."]
+}

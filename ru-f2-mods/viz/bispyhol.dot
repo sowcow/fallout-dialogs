@@ -1,0 +1,8 @@
+digraph bispyhol {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Дисплей Пип-Боя:\nКопирование данных с\nдиска.\n---\nДисплей Пип-Боя: Файл\nнайден в системе.\nЗагрузка прервана."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Вы видите обтрепанную\nленту."]
+}

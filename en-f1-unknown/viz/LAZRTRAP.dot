@@ -1,0 +1,4 @@
+digraph LAZRTRAP {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Oh no.\n---\nYou tripped a laser wire\nsetting off some type of\ndefense mechanism.\nYou take a point of\ndamage.\n---\nYou tripped a laser wire\nsetting off some type of\ndefense mechanism.\n You take \n---\n points of damage."]
+}

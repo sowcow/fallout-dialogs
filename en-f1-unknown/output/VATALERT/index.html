@@ -1,0 +1,159 @@
+<!DOCTYPE html><html><head><title>VATALERT</title><meta charset="utf-8" /></head><body><svg width="812pt" height="238pt"
+ viewBox="0.00 0.00 811.97 237.68" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 233.68)">
+<title>VATALERT</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-233.68 807.97,-233.68 807.97,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="406.11" cy="-211.68" rx="27" ry="18"/>
+</g>
+<!-- description_p_proc -->
+<g id="node2" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="130.11" cy="-78.84" rx="130.11" ry="78.84"/>
+<text text-anchor="middle" x="130.11" y="-117.29" font-family="Times,serif" font-size="14.00">There is something odd</text>
+<text text-anchor="middle" x="130.11" y="-100.04" font-family="Times,serif" font-size="14.00">about that part of the</text>
+<text text-anchor="middle" x="130.11" y="-82.79" font-family="Times,serif" font-size="14.00">floor.</text>
+<text text-anchor="middle" x="130.11" y="-65.54" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="130.11" y="-48.29" font-family="Times,serif" font-size="14.00">You notice nothing</text>
+<text text-anchor="middle" x="130.11" y="-31.04" font-family="Times,serif" font-size="14.00">special.</text>
+</g>
+<!-- start&#45;&gt;description_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;description_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M382.41,-202.67C354.76,-193.05 307.87,-175.93 269.11,-157.68 257.16,-152.06 244.84,-145.83 232.69,-139.41"/>
+<polygon fill="#555555" stroke="#555555" points="234.47,-135.86 224,-134.23 231.17,-142.03 234.47,-135.86"/>
+</g>
+<!-- spatial_p_proc -->
+<g id="node3" class="node">
+<title>spatial_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="406.11" cy="-78.84" rx="127.99" ry="66.64"/>
+<text text-anchor="middle" x="406.11" y="-108.67" font-family="Times,serif" font-size="14.00">An alarm sounds in the</text>
+<text text-anchor="middle" x="406.11" y="-91.42" font-family="Times,serif" font-size="14.00">distance.</text>
+<text text-anchor="middle" x="406.11" y="-74.17" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="406.11" y="-56.92" font-family="Times,serif" font-size="14.00">There is some sort of</text>
+<text text-anchor="middle" x="406.11" y="-39.67" font-family="Times,serif" font-size="14.00">sensor at your feet.</text>
+</g>
+<!-- start&#45;&gt;spatial_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;spatial_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M406.11,-193.31C406.11,-183.45 406.11,-170.34 406.11,-156.55"/>
+<polygon fill="#555555" stroke="#555555" points="409.61,-156.91 406.11,-146.91 402.61,-156.91 409.61,-156.91"/>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node4" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="678.11" cy="-78.84" rx="125.87" ry="54.45"/>
+<text text-anchor="middle" x="678.11" y="-100.04" font-family="Times,serif" font-size="14.00">You disarm the sensor.</text>
+<text text-anchor="middle" x="678.11" y="-82.79" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="678.11" y="-65.54" font-family="Times,serif" font-size="14.00">You fail to disarm the</text>
+<text text-anchor="middle" x="678.11" y="-48.29" font-family="Times,serif" font-size="14.00">sensor.</text>
+</g>
+<!-- start&#45;&gt;use_skill_on_p_proc -->
+<g id="edge3" class="edge">
+<title>start&#45;&gt;use_skill_on_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M430.09,-202.67C457.81,-193.12 504.57,-176.11 543.11,-157.68 560.98,-149.14 579.68,-139.11 597.26,-129.15"/>
+<polygon fill="#555555" stroke="#555555" points="598.4,-131.96 605.35,-123.95 594.93,-125.88 598.4,-131.96"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (not(initialized)) then begin\n  initialized := 1;\nend\nelse begin\n  if (script_action == 3) then begin\n    call description_p_proc;\n  end\n  else begin\n    if (script_action == 2) then begin\n      call spatial_p_proc;\n    end\n    else begin\n      if (script_action == 8) then begin\n        call use_skill_on_p_proc;\n      end\n    end\n  end\nend\n","description_p_proc":"variable LVar0 := 0;\nLVar0 := message_str(611, 100);\nif (not(local_var(0))) then begin\n  if (not(is_success(do_check(dude_obj, 1, has_trait(0, dude_obj, 0))))) then begin\n    LVar0 := message_str(611, 101);\n  end\n  else begin\n    set_local_var(0, 1);\n  end\nend\ndisplay_msg(LVar0);\n","spatial_p_proc":"if (map_var(7) == 0) then begin\n  if (not(is_success(do_check(dude_obj, 6, 0)))) then begin\n    set_global_var(146, 1);\n    set_map_var(7, 1);\n    display_msg(message_str(611, 102));\n    move_to(self_obj, 7000, 0);\n    removal_ptr := self_obj;\n  end\nend\nelse begin\n  display_msg(message_str(611, 103));\nend\n","use_skill_on_p_proc":"if (action_being_used == 11) then begin\n  if (local_var(0)) then begin\n    script_overrides;\n    if (is_success(roll_vs_skill(dude_obj, 11, 0))) then begin\n      display_msg(message_str(611, 104));\n      move_to(self_obj, 7000, 0);\n      removal_ptr := self_obj;\n      set_map_var(12, 1);\n    end\n    else begin\n      display_msg(message_str(611, 105));\n    end\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

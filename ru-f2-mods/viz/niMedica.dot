@@ -1,0 +1,6 @@
+digraph niMedica {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Вы использовали\nмедицинский модуль для\nПип-Боя. Огромный объем\nзнаний по медицине\nзатопил ваш мозг.\n---\nВы использовали\nмедицинский модуль для\nПип-Боя. Огромный объем\nзнаний по медицине\nзатопил ваш мозг.\n---\nОго. Здравствуйте,\nдоктор."]
+}

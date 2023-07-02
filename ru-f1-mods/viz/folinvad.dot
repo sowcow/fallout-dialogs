@@ -1,0 +1,16 @@
+digraph folinvad {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "Initialize_p_proc" [style=dotted color="#555555"]
+  "start" -> "talk_p_proc" [style=dotted color="#555555"]
+  "start" -> "critter_p_proc" [style=dotted color="#555555"]
+  "start" -> "map_enter_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "talk_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "talk_p_proc" [label=""]
+  "Initialize_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "Initialize_p_proc" [label=""]
+  "critter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "critter_p_proc" [label="Приятно встретиться.\nЗаходи.\n---\nЗдесь стены как будто\nдерьмом измазаны.\n---\nМеня здесь мутит.\n---\nНиколь сказала нам\nвозвращаться, как только\nты покинешь Собор."]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+}

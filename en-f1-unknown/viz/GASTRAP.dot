@@ -1,0 +1,4 @@
+digraph GASTRAP {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Uh oh.\n---\nYou set off a gas trap\nand take a point of\ndamage.\n---\nYou set off a gas trap\nand take\n---\n points of damage."]
+}

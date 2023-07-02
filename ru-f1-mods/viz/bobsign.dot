@@ -1,0 +1,9 @@
+digraph bobsign {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="На шашлычной висит\nлистовка.\n---\nШашлычная Боба."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Закрыто по распоряжению\nшерифа Джастина Грина.\n---\nФирменная игуана Боба.\nКак можно не любить\nсвежеподжаренную игуану?"]
+}

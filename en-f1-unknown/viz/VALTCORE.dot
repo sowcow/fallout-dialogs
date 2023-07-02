@@ -1,0 +1,7 @@
+digraph VALTCORE {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "spatial_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="This is the Central Core.\nThis is the heart of\n the computer system."]
+}

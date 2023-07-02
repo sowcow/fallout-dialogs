@@ -1,0 +1,15 @@
+digraph mutant2 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "timeforwhat" [style=dotted color="#555555"]
+  "start" -> "do_dialogue" [style=dotted color="#555555"]
+  "start" -> "do_dialogue" [style=dotted color="#555555"]
+  "start" [label="Это какой-то огромный\nсупермутант! И у него\nочень большая пушка!"]
+  "do_dialogue" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_dialogue" [label="Отведи его к Гарри. Он\nзнает, что с ним делать.\n---\nНам следует отвести ее к\nГарри. У него на всех\nженщин планы имеются."]
+  "timeforwhat" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timeforwhat" [label=""]
+  "genericend" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "genericend" [label=""]
+  "genericcbt" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "genericcbt" [label=""]
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html><html><head><title>MVNUKE</title><meta charset="utf-8" /></head><body><svg width="514pt" height="579pt"
+ viewBox="0.00 0.00 514.17 578.93" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 574.93)">
+<title>MVNUKE</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-574.93 510.17,-574.93 510.17,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="141.77" cy="-540.87" rx="94.05" ry="30.05"/>
+<text text-anchor="middle" x="141.77" y="-544.82" font-family="Times,serif" font-size="14.00">This is a nuclear</text>
+<text text-anchor="middle" x="141.77" y="-527.57" font-family="Times,serif" font-size="14.00">warhead.</text>
+</g>
+<!-- skills -->
+<g id="node2" class="node">
+<title>skills</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="141.77" cy="-237.41" rx="141.77" ry="237.41"/>
+<text text-anchor="middle" x="141.77" y="-387.99" font-family="Times,serif" font-size="14.00">This is a nuclear</text>
+<text text-anchor="middle" x="141.77" y="-370.74" font-family="Times,serif" font-size="14.00">warhead. It is controlled</text>
+<text text-anchor="middle" x="141.77" y="-353.49" font-family="Times,serif" font-size="14.00">by the computer attached</text>
+<text text-anchor="middle" x="141.77" y="-336.24" font-family="Times,serif" font-size="14.00"> by the cables.</text>
+<text text-anchor="middle" x="141.77" y="-318.99" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="141.77" y="-301.74" font-family="Times,serif" font-size="14.00">There is nothing on this</text>
+<text text-anchor="middle" x="141.77" y="-284.49" font-family="Times,serif" font-size="14.00">nuclear warhead that</text>
+<text text-anchor="middle" x="141.77" y="-267.24" font-family="Times,serif" font-size="14.00">needs repairing.</text>
+<text text-anchor="middle" x="141.77" y="-249.99" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="141.77" y="-232.74" font-family="Times,serif" font-size="14.00">There is nothing on this</text>
+<text text-anchor="middle" x="141.77" y="-215.49" font-family="Times,serif" font-size="14.00">nuclear warhead that can</text>
+<text text-anchor="middle" x="141.77" y="-198.24" font-family="Times,serif" font-size="14.00">be lockpicked.</text>
+<text text-anchor="middle" x="141.77" y="-180.99" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="141.77" y="-163.74" font-family="Times,serif" font-size="14.00">This is a very big trap</text>
+<text text-anchor="middle" x="141.77" y="-146.49" font-family="Times,serif" font-size="14.00">that cannot be disarmed</text>
+<text text-anchor="middle" x="141.77" y="-129.24" font-family="Times,serif" font-size="14.00">or armed from here.</text>
+<text text-anchor="middle" x="141.77" y="-111.99" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="141.77" y="-94.74" font-family="Times,serif" font-size="14.00">That doesn&#39;t seem to be</text>
+<text text-anchor="middle" x="141.77" y="-77.49" font-family="Times,serif" font-size="14.00">working.</text>
+</g>
+<!-- start&#45;&gt;skills -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;skills</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M141.77,-510.42C141.77,-503.29 141.77,-495.09 141.77,-486.09"/>
+<polygon fill="#555555" stroke="#555555" points="145.28,-486.17 141.77,-476.17 138.28,-486.17 145.28,-486.17"/>
+</g>
+<!-- reset -->
+<g id="node3" class="node">
+<title>reset</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="379.77" cy="-540.87" rx="126.4" ry="30.05"/>
+<text text-anchor="middle" x="379.77" y="-544.82" font-family="Times,serif" font-size="14.00">You have disarmed the</text>
+<text text-anchor="middle" x="379.77" y="-527.57" font-family="Times,serif" font-size="14.00">nuclear warhead.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 21) then begin\n  script_overrides;\n  display_msg(message_str(449, 100));\nend\nelse begin\n  if (script_action == 8) then begin\n    set_map_var(5, 1);\n    GVar0 := action_being_used;\n    script_overrides;\n    call skills;\n  end\nend\n","skills":"if (GVar0 == 12) then begin\n  display_msg(message_str(449, 108));\nend\nelse begin\n  if (GVar0 == 13) then begin\n    display_msg(message_str(449, 109));\n  end\n  else begin\n    if (GVar0 == 9) then begin\n      display_msg(message_str(449, 110));\n    end\n    else begin\n      if (GVar0 == 11) then begin\n        display_msg(message_str(449, 111));\n      end\n      else begin\n        display_msg(message_str(449, 105));\n      end\n    end\n  end\nend\n","reset":"display_msg(message_str(449, 103));\nset_global_var(55, 0);\nset_global_var(18, 0);\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

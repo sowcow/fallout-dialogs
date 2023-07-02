@@ -1,0 +1,18 @@
+digraph diStill {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите вдребезги\nразбитый самогонный\nаппарат.\n---\nА-а, так у Бекки есть\nсамогонный аппарат. Надо\nскорее сообщить об этом\nФрэнки.\n---\nВы видите самогонный\nаппарат."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Вы видите вдребезги\nразбитый самогонный\nаппарат.\n---\nА-а, так у Бекки есть\nсамогонный аппарат. Надо\nскорее сообщить об этом\nФрэнки.\n---\nВы видите самогонный\nаппарат.\n---\nВы видите самогонный\nаппарат."]
+  "damage_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "damage_p_proc" [label="Самогонный аппарат\nуничтожен."]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="Самогонный аппарат\nуничтожен."]
+}

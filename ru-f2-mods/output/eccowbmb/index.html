@@ -1,0 +1,187 @@
+<!DOCTYPE html><html><head><title>eccowbmb</title><meta charset="utf-8" /></head><body><svg width="998pt" height="116pt"
+ viewBox="0.00 0.00 998.00 116.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
+<title>eccowbmb</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-112 994,-112 994,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node2" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;map_enter_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;map_enter_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M27,-71.7C27,-64.24 27,-55.32 27,-46.97"/>
+<polygon fill="#555555" stroke="#555555" points="30.5,-47.1 27,-37.1 23.5,-47.1 30.5,-47.1"/>
+</g>
+<!-- use_p_proc -->
+<g id="node3" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node4" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="171" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- description_p_proc -->
+<g id="node5" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="243" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node6" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="315" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- use_obj_on_p_proc -->
+<g id="node7" class="node">
+<title>use_obj_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="387" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- damage_p_proc -->
+<g id="node8" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="459" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- map_update_p_proc -->
+<g id="node9" class="node">
+<title>map_update_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="531" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node10" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="603" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node11" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="675" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- combat_p_proc -->
+<g id="node12" class="node">
+<title>combat_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="747" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node13" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="819" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node14" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="891" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- doExplosion -->
+<g id="node15" class="node">
+<title>doExplosion</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="963" cy="-90" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (calledMapEnter == 0) then begin\n  calledMapEnter := 1;\n  call map_enter_p_proc;\nend\n","use_p_proc":"[]","look_at_p_proc":"[]","description_p_proc":"[]","use_skill_on_p_proc":"[]","use_obj_on_p_proc":"[]","damage_p_proc":"[]","map_enter_p_proc":"critter_add_trait(self_obj, 1, 6, 143);\nadd_timer_event(self_obj, random(10, 50), 1);\n","map_update_p_proc":"[]","talk_p_proc":"[]","destroy_p_proc":"set_map_var(0, map_var(0) - 1);\n","combat_p_proc":"if (not(doExplosion)) then begin\n  attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\nend\n","critter_p_proc":"if (not(doExplosion)) then begin\n  if (not(anim_busy(self_obj))) then begin\n    reg_anim_func(2, self_obj);\n    reg_anim_func(1, 1);\n    animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(dude_obj), random(0, 5), 1), 1);\n    reg_anim_func(3, 0);\n  end\nend\n","timed_event_p_proc":"if (fixed_param == 1) then begin\n  float_msg(self_obj, message_str(203, 201 + random(0, 5)), 2);\n  add_timer_event(self_obj, random(10, 50), 1);\nend\n","doExplosion":"if (tile_distance_objs(self_obj, dude_obj) < 2) then begin\n  explosion(tile_num(self_obj), elevation(self_obj), 150);\n  return 1;\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

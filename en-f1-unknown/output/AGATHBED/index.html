@@ -1,0 +1,161 @@
+<!DOCTYPE html><html><head><title>AGATHBED</title><meta charset="utf-8" /></head><body><svg width="766pt" height="261pt"
+ viewBox="0.00 0.00 766.17 260.60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256.6)">
+<title>AGATHBED</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-256.6 762.17,-256.6 762.17,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="340.2" cy="-234.6" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node2" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="149.2" cy="-138.35" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;use_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;use_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M314.2,-229.04C281.82,-222.42 225.81,-207.87 185.2,-180.6 178.36,-176.01 172.03,-169.81 166.65,-163.6"/>
+<polygon fill="#555555" stroke="#555555" points="168.94,-161.87 159.93,-156.3 163.5,-166.27 168.94,-161.87"/>
+</g>
+<!-- description_p_proc -->
+<g id="node3" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="340.2" cy="-138.35" rx="146.02" ry="42.25"/>
+<text text-anchor="middle" x="340.2" y="-150.93" font-family="Times,serif" font-size="14.00">The bed looks neatly made</text>
+<text text-anchor="middle" x="340.2" y="-133.68" font-family="Times,serif" font-size="14.00">despite its tattered</text>
+<text text-anchor="middle" x="340.2" y="-116.43" font-family="Times,serif" font-size="14.00">nature.</text>
+</g>
+<!-- start&#45;&gt;description_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;description_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M340.2,-216.32C340.2,-209.21 340.2,-200.57 340.2,-191.69"/>
+<polygon fill="#555555" stroke="#555555" points="343.7,-191.8 340.2,-181.8 336.7,-191.8 343.7,-191.8"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node4" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="631.2" cy="-138.35" rx="126.97" ry="18"/>
+<text text-anchor="middle" x="631.2" y="-133.68" font-family="Times,serif" font-size="14.00">You see a tattered bed.</text>
+</g>
+<!-- start&#45;&gt;look_at_p_proc -->
+<g id="edge3" class="edge">
+<title>start&#45;&gt;look_at_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M364.01,-225.89C408.95,-211.34 507.49,-179.42 571.52,-158.68"/>
+<polygon fill="#555555" stroke="#555555" points="572.44,-161.74 580.88,-155.33 570.29,-155.08 572.44,-161.74"/>
+</g>
+<!-- do_stuff -->
+<g id="node5" class="node">
+<title>do_stuff</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="149.2" cy="-30.05" rx="149.2" ry="30.05"/>
+<text text-anchor="middle" x="149.2" y="-34" font-family="Times,serif" font-size="14.00">Agatha would not be happy</text>
+<text text-anchor="middle" x="149.2" y="-16.75" font-family="Times,serif" font-size="14.00">if you messed up her bed.</text>
+</g>
+<!-- use_p_proc&#45;&gt;do_stuff -->
+<g id="edge4" class="edge">
+<title>use_p_proc&#45;&gt;do_stuff</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M149.2,-120.27C149.2,-107.08 149.2,-88.28 149.2,-71.33"/>
+<polygon fill="#555555" stroke="#555555" points="152.7,-71.54 149.2,-61.54 145.7,-71.54 152.7,-71.54"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 6) then begin\n  call use_p_proc;\nend\nelse begin\n  if (script_action == 3) then begin\n    call description_p_proc;\n  end\n  else begin\n    if (script_action == 21) then begin\n      call look_at_p_proc;\n    end\n  end\nend\n","do_stuff":"script_overrides;\ndisplay_msg(message_str(0, 102));\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(0, 101));\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(0, 100));\n","use_p_proc":"call do_stuff;\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

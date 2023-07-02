@@ -1,0 +1,4 @@
+digraph storerom {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Эта комната уже была\nразграблена."]
+}

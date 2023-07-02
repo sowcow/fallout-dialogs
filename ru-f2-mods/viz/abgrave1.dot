@@ -1,0 +1,17 @@
+digraph abgrave1 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите надгробную\nнадпись."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Надгробная надпись\nгласит:"]
+  "num_to_bit" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "num_to_bit" [label=""]
+  "give_headstone_name" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "give_headstone_name" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" -> "give_headstone_name" [style=dotted color="#555555"]
+  "map_enter_p_proc" [label=""]
+}

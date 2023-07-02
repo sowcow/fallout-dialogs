@@ -1,0 +1,15 @@
+digraph SDRESSER {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "pickup_p_proc" [style=dotted color="#555555"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" -> "look_at_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label="All you see are some\nthread bare clothes here."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="This dresser looks well\ncared for."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="This dresser looks well\ncared for."]
+  "chairend" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "chairend" [label=""]
+}

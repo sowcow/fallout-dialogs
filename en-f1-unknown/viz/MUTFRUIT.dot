@@ -1,0 +1,4 @@
+digraph MUTFRUIT {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="You eat the fruit."]
+}

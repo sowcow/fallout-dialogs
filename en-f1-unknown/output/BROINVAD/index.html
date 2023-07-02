@@ -1,0 +1,167 @@
+<!DOCTYPE html><html><head><title>BROINVAD</title><meta charset="utf-8" /></head><body><svg width="510pt" height="384pt"
+ viewBox="0.00 0.00 510.00 384.06" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 380.06)">
+<title>BROINVAD</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-380.06 506,-380.06 506,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="193" cy="-358.06" rx="27" ry="18"/>
+</g>
+<!-- Initialize_p_proc -->
+<g id="node2" class="node">
+<title>Initialize_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-152.03" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;Initialize_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;Initialize_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M166.39,-353.5C136.74,-348.09 89.5,-334.95 63,-304.06 33.18,-269.28 27.09,-214.11 26.36,-180.95"/>
+<polygon fill="#555555" stroke="#555555" points="29.86,-181.19 26.3,-171.21 22.86,-181.24 29.86,-181.19"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node3" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-152.03" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;talk_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;talk_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M174.31,-344.61C161.36,-335.02 144.76,-320.63 135,-304.06 112.1,-265.17 103.75,-212.54 100.72,-180.78"/>
+<polygon fill="#555555" stroke="#555555" points="104.15,-180.77 99.83,-171.09 97.17,-181.35 104.15,-180.77"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node4" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="287" cy="-152.03" rx="143.37" ry="152.03"/>
+<text text-anchor="middle" x="287" y="-242.23" font-family="Times,serif" font-size="14.00">Good, you&#39;re here. Let&#39;s</text>
+<text text-anchor="middle" x="287" y="-224.98" font-family="Times,serif" font-size="14.00">torch this place.</text>
+<text text-anchor="middle" x="287" y="-207.73" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="287" y="-190.48" font-family="Times,serif" font-size="14.00">There is something wrong</text>
+<text text-anchor="middle" x="287" y="-173.23" font-family="Times,serif" font-size="14.00">about this room.</text>
+<text text-anchor="middle" x="287" y="-155.98" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="287" y="-138.73" font-family="Times,serif" font-size="14.00">This place is starting to</text>
+<text text-anchor="middle" x="287" y="-121.48" font-family="Times,serif" font-size="14.00">give me the</text>
+<text text-anchor="middle" x="287" y="-104.23" font-family="Times,serif" font-size="14.00">heebee&#45;jeebies.</text>
+<text text-anchor="middle" x="287" y="-86.98" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="287" y="-69.73" font-family="Times,serif" font-size="14.00">Time for us to head back</text>
+<text text-anchor="middle" x="287" y="-52.48" font-family="Times,serif" font-size="14.00">to the Brotherhood now.</text>
+</g>
+<!-- start&#45;&gt;critter_p_proc -->
+<g id="edge3" class="edge">
+<title>start&#45;&gt;critter_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M200.69,-340.36C205.49,-329.94 212.19,-315.4 219.75,-298.99"/>
+<polygon fill="#555555" stroke="#555555" points="223.29,-300.68 224.29,-290.13 216.93,-297.75 223.29,-300.68"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node5" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="475" cy="-152.03" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;map_enter_p_proc -->
+<g id="edge4" class="edge">
+<title>start&#45;&gt;map_enter_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M219.97,-354.83C277.17,-349.54 408.01,-334.38 439,-304.06 472.06,-271.71 476.98,-214.87 476.62,-180.9"/>
+<polygon fill="#555555" stroke="#555555" points="480.1,-181.23 476.33,-171.33 473.11,-181.42 480.1,-181.23"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (Only_Once) then begin\n  call Initialize_p_proc;\nend\nelse begin\n  if (script_action == 11) then begin\n    call talk_p_proc;\n  end\n  else begin\n    if (script_action == 12) then begin\n      call critter_p_proc;\n    end\n    else begin\n      if (script_action == 15) then begin\n        call map_enter_p_proc;\n      end\n    end\n  end\nend\n","talk_p_proc":"if (local_var(3) == 0) then begin\n  if (get_critter_stat(dude_obj, 34) == 0) then begin\n    float_msg(self_obj, message_str(819, random(100, 105)), 9);\n  end\n  else begin\n    float_msg(self_obj, message_str(819, random(106, 111)), 9);\n  end\nend\n","Initialize_p_proc":"critter_add_trait(self_obj, 1, 6, 0);\ncritter_add_trait(self_obj, 1, 5, 65);\nOnly_Once := 0;\n","critter_p_proc":"variable LVar0 := 0;\nif (global_var(223) == 1) then begin\n  if (local_var(4) == 0) then begin\n    if (Hex_Number == 0) then begin\n      LVar0 := random(1, 6);\n      if (LVar0 == 1) then begin\n        Hex_Number := 22098;\n      end\n      else begin\n        if (LVar0 == 2) then begin\n          Hex_Number := 20700;\n        end\n        else begin\n          if (LVar0 == 3) then begin\n            Hex_Number := 20506;\n          end\n          else begin\n            if (LVar0 == 4) then begin\n              Hex_Number := 20902;\n            end\n            else begin\n              if (LVar0 == 5) then begin\n                Hex_Number := 21708;\n              end\n              else begin\n                Hex_Number := 20900;\n              end\n            end\n          end\n        end\n      end\n    end\n    if (tile_num(self_obj) != Hex_Number) then begin\n      animate_move_obj_to_tile(self_obj, Hex_Number, 0);\n    end\n    else begin\n      if (tile_num(self_obj) == Hex_Number) then begin\n        set_local_var(4, 1);\n      end\n    end\n  end\n  else begin\n    if ((tile_distance_objs(dude_obj, self_obj) > 10) and (tile_distance_objs(dude_obj, self_obj) < 15)) then begin\n      animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(dude_obj), random(0, 5), random(3, 6)), 0);\n    end\n    else begin\n      if (tile_distance_objs(dude_obj, self_obj) >= 15) then begin\n        animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(dude_obj), random(0, 5), random(3, 6)), 1);\n      end\n      else begin\n        if (random(1, 100) == 1) then begin\n          animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(self_obj), random(0, 5), random(3, 6)), 0);\n        end\n      end\n    end\n  end\n  if (local_var(4) == 1) then begin\n    if ((cur_map_index == 17) or (cur_map_index == 18)) then begin\n      if (local_var(0) == 0) then begin\n        float_msg(self_obj, message_str(819, 112), 9);\n        set_local_var(0, 1);\n        party_add(self_obj);\n      end\n    end\n    else begin\n      if (cur_map_index == 33) then begin\n        if (local_var(1) == 0) then begin\n          set_local_var(1, 1);\n          float_msg(self_obj, message_str(819, 113), 9);\n        end\n      end\n      else begin\n        if (cur_map_index == 34) then begin\n          if (local_var(2) == 0) then begin\n            set_local_var(2, 1);\n            float_msg(self_obj, message_str(819, 114), 9);\n          end\n        end\n        else begin\n          if (local_var(3) == 0) then begin\n            set_local_var(3, 1);\n            float_msg(self_obj, message_str(819, 115), 9);\n            party_remove(self_obj);\n            animate_move_obj_to_tile(self_obj, 26000, 0);\n            set_global_var(223, 10);\n          end\n        end\n      end\n    end\n  end\nend\nelse begin\n  if (global_var(223) == 2) then begin\n    if (local_var(4) == 0) then begin\n      set_obj_visibility(self_obj, 0);\n      if (Hex_Number == 0) then begin\n        LVar0 := random(1, 6);\n        if (LVar0 == 1) then begin\n          Hex_Number := 21534;\n        end\n        else begin\n          if (LVar0 == 2) then begin\n            Hex_Number := 22136;\n          end\n          else begin\n            if (LVar0 == 3) then begin\n              Hex_Number := 20932;\n            end\n            else begin\n              if (LVar0 == 4) then begin\n                Hex_Number := 22938;\n              end\n              else begin\n                if (LVar0 == 5) then begin\n                  Hex_Number := 21931;\n                end\n                else begin\n                  Hex_Number := 22733;\n                end\n              end\n            end\n          end\n        end\n      end\n      if (tile_num(self_obj) != Hex_Number) then begin\n        animate_move_obj_to_tile(self_obj, Hex_Number, 0);\n      end\n      else begin\n        set_local_var(4, 1);\n      end\n    end\n    else begin\n      if ((tile_distance_objs(dude_obj, self_obj) > 8) and (tile_distance_objs(dude_obj, self_obj) < 12)) then begin\n        animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(dude_obj), random(0, 5), random(3, 6)), 0);\n      end\n      else begin\n        if (tile_distance_objs(dude_obj, self_obj) >= 12) then begin\n          animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(dude_obj), random(0, 5), random(3, 6)), 1);\n        end\n        else begin\n          if (random(1, 100) == 1) then begin\n            animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(self_obj), random(0, 5), random(3, 6)), 0);\n          end\n        end\n      end\n    end\n  end\n  else begin\n  end\nend\n","map_enter_p_proc":"if ((global_var(223) == 2) and (cur_map_index != 30)) then begin\n  set_global_var(223, 10);\nend\nif ((global_var(223) != 1) and (global_var(223) != 2)) then begin\n  set_obj_visibility(self_obj, 1);\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

@@ -1,0 +1,14 @@
+digraph NH2OCOMP {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "search" [style=dotted color="#555555"]
+  "start" -> "removal" [style=dotted color="#555555"]
+  "start" -> "removal" [style=dotted color="#555555"]
+  "start" -> "skills" [style=dotted color="#555555"]
+  "start" [label="You see a water\nprocessing control\ncomputer. It is\nfunctional.\n---\nYou are too far away to\ncarefully examine the\nwater computer.\n---\nYou reinstall the water\nchip into the computer.\nThe computer\nreboots after a moment,\nand proceeds to function\nas normal.\n---\nThis item cannot be used\non the computer."]
+  "search" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "search" [label="You see a water\nprocessing control\ncomputer. It has\nmalfunctioned due to the\nremoval of a critical\npiece\n of hardware.\n---\nYour search the water\nprocessing control\ncomputer is successful.\nYou find the water chip\nwithout a problem.\n---\nYou search the water\ncomputer. It takes a\nwhile but you\neventually discover the\nwater chip."]
+  "removal" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "removal" [label="The computer cannot be\nrepaired without a\nfunctional water\n chip.\n---\nAfter shutting down the\nWater Purification\nComputer, you can now\nhear the repaired water\npump working in the\ndistance, bringing water\nup\nfrom what must be a deep\nwell under Necropolis.\n---\nYou easily remove the\nwater chip from the\ncomputer. You hear\nthe flow of water to the\ncity stop.\n---\nYou gain \n---\nexperience points for\ngetting a water chip.\n---\nYou struggle with the\ncomputer for a while, but\nyou cannot\nremove the chip. After a\nmoment, you realize you\nforgot to remove\n the locking bolts.\n---\nYou did not remove the\nchip. Perhaps you should\ntry again,\nthis time a little more\ncarefully."]
+  "skills" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "skills" [label="You learn that there is\nno way to fix the\ncomputer without\nreinstalling the water\nchip.\n---\nYou examine the computer\ncarefully. Your\nanalytical mind discovers\na couple of methods that\nwill ease the removal of\nthe water chip.\n---\nYou learn nothing special\nabout the water computer.\n---\nYou learn nothing special\nabout the water computer."]
+}

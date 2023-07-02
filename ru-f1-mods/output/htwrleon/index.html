@@ -1,0 +1,607 @@
+<!DOCTYPE html><html><head><title>htwrleon</title><meta charset="utf-8" /></head><body><svg width="2001pt" height="2149pt"
+ viewBox="0.00 0.00 2000.50 2148.85" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 2144.85)">
+<title>htwrleon</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-2144.85 1996.5,-2144.85 1996.5,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="162" cy="-2037.61" rx="27" ry="18"/>
+</g>
+<!-- combat -->
+<g id="node2" class="node">
+<title>combat</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node3" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="35" cy="-91" rx="27" ry="18"/>
+</g>
+<!-- critter_p_proc&#45;&gt;combat -->
+<g id="edge1" class="edge">
+<title>critter_p_proc&#45;&gt;combat</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M48.57,-74.94C57.14,-65.44 68.39,-52.96 78.08,-42.2"/>
+<polygon fill="#555555" stroke="#555555" points="80.35,-44.81 84.45,-35.04 75.15,-40.12 80.35,-44.81"/>
+</g>
+<!-- LeonPerformDump -->
+<g id="node4" class="node">
+<title>LeonPerformDump</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- critter_p_proc&#45;&gt;LeonPerformDump -->
+<g id="edge2" class="edge">
+<title>critter_p_proc&#45;&gt;LeonPerformDump</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M33.06,-72.81C32.19,-65.05 31.13,-55.68 30.15,-46.95"/>
+<polygon fill="#555555" stroke="#555555" points="33.52,-46.57 28.92,-37.03 26.56,-47.36 33.52,-46.57"/>
+</g>
+<!-- pickup_p_proc -->
+<g id="node5" class="node">
+<title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="570" cy="-2037.61" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node6" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="366" cy="-2037.61" rx="158.75" ry="103.24"/>
+<text text-anchor="middle" x="366" y="-2093.31" font-family="Times,serif" font-size="14.00">Что вы здесь делаете? Я</text>
+<text text-anchor="middle" x="366" y="-2076.06" font-family="Times,serif" font-size="14.00">на посту. Идите,</text>
+<text text-anchor="middle" x="366" y="-2058.81" font-family="Times,serif" font-size="14.00">поговорите с кем&#45;нибудь</text>
+<text text-anchor="middle" x="366" y="-2041.56" font-family="Times,serif" font-size="14.00">еще.</text>
+<text text-anchor="middle" x="366" y="-2024.31" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="366" y="-2007.06" font-family="Times,serif" font-size="14.00">Я надеялся, что твоя</text>
+<text text-anchor="middle" x="366" y="-1989.81" font-family="Times,serif" font-size="14.00">жалкая шкура когда&#45;нибудь</text>
+<text text-anchor="middle" x="366" y="-1972.56" font-family="Times,serif" font-size="14.00">появится здесь! Охрана!</text>
+</g>
+<!-- talk_p_proc&#45;&gt;combat -->
+<g id="edge4" class="edge">
+<title>talk_p_proc&#45;&gt;combat</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M250.65,-1966.12C176.51,-1919.85 94,-1866.11 94,-1856.13 94,-1856.13 94,-1856.13 94,-90 94,-75.76 95.01,-59.95 96.13,-46.87"/>
+<polygon fill="#555555" stroke="#555555" points="99.68,-47.47 97.11,-37.19 92.71,-46.83 99.68,-47.47"/>
+</g>
+<!-- get_reaction -->
+<g id="node7" class="node">
+<title>get_reaction</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="240" cy="-1855.13" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc&#45;&gt;get_reaction -->
+<g id="edge3" class="edge">
+<title>talk_p_proc&#45;&gt;get_reaction</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M300.79,-1943.2C284.62,-1920.04 268.65,-1897.17 257.14,-1880.68"/>
+<polygon fill="#555555" stroke="#555555" points="259.51,-1878.95 250.91,-1872.76 253.77,-1882.96 259.51,-1878.95"/>
+</g>
+<!-- Leon01 -->
+<g id="node8" class="node">
+<title>Leon01</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="464" cy="-1855.13" rx="114.87" ry="18"/>
+<text text-anchor="middle" x="464" y="-1850.45" font-family="Times,serif" font-size="14.00">Вы по какому делу?</text>
+</g>
+<!-- talk_p_proc&#45;&gt;Leon01 -->
+<g id="edge5" class="edge">
+<title>talk_p_proc&#45;&gt;Leon01</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M418.59,-1939.76C429.98,-1918.77 441.12,-1898.26 449.51,-1882.8"/>
+<polygon fill="#555555" stroke="#555555" points="452.91,-1884.88 454.61,-1874.42 446.76,-1881.54 452.91,-1884.88"/>
+</g>
+<!-- Leon08 -->
+<g id="node9" class="node">
+<title>Leon08</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1299" cy="-1855.13" rx="139.12" ry="42.25"/>
+<text text-anchor="middle" x="1299" y="-1867.7" font-family="Times,serif" font-size="14.00">Мистер Хайтауэр не</text>
+<text text-anchor="middle" x="1299" y="-1850.45" font-family="Times,serif" font-size="14.00">принимает посетителей.</text>
+<text text-anchor="middle" x="1299" y="-1833.2" font-family="Times,serif" font-size="14.00">Теперь уходите!</text>
+</g>
+<!-- talk_p_proc&#45;&gt;Leon08 -->
+<g id="edge6" class="edge">
+<title>talk_p_proc&#45;&gt;Leon08</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M473.72,-1961.59C493.08,-1950.9 513.61,-1941.23 534,-1934.38 644.71,-1897.16 961.48,-1874.26 1150.89,-1863.49"/>
+<polygon fill="#555555" stroke="#555555" points="1150.99,-1866.94 1160.78,-1862.88 1150.59,-1859.95 1150.99,-1866.94"/>
+</g>
+<!-- ReactToLevel -->
+<g id="node27" class="node">
+<title>ReactToLevel</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="149" cy="-1707.13" rx="27" ry="18"/>
+</g>
+<!-- get_reaction&#45;&gt;ReactToLevel -->
+<g id="edge43" class="edge">
+<title>get_reaction&#45;&gt;ReactToLevel</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M225.68,-1839.39C214.99,-1827.89 200.48,-1811.18 190,-1794.88 177.77,-1775.84 166.98,-1752.59 159.54,-1734.95"/>
+<polygon fill="#555555" stroke="#555555" points="162.4,-1733.7 155.36,-1725.78 155.92,-1736.36 162.4,-1733.7"/>
+</g>
+<!-- Leon01a -->
+<g id="node14" class="node">
+<title>Leon01a</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="557" cy="-1707.13" rx="27" ry="18"/>
+</g>
+<!-- Leon01&#45;&gt;Leon01a -->
+<g id="edge7" class="edge">
+<title>Leon01&#45;&gt;Leon01a</title>
+<path fill="none" stroke="#300099" d="M475.03,-1836.8C491.37,-1811.15 522.1,-1762.92 540.94,-1733.34"/>
+<polygon fill="#300099" stroke="#300099" points="544.41,-1735.4 546.83,-1725.09 538.51,-1731.64 544.41,-1735.4"/>
+<text text-anchor="middle" x="626.12" y="-1772.95" font-family="Times,serif" font-size="14.00" fill="#300099">Мне нужно поговорить с</text>
+<text text-anchor="middle" x="626.12" y="-1755.7" font-family="Times,serif" font-size="14.00" fill="#300099">мистером Хайтауэром.</text>
+</g>
+<!-- LeonCombat -->
+<g id="node15" class="node">
+<title>LeonCombat</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="661" cy="-91" rx="27" ry="18"/>
+</g>
+<!-- Leon01&#45;&gt;LeonCombat -->
+<g id="edge8" class="edge">
+<title>Leon01&#45;&gt;LeonCombat</title>
+<path fill="none" stroke="#009903" d="M439.57,-1837.11C425.42,-1826.29 408.07,-1811.26 396,-1794.88 229.51,-1568.88 172,-1485.06 172,-1204.36 172,-1204.36 172,-1204.36 172,-220.75 172,-127.51 508.7,-100.36 623.32,-93.82"/>
+<polygon fill="#009903" stroke="#009903" points="623.22,-97.27 633.01,-93.23 622.84,-90.28 623.22,-97.27"/>
+<text text-anchor="middle" x="274.75" y="-1293.43" font-family="Times,serif" font-size="14.00" fill="#009903">Мне нужно убить мистера</text>
+<text text-anchor="middle" x="274.75" y="-1276.18" font-family="Times,serif" font-size="14.00" fill="#009903">Хайтауэра.</text>
+</g>
+<!-- Leon03 -->
+<g id="node16" class="node">
+<title>Leon03</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="688" cy="-221.75" rx="138.59" ry="42.25"/>
+<text text-anchor="middle" x="688" y="-234.32" font-family="Times,serif" font-size="14.00">Мне не нравится ваше</text>
+<text text-anchor="middle" x="688" y="-217.07" font-family="Times,serif" font-size="14.00">отношение. Я вынужден</text>
+<text text-anchor="middle" x="688" y="-199.82" font-family="Times,serif" font-size="14.00">просить вас уйти..</text>
+</g>
+<!-- Leon01&#45;&gt;Leon03 -->
+<g id="edge9" class="edge">
+<title>Leon01&#45;&gt;Leon03</title>
+<path fill="none" stroke="#99002a" d="M449.5,-1836.98C428.99,-1810.92 394,-1759 394,-1708.13 394,-1708.13 394,-1708.13 394,-1374.61 394,-912.12 167.43,-717.95 426,-334.5 456.2,-289.72 508.32,-262.81 558.16,-246.67"/>
+<polygon fill="#99002a" stroke="#99002a" points="558.91,-249.79 567.42,-243.48 556.84,-243.1 558.91,-249.79"/>
+<text text-anchor="middle" x="457.38" y="-1370.93" font-family="Times,serif" font-size="14.00" fill="#99002a">Какое тебе дело?</text>
+</g>
+<!-- Leon04 -->
+<g id="node17" class="node">
+<title>Leon04</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="878" cy="-1597.68" rx="149.2" ry="54.45"/>
+<text text-anchor="middle" x="878" y="-1618.88" font-family="Times,serif" font-size="14.00">Что бы это ни было</text>
+<text text-anchor="middle" x="878" y="-1601.63" font-family="Times,serif" font-size="14.00">скажите мне и я ему</text>
+<text text-anchor="middle" x="878" y="-1584.38" font-family="Times,serif" font-size="14.00">передам. Мистер Х сейчас</text>
+<text text-anchor="middle" x="878" y="-1567.13" font-family="Times,serif" font-size="14.00">очень занят.</text>
+</g>
+<!-- Leon01&#45;&gt;Leon04 -->
+<g id="edge10" class="edge">
+<title>Leon01&#45;&gt;Leon04</title>
+<path fill="none" stroke="#005699" d="M565.46,-1846.44C615.35,-1838.91 674.58,-1824.06 721,-1794.88 773.58,-1761.82 816.24,-1704.85 843.74,-1660.79"/>
+<polygon fill="#005699" stroke="#005699" points="847.14,-1662.95 849.38,-1652.59 841.17,-1659.29 847.14,-1662.95"/>
+<text text-anchor="middle" x="923.75" y="-1711.08" font-family="Times,serif" font-size="14.00" fill="#005699">У меня срочное сообщение</text>
+<text text-anchor="middle" x="923.75" y="-1693.83" font-family="Times,serif" font-size="14.00" fill="#005699">для мистера Хайтауэра.</text>
+</g>
+<!-- Leon09 -->
+<g id="node18" class="node">
+<title>Leon09</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1600" cy="-221.75" rx="152.91" ry="42.25"/>
+<text text-anchor="middle" x="1600" y="-234.32" font-family="Times,serif" font-size="14.00">Ладно, дружок.</text>
+<text text-anchor="middle" x="1600" y="-217.07" font-family="Times,serif" font-size="14.00">Пройдем&#45;ка. [Леон хватает</text>
+<text text-anchor="middle" x="1600" y="-199.82" font-family="Times,serif" font-size="14.00">вас за руку.]</text>
+</g>
+<!-- Leon01&#45;&gt;Leon09 -->
+<g id="edge11" class="edge">
+<title>Leon01&#45;&gt;Leon09</title>
+<path fill="none" stroke="#839900" d="M569.93,-1847.81C814.09,-1833.2 1395.97,-1798.08 1400,-1794.88 1431.51,-1769.84 1426,-1748.38 1426,-1708.13 1426,-1708.13 1426,-1708.13 1426,-1436.48 1426,-1397.92 1424.04,-1388.16 1427.25,-1349.73 1462.11,-932.02 1557.5,-434.24 1589.43,-274.66"/>
+<polygon fill="#839900" stroke="#839900" points="1592.99,-275.7 1591.53,-265.21 1586.13,-274.32 1592.99,-275.7"/>
+<text text-anchor="middle" x="1448.38" y="-1370.93" font-family="Times,serif" font-size="14.00" fill="#839900">Ы&#45;гы!</text>
+</g>
+<!-- Leon08&#45;&gt;LeonCombat -->
+<g id="edge33" class="edge">
+<title>Leon08&#45;&gt;LeonCombat</title>
+<path fill="none" stroke="#109900" d="M1387.71,-1822.3C1435.19,-1798.98 1484,-1761.93 1484,-1708.13 1484,-1708.13 1484,-1708.13 1484,-575.22 1484,-468 1501.93,-436.22 1468,-334.5 1454.99,-295.5 1402.35,-200.49 1367,-179.5 1323.11,-153.44 1188.16,-170.95 1138,-161.5 1085.98,-151.7 1075.93,-137.26 1024,-127 906.86,-103.86 765.31,-95.82 698.89,-93.19"/>
+<polygon fill="#109900" stroke="#109900" points="699.26,-89.66 689.13,-92.79 698.99,-96.66 699.26,-89.66"/>
+<text text-anchor="middle" x="1565.75" y="-1293.43" font-family="Times,serif" font-size="14.00" fill="#109900">Я уйду, когда закончу</text>
+<text text-anchor="middle" x="1565.75" y="-1276.18" font-family="Times,serif" font-size="14.00" fill="#109900">свои дела, приятель!</text>
+</g>
+<!-- LeonKickOut -->
+<g id="node21" class="node">
+<title>LeonKickOut</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1418" cy="-91" rx="27" ry="18"/>
+</g>
+<!-- Leon08&#45;&gt;LeonKickOut -->
+<g id="edge34" class="edge">
+<title>Leon08&#45;&gt;LeonKickOut</title>
+<path fill="none" stroke="#99003d" d="M1435.63,-1846.56C1605.69,-1833.33 1874,-1798.18 1874,-1708.13 1874,-1708.13 1874,-1708.13 1874,-220.75 1874,-177.39 1880.55,-154.46 1847,-127 1817.11,-102.53 1555.61,-94.76 1456.16,-92.67"/>
+<polygon fill="#99003d" stroke="#99003d" points="1456.48,-89.16 1446.41,-92.45 1456.34,-96.15 1456.48,-89.16"/>
+<text text-anchor="middle" x="1933.25" y="-1284.81" font-family="Times,serif" font-size="14.00" fill="#99003d">Ладно, я ухожу.</text>
+</g>
+<!-- Leon08a -->
+<g id="node26" class="node">
+<title>Leon08a</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1120" cy="-1707.13" rx="27" ry="18"/>
+</g>
+<!-- Leon08&#45;&gt;Leon08a -->
+<g id="edge35" class="edge">
+<title>Leon08&#45;&gt;Leon08a</title>
+<path fill="none" stroke="#006a99" d="M1251.03,-1815C1216.83,-1787.1 1172.23,-1750.73 1144.88,-1728.42"/>
+<polygon fill="#006a99" stroke="#006a99" points="1147.6,-1725.31 1137.64,-1721.7 1143.18,-1730.73 1147.6,-1725.31"/>
+<text text-anchor="middle" x="1310.5" y="-1781.58" font-family="Times,serif" font-size="14.00" fill="#006a99">Мне очень нужно</text>
+<text text-anchor="middle" x="1310.5" y="-1764.33" font-family="Times,serif" font-size="14.00" fill="#006a99">поговорить с мистером</text>
+<text text-anchor="middle" x="1310.5" y="-1747.08" font-family="Times,serif" font-size="14.00" fill="#006a99">Хайтауэром.</text>
+</g>
+<!-- destroy_p_proc -->
+<g id="node10" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="642" cy="-2037.61" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node11" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="791" cy="-2037.61" rx="104.12" ry="30.05"/>
+<text text-anchor="middle" x="791" y="-2041.56" font-family="Times,serif" font-size="14.00">Вы видите Леона,</text>
+<text text-anchor="middle" x="791" y="-2024.31" font-family="Times,serif" font-size="14.00">охранника.</text>
+</g>
+<!-- damage_p_proc -->
+<g id="node12" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="940" cy="-2037.61" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node13" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1012" cy="-2037.61" rx="27" ry="18"/>
+</g>
+<!-- Leon01a&#45;&gt;Leon04 -->
+<g id="edge13" class="edge">
+<title>Leon01a&#45;&gt;Leon04</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M580.86,-1698.14C618.31,-1685.6 693.34,-1660.49 758.63,-1638.63"/>
+<polygon fill="#555555" stroke="#555555" points="759.65,-1641.65 768.02,-1635.16 757.43,-1635.01 759.65,-1641.65"/>
+</g>
+<!-- Leon02 -->
+<g id="node19" class="node">
+<title>Leon02</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="557" cy="-1289.48" rx="135.41" ry="42.25"/>
+<text text-anchor="middle" x="557" y="-1302.06" font-family="Times,serif" font-size="14.00">Хорошо. Я буду за вами</text>
+<text text-anchor="middle" x="557" y="-1284.81" font-family="Times,serif" font-size="14.00">следить. Он у себя в</text>
+<text text-anchor="middle" x="557" y="-1267.56" font-family="Times,serif" font-size="14.00">офисе.</text>
+</g>
+<!-- Leon01a&#45;&gt;Leon02 -->
+<g id="edge12" class="edge">
+<title>Leon01a&#45;&gt;Leon02</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M557,-1688.8C557,-1630.11 557,-1437.3 557,-1343.15"/>
+<polygon fill="#555555" stroke="#555555" points="560.5,-1343.17 557,-1333.17 553.5,-1343.17 560.5,-1343.17"/>
+</g>
+<!-- LeonCombat&#45;&gt;combat -->
+<g id="edge42" class="edge">
+<title>LeonCombat&#45;&gt;combat</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M634.65,-86.67C543.67,-75.18 242.56,-37.14 136.43,-23.73"/>
+<polygon fill="#555555" stroke="#555555" points="136.98,-20.14 126.62,-22.36 136.1,-27.09 136.98,-20.14"/>
+</g>
+<!-- Leon03&#45;&gt;LeonCombat -->
+<g id="edge16" class="edge">
+<title>Leon03&#45;&gt;LeonCombat</title>
+<path fill="none" stroke="#992900" d="M567.85,-200.35C526.68,-190.73 487.83,-177.74 475.5,-161.5 435.88,-109.33 557.92,-96.32 622.98,-93.07"/>
+<polygon fill="#992900" stroke="#992900" points="622.82,-96.54 632.66,-92.6 622.52,-89.55 622.82,-96.54"/>
+<text text-anchor="middle" x="557.75" y="-148.2" font-family="Times,serif" font-size="14.00" fill="#992900">Я уйду, когда закончу</text>
+<text text-anchor="middle" x="557.75" y="-130.95" font-family="Times,serif" font-size="14.00" fill="#992900">свои дела, приятель!</text>
+</g>
+<!-- Leon03&#45;&gt;LeonCombat -->
+<g id="edge18" class="edge">
+<title>Leon03&#45;&gt;LeonCombat</title>
+<path fill="none" stroke="#309900" d="M667.29,-179.71C665.02,-173.73 663.06,-167.55 661.75,-161.5 658.85,-148.14 658.37,-132.99 658.73,-120.25"/>
+<polygon fill="#309900" stroke="#309900" points="662.27,-120.51 659.26,-110.35 655.28,-120.17 662.27,-120.51"/>
+<text text-anchor="middle" x="763.62" y="-148.2" font-family="Times,serif" font-size="14.00" fill="#309900">Отношение? Я тебе покажу</text>
+<text text-anchor="middle" x="763.62" y="-130.95" font-family="Times,serif" font-size="14.00" fill="#309900">отношение!!!</text>
+</g>
+<!-- Leon03&#45;&gt;LeonKickOut -->
+<g id="edge17" class="edge">
+<title>Leon03&#45;&gt;LeonKickOut</title>
+<path fill="none" stroke="#000399" d="M779.27,-189.62C844.58,-168.6 934.99,-142.04 1016.5,-127 1148.76,-102.59 1308.76,-95.11 1380.28,-92.89"/>
+<polygon fill="#000399" stroke="#000399" points="1380.09,-96.37 1389.98,-92.58 1379.88,-89.37 1380.09,-96.37"/>
+<text text-anchor="middle" x="1075.25" y="-139.57" font-family="Times,serif" font-size="14.00" fill="#000399">Ладно, я ухожу.</text>
+</g>
+<!-- Leon04&#45;&gt;Leon03 -->
+<g id="edge19" class="edge">
+<title>Leon04&#45;&gt;Leon03</title>
+<path fill="none" stroke="#99005d" d="M1004.03,-1568.25C1024.54,-1558.03 1043.22,-1544.13 1056,-1525.23 1075.22,-1496.8 1117.03,-1383.42 1027,-1177.48 1022.71,-1167.67 1015.04,-1169.39 1011,-1159.48 976.37,-1074.5 1025.44,-409.1 972,-334.5 937.43,-286.24 878.73,-258.82 823.64,-243.24"/>
+<polygon fill="#99005d" stroke="#99005d" points="824.61,-239.61 814.04,-240.37 822.78,-246.36 824.61,-239.61"/>
+<text text-anchor="middle" x="1110.38" y="-1207.31" font-family="Times,serif" font-size="14.00" fill="#99005d">Зачем ты все так</text>
+<text text-anchor="middle" x="1110.38" y="-1190.06" font-family="Times,serif" font-size="14.00" fill="#99005d">усложняешь?</text>
+</g>
+<!-- Leon04a -->
+<g id="node22" class="node">
+<title>Leon04a</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="861" cy="-1437.48" rx="27" ry="18"/>
+</g>
+<!-- Leon04&#45;&gt;Leon04a -->
+<g id="edge20" class="edge">
+<title>Leon04&#45;&gt;Leon04a</title>
+<path fill="none" stroke="#008999" d="M870.58,-1542.87C869.84,-1536.93 869.13,-1530.95 868.5,-1525.23 866.36,-1505.7 864.46,-1483.63 863.11,-1466.64"/>
+<polygon fill="#008999" stroke="#008999" points="866.53,-1466.48 862.26,-1456.79 859.55,-1467.03 866.53,-1466.48"/>
+<text text-anchor="middle" x="961.75" y="-1511.93" font-family="Times,serif" font-size="14.00" fill="#008999">Мне необходимо</text>
+<text text-anchor="middle" x="961.75" y="-1494.68" font-family="Times,serif" font-size="14.00" fill="#008999">встретиться с ним лично.</text>
+<text text-anchor="middle" x="961.75" y="-1477.43" font-family="Times,serif" font-size="14.00" fill="#008999">Вопрос жизни и смерти.</text>
+</g>
+<!-- Leon06 -->
+<g id="node23" class="node">
+<title>Leon06</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1170" cy="-885.48" rx="149.73" ry="274"/>
+<text text-anchor="middle" x="1170" y="-1061.93" font-family="Times,serif" font-size="14.00">Каждая из этих меток</text>
+<text text-anchor="middle" x="1170" y="-1044.68" font-family="Times,serif" font-size="14.00">означает покушение на</text>
+<text text-anchor="middle" x="1170" y="-1027.43" font-family="Times,serif" font-size="14.00">жизнь мистера Хайтауэра.</text>
+<text text-anchor="middle" x="1170" y="-1010.18" font-family="Times,serif" font-size="14.00">Я разобрался со всеми и с</text>
+<text text-anchor="middle" x="1170" y="-992.93" font-family="Times,serif" font-size="14.00">каждым из них. Скажите</text>
+<text text-anchor="middle" x="1170" y="-975.68" font-family="Times,serif" font-size="14.00">мне... знаете ли вы как</text>
+<text text-anchor="middle" x="1170" y="-958.43" font-family="Times,serif" font-size="14.00">выглядит тот, кого Декер</text>
+<text text-anchor="middle" x="1170" y="-941.18" font-family="Times,serif" font-size="14.00">нанял на этот раз?</text>
+<text text-anchor="middle" x="1170" y="-923.93" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="1170" y="-906.68" font-family="Times,serif" font-size="14.00">Снова? Что за глупец этот</text>
+<text text-anchor="middle" x="1170" y="-889.43" font-family="Times,serif" font-size="14.00">Декер. Хотя... Он, по</text>
+<text text-anchor="middle" x="1170" y="-872.18" font-family="Times,serif" font-size="14.00">всей видимости не</text>
+<text text-anchor="middle" x="1170" y="-854.93" font-family="Times,serif" font-size="14.00">настолько глуп, как те,</text>
+<text text-anchor="middle" x="1170" y="-837.68" font-family="Times,serif" font-size="14.00">кого он нанимает на эту</text>
+<text text-anchor="middle" x="1170" y="-820.43" font-family="Times,serif" font-size="14.00">работу. Взгляните на мое</text>
+<text text-anchor="middle" x="1170" y="-803.18" font-family="Times,serif" font-size="14.00">оружие.</text>
+<text text-anchor="middle" x="1170" y="-785.93" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="1170" y="-768.68" font-family="Times,serif" font-size="14.00">[Леон показывает вам</text>
+<text text-anchor="middle" x="1170" y="-751.43" font-family="Times,serif" font-size="14.00">часть своего оружия, на</text>
+<text text-anchor="middle" x="1170" y="-734.18" font-family="Times,serif" font-size="14.00">котором вы видите 5</text>
+<text text-anchor="middle" x="1170" y="-716.93" font-family="Times,serif" font-size="14.00">глубоко процарапанных</text>
+<text text-anchor="middle" x="1170" y="-699.68" font-family="Times,serif" font-size="14.00">отметин.]</text>
+</g>
+<!-- Leon04&#45;&gt;Leon06 -->
+<g id="edge21" class="edge">
+<title>Leon04&#45;&gt;Leon06</title>
+<path fill="none" stroke="#997c00" d="M1006.82,-1569.9C1033.82,-1559.5 1060.34,-1545.12 1081,-1525.23 1176.13,-1433.65 1202.5,-1290.89 1203.27,-1163.54"/>
+<polygon fill="#997c00" stroke="#997c00" points="1206.77,-1163.84 1203.28,-1153.83 1199.77,-1163.83 1206.77,-1163.84"/>
+<text text-anchor="middle" x="1276.5" y="-1388.18" font-family="Times,serif" font-size="14.00" fill="#997c00">Декер заключил контракт</text>
+<text text-anchor="middle" x="1276.5" y="-1370.93" font-family="Times,serif" font-size="14.00" fill="#997c00">на жизнь мистера</text>
+<text text-anchor="middle" x="1276.5" y="-1353.68" font-family="Times,serif" font-size="14.00" fill="#997c00">Хайтауэра.</text>
+</g>
+<!-- Leon09&#45;&gt;LeonCombat -->
+<g id="edge38" class="edge">
+<title>Leon09&#45;&gt;LeonCombat</title>
+<path fill="none" stroke="#969900" d="M1479.92,-195.25C1452.1,-189.71 1422.57,-184.13 1395,-179.5 1336.18,-169.61 1320.46,-173.34 1262,-161.5 1204.67,-149.89 1192.65,-136.87 1135,-127 974.4,-99.52 779.54,-93.61 698.83,-92.34"/>
+<polygon fill="#969900" stroke="#969900" points="699.26,-88.83 689.21,-92.19 699.16,-95.83 699.26,-88.83"/>
+<text text-anchor="middle" x="1334" y="-148.2" font-family="Times,serif" font-size="14.00" fill="#969900">Убери от меня свои</text>
+<text text-anchor="middle" x="1334" y="-130.95" font-family="Times,serif" font-size="14.00" fill="#969900">дерьмовые руки!</text>
+</g>
+<!-- Leon09&#45;&gt;LeonKickOut -->
+<g id="edge39" class="edge">
+<title>Leon09&#45;&gt;LeonKickOut</title>
+<path fill="none" stroke="#6f0099" d="M1659.23,-182.36C1678.59,-165.19 1691.58,-144.83 1676,-127 1647.95,-94.89 1521.11,-91.1 1456.33,-91.33"/>
+<polygon fill="#6f0099" stroke="#6f0099" points="1456.34,-87.83 1446.37,-91.4 1456.39,-94.83 1456.34,-87.83"/>
+<text text-anchor="middle" x="1762.62" y="-148.2" font-family="Times,serif" font-size="14.00" fill="#6f0099">Хорошо, хорошо! Уже</text>
+<text text-anchor="middle" x="1762.62" y="-130.95" font-family="Times,serif" font-size="14.00" fill="#6f0099">ухожу.</text>
+</g>
+<!-- Leon09&#45;&gt;LeonKickOut -->
+<g id="edge40" class="edge">
+<title>Leon09&#45;&gt;LeonKickOut</title>
+<path fill="none" stroke="#009942" d="M1468.9,-199.72C1449.4,-190.96 1431.64,-178.68 1419,-161.5 1410.39,-149.81 1409.66,-133.75 1411.29,-120.02"/>
+<polygon fill="#009942" stroke="#009942" points="1414.91,-120.62 1413.1,-110.18 1408,-119.47 1414.91,-120.62"/>
+<text text-anchor="middle" x="1515" y="-139.57" font-family="Times,serif" font-size="14.00" fill="#009942">Стой! Я еще не закончил!</text>
+</g>
+<!-- Leon09&#45;&gt;LeonKickOut -->
+<g id="edge41" class="edge">
+<title>Leon09&#45;&gt;LeonKickOut</title>
+<path fill="none" stroke="#991600" d="M1617.45,-179.45C1622.1,-161.5 1622.97,-141.34 1611,-127 1591.67,-103.85 1506.72,-95.98 1456.19,-93.33"/>
+<polygon fill="#991600" stroke="#991600" points="1456.51,-89.79 1446.36,-92.81 1456.18,-96.78 1456.51,-89.79"/>
+<text text-anchor="middle" x="1641" y="-139.57" font-family="Times,serif" font-size="14.00" fill="#991600">Рукл!</text>
+</g>
+<!-- Leon02&#45;&gt;Leon03 -->
+<g id="edge15" class="edge">
+<title>Leon02&#45;&gt;Leon03</title>
+<path fill="none" stroke="#009956" d="M509.83,-1249.59C503.93,-1243.24 498.43,-1236.38 494,-1229.23 476.96,-1201.7 479.08,-1191.28 473,-1159.48 447.85,-1027.98 391.52,-688.73 424.5,-558.97 459.01,-423.19 475.2,-380.33 575,-282 582.26,-274.85 590.56,-268.35 599.3,-262.5"/>
+<polygon fill="#009956" stroke="#009956" points="600.96,-264.96 607.53,-256.65 597.21,-259.05 600.96,-264.96"/>
+<text text-anchor="middle" x="496.25" y="-580.17" font-family="Times,serif" font-size="14.00" fill="#009956">Ага... еще бы ты не</text>
+<text text-anchor="middle" x="496.25" y="-562.92" font-family="Times,serif" font-size="14.00" fill="#009956">следил.</text>
+</g>
+<!-- LeonEnd -->
+<g id="node20" class="node">
+<title>LeonEnd</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="509" cy="-885.48" rx="27" ry="18"/>
+</g>
+<!-- Leon02&#45;&gt;LeonEnd -->
+<g id="edge14" class="edge">
+<title>Leon02&#45;&gt;LeonEnd</title>
+<path fill="none" stroke="#830099" d="M519.57,-1248.55C515.57,-1242.45 512.1,-1235.94 509.75,-1229.23 470.67,-1117.94 491.66,-973.49 503.13,-913.97"/>
+<polygon fill="#830099" stroke="#830099" points="506.68,-915.04 505.21,-904.55 499.82,-913.67 506.68,-915.04"/>
+<text text-anchor="middle" x="542.62" y="-1198.68" font-family="Times,serif" font-size="14.00" fill="#830099">Спасибо.</text>
+</g>
+<!-- Leon04a&#45;&gt;Leon02 -->
+<g id="edge22" class="edge">
+<title>Leon04a&#45;&gt;Leon02</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M839.62,-1426.22C798.72,-1406.57 707.44,-1362.73 639.62,-1330.16"/>
+<polygon fill="#555555" stroke="#555555" points="641.32,-1326.62 630.79,-1325.44 638.29,-1332.93 641.32,-1326.62"/>
+</g>
+<!-- Leon05 -->
+<g id="node24" class="node">
+<title>Leon05</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="861" cy="-1289.48" rx="150.64" ry="18"/>
+<text text-anchor="middle" x="861" y="-1284.81" font-family="Times,serif" font-size="14.00">Говорите мне или уходите.</text>
+</g>
+<!-- Leon04a&#45;&gt;Leon05 -->
+<g id="edge23" class="edge">
+<title>Leon04a&#45;&gt;Leon05</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M861,-1419.16C861,-1394.35 861,-1348.43 861,-1318.68"/>
+<polygon fill="#555555" stroke="#555555" points="864.5,-1318.78 861,-1308.78 857.5,-1318.78 864.5,-1318.78"/>
+</g>
+<!-- Leon06&#45;&gt;LeonCombat -->
+<g id="edge29" class="edge">
+<title>Leon06&#45;&gt;LeonCombat</title>
+<path fill="none" stroke="#990090" d="M1080.07,-665.65C1065.86,-624.75 1052.68,-581.97 1043,-540.97 1019.92,-443.29 1026.73,-416.51 1018.25,-316.5 1016.47,-295.48 1021.6,-142.22 1007,-127 985.97,-105.08 784.24,-96 698.87,-93.11"/>
+<polygon fill="#990090" stroke="#990090" points="699.21,-89.59 689.1,-92.76 698.98,-96.58 699.21,-89.59"/>
+<text text-anchor="middle" x="1070.88" y="-294.57" font-family="Times,serif" font-size="14.00" fill="#990090">Это я, тупица!</text>
+</g>
+<!-- Leon06&#45;&gt;Leon03 -->
+<g id="edge30" class="edge">
+<title>Leon06&#45;&gt;Leon03</title>
+<path fill="none" stroke="#009975" d="M1071.39,-678.9C1039.82,-632.57 1000.46,-588.44 953,-558.97 899.89,-526 861.64,-580.86 813.5,-540.97 720.27,-463.73 782.79,-390.47 729,-282 727.44,-278.86 725.74,-275.7 723.93,-272.56"/>
+<polygon fill="#009975" stroke="#009975" points="726.46,-270.97 718.27,-264.24 720.47,-274.61 726.46,-270.97"/>
+<text text-anchor="middle" x="911.25" y="-441.69" font-family="Times,serif" font-size="14.00" fill="#009975">Эй! Ух ты! У тебя на</text>
+<text text-anchor="middle" x="911.25" y="-424.44" font-family="Times,serif" font-size="14.00" fill="#009975">оружии зарубки! Круууто!</text>
+</g>
+<!-- Leon07 -->
+<g id="node25" class="node">
+<title>Leon07</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1210" cy="-437.74" rx="158.22" ry="103.24"/>
+<text text-anchor="middle" x="1210" y="-493.44" font-family="Times,serif" font-size="14.00">Благодарю вас за</text>
+<text text-anchor="middle" x="1210" y="-476.19" font-family="Times,serif" font-size="14.00">своевременное</text>
+<text text-anchor="middle" x="1210" y="-458.94" font-family="Times,serif" font-size="14.00">предупреждение, но мистер</text>
+<text text-anchor="middle" x="1210" y="-441.69" font-family="Times,serif" font-size="14.00">Хайтауэр не любит, когда</text>
+<text text-anchor="middle" x="1210" y="-424.44" font-family="Times,serif" font-size="14.00">посторонние толкаются у</text>
+<text text-anchor="middle" x="1210" y="-407.19" font-family="Times,serif" font-size="14.00">него в приемной. Я</text>
+<text text-anchor="middle" x="1210" y="-389.94" font-family="Times,serif" font-size="14.00">вынужден просить вас</text>
+<text text-anchor="middle" x="1210" y="-372.69" font-family="Times,serif" font-size="14.00">уйти.</text>
+</g>
+<!-- Leon06&#45;&gt;Leon07 -->
+<g id="edge28" class="edge">
+<title>Leon06&#45;&gt;Leon07</title>
+<path fill="none" stroke="#639900" d="M1194.22,-614.59C1196.17,-592.8 1198.07,-571.65 1199.84,-552.01"/>
+<polygon fill="#639900" stroke="#639900" points="1203.39,-552.53 1200.8,-542.26 1196.42,-551.91 1203.39,-552.53"/>
+<text text-anchor="middle" x="1214.12" y="-571.55" font-family="Times,serif" font-size="14.00" fill="#639900">Нет.</text>
+</g>
+<!-- Leon05&#45;&gt;Leon03 -->
+<g id="edge24" class="edge">
+<title>Leon05&#45;&gt;Leon03</title>
+<path fill="none" stroke="#4f0099" d="M844.54,-1271.35C834.98,-1260.26 823.72,-1245 818,-1229.23 716.13,-948.55 923.98,-816 772,-558.97 764.47,-546.24 752.19,-553.29 744,-540.97 690.01,-459.78 683.52,-342.13 684.92,-274.97"/>
+<polygon fill="#4f0099" stroke="#4f0099" points="688.44,-275.33 685.22,-265.24 681.44,-275.14 688.44,-275.33"/>
+<text text-anchor="middle" x="866.12" y="-580.17" font-family="Times,serif" font-size="14.00" fill="#4f0099">Бог умер и теперь ты</text>
+<text text-anchor="middle" x="866.12" y="-562.92" font-family="Times,serif" font-size="14.00" fill="#4f0099">занял его место?</text>
+</g>
+<!-- Leon05&#45;&gt;Leon03 -->
+<g id="edge26" class="edge">
+<title>Leon05&#45;&gt;Leon03</title>
+<path fill="none" stroke="#99000a" d="M837.57,-1271.25C824.34,-1260.47 808.43,-1245.55 798,-1229.23 637.65,-978.3 634.11,-887.43 586.5,-593.47 567.6,-476.77 623.47,-344.04 659.68,-273.36"/>
+<polygon fill="#99000a" stroke="#99000a" points="663.13,-275.3 664.64,-264.81 656.92,-272.07 663.13,-275.3"/>
+<text text-anchor="middle" x="677.75" y="-571.55" font-family="Times,serif" font-size="14.00" fill="#99000a">Не скажу тебе ни слова!</text>
+</g>
+<!-- Leon05&#45;&gt;LeonKickOut -->
+<g id="edge27" class="edge">
+<title>Leon05&#45;&gt;LeonKickOut</title>
+<path fill="none" stroke="#003799" d="M935.47,-1273.42C965.27,-1264.49 998.3,-1250.58 1023,-1229.23 1042.79,-1212.13 1028.98,-1191.59 1051,-1177.48 1103.13,-1144.09 1284.79,-1202.82 1329,-1159.48 1471.62,-1019.68 1395.82,-463.5 1405,-264 1405.35,-256.4 1404.72,-134.5 1406,-127 1406.44,-124.44 1407.04,-121.81 1407.74,-119.2"/>
+<polygon fill="#003799" stroke="#003799" points="1411.34,-120.39 1411.01,-109.8 1404.67,-118.29 1411.34,-120.39"/>
+<text text-anchor="middle" x="1437.88" y="-433.06" font-family="Times,serif" font-size="14.00" fill="#003799">Ухожу.</text>
+</g>
+<!-- Leon05&#45;&gt;Leon06 -->
+<g id="edge25" class="edge">
+<title>Leon05&#45;&gt;Leon06</title>
+<path fill="none" stroke="#009923" d="M848.49,-1271.39C833.84,-1249.1 813.33,-1209.24 828,-1177.48 867.6,-1091.8 946.24,-1022.07 1018.14,-972.37"/>
+<polygon fill="#009923" stroke="#009923" points="1019.59,-974.94 1025.87,-966.41 1015.64,-969.16 1019.59,-974.94"/>
+<text text-anchor="middle" x="925.5" y="-1215.93" font-family="Times,serif" font-size="14.00" fill="#009923">Декер заключил контракт</text>
+<text text-anchor="middle" x="925.5" y="-1198.68" font-family="Times,serif" font-size="14.00" fill="#009923">на жизнь мистера</text>
+<text text-anchor="middle" x="925.5" y="-1181.43" font-family="Times,serif" font-size="14.00" fill="#009923">Хайтауэра.</text>
+</g>
+<!-- Leon07&#45;&gt;Leon03 -->
+<g id="edge31" class="edge">
+<title>Leon07&#45;&gt;Leon03</title>
+<path fill="none" stroke="#994900" d="M1162.49,-338.8C1147.97,-310.66 1134.2,-286.32 1128,-282 1081.83,-249.82 945.19,-235.08 836.3,-228.34"/>
+<polygon fill="#994900" stroke="#994900" points="836.71,-224.8 826.52,-227.7 836.29,-231.79 836.71,-224.8"/>
+<text text-anchor="middle" x="1252" y="-303.2" font-family="Times,serif" font-size="14.00" fill="#994900">И все? И никакой награды?</text>
+<text text-anchor="middle" x="1252" y="-285.95" font-family="Times,serif" font-size="14.00" fill="#994900">Люди, вы что, озверели?</text>
+</g>
+<!-- Leon07&#45;&gt;LeonKickOut -->
+<g id="edge32" class="edge">
+<title>Leon07&#45;&gt;LeonKickOut</title>
+<path fill="none" stroke="#1c0099" d="M1328.56,-368.96C1360.82,-342.19 1380.61,-310.95 1355,-282 1311.53,-232.87 1251.97,-313.13 1208.5,-264 1183.62,-235.87 1184.59,-208.46 1208.5,-179.5 1235.45,-146.87 1262.47,-176.61 1302,-161.5 1334.96,-148.91 1369.2,-127.15 1391.86,-111.32"/>
+<polygon fill="#1c0099" stroke="#1c0099" points="1393.41,-113.8 1399.53,-105.16 1389.35,-108.1 1393.41,-113.8"/>
+<text text-anchor="middle" x="1306.25" y="-217.07" font-family="Times,serif" font-size="14.00" fill="#1c0099">Пожалуйста. До свидания.</text>
+</g>
+<!-- Leon08a&#45;&gt;Leon04 -->
+<g id="edge37" class="edge">
+<title>Leon08a&#45;&gt;Leon04</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M1098.1,-1696.4C1071.6,-1684.63 1025.11,-1664 981.68,-1644.71"/>
+<polygon fill="#555555" stroke="#555555" points="983.44,-1641.22 972.88,-1640.36 980.6,-1647.62 983.44,-1641.22"/>
+</g>
+<!-- Leon08a&#45;&gt;Leon02 -->
+<g id="edge36" class="edge">
+<title>Leon08a&#45;&gt;Leon02</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M1120.55,-1688.82C1120.94,-1646.6 1116.15,-1537.14 1060,-1473.48 961.32,-1361.61 888.68,-1399.37 748,-1349.73 721.29,-1340.31 692.21,-1330.87 664.98,-1322.39"/>
+<polygon fill="#555555" stroke="#555555" points="666.23,-1318.81 655.64,-1319.19 664.16,-1325.49 666.23,-1318.81"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","combat":"hostile := 1;\n","critter_p_proc":"if (visible == 0) then begin\n  script_overrides;\nend\nelse begin\n  if (hostile) then begin\n    hostile := 0;\n    attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\n  end\n  if (map_var(5) == 1) then begin\n    if ((obj_can_hear_obj(self_obj, dude_obj) == 1) or (obj_can_see_obj(self_obj, dude_obj) == 1)) then begin\n      call combat;\n    end\n  end\n  else begin\n    if (map_var(1) == 1) then begin\n      call LeonPerformDump;\n    end\n  end\n  if ((game_time_hour >= 600) and (game_time_hour < 700) or ((game_time_hour >= 700) and (game_time_hour < 1800))) then begin\n    if (tile_num(self_obj) != 22120) then begin\n      animate_move_obj_to_tile(self_obj, 22120, 0);\n    end\n  end\n  else begin\n    if (tile_num(self_obj) != 16519) then begin\n      animate_move_obj_to_tile(self_obj, 16519, 0);\n    end\n  end\n  if (tile_distance_objs(self_obj, dude_obj) < 6) then begin\n    if ((local_var(5) == 0) and (tile_num(self_obj) == 22120)) then begin\n      set_local_var(5, 1);\n      dialogue_system_enter;\n    end\n  end\nend\n","pickup_p_proc":"if (source_obj == dude_obj) then begin\n  hostile := 1;\nend\n","talk_p_proc":"call get_reaction;\nif ((game_time_hour >= 1900) or (game_time_hour < 600)) then begin\n  float_msg(self_obj, message_str(866, 141), 2);\nend\nelse begin\n  if (global_var(248) == 1) then begin\n    float_msg(self_obj, message_str(866, 142), 2);\n    call combat;\n  end\n  else begin\n    if (local_var(4) == 0) then begin\n      set_local_var(4, 1);\n      start_gdialog(866, self_obj, 4, -1, -1);\n      gsay_start;\n      call Leon01;\n      gsay_end;\n      end_dialogue;\n    end\n    else begin\n      start_gdialog(866, self_obj, 4, -1, -1);\n      gsay_start;\n      call Leon08;\n      gsay_end;\n      end_dialogue;\n    end\n  end\nend\n","destroy_p_proc":"if (source_obj == dude_obj) then begin\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n    set_global_var(156, 1);\n    set_global_var(157, 0);\n  end\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n    set_global_var(157, 1);\n    set_global_var(156, 0);\n  end\n  set_global_var(159, global_var(159) + 1);\n  if ((global_var(159) % 2) == 0) then begin\n    set_global_var(155, global_var(155) - 1);\n  end\nend\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(866, 100));\n","damage_p_proc":"set_map_var(5, 1);\n","map_enter_p_proc":"if (Only_Once) then begin\n  Only_Once := 0;\n  if (global_var(111) == 5) then begin\n    set_obj_visibility(self_obj, 1);\n    visible := 0;\n  end\n  critter_add_trait(self_obj, 1, 6, 42);\n  critter_add_trait(self_obj, 1, 5, 16);\nend\n","Leon01":"gsay_reply(866, 101);\ngiq_option(4, 866, 102, Leon01a, 50);\ngiq_option(4, 866, 103, LeonCombat, 51);\ngiq_option(4, 866, 104, Leon03, 50);\nif (global_var(111) == 1) then begin\n  giq_option(4, 866, 140, Leon04, 50);\nend\ngiq_option(-3, 866, 138, Leon09, 50);\n","Leon01a":"if (is_success(roll_vs_skill(dude_obj, 14, 0))) then begin\n  call Leon02;\nend\nelse begin\n  call Leon04;\nend\n","Leon02":"gsay_reply(866, 105);\ngiq_option(4, 866, 106, LeonEnd, 50);\ngiq_option(4, 866, 107, Leon03, 50);\n","Leon03":"gsay_reply(866, 108);\ngiq_option(4, 866, 109, LeonCombat, 51);\ngiq_option(4, 866, 110, LeonKickOut, 50);\ngiq_option(4, 866, 111, LeonCombat, 51);\n","Leon04":"gsay_reply(866, 112);\ngiq_option(4, 866, 113, Leon03, 50);\ngiq_option(4, 866, 114, Leon04a, 50);\nif (global_var(111) == 1) then begin\n  giq_option(4, 866, 115, Leon06, 50);\nend\n","Leon04a":"if (is_success(roll_vs_skill(dude_obj, 14, 0))) then begin\n  call Leon02;\nend\nelse begin\n  call Leon05;\nend\n","Leon05":"gsay_reply(866, 116);\ngiq_option(4, 866, 117, Leon03, 50);\nif (global_var(111) == 1) then begin\n  giq_option(4, 866, 118, Leon06, 50);\nend\ngiq_option(4, 866, 119, Leon03, 50);\ngiq_option(4, 866, 120, LeonKickOut, 50);\n","Leon06":"gsay_message(866, 121, 50);\ngsay_message(866, 122, 50);\ngsay_reply(866, 123);\ngiq_option(4, 866, 124, Leon07, 50);\ngiq_option(4, 866, 125, LeonCombat, 51);\ngiq_option(4, 866, 126, Leon03, 50);\n","Leon07":"gsay_reply(866, 127);\ngiq_option(4, 866, 128, Leon03, 50);\ngiq_option(4, 866, 129, LeonKickOut, 50);\n","Leon08":"gsay_reply(866, 130);\ngiq_option(4, 866, 131, LeonCombat, 51);\ngiq_option(4, 866, 132, LeonKickOut, 50);\ngiq_option(4, 866, 133, Leon08a, 50);\n","Leon08a":"if (is_success(roll_vs_skill(dude_obj, 14, -20))) then begin\n  call Leon02;\nend\nelse begin\n  call Leon04;\nend\n","Leon09":"gsay_reply(866, 134);\ngiq_option(4, 866, 135, LeonCombat, 51);\ngiq_option(4, 866, 136, LeonKickOut, 50);\ngiq_option(4, 866, 137, LeonKickOut, 50);\ngiq_option(-3, 866, 139, LeonKickOut, 50);\n","LeonEnd":"[]","LeonKickOut":"set_map_var(1, 1);\n","LeonPerformDump":"set_map_var(1, 0);\nset_map_var(3, 0);\ngfade_out(1000);\nobj_close(Front_Door_Ptr);\nset_local_var(5, 0);\nmove_to(dude_obj, 21931, 0);\ngfade_in(1000);\n","LeonCombat":"set_local_var(5, 1);\ncall combat;\n","get_reaction":"if (local_var(2) == 0) then begin\n  set_local_var(0, 50);\n  set_local_var(1, 2);\n  set_local_var(2, 1);\n  set_local_var(0, local_var(0) + (5 * get_critter_stat(dude_obj, 3)) - 25);\n  set_local_var(0, local_var(0) + (10 * has_trait(0, dude_obj, 10)));\n  if (has_trait(0, dude_obj, 39)) then begin\n    if (global_var(155) > 0) then begin\n      set_local_var(0, local_var(0) + global_var(155));\n    end\n    else begin\n      set_local_var(0, local_var(0) - global_var(155));\n    end\n  end\n  else begin\n    if (local_var(3) == 1) then begin\n      set_local_var(0, local_var(0) - global_var(155));\n    end\n    else begin\n      set_local_var(0, local_var(0) + global_var(155));\n    end\n  end\n  if (global_var(158) > 2) then begin\n    set_local_var(0, local_var(0) - 30);\n  end\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n    set_local_var(0, local_var(0) + 20);\n  end\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n    set_local_var(0, local_var(0) - 20);\n  end\n  call ReactToLevel;\nend\n","ReactToLevel":"if (local_var(0) <= 25) then begin\n  set_local_var(1, 1);\nend\nelse begin\n  if (local_var(0) <= 75) then begin\n    set_local_var(1, 2);\n  end\n  else begin\n    set_local_var(1, 3);\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

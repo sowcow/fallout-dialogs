@@ -1,0 +1,17 @@
+digraph crashrm {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label=""]
+  "talk_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "talk_p_proc" -> "CrashRm02" [style=dotted color="#555555"]
+  "talk_p_proc" [label="[Вы находитесь в своей\nкомнате. Вы хотите\nотдохнуть здесь до\nзавтрашнего утра?]"]
+  "talk_p_proc" -> "CrashRm01" [label="[Да]" color="#8A0099" fontcolor="#8A0099"]
+  "talk_p_proc" -> "CrashRmEnd" [label="[Нет]" color="#00995D" fontcolor="#00995D"]
+  "CrashRm01" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "CrashRm01" [label=""]
+  "CrashRm02" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "CrashRm02" [label="Вы проснулись в отличном\nсамочувствии."]
+  "CrashRmEnd" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "CrashRmEnd" [label=""]
+}

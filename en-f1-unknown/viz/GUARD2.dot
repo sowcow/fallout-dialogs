@@ -1,0 +1,4 @@
+digraph GUARD2 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Good job!\n---\nFix the water pump now or\ndie.\n---\nGet back here and fix\nthis water pump!\n---\nYou see Garret. He is\nwatching you closely."]
+}

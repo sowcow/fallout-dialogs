@@ -1,0 +1,12 @@
+digraph easter {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_exit_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_exit_p_proc" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label="Вы наткнулись на собрание\nважно выглядящих людей. В\nних чувствуется что-то\nособенное.\n---\nО, Господи, только не еще\nодна отсылка к\nпоп-культуре!"]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label="Здесь нельзя вступать в\nбой."]
+  "combat_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "combat_p_proc" [label="Здесь нельзя вступать в\nбой."]
+}

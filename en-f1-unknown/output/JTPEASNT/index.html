@@ -1,0 +1,152 @@
+<!DOCTYPE html><html><head><title>JTPEASNT</title><meta charset="utf-8" /></head><body><svg width="397pt" height="358pt"
+ viewBox="0.00 0.00 397.47 358.18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 354.18)">
+<title>JTPEASNT</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-354.18 393.47,-354.18 393.47,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="136.47" cy="-320.13" rx="108.89" ry="30.05"/>
+<text text-anchor="middle" x="136.47" y="-324.08" font-family="Times,serif" font-size="14.00">You see a Junktown</text>
+<text text-anchor="middle" x="136.47" y="-306.83" font-family="Times,serif" font-size="14.00">peasant.</text>
+</g>
+<!-- do_dialogue -->
+<g id="node2" class="node">
+<title>do_dialogue</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="136.47" cy="-236.08" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;do_dialogue -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;do_dialogue</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M136.47,-289.97C136.47,-281.83 136.47,-273.01 136.47,-264.95"/>
+<polygon fill="#555555" stroke="#555555" points="139.97,-265.2 136.47,-255.2 132.97,-265.2 139.97,-265.2"/>
+</g>
+<!-- guard00 -->
+<g id="node3" class="node">
+<title>guard00</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="136.47" cy="-91.04" rx="136.47" ry="91.04"/>
+<text text-anchor="middle" x="136.47" y="-138.11" font-family="Times,serif" font-size="14.00">Hi.</text>
+<text text-anchor="middle" x="136.47" y="-120.86" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="136.47" y="-103.61" font-family="Times,serif" font-size="14.00">This is our place. Wanna</text>
+<text text-anchor="middle" x="136.47" y="-86.36" font-family="Times,serif" font-size="14.00">hang out for a while?</text>
+<text text-anchor="middle" x="136.47" y="-69.11" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="136.47" y="-51.86" font-family="Times,serif" font-size="14.00">Hmmm, you look juicy . .</text>
+<text text-anchor="middle" x="136.47" y="-34.61" font-family="Times,serif" font-size="14.00">.</text>
+</g>
+<!-- do_dialogue&#45;&gt;guard00 -->
+<g id="edge2" class="edge">
+<title>do_dialogue&#45;&gt;guard00</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M136.47,-217.83C136.47,-210.97 136.47,-202.5 136.47,-193.22"/>
+<polygon fill="#555555" stroke="#555555" points="139.97,-193.44 136.47,-183.44 132.97,-193.44 139.97,-193.44"/>
+</g>
+<!-- first -->
+<g id="node4" class="node">
+<title>first</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="290.47" cy="-320.13" rx="27" ry="18"/>
+</g>
+<!-- notfirst -->
+<g id="node5" class="node">
+<title>notfirst</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="362.47" cy="-320.13" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"variable LVar0 := 0;\nif (script_action == 11) then begin\n  call do_dialogue;\nend\nelse begin\n  if (script_action == 18) then begin\n    if (source_obj == dude_obj) then begin\n      if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n        set_global_var(156, 1);\n        set_global_var(157, 0);\n      end\n      if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n        set_global_var(157, 1);\n        set_global_var(156, 0);\n      end\n      set_global_var(159, global_var(159) + 1);\n      if ((global_var(159) % 2) == 0) then begin\n        set_global_var(155, global_var(155) - 1);\n      end\n    end\n  end\n  else begin\n    if ((script_action == 21) or (script_action == 3)) then begin\n      script_overrides;\n      display_msg(message_str(38, 100));\n    end\n  end\nend\n","do_dialogue":"call guard00;\n","guard00":"variable LVar0 := 0;\nif (get_critter_stat(dude_obj, 34) == 0) then begin\n  LVar0 := random(1, 2);\nend\nelse begin\n  LVar0 := random(1, 3);\nend\nif (LVar0 == 1) then begin\n  float_msg(self_obj, message_str(38, 103), 0);\nend\nelse begin\n  if (LVar0 == 2) then begin\n    float_msg(self_obj, message_str(38, 104), 0);\n  end\n  else begin\n    if (LVar0 == 3) then begin\n      float_msg(self_obj, message_str(38, 105), 0);\n    end\n  end\nend\n","first":"[]","notfirst":"[]"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

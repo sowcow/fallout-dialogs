@@ -1,0 +1,159 @@
+<!DOCTYPE html><html><head><title>mrhandya</title><meta charset="utf-8" /></head><body><svg width="608pt" height="238pt"
+ viewBox="0.00 0.00 607.97 237.68" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 233.68)">
+<title>mrhandya</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-233.68 603.97,-233.68 603.97,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="138.06" cy="-211.68" rx="27" ry="18"/>
+</g>
+<!-- description_p_proc -->
+<g id="node2" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="138.06" cy="-78.84" rx="138.06" ry="66.64"/>
+<text text-anchor="middle" x="138.06" y="-108.67" font-family="Times,serif" font-size="14.00">Вы видите сломанного</text>
+<text text-anchor="middle" x="138.06" y="-91.42" font-family="Times,serif" font-size="14.00">робота.</text>
+<text text-anchor="middle" x="138.06" y="-74.17" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="138.06" y="-56.92" font-family="Times,serif" font-size="14.00">Вы видите работающего</text>
+<text text-anchor="middle" x="138.06" y="-39.67" font-family="Times,serif" font-size="14.00">робота.</text>
+</g>
+<!-- start&#45;&gt;description_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;description_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M138.06,-193.31C138.06,-183.45 138.06,-170.34 138.06,-156.55"/>
+<polygon fill="#555555" stroke="#555555" points="141.56,-156.91 138.06,-146.91 134.56,-156.91 141.56,-156.91"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node3" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="293.06" cy="-211.68" rx="27" ry="18"/>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node4" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="447.06" cy="-211.68" rx="27" ry="18"/>
+</g>
+<!-- Repair_Attempt -->
+<g id="node5" class="node">
+<title>Repair_Attempt</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="447.06" cy="-78.84" rx="152.91" ry="78.84"/>
+<text text-anchor="middle" x="447.06" y="-117.29" font-family="Times,serif" font-size="14.00">Вы чините сломанного</text>
+<text text-anchor="middle" x="447.06" y="-100.04" font-family="Times,serif" font-size="14.00">робота. Он немедленно</text>
+<text text-anchor="middle" x="447.06" y="-82.79" font-family="Times,serif" font-size="14.00">включается и оживает.</text>
+<text text-anchor="middle" x="447.06" y="-65.54" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="447.06" y="-48.29" font-family="Times,serif" font-size="14.00">Ваших навыков</text>
+<text text-anchor="middle" x="447.06" y="-31.04" font-family="Times,serif" font-size="14.00">недостаточно для ремонта.</text>
+</g>
+<!-- use_skill_on_p_proc&#45;&gt;Repair_Attempt -->
+<g id="edge2" class="edge">
+<title>use_skill_on_p_proc&#45;&gt;Repair_Attempt</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M447.06,-193.31C447.06,-186.46 447.06,-178.06 447.06,-168.94"/>
+<polygon fill="#555555" stroke="#555555" points="450.56,-168.96 447.06,-158.96 443.56,-168.96 450.56,-168.96"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node6" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="519.06" cy="-211.68" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 3) then begin\n  call description_p_proc;\nend\n","critter_p_proc":"if (hostile) then begin\n  hostile := 0;\n  attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\nend\nif (global_var(275) != 0) then begin\n  if ((critter_state(self_obj) bwand 64) == 0) then begin\n    critter_injure(self_obj, 64);\n  end\nend\nif (global_var(274) != 0) then begin\n  if ((critter_state(self_obj) bwand 4) == 0) then begin\n    critter_injure(self_obj, 4);\n  end\nend\nif (global_var(274) == 2) then begin\n  if ((critter_state(self_obj) bwand 8) == 0) then begin\n    critter_injure(self_obj, 8);\n  end\nend\nif (global_var(146) == 1) then begin\n  if (global_var(275) == 0) then begin\n    if (global_var(273) == 0) then begin\n      if (obj_can_see_obj(self_obj, dude_obj)) then begin\n        hostile := 1;\n      end\n    end\n    else begin\n      if (global_var(273) == 1) then begin\n        if (obj_can_see_obj(self_obj, valid_target)) then begin\n          attack_complex(valid_target, 0, 1, 0, 0, 30000, 0, 0);\n        end\n      end\n      else begin\n        if (global_var(273) == 2) then begin\n          if (obj_can_see_obj(self_obj, valid_target)) then begin\n            attack_complex(valid_target, 0, 1, 0, 0, 30000, 0, 0);\n          end\n        end\n        else begin\n          if (global_var(273) == 3) then begin\n            if (obj_can_see_obj(self_obj, dude_obj)) then begin\n              hostile := 1;\n            end\n          end\n        end\n      end\n    end\n  end\n  if (global_var(274) != 2) then begin\n    animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(self_obj), random(0, 5), random(1, 3)), 0);\n  end\nend\n","description_p_proc":"script_overrides;\nif (local_var(0)) then begin\n  display_msg(message_str(365, 100));\nend\nelse begin\n  display_msg(message_str(365, 101));\nend\n","use_skill_on_p_proc":"if (action_being_used == 13) then begin\n  if (local_var(0) == 0) then begin\n    call Repair_Attempt;\n  end\nend\nelse begin\n  if (action_being_used == 10) then begin\n    script_overrides;\n  end\nend\n","map_enter_p_proc":"if (not(initialized)) then begin\n  critter_add_trait(self_obj, 1, 6, 34);\n  critter_add_trait(self_obj, 1, 5, 71);\n  initialized := 1;\nend\nif (global_var(273) == 2) then begin\n  critter_add_trait(self_obj, 1, 6, 85);\nend\n","Repair_Attempt":"variable LVar0 := 0;\ngame_time_advance(game_ticks(1200));\nLVar0 := roll_vs_skill(dude_obj, 13, 0);\nif (not(local_var(1)) and is_success(LVar0)) then begin\n  display_msg(message_str(365, 102));\n  set_local_var(0, 1);\nend\nelse begin\n  display_msg(message_str(365, 103));\n  set_local_var(1, 1);\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

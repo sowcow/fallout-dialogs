@@ -1,0 +1,12 @@
+digraph zismoke {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" -> "remove" [style=dotted color="#555555"]
+  "use_p_proc" -> "remove" [style=dotted color="#555555"]
+  "use_p_proc" [label="Вы курите сигарету.\n---\nВы курите еще одну\nсигарету.\n---\nВнутри шлема есть\nпредупреждение: \"ОПАСНО!\n- Не курить!\". Вы\nдумаете, что лучше\nследовать написанному.\n---\nВы курите сигарету.\n---\nВы курите еще одну\nсигарету.\n---\nСначала вам нужна\nзажигалка.\n---\nКурение - отвратительная\nпривычка для женщины."]
+  "remove" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "remove" [label="Вы их все выкурили."]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" [label=""]
+}

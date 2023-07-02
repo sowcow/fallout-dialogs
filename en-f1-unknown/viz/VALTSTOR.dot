@@ -1,0 +1,7 @@
+digraph VALTSTOR {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "spatial_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="This is the storage room.\nIt looks emptier than you\nremember it. The Vault\nmust be running out\nof supplies at a greater\nrate than you could have\nimagined."]
+}

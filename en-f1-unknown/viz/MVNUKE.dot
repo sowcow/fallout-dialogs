@@ -1,0 +1,9 @@
+digraph MVNUKE {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "skills" [style=dotted color="#555555"]
+  "start" [label="This is a nuclear\nwarhead."]
+  "skills" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "skills" [label="This is a nuclear\nwarhead. It is controlled\nby the computer attached\n by the cables.\n---\nThere is nothing on this\nnuclear warhead that\nneeds repairing.\n---\nThere is nothing on this\nnuclear warhead that can\nbe lockpicked.\n---\nThis is a very big trap\nthat cannot be disarmed\nor armed from here.\n---\nThat doesn't seem to be\nworking."]
+  "reset" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "reset" [label="You have disarmed the\nnuclear warhead."]
+}

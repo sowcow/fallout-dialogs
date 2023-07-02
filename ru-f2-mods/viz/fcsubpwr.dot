@@ -1,0 +1,18 @@
+digraph fcsubpwr {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Вы изучаете консоль и\nоборванные кабели.\nПохоже, тот, кто хоть\nнемного разбирается в\nремонте (или хорошо\nорудует ломом), может\nполностью отключить\nподсистему питания."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите старую консоль."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Консоль управления\nпитанием почти полностью\nразрушена. Провода торчат\nво все стороны, они\nскреплены клейкой лентой,\nа монитор состояния\nпохоже лопнул. Эта\nштуковина едва держится."]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Консоль быстро сдается и\nаварийный генератор\nвыключается. Без энергии,\nподводная лодка не\nпредставляет никакой\nугрозы.\n---\nВы не в состоянии\nотключить генератор\nпитания."]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="Консоль быстро сдается и\nаварийный генератор\nвыключается. Без энергии,\nподводная лодка не\nпредставляет никакой\nугрозы.\n---\nВы не в состоянии\nотключить генератор\nпитания.\n---\nКонсоль быстро сдается и\nаварийный генератор\nвыключается. Без энергии,\nподводная лодка не\nпредставляет никакой\nугрозы."]
+}

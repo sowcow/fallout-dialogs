@@ -1,0 +1,13 @@
+digraph gcenclen {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_exit_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_exit_p_proc" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" -> "make_warriors_p_proc" [style=dotted color="#555555"]
+  "map_enter_p_proc" [label="Вы находитесь на открытой\nместности неподалеку от\nГекко. Вдалеке стоят\nкакие-то люди в\nвысокотехнологичной\nброне."]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+  "make_warriors_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "make_warriors_p_proc" [label=""]
+}

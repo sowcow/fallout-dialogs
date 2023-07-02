@@ -1,0 +1,13 @@
+digraph goodslot {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "look_at_p_proc" [style=dotted color="#555555"]
+  "start" -> "map_enter_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Это игральный автомат с\nизображением ядерного\nгриба. Игра стоит $20."]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="У вас нет денег на игру.\n---\nВы заталкиваете $20 в\nщель для крышек и\nдергаете за грязную\nручку.\n---\nДЗЫНЬ! ДЗЫНЬ! ДЗЫНЬ\n---\nВыпало 3 ядерных гриба.\nОтлично! $\n---\n. Вы забираете деньги.\n---\nДзынь! Дзынь! Дзынь!\n---\nВыпало 3 бомбы. Вы\nвыиграли! $30 падают в\nлоток, и вы быстро\nсобираете крышки.\n---\nВот незадача! Вы\nпроиграли."]
+}

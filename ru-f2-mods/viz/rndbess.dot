@@ -1,0 +1,13 @@
+digraph rndbess {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" -> "LoadBrahmn" [style=dotted color="#555555"]
+  "map_enter_p_proc" [label="Вы вспугиваете стаю\nстервятников, кормящихся\nмертвыми браминами."]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+  "map_exit_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_exit_p_proc" [label=""]
+  "LoadBrahmn" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "LoadBrahmn" [label=""]
+}

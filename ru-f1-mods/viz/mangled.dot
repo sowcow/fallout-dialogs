@@ -1,0 +1,7 @@
+digraph mangled {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "dead00" [style=dotted color="#555555"]
+  "start" [label="Вы заметили следы крови,\nведущие к телам."]
+  "dead00" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "dead00" [label="Похоже, что их тащили\nсюда какие-то животные."]
+}

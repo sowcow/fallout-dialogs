@@ -1,0 +1,134 @@
+<!DOCTYPE html><html><head><title>glwalien</title><meta charset="utf-8" /></head><body><svg width="334pt" height="360pt"
+ viewBox="0.00 0.00 333.98 359.66" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 355.66)">
+<title>glwalien</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-355.66 329.98,-355.66 329.98,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="162.99" cy="-333.66" rx="112.76" ry="18"/>
+<text text-anchor="middle" x="162.99" y="-328.99" font-family="Times,serif" font-size="14.00">Окоченевший труп.</text>
+</g>
+<!-- dead00 -->
+<g id="node2" class="node">
+<title>dead00</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="162.99" cy="-139.83" rx="162.99" ry="139.83"/>
+<text text-anchor="middle" x="162.99" y="-221.41" font-family="Times,serif" font-size="14.00">Труп очевидно внеземного</text>
+<text text-anchor="middle" x="162.99" y="-204.16" font-family="Times,serif" font-size="14.00">происхождения.</text>
+<text text-anchor="middle" x="162.99" y="-186.91" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="162.99" y="-169.66" font-family="Times,serif" font-size="14.00">Возможно, это результат</text>
+<text text-anchor="middle" x="162.99" y="-152.41" font-family="Times,serif" font-size="14.00">какого&#45;то генетического</text>
+<text text-anchor="middle" x="162.99" y="-135.16" font-family="Times,serif" font-size="14.00">эксперимента.</text>
+<text text-anchor="middle" x="162.99" y="-117.91" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="162.99" y="-100.66" font-family="Times,serif" font-size="14.00">Это труп.</text>
+<text text-anchor="middle" x="162.99" y="-83.41" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="162.99" y="-66.16" font-family="Times,serif" font-size="14.00">Окоченевший труп выглядит</text>
+<text text-anchor="middle" x="162.99" y="-48.91" font-family="Times,serif" font-size="14.00">очень странно.</text>
+</g>
+<!-- start&#45;&gt;dead00 -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;dead00</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M162.99,-315.3C162.99,-308.6 162.99,-300.29 162.99,-290.95"/>
+<polygon fill="#555555" stroke="#555555" points="166.49,-291.02 162.99,-281.02 159.49,-291.02 166.49,-291.02"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 3) then begin\n  script_overrides;\n  if (success_level == 0) then begin\n    success_level := roll_vs_skill(dude_obj, 7, 0);\n  end\n  call dead00;\nend\nelse begin\n  if (script_action == 21) then begin\n    script_overrides;\n    display_msg(message_str(313, 100));\n  end\nend\n","dead00":"if (is_success(success_level)) then begin\n  if (is_critical(success_level)) then begin\n    display_msg(message_str(313, 101));\n  end\n  else begin\n    display_msg(message_str(313, 102));\n  end\nend\nelse begin\n  if (is_critical(success_level)) then begin\n    display_msg(message_str(313, 103));\n  end\n  else begin\n    display_msg(message_str(313, 104));\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html><html><head><title>cowbomb</title><meta charset="utf-8" /></head><body><svg width="666pt" height="262pt"
+ viewBox="0.00 0.00 666.00 262.08" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 258.08)">
+<title>cowbomb</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-258.08 662,-258.08 662,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-163.04" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node2" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="221" cy="-163.04" rx="148.67" ry="91.04"/>
+<text text-anchor="middle" x="221" y="-210.11" font-family="Times,serif" font-size="14.00">У вас странное чувство</text>
+<text text-anchor="middle" x="221" y="-192.86" font-family="Times,serif" font-size="14.00">относительно этого места.</text>
+<text text-anchor="middle" x="221" y="-175.61" font-family="Times,serif" font-size="14.00">Очаровательный запах</text>
+<text text-anchor="middle" x="221" y="-158.36" font-family="Times,serif" font-size="14.00">коровьего навоза и</text>
+<text text-anchor="middle" x="221" y="-141.11" font-family="Times,serif" font-size="14.00">гниющего мяса</text>
+<text text-anchor="middle" x="221" y="-123.86" font-family="Times,serif" font-size="14.00">распространяется отсюда</text>
+<text text-anchor="middle" x="221" y="-106.61" font-family="Times,serif" font-size="14.00">на несколько футов.</text>
+</g>
+<!-- loadParts(40, 20301) -->
+<g id="node3" class="node">
+<title>loadParts(40, 20301)</title>
+<ellipse fill="none" stroke="black" cx="221" cy="-18" rx="116.45" ry="18"/>
+<text text-anchor="middle" x="221" y="-13.32" font-family="Times,serif" font-size="14.00">loadParts(40, 20301)</text>
+</g>
+<!-- map_enter_p_proc&#45;&gt;loadParts(40, 20301) -->
+<g id="edge1" class="edge">
+<title>map_enter_p_proc&#45;&gt;loadParts(40, 20301)</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M221,-71.86C221,-62.92 221,-54.41 221,-46.92"/>
+<polygon fill="#555555" stroke="#555555" points="224.5,-47.1 221,-37.1 217.5,-47.1 224.5,-47.1"/>
+</g>
+<!-- map_update_p_proc -->
+<g id="node4" class="node">
+<title>map_update_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="415" cy="-163.04" rx="27" ry="18"/>
+</g>
+<!-- LoadCritters -->
+<g id="node5" class="node">
+<title>LoadCritters</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="415" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- map_update_p_proc&#45;&gt;LoadCritters -->
+<g id="edge2" class="edge">
+<title>map_update_p_proc&#45;&gt;LoadCritters</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M415,-144.79C415,-120.51 415,-76.02 415,-46.98"/>
+<polygon fill="#555555" stroke="#555555" points="418.5,-47.32 415,-37.32 411.5,-47.32 418.5,-47.32"/>
+</g>
+<!-- Initial_Inven -->
+<g id="node6" class="node">
+<title>Initial_Inven</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="487" cy="-163.04" rx="27" ry="18"/>
+</g>
+<!-- loadParts -->
+<g id="node7" class="node">
+<title>loadParts</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="559" cy="-163.04" rx="27" ry="18"/>
+</g>
+<!-- loadBlood -->
+<g id="node8" class="node">
+<title>loadBlood</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="631" cy="-163.04" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","map_enter_p_proc":"if (metarule(14, 0)) then begin\n  display_msg(message_str(676, 100));\n  call loadParts(40, 20301);\nend\nif ((game_time_hour >= 600) and (game_time_hour < 700)) then begin\n  set_light_level(game_time_hour - 600 + 40);\nend\nelse begin\n  if ((game_time_hour > 600) and (game_time_hour < 1800)) then begin\n    set_light_level(100);\n  end\n  else begin\n    if ((game_time_hour >= 1800) and (game_time_hour < 1900)) then begin\n      set_light_level(100 - (game_time_hour - 1800));\n    end\n    else begin\n      set_light_level(40);\n    end\n  end\nend\n","map_update_p_proc":"if ((game_time_hour >= 600) and (game_time_hour < 700)) then begin\n  set_light_level(game_time_hour - 600 + 40);\nend\nelse begin\n  if ((game_time_hour > 600) and (game_time_hour < 1800)) then begin\n    set_light_level(100);\n  end\n  else begin\n    if ((game_time_hour >= 1800) and (game_time_hour < 1900)) then begin\n      set_light_level(100 - (game_time_hour - 1800));\n    end\n    else begin\n      set_light_level(40);\n    end\n  end\nend\ncall LoadCritters;\n","Initial_Inven":"[]","LoadCritters":"variable LVar0 := 0;\nvariable LVar1 := 0;\nvariable LVar2 := 0;\ndebug_msg(\"MVAR_Current_Cow_Bombs: \" + map_var(0));\nLVar0 := 6 - map_var(0);\nwhile(LVar0 > 0) do begin\n  LVar2 := tile_num_in_direction(20301, random(0, 5), random(1, 10));\n  LVar1 := create_object_sid(16777226, LVar2, elevation(dude_obj), 677);\n  critter_attempt_placement(LVar1, LVar2, elevation(dude_obj));\n  LVar0 := LVar0 - 1;\nend\nset_map_var(0, 6);\n","loadParts":"variable LVar2 := 0;\nvariable LVar3 := 0;\nvariable LVar4 := 0;\nLVar2 := arg0;\nwhile(LVar2 > 0) do begin\n  LVar2 := LVar2 - 1;\n  LVar4 := tile_num_in_direction(arg1, random(0, 5), random(1, 10));\n  LVar3 := create_object_sid(random(33555731, 33555736), 0, 0, 575);\n  critter_attempt_placement(LVar3, LVar4, elevation(dude_obj));\n  if (random(1, 2) == 1) then begin\n    arg1 := LVar4;\n  end\nend\n","loadBlood":"variable LVar2 := 0;\nvariable LVar3 := 0;\nvariable LVar4 := 0;\nLVar2 := 0;\nwhile(LVar2 > 0) do begin\n  LVar2 := LVar2 - 1;\n  LVar4 := tile_num_in_direction(arg1, random(0, 5), random(1, 10));\n  LVar3 := create_object_sid(random(33555753, 33555761), 0, 0, 575);\n  critter_attempt_placement(LVar3, LVar4, elevation(dude_obj));\n  if (random(1, 2) == 1) then begin\n    arg1 := LVar4;\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

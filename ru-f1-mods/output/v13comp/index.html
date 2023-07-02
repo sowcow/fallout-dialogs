@@ -1,0 +1,144 @@
+<!DOCTYPE html><html><head><title>v13comp</title><meta charset="utf-8" /></head><body><svg width="495pt" height="481pt"
+ viewBox="0.00 0.00 494.97 481.35" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 477.35)">
+<title>v13comp</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-477.35 490.97,-477.35 490.97,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="140.18" cy="-284.72" rx="27" ry="18"/>
+</g>
+<!-- description_p_proc -->
+<g id="node2" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="140.18" cy="-30.05" rx="140.18" ry="30.05"/>
+<text text-anchor="middle" x="140.18" y="-34" font-family="Times,serif" font-size="14.00">Вы видите входной</text>
+<text text-anchor="middle" x="140.18" y="-16.75" font-family="Times,serif" font-size="14.00">компьютер Убежища 13.</text>
+</g>
+<!-- start&#45;&gt;description_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;description_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M140.18,-266.36C140.18,-226.41 140.18,-127.13 140.18,-71.13"/>
+<polygon fill="#555555" stroke="#555555" points="143.68,-71.2 140.18,-61.2 136.68,-71.2 143.68,-71.2"/>
+</g>
+<!-- use_p_proc -->
+<g id="node3" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="336.18" cy="-284.72" rx="150.79" ry="188.62"/>
+<text text-anchor="middle" x="336.18" y="-400.8" font-family="Times,serif" font-size="14.00">Вы используете входной</text>
+<text text-anchor="middle" x="336.18" y="-383.55" font-family="Times,serif" font-size="14.00">компьютер.</text>
+<text text-anchor="middle" x="336.18" y="-366.3" font-family="Times,serif" font-size="14.00">Громкоговоритель</text>
+<text text-anchor="middle" x="336.18" y="-349.05" font-family="Times,serif" font-size="14.00">потрескивает и</text>
+<text text-anchor="middle" x="336.18" y="-331.8" font-family="Times,serif" font-size="14.00">возвращается к жизни.</text>
+<text text-anchor="middle" x="336.18" y="-314.55" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="336.18" y="-297.3" font-family="Times,serif" font-size="14.00">Прости, но мы не можем</text>
+<text text-anchor="middle" x="336.18" y="-280.05" font-family="Times,serif" font-size="14.00">тебя сейчас снова</text>
+<text text-anchor="middle" x="336.18" y="-262.8" font-family="Times,serif" font-size="14.00">впустить. Ну, технические</text>
+<text text-anchor="middle" x="336.18" y="-245.55" font-family="Times,serif" font-size="14.00">трудности. Приходи снова</text>
+<text text-anchor="middle" x="336.18" y="-228.3" font-family="Times,serif" font-size="14.00">попозже.</text>
+<text text-anchor="middle" x="336.18" y="-211.05" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="336.18" y="-193.8" font-family="Times,serif" font-size="14.00">Вы используете входной</text>
+<text text-anchor="middle" x="336.18" y="-176.55" font-family="Times,serif" font-size="14.00">компьютер. Компьютер не</text>
+<text text-anchor="middle" x="336.18" y="-159.3" font-family="Times,serif" font-size="14.00">признает ваш код доступа.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 3) then begin\n  call description_p_proc;\nend\n","description_p_proc":"display_msg(message_str(344, 103));\n","use_p_proc":"script_overrides;\nif ((game_time / (10 * 60 * 60 * 24)) == 0) then begin\n  if (local_var(0)) then begin\n    display_msg(message_str(344, 101));\n    float_msg(self_obj, message_str(344, 102), 0);\n  end\n  else begin\n    display_msg(message_str(344, 100));\n    set_local_var(0, 1);\n  end\n  play_sfx(\"SLDOORSO\");\nend\nelse begin\n  use_obj(vault_door_ptr);\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

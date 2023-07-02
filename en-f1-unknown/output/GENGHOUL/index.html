@@ -1,0 +1,162 @@
+<!DOCTYPE html><html><head><title>GENGHOUL</title><meta charset="utf-8" /></head><body><svg width="320pt" height="188pt"
+ viewBox="0.00 0.00 320.21 188.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>GENGHOUL</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-184 316.21,-184 316.21,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="141.21" cy="-162" rx="27" ry="18"/>
+</g>
+<!-- timetomove -->
+<g id="node2" class="node">
+<title>timetomove</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="41.21" cy="-90" rx="41.21" ry="18"/>
+<text text-anchor="middle" x="41.21" y="-85.33" font-family="Times,serif" font-size="14.00">Arrrr!</text>
+</g>
+<!-- start&#45;&gt;timetomove -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;timetomove</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M123.33,-148.49C108.92,-138.4 88.34,-123.99 71.39,-112.12"/>
+<polygon fill="#555555" stroke="#555555" points="73.6,-108.7 63.4,-105.83 69.59,-114.44 73.6,-108.7"/>
+</g>
+<!-- do_dialogue -->
+<g id="node3" class="node">
+<title>do_dialogue</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="141.21" cy="-90" rx="41.21" ry="18"/>
+<text text-anchor="middle" x="141.21" y="-85.33" font-family="Times,serif" font-size="14.00">Arrrr!</text>
+</g>
+<!-- start&#45;&gt;do_dialogue -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;do_dialogue</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M141.21,-143.7C141.21,-136.24 141.21,-127.32 141.21,-118.97"/>
+<polygon fill="#555555" stroke="#555555" points="144.71,-119.1 141.21,-109.1 137.71,-119.1 144.71,-119.1"/>
+</g>
+<!-- Critter_Action -->
+<g id="node4" class="node">
+<title>Critter_Action</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="125.21" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;Critter_Action -->
+<g id="edge3" class="edge">
+<title>start&#45;&gt;Critter_Action</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M158.93,-148.15C170.54,-138.56 184.72,-124.34 191.21,-108 197.12,-93.13 198.13,-86.43 191.21,-72 183.73,-56.39 169.15,-43.92 155.6,-35.01"/>
+<polygon fill="#555555" stroke="#555555" points="157.83,-31.66 147.48,-29.41 154.17,-37.63 157.83,-31.66"/>
+</g>
+<!-- timetomove&#45;&gt;Critter_Action -->
+<g id="edge4" class="edge">
+<title>timetomove&#45;&gt;Critter_Action</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M59.85,-73.46C71.91,-63.42 87.72,-50.24 100.78,-39.36"/>
+<polygon fill="#555555" stroke="#555555" points="102.45,-41.69 107.89,-32.6 97.97,-36.31 102.45,-41.69"/>
+</g>
+<!-- genericend -->
+<g id="node5" class="node">
+<title>genericend</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="213.21" cy="-162" rx="27" ry="18"/>
+</g>
+<!-- genericcbt -->
+<g id="node6" class="node">
+<title>genericcbt</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="285.21" cy="-162" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (not(init)) then begin\n  if (local_var(1) == 0) then begin\n    set_local_var(1, tile_num(self_obj));\n    set_local_var(0, 1);\n    if (cur_map_index == 9) then begin\n      set_local_var(3, 1);\n    end\n  end\n  critter_add_trait(self_obj, 1, 6, 87);\n  critter_add_trait(self_obj, 1, 5, 93);\n  critter_injure(self_obj, 4);\n  init := 1;\nend\nelse begin\n  if (script_action == 22) then begin\n    call timetomove;\n  end\n  else begin\n    if (script_action == 11) then begin\n      call do_dialogue;\n    end\n    else begin\n      if (script_action == 4) then begin\n        Hostile := 1;\n      end\n      else begin\n        if (script_action == 13) then begin\n          if (local_var(3)) then begin\n            if (fixed_param == 2) then begin\n              rndx := random(1, 6) - 5;\n              if (rndx < 0) then begin\n                rndx := 0;\n              end\n              if (rndx > 0) then begin\n                radiation_inc(target_obj, rndx);\n              end\n            end\n          end\n        end\n        else begin\n          if (script_action == 12) then begin\n            call Critter_Action;\n          end\n          else begin\n            if (script_action == 18) then begin\n              if (source_obj == dude_obj) then begin\n                if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n                  set_global_var(156, 1);\n                  set_global_var(157, 0);\n                end\n                if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n                  set_global_var(157, 1);\n                  set_global_var(156, 0);\n                end\n                set_global_var(160, global_var(160) + 1);\n                if ((global_var(160) % 6) == 0) then begin\n                  set_global_var(155, global_var(155) + 1);\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\nend\n","do_dialogue":"float_msg(self_obj, message_str(32, 105 + random(0, 3)), 7);\n","genericend":"[]","genericcbt":"[]","Critter_Action":"if (obj_can_see_obj(self_obj, dude_obj) and (tile_distance_objs(self_obj, dude_obj) < 3)) then begin\n  Hostile := 1;\nend\nif (Hostile > 0) then begin\n  Hostile := 0;\n  attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\nend\nelse begin\n  if (local_var(0)) then begin\n    loopcount := loopcount + 1;\n    if (loopcount > 40) then begin\n      loopcount := 0;\n      if (noevent == 0) then begin\n        noevent := 1;\n        add_timer_event(self_obj, game_ticks(random(10, 15)), 0);\n      end\n    end\n  end\nend\n","timetomove":"if (obj_on_screen(self_obj)) then begin\n  noevent := 0;\n  set_local_var(2, tile_num(self_obj));\n  new_tile := tile_num_in_direction(local_var(2), random(0, 5), random(1, 5));\n  if (tile_distance(local_var(1), new_tile) < maxleash) then begin\n    if (random(0, 1) > 0) then begin\n      float_msg(self_obj, message_str(32, 105 + random(0, 3)), 7);\n    end\n    animate_move_obj_to_tile(self_obj, new_tile, 0);\n  end\nend\nelse begin\n  call Critter_Action;\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html><html><head><title>valtcomp</title><meta charset="utf-8" /></head><body><svg width="699pt" height="336pt"
+ viewBox="0.00 0.00 699.03 336.45" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 332.45)">
+<title>valtcomp</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-332.45 695.03,-332.45 695.03,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-164.23" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node2" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="217" cy="-164.23" rx="145.49" ry="66.64"/>
+<text text-anchor="middle" x="217" y="-194.05" font-family="Times,serif" font-size="14.00">Вы могли бы получить</text>
+<text text-anchor="middle" x="217" y="-176.8" font-family="Times,serif" font-size="14.00">больше информации из</text>
+<text text-anchor="middle" x="217" y="-159.55" font-family="Times,serif" font-size="14.00">этого терминала,</text>
+<text text-anchor="middle" x="217" y="-142.3" font-family="Times,serif" font-size="14.00">используя более научный</text>
+<text text-anchor="middle" x="217" y="-125.05" font-family="Times,serif" font-size="14.00">подход.</text>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node3" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="536" cy="-164.23" rx="155.03" ry="164.23"/>
+<text text-anchor="middle" x="536" y="-263.05" font-family="Times,serif" font-size="14.00">Терминалы на этом уровне</text>
+<text text-anchor="middle" x="536" y="-245.8" font-family="Times,serif" font-size="14.00">контролируют атмосферу и</text>
+<text text-anchor="middle" x="536" y="-228.55" font-family="Times,serif" font-size="14.00">температурный баланс, а</text>
+<text text-anchor="middle" x="536" y="-211.3" font-family="Times,serif" font-size="14.00">также резервное</text>
+<text text-anchor="middle" x="536" y="-194.05" font-family="Times,serif" font-size="14.00">обслуживание для</text>
+<text text-anchor="middle" x="536" y="-176.8" font-family="Times,serif" font-size="14.00">медлаборатории.</text>
+<text text-anchor="middle" x="536" y="-159.55" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="536" y="-142.3" font-family="Times,serif" font-size="14.00">Этот терминал</text>
+<text text-anchor="middle" x="536" y="-125.05" font-family="Times,serif" font-size="14.00">контролирует запасы и</text>
+<text text-anchor="middle" x="536" y="-107.8" font-family="Times,serif" font-size="14.00">обыденные функции</text>
+<text text-anchor="middle" x="536" y="-90.55" font-family="Times,serif" font-size="14.00">Убежища, а также</text>
+<text text-anchor="middle" x="536" y="-73.3" font-family="Times,serif" font-size="14.00">выполняет обычную</text>
+<text text-anchor="middle" x="536" y="-56.05" font-family="Times,serif" font-size="14.00">административную работу.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","use_p_proc":"script_overrides;\ndisplay_msg(message_str(793, 100));\n","use_skill_on_p_proc":"if (action_being_used == 12) then begin\n  script_overrides;\n  if (elevation(self_obj) == 0) then begin\n    display_msg(message_str(793, 102));\n  end\n  else begin\n    display_msg(message_str(793, 101));\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

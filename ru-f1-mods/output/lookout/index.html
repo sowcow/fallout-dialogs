@@ -1,0 +1,161 @@
+<!DOCTYPE html><html><head><title>lookout</title><meta charset="utf-8" /></head><body><svg width="586pt" height="334pt"
+ viewBox="0.00 0.00 585.84 333.79" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 329.79)">
+<title>lookout</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-329.79 581.84,-329.79 581.84,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="190.52" cy="-295.74" rx="128.52" ry="30.05"/>
+<text text-anchor="middle" x="190.52" y="-299.69" font-family="Times,serif" font-size="14.00">Вы видите разведчика</text>
+<text text-anchor="middle" x="190.52" y="-282.44" font-family="Times,serif" font-size="14.00">гулей.</text>
+</g>
+<!-- talk_p_proc -->
+<g id="node2" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="218.52" cy="-211.68" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;talk_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;talk_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M200.47,-265.58C203.35,-257.12 206.49,-247.93 209.33,-239.62"/>
+<polygon fill="#555555" stroke="#555555" points="212.92,-240.93 212.84,-230.33 206.3,-238.67 212.92,-240.93"/>
+</g>
+<!-- guilt -->
+<g id="node3" class="node">
+<title>guilt</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="163.52" cy="-78.84" rx="163.52" ry="78.84"/>
+<text text-anchor="middle" x="163.52" y="-117.29" font-family="Times,serif" font-size="14.00">Мы не сможем выжить без</text>
+<text text-anchor="middle" x="163.52" y="-100.04" font-family="Times,serif" font-size="14.00">воды.</text>
+<text text-anchor="middle" x="163.52" y="-82.79" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="163.52" y="-65.54" font-family="Times,serif" font-size="14.00">Пожалуйста, поговори с</text>
+<text text-anchor="middle" x="163.52" y="-48.29" font-family="Times,serif" font-size="14.00">нашим лидером, прежде чем</text>
+<text text-anchor="middle" x="163.52" y="-31.04" font-family="Times,serif" font-size="14.00">уйдешь.</text>
+</g>
+<!-- start&#45;&gt;guilt -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;guilt</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M186.82,-265.31C183.68,-240.31 179,-203.08 174.66,-168.52"/>
+<polygon fill="#555555" stroke="#555555" points="178.05,-168.38 173.33,-158.9 171.1,-169.26 178.05,-168.38"/>
+</g>
+<!-- talk_p_proc&#45;&gt;guilt -->
+<g id="edge3" class="edge">
+<title>talk_p_proc&#45;&gt;guilt</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M211.44,-193.85C208.27,-186.32 204.28,-176.82 199.96,-166.53"/>
+<polygon fill="#555555" stroke="#555555" points="202.83,-165.32 195.73,-157.46 196.37,-168.04 202.83,-165.32"/>
+</g>
+<!-- spies -->
+<g id="node4" class="node">
+<title>spies</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="461.52" cy="-78.84" rx="116.32" ry="42.25"/>
+<text text-anchor="middle" x="461.52" y="-91.42" font-family="Times,serif" font-size="14.00">Я не могу сейчас</text>
+<text text-anchor="middle" x="461.52" y="-74.17" font-family="Times,serif" font-size="14.00">разговаривать. Я на</text>
+<text text-anchor="middle" x="461.52" y="-56.92" font-family="Times,serif" font-size="14.00">посту.</text>
+</g>
+<!-- talk_p_proc&#45;&gt;spies -->
+<g id="edge4" class="edge">
+<title>talk_p_proc&#45;&gt;spies</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M241.13,-201.6C265.21,-191.68 304.21,-174.9 336.52,-157.68 356.68,-146.94 378,-134.21 397.22,-122.19"/>
+<polygon fill="#555555" stroke="#555555" points="398.87,-124.65 405.46,-116.36 395.14,-118.73 398.87,-124.65"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (not(init_teams)) then begin\n  critter_add_trait(self_obj, 1, 6, 31);\n  critter_add_trait(self_obj, 1, 5, 41);\n  init_teams := 1;\nend\nif (script_action == 11) then begin\n  call talk_p_proc;\nend\nelse begin\n  if ((script_action == 21) or (script_action == 3)) then begin\n    script_overrides;\n    display_msg(message_str(109, 100));\n  end\n  else begin\n    if (script_action == 4) then begin\n      Hostile := 1;\n    end\n    else begin\n      if (script_action == 12) then begin\n        if (Hostile) then begin\n          Hostile := 0;\n          attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\n        end\n        else begin\n          if (local_var(0) == 0) then begin\n            if ((global_var(30) == 1) and (global_var(31) != 2)) then begin\n              if (obj_can_see_obj(self_obj, dude_obj) and (tile_distance_objs(self_obj, dude_obj) < 5)) then begin\n                set_local_var(0, 1);\n                call guilt;\n              end\n            end\n          end\n        end\n      end\n      else begin\n        if (script_action == 18) then begin\n          if (source_obj == dude_obj) then begin\n            if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n              set_global_var(156, 1);\n              set_global_var(157, 0);\n            end\n            if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n              set_global_var(157, 1);\n              set_global_var(156, 0);\n            end\n            set_global_var(159, global_var(159) + 1);\n            if ((global_var(159) % 2) == 0) then begin\n              set_global_var(155, global_var(155) - 1);\n            end\n          end\n        end\n      end\n    end\n  end\nend\n","spies":"float_msg(self_obj, message_str(109, 101), 0);\n","guilt":"if (random(0, 1)) then begin\n  float_msg(self_obj, message_str(109, 200), 0);\nend\nelse begin\n  float_msg(self_obj, message_str(109, 201), 0);\nend\n","talk_p_proc":"if ((global_var(30) == 1) and (global_var(31) != 2)) then begin\n  call guilt;\nend\nelse begin\n  call spies;\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

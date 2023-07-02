@@ -1,0 +1,18 @@
+digraph epai25 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" -> "check_p_proc" [style=dotted color="#555555"]
+  "timed_event_p_proc" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Вы устанавливаете\nдинамит.\n---\nВы обезвреживаете\nдинамит."]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "explode_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "explode_p_proc" [label=""]
+  "check_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "check_p_proc" -> "explode_p_proc" [style=dotted color="#555555"]
+  "check_p_proc" [label=""]
+}

@@ -1,0 +1,7 @@
+digraph genglow1 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "do_dialogue" [style=dotted color="#555555"]
+  "start" [label="Вы видите светящегося\nгуля."]
+  "do_dialogue" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_dialogue" [label="Ар-р!\n---\nМ-м-м!\n---\nХэк!"]
+}

@@ -1,0 +1,4 @@
+digraph MEDLAB {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="This area has been\npreviously looted. There\nis a large amount of\ndamage to the delicate\nequipment."]
+}

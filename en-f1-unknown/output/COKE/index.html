@@ -1,0 +1,147 @@
+<!DOCTYPE html><html><head><title>COKE</title><meta charset="utf-8" /></head><body><svg width="362pt" height="212pt"
+ viewBox="0.00 0.00 362.45 212.10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 208.1)">
+<title>COKE</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-208.1 358.45,-208.1 358.45,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="161.04" cy="-186.1" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node2" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="161.04" cy="-114.1" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;use_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;use_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M161.04,-167.8C161.04,-160.34 161.04,-151.43 161.04,-143.07"/>
+<polygon fill="#555555" stroke="#555555" points="164.54,-143.21 161.04,-133.21 157.54,-143.21 164.54,-143.21"/>
+</g>
+<!-- Coke00 -->
+<g id="node3" class="node">
+<title>Coke00</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="68.04" cy="-30.05" rx="68.04" ry="18"/>
+<text text-anchor="middle" x="68.04" y="-25.38" font-family="Times,serif" font-size="14.00">It&#39;s broken.</text>
+</g>
+<!-- use_p_proc&#45;&gt;Coke00 -->
+<g id="edge2" class="edge">
+<title>use_p_proc&#45;&gt;Coke00</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M145.27,-99.19C131.5,-87.04 111.22,-69.15 94.91,-54.75"/>
+<polygon fill="#555555" stroke="#555555" points="97.6,-52.58 87.79,-48.59 92.97,-57.83 97.6,-52.58"/>
+</g>
+<!-- Coke01 -->
+<g id="node4" class="node">
+<title>Coke01</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="254.04" cy="-30.05" rx="100.41" ry="30.05"/>
+<text text-anchor="middle" x="254.04" y="-34" font-family="Times,serif" font-size="14.00">You find some old</text>
+<text text-anchor="middle" x="254.04" y="-16.75" font-family="Times,serif" font-size="14.00">bottlecaps.</text>
+</g>
+<!-- use_p_proc&#45;&gt;Coke01 -->
+<g id="edge3" class="edge">
+<title>use_p_proc&#45;&gt;Coke01</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M176.82,-99.19C187.12,-90.1 201.06,-77.8 214.26,-66.15"/>
+<polygon fill="#555555" stroke="#555555" points="216.16,-69.26 221.35,-60.02 211.53,-64.01 216.16,-69.26"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 6) then begin\n  call use_p_proc;\nend\n","use_p_proc":"script_overrides;\nif (local_var(0) == 1) then begin\n  call Coke00;\nend\nelse begin\n  call Coke01;\nend\n","Coke00":"display_msg(message_str(22, 100));\n","Coke01":"set_local_var(0, 1);\nif (is_success(do_check(dude_obj, 6, 0))) then begin\n  display_msg(message_str(22, 101));\n  caps := random(1, 6) + random(1, 6) + random(1, 6);\n  item_caps_adjust(dude_obj, caps);\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

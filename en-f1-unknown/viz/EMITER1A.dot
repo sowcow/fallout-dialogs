@@ -1,0 +1,16 @@
+digraph EMITER1A {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_obj_on_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" -> "damage_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="You do not see a control\npanel on this emitter.\nPerhaps there is another\nway to lower this force\nfield."]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="You temporarily disable\nthe force field emitter.\n---\nYou enable the force\nfield emitter.\n---\nYou fail to do anything\nwith the force field\nemitter."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="You temporarily disable\nthe force field emitter.\n---\nYou enable the force\nfield emitter.\n---\nYou fail to do anything\nwith the force field\nemitter."]
+  "damage_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "damage_p_proc" [label="You completely destroy\nthe force field emitter\nand the force field\ndissapates.\n---\nYou temporarily disable\nthe force field with the\ndamage to the emitter."]
+}

@@ -1,0 +1,4 @@
+digraph bvcore {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Это центральный зал\nУбежища. Здесь находятся\nкомпьютеры."]
+}

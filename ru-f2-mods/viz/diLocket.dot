@@ -1,0 +1,10 @@
+digraph diLocket {
+  "checkPartyMembersNearDoor" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "checkPartyMembersNearDoor" [label=""]
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Похоже, это тот самый\nкулон, который повсюду\nищет призрак.\n---\nВы видите старый кулон."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Похоже, это тот самый\nкулон, который повсюду\nищет призрак.\n---\nВы видите старый кулон."]
+}

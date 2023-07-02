@@ -1,0 +1,7 @@
+digraph MVSCTSHF {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "use_stuff" [style=dotted color="#555555"]
+  "start" [label="You find a hidden latch\nand unlock it."]
+  "use_stuff" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_stuff" [label="The bookshelf slides\nquietly out of the way.\n---\nYou find a hidden latch\nand unlock it.\n---\nThe bookshelf slides\nquietly out of the way.\n---\nIt shows signs of being\nrecently greased."]
+}

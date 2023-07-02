@@ -1,0 +1,6 @@
+digraph bvstore {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="Где-то здесь должен быть\n\"Узи\", если его еще не\nутащили."]
+}

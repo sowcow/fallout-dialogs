@@ -1,0 +1,181 @@
+<!DOCTYPE html><html><head><title>larry</title><meta charset="utf-8" /></head><body><svg width="852pt" height="309pt"
+ viewBox="0.00 0.00 852.16 309.39" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 305.39)">
+<title>larry</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-305.39 848.16,-305.39 848.16,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="153.97" cy="-246.95" rx="153.97" ry="54.45"/>
+<text text-anchor="middle" x="153.97" y="-268.15" font-family="Times,serif" font-size="14.00">Мутант не обращает на вас</text>
+<text text-anchor="middle" x="153.97" y="-250.9" font-family="Times,serif" font-size="14.00">внимания.</text>
+<text text-anchor="middle" x="153.97" y="-233.65" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="153.97" y="-216.4" font-family="Times,serif" font-size="14.00">Вы видите Ларри.</text>
+</g>
+<!-- do_dialogue -->
+<g id="node2" class="node">
+<title>do_dialogue</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="117.97" cy="-138.5" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;do_dialogue -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;do_dialogue</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M135.87,-192.41C132.87,-183.54 129.87,-174.69 127.21,-166.83"/>
+<polygon fill="#555555" stroke="#555555" points="130.24,-165.83 123.72,-157.48 123.6,-168.08 130.24,-165.83"/>
+</g>
+<!-- Critter_Action -->
+<g id="node3" class="node">
+<title>Critter_Action</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="189.97" cy="-138.5" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;Critter_Action -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;Critter_Action</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M172.08,-192.41C175.08,-183.54 178.07,-174.69 180.73,-166.83"/>
+<polygon fill="#555555" stroke="#555555" points="184.34,-168.08 184.23,-157.48 177.71,-165.83 184.34,-168.08"/>
+</g>
+<!-- mutant00 -->
+<g id="node4" class="node">
+<title>mutant00</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="117.97" cy="-42.25" rx="114.73" ry="42.25"/>
+<text text-anchor="middle" x="117.97" y="-54.82" font-family="Times,serif" font-size="14.00">Если ты босса</text>
+<text text-anchor="middle" x="117.97" y="-37.57" font-family="Times,serif" font-size="14.00">побеспокоишь, тебе</text>
+<text text-anchor="middle" x="117.97" y="-20.32" font-family="Times,serif" font-size="14.00">достанется.</text>
+</g>
+<!-- do_dialogue&#45;&gt;mutant00 -->
+<g id="edge3" class="edge">
+<title>do_dialogue&#45;&gt;mutant00</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M117.97,-120.21C117.97,-113.11 117.97,-104.47 117.97,-95.58"/>
+<polygon fill="#555555" stroke="#555555" points="121.47,-95.7 117.97,-85.7 114.47,-95.7 121.47,-95.7"/>
+</g>
+<!-- mutant01 -->
+<g id="node5" class="node">
+<title>mutant01</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="484.97" cy="-246.95" rx="159.28" ry="30.05"/>
+<text text-anchor="middle" x="484.97" y="-250.9" font-family="Times,serif" font-size="14.00">Людям нельзя в Некрополь.</text>
+<text text-anchor="middle" x="484.97" y="-233.65" font-family="Times,serif" font-size="14.00">Ты пойдешь со мной.</text>
+</g>
+<!-- combat -->
+<g id="node6" class="node">
+<title>combat</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="618.97" cy="-138.5" rx="27" ry="18"/>
+</g>
+<!-- mutant01&#45;&gt;combat -->
+<g id="edge4" class="edge">
+<title>mutant01&#45;&gt;combat</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M520.88,-217.42C543.84,-199.18 573.06,-175.97 593.62,-159.64"/>
+<polygon fill="#555555" stroke="#555555" points="595.47,-161.84 601.12,-152.88 591.12,-156.36 595.47,-161.84"/>
+</g>
+<!-- mutant02 -->
+<g id="node7" class="node">
+<title>mutant02</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="752.97" cy="-246.95" rx="91.19" ry="18"/>
+<text text-anchor="middle" x="752.97" y="-242.27" font-family="Times,serif" font-size="14.00">Умри, человек!</text>
+</g>
+<!-- mutant02&#45;&gt;combat -->
+<g id="edge5" class="edge">
+<title>mutant02&#45;&gt;combat</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M731.74,-229.08C707.97,-210.2 669.49,-179.63 644.21,-159.55"/>
+<polygon fill="#555555" stroke="#555555" points="646.87,-156.4 636.86,-152.92 642.52,-161.88 646.87,-156.4"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (not(init_teams)) then begin\n  critter_add_trait(self_obj, 1, 6, 34);\n  critter_add_trait(self_obj, 1, 5, 79);\n  set_local_var(1, 0);\n  init_teams := 1;\nend\nif ((script_action == 11) and (global_var(35) < 1)) then begin\n  if (global_var(306) == 0) then begin\n    call do_dialogue;\n  end\n  else begin\n    display_msg(message_str(80, 108));\n  end\nend\nelse begin\n  if (script_action == 21) then begin\n    script_overrides;\n    display_msg(message_str(80, 101));\n  end\n  else begin\n    if (script_action == 4) then begin\n      Hostile := 1;\n    end\n    else begin\n      if (script_action == 12) then begin\n        call Critter_Action;\n      end\n      else begin\n        if (script_action == 18) then begin\n          set_global_var(35, global_var(35) + 1);\n          if (global_var(35) > global_var(551)) then begin\n            set_global_var(155, global_var(155) + 3);\n            set_global_var(29, 2);\n            set_global_var(225, game_time / (10 * 60 * 60 * 24));\n          end\n          if (source_obj == dude_obj) then begin\n            if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n              set_global_var(156, 1);\n              set_global_var(157, 0);\n            end\n            if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n              set_global_var(157, 1);\n              set_global_var(156, 0);\n            end\n            set_global_var(160, global_var(160) + 1);\n            if ((global_var(160) % 6) == 0) then begin\n              set_global_var(155, global_var(155) + 1);\n            end\n          end\n        end\n      end\n    end\n  end\nend\n","do_dialogue":"call mutant00;\n","mutant00":"float_msg(self_obj, message_str(80, 102), 3);\n","mutant01":"float_msg(self_obj, message_str(80, 103), 3);\ncall combat;\n","mutant02":"float_msg(self_obj, message_str(80, 107), 3);\ncall combat;\n","combat":"Hostile := 1;\n","Critter_Action":"if ((global_var(35) > 0) and obj_can_see_obj(self_obj, dude_obj) and (global_var(306) < 1)) then begin\n  Hostile := 1;\nend\nif (Hostile > 0) then begin\n  Hostile := 0;\n  attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\nend\nelse begin\n  if ((global_var(306) == 1) and (tile_num(self_obj) != 15507)) then begin\n    animate_move_obj_to_tile(self_obj, 15507, 0);\n  end\n  else begin\n    if ((global_var(306) == 1) and (tile_num(self_obj) == 15507)) then begin\n      set_global_var(306, 2);\n    end\n    else begin\n      if ((global_var(306) == 2) and (tile_num(self_obj) != 12536)) then begin\n        animate_move_obj_to_tile(self_obj, 12536, 0);\n      end\n      else begin\n        if ((tile_num(self_obj) == 12536) and (global_var(306) == 2)) then begin\n          set_obj_visibility(self_obj, 1);\n        end\n      end\n    end\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

@@ -1,0 +1,4 @@
+digraph SENTRYGN {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="You note a security\ncamera which seems to be\nactive.\n---\nYou note concealed guns\ntracking your movement.\n---\nHidden gun ports open\nfire! Twisting and\nweaving,\nyou manage to avoid\ninjury!\n---\nHidden gun ports open\nfire! Twisting and\nevading,\nyou are grazed by\ngunfire.\n---\nYou suffer \n---\n damage.\n---\nHidden gun ports open\nfire! Startled, you trip\nand\nfall, suffering only\nminor injuries.\n---\nYou suffer \n---\n damage.\n---\nHidden gun ports open\nfire! You are hit!\n---\nYou suffer \n---\n damage."]
+}

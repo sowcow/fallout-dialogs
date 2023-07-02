@@ -1,0 +1,120 @@
+<!DOCTYPE html><html><head><title>glo1weap</title><meta charset="utf-8" /></head><body><svg width="542pt" height="68pt"
+ viewBox="0.00 0.00 542.09 68.10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 64.1)">
+<title>glo1weap</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-64.1 538.09,-64.1 538.09,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="119.5" cy="-30.05" rx="119.5" ry="30.05"/>
+<text text-anchor="middle" x="119.5" y="-34" font-family="Times,serif" font-size="14.00">В эти двери ударила</text>
+<text text-anchor="middle" x="119.5" y="-16.75" font-family="Times,serif" font-size="14.00">ядерная боеголовка.</text>
+</g>
+<!-- use_p_proc -->
+<g id="node2" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="395.5" cy="-30.05" rx="138.59" ry="30.05"/>
+<text text-anchor="middle" x="395.5" y="-34" font-family="Times,serif" font-size="14.00">Дверь приварило. Вы не</text>
+<text text-anchor="middle" x="395.5" y="-16.75" font-family="Times,serif" font-size="14.00">можете ее открыть.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if ((script_action == 21) and (script_action == 3)) then begin\n  script_overrides;\n  display_msg(message_str(298, 100));\nend\n","use_p_proc":"variable LVar0 := 0;\nvariable LVar1 := 0;\nvariable LVar2 := 0;\nvariable LVar3 := 0;\nLVar0 := get_critter_stat(dude_obj, 0);\nLVar1 := get_critter_stat(dude_obj, 5);\nLVar2 := get_critter_stat(dude_obj, 6);\nLVar3 := LVar0 + LVar1 + LVar2;\nif ((LVar0 < 8) and (LVar3 < 18)) then begin\n  script_overrides;\n  display_msg(message_str(298, 101));\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

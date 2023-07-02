@@ -1,0 +1,18 @@
+digraph farli {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "farli4" [style=dotted color="#555555"]
+  "start" -> "farli3" [style=dotted color="#555555"]
+  "start" -> "farli0" [style=dotted color="#555555"]
+  "start" [label="Вы видите паладина Фарли."]
+  "farli0" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "farli0" [label="Приветствую."]
+  "farli0" -> "farli1" [label="Чед'ра чу ка?" color="#259900" fontcolor="#259900"]
+  "farli1" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "farli1" [label="Катя чу ни ка чак'ра\nФарли.\n---\nФарли, ни ко \n---\n мат'чак о Дрейк."]
+  "farli2" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "farli2" [label="А, Дрейк ко мат'чак."]
+  "farli3" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "farli3" [label="Если еще увидишься с\nнашим общим другом,\nпередай ему привет."]
+  "farli4" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "farli4" [label="Братство напоминает мне\nродной дом."]
+}

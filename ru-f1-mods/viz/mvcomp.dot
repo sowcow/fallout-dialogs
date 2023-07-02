@@ -1,0 +1,18 @@
+digraph mvcomp {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "skills" [style=dotted color="#555555"]
+  "start" -> "disarmit" [style=dotted color="#555555"]
+  "start" -> "armit" [style=dotted color="#555555"]
+  "start" [label="Этот компьютер помечен\nкак \"Компьютер атомного\nдоступа\".\n---\nК компьютеру доступа\nподключены кабели,\nведущие к боеголовке\nпозади него.\n---\nНе похоже на то, что это\nработает.\n---\nНе похоже на то, что это\nработает."]
+  "skills" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "skills" -> "armit" [style=dotted color="#555555"]
+  "skills" -> "armit" [style=dotted color="#555555"]
+  "skills" [label="Не похоже на то, что это\nработает.\n---\nВы еще недостаточно\nнатренированны, чтобы\nобойти механизм\nбезопасности.\n---\nВы еще недостаточно\nнатренированны, чтобы\nобойти механизм\nбезопасности.\n---\nВы еще недостаточно\nнатренированны, чтобы\nобойти механизм\nбезопасности.\n---\nВы еще недостаточно\nнатренированны, чтобы\nобойти механизм\nбезопасности.\n---\nВы не можете использовать\nнавык \"ловушки\" на этом\nкомпьютере.\n---\nЭтот компьютер нельзя\nпочинить.\n---\nНе похоже на то, что это\nработает."]
+  "armit" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "armit" [label="Вы зарядили боеголовку.\nЧетырехминутный таймер\nначал отсчет."]
+  "disarmit" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "disarmit" -> "reset" [style=dotted color="#555555"]
+  "disarmit" [label="Не похоже на то, что это\nработает."]
+  "reset" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "reset" [label="Вы разрядили ядерную\nбоеголовку."]
+}

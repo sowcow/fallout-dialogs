@@ -1,0 +1,162 @@
+<!DOCTYPE html><html><head><title>crashrm</title><meta charset="utf-8" /></head><body><svg width="490pt" height="230pt"
+ viewBox="0.00 0.00 489.61 230.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 226.25)">
+<title>crashrm</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-226.25 485.61,-226.25 485.61,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="98.85" cy="-167.8" rx="27" ry="18"/>
+</g>
+<!-- spatial_p_proc -->
+<g id="node2" class="node">
+<title>spatial_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="170.85" cy="-167.8" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node3" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="348.85" cy="-167.8" rx="132.76" ry="54.45"/>
+<text text-anchor="middle" x="348.85" y="-189" font-family="Times,serif" font-size="14.00">[Вы находитесь в своей</text>
+<text text-anchor="middle" x="348.85" y="-171.75" font-family="Times,serif" font-size="14.00">комнате. Вы хотите</text>
+<text text-anchor="middle" x="348.85" y="-154.5" font-family="Times,serif" font-size="14.00">отдохнуть здесь до</text>
+<text text-anchor="middle" x="348.85" y="-137.25" font-family="Times,serif" font-size="14.00">завтрашнего утра?]</text>
+</g>
+<!-- CrashRm02 -->
+<g id="node4" class="node">
+<title>CrashRm02</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="151.85" cy="-30.05" rx="151.85" ry="30.05"/>
+<text text-anchor="middle" x="151.85" y="-34" font-family="Times,serif" font-size="14.00">Вы проснулись в отличном</text>
+<text text-anchor="middle" x="151.85" y="-16.75" font-family="Times,serif" font-size="14.00">самочувствии.</text>
+</g>
+<!-- talk_p_proc&#45;&gt;CrashRm02 -->
+<g id="edge1" class="edge">
+<title>talk_p_proc&#45;&gt;CrashRm02</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M281.61,-120.46C255.51,-102.48 226.16,-82.25 201.97,-65.59"/>
+<polygon fill="#555555" stroke="#555555" points="204.2,-62.18 193.98,-59.39 200.22,-67.95 204.2,-62.18"/>
+</g>
+<!-- CrashRm01 -->
+<g id="node5" class="node">
+<title>CrashRm01</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="348.85" cy="-30.05" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc&#45;&gt;CrashRm01 -->
+<g id="edge2" class="edge">
+<title>talk_p_proc&#45;&gt;CrashRm01</title>
+<path fill="none" stroke="#8a0099" d="M348.85,-113.15C348.85,-94.72 348.85,-74.83 348.85,-59.25"/>
+<polygon fill="#8a0099" stroke="#8a0099" points="352.35,-59.26 348.85,-49.26 345.35,-59.26 352.35,-59.26"/>
+<text text-anchor="middle" x="363.85" y="-82.05" font-family="Times,serif" font-size="14.00" fill="#8a0099">[Да]</text>
+</g>
+<!-- CrashRmEnd -->
+<g id="node6" class="node">
+<title>CrashRmEnd</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="420.85" cy="-30.05" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc&#45;&gt;CrashRmEnd -->
+<g id="edge3" class="edge">
+<title>talk_p_proc&#45;&gt;CrashRmEnd</title>
+<path fill="none" stroke="#00995d" d="M376.69,-114.32C387.17,-94.55 398.64,-72.94 407.26,-56.69"/>
+<polygon fill="#00995d" stroke="#00995d" points="410.63,-58.8 412.22,-48.33 404.44,-55.52 410.63,-58.8"/>
+<text text-anchor="middle" x="413.98" y="-82.05" font-family="Times,serif" font-size="14.00" fill="#00995d">[Нет]</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","spatial_p_proc":"if ((source_obj == dude_obj) and (global_var(168) > (game_time / (10 * 60 * 60 * 24)))) then begin\n  dialogue_system_enter;\nend\n","talk_p_proc":"start_gdialog(807, self_obj, 4, -1, -1);\ngsay_start;\ngsay_reply(807, 100);\ngiq_option(0, 807, 101, CrashRm01, 50);\ngiq_option(0, 807, 102, CrashRmEnd, 50);\ngsay_end;\nend_dialogue;\nif (local_var(0) == 1) then begin\n  call CrashRm02;\nend\n","CrashRm01":"set_local_var(0, 1);\n","CrashRm02":"set_local_var(0, 0);\ngfade_out(600);\ngame_time_advance(game_ticks(60 * (60 - (game_time_hour % 100))));\nif (game_time_hour < 1000) then begin\n  game_time_advance(game_ticks(36 * (1000 - game_time_hour)));\nend\nelse begin\n  game_time_advance(game_ticks(36 * (3400 - game_time_hour)));\nend\ncritter_heal(dude_obj, random(10, 15));\ndisplay_msg(message_str(807, 103));\nif ((map_var(3) == 0) and (map_var(0) != 2)) then begin\n  JTRaider_ptr := create_object_sid(16777291, 17484, 0, 337);\n  move_to(Sinthia_ptr, 17485, 0);\n  anim(JTRaider_ptr, 1000, 3);\n  anim(Sinthia_ptr, 1000, 3);\n  item := create_object_sid(8, 0, 0, -1);\n  add_obj_to_inven(JTRaider_ptr, item);\n  wield_obj_critter(JTRaider_ptr, item);\n  item := create_object_sid(1, 0, 0, -1);\n  add_obj_to_inven(JTRaider_ptr, item);\n  wield_obj_critter(JTRaider_ptr, item);\n  set_map_var(3, 1);\nend\ngfade_in(600);\n","CrashRmEnd":"[]"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

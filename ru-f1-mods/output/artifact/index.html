@@ -1,0 +1,133 @@
+<!DOCTYPE html><html><head><title>artifact</title><meta charset="utf-8" /></head><body><svg width="612pt" height="312pt"
+ viewBox="0.00 0.00 612.10 312.06" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 308.06)">
+<title>artifact</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-308.06 608.1,-308.06 608.1,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="149.2" cy="-152.03" rx="149.2" ry="66.64"/>
+<text text-anchor="middle" x="149.2" y="-181.85" font-family="Times,serif" font-size="14.00">Выглядит странно. Может</text>
+<text text-anchor="middle" x="149.2" y="-164.6" font-family="Times,serif" font-size="14.00">быть, Братство послало</text>
+<text text-anchor="middle" x="149.2" y="-147.35" font-family="Times,serif" font-size="14.00">вас именно за этим.</text>
+<text text-anchor="middle" x="149.2" y="-130.1" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="149.2" y="-112.85" font-family="Times,serif" font-size="14.00">Вы видите странный диск.</text>
+</g>
+<!-- use_p_proc -->
+<g id="node2" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="460.2" cy="-152.03" rx="143.9" ry="152.03"/>
+<text text-anchor="middle" x="460.2" y="-242.23" font-family="Times,serif" font-size="14.00">Pip&#45;Boy: файл найден в</text>
+<text text-anchor="middle" x="460.2" y="-224.98" font-family="Times,serif" font-size="14.00">системе. Загрузка</text>
+<text text-anchor="middle" x="460.2" y="-207.73" font-family="Times,serif" font-size="14.00">отменена.</text>
+<text text-anchor="middle" x="460.2" y="-190.48" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="460.2" y="-173.23" font-family="Times,serif" font-size="14.00">Pip&#45;Boy: загрузка данных</text>
+<text text-anchor="middle" x="460.2" y="-155.98" font-family="Times,serif" font-size="14.00">с диска.</text>
+<text text-anchor="middle" x="460.2" y="-138.73" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="460.2" y="-121.48" font-family="Times,serif" font-size="14.00">Вы видите диск, который</text>
+<text text-anchor="middle" x="460.2" y="-104.23" font-family="Times,serif" font-size="14.00">вам дала София.</text>
+<text text-anchor="middle" x="460.2" y="-86.98" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="460.2" y="-69.73" font-family="Times,serif" font-size="14.00">Вы видите диск, который</text>
+<text text-anchor="middle" x="460.2" y="-52.48" font-family="Times,serif" font-size="14.00">вам дал Максон.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if ((script_action == 21) or (script_action == 3)) then begin\n  script_overrides;\n  if (global_var(108) != 0) then begin\n    display_msg(message_str(333, 100));\n  end\n  else begin\n    display_msg(message_str(333, 106));\n  end\nend\n","use_p_proc":"script_overrides;\nif (local_var(0) == 1) then begin\n  display_msg(message_str(333, 101));\nend\nelse begin\n  set_local_var(0, 1);\n  display_msg(message_str(333, 102));\n  set_global_var(161, 1);\n  display_msg(message_str(766, 103) + \"100\" + message_str(766, 104));\n  give_exp_points(100);\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

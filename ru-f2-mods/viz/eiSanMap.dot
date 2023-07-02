@@ -1,0 +1,6 @@
+digraph eiSanMap {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="К западу от Военной Базы\nесть какой-то город. Вы\nзаносите его в ваш\nПип-Бой."]
+}

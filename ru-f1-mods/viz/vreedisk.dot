@@ -1,0 +1,4 @@
+digraph vreedisk {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Это диск Врии с отчетами\nо вскрытиях.\n---\nPip-Boy: файл найден в\nсистеме. Загрузка\nотменена.\n---\nPip-Boy: загрузка данных\nс диска."]
+}

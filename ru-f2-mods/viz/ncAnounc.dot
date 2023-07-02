@@ -1,0 +1,18 @@
+digraph ncAnounc {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "critter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "critter_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "damage_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "damage_p_proc" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" [label="Леди и джентльмены!\n---\nМальчики и девочки!\n---\nВ этом углу претендент,\nвыступающий в весовой\nкатегории\n---\nфунтов, только что из\nПустошей - завоевывать\nНью-Рино,\n---\n!\n---\nА в этом углу... в\nвесовой категории\n---\nфунтов, вы его ЗНАЕТЕ,\nвы его ЛЮБИТЕ...\n---\n!\n---\nИ победи-и-итель...\n---\n...со счетом \n---\n к \n---\n...\n---\n!!!\n---\n!!!"]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+  "combat_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "combat_p_proc" [label=""]
+}

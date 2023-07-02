@@ -1,0 +1,7 @@
+digraph PENSMELL {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "spatial_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="The stench of the Brahma\nPen is unlike any smell\nyou\nhave ever encountered in\nyour Vault."]
+}

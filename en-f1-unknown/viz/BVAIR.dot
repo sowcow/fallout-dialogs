@@ -1,0 +1,4 @@
+digraph BVAIR {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="You notice that there is\na wall locker on the east\nwall,\njust like in your own\nvault."]
+}

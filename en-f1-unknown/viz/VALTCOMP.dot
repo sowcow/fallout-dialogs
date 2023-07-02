@@ -1,0 +1,10 @@
+digraph VALTCOMP {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="You could glean more\ninformation from this\nterminal with a more\n scientific approach."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="The terminals on this\nlevel perform atmosphere\nand temperature control\nand backup maintenance\nfor the medical lab.\n---\nThis terminal is\nregulating Vault supplies\nand functions, and\nperforming\nroutine administrative\nwork."]
+}

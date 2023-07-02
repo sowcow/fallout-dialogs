@@ -1,0 +1,18 @@
+digraph fcsubtco {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="При отключении этой\nподсистемы, должна\nостановиться загрузка\nновых торпед в аппараты.\nОтключение не должно\nпредставлять трудности -\nметалл буквально\nразваливается, и можно\nотчетливо увидеть\nвакуумные трубки."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите древнюю\nконсоль."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Похоже, что эта консоль\nуправляет системой\nзапуска и загрузки\nторпед. Как и все\nостальное на субмарине,\nона насквозь проржавела и\nработает просто чудом."]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Как вы и полагали, металл\nлегко поддается и вскоре\nконсоль уже разобрана. В\nближайшее время эта\nсубмарина не сможет\nперезарядить трубы\nторпедных аппаратов.\n---\nВы не в состоянии\nотключить систему."]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="Как вы и полагали, металл\nлегко поддается и вскоре\nконсоль уже разобрана. В\nближайшее время эта\nсубмарина не сможет\nперезарядить трубы\nторпедных аппаратов.\n---\nВы не в состоянии\nотключить систему."]
+}

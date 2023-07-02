@@ -1,0 +1,4 @@
+digraph UZCHAIR {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="You take a key from the\ncrack in the chair."]
+}

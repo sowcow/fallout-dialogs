@@ -1,0 +1,4 @@
+digraph SECDISK {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="This seems strange. It\nlooks like it can be used\nin your Pip Boy.\n---\nPip Boy displays: File\nFound on System. Aborting\ndownload.\n---\nPip Boy displays:\nDownloading data from\nDisk."]
+}

@@ -1,0 +1,10 @@
+digraph slvcm1 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_exit_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_exit_p_proc" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label="При входе в лесистую\nместность вам в нос\nударяет нестерпимый запах\nнемытых рабов, живущих в\nгрязном сарае в западной\nчасти. Впереди виден дом\nс несколькими бродящими\nоколо него вооруженными\nработорговцами."]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+}

@@ -1,0 +1,8 @@
+digraph sfdock {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label="Вы входите в район доков\nСан-Франциско. Вы видите\nбольшой нефтяной танкер,\nстоящий у причала. В небе\nнад головой раздаются\nкрики чаек.\n---\nВы сумели обезвредить\nподводную лодку,\nбессмертную стражу\nСан-Франциско.\n---\nВы входите в район доков\nСан-Франциско. Вы видите\nбольшой нефтяной танкер,\nстоящий у причала. В небе\nнад головой раздаются\nкрики чаек."]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+}

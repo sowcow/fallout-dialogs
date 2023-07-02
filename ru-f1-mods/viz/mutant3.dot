@@ -1,0 +1,12 @@
+digraph mutant3 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "timeforwhat" [style=dotted color="#555555"]
+  "start" [label="Это какой-то огромный\nсупермутант! И у него\nочень большая пушка!"]
+  "timeforwhat" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timeforwhat" [label=""]
+  "supercbt" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "supercbt" [label=""]
+  "superx" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "superx" -> "supercbt" [style=dotted color="#555555"]
+  "superx" [label=""]
+}

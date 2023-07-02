@@ -1,0 +1,8 @@
+digraph obj_dude {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" [label="После уничтожения\nСоздателя и его\nЛаборатории, где он\nсоздавал армию\nсупермутантов, вы\nвозвращаетесь домой и\nузнаете, что вас\nвышвырнули из Убежища за\nто, что вы причинили\nслишком много разрушений.\nСпасибо, что играли в\nFallout."]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+}

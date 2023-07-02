@@ -1,0 +1,16 @@
+digraph BROINVAD {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "Initialize_p_proc" [style=dotted color="#555555"]
+  "start" -> "talk_p_proc" [style=dotted color="#555555"]
+  "start" -> "critter_p_proc" [style=dotted color="#555555"]
+  "start" -> "map_enter_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "talk_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "talk_p_proc" [label=""]
+  "Initialize_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "Initialize_p_proc" [label=""]
+  "critter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "critter_p_proc" [label="Good, you're here. Let's\ntorch this place.\n---\nThere is something wrong\nabout this room.\n---\nThis place is starting to\ngive me the\nheebee-jeebies.\n---\nTime for us to head back\nto the Brotherhood now."]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+}

@@ -1,0 +1,7 @@
+digraph mvsctshf {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "use_stuff" [style=dotted color="#555555"]
+  "start" [label="Вы нашли потайную кнопку\nи нажали на нее."]
+  "use_stuff" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_stuff" [label="Книжные полки бесшумно\nотъезжают в стороны.\n---\nВы нашли потайную кнопку\nи нажали на нее.\n---\nКнижные полки бесшумно\nотъезжают в стороны.\n---\nПохоже, что ее механизм\nнедавно смазывали."]
+}

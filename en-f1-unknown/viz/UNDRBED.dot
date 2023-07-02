@@ -1,0 +1,4 @@
+digraph UNDRBED {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="You see something in the\ndarkness under the bed."]
+}

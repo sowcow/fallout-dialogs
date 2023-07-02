@@ -1,0 +1,10 @@
+digraph machiv {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Перед вами компьютер Mach\nIV."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Монитор мерцает.\n---\nНа экране возникают\nцветные узоры."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Похоже, что система\nсейчас в состоянии\nперезагрузки.\n---\nПохоже, что система\nзаблокировалась."]
+}

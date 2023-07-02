@@ -1,0 +1,4 @@
+digraph BVSTORE {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Unless it has been\nlooted, there should be\nan uzi around here\nsomewhere."]
+}

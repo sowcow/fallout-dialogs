@@ -1,0 +1,16 @@
+digraph TROPHY {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_obj_on_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="It looks like a small\ngold trophy, with a clasp\nand a bronze plaque."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="You successfully steal\nthe urn from the\ncountertop.\n---\nThat looks pretty\nvaluable. If you're going\nto pick up the urn, you\nshould be more\nsurreptitious about it."]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label=""]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="You successfully steal\nthe urn from the\ncountertop.\n---\nYou swipe the urn, and\nhope that nobody saw your\nclumsy attempt."]
+}

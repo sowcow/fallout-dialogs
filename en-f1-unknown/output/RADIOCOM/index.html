@@ -1,0 +1,152 @@
+<!DOCTYPE html><html><head><title>RADIOCOM</title><meta charset="utf-8" /></head><body><svg width="572pt" height="335pt"
+ viewBox="0.00 0.00 571.94 335.27" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 331.27)">
+<title>RADIOCOM</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-331.27 567.94,-331.27 567.94,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="292.08" cy="-309.27" rx="27" ry="18"/>
+</g>
+<!-- description_p_proc -->
+<g id="node2" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="147.08" cy="-127.63" rx="147.08" ry="115.44"/>
+<text text-anchor="middle" x="147.08" y="-191.96" font-family="Times,serif" font-size="14.00">The computer says: RADIO</text>
+<text text-anchor="middle" x="147.08" y="-174.71" font-family="Times,serif" font-size="14.00">CONTROL.</text>
+<text text-anchor="middle" x="147.08" y="-157.46" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="147.08" y="-140.21" font-family="Times,serif" font-size="14.00">It looks like the radio</text>
+<text text-anchor="middle" x="147.08" y="-122.96" font-family="Times,serif" font-size="14.00">channels have been shut</text>
+<text text-anchor="middle" x="147.08" y="-105.71" font-family="Times,serif" font-size="14.00">down.</text>
+<text text-anchor="middle" x="147.08" y="-88.46" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="147.08" y="-71.21" font-family="Times,serif" font-size="14.00">Radio channel control</text>
+<text text-anchor="middle" x="147.08" y="-53.96" font-family="Times,serif" font-size="14.00">seems to be on.</text>
+</g>
+<!-- start&#45;&gt;description_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;description_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M279.72,-292.95C268.5,-279.06 250.9,-257.26 232.14,-234.02"/>
+<polygon fill="#555555" stroke="#555555" points="234.47,-232.33 225.47,-226.75 229.03,-236.73 234.47,-232.33"/>
+</g>
+<!-- use_p_proc -->
+<g id="node3" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="438.08" cy="-127.63" rx="125.87" ry="127.63"/>
+<text text-anchor="middle" x="438.08" y="-200.58" font-family="Times,serif" font-size="14.00">You switch the radio</text>
+<text text-anchor="middle" x="438.08" y="-183.33" font-family="Times,serif" font-size="14.00">channels on.</text>
+<text text-anchor="middle" x="438.08" y="-166.08" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="438.08" y="-148.83" font-family="Times,serif" font-size="14.00">You switch the radio</text>
+<text text-anchor="middle" x="438.08" y="-131.58" font-family="Times,serif" font-size="14.00">channels off.</text>
+<text text-anchor="middle" x="438.08" y="-114.33" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="438.08" y="-97.08" font-family="Times,serif" font-size="14.00">You flip some switches</text>
+<text text-anchor="middle" x="438.08" y="-79.83" font-family="Times,serif" font-size="14.00">but can&#39;t get the radio</text>
+<text text-anchor="middle" x="438.08" y="-62.58" font-family="Times,serif" font-size="14.00">channel selectors to</text>
+<text text-anchor="middle" x="438.08" y="-45.33" font-family="Times,serif" font-size="14.00">change.</text>
+</g>
+<!-- start&#45;&gt;use_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;use_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M304.53,-292.95C315.64,-279.27 333,-257.92 351.56,-235.08"/>
+<polygon fill="#555555" stroke="#555555" points="354.86,-237.58 358.45,-227.61 349.42,-233.16 354.86,-237.58"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (not(initialized)) then begin\n  radio_computer := self_obj;\n  initialized := 1;\nend\nelse begin\n  if (script_action == 3) then begin\n    call description_p_proc;\n  end\n  else begin\n    if (script_action == 6) then begin\n      call use_p_proc;\n    end\n  end\nend\n","description_p_proc":"variable LVar0 := 0;\nLVar0 := message_str(607, 100);\nif (is_success(do_check(dude_obj, 1, has_trait(0, dude_obj, 0)))) then begin\n  if (global_var(608)) then begin\n    LVar0 := LVar0 + message_str(607, 101);\n  end\n  else begin\n    LVar0 := LVar0 + message_str(607, 102);\n  end\nend\ndisplay_msg(LVar0);\n","use_p_proc":"if (source_obj == dude_obj) then begin\n  if (is_success(roll_vs_skill(dude_obj, 12, 0))) then begin\n    if (global_var(608)) then begin\n      display_msg(message_str(607, 103));\n      set_global_var(608, 0);\n    end\n    else begin\n      display_msg(message_str(607, 104));\n      set_global_var(608, 1);\n    end\n  end\n  else begin\n    display_msg(message_str(607, 105));\n  end\nend\nelse begin\n  set_global_var(608, 1);\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

@@ -1,0 +1,18 @@
+digraph miWalSfe {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите стенной сейф."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Вы видите стенной сейф."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Сейф заперт."]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="успешно отпирает стенной\nсейф.\n---\nВы видите стенной сейф.\n---\nуспешно отпирает стенной\nсейф.\n---\nне может запереть\nстенной сейф.\n---\nне может запереть\nстенной сейф."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="успешно отпирает стенной\nсейф.\n---\nВы видите стенной сейф.\n---\nуспешно отпирает стенной\nсейф.\n---\nне может запереть\nстенной сейф.\n---\nне может запереть\nстенной сейф."]
+}

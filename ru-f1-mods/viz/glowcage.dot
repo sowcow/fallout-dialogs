@@ -1,0 +1,4 @@
+digraph glowcage {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Возможно, в этой клетке\nсодержались лабораторные\nживотные для опытов.\nПрутья клетки выломаны."]
+}

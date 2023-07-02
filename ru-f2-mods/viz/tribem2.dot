@@ -1,0 +1,13 @@
+digraph tribem2 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "map_exit_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_exit_p_proc" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" -> "Make_Fish" [style=dotted color="#555555"]
+  "map_enter_p_proc" [label="Вы входите в западную\nчасть деревни. Вокруг\nходят местные жители."]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+  "Make_Fish" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "Make_Fish" [label=""]
+}

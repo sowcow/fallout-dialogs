@@ -1,0 +1,7 @@
+digraph bguard {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "do_dialogue" [style=dotted color="#555555"]
+  "start" [label="Вы видите охранника."]
+  "do_dialogue" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_dialogue" [label="Я работаю на этого\nторговца.\n---\nПончики есть?\n---\nСломаешь что-нибудь -\nбудешь платить!\n---\nА воров мы убиваем без\nсуда и следствия!\n---\nТы покупаешь? Или еще сто\nлет будешь здесь торчать?\n---\nБез этого на\nрадскорпионов лучше не\nходить.\n---\nЯ работаю на этого\nторговца."]
+}

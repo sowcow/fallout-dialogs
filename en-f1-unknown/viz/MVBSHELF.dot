@@ -1,0 +1,4 @@
+digraph MVBSHELF {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="The bookshelf is filled\nwith religious and\nphilosophical books. It\nis\n very dusty.\n---\nYou take a book down,\nexamine it, and quickly\nreplace it on the shelf.\nThe\nshelf itself seems very\nsturdy."]
+}

@@ -1,0 +1,7 @@
+digraph GHRNDGRD {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "do_dialogue" [style=dotted color="#555555"]
+  "start" [label="You see a ghoul gang\nguard."]
+  "do_dialogue" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_dialogue" [label="Go away.\n---\nI don't like your kind.\n---\nLeave now!"]
+}

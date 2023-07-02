@@ -1,0 +1,173 @@
+<!DOCTYPE html><html><head><title>kenji</title><meta charset="utf-8" /></head><body><svg width="1058pt" height="189pt"
+ viewBox="0.00 0.00 1057.91 188.89" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184.89)">
+<title>kenji</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-184.89 1053.91,-184.89 1053.91,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="503.91" cy="-162.89" rx="27" ry="18"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node2" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="135.91" cy="-54.45" rx="135.91" ry="18"/>
+<text text-anchor="middle" x="135.91" y="-49.77" font-family="Times,serif" font-size="14.00">Гизмо передает привет!</text>
+</g>
+<!-- start&#45;&gt;critter_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;critter_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M478.23,-156.84C436.46,-148.38 351.39,-130.17 280.91,-108.89 249.26,-99.34 214.47,-86.59 186.91,-75.95"/>
+<polygon fill="#555555" stroke="#555555" points="188.31,-72.35 177.72,-71.98 185.77,-78.87 188.31,-72.35"/>
+</g>
+<!-- damage_p_proc -->
+<g id="node3" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="316.91" cy="-54.45" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;damage_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;damage_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M477.46,-157.85C445.25,-151.83 390.51,-137.94 352.91,-108.89 343.48,-101.61 335.67,-91.14 329.76,-81.39"/>
+<polygon fill="#555555" stroke="#555555" points="332.44,-80.03 324.49,-73.03 326.34,-83.46 332.44,-80.03"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node4" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="503.91" cy="-54.45" rx="142.31" ry="54.45"/>
+<text text-anchor="middle" x="503.91" y="-75.65" font-family="Times,serif" font-size="14.00">Вы получили 400 очков</text>
+<text text-anchor="middle" x="503.91" y="-58.4" font-family="Times,serif" font-size="14.00">опыта за то, что помогли</text>
+<text text-anchor="middle" x="503.91" y="-41.15" font-family="Times,serif" font-size="14.00">Киллиану справиться с</text>
+<text text-anchor="middle" x="503.91" y="-23.9" font-family="Times,serif" font-size="14.00">убийцей.</text>
+</g>
+<!-- start&#45;&gt;destroy_p_proc -->
+<g id="edge3" class="edge">
+<title>start&#45;&gt;destroy_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M503.91,-144.79C503.91,-137.78 503.91,-129.18 503.91,-120.12"/>
+<polygon fill="#555555" stroke="#555555" points="507.41,-120.34 503.91,-110.34 500.41,-120.34 507.41,-120.34"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node5" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="820.91" cy="-54.45" rx="156.62" ry="30.05"/>
+<text text-anchor="middle" x="820.91" y="-58.4" font-family="Times,serif" font-size="14.00">Вы видите подозрительного</text>
+<text text-anchor="middle" x="820.91" y="-41.15" font-family="Times,serif" font-size="14.00">стрелка.</text>
+</g>
+<!-- start&#45;&gt;look_at_p_proc -->
+<g id="edge4" class="edge">
+<title>start&#45;&gt;look_at_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M527.74,-153.89C571.04,-139.35 664.61,-107.93 734.46,-84.48"/>
+<polygon fill="#555555" stroke="#555555" points="735.22,-87.58 743.58,-81.08 732.99,-80.94 735.22,-87.58"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node6" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1022.91" cy="-54.45" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;talk_p_proc -->
+<g id="edge5" class="edge">
+<title>start&#45;&gt;talk_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M531.14,-161.86C621.37,-161.3 909.3,-155.8 986.91,-108.89 997.43,-102.54 1005.55,-91.79 1011.4,-81.59"/>
+<polygon fill="#555555" stroke="#555555" points="1014.8,-83.63 1016.31,-73.15 1008.59,-80.41 1014.8,-83.63"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 12) then begin\n  call critter_p_proc;\nend\nelse begin\n  if (script_action == 14) then begin\n    call damage_p_proc;\n  end\n  else begin\n    if (script_action == 18) then begin\n      call destroy_p_proc;\n    end\n    else begin\n      if (script_action == 21) then begin\n        call look_at_p_proc;\n      end\n      else begin\n        if (script_action == 11) then begin\n          call talk_p_proc;\n        end\n      end\n    end\n  end\nend\n","critter_p_proc":"if (tile_distance(tile_num(self_obj), 26281) > 3) then begin\n  animate_move_obj_to_tile(self_obj, 26281, 0);\nend\nelse begin\n  if (obj_on_screen(self_obj)) then begin\n    float_msg(self_obj, message_str(510, 103), 2);\n    attack_complex(Killian_ptr, 0, 1, 0, 0, 30000, 0, 0);\n  end\nend\n","damage_p_proc":"if (source_obj == dude_obj) then begin\n  set_map_var(2, 1);\nend\nelse begin\n  set_map_var(2, 2);\nend\n","destroy_p_proc":"if (source_obj == dude_obj) then begin\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n    set_global_var(156, 1);\n    set_global_var(157, 0);\n  end\n  if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n    set_global_var(157, 1);\n    set_global_var(156, 0);\n  end\n  set_global_var(160, global_var(160) + 1);\n  if ((global_var(160) % 6) == 0) then begin\n    set_global_var(155, global_var(155) + 1);\n  end\nend\nif (map_var(2) == 1) then begin\n  set_global_var(155, global_var(155) + 2);\n  display_msg(message_str(510, 104));\n  give_exp_points(400);\nend\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(510, 102));\n","talk_p_proc":"display_msg(message_str(510, random(100, 101)));\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

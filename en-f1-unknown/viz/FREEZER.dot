@@ -1,0 +1,4 @@
+digraph FREEZER {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="A heavy military\nrefrigerator.\n---\nA faded paper on the\nfreezer reads:\nFederal Bureau of\nInvestigation,\nSpecial Projects,\nClassified: Security\nTerminus."]
+}

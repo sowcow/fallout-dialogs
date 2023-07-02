@@ -1,0 +1,14 @@
+digraph lookout {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "talk_p_proc" [style=dotted color="#555555"]
+  "start" -> "guilt" [style=dotted color="#555555"]
+  "start" [label="Вы видите разведчика\nгулей."]
+  "spies" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spies" [label="Я не могу сейчас\nразговаривать. Я на\nпосту."]
+  "guilt" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "guilt" [label="Мы не сможем выжить без\nводы.\n---\nПожалуйста, поговори с\nнашим лидером, прежде чем\nуйдешь."]
+  "talk_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "talk_p_proc" -> "guilt" [style=dotted color="#555555"]
+  "talk_p_proc" -> "spies" [style=dotted color="#555555"]
+  "talk_p_proc" [label=""]
+}

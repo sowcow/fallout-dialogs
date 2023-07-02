@@ -1,0 +1,4 @@
+digraph mutdisk {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Вы видите диск со\nстранной маркировкой.\n---\nЭкран PIPboy: Информация\nуже сохранена.\n---\nЭкран PIPboy: Загрузка\nданных."]
+}

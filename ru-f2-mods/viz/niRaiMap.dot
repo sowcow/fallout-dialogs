@@ -1,0 +1,6 @@
+digraph niRaiMap {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="На карте обозначено\nместонахождение некоего\nлагеря налетчиков на\nвостоке. Вы вводите\nкоординаты в свой\nПип-Бой."]
+}

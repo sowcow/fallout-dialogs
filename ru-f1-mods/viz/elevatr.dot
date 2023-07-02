@@ -1,0 +1,4 @@
+digraph elevatr {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Это лифт. Огни не горят,\nно в остальном он похож\nна лифт в вашем убежище."]
+}

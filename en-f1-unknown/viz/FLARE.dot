@@ -1,0 +1,4 @@
+digraph FLARE {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="You light the flare.\n---\nThis flare has been\nexpended.\n---\nThe flare runs out of\nfuel and is extinguished.\n---\nYou see a lit flare.\n---\nYou see a spent flare.\n---\nYou see a flare."]
+}

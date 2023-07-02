@@ -1,0 +1,4 @@
+digraph GRAFFITI {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Scrawled on a scrap of\npaper is a barely legible\nmessage: 'Hea  d  or t  \nlower-level exit. No time\no  vac   e test p  je  \nT     s t e big    !\n Dan  Sc  ly."]
+}

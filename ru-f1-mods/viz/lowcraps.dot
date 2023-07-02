@@ -1,0 +1,8 @@
+digraph lowcraps {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "point_run" [style=dotted color="#555555"]
+  "start" -> "point_run" [style=dotted color="#555555"]
+  "start" [label="Перед вами стол для игры\nв кости с низкими\nставками. $20 за игру."]
+  "point_run" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "point_run" [label="Вы выкинули 7. Вы\nвыиграли!!\n---\nВам выпали 'глаза змеи'.\nВы проиграли.\n---\nВы бросили кости \n---\n! Вы выиграли!!\n---\nВы бросили кости \n---\n. Вы проиграли.\n---\nВы бросили кости \n---\nне ваша комбинация. Вы\nпроиграли.\n---\nЭто ваша комбинация. Вы\nвыиграли.\n---\nВы бросили кости \n---\n. Это ваша комбинация.\nКидайте снова."]
+}

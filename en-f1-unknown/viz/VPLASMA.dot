@@ -1,0 +1,13 @@
+digraph VPLASMA {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" -> "spatial_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="You notice a small trip\nplate at your feet.\n---\nYour knowledge of traps\nleads you to believe that\nthis is a trigger of\n some kind.\n---\nYou notice a small trip\nplate at your feet."]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="Plasma rips from the\nnorthern wall!"]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="You carefully sever the\npressure springs on the\ntrip plate.\n---\nYou're not quite sure how\nto prevent the plate from\ntriggering."]
+}

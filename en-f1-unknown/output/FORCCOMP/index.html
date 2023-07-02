@@ -1,0 +1,139 @@
+<!DOCTYPE html><html><head><title>FORCCOMP</title><meta charset="utf-8" /></head><body><svg width="576pt" height="189pt"
+ viewBox="0.00 0.00 576.06 188.89" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184.89)">
+<title>FORCCOMP</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-184.89 572.06,-184.89 572.06,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="286.18" cy="-162.89" rx="27" ry="18"/>
+</g>
+<!-- description_p_proc -->
+<g id="node2" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="140.18" cy="-54.45" rx="140.18" ry="30.05"/>
+<text text-anchor="middle" x="140.18" y="-58.4" font-family="Times,serif" font-size="14.00">This computer is marked:</text>
+<text text-anchor="middle" x="140.18" y="-41.15" font-family="Times,serif" font-size="14.00">Force Field Controls.</text>
+</g>
+<!-- start&#45;&gt;description_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;description_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M268.57,-149.05C248.66,-134.53 215.4,-110.29 187.73,-90.11"/>
+<polygon fill="#555555" stroke="#555555" points="190.1,-86.78 179.96,-83.72 185.98,-92.44 190.1,-86.78"/>
+</g>
+<!-- use_p_proc -->
+<g id="node3" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="433.18" cy="-54.45" rx="134.88" ry="54.45"/>
+<text text-anchor="middle" x="433.18" y="-75.65" font-family="Times,serif" font-size="14.00">You manipulate the</text>
+<text text-anchor="middle" x="433.18" y="-58.4" font-family="Times,serif" font-size="14.00">computer and a moment</text>
+<text text-anchor="middle" x="433.18" y="-41.15" font-family="Times,serif" font-size="14.00">later it sparks once</text>
+<text text-anchor="middle" x="433.18" y="-23.9" font-family="Times,serif" font-size="14.00"> and then shuts down.</text>
+</g>
+<!-- start&#45;&gt;use_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;use_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M303.92,-149.05C317.95,-138.89 338.56,-123.97 359.22,-109.01"/>
+<polygon fill="#555555" stroke="#555555" points="361.01,-111.31 367.05,-102.61 356.9,-105.64 361.01,-111.31"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 3) then begin\n  call description_p_proc;\nend\nelse begin\n  if (script_action == 6) then begin\n    call use_p_proc;\n  end\nend\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(364, 100));\n","use_p_proc":"if (not(global_var(609))) then begin\n  script_overrides;\n  display_msg(message_str(364, 101));\n  set_global_var(262, 0);\n  set_global_var(146, 2);\n  set_global_var(609, 1);\n  field_change := \"off\";\n  if (map_var(2) != 0) then begin\n    use_obj(map_var(2));\n  end\n  use_obj(map_var(3));\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

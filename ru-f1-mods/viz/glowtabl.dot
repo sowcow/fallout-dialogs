@@ -1,0 +1,4 @@
+digraph glowtabl {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="На столе такой\nбеспорядок, что трудно\nразобраться, что именно\nна нем лежит."]
+}

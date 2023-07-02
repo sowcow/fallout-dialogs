@@ -1,0 +1,18 @@
+digraph epai34 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Вы нашли и быстро\nисправили ошибки в\nмашине.\n---\nПохоже, произошло\nвмешательство извне, что\nпривело к воспроизведению\nголограммы с искажениями.\n---\nВы уже починили эту\nмашину.\n---\nВам не хватает навыков\nдля починки этой машины.\n---\nЧерт! Это слишком сложно\nдля меня! Ремонт это не\nмоя сильная сторона.\n---\nЧто я ищу здесь?"]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Это машина, которая\nуправляет проецированием\nголограмм в этой комнате."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите своеобразную\nмашину."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label=""]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="Вы нашли и быстро\nисправили ошибки в\nмашине.\n---\nПохоже, произошло\nвмешательство извне, что\nпривело к воспроизведению\nголограммы с искажениями.\n---\nВы уже починили эту\nмашину.\n---\nВам не хватает навыков\nдля починки этой машины.\n---\nЧерт! Даже с помощью этих\nинструментов это слишком\nсложно для меня. Ремонт\nэто не моя сильная\nсторона.\n---\nЧто я ищу здесь?"]
+}

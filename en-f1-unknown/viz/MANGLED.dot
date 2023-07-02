@@ -1,0 +1,7 @@
+digraph MANGLED {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "dead00" [style=dotted color="#555555"]
+  "start" [label="You notice bloody tracks\nleading to the bodies."]
+  "dead00" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "dead00" [label="It looks like some of the\nanimals dragged the\nbodies here."]
+}

@@ -1,0 +1,8 @@
+digraph diCrate {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Вы видите ящики с\nразличными химикалиями,\nкоторые вам точно ни на\nчто не пригодятся.\n---\nВы видите ящики с\nразличными химикалиями,\nкоторые вам точно ни на\nчто не пригодятся."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label=""]
+}

@@ -1,0 +1,7 @@
+digraph bonebody {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "look_at_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Тот, кто напал на этого\nчеловека, обглодал его до\nкостей.\n---\nВетер отполировал кости\nдо блеска.\n---\nКажется, трупы лежат\nздесь довольно давно."]
+}

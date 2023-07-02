@@ -1,0 +1,4 @@
+digraph ELEVATR {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="This is the elevator. The\nlights are off but it\nlooks just like\n the one in your Vault."]
+}

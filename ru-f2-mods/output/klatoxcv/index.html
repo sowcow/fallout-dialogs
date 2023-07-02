@@ -1,0 +1,123 @@
+<!DOCTYPE html><html><head><title>klatoxcv</title><meta charset="utf-8" /></head><body><svg width="440pt" height="68pt"
+ viewBox="0.00 0.00 440.00 68.10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 64.1)">
+<title>klatoxcv</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-64.1 436,-64.1 436,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-30.05" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node2" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="216" cy="-30.05" rx="143.9" ry="30.05"/>
+<text text-anchor="middle" x="216" y="-34" font-family="Times,serif" font-size="14.00">Вы оказались в ядовитых</text>
+<text text-anchor="middle" x="216" y="-16.75" font-family="Times,serif" font-size="14.00">пещерах.</text>
+</g>
+<!-- map_update_p_proc -->
+<g id="node3" class="node">
+<title>map_update_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="405" cy="-30.05" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","map_enter_p_proc":"if (metarule(14, 0)) then begin\n  display_msg(message_str(311, 100));\nend\ndebug_msg(\"klatoxcv\" + \": \" + \"Check_Create_Car(\" + 18340 + \",\" + 0 + \")\" + \"\\n\");\nif (not(metarule(22, 0))) then begin\n  if (global_var(18) != 0) then begin\n    debug_msg(\"klatoxcv\" + \": \" + \"car_current_town == \" + metarule(30, 0) + \" / map_get_load_area == \" + metarule3(111, 0, 0, 0) + \"\\n\");\n    if ((metarule(30, 0) == metarule3(111, 0, 0, 0)) or ((26 <= metarule(30, 0)) and (metarule(30, 0) <= 29) and (metarule3(111, 0, 0, 0) == 4294967295))) then begin\n      debug_msg(\"klatoxcv\" + \": \" + \"Place_Car(\" + 18340 + \",\" + 0 + \")\" + \"\\n\");\n      debug_msg(\"klatoxcv\" + \": \" + \"   GVAR_CAR_PLACED_TILE == \" + global_var(633) + \"\\n\");\n      debug_msg(\"klatoxcv\" + \": \" + \"   Car_At_Loc == \" + (tile_contains_pid_obj(18340, 0, 33555441) != 0) + \"\\n\");\n      if ((global_var(633) <= 0) or (18340 == global_var(633))) then begin\n        set_global_var(633, 18340);\n        if (not(tile_contains_pid_obj(18340, 0, 33555441) != 0)) then begin\n          Scenery_Creation := create_object_sid(33555441, 18340, 0, 304);\n          Scenery_Creation_Hex := 18340;\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 2) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 1, 1);\n            Scenery_Creation := create_object_sid(33554499, Scenery_Creation_Hex, 0, 4294967295);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 2) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 2, 1);\n            Scenery_Creation := create_object_sid(33554499, Scenery_Creation_Hex, 0, 4294967295);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 2) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 3, 1);\n            Scenery_Creation := create_object_sid(33554499, Scenery_Creation_Hex, 0, 4294967295);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 2) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 4, 1);\n            Scenery_Creation := create_object_sid(33554499, Scenery_Creation_Hex, 0, 4294967295);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 5, 1);\n            Scenery_Creation := create_object_sid(33554499, Scenery_Creation_Hex, 0, 4294967295);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 4, 1);\n            Scenery_Creation := create_object_sid(33554499, Scenery_Creation_Hex, 0, 4294967295);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 5, 1);\n            Scenery_Creation := create_object_sid(33554499, Scenery_Creation_Hex, 0, 4294967295);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 4, 1);\n            Scenery_Creation := create_object_sid(33554499, Scenery_Creation_Hex, 0, 4294967295);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 5, 1);\n            Scenery_Creation := create_object_sid(33554499, Scenery_Creation_Hex, 0, 4294967295);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 4, 1);\n            Scenery_Creation := create_object_sid(33554499, Scenery_Creation_Hex, 0, 4294967295);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 0, 1);\n            Scenery_Creation := create_object_sid(33554499, Scenery_Creation_Hex, 0, 4294967295);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 5, 1);\n            Scenery_Creation := create_object_sid(33554499, Scenery_Creation_Hex, 0, 4294967295);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 2) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 0, 1);\n            Scenery_Creation := create_object_sid(33554499, Scenery_Creation_Hex, 0, 4294967295);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 1, 1);\n            Scenery_Creation := create_object_sid(33554499, Scenery_Creation_Hex, 0, 4294967295);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 2, 1);\n            Scenery_Creation := create_object_sid(33554499, Scenery_Creation_Hex, 0, 4294967295);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n        end\n      end\n      if (tile_contains_pid_obj(18340, 0, 33555441) != 0) then begin\n        if (not(tile_contains_pid_obj(tile_num_in_direction(tile_num_in_direction(18340, 5, 2), 4, 1), 0, 455) != 0)) then begin\n          debug_msg(\"klatoxcv\" + \": \" + \"placing trunk:\" + \"\\n\");\n          Scenery_Creation_Ptr := 0;\n          if (party_member_obj(455) != 0) then begin\n            Scenery_Creation_Ptr := party_member_obj(455);\n          end\n          else begin\n            if (global_var(18) == 0) then begin\n              Scenery_Creation_Ptr := create_object_sid(455, 0, 0, 920);\n            end\n          end\n          if (Scenery_Creation_Ptr != 0) then begin\n            Scenery_Creation_Hex := tile_num_in_direction(tile_num_in_direction(18340, 5, 2), 4, 1);\n            move_to(Scenery_Creation_Ptr, Scenery_Creation_Hex, 0);\n            Scenery_Creation_Count := 0;\n            while(Scenery_Creation_Count < 1) do begin\n              Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 1, 1);\n              Scenery_Creation := create_object_sid(33554499, Scenery_Creation_Hex, 0, 4294967295);\n              Scenery_Creation_Count := Scenery_Creation_Count + 1;\n            end\n            Scenery_Creation_Count := 0;\n            while(Scenery_Creation_Count < 1) do begin\n              Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 2, 1);\n              Scenery_Creation := create_object_sid(33554499, Scenery_Creation_Hex, 0, 4294967295);\n              Scenery_Creation_Count := Scenery_Creation_Count + 1;\n            end\n          end\n          else begin\n            debug_msg(\"klatoxcv\" + \": \" + \"WE HAD AN ERROR WITH THE TRUNK PTR, OHHH FUCK\" + \"\\n\");\n          end\n        end\n      end\n    end\n    else begin\n      if (tile_contains_pid_obj(18340, 0, 33555441) != 0) then begin\n        debug_msg(\"klatoxcv\" + \": \" + \"Dest_Car_Loc(\" + 18340 + \",\" + 0 + \")\" + \"\\n\");\n        Scenery_Creation_Ptr := tile_contains_pid_obj(18340, 0, 33555441);\n        if (Scenery_Creation_Ptr != 0) then begin\n          destroy_object(Scenery_Creation_Ptr);\n          Scenery_Creation_Hex := 18340;\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 2) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 1, 1);\n            Scenery_Creation_Ptr := tile_contains_pid_obj(Scenery_Creation_Hex, 0, 33554499);\n            destroy_object(Scenery_Creation_Ptr);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 2) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 2, 1);\n            Scenery_Creation_Ptr := tile_contains_pid_obj(Scenery_Creation_Hex, 0, 33554499);\n            destroy_object(Scenery_Creation_Ptr);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 2) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 3, 1);\n            Scenery_Creation_Ptr := tile_contains_pid_obj(Scenery_Creation_Hex, 0, 33554499);\n            destroy_object(Scenery_Creation_Ptr);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 2) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 4, 1);\n            Scenery_Creation_Ptr := tile_contains_pid_obj(Scenery_Creation_Hex, 0, 33554499);\n            destroy_object(Scenery_Creation_Ptr);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 5, 1);\n            Scenery_Creation_Ptr := tile_contains_pid_obj(Scenery_Creation_Hex, 0, 33554499);\n            destroy_object(Scenery_Creation_Ptr);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 4, 1);\n            Scenery_Creation_Ptr := tile_contains_pid_obj(Scenery_Creation_Hex, 0, 33554499);\n            destroy_object(Scenery_Creation_Ptr);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 5, 1);\n            Scenery_Creation_Ptr := tile_contains_pid_obj(Scenery_Creation_Hex, 0, 33554499);\n            destroy_object(Scenery_Creation_Ptr);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 4, 1);\n            Scenery_Creation_Ptr := tile_contains_pid_obj(Scenery_Creation_Hex, 0, 33554499);\n            destroy_object(Scenery_Creation_Ptr);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 5, 1);\n            Scenery_Creation_Ptr := tile_contains_pid_obj(Scenery_Creation_Hex, 0, 33554499);\n            destroy_object(Scenery_Creation_Ptr);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 4, 1);\n            Scenery_Creation_Ptr := tile_contains_pid_obj(Scenery_Creation_Hex, 0, 33554499);\n            destroy_object(Scenery_Creation_Ptr);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 0, 1);\n            Scenery_Creation_Ptr := tile_contains_pid_obj(Scenery_Creation_Hex, 0, 33554499);\n            destroy_object(Scenery_Creation_Ptr);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 5, 1);\n            Scenery_Creation_Ptr := tile_contains_pid_obj(Scenery_Creation_Hex, 0, 33554499);\n            destroy_object(Scenery_Creation_Ptr);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 2) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 0, 1);\n            Scenery_Creation_Ptr := tile_contains_pid_obj(Scenery_Creation_Hex, 0, 33554499);\n            destroy_object(Scenery_Creation_Ptr);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 1, 1);\n            Scenery_Creation_Ptr := tile_contains_pid_obj(Scenery_Creation_Hex, 0, 33554499);\n            destroy_object(Scenery_Creation_Ptr);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 2, 1);\n            Scenery_Creation_Ptr := tile_contains_pid_obj(Scenery_Creation_Hex, 0, 33554499);\n            destroy_object(Scenery_Creation_Ptr);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 1, 1);\n            Scenery_Creation_Ptr := tile_contains_pid_obj(Scenery_Creation_Hex, 0, 33554499);\n            destroy_object(Scenery_Creation_Ptr);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n          Scenery_Creation_Count := 0;\n          while(Scenery_Creation_Count < 1) do begin\n            Scenery_Creation_Hex := tile_num_in_direction(Scenery_Creation_Hex, 2, 1);\n            Scenery_Creation_Ptr := tile_contains_pid_obj(Scenery_Creation_Hex, 0, 33554499);\n            destroy_object(Scenery_Creation_Ptr);\n            Scenery_Creation_Count := Scenery_Creation_Count + 1;\n          end\n        end\n        Scenery_Creation_Ptr := tile_contains_pid_obj(tile_num_in_direction(tile_num_in_direction(18340, 5, 2), 4, 1), 0, 455);\n        if (Scenery_Creation_Ptr != 0) then begin\n          if (Scenery_Creation_Ptr == party_member_obj(455)) then begin\n            set_obj_visibility(Scenery_Creation_Ptr, 1);\n          end\n          else begin\n            destroy_object(Scenery_Creation_Ptr);\n          end\n        end\n      end\n    end\n  end\n  else begin\n    debug_msg(\"klatoxcv\" + \": \" + \"the player hasn't gotten the car, can't place it\" + \"\\n\");\n  end\nend\nelse begin\n  debug_msg(\"klatoxcv\" + \": \" + \"sorry, can't place the car, the game's loading\" + \"\\n\");\nend\noverride_map_start(18532 % 200, 92, 0, 1);\nset_light_level(40);\nset_global_var(27, 0);\n","map_update_p_proc":"set_light_level(40);\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

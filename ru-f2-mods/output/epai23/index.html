@@ -1,0 +1,183 @@
+<!DOCTYPE html><html><head><title>epai23</title><meta charset="utf-8" /></head><body><svg width="872pt" height="352pt"
+ viewBox="0.00 0.00 872.18 351.85" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 347.85)">
+<title>epai23</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-347.85 868.18,-347.85 868.18,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-313.8" rx="27" ry="18"/>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node2" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-313.8" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node3" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="171" cy="-313.8" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node4" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="171" cy="-228.75" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc&#45;&gt;talk_p_proc -->
+<g id="edge1" class="edge">
+<title>use_p_proc&#45;&gt;talk_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M171,-295.59C171,-284.75 171,-270.5 171,-258.03"/>
+<polygon fill="#555555" stroke="#555555" points="174.5,-258.22 171,-248.22 167.5,-258.22 174.5,-258.22"/>
+</g>
+<!-- Node001 -->
+<g id="node5" class="node">
+<title>Node001</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="171" cy="-131.5" rx="141.24" ry="42.25"/>
+<text text-anchor="middle" x="171" y="-144.07" font-family="Times,serif" font-size="14.00">Терминал управления</text>
+<text text-anchor="middle" x="171" y="-126.82" font-family="Times,serif" font-size="14.00">силовым полем. Введите</text>
+<text text-anchor="middle" x="171" y="-109.57" font-family="Times,serif" font-size="14.00">команду:</text>
+</g>
+<!-- talk_p_proc&#45;&gt;Node001 -->
+<g id="edge2" class="edge">
+<title>talk_p_proc&#45;&gt;Node001</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M171,-210.28C171,-202.94 171,-193.99 171,-184.8"/>
+<polygon fill="#555555" stroke="#555555" points="174.5,-184.99 171,-174.99 167.5,-184.99 174.5,-184.99"/>
+</g>
+<!-- Node999 -->
+<g id="node9" class="node">
+<title>Node999</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="171" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- Node001&#45;&gt;Node999 -->
+<g id="edge3" class="edge">
+<title>Node001&#45;&gt;Node999</title>
+<path fill="none" stroke="#007799" d="M83.79,-97.95C65.21,-86 54.43,-71.13 66.75,-54 81.76,-33.13 109.83,-24.53 133.06,-21.07"/>
+<polygon fill="#007799" stroke="#007799" points="133.16,-24.46 142.67,-19.78 132.32,-17.51 133.16,-24.46"/>
+<text text-anchor="middle" x="160.12" y="-57.95" font-family="Times,serif" font-size="14.00" fill="#007799">Отключить силовое поле.</text>
+</g>
+<!-- Node001&#45;&gt;Node999 -->
+<g id="edge4" class="edge">
+<title>Node001&#45;&gt;Node999</title>
+<path fill="none" stroke="#998e00" d="M243.11,-94.74C257.22,-82.92 264.96,-68.93 255,-54 244.48,-38.22 225.34,-29.54 207.99,-24.77"/>
+<polygon fill="#998e00" stroke="#998e00" points="209.05,-21.19 198.52,-22.28 207.44,-28 209.05,-21.19"/>
+<text text-anchor="middle" x="284.88" y="-57.95" font-family="Times,serif" font-size="14.00" fill="#998e00">Выйти.</text>
+</g>
+<!-- destroy_p_proc -->
+<g id="node6" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="243" cy="-313.8" rx="27" ry="18"/>
+</g>
+<!-- description_p_proc -->
+<g id="node7" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="446" cy="-313.8" rx="157.68" ry="30.05"/>
+<text text-anchor="middle" x="446" y="-317.75" font-family="Times,serif" font-size="14.00">Вы видите блок управления</text>
+<text text-anchor="middle" x="446" y="-300.5" font-family="Times,serif" font-size="14.00">силовым полем.</text>
+</g>
+<!-- look_at_p_proc -->
+<g id="node8" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="743" cy="-313.8" rx="121.18" ry="18"/>
+<text text-anchor="middle" x="743" y="-309.13" font-family="Times,serif" font-size="14.00">Вы видите терминал.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","use_skill_on_p_proc":"[]","use_p_proc":"if (combat_is_initialized == 0) then begin\n  script_overrides;\n  call talk_p_proc;\nend\n","talk_p_proc":"start_gdialog(1440, self_obj, 4, 4294967295, 4294967295);\ngsay_start;\ncall Node001;\ngsay_end;\nend_dialogue;\n","destroy_p_proc":"[]","description_p_proc":"script_overrides;\ndisplay_msg(message_str(1440, 101));\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(1440, 100));\n","Node999":"[]","Node001":"gsay_reply(1440, 200);\nif (global_var(760) == 0) then begin\n  giq_option(4, 1440, 201, Node999, 50);\nend\ngiq_option(4, 1440, 202, Node999, 50);\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

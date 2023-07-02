@@ -1,0 +1,18 @@
+digraph vanhag {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "critter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "critter_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите одного из Чад\nСобора."]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label=""]
+  "talk_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "talk_p_proc" [label="Я не разговариваю с\nязычниками, такими как\nты."]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" [label="Твой отчет, Ван Хаган.\n---\nСоздатель доволен твоими\nуспехами, но его нужда\nвелика, а время\nограничено.\n---\nСоздатель должен знать,\nчто сырья недостаточно.\nМы не можем создавать\nнаших воинов без большего\nзапаса.\n---\nОн знает о твоих\nпроблемах. Он уже\nзанимается из решением.\n---\nРасскажи мне о его\nпланах. Нам нужно будет\nскоординировать действия,\nесли Единству суждено\nпреуспеть.\n---\nСоздатель обнаружил\nнеизвестное, и все еще\nобитаемое Убежище. Там\nстолько сырья, что мы\nсможем создать большие\nсилы. Согласно прогнозам\nэлектронных\nпредсказателей, этого\nбудет достаточно, чтобы\nмы преуспели.\n---\nОтлично. Это просто\nудача. Жители загрязнены?\n---\nО, это лучше всего. Из\nних кого не возьми - все\nони чисты. Чистейшая\nпорода.\n---\nО, просто потрясающе.\nКакое Убежище мы\nсобираемся разорить?\n---\nУбежище 13. Скоро они\nбудут наши, очень скоро.\n---\nВы получаете 1000 единиц\nопыта за то, что\nподслушали беседу о вашем\nУбежище."]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+}

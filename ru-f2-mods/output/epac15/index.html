@@ -1,0 +1,190 @@
+<!DOCTYPE html><html><head><title>epac15</title><meta charset="utf-8" /></head><body><svg width="1494pt" height="189pt"
+ viewBox="0.00 0.00 1494.00 188.89" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184.89)">
+<title>epac15</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-184.89 1490,-184.89 1490,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-126.45" rx="27" ry="18"/>
+</g>
+<!-- map_exit_p_proc -->
+<g id="node2" class="node">
+<title>map_exit_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-126.45" rx="27" ry="18"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node3" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="232" cy="-126.45" rx="87.51" ry="18"/>
+<text text-anchor="middle" x="232" y="-121.77" font-family="Times,serif" font-size="14.00">Спасибо, друг!</text>
+</g>
+<!-- Run_p_proc -->
+<g id="node4" class="node">
+<title>Run_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="232" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- critter_p_proc&#45;&gt;Run_p_proc -->
+<g id="edge1" class="edge">
+<title>critter_p_proc&#45;&gt;Run_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M232,-108.34C232,-91.91 232,-66.79 232,-47.36"/>
+<polygon fill="#555555" stroke="#555555" points="235.5,-47.41 232,-37.41 228.5,-47.41 235.5,-47.41"/>
+</g>
+<!-- use_p_proc -->
+<g id="node5" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="365" cy="-126.45" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node6" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="540" cy="-126.45" rx="129.58" ry="54.45"/>
+<text text-anchor="middle" x="540" y="-147.65" font-family="Times,serif" font-size="14.00">Вы видите дикаря.</text>
+<text text-anchor="middle" x="540" y="-130.4" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="540" y="-113.15" font-family="Times,serif" font-size="14.00">Вы видите дикаря,</text>
+<text text-anchor="middle" x="540" y="-95.9" font-family="Times,serif" font-size="14.00">плененного Доктором.</text>
+</g>
+<!-- description_p_proc -->
+<g id="node7" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="835" cy="-126.45" rx="147.08" ry="42.25"/>
+<text text-anchor="middle" x="835" y="-139.02" font-family="Times,serif" font-size="14.00">Печально выглядящий</text>
+<text text-anchor="middle" x="835" y="-121.77" font-family="Times,serif" font-size="14.00">заключенный,</text>
+<text text-anchor="middle" x="835" y="-104.52" font-family="Times,serif" font-size="14.00">принадлежащий Доктору.</text>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node8" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1027" cy="-126.45" rx="27" ry="18"/>
+</g>
+<!-- use_obj_on_p_proc -->
+<g id="node9" class="node">
+<title>use_obj_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1099" cy="-126.45" rx="27" ry="18"/>
+</g>
+<!-- damage_p_proc -->
+<g id="node10" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1171" cy="-126.45" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node11" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1243" cy="-126.45" rx="27" ry="18"/>
+</g>
+<!-- map_update_p_proc -->
+<g id="node12" class="node">
+<title>map_update_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1315" cy="-126.45" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node13" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1387" cy="-126.45" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node14" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1459" cy="-126.45" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"add_timer_event(self_obj, game_ticks(random(10, 12)), 3);\n","map_exit_p_proc":"if (global_var(754) == 2) then begin\n  destroy_object(self_obj);\nend\n","critter_p_proc":"if (global_var(754) == 1) then begin\n  float_msg(self_obj, message_str(1411, 107), 4);\n  set_global_var(754, 0);\n  call Run_p_proc;\nend\nelse begin\n  if (global_var(754) == 2) then begin\n    animate_move_obj_to_tile(self_obj, 20435, 1);\n  end\nend\n","use_p_proc":"[]","look_at_p_proc":"script_overrides;\nif (local_var(4) == 0) then begin\n  display_msg(message_str(1411, 100));\nend\nelse begin\n  display_msg(message_str(1411, 101));\nend\n","description_p_proc":"script_overrides;\ndisplay_msg(message_str(1411, 102));\n","use_skill_on_p_proc":"[]","use_obj_on_p_proc":"[]","damage_p_proc":"[]","map_enter_p_proc":"[]","map_update_p_proc":"[]","talk_p_proc":"[]","Run_p_proc":"animate_move_obj_to_tile(self_obj, 16658, 1);\nset_global_var(754, 2);\nadd_timer_event(self_obj, game_ticks(13), 4);\n","timed_event_p_proc":"if (fixed_param == 3) then begin\n  float_msg(self_obj, message_str(1411, random(103, 106)), 4);\n  add_timer_event(self_obj, game_ticks(random(5, 7)), 3);\nend\nif (fixed_param == 4) then begin\n  move_to(self_obj, 20435, 1);\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

@@ -1,0 +1,18 @@
+digraph epai19 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Чего мне здесь надо?\n---\nВы исправили\nнеисправность в машине.\n---\nВы уже починили эту\nмашину.\n---\nДаже имея инструмент, у\nвас недостаточно навыков\nдля починки этой машины.\n---\nВы уже починили эту\nмашину."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Вы видите машину для\nпроецирования голограммы\nпо науке."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите необычную\nмашину.\n---\nВы видите резервный\nпроектор голограммы\n00000."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label=""]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="Чего мне здесь надо?\n---\nВы исправили\nнеисправность в машине.\n---\nВы уже починили эту\nмашину.\n---\nУ вас нет навыков,\nнеобходимых для починки\nэтой машины.\n---\nВы уже починили эту\nмашину."]
+}

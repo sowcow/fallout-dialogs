@@ -1,0 +1,4 @@
+digraph bvlive {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Вы видите, что из трещины\nв ножке стула торчит\nкончик ключа.\n---\nВы смотрите на стул и\nвидите, что с ним что-то\nне так."]
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html><html><head><title>epac1</title><meta charset="utf-8" /></head><body><svg width="1336pt" height="214pt"
+ viewBox="0.00 0.00 1336.00 214.48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 210.48)">
+<title>epac1</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-210.48 1332,-210.48 1332,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-103.24" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node2" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-103.24" rx="27" ry="18"/>
+</g>
+<!-- use_p_proc -->
+<g id="node3" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="171" cy="-103.24" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node4" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="362" cy="-103.24" rx="146.02" ry="30.05"/>
+<text text-anchor="middle" x="362" y="-107.19" font-family="Times,serif" font-size="14.00">Вы видите робота Мистер</text>
+<text text-anchor="middle" x="362" y="-89.94" font-family="Times,serif" font-size="14.00">Хенди.</text>
+</g>
+<!-- description_p_proc -->
+<g id="node5" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="675" cy="-103.24" rx="148.67" ry="103.24"/>
+<text text-anchor="middle" x="675" y="-158.94" font-family="Times,serif" font-size="14.00">Вы видите серьезно</text>
+<text text-anchor="middle" x="675" y="-141.69" font-family="Times,serif" font-size="14.00">поврежденного робота</text>
+<text text-anchor="middle" x="675" y="-124.44" font-family="Times,serif" font-size="14.00">Мистер Хенди.</text>
+<text text-anchor="middle" x="675" y="-107.19" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="675" y="-89.94" font-family="Times,serif" font-size="14.00">По непонятным причинам</text>
+<text text-anchor="middle" x="675" y="-72.69" font-family="Times,serif" font-size="14.00">этот робот Мистер Хенди</text>
+<text text-anchor="middle" x="675" y="-55.44" font-family="Times,serif" font-size="14.00">выглядит очень</text>
+<text text-anchor="middle" x="675" y="-38.19" font-family="Times,serif" font-size="14.00">подавленным.</text>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node6" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="869" cy="-103.24" rx="27" ry="18"/>
+</g>
+<!-- use_obj_on_p_proc -->
+<g id="node7" class="node">
+<title>use_obj_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="941" cy="-103.24" rx="27" ry="18"/>
+</g>
+<!-- damage_p_proc -->
+<g id="node8" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1013" cy="-103.24" rx="27" ry="18"/>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node9" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1085" cy="-103.24" rx="27" ry="18"/>
+</g>
+<!-- map_update_p_proc -->
+<g id="node10" class="node">
+<title>map_update_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1157" cy="-103.24" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node11" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1229" cy="-103.24" rx="27" ry="18"/>
+</g>
+<!-- push_p_proc -->
+<g id="node12" class="node">
+<title>push_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="1301" cy="-103.24" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"add_timer_event(self_obj, game_ticks(5), 1);\n","timed_event_p_proc":"variable LVar0 := 0;\nif (fixed_param == 1) then begin\n  metarule3(100, self_obj, 1, 0);\n  if (not(critter_state(self_obj) bwand 2) and not(combat_is_initialized)) then begin\n    LVar0 := tile_num_in_direction(tile_num(self_obj), random(0, 5), 5);\n    if (not(tile_contains_pid_obj(LVar0, elevation(self_obj), 33554499) != 0)) then begin\n      reg_anim_func(1, 1);\n      animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(self_obj), random(0, 5), 5), 0);\n      reg_anim_func(3, 0);\n    end\n  end\n  add_timer_event(self_obj, game_ticks(random(10, 15)), 1);\nend\n","use_p_proc":"[]","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(1397, 100));\n","description_p_proc":"script_overrides;\nif (local_var(4) == 0) then begin\n  display_msg(message_str(1397, 101));\n  set_local_var(4, 1);\nend\nelse begin\n  display_msg(message_str(1397, 102));\nend\n","use_skill_on_p_proc":"[]","use_obj_on_p_proc":"[]","damage_p_proc":"[]","map_enter_p_proc":"[]","map_update_p_proc":"[]","talk_p_proc":"float_msg(self_obj, message_str(1397, random(200, 210)), 8);\n","push_p_proc":"float_msg(self_obj, message_str(1397, random(500, 501)), 8);\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

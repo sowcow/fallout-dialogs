@@ -1,0 +1,10 @@
+digraph nscody {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="По мере приближения к\nтелу Коди вы начинаете\nчувствовать характерный\nзапах одеколона.\n---\nПо мере приближения к\nтелу Коди вы начинаете\nчувствовать сражающий\nзапах одеколона Джулса."]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+}

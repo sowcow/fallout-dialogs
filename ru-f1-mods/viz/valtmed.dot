@@ -1,0 +1,6 @@
+digraph valtmed {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="Это - реанимационная\nмедицинская лаборатория\nУбежища - РМЛ. Тут должны\nлечить все тяжелые\nранения. 24 часа в сутки\nздесь должен дежурить\nврач."]
+}

@@ -1,0 +1,6 @@
+digraph doorcode {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Код доступа к военной\nбазе.\n---\nПленка голографического\nдиска от компании Ватт\nЭлектроникс."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Сам диск безнадежно\nиспорчен, но на нем\nвыцарапана надпись: КОД\n010597"]
+}

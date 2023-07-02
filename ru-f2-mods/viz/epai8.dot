@@ -1,0 +1,14 @@
+digraph epai8 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="При ближайшем\nрассмотрении\nобнаруживается, что\nкабина лифта отсутствует,\nа двери заклинило.\n---\nВам не починить это."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите поврежденные\nдвери лифта."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Кажется, с этим лифтом\nчто-то не так.\n---\nЭто лифт, очевидно, не\nработает. Вам придется\nнайти другой способ."]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+}

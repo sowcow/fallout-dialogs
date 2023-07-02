@@ -1,0 +1,4 @@
+digraph AIRLOCK {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="This vault looks\nparticularly scavenged.\nYou\nthink to yourself that\nnothing of value could\n possibly remain."]
+}

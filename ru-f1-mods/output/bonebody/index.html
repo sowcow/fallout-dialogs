@@ -1,0 +1,131 @@
+<!DOCTYPE html><html><head><title>bonebody</title><meta charset="utf-8" /></head><body><svg width="304pt" height="311pt"
+ viewBox="0.00 0.00 304.28 310.87" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 306.87)">
+<title>bonebody</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-306.87 300.28,-306.87 300.28,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="148.14" cy="-284.87" rx="27" ry="18"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node2" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="148.14" cy="-115.44" rx="148.14" ry="115.44"/>
+<text text-anchor="middle" x="148.14" y="-179.76" font-family="Times,serif" font-size="14.00">Тот, кто напал на этого</text>
+<text text-anchor="middle" x="148.14" y="-162.51" font-family="Times,serif" font-size="14.00">человека, обглодал его до</text>
+<text text-anchor="middle" x="148.14" y="-145.26" font-family="Times,serif" font-size="14.00">костей.</text>
+<text text-anchor="middle" x="148.14" y="-128.01" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="148.14" y="-110.76" font-family="Times,serif" font-size="14.00">Ветер отполировал кости</text>
+<text text-anchor="middle" x="148.14" y="-93.51" font-family="Times,serif" font-size="14.00">до блеска.</text>
+<text text-anchor="middle" x="148.14" y="-76.26" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="148.14" y="-59.01" font-family="Times,serif" font-size="14.00">Кажется, трупы лежат</text>
+<text text-anchor="middle" x="148.14" y="-41.76" font-family="Times,serif" font-size="14.00">здесь довольно давно.</text>
+</g>
+<!-- start&#45;&gt;look_at_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;look_at_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M148.14,-266.58C148.14,-259.78 148.14,-251.35 148.14,-241.98"/>
+<polygon fill="#555555" stroke="#555555" points="151.64,-242.04 148.14,-232.04 144.64,-242.04 151.64,-242.04"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 3) then begin\n  call look_at_p_proc;\nend\n","look_at_p_proc":"script_overrides;\nrndx := random(1, 3);\nif (rndx == 1) then begin\n  display_msg(message_str(293, 100));\nend\nelse begin\n  if (rndx == 2) then begin\n    display_msg(message_str(293, 101));\n  end\n  else begin\n    if (rndx == 3) then begin\n      display_msg(message_str(293, 102));\n    end\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

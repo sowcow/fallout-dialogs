@@ -1,0 +1,18 @@
+digraph fcsubtar {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Операционная система\nпохоже повреждена, так\nкак она не правильно\nотвечает на ваши команды.\nВы могли бы упорядочить\nсистему при использовании\nболее научного подхода."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите старую консоль."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Похоже, это старая\nконсоль управления\nнаведением торпед.\nБольшинство мониторов\nлопнуло или отсутствуют,\nтолько один едва\nфункционирует. Время от\nвремени на мерцающем\nэкране появляются\nслучайные биты данных."]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Вводом нескольких\nдополнительных команд вы\nприводите систему в\nпорядок, и она начинает\nвести себя должным\nобразом. Еще несколькими\nнажатиями клавиш системы\nуправления торпедами\nотключаются и переводятся\nв режим подрыва торпед\nчерез несколько мгновений\nпосле вылета из ствола.\nНаука!\n---\nВы возитесь с системой\nнесколько минут, но это\nслишком сложно для вас.\nПохоже, вам придется\nпоискать другой способ\nотключения торпед."]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label=""]
+}

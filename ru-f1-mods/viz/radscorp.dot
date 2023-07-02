@@ -1,0 +1,18 @@
+digraph radscorp {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "combat_p_proc" [style=dotted color="#555555"]
+  "start" -> "critter_p_proc" [style=dotted color="#555555"]
+  "start" -> "destroy_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "combat_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "combat_p_proc" [label=""]
+  "critter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "critter_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" [label=""]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label=""]
+}

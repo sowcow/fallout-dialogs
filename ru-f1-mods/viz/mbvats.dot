@@ -1,0 +1,18 @@
+digraph mbvats {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "map_enter_p_proc" [style=dotted color="#555555"]
+  "start" -> "map_update_p_proc" [style=dotted color="#555555"]
+  "start" -> "map_exit_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" -> "add_party" [style=dotted color="#555555"]
+  "map_enter_p_proc" [label=""]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label="Осталось \n---\n сек."]
+  "map_exit_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_exit_p_proc" [label=""]
+  "combat_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "combat_p_proc" [label=""]
+  "add_party" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "add_party" [label=""]
+}

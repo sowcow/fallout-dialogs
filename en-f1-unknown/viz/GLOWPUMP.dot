@@ -1,0 +1,4 @@
+digraph GLOWPUMP {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="You see a water pump.\n---\nThe design of this pump\nlooks very different from\nthe one\n in your Vault.\n---\nYou realize that the\npump's parts will be\nincompatible\nwith those of your\nVault."]
+}

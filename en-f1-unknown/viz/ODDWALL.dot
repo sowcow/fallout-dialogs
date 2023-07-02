@@ -1,0 +1,4 @@
+digraph ODDWALL {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="There is something odd\nabout one of the east\nwalls."]
+}

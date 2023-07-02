@@ -1,0 +1,4 @@
+digraph oddwall {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Что-то странное\nпроисходит с одной из\nвосточных стен."]
+}

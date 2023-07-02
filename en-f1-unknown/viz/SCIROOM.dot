@@ -1,0 +1,4 @@
+digraph SCIROOM {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="This room once belonged\nto esteemed scientists."]
+}

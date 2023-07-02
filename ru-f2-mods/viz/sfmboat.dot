@@ -1,0 +1,16 @@
+digraph sfmboat {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" -> "load_sub_location" [style=dotted color="#555555"]
+  "use_p_proc" -> "talk_p_proc" [style=dotted color="#555555"]
+  "use_p_proc" -> "load_sub_location" [style=dotted color="#555555"]
+  "use_p_proc" [label="Я не знаю, в каком\nнаправлении двигаться.\n---\nСлишком рискованно\nиспользовать это снова.\n---\nМожет быть, мне стоит\nобезоружить эту штуку,\nпрежде чем сваливать."]
+  "load_sub_location" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "load_sub_location" [label=""]
+  "talk_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "talk_p_proc" -> "Node001" [style=dotted color="#555555"]
+  "talk_p_proc" [label=""]
+  "Node001" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "Node001" [label="Вы прокрадываетесь на\nмоторную лодку, пока\nохранник смотрит в другую\nсторону, и прячетесь в\nней. Около полуночи вы\nслышите рядом голоса и\nчувствуете, как моторная\nлодка начинает двигаться.\n---\nВы видите моторную лодку."]
+}

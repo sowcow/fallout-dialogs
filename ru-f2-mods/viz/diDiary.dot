@@ -1,0 +1,10 @@
+digraph diDiary {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите старый дневник."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Вы видите старый дневник."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Вы уже пытались перенести\nсодержимое дневника в\nПип-Бой.\n---\nЭтот старый дневник\nслишком хрупок и скоро\nразвалится. Информацию не\nвозможно перенести в\nПип-Бой.\n---\nВы видите старый дневник.\n---\nЭтот старый дневник\nслишком хрупок и скоро\nразвалится. Информацию не\nвозможно перенести в\nПип-Бой."]
+}

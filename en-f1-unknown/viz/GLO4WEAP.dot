@@ -1,0 +1,16 @@
+digraph GLO4WEAP {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "Using_Door" [style=dotted color="#555555"]
+  "start" -> "Picklocks" [style=dotted color="#555555"]
+  "start" -> "Traps" [style=dotted color="#555555"]
+  "start" -> "Sciences" [style=dotted color="#555555"]
+  "start" [label="You see a door which\nlooks very secure.\n---\nThe door is uneffected by\nthe skill.\n---\nYou get shocked by the\nsecurity system for\n---\n points of damage.\n---\nYou unlock the door with\nthe Red Pass Key.\n---\nThat item has no effect\non the door. Perhaps\nanother item\n will be more useful."]
+  "Traps" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "Traps" [label="You successfully bypassed\nthe security system.\n---\nYou activate the security\nsystem and get shocked\nfor\n---\n points of damage.\n---\nYou do not detect any\ntraps on the door."]
+  "Sciences" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "Sciences" [label="You successfully bypassed\nthe security system.\n---\nYou activate the security\nsystem and get shocked\nfor\n---\n points of damage.\n---\nYou do not detect any\ntraps on the door."]
+  "Picklocks" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "Picklocks" [label="You get shocked by the\nsecurity system for\n---\n points of damage.\n---\nThe door seems to be\nprotected by an energy\nfield. Perhaps you\ncan de-activate it\nsomehow.\n---\nYou successfully unlock\nthe door.\n---\nYou failed to pick the\nlock on the door."]
+  "Using_Door" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "Using_Door" [label="You get shocked by the\nsecurity system for\n---\n points of damage.\n---\nThe door seems to be\nprotected by an energy\nfield. Perhaps you\ncan de-activate it\nsomehow.\n---\nThe door seems to have a\nsecondary lock on it.\n---\nYou notice that there are\nsome red markings on the\ndoor.\n---\nYou notice that there are\nsome red markings on the\ndoor.\n---\nYou wonder what could\nunlock the door."]
+}

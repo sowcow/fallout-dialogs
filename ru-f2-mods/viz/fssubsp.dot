@@ -1,0 +1,10 @@
+digraph fssubsp {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="Вы спускаетесь по ржавой\nлестнице внутрь подводной\nлодки. Интерьер темный,\nосвещен только тусклым\nсветом от нескольких\nработающих мониторов.\nВоздух здесь пропитан\nзапахами ржавчины и\nразложения. Вы чувствуете\nсебя почти как дома.\n---\nВы спускаетесь по ржавой\nлестнице внутрь подводной\nлодки. Интерьер темный,\nосвещен только тусклым\nсветом от нескольких\nработающих мониторов.\nВоздух здесь пропитан\nзапахами ржавчины и\nразложения. Вы чувствуете\nсебя подавлено и вообще\nвесьма неважно."]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+}

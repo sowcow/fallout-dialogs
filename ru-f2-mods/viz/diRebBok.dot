@@ -1,0 +1,6 @@
+digraph diRebBok {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Вы прочитали книгу и\nобрыдались от умиления,\nно не вынесли оттуда\nничего полезного для\nсебя."]
+}

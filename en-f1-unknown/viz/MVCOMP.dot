@@ -1,0 +1,18 @@
+digraph MVCOMP {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "skills" [style=dotted color="#555555"]
+  "start" -> "disarmit" [style=dotted color="#555555"]
+  "start" -> "armit" [style=dotted color="#555555"]
+  "start" [label="This computer is labeled\nAtomic Access Computer.\n---\nThere are cables running\nfrom the access computer\nto\n the warhead behind it.\n---\nThat doesn't seem to be\nworking.\n---\nThat doesn't seem to be\nworking."]
+  "skills" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "skills" -> "armit" [style=dotted color="#555555"]
+  "skills" -> "armit" [style=dotted color="#555555"]
+  "skills" [label="That doesn't seem to be\nworking.\n---\nYou are not skilled\nenough to defeat the\nsecurity mechanism.\n---\nYou are not skilled\nenough to defeat the\nsecurity mechanism.\n---\nYou are not skilled\nenough to defeat the\nsecurity mechanism.\n---\nYou are not skilled\nenough to defeat the\nsecurity mechanism.\n---\nYou cannot use the traps\nskill on this computer.\n---\nThis computer cannot be\nrepaired.\n---\nThat doesn't seem to be\nworking."]
+  "armit" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "armit" [label="You have armed the\nwarhead. A timer with\nfour minutes\n has started a countdown."]
+  "disarmit" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "disarmit" -> "reset" [style=dotted color="#555555"]
+  "disarmit" [label="That doesn't seem to be\nworking."]
+  "reset" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "reset" [label="You have disarmed the\nnuclear warhead."]
+}

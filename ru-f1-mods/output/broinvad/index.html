@@ -1,0 +1,159 @@
+<!DOCTYPE html><html><head><title>broinvad</title><meta charset="utf-8" /></head><body><svg width="793pt" height="384pt"
+ viewBox="0.00 0.00 793.00 384.06" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 380.06)">
+<title>broinvad</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-380.06 789,-380.06 789,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-224.03" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node2" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-224.03" rx="27" ry="18"/>
+</g>
+<!-- StepAside -->
+<g id="node3" class="node">
+<title>StepAside</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc&#45;&gt;StepAside -->
+<g id="edge1" class="edge">
+<title>talk_p_proc&#45;&gt;StepAside</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M99,-205.63C99,-170.32 99,-89.97 99,-47.13"/>
+<polygon fill="#555555" stroke="#555555" points="102.5,-47.35 99,-37.35 95.5,-47.35 102.5,-47.35"/>
+</g>
+<!-- critter_p_proc -->
+<g id="node4" class="node">
+<title>critter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="275" cy="-224.03" rx="131.17" ry="152.03"/>
+<text text-anchor="middle" x="275" y="-314.23" font-family="Times,serif" font-size="14.00">Пора возвращаться в</text>
+<text text-anchor="middle" x="275" y="-296.98" font-family="Times,serif" font-size="14.00">Братство.</text>
+<text text-anchor="middle" x="275" y="-279.73" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="275" y="-262.48" font-family="Times,serif" font-size="14.00">Отлично, все на месте.</text>
+<text text-anchor="middle" x="275" y="-245.23" font-family="Times,serif" font-size="14.00">Сожжем здесь все к</text>
+<text text-anchor="middle" x="275" y="-227.98" font-family="Times,serif" font-size="14.00">чертовой матери!</text>
+<text text-anchor="middle" x="275" y="-210.73" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="275" y="-193.48" font-family="Times,serif" font-size="14.00">Пора возвращаться в</text>
+<text text-anchor="middle" x="275" y="-176.23" font-family="Times,serif" font-size="14.00">Братство.</text>
+<text text-anchor="middle" x="275" y="-158.98" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="275" y="-141.73" font-family="Times,serif" font-size="14.00">Пора возвращаться в</text>
+<text text-anchor="middle" x="275" y="-124.48" font-family="Times,serif" font-size="14.00">Братство.</text>
+</g>
+<!-- map_enter_p_proc -->
+<g id="node5" class="node">
+<title>map_enter_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="569" cy="-224.03" rx="144.43" ry="66.64"/>
+<text text-anchor="middle" x="569" y="-253.85" font-family="Times,serif" font-size="14.00">В этом помещении что&#45;то</text>
+<text text-anchor="middle" x="569" y="-236.6" font-family="Times,serif" font-size="14.00">не так.</text>
+<text text-anchor="middle" x="569" y="-219.35" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="569" y="-202.1" font-family="Times,serif" font-size="14.00">У меня от этого места</text>
+<text text-anchor="middle" x="569" y="-184.85" font-family="Times,serif" font-size="14.00">мурашки по коже.</text>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node6" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="758" cy="-224.03" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","talk_p_proc":"anim(dude_obj, 1000, rotation_to_tile(tile_num(dude_obj), tile_num(self_obj)));\nif (global_var(223) != 10) then begin\n  if (get_critter_stat(dude_obj, 34) == 0) then begin\n    float_msg(self_obj, message_str(819, random(100, 105)), 9);\n  end\n  else begin\n    float_msg(self_obj, message_str(819, random(106, 111)), 9);\n  end\nend\ncall StepAside;\n","critter_p_proc":"if (not((cur_map_index == 17) or (cur_map_index == 18) or (cur_map_index == 33) or (cur_map_index == 34) or (cur_map_index == 30) or ((cur_map_index == 31) and (elevation(self_obj) == 0)))) then begin\n  float_msg(self_obj, message_str(819, 115), 9);\n  party_remove(self_obj);\n  destroy_object(self_obj);\nend\nif ((global_var(223) == 1) and ((cur_map_index == 17) or (cur_map_index == 18) or (cur_map_index == 33) or (cur_map_index == 34)) or ((global_var(223) == 2) and ((cur_map_index == 30) or (cur_map_index == 31)))) then begin\n  if (tile_distance_objs(dude_obj, self_obj) > 10) then begin\n    animate_move_obj_to_tile(self_obj, tile_num_in_direction(tile_num(dude_obj), random(0, 5), random(3, 6)), 1);\n  end\n  if (local_var(0) == 0) then begin\n    if ((tile_distance_objs(dude_obj, self_obj) < 8) and ((cur_map_index == 17) or (cur_map_index == 30))) then begin\n      set_local_var(0, 1);\n      float_msg(self_obj, message_str(819, 112), 9);\n    end\n  end\nend\nif ((local_var(4) == 1) and (cur_map_index == 17) and (elevation(self_obj) == local_var(3)) and not(combat_is_initialized)) then begin\n  set_local_var(4, 0);\n  set_local_var(1, 2);\n  party_remove(self_obj);\n  set_global_var(223, 10);\n  reg_anim_func(2, self_obj);\n  float_msg(self_obj, message_str(819, 115), 9);\n  add_timer_event(self_obj, 10, 1);\nend\nif ((global_var(271) == 2) and (local_var(1) == 1) and (cur_map_index == 30) and (local_var(5) == 1) and not(combat_is_initialized)) then begin\n  set_local_var(1, 2);\n  party_remove(self_obj);\n  set_global_var(223, 10);\n  reg_anim_func(2, self_obj);\n  float_msg(self_obj, message_str(819, 115), 9);\n  add_timer_event(self_obj, 10, 1);\nend\n","map_enter_p_proc":"if (Only_Once) then begin\n  critter_add_trait(self_obj, 1, 6, 0);\n  critter_add_trait(self_obj, 1, 5, 65);\n  Only_Once := 0;\nend\nif (metarule(22, 0) == 0) then begin\n  if ((local_var(1) == 0) and ((global_var(223) == 1) and (cur_map_index == 17) or ((global_var(223) == 2) and (cur_map_index == 30)))) then begin\n    set_local_var(1, 1);\n    if (metarule(22, 0) == 0) then begin\n      set_obj_visibility(self_obj, 0);\n    end\n    party_add(self_obj);\n  end\n  else begin\n    if ((global_var(223) != 1) and ((cur_map_index == 17) or (cur_map_index == 18) or (cur_map_index == 33) or (cur_map_index == 34)) or ((global_var(223) != 2) and ((cur_map_index == 30) or (cur_map_index == 31) or (cur_map_index == 32)))) then begin\n      if (metarule(22, 0) == 0) then begin\n        set_obj_visibility(self_obj, 1);\n      end\n      if (local_var(1) != 0) then begin\n        party_remove(self_obj);\n        destroy_object(self_obj);\n      end\n    end\n    else begin\n      if ((global_var(223) >= 10) and (local_var(1) != 0)) then begin\n        destroy_object(self_obj);\n      end\n    end\n  end\n  if ((global_var(223) == 1) or (global_var(223) == 2)) then begin\n    if (cur_map_index == 33) then begin\n      float_msg(self_obj, message_str(819, 113), 9);\n    end\n    if (cur_map_index == 34) then begin\n      float_msg(self_obj, message_str(819, 114), 9);\n    end\n  end\nend\nif (cur_map_index == 33) then begin\n  set_local_var(4, 1);\nend\nif (local_var(5) == 0) then begin\n  if (cur_map_index == 32) then begin\n    set_local_var(5, 1);\n  end\nend\n","timed_event_p_proc":"set_obj_visibility(self_obj, 1);\nif (global_var(223) == 10) then begin\n  set_global_var(223, 11);\n  gfade_out(600);\n  gfade_in(600);\nend\n","StepAside":"variable LVar0 := 0;\nNewHex := 0;\nLVar0 := random(0, 5);\nLVar0 := random(0, 5);\nLVar0 := random(0, 5);\nif (LVar0 == 0) then begin\n  NewHex := tile_num(self_obj) - 400;\nend\nif (LVar0 == 1) then begin\n  NewHex := tile_num(self_obj) - 202;\nend\nif (LVar0 == 2) then begin\n  NewHex := tile_num(self_obj) - 198;\nend\nif (LVar0 == 3) then begin\n  NewHex := tile_num(self_obj) + 400;\nend\nif (LVar0 == 4) then begin\n  NewHex := tile_num(self_obj) + 202;\nend\nif (LVar0 == 5) then begin\n  NewHex := tile_num(self_obj) + 198;\nend\nscript_overrides;\nmove_to(self_obj, NewHex, elevation(self_obj));\nscript_overrides;\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

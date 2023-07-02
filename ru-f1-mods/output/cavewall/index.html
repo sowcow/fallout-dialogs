@@ -1,0 +1,144 @@
+<!DOCTYPE html><html><head><title>cavewall</title><meta charset="utf-8" /></head><body><svg width="853pt" height="311pt"
+ viewBox="0.00 0.00 853.25 310.58" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 306.58)">
+<title>cavewall</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-306.58 849.25,-306.58 849.25,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="156.09" cy="-260.33" rx="27" ry="18"/>
+</g>
+<!-- description_p_proc -->
+<g id="node2" class="node">
+<title>description_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="156.09" cy="-91.04" rx="156.09" ry="91.04"/>
+<text text-anchor="middle" x="156.09" y="-138.11" font-family="Times,serif" font-size="14.00">В скале много трещин.</text>
+<text text-anchor="middle" x="156.09" y="-120.86" font-family="Times,serif" font-size="14.00">Кажется, чтобы обрушить</text>
+<text text-anchor="middle" x="156.09" y="-103.61" font-family="Times,serif" font-size="14.00">стены, достаточно лишь</text>
+<text text-anchor="middle" x="156.09" y="-86.36" font-family="Times,serif" font-size="14.00">небольшого воздействия.</text>
+<text text-anchor="middle" x="156.09" y="-69.11" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="156.09" y="-51.86" font-family="Times,serif" font-size="14.00">Стены в этой части пещеры</text>
+<text text-anchor="middle" x="156.09" y="-34.61" font-family="Times,serif" font-size="14.00">выглядят непрочными.</text>
+</g>
+<!-- start&#45;&gt;description_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;description_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M156.09,-242.06C156.09,-229.79 156.09,-212.2 156.09,-193.36"/>
+<polygon fill="#555555" stroke="#555555" points="159.59,-193.47 156.09,-183.47 152.59,-193.47 159.59,-193.47"/>
+</g>
+<!-- look_at_p_proc -->
+<g id="node3" class="node">
+<title>look_at_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="357.09" cy="-260.33" rx="156.09" ry="30.05"/>
+<text text-anchor="middle" x="357.09" y="-264.28" font-family="Times,serif" font-size="14.00">Стены в этой части пещеры</text>
+<text text-anchor="middle" x="357.09" y="-247.03" font-family="Times,serif" font-size="14.00">выглядят непрочными.</text>
+</g>
+<!-- damage_p_proc -->
+<g id="node4" class="node">
+<title>damage_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="688.09" cy="-260.33" rx="157.15" ry="42.25"/>
+<text text-anchor="middle" x="688.09" y="-272.9" font-family="Times,serif" font-size="14.00">Вы засыпали вход в пещеру</text>
+<text text-anchor="middle" x="688.09" y="-255.65" font-family="Times,serif" font-size="14.00">с мертвыми скорпионами.</text>
+<text text-anchor="middle" x="688.09" y="-238.4" font-family="Times,serif" font-size="14.00">Странное решение.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 3) then begin\n  call description_p_proc;\nend\n","look_at_p_proc":"script_overrides;\ndisplay_msg(message_str(465, 100));\n","description_p_proc":"script_overrides;\nif (is_success(do_check(dude_obj, 1, 0)) or is_success(do_check(dude_obj, 6, -1))) then begin\n  display_msg(message_str(465, 101));\nend\nelse begin\n  display_msg(message_str(465, 100));\nend\n","damage_p_proc":"variable LVar0 := 0;\nvariable LVar1 := 0;\nif (map_var(0) == 0) then begin\n  set_map_var(0, 1);\n  gfade_out(600);\n  LVar0 := create_object_sid(33554839, 0, 0, -1);\n  move_to(LVar0, 21744, 0);\n  create_object_sid(33554499, 22349, 0, -1);\n  create_object_sid(33554499, 21544, 0, -1);\n  create_object_sid(33554499, 21744, 0, -1);\n  create_object_sid(33554499, 21944, 0, -1);\n  create_object_sid(33554499, 22144, 0, -1);\n  create_object_sid(33554499, 22344, 0, -1);\n  create_object_sid(33554499, 22544, 0, -1);\n  create_object_sid(33554499, 22744, 0, -1);\n  create_object_sid(33554499, 22944, 0, -1);\n  create_object_sid(33554499, 21139, 0, -1);\n  create_object_sid(33554499, 21339, 0, -1);\n  create_object_sid(33554499, 21539, 0, -1);\n  create_object_sid(33554499, 21739, 0, -1);\n  create_object_sid(33554499, 21939, 0, -1);\n  create_object_sid(33554499, 22139, 0, -1);\n  create_object_sid(33554499, 22339, 0, -1);\n  create_object_sid(33554499, 22539, 0, -1);\n  create_object_sid(33554499, 22739, 0, -1);\n  create_object_sid(33554499, 22939, 0, -1);\n  create_object_sid(33554499, 22940, 0, -1);\n  create_object_sid(33554499, 22941, 0, -1);\n  create_object_sid(33554499, 22942, 0, -1);\n  create_object_sid(33554499, 22943, 0, -1);\n  if (global_var(28) == 0) then begin\n    set_global_var(155, global_var(155) + 6);\n    LVar1 := (global_var(2) * 75) + 75;\n    if (LVar1 < 300) then begin\n      LVar1 := 300;\n    end\n    if (global_var(2) > 0) then begin\n      LVar1 := LVar1 + 500;\n    end\n    set_global_var(28, 2);\n    set_global_var(43, 2);\n    display_msg(message_str(766, 188) + \" \" + message_str(766, 103) + \" \" + LVar1 + \" \" + message_str(766, 104));\n    give_exp_points(LVar1);\n  end\n  else begin\n    display_msg(message_str(465, 102));\n  end\n  gfade_in(600);\n  if (not(tile_distance(tile_num(dude_obj), 21155) < 15)) then begin\n    metarule(13, 0);\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

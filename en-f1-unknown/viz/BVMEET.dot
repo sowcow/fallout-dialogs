@@ -1,0 +1,4 @@
+digraph BVMEET {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="In the corner of the room\nis a rat-sized tunnel.\nThey must be\nburrowing their way into\nthe Vault through here."]
+}

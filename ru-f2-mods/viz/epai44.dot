@@ -1,0 +1,12 @@
+digraph epai44 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Вы приходите в себя\nпримерно через два часа.\nВаша голова пульсирует, и\nвы чувствуете себя\nнемного иначе.\n---\nО-ой..."]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "drop_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "drop_p_proc" [label=""]
+}

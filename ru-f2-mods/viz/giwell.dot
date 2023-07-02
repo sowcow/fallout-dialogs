@@ -1,0 +1,10 @@
+digraph giwell {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Вы делаете большой глоток\nколодезной воды. Она\nнеобычно теплая.\n---\nВы делаете большой глоток\nколодезной воды. На вкус\nона стала лучше, чем\nраньше."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите колодец."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="Вы видите колодец.\n---\nМожет вам просто так\nкажется, но глядя вниз вы\nощущаете, что из темноты\nвеет теплотой."]
+}

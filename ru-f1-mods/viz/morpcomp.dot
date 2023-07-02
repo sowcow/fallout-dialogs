@@ -1,0 +1,10 @@
+digraph morpcomp {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label="Перед вами компьютер Mach\nIV."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Экран компьютера\nпоказывает маленькие\nзеленые бомбы, бесконечно\nпадающие на землю.\n---\nВы получили доступ к\nнекоторым записям. Самое\nинтересное - это просьба\nЛейтенанта прислать\n\"...больше подопытных\nлюдей для обработки.\nНемедленно пришлите их на\nвоенную базу.\""]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Вы получили доступ к\nнекоторым записям. Самое\nинтересное - это просьба\nЛейтенанта прислать\n\"...больше подопытных\nлюдей для обработки.\nНемедленно пришлите их на\nвоенную базу.\"\n---\nВы не можете взломать\nпароль."]
+}

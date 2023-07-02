@@ -1,0 +1,7 @@
+digraph VALTLEAV {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "spatial_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="To the west, you can see\nstars in an open sky. For\nthe first time in your\nlife, you are looking at\nthe outside world.\n---\nTo the west, you can see\na natural light. For the\nfirst time\nin your life, you are\nlooking at the outside\nworld."]
+}

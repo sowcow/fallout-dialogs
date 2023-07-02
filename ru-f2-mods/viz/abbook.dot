@@ -1,0 +1,10 @@
+digraph abbook {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="В этом книжном шкафу\nмного различных книг\nдовоенного времени. Так\nмного информации... Жаль,\nчто у вас нет времени\nпосидеть здесь и\nпрочитать их все."]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Вы видите обычный книжный\nшкаф."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="В этом книжном шкафу\nмного различных книг."]
+}

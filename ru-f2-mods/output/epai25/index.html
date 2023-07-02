@@ -1,0 +1,158 @@
+<!DOCTYPE html><html><head><title>epai25</title><meta charset="utf-8" /></head><body><svg width="526pt" height="285pt"
+ viewBox="0.00 0.00 526.00 285.29" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 281.29)">
+<title>epai25</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-281.29 522,-281.29 522,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-210.64" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc -->
+<g id="node2" class="node">
+<title>timed_event_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-210.64" rx="27" ry="18"/>
+</g>
+<!-- check_p_proc -->
+<g id="node3" class="node">
+<title>check_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-90" rx="27" ry="18"/>
+</g>
+<!-- timed_event_p_proc&#45;&gt;check_p_proc -->
+<g id="edge1" class="edge">
+<title>timed_event_p_proc&#45;&gt;check_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M99,-192.39C99,-173.15 99,-141.74 99,-118.97"/>
+<polygon fill="#555555" stroke="#555555" points="102.5,-119.27 99,-109.27 95.5,-119.27 102.5,-119.27"/>
+</g>
+<!-- explode_p_proc -->
+<g id="node7" class="node">
+<title>explode_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="99" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- check_p_proc&#45;&gt;explode_p_proc -->
+<g id="edge2" class="edge">
+<title>check_p_proc&#45;&gt;explode_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M99,-71.7C99,-64.24 99,-55.32 99,-46.97"/>
+<polygon fill="#555555" stroke="#555555" points="102.5,-47.1 99,-37.1 95.5,-47.1 102.5,-47.1"/>
+</g>
+<!-- use_p_proc -->
+<g id="node4" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="259" cy="-210.64" rx="114.73" ry="66.64"/>
+<text text-anchor="middle" x="259" y="-240.47" font-family="Times,serif" font-size="14.00">Вы устанавливаете</text>
+<text text-anchor="middle" x="259" y="-223.22" font-family="Times,serif" font-size="14.00">динамит.</text>
+<text text-anchor="middle" x="259" y="-205.97" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="259" y="-188.72" font-family="Times,serif" font-size="14.00">Вы обезвреживаете</text>
+<text text-anchor="middle" x="259" y="-171.47" font-family="Times,serif" font-size="14.00">динамит.</text>
+</g>
+<!-- pickup_p_proc -->
+<g id="node5" class="node">
+<title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="419" cy="-210.64" rx="27" ry="18"/>
+</g>
+<!-- destroy_p_proc -->
+<g id="node6" class="node">
+<title>destroy_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="491" cy="-210.64" rx="27" ry="18"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"add_timer_event(self_obj, 1, 1);\n","timed_event_p_proc":"variable LVar0 := 0;\nif (fixed_param == 1) then begin\n  if (global_var(761) == 0) then begin\n    LVar0 := obj_carrying_pid_obj(dude_obj, 568);\n    rm_obj_from_inven(dude_obj, LVar0);\n  end\n  else begin\n    if (global_var(761) == 1) then begin\n      LVar0 := obj_carrying_pid_obj(dude_obj, 563);\n      rm_obj_from_inven(dude_obj, LVar0);\n    end\n  end\n  add_timer_event(self_obj, 1, 1);\n  call check_p_proc;\nend\n","use_p_proc":"variable LVar0 := 0;\nscript_overrides;\nif (global_var(761) == 0) then begin\n  script_overrides;\n  set_global_var(761, 1);\n  display_msg(message_str(1442, 100));\n  LVar0 := create_object_sid(568, 0, 1442, 4294967295);\n  add_obj_to_inven(dude_obj, LVar0);\n  LVar0 := obj_carrying_pid_obj(dude_obj, 563);\n  rm_obj_from_inven(dude_obj, LVar0);\nend\nelse begin\n  script_overrides;\n  set_global_var(761, 0);\n  display_msg(message_str(1442, 101));\n  LVar0 := create_object_sid(563, 0, 1442, 4294967295);\n  add_obj_to_inven(dude_obj, LVar0);\n  LVar0 := obj_carrying_pid_obj(dude_obj, 568);\n  rm_obj_from_inven(dude_obj, LVar0);\nend\n","pickup_p_proc":"[]","destroy_p_proc":"[]","explode_p_proc":"explosion(tile_num(self_obj), elevation(self_obj), 100);\ndestroy_object(self_obj);\n","check_p_proc":"if (global_var(761) == 1) then begin\n  if (global_var(762) == 1) then begin\n    metarule3(100, self_obj, 1, 0);\n    call explode_p_proc;\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

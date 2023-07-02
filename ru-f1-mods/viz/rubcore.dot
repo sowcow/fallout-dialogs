@@ -1,0 +1,6 @@
+digraph rubcore {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="В расположенных в этом\nнаправлении отсеках\nУбежища, очевидно, было\nмного хрупкого\nоборудования, которое\nсейчас уже уничтожено.\nВряд ли там найдется хоть\nчто-то ценное."]
+}

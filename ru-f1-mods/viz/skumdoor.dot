@@ -1,0 +1,18 @@
+digraph skumdoor {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "damage_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "damage_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "map_enter_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_enter_p_proc" [label=""]
+  "map_update_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "map_update_p_proc" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="Дверь в \"Выгребную яму\"\nзаперта."]
+  "use_obj_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_obj_on_p_proc" [label="Тебе удается отпереть\nдверь.\n---\nТы слышишь какой-то\nщелчок. Кажется, дверь\nзаклинило.\n---\nТы совершаешь разного\nрода манипуляции над\nзамком, но так и не\nможешь его отпереть.\n---\nДверь не заперта."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Тебе удается отпереть\nдверь.\n---\nТы слышишь какой-то\nщелчок. Кажется, дверь\nзаклинило.\n---\nТы совершаешь разного\nрода манипуляции над\nзамком, но так и не\nможешь его отпереть.\n---\nДверь не заперта."]
+}

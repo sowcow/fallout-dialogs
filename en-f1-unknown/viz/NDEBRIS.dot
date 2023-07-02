@@ -1,0 +1,4 @@
+digraph NDEBRIS {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="The way ahead is blocked\nby rubble and debris.\nPerhaps you can\n find a way underground.\n---\nThe way to the north is\nblocked by rubble and\ndebris. You will\nhave to find another\nway."]
+}

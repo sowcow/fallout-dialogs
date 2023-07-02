@@ -1,0 +1,7 @@
+digraph YOURROOM {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "spatial_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "spatial_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "spatial_p_proc" [label="This door leads to your\nroom. You have lived your\nentire life in this\nroom, until now. Your\nfellow Vault citizens\nhave told you that they\nwill leave this room\nempty in your honor."]
+}

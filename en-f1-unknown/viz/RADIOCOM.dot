@@ -1,0 +1,10 @@
+digraph RADIOCOM {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="The computer says: RADIO\nCONTROL.\n---\nIt looks like the radio\nchannels have been shut\ndown.\n---\nRadio channel control\nseems to be on."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="You switch the radio\nchannels on.\n---\nYou switch the radio\nchannels off.\n---\nYou flip some switches\nbut can't get the radio\nchannel selectors to\nchange."]
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html><html><head><title>invader</title><meta charset="utf-8" /></head><body><svg width="266pt" height="333pt"
+ viewBox="0.00 0.00 266.05 332.60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 328.6)">
+<title>invader</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-328.6 262.05,-328.6 262.05,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="117.38" cy="-294.55" rx="117.38" ry="30.05"/>
+<text text-anchor="middle" x="117.38" y="-298.5" font-family="Times,serif" font-size="14.00">Вы видите бегущего</text>
+<text text-anchor="middle" x="117.38" y="-281.25" font-family="Times,serif" font-size="14.00">супермутанта.</text>
+</g>
+<!-- timetomove -->
+<g id="node2" class="node">
+<title>timetomove</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="62.38" cy="-210.5" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;timetomove -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;timetomove</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M98.14,-264.85C91.96,-255.62 85.15,-245.47 79.16,-236.53"/>
+<polygon fill="#555555" stroke="#555555" points="81.51,-234.75 73.03,-228.39 75.69,-238.65 81.51,-234.75"/>
+</g>
+<!-- mutant00 -->
+<g id="node3" class="node">
+<title>mutant00</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="144.38" cy="-114.25" rx="113.67" ry="42.25"/>
+<text text-anchor="middle" x="144.38" y="-126.82" font-family="Times,serif" font-size="14.00">Иди сюда, человек!</text>
+<text text-anchor="middle" x="144.38" y="-109.57" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="144.38" y="-92.32" font-family="Times,serif" font-size="14.00">Стой!</text>
+</g>
+<!-- start&#45;&gt;mutant00 -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;mutant00</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M121.84,-264.11C125.8,-237.92 131.7,-199.01 136.46,-167.53"/>
+<polygon fill="#555555" stroke="#555555" points="140.06,-168.16 138.1,-157.74 133.14,-167.11 140.06,-168.16"/>
+</g>
+<!-- Critter_Action -->
+<g id="node4" class="node">
+<title>Critter_Action</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="172.38" cy="-210.5" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;Critter_Action -->
+<g id="edge3" class="edge">
+<title>start&#45;&gt;Critter_Action</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M136.62,-264.85C142.8,-255.62 149.61,-245.47 155.6,-236.53"/>
+<polygon fill="#555555" stroke="#555555" points="159.07,-238.65 161.73,-228.39 153.25,-234.75 159.07,-238.65"/>
+</g>
+<!-- combat -->
+<g id="node5" class="node">
+<title>combat</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="144.38" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- mutant00&#45;&gt;combat -->
+<g id="edge4" class="edge">
+<title>mutant00&#45;&gt;combat</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M144.38,-71.64C144.38,-63.38 144.38,-54.9 144.38,-47.22"/>
+<polygon fill="#555555" stroke="#555555" points="147.88,-47.32 144.38,-37.32 140.88,-47.32 147.88,-47.32"/>
+</g>
+<!-- Critter_Action&#45;&gt;mutant00 -->
+<g id="edge5" class="edge">
+<title>Critter_Action&#45;&gt;mutant00</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M167.37,-192.65C165.2,-185.34 162.53,-176.35 159.79,-167.11"/>
+<polygon fill="#555555" stroke="#555555" points="162.88,-166.24 156.68,-157.65 156.17,-168.23 162.88,-166.24"/>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (not(init_teams)) then begin\n  if (local_var(0) == 0) then begin\n    set_local_var(0, tile_num(self_obj));\n  end\n  critter_add_trait(self_obj, 1, 6, 34);\n  critter_add_trait(self_obj, 1, 5, 79);\n  init_teams := 1;\nend\nelse begin\n  if (script_action == 22) then begin\n    call timetomove;\n  end\nend\nif (script_action == 11) then begin\n  call mutant00;\nend\nelse begin\n  if (script_action == 21) then begin\n    script_overrides;\n    display_msg(message_str(912, 100));\n  end\n  else begin\n    if (script_action == 4) then begin\n      hostile := 1;\n    end\n    else begin\n      if (script_action == 12) then begin\n        call Critter_Action;\n      end\n      else begin\n        if (script_action == 18) then begin\n          if (source_obj == dude_obj) then begin\n            if (((global_var(160) + global_var(159)) >= 25) and ((global_var(159) > (2 * global_var(160))) or (global_var(156) == 1))) then begin\n              set_global_var(156, 1);\n              set_global_var(157, 0);\n            end\n            if (((global_var(160) + global_var(159)) >= 25) and ((global_var(160) > (3 * global_var(159))) or (global_var(157) == 1))) then begin\n              set_global_var(157, 1);\n              set_global_var(156, 0);\n            end\n            set_global_var(160, global_var(160) + 1);\n            if ((global_var(160) % 6) == 0) then begin\n              set_global_var(155, global_var(155) + 1);\n            end\n          end\n        end\n      end\n    end\n  end\nend\n","mutant00":"rndx := random(0, 1);\nif (rndx == 0) then begin\n  float_msg(self_obj, message_str(912, 101), 2);\nend\nelse begin\n  if (rndx == 1) then begin\n    float_msg(self_obj, message_str(912, 102), 2);\n  end\nend\ncall combat;\n","combat":"hostile := 1;\n","timetomove":"noevent := 0;\nset_local_var(1, tile_num(self_obj));\nnew_tile := tile_num_in_direction(local_var(1), random(0, 5), 2);\nif (tile_distance(local_var(0), new_tile) < maxleash) then begin\n  animate_move_obj_to_tile(self_obj, new_tile, 0);\nend\n","Critter_Action":"if (hostile) then begin\n  hostile := 0;\n  attack_complex(dude_obj, 0, 1, 0, 0, 30000, 0, 0);\nend\nelse begin\n  if (obj_can_see_obj(self_obj, dude_obj) and (tile_distance_objs(self_obj, dude_obj) < 6)) then begin\n    call mutant00;\n  end\n  else begin\n    loopcount := loopcount + 1;\n    if (loopcount > 40) then begin\n      loopcount := 0;\n      if (noevent == 0) then begin\n        noevent := 1;\n        add_timer_event(self_obj, game_ticks(random(5, 13)), 0);\n      end\n    end\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

@@ -1,0 +1,11 @@
+digraph BVLAD {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "do_stuff" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_stuff" -> "ladder01" [style=dotted color="#555555"]
+  "do_stuff" [label=""]
+  "ladderend" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "ladderend" [label=""]
+  "ladder01" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "ladder01" [label="You begin climbing the\nladder.\n---\nYou slip off the ladder\nand plummet into the\ndarkness below.\nYou land with a crash,\nbut take no damage.\n---\nYou slip off the ladder\nand plummet into\nthe darkness below. You\nland with a crash and\ntake\n---\n damage.\n---\nYou fall off the ladder\nnear the bottom."]
+}

@@ -1,0 +1,4 @@
+digraph GLOWGEN {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="You see a generator.\n---\nThe generators are on.\n---\nThese generators seem to\nbe off-line. You wonder\nif you can\n start them back up.\n---\nThe generators are\nalready on.\n---\nYou start up the\ngenerators, and all\nsystems seem to\n be coming back on-line.\n---\nThe generators are\nalready on.\n---\nYou start up the\ngenerators, and all\nsystems seem to\n be coming back on-line.\n---\nYou fail to start up the\ngenerators.\n---\nYou lack the knowledge to\nrepair this system.\n---\nThe generators are\nalready on.\n---\nYou start up the\ngenerators, and all\nsystems seem to\n be coming back on-line.\n---\nThe generators are\nalready on.\n---\nYou start up the\ngenerators, and all\nsystems seem to\n be coming back on-line.\n---\nYou fail to start up the\ngenerators.\n---\nYou lack the knowledge to\nrepair this system."]
+}

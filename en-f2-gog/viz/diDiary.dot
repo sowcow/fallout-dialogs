@@ -1,0 +1,12 @@
+digraph diDiary {
+  "checkPartyMembersNearDoor" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "checkPartyMembersNearDoor" [label=""]
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="You see an old diary."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="You see an old diary."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="The diary is stored in\nthe Pip-Boy.\n---\nThe old diary is too\nfrail to keep handling.\nThe information has been\ndownloaded into the\nPip-Boy.\n---\nYou see an old diary.\n---\nThe old diary is too\nfrail to keep handling.\nThe information has been\ndownloaded into the\nPip-Boy."]
+}

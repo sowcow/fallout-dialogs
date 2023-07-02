@@ -1,0 +1,18 @@
+digraph BOOKCASE {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" -> "pickup_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="The bookshelf is filled\nwith religious and\nphilosophy books."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="The wall next to the\nbookshelf quietly slides\nout of the way.\n---\nYou take a book down,\nexamine it and quickly\nreplace it on the shelf.\nThe shelf itself seems\nvery sturdy."]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label=""]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="You find a hidden latch.\n---\nYou fumble with the\nbookcase for a moment but\nyou fail to accomplish\n anything.\n---\nYou find a hidden latch.\n---\nYou fumble with the\nbookcase for a moment but\nyou fail to accomplish\n anything.\n---\nThat does nothing.\n---\nThat does nothing."]
+  "secret" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "secret" [label="You find a hidden latch."]
+}

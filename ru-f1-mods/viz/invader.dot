@@ -1,0 +1,17 @@
+digraph invader {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "timetomove" [style=dotted color="#555555"]
+  "start" -> "mutant00" [style=dotted color="#555555"]
+  "start" -> "Critter_Action" [style=dotted color="#555555"]
+  "start" [label="Вы видите бегущего\nсупермутанта."]
+  "mutant00" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "mutant00" -> "combat" [style=dotted color="#555555"]
+  "mutant00" [label="Иди сюда, человек!\n---\nСтой!"]
+  "combat" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "combat" [label=""]
+  "timetomove" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timetomove" [label=""]
+  "Critter_Action" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "Critter_Action" -> "mutant00" [style=dotted color="#555555"]
+  "Critter_Action" [label=""]
+}

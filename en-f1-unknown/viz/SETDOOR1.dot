@@ -1,0 +1,15 @@
+digraph SETDOOR1 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "see_stuff" [style=dotted color="#555555"]
+  "start" -> "do_stuff" [style=dotted color="#555555"]
+  "start" -> "do_skill" [style=dotted color="#555555"]
+  "start" [label=""]
+  "do_stuff" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_stuff" [label="creeeeeek"]
+  "do_skill" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "do_skill" [label="You pick the lock.\n---\nYou cannot open this\nlock.\n---\nYou broke your lockpicks.\n---\nYou don't know how to\npick the lock."]
+  "see_stuff" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "see_stuff" [label="The door is locked.\n---\nThe door is open.\n---\nThe door is closed and\nunlocked."]
+  "doorend" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "doorend" [label=""]
+}

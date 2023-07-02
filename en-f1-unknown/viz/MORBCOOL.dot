@@ -1,0 +1,13 @@
+digraph MORBCOOL {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "pickup_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_p_proc" [style=dotted color="#555555"]
+  "start" -> "use_skill_on_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label="You cannot bring yourself\nto root through the\nassorted bits."]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label="The cooler is filled with\nchunks of organs and body\nparts."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="The cooler is filled with\nchunks of organs and body\nparts.\n---\nThe pieces in the cooler\nare cut into small\nchunks, and cooled for\nshipping.\nNobody's getting any\ntransplants from these\nbite-size pieces.\n---\nThe cooler is full of\nbody parts, cut into\nsmall chunks and\n packed in ice. Odd.\n---\nBody parts fill the\ncooler."]
+}

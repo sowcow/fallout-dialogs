@@ -1,0 +1,152 @@
+<!DOCTYPE html><html><head><title>morbcool</title><meta charset="utf-8" /></head><body><svg width="1042pt" height="507pt"
+ viewBox="0.00 0.00 1042.34 507.22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 503.22)">
+<title>morbcool</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-503.22 1038.34,-503.22 1038.34,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="27" cy="-249.61" rx="27" ry="18"/>
+</g>
+<!-- pickup_p_proc -->
+<g id="node2" class="node">
+<title>pickup_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="219" cy="-249.61" rx="146.55" ry="42.25"/>
+<text text-anchor="middle" x="219" y="-262.18" font-family="Times,serif" font-size="14.00">Вы не можете себя</text>
+<text text-anchor="middle" x="219" y="-244.93" font-family="Times,serif" font-size="14.00">заставить копаться в этой</text>
+<text text-anchor="middle" x="219" y="-227.68" font-family="Times,serif" font-size="14.00">куче кусков.</text>
+</g>
+<!-- use_p_proc -->
+<g id="node3" class="node">
+<title>use_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="540" cy="-249.61" rx="156.09" ry="42.25"/>
+<text text-anchor="middle" x="540" y="-262.18" font-family="Times,serif" font-size="14.00">Холодильник заполнен</text>
+<text text-anchor="middle" x="540" y="-244.93" font-family="Times,serif" font-size="14.00">кусками органов и частями</text>
+<text text-anchor="middle" x="540" y="-227.68" font-family="Times,serif" font-size="14.00">тел.</text>
+</g>
+<!-- use_skill_on_p_proc -->
+<g id="node4" class="node">
+<title>use_skill_on_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="874" cy="-249.61" rx="160.34" ry="249.61"/>
+<text text-anchor="middle" x="874" y="-408.81" font-family="Times,serif" font-size="14.00">Холодильник заполнен</text>
+<text text-anchor="middle" x="874" y="-391.56" font-family="Times,serif" font-size="14.00">кусками органов и частями</text>
+<text text-anchor="middle" x="874" y="-374.31" font-family="Times,serif" font-size="14.00">тел.</text>
+<text text-anchor="middle" x="874" y="-357.06" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="874" y="-339.81" font-family="Times,serif" font-size="14.00">Органы в холодильнике</text>
+<text text-anchor="middle" x="874" y="-322.56" font-family="Times,serif" font-size="14.00">нарезаны небольшими</text>
+<text text-anchor="middle" x="874" y="-305.31" font-family="Times,serif" font-size="14.00">кусками и охлаждены перед</text>
+<text text-anchor="middle" x="874" y="-288.06" font-family="Times,serif" font-size="14.00">отправкой. Никто не</text>
+<text text-anchor="middle" x="874" y="-270.81" font-family="Times,serif" font-size="14.00">сможет взять органы для</text>
+<text text-anchor="middle" x="874" y="-253.56" font-family="Times,serif" font-size="14.00">трансплантации из этих</text>
+<text text-anchor="middle" x="874" y="-236.31" font-family="Times,serif" font-size="14.00">мелких кусочков.</text>
+<text text-anchor="middle" x="874" y="-219.06" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="874" y="-201.81" font-family="Times,serif" font-size="14.00">Холодильник забит частями</text>
+<text text-anchor="middle" x="874" y="-184.56" font-family="Times,serif" font-size="14.00">тел, нарезанными</text>
+<text text-anchor="middle" x="874" y="-167.31" font-family="Times,serif" font-size="14.00">маленьким кусками и</text>
+<text text-anchor="middle" x="874" y="-150.06" font-family="Times,serif" font-size="14.00">упакованными в упаковки</text>
+<text text-anchor="middle" x="874" y="-132.81" font-family="Times,serif" font-size="14.00">со льдом. Странно.</text>
+<text text-anchor="middle" x="874" y="-115.56" font-family="Times,serif" font-size="14.00">&#45;&#45;&#45;</text>
+<text text-anchor="middle" x="874" y="-98.31" font-family="Times,serif" font-size="14.00">Холодильник заполнен</text>
+<text text-anchor="middle" x="874" y="-81.06" font-family="Times,serif" font-size="14.00">частями тел.</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"[]","pickup_p_proc":"if (source_obj == dude_obj) then begin\n  script_overrides;\n  display_msg(message_str(877, 100));\n  messing_with_Morbid_stuff := 1;\nend\n","use_p_proc":"if (source_obj == dude_obj) then begin\n  script_overrides;\n  display_msg(message_str(877, 101));\n  messing_with_Morbid_stuff := 1;\nend\n","use_skill_on_p_proc":"if (action_being_used == 10) then begin\n  script_overrides;\n  display_msg(message_str(877, 101));\nend\nelse begin\n  if (action_being_used == 7) then begin\n    test := roll_vs_skill(source_obj, action_being_used, 0);\n    if (is_success(test)) then begin\n      script_overrides;\n      if (is_critical(test)) then begin\n        display_msg(message_str(877, 102));\n      end\n      else begin\n        display_msg(message_str(877, 104));\n      end\n    end\n    else begin\n      script_overrides;\n      display_msg(message_str(877, 103));\n    end\n  end\nend\n"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

@@ -1,0 +1,11 @@
+digraph cavewall {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" -> "description_p_proc" [style=dotted color="#555555"]
+  "start" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Стены в этой части пещеры\nвыглядят непрочными."]
+  "description_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "description_p_proc" [label="В скале много трещин.\nКажется, чтобы обрушить\nстены, достаточно лишь\nнебольшого воздействия.\n---\nСтены в этой части пещеры\nвыглядят непрочными."]
+  "damage_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "damage_p_proc" [label="Вы засыпали вход в пещеру\nс мертвыми скорпионами.\nСтранное решение."]
+}

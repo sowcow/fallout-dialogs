@@ -1,0 +1,4 @@
+digraph glowdesk {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Ящик стола заклинило.\n---\nВы взламываете ящик.\n---\nЯщик стола по-прежнему\nзаклинен.\n---\nЭтот навык здесь\nнеприменим."]
+}

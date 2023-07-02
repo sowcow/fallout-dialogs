@@ -1,0 +1,18 @@
+digraph epai38 {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label=""]
+  "use_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_p_proc" [label=""]
+  "pickup_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "pickup_p_proc" [label=""]
+  "destroy_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "destroy_p_proc" [label=""]
+  "damage_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "damage_p_proc" [label="Вы уничтожили компьютер."]
+  "use_skill_on_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "use_skill_on_p_proc" [label="Вы успешно отключили\nсиловое поле.\n---\n отключает силовое поле.\n---\nВы успешно включили\nсиловое поле.\n---\n включает силовое поле.\n---\nПанель управления силовым\nполем.\n---\nВам не удалось отключить\nсиловое поле.\n---\nне может отключить\nсиловое поле.\n---\nВам не удалось включить\nсиловое поле.\n---\nне может включить\nсиловое поле."]
+  "timed_event_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "timed_event_p_proc" [label=""]
+  "look_at_p_proc" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "look_at_p_proc" [label="Панель управления силовым\nполем."]
+}

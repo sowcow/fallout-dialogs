@@ -1,0 +1,172 @@
+<!DOCTYPE html><html><head><title>CRASHRM</title><meta charset="utf-8" /></head><body><svg width="445pt" height="255pt"
+ viewBox="0.00 0.00 444.64 254.75" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 250.75)">
+<title>CRASHRM</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-250.75 440.64,-250.75 440.64,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="119.86" cy="-228.75" rx="27" ry="18"/>
+</g>
+<!-- spatial_p_proc -->
+<g id="node2" class="node">
+<title>spatial_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="107.86" cy="-131.5" rx="27" ry="18"/>
+</g>
+<!-- start&#45;&gt;spatial_p_proc -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;spatial_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M117.72,-210.72C115.95,-196.72 113.42,-176.6 111.36,-160.28"/>
+<polygon fill="#555555" stroke="#555555" points="114.75,-160.19 110.03,-150.7 107.81,-161.06 114.75,-160.19"/>
+</g>
+<!-- talk_p_proc -->
+<g id="node3" class="node">
+<title>talk_p_proc</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="294.86" cy="-131.5" rx="141.77" ry="42.25"/>
+<text text-anchor="middle" x="294.86" y="-144.07" font-family="Times,serif" font-size="14.00">[You are in your room. Do</text>
+<text text-anchor="middle" x="294.86" y="-126.82" font-family="Times,serif" font-size="14.00">you want to rest here</text>
+<text text-anchor="middle" x="294.86" y="-109.57" font-family="Times,serif" font-size="14.00">until tomorrow morning?]</text>
+</g>
+<!-- start&#45;&gt;talk_p_proc -->
+<g id="edge2" class="edge">
+<title>start&#45;&gt;talk_p_proc</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M140.28,-216.64C159.56,-206.14 189.7,-189.74 218.26,-174.19"/>
+<polygon fill="#555555" stroke="#555555" points="219.76,-176.82 226.87,-168.96 216.41,-170.67 219.76,-176.82"/>
+</g>
+<!-- CrashRm02 -->
+<g id="node4" class="node">
+<title>CrashRm02</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="124.86" cy="-18" rx="124.86" ry="18"/>
+<text text-anchor="middle" x="124.86" y="-13.32" font-family="Times,serif" font-size="14.00">You awaken refreshed.</text>
+</g>
+<!-- talk_p_proc&#45;&gt;CrashRm02 -->
+<g id="edge3" class="edge">
+<title>talk_p_proc&#45;&gt;CrashRm02</title>
+<path fill="none" stroke="#555555" stroke-dasharray="1,5" d="M237.31,-92.75C211.52,-75.84 181.95,-56.44 159.61,-41.79"/>
+<polygon fill="#555555" stroke="#555555" points="161.79,-38.38 151.51,-35.82 157.95,-44.23 161.79,-38.38"/>
+</g>
+<!-- CrashRm01 -->
+<g id="node5" class="node">
+<title>CrashRm01</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="294.86" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc&#45;&gt;CrashRm01 -->
+<g id="edge4" class="edge">
+<title>talk_p_proc&#45;&gt;CrashRm01</title>
+<path fill="none" stroke="#008b99" d="M294.86,-88.98C294.86,-75.04 294.86,-59.84 294.86,-47.17"/>
+<polygon fill="#008b99" stroke="#008b99" points="298.36,-47.36 294.86,-37.36 291.36,-47.36 298.36,-47.36"/>
+<text text-anchor="middle" x="312.11" y="-57.95" font-family="Times,serif" font-size="14.00" fill="#008b99">[Yes]</text>
+</g>
+<!-- CrashRmEnd -->
+<g id="node6" class="node">
+<title>CrashRmEnd</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="366.86" cy="-18" rx="27" ry="18"/>
+</g>
+<!-- talk_p_proc&#45;&gt;CrashRmEnd -->
+<g id="edge5" class="edge">
+<title>talk_p_proc&#45;&gt;CrashRmEnd</title>
+<path fill="none" stroke="#997a00" d="M321.82,-89.77C325.87,-83.58 329.99,-77.25 333.86,-71.25 339.52,-62.47 345.65,-52.81 351.07,-44.21"/>
+<polygon fill="#997a00" stroke="#997a00" points="354.47,-46.39 356.83,-36.06 348.54,-42.66 354.47,-46.39"/>
+<text text-anchor="middle" x="359.24" y="-57.95" font-family="Times,serif" font-size="14.00" fill="#997a00">[No]</text>
+</g>
+</g>
+</svg>
+<script>window.Codes = {"start":"if (script_action == 2) then begin\n  call spatial_p_proc;\nend\nelse begin\n  if (script_action == 11) then begin\n    call talk_p_proc;\n  end\nend\n","spatial_p_proc":"if ((source_obj == dude_obj) and (global_var(168) > (game_time / (10 * 60 * 60 * 24)))) then begin\n  dialogue_system_enter;\nend\n","talk_p_proc":"start_gdialog(807, self_obj, 4, -1, -1);\ngsay_start;\ngsay_reply(807, 100);\ngiq_option(0, 807, 101, CrashRm01, 50);\ngiq_option(0, 807, 102, CrashRmEnd, 50);\ngsay_end;\nend_dialogue;\nif (local_var(0) == 1) then begin\n  call CrashRm02;\nend\n","CrashRm01":"set_local_var(0, 1);\n","CrashRm02":"set_local_var(0, 0);\ngfade_out(600);\ngame_time_advance(game_ticks(60 * (60 - (game_time_hour % 100))));\nif (game_time_hour < 1000) then begin\n  game_time_advance(game_ticks(36 * (1000 - game_time_hour)));\nend\nelse begin\n  game_time_advance(game_ticks(36 * (3400 - game_time_hour)));\nend\ncritter_heal(dude_obj, random(10, 15));\ndisplay_msg(message_str(807, 103));\nif ((map_var(3) == 0) and (map_var(0) != 2)) then begin\n  JTRaider_ptr := create_object_sid(16777449, 17484, 0, 337);\n  move_to(Sinthia_ptr, 17485, 0);\n  anim(JTRaider_ptr, 1000, 3);\n  anim(Sinthia_ptr, 1000, 3);\n  item := create_object_sid(8, 0, 0, -1);\n  add_obj_to_inven(JTRaider_ptr, item);\n  wield_obj_critter(JTRaider_ptr, item);\n  item := create_object_sid(1, 0, 0, -1);\n  add_obj_to_inven(JTRaider_ptr, item);\n  wield_obj_critter(JTRaider_ptr, item);\n  set_map_var(3, 1);\nend\ngfade_in(600);\n","CrashRmEnd":"[]"}</script></body><script src="../jquery.js"></script><script src="../underscore.js"></script><script>(function() {
+  var downAt, hideCode, nodes, positionCode, showCode;
+
+  $('svg').attr('unselectable', 'on').css({
+    '-moz-user-select': '-moz-none',
+    '-moz-user-select': 'none',
+    '-o-user-select': 'none',
+    '-khtml-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    'user-select': 'none'
+  }).bind('selectstart', function() {
+    return false;
+  });
+
+  $('<div/>', {
+    id: 'thecode'
+  }).appendTo('body');
+
+  $('#thecode').css({
+    'pointer-events': 'none',
+    background: 'white',
+    padding: '1em',
+    outline: 'solid gray 1px',
+    'white-space': 'pre',
+    position: 'fixed',
+    left: 0,
+    top: 0
+  });
+
+  showCode = function(code, x, y) {
+    $('#thecode').show();
+    $('#thecode').text(code);
+    return positionCode(x, y);
+  };
+
+  hideCode = function() {
+    return $('#thecode').hide();
+  };
+
+  positionCode = function(x, y) {
+    return $('#thecode').css({
+      left: x,
+      top: y
+    });
+  };
+
+  nodes = $('.node');
+
+  _.each(nodes, function(node) {
+    var nodeName;
+    nodeName = $(node).find('title').text();
+    $(node).mousemove(function(e) {
+      return showCode(Codes[nodeName], e.clientX, e.clientY);
+    });
+    return $(node).mouseleave(function() {
+      return hideCode();
+    });
+  });
+
+  $('svg title').remove();
+
+  downAt = null;
+
+  $('svg').mousedown(function(e) {
+    var x, y;
+    x = e.pageX;
+    y = e.pageY;
+    return downAt = {
+      x: x,
+      y: y
+    };
+  });
+
+  $('svg').mousemove(function(e) {
+    var delta, x, y;
+    if (!downAt) {
+      return;
+    }
+    x = e.pageX;
+    y = e.pageY;
+    delta = {
+      x: x - downAt.x,
+      y: y - downAt.y
+    };
+    window.scrollBy(-delta.x, -delta.y);
+    return false;
+  });
+
+  $('svg').mouseup(function(e) {
+    return downAt = null;
+  });
+
+  $('svg').mouseleave(function(e) {
+    return downAt = null;
+  });
+
+}).call(this);
+</script></html>

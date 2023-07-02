@@ -1,0 +1,4 @@
+digraph meeting {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="Вы знаете, что это была\nкомната встреч Убежища.\nСтанции аварийного\nэнергоснабжения погребена\nпод грудами камня."]
+}

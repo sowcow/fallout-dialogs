@@ -1,0 +1,4 @@
+digraph GENDISK {
+  "start" [style=filled       fillcolor="#FFFFFF"       color="#000000"]
+  "start" [label="You see before you a\nHolodisk.\n---\nPip Boy displays:\nDownloading data from\ndisk.\n---\nThis seems to have been a\ndisk with some type of\nentertainment upon it.\n---\nThe disk has been damaged\ntoo horribly to allow you\nto read anything on it.\n---\nThis disk seems to talk\nabout some pass code on\nanother disk.\n---\nYou see a small display\nappear and show the\nremnants of some World\nWar\n II movie.\n---\nThis disk seems empty.\n---\nYou discard this\nworthless disk."]
+}
