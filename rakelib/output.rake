@@ -3,62 +3,88 @@ require 'slim'
 require 'ostruct'
 require 'json'
 
-
-
+desc 'TODO: description'
 task :index do
-  out = Pathname 'output'
-  File.write out+'index.html', IndexPage.render(binding)
+  File.write output_dir+'index.html', IndexPage.render(binding)
 end
 
-
-
+desc 'TODO: description'
 task :output do
-  rm_rf 'output'
-  mkpath 'output'
-  cp Dir['assets/*'], 'output'
+  if WHICH
+    File.write 'generated/index.html', HomePage.render(binding)
+  end
 
-  out = Pathname 'output'
-  File.write out+'index.html', IndexPage.render(binding)
+  output_dir.rmtree
+  output_dir.mkpath
+  cp Dir['assets/*'], output_dir
+
+  File.write output_dir+'index.html', IndexPage.render(binding)
 
   dialog_names.each { |dialog|
-    mkpath dir = out + dialog
+    mkpath dir = output_dir + dialog
     File.write dir+'index.html', DialogPage.build(dialog)
   }
+end
+
+def sections
+  Dir.chdir('generated') do
+    Dir['*'].select { |x| File.directory? x }
+  end
+end
+
+HomePage = Slim::Template.new { <<end }
+doctype 5
+html
+  head
+    title Fallout1,2+ dialogs
+    meta charset='utf-8'
+  body
+    h1 fallout dialog graphs!
+    p Choose the version of interest:
+    ul
+      - sections.each do |section|
+        li: a href="\#{section}/output" = section
 end
 
 IndexPage = Slim::Template.new { <<end }
 doctype 5
 html
   head
-    title F1dialogs
+    title Fallout1,2+ dialogs
     meta charset='utf-8'
-    sass:
-      .spoilers
-        background-color: yellow
-        border-style: dashed
-        border-left: none
-        border-right: none
-        //text-align: center
-      .note
-        white-space: pre-line
-        padding: 1em
-        margin-left: 1em
-        background-color: lemonchiffon
-        border: solid 1px gray
-        display: inline-block
-
+    css:
+      .spoilers {
+        background-color: yellow;
+        border-style: dashed;
+        border-left: none;
+        border-right: none;
+        /*text-align: center;*/
+      }
+      .note {
+        white-space: pre-line;
+        padding: 1em;
+        margin-left: 1em;
+        background-color: lemonchiffon;
+        border: solid 1px gray;
+        display: inline-block;
+      }
   body
-    h1 fallout-1 dialog graphs
-    div
-      .note
-        'перемещаться по графу можно без полос прокрутки
-         ctrl+колёсико/+/- - масштаб, ctrl+0 - вернуть масштаб
-         работает не современных браузерах
+    h1 fallout dialog graphs #{!WHICH ? '' : ": #{WHICH}"}
     div     
       .note
-        'navigate using mouse/keyboard without use of scroll-bars
-         ctrl+wheel/+/- - zoom in/out a page, ctrl+0 - reset zoom
-         modern browsers are supported
+        'Some graphs are large and may be off the screen initially.
+         The best way to explore them is either
+         by dragging with mouse and zooming in/out by control-mouse-wheel-up/down
+         or by keyboard arrows and zooming
+         in/out with control-plus/control-minus/control-zero.
+         Modern browsers are supported (seemingly).
+    div
+      .note
+        'Большие графы могут быть не видны на экране сразу при открытия.
+         Полосы прокрутки можно(нужно) не использовать.
+         Перемещатся перетаскивая мышкой и масштабирование control+колесиком
+         или стрелками клавиатуры и control-плюс/минус/ноль(чтобы сбросить).
+         Работает(-ло) не современных браузерах.
     br
     .spoilers
       'caution ~~ spoilers ~~ caution ~~ spoilers
@@ -94,7 +120,8 @@ module DialogPage
   def svg_for name
     codes = codes_for name
 
-    svg = File.read "viz/#{name}.svg"
+    viz_dir.mkpath
+    svg = File.read viz_dir + "#{name}.svg"
     svg = svg[/<svg.*/m]
     svg += "<script>window.Codes = #{JSON.dump codes}</script>"
   end

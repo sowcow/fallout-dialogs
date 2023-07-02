@@ -30,16 +30,44 @@ class MSG < Parslet::Parser
     hr = str('=').repeat(1) >> newline
     hashy | sishy | hr
   end
+  rule :final_comment do
+    hashy = str('#') >> match('[^\n]').repeat >> eof
+    sishy = str('//') >> match('[^\n]').repeat >> eof
+    hr = str('=').repeat(1) >> eof
+    hashy | sishy | hr
+  end
+
+  rule :padded_comment do
+    str(' ').repeat(0) >> comment
+  end
+
+  rule :inline_comment do
+    str(' ').repeat(0) >> str('#') >> match('[^\n]').repeat(0)
+  end
+
+  rule :garbage do
+    match('[^\n]').repeat
+  end
 
   rule :entry do
-    str(' ').maybe >> id >> sound >> body >> newline
+    str(' ').maybe >> id >> sound >> body >> garbage.maybe >> newline #(inline_comment.maybe | garbage.maybe) >> newline
   end
   rule :odd_last_entry do
-    id >> sound >> body >> eof
+    id >> sound >> body >> garbage.maybe >> eof #(inline_comment.maybe | garbage.maybe) >> eof
+  end
+
+  rule :non_entry_final do
+    match('[^{]') >> match('[^\n]').repeat >> eof
+  end
+  rule :non_entry_middle do
+    match('[^{]') >> match('[^\n]').repeat >> newline
+  end
+  rule :non_entry do
+    non_entry_middle | non_entry_final # not trying (eof|newline) jik...
   end
 
   rule :list do
-    (entry | odd_last_entry | comment | newline ).repeat
+    (entry | odd_last_entry | padded_comment | final_comment | newline | non_entry ).repeat
   end
 
   root :list
@@ -53,7 +81,11 @@ class MSG < Parslet::Parser
   def self.to_h text
     new.to_h text
   rescue Parslet::ParseFailed => failure
-    puts failure.cause.ascii_tree
+    puts "Parsing failed for:"
+    puts text
+    p failure
+    exit 0
+    #puts failure.cause .ascii_tree
   end
 
   def to_h text
@@ -85,11 +117,49 @@ if __FILE__ == $0
     "{257}{}{If you don't have authorization you can not get
  replacement parts.}"
   x = MSG.to_h str
+
   #raise x.inspect unless\
   #  x == { 21 => "blah\nblah", 2 => ?y }
 
+  str =
+    "{257}{}{hey}#a"
+  x = MSG.to_h str
 
   p :OK
+
+  p MSG.to_h "{1}{}{a}"
+  p MSG.to_h "{1}{}{a}\n{3}{}{a}"
+  p MSG.to_h "{1}{}{a}#\n{3}{}{a}"
+  p MSG.to_h "{1}{}{a}# oeu\n"
+  p MSG.to_h '{1}{}{a} # '
+  p MSG.to_h '{1}{}{a} #:'
+  p MSG.to_h '{1}{}{#} # oeu'
+  p MSG.to_h "{1}{}{abc}\n5. hello"
+
+  p MSG.to_h "{1}{}{abc}garbage"
+
+  #p MSG.to_h DATA.read.strip
+  #p MSG.parse DATA.read
+
+  #content = File.read 'omg.msg', encoding: 'windows-1251'
+  #content.encode! 'utf-8'
+  ##puts content
+  #content.gsub! "\r", "\n"
+  #while content =~ /\n\n/ # darker magics (gsub is misbehaving, possibly some mix of encodings)
+  #  content.gsub! /\n\n/, "\n" # cuz focking inconsistant
+  #                             # input
+  #end
+  #p content.chars.count #1899
+  #p content =~ /\n\n/
+  ##content.gsub! /\n\n/, "\n" # cuz focking inconsistant
+  ##p content =~ /\n\n/
+  ##exit 0
+  ###p content
+  ##p content =~ /# changed/
+  ##p content[1825]
+  ##p content[1824]
+  ##p content[1823]
+  #p MSG.to_h content
 
   #hash = MSG.to_h File.read 'gizmo.msg'
   ##p hash

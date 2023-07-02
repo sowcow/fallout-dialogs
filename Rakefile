@@ -1,4 +1,9 @@
+desc 'TODO: description'
 task :default => [:viz, :output]
+
+WHICH = ENV['WHICH']  # to work within generated/<section>
+
+MSG_EXT = /\.MSG$/i
 
 require_relative 'lib/msg'
 require_relative 'lib/nodes'
@@ -10,37 +15,75 @@ module Paths
   module_function
 
   def messages_file
-    Pathname 'yaml/messages.yml'
+    section_path + 'yaml/messages.yml'
   end
   def codes_file
-    Pathname 'yaml/codes.yml'
+    section_path + 'yaml/codes.yml'
+  end
+  def section_path
+    path = Pathname ?.
+    path += 'generated' if WHICH
+    path += WHICH if WHICH
+    path
   end
   def nodes_file
-    Pathname 'yaml/nodes.yml'
+    section_path + 'yaml/nodes.yml'
   end
 
+  def viz_dir
+    section_path + 'viz'
+  end
+  def output_dir
+    section_path + 'output'
+  end
+
+  def input_dir
+    section_path + 'input'
+  end
   def input_files
-    Pathname.glob 'input/*'
+    Pathname.glob (input_dir + '*.*')
   end
 
   def input_msg_files
-    input_files.select { |x| x.extname == '.MSG' }
+    input_files.select { |x| x.extname =~ /\.MSG$/i }
   end
   def input_ssl_files
     input_files.select { |x| x.extname == '.ssl' }
   end
 
+  def irrelevant_dir
+    input_dir + '0_irrelevant'
+  end
+  def no_pair_dir
+    input_dir + '1_no_pair'
+  end
+  def bad_ssl_dir
+    input_dir + '2_bad_ssl'
+  end
+  def empty_msg_dir
+    input_dir + '3_empty_msg'
+  end
+
   refine Pathname do
     def msg?
-      extname == '.MSG'
+      !!(extname =~ MSG_EXT)
     end
     def ssl?
       extname == '.ssl'
     end
     def buddy
       case
-      when ssl? then Pathname to_s.sub('.ssl', '.MSG')
-      when msg? then Pathname to_s.sub('.MSG', '.ssl')
+      when ssl?
+        candidates = []
+        candidates.push Pathname to_s.sub('.ssl', '.msg')
+        candidates.push Pathname to_s.sub('.ssl', '.MSG')
+        found = candidates.find { |x| x.exist? }
+        if found
+          found
+        else
+          candidates.first
+        end
+      when msg? then Pathname to_s.sub(MSG_EXT, '.ssl')
       else
         raise
       end
@@ -67,40 +110,102 @@ using Paths
 # kinda input invariants,
 # that aslo freeze/simpify data format
 #
-task :files do
+#desc 'check that input files are in expected format and that all MSG/ssl files are paired together'
+#task :files do
+#  raise "expecting some .msg files but found none" if input_msg_files.count == 0
+#
+#  missing_ssl = input_msg_files.select { |x| !x.buddy.exist? }
+#  raise "missing .ssl files for: #{missing_ssl.map(&:to_s) * ' '}" unless missing_ssl.empty?
+#
+#
+#  ssl_files = input_msg_files.map(&:buddy)
+#
+#  #if non_paired.any?
+#
+#  #by_ext = input_files.group_by { |x| x.extname }
+#  #odds = by_ext.keys - ['.msg', '.MSG','.ssl']
+#  #odds.empty? or raise "by ext check failed: #{odds}"
+#
+#  #by_name = input_files.
+#  #  group_by { |x| x.to_name }
+#
+#  #non_paired = by_name.values.select { |a|
+#  #  a.count != 2
+#  #}
+#  #raise "pairedness check failed: #{non_paired}" \
+#  #if non_paired.any?
+#
+#  raise unless\
+#  ssl_files.all? { |file|
+#    p file
+#    File.read(file, encoding: 'windows-1251') =~
+#    /^procedure [Ss]tart\r\n/
+#  }
+#
+#  puts 'input files looks good'
+#end
 
-  by_ext = input_files.group_by { |x| x.extname }
-
-  odds = by_ext.keys - ['.MSG','.ssl']
-  odds.empty? or raise "by ext check failed: #{odds}"
-
-
-  by_name = input_files.
-    group_by { |x| x.to_name }
-
-  non_paired = by_name.values.select { |a|
-    a.count != 2
+desc 'move not conforming files in separate directories inside inputs'
+task :segregate do
+  irrelevant = input_files.reject { |x| x.msg? || x.ssl? }
+  irrelevant_dir.mkpath
+  irrelevant.each { |x|
+    File.rename x, (irrelevant_dir + x.basename)
   }
-  raise "pairedness check failed: #{non_paired}" \
-  if non_paired.any?
+  puts "Moved #{irrelevant.count} irrelevant files"
 
-  p input_ssl_files.count
+  msg_missing_ssl = input_msg_files.select { |x| !x.buddy.exist? }
+  no_pair_dir.mkpath
+  msg_missing_ssl.each { |x|
+    File.rename x, (no_pair_dir + x.basename)
+  }
+  puts "Moved #{msg_missing_ssl.count} .msg files with missing .ssl file"
 
-  raise unless\
-  input_ssl_files.all? { |file|
-    p file
-    File.read(file, encoding: 'windows-1251') =~
-    /^procedure [Ss]tart\r\n/
+  ssl_missing_msg = input_ssl_files.select { |x| !x.buddy.exist? } # naming endend up being not perfect
+  no_pair_dir.mkpath
+  ssl_missing_msg.each { |x|
+    File.rename x, (no_pair_dir + x.basename)
+  }
+  puts "Moved #{ssl_missing_msg.count} .ssl files with missing .msg file"
+
+  ssl_files = input_msg_files.map(&:buddy)
+  bad_ssl = ssl_files.reject { |file|
+    if file.to_s =~ /glow4/
+      p File.read(file, encoding: 'windows-1251')
+      p File.read(file, encoding: 'windows-1251') =~ /^procedure [Ss]tart\r\n/
+      p file.to_s
+    end
+    File.read(file, encoding: 'windows-1251') =~ /^procedure [Ss]tart\r\n/
   }
 
-  puts 'input files looks good'
+  bad_ssl_dir.mkpath
+  bad_ssl.each { |x|
+    File.rename x.buddy, (bad_ssl_dir + x.buddy.basename)
+    File.rename x, (bad_ssl_dir + x.basename)
+  }
+  puts "Moved #{bad_ssl.count} pairs of files because .ssl file is empty or unconforming"
+
+  empty_msg = input_msg_files.select { |x| x.read(encoding: 'windows-1251').strip == '' }
+  empty_msg_dir.mkpath
+  empty_msg.each { |x|
+    File.rename x.buddy, (empty_msg_dir + x.buddy.basename)
+    File.rename x, (empty_msg_dir + x.basename)
+  }
+  puts "Moved #{empty_msg.count} pairs of files because .msg file is empty"
+
+  remaining = input_files.reject { |x| x.msg? }
+  puts "Remaining are #{remaining.count} pairs of files for visualization"
 end
 
 
-task :yaml => [:files, :messages_yml, :nodes_yml]
 
+#desc 'TODO: description'
+#task :yaml => [:files, :messages_yml, :nodes_yml]
+
+desc 'TODO: description'
 task :messages_yml do
   hash = {}
+  Pathname('yaml').mkpath
 
   input_msg_files.each { |msg_file|
     puts "processing: #{msg_file}"
@@ -120,6 +225,7 @@ task :messages_yml do
   File.write messages_file, data
 end
 
+desc 'TODO: description'
 task :codes_yml do
   hash = {}
   input_ssl_files.each { |file|
@@ -151,40 +257,41 @@ end
 
 
 
-desc 'do it before yaml task'
-task :delete_empty_inputs do
-  by_ext = input_files. #select { |x| x.msg? }.
-    select { |x|
-      x.read(encoding: 'windows-1251') =~ /\A\s*\z/
-    }.each { |empty|
-      puts "deleteing #{empty}"
-      File.delete empty
-      puts "deleteing #{empty.buddy}"
-      File.delete empty.buddy
-    }
-end
+#desc 'do it before yaml task'
+#task :delete_empty_inputs do
+#  by_ext = input_files. #select { |x| x.msg? }.
+#    select { |x|
+#      x.read(encoding: 'windows-1251') =~ /\A\s*\z/
+#    }.each { |empty|
+#      puts "deleteing #{empty}"
+#      File.delete empty
+#      puts "deleteing #{empty.buddy}"
+#      File.delete empty.buddy
+#    }
+#end
 
-desc 'and this (destructive too)'
-#task :delete_definitions_from_ssl_files do
-task :preprocess_ssl_files do
-  input_ssl_files.each { |file|
-    content = file.read encoding: 'windows-1251'
-    content.gsub! "\r", ""
+#desc 'and this (destructive too)'
+##task :delete_definitions_from_ssl_files do
+#task :preprocess_ssl_files do
+#  input_ssl_files.each { |file|
+#    content = file.read encoding: 'windows-1251'
+#    content.gsub! "\r", ""
+#
+#    found = 
+#    content.lines.each_with_index.find { |line, index|
+#      line == "begin\n"
+#    }
+#    raise content.inspect unless found
+#    content = content.lines.drop(found[1]-1).join
+#    content = content.encode 'utf-8'
+#
+#    File.write file, content
+#  }
+#end
 
-    found = 
-    content.lines.each_with_index.find { |line, index|
-      line == "begin\n"
-    }
-    raise content.inspect unless found
-    content = content.lines.drop(found[1]-1).join
-    content = content.encode 'utf-8'
-
-    File.write file, content
-  }
-end
 
 
-
+desc 'TODO: description'
 task :nodes_yml do
   messages = YAML.load File.read messages_file
   codes = YAML.load File.read codes_file

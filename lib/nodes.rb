@@ -18,10 +18,14 @@ class Nodes < Parslet::Parser
   #rule :lines do line.repeat 1 end
   #rule :steps do lines end
 
-  rule :name do match('\w').repeat 1 end
+  rule :name do match('[\w]').repeat 1 end
+
+  rule :params do
+    str('(') >> match('[\w ,]').repeat >> str(')')
+  end
 
   rule :procedure do
-    str('procedure ') >> name.as(:name) >> newline >> \
+    str('procedure ') >> name.as(:name) >> params.maybe >> newline >> \
       str('begin') >> newline >> steps.as(:raw) >> \
       str('end') >> newline
   end
@@ -41,6 +45,10 @@ class Nodes < Parslet::Parser
   def self.to_h text
     new.to_h text
   rescue Parslet::ParseFailed => failure
+    puts "Error parsing text:"
+    #puts text
+    p failure
+    exit 0
     puts failure.cause.ascii_tree
   end
 
@@ -78,11 +86,21 @@ if __FILE__ == $0
 
 
 
-  text = File.read 'extracts'
-  hash = Nodes.to_h text
+  #text = File.read 'extracts'
+  content = File.read 'extracts', encoding: 'windows-1251'
+  content.gsub! "\r", ""
+  found = 
+  content.lines.each_with_index.find { |line, index|
+    line == "begin\n"
+  }
+  raise content.inspect unless found
+  content = content.lines.drop(found[1]-1).join
+  #p found[1]; exit 0
+  hash = Nodes.to_h content
+  p hash
 
-  require 'yaml'
-  File.write 'gizmo_nodes.yml', YAML.dump(hash)
+  #require 'yaml'
+  #File.write 'gizmo_nodes.yml', YAML.dump(hash)
   #p Nodes.parse text
 end
 __END__

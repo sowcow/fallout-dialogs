@@ -17,8 +17,7 @@ end
 
 
 
-mkpath 'viz' unless Dir.exist? 'viz'
-
+desc 'TODO: description'
 task :viz do
   dialogs = YAML.load File.read nodes_file
   #dialogs = dialogs.take 5
@@ -60,14 +59,18 @@ task :viz do
       #end
     }
     dot << '}'
-    File.write "viz/#{dialog}.dot", dot
+    viz_dir.mkpath
+    file = viz_dir + "#{dialog}.dot"
+    File.write file, dot
   }
 
   dialogs.each { |dialog, _|
-    system "dot viz/#{dialog}.dot -Tpng \
-              -o viz/#{dialog}.png"
-    system "dot viz/#{dialog}.dot -Tsvg \
-              -o viz/#{dialog}.svg"
+    dot_file = viz_dir + "#{dialog}.dot"
+    svg_file = viz_dir + "#{dialog}.svg"
+    #system "dot viz/#{dialog}.dot -Tpng \
+              #-o viz/#{dialog}.png"
+    system "dot #{dot_file} -Tsvg \
+              -o #{svg_file}"
   }
 end
 

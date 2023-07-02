@@ -1,4 +1,5 @@
 
+desc 'TODO: description'
 task :publish do
   temp = Pathname '../very-temp-output'
   output = Pathname 'output'

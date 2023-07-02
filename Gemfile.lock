@@ -1,0 +1,29 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.12.2)
+    color-generator (0.0.4)
+    execjs (2.8.1)
+    parslet (2.0.0)
+    slim (5.1.1)
+      temple (~> 0.10.0)
+      tilt (>= 2.1.0)
+    temple (0.10.2)
+    tilt (2.2.0)
+    unindent (1.0)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  coffee-script (~> 2.4)
+  color-generator (~> 0.0.4)
+  parslet (~> 2.0)
+  slim (~> 5.1)
+  unindent (~> 1.0)
+
+BUNDLED WITH
+   2.4.13
