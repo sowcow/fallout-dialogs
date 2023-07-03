@@ -982,9 +982,9 @@
     top: 0
   });
 
-  showCode = function(code, x, y) {
+  showCode = function(name, code, x, y) {
     $('#thecode').show();
-    $('#thecode').text(code);
+    $('#thecode').text("# " + name + "\n" + code);
     return positionCode(x, y);
   };
 
@@ -1005,7 +1005,7 @@
     var nodeName;
     nodeName = $(node).find('title').text();
     $(node).mousemove(function(e) {
-      return showCode(Codes[nodeName], e.clientX, e.clientY);
+      return showCode(nodeName, Codes[nodeName], e.clientX, e.clientY);
     });
     return $(node).mouseleave(function() {
       return hideCode();
