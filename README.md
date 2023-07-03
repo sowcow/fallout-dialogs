@@ -16,7 +16,7 @@ I didn't check the data too much so feel free to create an issue in case of issu
 
 If you want to have this generated for specific version/translation then here are the steps:
 
-NOTE: some rake commands should work in specific directories in generated if they are prefixed like this `WHICH=en-f2-gog rake output` but this is later addition and is not very tested.
+NOTE: some rake commands should work in specific directories in `generated/` if they are prefixed like this `WHICH=en-f2-gog rake output` but this is later addition and is not very tested.
 
 1. have ruby installed
 1. have graphviz installed
