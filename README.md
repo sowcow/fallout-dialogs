@@ -51,3 +51,7 @@ NOTE: some rake commands should work in specific directories in generated if the
 - Possibly sorting svgs by size is the way to select most informative ones, also showing number of nodes and connections near the name could be of use
 - I used Fixed Editions for Russian F1,F2 and older generated English F1 is possibly GOG
 - I got same content for F2 GOG and Restoration Project, probably there is no error
+
+- [x] added node names to code
+- [ ] to have html files as independent as svgs (remove jq,underscore dependencies)
+- [ ] do I need code popup being paused and scrollable?

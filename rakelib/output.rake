@@ -172,11 +172,11 @@ html
       top: 0
 
     
-    showCode = (code, x, y)->
+    showCode = (name, code, x, y)->
       #console.log $('#thecode').is(':visible')
       $('#thecode').show()
       #console.log $('#thecode').is(':visible')
-      $('#thecode').text code
+      $('#thecode').text "# " + name + "\\n" + code
       positionCode x, y
     hideCode = ->
       $('#thecode').hide()
@@ -196,7 +196,7 @@ html
       nodeName = $(node).find('title').text()
       # $(node).find('title').remove()
       $(node).mousemove (e)->
-        showCode Codes[nodeName], e.clientX, e.clientY
+        showCode nodeName, Codes[nodeName], e.clientX, e.clientY
       $(node).mouseleave ->
         hideCode()
     $('svg title').remove() # no tooltips
