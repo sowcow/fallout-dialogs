@@ -10,6 +10,8 @@ Only obvious connections that do not depend on any random or other calculations 
 So some information is lost and fuller extraction is possible with more demanding tools like GPT for example.
 Technically popups with code could provide some hint about such lost information but it looks like they are more useful to see conditional logics behind the scenes.
 
+I didn't check the data too much so feel free to create an issue in case of issues.
+
 # How
 
 If you want to have this generated for specific version/translation then here are the steps:
