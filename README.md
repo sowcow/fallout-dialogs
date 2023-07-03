@@ -4,6 +4,11 @@ Fallout dialogs automatically parsed by simple scripts (no neural networks or ma
 
 Check `generated` for files for offline or other use (I don't own content itself but whatever is generated outside of it is WTFPL).
 
+# Why
+
+Overall the idea was to rewrite the content in some more textual and less scripting format and move away from fallout way of doing it.
+But the bigger project that would use that is not moving consistently.
+
 # But
 
 Only obvious connections that do not depend on any random or other calculations are made.
