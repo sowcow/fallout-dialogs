@@ -61,4 +61,4 @@ NOTE: some rake commands should work in specific directories in `generated/` if 
 - [ ] to have html files as independent as svgs (remove jq,underscore dependencies)
 - [ ] do I need code popup being paused and scrollable?
 
-# License: [DAFUQPL](https://github.com/dafuqpl/dafuqpl)
+# License(code): [DAFUQPL](https://github.com/dafuqpl/dafuqpl)
